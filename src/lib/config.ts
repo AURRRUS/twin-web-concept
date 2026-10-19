@@ -16,7 +16,8 @@ export type Selection = { projectId: string; buildingId: string | null; floorId:
 export const initialSelection: Selection = { ...fixture, view: 'plan' };
 
 export function validateSelection(input: Partial<Selection>): Selection {
-  const buildingId = input.buildingId === fixture.buildingId ? fixture.buildingId : null;
+  const projectMatches = !input.projectId || input.projectId === fixture.projectId;
+  const buildingId = projectMatches && input.buildingId === fixture.buildingId ? fixture.buildingId : null;
   const floorId = buildingId && input.floorId === fixture.floorId ? fixture.floorId : null;
   const lotId = floorId && input.lotId === fixture.lotId ? fixture.lotId : null;
   return { projectId: fixture.projectId, buildingId, floorId, lotId, view: input.view === 'view' ? 'view' : 'plan' };

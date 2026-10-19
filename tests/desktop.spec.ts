@@ -6,11 +6,14 @@ test('desktop: real content, assets, anchors and screenshots', async ({ page }) 
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Цифровая инфраструктура продаж девелоперского проекта.');
   await page.evaluate(async () => { await document.fonts.ready; for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 70)); } });
-  await expect.poll(() => page.locator('img').evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0).every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.screenshot({ animations: 'disabled', path: 'artifacts/desktop-1440.png', fullPage: true });
   await page.locator('.hero').screenshot({ animations: 'disabled', path: 'artifacts/first-screen.png' });
   await page.locator('.composition').screenshot({ animations: 'disabled', path: 'artifacts/composition-desktop.png' });
+  await page.locator('.delivery').scrollIntoViewIfNeeded();
+  await expect(page.locator('.delivery')).toHaveClass(/in-view/);
+  await page.evaluate(() => Promise.all([...document.querySelectorAll('.triangle-edge')].flatMap(element => element.getAnimations()).map(animation => animation.finished)));
   await page.locator('.delivery').screenshot({ animations: 'disabled', path: 'artifacts/delivery-desktop.png' });
   expect(errors).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -144,4 +147,30 @@ test('without JavaScript: server-rendered content and honest demo remain availab
   await page.goto('/demo');
   await expect(page.getByText('Настоящий Twin пока не подключён.')).toBeVisible();
   await context.close();
+});
+
+test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => document.fonts.ready);
+  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Manrope Variable');
+  expect(await page.evaluate(() => document.fonts.check('450 48px "Manrope Variable"', 'Цифровая инфраструктура'))).toBe(true);
+  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
+  for (const [progress, scene] of [[0.14, 'project'], [0.5, 'space'], [0.88, 'lot'], [0.5, 'space']] as const) {
+    await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
+    await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
+    await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
+    await page.locator('.journey-cinematic').screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
+  }
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
+  await expect(page.locator('.journey-static')).toBeVisible();
+  await expect(page.locator('#lot')).toContainText('Планировка, положение и вид');
+});
+
+test('a foreign project cannot retain the known child lot', async ({ page }) => {
+  await page.goto('/demo?projectId=foreign-project&buildingId=building-1&floorId=floor-4&lotId=lot-4-2');
+  await expect(page.getByText('Часть выбора из ссылки недоступна.', { exact: false })).toBeVisible();
+  await expect(page.getByRole('combobox', { name: 'Корпус' })).toHaveValue('');
+  await expect(page.getByRole('combobox', { name: 'Этаж' })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Лот 4.2' })).toBeDisabled();
 });

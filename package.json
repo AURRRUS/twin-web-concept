@@ -8,7 +8,10 @@
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "test": "playwright test",
-    "check": "npm run typecheck && npm run build && npm test"
+    "check": "npm run typecheck && npm run build && npm test",
+    "build:preview": "TWIN_BASE_PATH=/twin-web-concept npm run build",
+    "publish:preview": "node scripts/publish-preview.mjs",
+    "verify:online": "node scripts/verify-online.mjs"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   "homepage": "https://github.com/AURRRUS/twin-web-concept#readme",
   "dependencies": {
     "@astrojs/react": "7.1.0",
+    "@fontsource-variable/manrope": "5.3.0",
     "astro": "7.4.1",
     "react": "19.3.1",
     "react-dom": "19.3.1"
