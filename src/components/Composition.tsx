@@ -1,3 +1,4 @@
+import { sitePath } from '../lib/paths';
 import { useEffect, useRef, useState } from 'react';
 import content from '../../docs/handoff/04_DATA/twin-home-content.json';
 import rawDialogs from '../../docs/handoff/06_UI_KIT/modal-content.json';
@@ -11,7 +12,7 @@ function ComponentArt({ id }: { id: string }) {
   if (id === 'core') return <Media name="core" alt="Иллюстративная изометрическая модель проекта" />;
   if (id === 'client-tools') return <Media name="lot" alt="Материал выбранного лота" />;
   if (id === 'commercial') return <Media name="interior" alt="Пример интерьерного решения" />;
-  return <img src={`/media/${id}.svg`} alt="" loading="lazy" width="800" height="500" />;
+  return <img src={sitePath(`/media/${id}.svg`)} alt="" loading="lazy" width="800" height="500" />;
 }
 
 export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {

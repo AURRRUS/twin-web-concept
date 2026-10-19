@@ -1,11 +1,12 @@
+import { sitePath } from '../lib/paths';
 import content from '../../docs/handoff/04_DATA/twin-home-content.json';
 import { Arrow, Media } from './Media';
 
 export function Header({ demo = false }: { demo?: boolean }) {
   return <header className={`site-header ${demo ? 'on-demo' : ''}`}>
-    <a className="brand" href="/" aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" eager /></a>
-    <nav aria-label="Основная навигация"><a href="/#product">Продукт</a><a href="/#channels">Сценарии</a><a href="/#composition">Состав и запуск</a></nav>
-    <a className={demo ? 'text-link' : 'button'} href={demo ? '/' : '/demo'}>{demo ? 'Вернуться на сайт' : 'Посмотреть Twin'}<Arrow /></a>
+    <a className="brand" href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" eager /></a>
+    <nav aria-label="Основная навигация"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#composition')}>Состав и запуск</a></nav>
+    <a className={demo ? 'text-link' : 'button'} href={sitePath(demo ? '/' : '/demo')}>{demo ? 'Вернуться на сайт' : 'Посмотреть Twin'}<Arrow /></a>
   </header>;
 }
 
@@ -20,7 +21,7 @@ export function Hero() {
     <div className="hero-copy">
       <h1 id="hero-heading">{content.hero.title}</h1>
       <p>{content.hero.body}</p>
-      <div className="actions"><a className="button" href="/demo">Посмотреть Twin<Arrow /></a><a className="text-link" href="#contact">Обсудить проект</a></div>
+      <div className="actions"><a className="button" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a><a className="text-link" href="#contact">Обсудить проект</a></div>
     </div>
     <span className="hero-caption">Демонстрационный проект</span>
   </section>;

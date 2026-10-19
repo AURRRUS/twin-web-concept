@@ -1,3 +1,4 @@
+import { sitePath } from './paths';
 // Public configuration only. Connected Twin and lead delivery require separate implementation and QA.
 export const integrations = {
   mode: 'fixture',
@@ -24,5 +25,5 @@ export function validateSelection(input: Partial<Selection>): Selection {
 export function publicSelectionUrl(path: string, selection: Selection) {
   const query = new URLSearchParams({ projectId: selection.projectId, view: selection.view });
   for (const key of ['buildingId', 'floorId', 'lotId'] as const) if (selection[key]) query.set(key, selection[key]!);
-  return `${path}?${query}`;
+  return `${sitePath(path)}?${query}`;
 }

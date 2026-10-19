@@ -1,5 +1,6 @@
 ---
 import App from '../components/App';
+import { sitePath } from '../lib/paths';
 import '../styles/site.css';
 ---
 <!doctype html>
@@ -9,7 +10,7 @@ import '../styles/site.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>Демонстрационный интерфейс — Twin by TALENT</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={sitePath('/favicon.svg')} />
   </head>
   <body><App page="demo" client:load /></body>
 </html>

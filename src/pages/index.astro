@@ -1,5 +1,6 @@
 ---
 import App from '../components/App';
+import { sitePath } from '../lib/paths';
 import '../styles/site.css';
 ---
 <!doctype html>
@@ -9,8 +10,8 @@ import '../styles/site.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Twin — цифровая инфраструктура продаж девелоперского проекта. Коммерческий цифровой двойник и единая основа для всех каналов продаж." />
     <title>Twin by TALENT — цифровая инфраструктура продаж</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/media/twin-review.woff" as="font" type="font/woff" crossorigin />
+    <link rel="icon" type="image/svg+xml" href={sitePath('/favicon.svg')} />
+    <link rel="preload" href={sitePath('/media/twin-review.woff')} as="font" type="font/woff" crossorigin />
   </head>
   <body><App page="home" client:load /></body>
 </html>

@@ -1,3 +1,4 @@
+import { sitePath } from '../lib/paths';
 import { useId, useState } from 'react';
 import { Media, Arrow } from './Media';
 
@@ -20,7 +21,7 @@ export function Channels() {
     </div>
     <div id={`${prefix}-panel`} role="tabpanel" aria-labelledby={`${prefix}-${channel.id}`}>
       <Media key={channel.id} name={channel.id} alt={`Иллюстрация канала «${channel.title}» — демонстрационный проект`} className="channel-scene" />
-      <div className="channel-story"><div><h3>{channel.label}</h3><p>{channel.description}</p></div><a className="text-link" href="/demo">Посмотреть Twin<Arrow /></a></div>
+      <div className="channel-story"><div><h3>{channel.label}</h3><p>{channel.description}</p></div><a className="text-link" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a></div>
     </div>
     <noscript><div className="noscript-channels">{channels.map(item => <p key={item.id}><strong>{item.title}.</strong> {item.description}</p>)}</div></noscript>
   </section>;
