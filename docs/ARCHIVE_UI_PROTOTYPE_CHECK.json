@@ -1,0 +1,52 @@
+{
+  "scope": "Original archive UI review prototype, NOT the implemented website",
+  "status": "PARTIAL",
+  "checks": [
+    {
+      "id": "dialog-open-escape-return-focus",
+      "status": "PASS"
+    },
+    {
+      "id": "four-channel-tabs",
+      "status": "PASS"
+    },
+    {
+      "id": "channel-click-retains-focus",
+      "status": "FAIL",
+      "note": "Original prototype rebuilds app.innerHTML; focus leaves the replaced tab. Not a new website test."
+    },
+    {
+      "id": "channel-ArrowRight-after-explicit-refocus",
+      "status": "PASS"
+    },
+    {
+      "id": "plan-view-switch",
+      "status": "PASS"
+    },
+    {
+      "id": "form-idle",
+      "status": "PASS"
+    },
+    {
+      "id": "form-invalid",
+      "status": "PASS"
+    },
+    {
+      "id": "form-loading",
+      "status": "PASS"
+    },
+    {
+      "id": "form-error",
+      "status": "PASS"
+    },
+    {
+      "id": "form-success",
+      "status": "PASS"
+    },
+    {
+      "id": "success-is-labelled-demo",
+      "status": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

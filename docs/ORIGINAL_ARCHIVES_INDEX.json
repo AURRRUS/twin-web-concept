@@ -1,0 +1,388 @@
+[
+  {
+    "archive": "TWIN_WEBSITE_HANDOFF_v1_3_PATCH_2026-10-18 (1).zip",
+    "files": [
+      {
+        "file": "EXPECTED_FILES_v1_3.json",
+        "bytes": 8391
+      },
+      {
+        "file": "OVERLAY/00_STANDARDS/TALENT_WEBSITE_DEVELOPMENT_MASTER_v1_1_2026-10-18.md",
+        "bytes": 155326
+      },
+      {
+        "file": "OVERLAY/01_SPECS/TWIN_DELIVERY_PIPELINE.md",
+        "bytes": 6805
+      },
+      {
+        "file": "OVERLAY/01_SPECS/TWIN_SITE_IMPLEMENTATION_PROFILE.md",
+        "bytes": 6768
+      },
+      {
+        "file": "OVERLAY/CHANGELOG_v1_3.md",
+        "bytes": 721
+      },
+      {
+        "file": "OVERLAY/README.md",
+        "bytes": 10191
+      },
+      {
+        "file": "OVERLAY/START_HERE_TWIN.md",
+        "bytes": 21009
+      },
+      {
+        "file": "OVERLAY/WORK_PACKAGES.json",
+        "bytes": 3832
+      },
+      {
+        "file": "PATCH_VALIDATION.json",
+        "bytes": 274
+      },
+      {
+        "file": "README_APPLY.md",
+        "bytes": 1815
+      },
+      {
+        "file": "VERIFY_PATCH.py",
+        "bytes": 619
+      }
+    ]
+  },
+  {
+    "archive": "08_CHANNEL_MEDIA.rar",
+    "files": [
+      {
+        "file": "08_CHANNEL_MEDIA/01_CHANNEL_WEBSITE.png",
+        "bytes": 2046015
+      },
+      {
+        "file": "08_CHANNEL_MEDIA/02_CHANNEL_ONLINE_VIEWING.png",
+        "bytes": 2096225
+      },
+      {
+        "file": "08_CHANNEL_MEDIA/03_CHANNEL_AGENT.png",
+        "bytes": 2175112
+      }
+    ]
+  },
+  {
+    "archive": "TWIN_WEBSITE_HANDOFF_v1_2_2026-10-18.rar",
+    "files": [
+      {
+        "file": "08_CHANNEL_MEDIA/01_CHANNEL_WEBSITE.png",
+        "bytes": 2046015
+      },
+      {
+        "file": "08_CHANNEL_MEDIA/02_CHANNEL_ONLINE_VIEWING.png",
+        "bytes": 2096225
+      },
+      {
+        "file": "08_CHANNEL_MEDIA/03_CHANNEL_AGENT.png",
+        "bytes": 2175112
+      },
+      {
+        "file": "ASSET_MANIFEST.json",
+        "bytes": 13812
+      },
+      {
+        "file": "ASSET_MANIFEST.md",
+        "bytes": 5609
+      },
+      {
+        "file": "CHANGELOG_v1_2.md",
+        "bytes": 1142
+      },
+      {
+        "file": "PACKAGE_FILES.json",
+        "bytes": 12079
+      },
+      {
+        "file": "PACKAGE_VALIDATION.json",
+        "bytes": 337
+      },
+      {
+        "file": "README.md",
+        "bytes": 9550
+      },
+      {
+        "file": "START_HERE_TWIN.md",
+        "bytes": 19845
+      },
+      {
+        "file": "STATE_INDEX.html",
+        "bytes": 5695
+      },
+      {
+        "file": "VISUAL_INDEX.html",
+        "bytes": 5078
+      },
+      {
+        "file": "00_STANDARDS/TALENT_WEBSITE_DEVELOPMENT_MASTER_v1_2026-10-18.md",
+        "bytes": 121876
+      },
+      {
+        "file": "01_SPECS/TWIN_CINEMATIC_MOTION_LAYER_v1_2_2026-10-18.md",
+        "bytes": 19931
+      },
+      {
+        "file": "01_SPECS/TWIN_DEMO_DATA_AND_CONNECTIONS.md",
+        "bytes": 4617
+      },
+      {
+        "file": "01_SPECS/TWIN_DEMO_EXPERIENCE_SPEC.md",
+        "bytes": 5129
+      },
+      {
+        "file": "01_SPECS/TWIN_DEMO_MOBILE_ACCEPTANCE.md",
+        "bytes": 4720
+      },
+      {
+        "file": "01_SPECS/TWIN_HOME_FRONTEND_IMPLEMENTATION_SPEC_v1_2_2026-10-18.md",
+        "bytes": 31355
+      },
+      {
+        "file": "01_SPECS/TWIN_INTEGRATION_CONTRACT.md",
+        "bytes": 4909
+      },
+      {
+        "file": "01_SPECS/TWIN_SITE_IMPLEMENTATION_PROFILE.md",
+        "bytes": 5432
+      },
+      {
+        "file": "01_SPECS/TWIN_UI_STATE_KIT_ADDENDUM_v1_2_2026-10-18.md",
+        "bytes": 6801
+      },
+      {
+        "file": "04_DATA/twin-demo-config.json",
+        "bytes": 500
+      },
+      {
+        "file": "04_DATA/twin-home-content.json",
+        "bytes": 4932
+      },
+      {
+        "file": "05_LOGOS/TWIN_G_LOCKUP_DARK_GRAPHITE.png",
+        "bytes": 1222365
+      },
+      {
+        "file": "05_LOGOS/TWIN_G_LOCKUP_LIGHT_ALPHA.png",
+        "bytes": 412467
+      },
+      {
+        "file": "07_UI_STATES/00_COMPOSITION_OVERVIEW.png",
+        "bytes": 400817
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_01_client-tools.png",
+        "bytes": 337351
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_02_virtual-sales.png",
+        "bytes": 193363
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_03_content-system.png",
+        "bytes": 268310
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_04_management.png",
+        "bytes": 171382
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_05_integrations.png",
+        "bytes": 141234
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_06_commercial.png",
+        "bytes": 479465
+      },
+      {
+        "file": "07_UI_STATES/01_MODAL_07_core.png",
+        "bytes": 366574
+      },
+      {
+        "file": "07_UI_STATES/02_CHANNEL_agent.png",
+        "bytes": 905487
+      },
+      {
+        "file": "07_UI_STATES/02_CHANNEL_office.png",
+        "bytes": 1074099
+      },
+      {
+        "file": "07_UI_STATES/02_CHANNEL_online.png",
+        "bytes": 941214
+      },
+      {
+        "file": "07_UI_STATES/02_CHANNEL_site.png",
+        "bytes": 852623
+      },
+      {
+        "file": "07_UI_STATES/03_PRODUCT_plan.png",
+        "bytes": 308828
+      },
+      {
+        "file": "07_UI_STATES/03_PRODUCT_view.png",
+        "bytes": 730644
+      },
+      {
+        "file": "07_UI_STATES/04_FORM_error.png",
+        "bytes": 62940
+      },
+      {
+        "file": "07_UI_STATES/04_FORM_idle.png",
+        "bytes": 56637
+      },
+      {
+        "file": "07_UI_STATES/04_FORM_invalid.png",
+        "bytes": 57275
+      },
+      {
+        "file": "07_UI_STATES/04_FORM_loading.png",
+        "bytes": 59526
+      },
+      {
+        "file": "07_UI_STATES/04_FORM_success.png",
+        "bytes": 63633
+      },
+      {
+        "file": "07_UI_STATES/05_UI_CONTROLS.png",
+        "bytes": 85260
+      },
+      {
+        "file": "07_UI_STATES/06_MOBILE_CHANNEL.png",
+        "bytes": 186548
+      },
+      {
+        "file": "07_UI_STATES/06_MOBILE_FORM.png",
+        "bytes": 53973
+      },
+      {
+        "file": "07_UI_STATES/06_MOBILE_MODAL.png",
+        "bytes": 130822
+      },
+      {
+        "file": "07_UI_STATES/06_MOBILE_MODAL_DETAILS.png",
+        "bytes": 128882
+      }
+    ]
+  },
+  {
+    "archive": "02_BACKGROUNDS.rar",
+    "files": [
+      {
+        "file": "02_BACKGROUNDS/01_HERO_COASTAL_PROJECT_BG.png",
+        "bytes": 2782745
+      },
+      {
+        "file": "02_BACKGROUNDS/02_FACADE_CONTINUOUS_STORY_BG.png",
+        "bytes": 3111501
+      },
+      {
+        "file": "02_BACKGROUNDS/03_SPACE_INTERIOR_SEA_VIEW_BG.png",
+        "bytes": 2820287
+      },
+      {
+        "file": "02_BACKGROUNDS/04_CORE_ISOMETRIC_PROJECT_ALPHA.png",
+        "bytes": 1965287
+      },
+      {
+        "file": "02_BACKGROUNDS/05_SALES_OFFICE_CHANNEL_BG.png",
+        "bytes": 2631861
+      },
+      {
+        "file": "02_BACKGROUNDS/06_LOT_AXONOMETRIC_CUTAWAY_ALPHA.png",
+        "bytes": 1817971
+      },
+      {
+        "file": "02_BACKGROUNDS/07_DELIVERY_TRIANGLE_OVERLAY.svg",
+        "bytes": 432
+      },
+      {
+        "file": "02_BACKGROUNDS/08_NEUTRAL_WHITE_SLIDE_BG.svg",
+        "bytes": 230
+      }
+    ]
+  },
+  {
+    "archive": "03_REFERENCES.rar",
+    "files": [
+      {
+        "file": "03_REFERENCES/.TWIN_WEBSITE_PART_02.png.g1SMMs",
+        "bytes": 1835008
+      },
+      {
+        "file": "03_REFERENCES/TWIN_DELIVERY_TRIANGLE.png",
+        "bytes": 1874301
+      },
+      {
+        "file": "03_REFERENCES/TWIN_LOGO_G_COMPARISON_REFERENCE.png",
+        "bytes": 1256118
+      },
+      {
+        "file": "03_REFERENCES/TWIN_PRODUCT_COMPOSITION.png",
+        "bytes": 2396263
+      },
+      {
+        "file": "03_REFERENCES/TWIN_SOURCEBOOK_SNAPSHOT_2026-10-16.md",
+        "bytes": 130510
+      },
+      {
+        "file": "03_REFERENCES/TWIN_WEBSITE_DEVELOPER_BRIEF_v1_2026-10-17.md",
+        "bytes": 47104
+      },
+      {
+        "file": "03_REFERENCES/TWIN_WEBSITE_PART_01.png",
+        "bytes": 2446308
+      },
+      {
+        "file": "03_REFERENCES/TWIN_WEBSITE_PART_02.png",
+        "bytes": 2332033
+      },
+      {
+        "file": "03_REFERENCES/TWIN_WEBSITE_TEXT_CONCEPT_v1_2026-10-18.md",
+        "bytes": 25649
+      }
+    ]
+  },
+  {
+    "archive": "06_UI_KIT.rar",
+    "files": [
+      {
+        "file": "06_UI_KIT/content-system.svg",
+        "bytes": 6136261
+      },
+      {
+        "file": "06_UI_KIT/FONT_LICENSE.txt",
+        "bytes": 3859
+      },
+      {
+        "file": "06_UI_KIT/integrations.svg",
+        "bytes": 2775
+      },
+      {
+        "file": "06_UI_KIT/management.svg",
+        "bytes": 2624604
+      },
+      {
+        "file": "06_UI_KIT/modal-content.json",
+        "bytes": 4254
+      },
+      {
+        "file": "06_UI_KIT/review-sans.ttf",
+        "bytes": 759720
+      },
+      {
+        "file": "06_UI_KIT/STATE_RENDER_REPORT.json",
+        "bytes": 3903
+      },
+      {
+        "file": "06_UI_KIT/TWIN_UI_STATES.html",
+        "bytes": 23550
+      },
+      {
+        "file": "06_UI_KIT/virtual-sales.svg",
+        "bytes": 2426004
+      }
+    ]
+  }
+]
