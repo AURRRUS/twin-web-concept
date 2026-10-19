@@ -1,0 +1,165 @@
+{
+  "status": "passed",
+  "screenshots": [
+    {
+      "file": "07_UI_STATES/00_COMPOSITION_OVERVIEW.png",
+      "view": "composition",
+      "id": null,
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_01_client-tools.png",
+      "view": "modal",
+      "id": "client-tools",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_02_virtual-sales.png",
+      "view": "modal",
+      "id": "virtual-sales",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_03_content-system.png",
+      "view": "modal",
+      "id": "content-system",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_04_management.png",
+      "view": "modal",
+      "id": "management",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_05_integrations.png",
+      "view": "modal",
+      "id": "integrations",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_06_commercial.png",
+      "view": "modal",
+      "id": "commercial",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/01_MODAL_07_core.png",
+      "view": "modal",
+      "id": "core",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/02_CHANNEL_site.png",
+      "view": "channels",
+      "id": "site",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/02_CHANNEL_online.png",
+      "view": "channels",
+      "id": "online",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/02_CHANNEL_agent.png",
+      "view": "channels",
+      "id": "agent",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/02_CHANNEL_office.png",
+      "view": "channels",
+      "id": "office",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/03_PRODUCT_plan.png",
+      "view": "product",
+      "id": "plan",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/03_PRODUCT_view.png",
+      "view": "product",
+      "id": "view",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/04_FORM_idle.png",
+      "view": "form",
+      "id": "idle",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/04_FORM_invalid.png",
+      "view": "form",
+      "id": "invalid",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/04_FORM_loading.png",
+      "view": "form",
+      "id": "loading",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/04_FORM_error.png",
+      "view": "form",
+      "id": "error",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/04_FORM_success.png",
+      "view": "form",
+      "id": "success",
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/05_UI_CONTROLS.png",
+      "view": "controls",
+      "id": null,
+      "viewport": "1440x1000"
+    },
+    {
+      "file": "07_UI_STATES/06_MOBILE_MODAL.png",
+      "view": "modal",
+      "id": "client-tools",
+      "viewport": "390x844"
+    },
+    {
+      "file": "07_UI_STATES/06_MOBILE_MODAL_DETAILS.png",
+      "view": "modal",
+      "id": "client-tools",
+      "viewport": "390x844",
+      "state": "scrolled-to-actions"
+    },
+    {
+      "file": "07_UI_STATES/06_MOBILE_CHANNEL.png",
+      "view": "channels",
+      "id": "site",
+      "viewport": "390x844"
+    },
+    {
+      "file": "07_UI_STATES/06_MOBILE_FORM.png",
+      "view": "form",
+      "id": "idle",
+      "viewport": "390x844"
+    }
+  ],
+  "checks": [
+    "No page errors",
+    "All image sources resolved",
+    "Channel click and keyboard tabs",
+    "Dialog Escape and return focus",
+    "Product tab switch",
+    "Invalid form feedback",
+    "390px no horizontal overflow"
+  ],
+  "limitations": [
+    "Local UI review prototype only",
+    "No backend",
+    "No full website integration",
+    "No Safari or real device testing"
+  ]
+}

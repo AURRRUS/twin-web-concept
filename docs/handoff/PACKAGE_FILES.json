@@ -1,0 +1,372 @@
+[
+  {
+    "file": "00_STANDARDS/TALENT_WEBSITE_DEVELOPMENT_MASTER_v1_2026-10-18.md",
+    "bytes": 121876,
+    "sha256": "8701fac2110c99084aecedc25db536b42c13f5d0214229a2043df81410e87f08"
+  },
+  {
+    "file": "01_SPECS/TWIN_CINEMATIC_MOTION_LAYER_v1_2_2026-10-18.md",
+    "bytes": 19931,
+    "sha256": "20ca7d2062205cb46d39fed53f97791569bbfc58390d4710169276e897df1394"
+  },
+  {
+    "file": "01_SPECS/TWIN_DEMO_DATA_AND_CONNECTIONS.md",
+    "bytes": 4617,
+    "sha256": "3875ed19ec8c15ab0bbf73eff816f48d113017b85ea9ac67ec88c88f27c9532f"
+  },
+  {
+    "file": "01_SPECS/TWIN_DEMO_EXPERIENCE_SPEC.md",
+    "bytes": 5129,
+    "sha256": "77c690bc20316f2f58261ed6a92ca36cfecd574cbb1f75bb17454b33effd3b04"
+  },
+  {
+    "file": "01_SPECS/TWIN_DEMO_MOBILE_ACCEPTANCE.md",
+    "bytes": 4720,
+    "sha256": "0d862ea538092d957466db05ebe7e24e033a93f898f11b54bd7373952f87836a"
+  },
+  {
+    "file": "01_SPECS/TWIN_HOME_FRONTEND_IMPLEMENTATION_SPEC_v1_2_2026-10-18.md",
+    "bytes": 31355,
+    "sha256": "869ec124d7755b9bcda3a8bd97c70b2511c9876605eb8cbd369551fdbf1e5361"
+  },
+  {
+    "file": "01_SPECS/TWIN_INTEGRATION_CONTRACT.md",
+    "bytes": 4909,
+    "sha256": "80bcfbd1cbd65be455739d0278f4f3ea264988eb18bfa0738af7accb3709a5dc"
+  },
+  {
+    "file": "01_SPECS/TWIN_SITE_IMPLEMENTATION_PROFILE.md",
+    "bytes": 5432,
+    "sha256": "903f127b4f477bf31971be00402b0682c5bea3973b0dc354a800f7dd493b224d"
+  },
+  {
+    "file": "01_SPECS/TWIN_UI_STATE_KIT_ADDENDUM_v1_2_2026-10-18.md",
+    "bytes": 6801,
+    "sha256": "90034e053bd386c303b1556bc62f5d7b92d16a5608f61f235ab7649cecce8b5d"
+  },
+  {
+    "file": "02_BACKGROUNDS/01_HERO_COASTAL_PROJECT_BG.png",
+    "bytes": 2782745,
+    "sha256": "9fb9cd13c631c48e5cbc72115c6b559e3d379f1ca480945d33f33595d06d44e9"
+  },
+  {
+    "file": "02_BACKGROUNDS/02_FACADE_CONTINUOUS_STORY_BG.png",
+    "bytes": 3111501,
+    "sha256": "553881b7436fae625750afafbc21470faa8cf6973cb819cd212a332adebc684f"
+  },
+  {
+    "file": "02_BACKGROUNDS/03_SPACE_INTERIOR_SEA_VIEW_BG.png",
+    "bytes": 2820287,
+    "sha256": "e0083a586c53c505b25806330814128d142dd13fffdb5182f74ffd34d93e65b5"
+  },
+  {
+    "file": "02_BACKGROUNDS/04_CORE_ISOMETRIC_PROJECT_ALPHA.png",
+    "bytes": 1965287,
+    "sha256": "21a537889d01ebe70c877d76238f5214192a2a94d3c57d67ad844ec5279d0e01"
+  },
+  {
+    "file": "02_BACKGROUNDS/05_SALES_OFFICE_CHANNEL_BG.png",
+    "bytes": 2631861,
+    "sha256": "2ea0bd75f8452cbcc8352c98a55bd3ec4e82db91aabe5fbe046fbe9317ed2baa"
+  },
+  {
+    "file": "02_BACKGROUNDS/06_LOT_AXONOMETRIC_CUTAWAY_ALPHA.png",
+    "bytes": 1817971,
+    "sha256": "415c4f9e1b0899385a591790f897c35be11e10156c1376dbe1949dedf48c8057"
+  },
+  {
+    "file": "02_BACKGROUNDS/07_DELIVERY_TRIANGLE_OVERLAY.svg",
+    "bytes": 432,
+    "sha256": "5f2dedcdef724ad1c240f205d38ad4f8c0e8d6ef1843f54d38b0e5c30147ff4b"
+  },
+  {
+    "file": "02_BACKGROUNDS/08_NEUTRAL_WHITE_SLIDE_BG.svg",
+    "bytes": 230,
+    "sha256": "006762376089f32ddab787890aac38e8c3b7dc78abf79e3e3b5282e32fbdb862"
+  },
+  {
+    "file": "03_REFERENCES/.TWIN_WEBSITE_PART_02.png.g1SMMs",
+    "bytes": 1835008,
+    "sha256": "d7ade77da189428986554bab4a8229f56aa0cd7122822614d24a49cfd2757760"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_DELIVERY_TRIANGLE.png",
+    "bytes": 1874301,
+    "sha256": "b4056d605387fe3e035817a859fb18f28a8c787dddfa0eb4403bd2621ef88d49"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_LOGO_G_COMPARISON_REFERENCE.png",
+    "bytes": 1256118,
+    "sha256": "dbeb064d9c46d3bfa50406f0287164adbd180a9a9434f2264f243b7430646d10"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_PRODUCT_COMPOSITION.png",
+    "bytes": 2396263,
+    "sha256": "dc34e4c2cfb3be54ad39be821264514d79e848b327c13446fc2da38b0aa193f0"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_SOURCEBOOK_SNAPSHOT_2026-10-16.md",
+    "bytes": 130510,
+    "sha256": "12311c055a1fa9ce49b1fa408f42ae42f96672abb66463b559e58491acf49547"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_WEBSITE_DEVELOPER_BRIEF_v1_2026-10-17.md",
+    "bytes": 47104,
+    "sha256": "5340f1498f7d441531604366288ed20a26e0b22a348a32f41a4eee50b4076869"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_WEBSITE_PART_01.png",
+    "bytes": 2446308,
+    "sha256": "2d36dbfebb84331494674871fc5d0dd10f92941de319121a7014cfe1f8bf1c76"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_WEBSITE_PART_02.png",
+    "bytes": 2332033,
+    "sha256": "124114e0a6621854630c75f44ad20fa8cc8c4e364d30aa55ba4af3e357701971"
+  },
+  {
+    "file": "03_REFERENCES/TWIN_WEBSITE_TEXT_CONCEPT_v1_2026-10-18.md",
+    "bytes": 25649,
+    "sha256": "c506ba3d03a9b220fde8489efec3c4a2008126e4693406590618b9ff8a3b46bc"
+  },
+  {
+    "file": "04_DATA/twin-demo-config.json",
+    "bytes": 500,
+    "sha256": "2e8ba5a67bef454ec3d26b265a88272f76b18852dad6ff92544662f1c0c0f7de"
+  },
+  {
+    "file": "04_DATA/twin-home-content.json",
+    "bytes": 4932,
+    "sha256": "09588a8861692cd7cdb6db6c4108bc94de7b6d07b82f55eb3ddf95d76820ba4f"
+  },
+  {
+    "file": "05_LOGOS/TWIN_G_LOCKUP_DARK_GRAPHITE.png",
+    "bytes": 1222365,
+    "sha256": "f5bd086a81aab744e7167a89cb2da68e540acb556438f6633b657e6e624eff81"
+  },
+  {
+    "file": "05_LOGOS/TWIN_G_LOCKUP_LIGHT_ALPHA.png",
+    "bytes": 412467,
+    "sha256": "8447b8403e2f122224069112e82d5c81eb8ab9d1c7cdf3087d00a0c7e8673913"
+  },
+  {
+    "file": "06_UI_KIT/FONT_LICENSE.txt",
+    "bytes": 3859,
+    "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+  },
+  {
+    "file": "06_UI_KIT/STATE_RENDER_REPORT.json",
+    "bytes": 3903,
+    "sha256": "a61033c41ce75309f6b4b5c4285a6a40c4db98097d3ebe27a6ef1517b2216e3a"
+  },
+  {
+    "file": "06_UI_KIT/TWIN_UI_STATES.html",
+    "bytes": 23550,
+    "sha256": "c03133921eaf05d2850d7543f643db59441ea5923da1d01c7805a2d27ac702e6"
+  },
+  {
+    "file": "06_UI_KIT/content-system.svg",
+    "bytes": 6136261,
+    "sha256": "b50ad33ffe52757bbeb1dbc65309fadf06bad47999e8c3c08f37d7b5eb74108c"
+  },
+  {
+    "file": "06_UI_KIT/integrations.svg",
+    "bytes": 2775,
+    "sha256": "b893818939efe0f2ca91d2711ea6b084fed714f4678d727461af3b58d7bd7fb4"
+  },
+  {
+    "file": "06_UI_KIT/management.svg",
+    "bytes": 2624604,
+    "sha256": "c62ea9e90c933514653e98ff39d501fbff0e07f05e3415dfba7425beff3d59f7"
+  },
+  {
+    "file": "06_UI_KIT/modal-content.json",
+    "bytes": 4254,
+    "sha256": "1f538f1ba3637f2dfd453a98730f1f333b40cbad498840867bc68bce4269e092"
+  },
+  {
+    "file": "06_UI_KIT/review-sans.ttf",
+    "bytes": 759720,
+    "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+  },
+  {
+    "file": "06_UI_KIT/virtual-sales.svg",
+    "bytes": 2426004,
+    "sha256": "fefe144aeb5a322c9ef172ae30a026af0987c0a6ae3ca2275ccbe3e99c096b6b"
+  },
+  {
+    "file": "07_UI_STATES/00_COMPOSITION_OVERVIEW.png",
+    "bytes": 400817,
+    "sha256": "798d105e8b73c64ad30d8b59a6db28bd60100f1ba9a6c748a49173b9ababb100"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_01_client-tools.png",
+    "bytes": 337351,
+    "sha256": "2dde661233b21c9c3b698933048db25ea1f9704dc2b69313a20803a4b3c49f20"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_02_virtual-sales.png",
+    "bytes": 193363,
+    "sha256": "6f5f7c368588fc7fe9f29e64de495197c161eed96cfa75b9785725208e9c40d0"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_03_content-system.png",
+    "bytes": 268310,
+    "sha256": "c06bf0f2c5bd599ec94ae69da7125c7cae4a6865514f16891dedf04d167c083d"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_04_management.png",
+    "bytes": 171382,
+    "sha256": "0272bb0143b95fd832d840285667d080b8727efc92200122ed142852d919ab38"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_05_integrations.png",
+    "bytes": 141234,
+    "sha256": "6e6ae227e7ea32a68f52e700a5f29bdfc270fc000b19095ce29d3e8baa907bea"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_06_commercial.png",
+    "bytes": 479465,
+    "sha256": "cbed3d58396908c10c0a0e82ed2cca900eb35bbedb96824fdf0adad351a766e1"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_07_core.png",
+    "bytes": 366574,
+    "sha256": "663eccd7510aad7625aba5285d34681124150ecf6624d1802968ed06cf1ccd04"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_agent.png",
+    "bytes": 905487,
+    "sha256": "573008f15608e84a1fb828d5f763919780606861d41cb8a60bef57814defccad"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_office.png",
+    "bytes": 1074099,
+    "sha256": "f48eb14b2ed738eb157bb330db983e33b2962154311632ee7023fad6af6be52c"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_online.png",
+    "bytes": 941214,
+    "sha256": "1340f1288ed9341d66a2a1835315b7100705214c3143298720b27e3d4f25936c"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_site.png",
+    "bytes": 852623,
+    "sha256": "f5148f2600111a2f8741038c10cb956f96206a4f01a645c1114b0f51a57f317b"
+  },
+  {
+    "file": "07_UI_STATES/03_PRODUCT_plan.png",
+    "bytes": 308828,
+    "sha256": "fdd861e3a6be39e0a0342c5e0e85a876ebc5ad31388ee18518f133bd15caf43a"
+  },
+  {
+    "file": "07_UI_STATES/03_PRODUCT_view.png",
+    "bytes": 730644,
+    "sha256": "392394835019fccf4d4611825e57bcb88c87f3abb6f652f62f18012c8f6ed666"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_error.png",
+    "bytes": 62940,
+    "sha256": "7672098e53f32e90388ece7221052b1243b1c3c9df3e761130cab49e59bc5df4"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_idle.png",
+    "bytes": 56637,
+    "sha256": "92dd8a1bbf3321d2b0213ada37d0948e7a2021b2b13be56b4f2a71b61875d487"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_invalid.png",
+    "bytes": 57275,
+    "sha256": "dc2f4d2c2feb5895eebfc021d8ededca0e3b03b7dedf6ac9af728290e6875e77"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_loading.png",
+    "bytes": 59526,
+    "sha256": "06047311386e82913fc89b5561c5e05e01f64730bed8e34a849965990fad13d3"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_success.png",
+    "bytes": 63633,
+    "sha256": "47751e62c761f3c5e7b633148096698f6794a91b8591e9363b738bd46cf94a49"
+  },
+  {
+    "file": "07_UI_STATES/05_UI_CONTROLS.png",
+    "bytes": 85260,
+    "sha256": "cc89f4c29766590021b249693ee096bb7468e8c5f7ccb7ddff018e79bc201afc"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_CHANNEL.png",
+    "bytes": 186548,
+    "sha256": "1ae86655c845344dd031a356aed198a75f9fdf5364a60847d0ca8e00d7b78b65"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_FORM.png",
+    "bytes": 53973,
+    "sha256": "2763516fb346eace623e2c60b3ae4fccf20d78ad2168642a8c2e65d33fa7e982"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_MODAL.png",
+    "bytes": 130822,
+    "sha256": "feee23afc816c39d4313b18f6dbac71d34e9b967cf0350a627ed39df55137b85"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_MODAL_DETAILS.png",
+    "bytes": 128882,
+    "sha256": "00a8dac608798285f833ccf60648659449571a854e9c52a1c37f9f8cab7f8abe"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/01_CHANNEL_WEBSITE.png",
+    "bytes": 2046015,
+    "sha256": "afa7018e310ceb55a770231431e7d6b7011f84fa3ae291ce7c7cd14fae9584b7"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/02_CHANNEL_ONLINE_VIEWING.png",
+    "bytes": 2096225,
+    "sha256": "9880cf67c025e4eed3794dcae60632b0dd04aa08db1de1a02bf653f1a3c2ce2f"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/03_CHANNEL_AGENT.png",
+    "bytes": 2175112,
+    "sha256": "c2f94bc21209a45a97af5f99eedac45f7f00ffadbed67d7ec4b56eb60bf7a7bc"
+  },
+  {
+    "file": "ASSET_MANIFEST.json",
+    "bytes": 13812,
+    "sha256": "6a92a600df85a1718508731ab825de9907311d80819a549ca52031063d53b9e6"
+  },
+  {
+    "file": "ASSET_MANIFEST.md",
+    "bytes": 5609,
+    "sha256": "734bf290508ef5d1f6e3d894c970550ea8cf31fbd99f3f236c48479bacb3a9c2"
+  },
+  {
+    "file": "CHANGELOG_v1_2.md",
+    "bytes": 1142,
+    "sha256": "d3c0001af03301362f2ce270dc813fce25bfd390d2210e961a54fe2ce8d610e8"
+  },
+  {
+    "file": "PACKAGE_VALIDATION.json",
+    "bytes": 337,
+    "sha256": "bb017d1295deb9524e0ed83e9c8f757407489c56799d411b5f5294faecaac748"
+  },
+  {
+    "file": "README.md",
+    "bytes": 9550,
+    "sha256": "aa87d556e758f997184d4383da1594ecad12784716f71134d0c5b534ed71b514"
+  },
+  {
+    "file": "START_HERE_TWIN.md",
+    "bytes": 19845,
+    "sha256": "4dbb2fb060b8658fab8da4c0d579d60d373f126622ca6b8f1dced8c8cb9c462d"
+  },
+  {
+    "file": "STATE_INDEX.html",
+    "bytes": 5695,
+    "sha256": "a94b54a237b993fb08e4f6710ac16f252e95fb0a0eddd5a1c2bcefab6dda479b"
+  },
+  {
+    "file": "VISUAL_INDEX.html",
+    "bytes": 5078,
+    "sha256": "653d2444f730986a9f533148abe31372a71b547b96bf8b7ccb02dfb36f0babbe"
+  }
+]

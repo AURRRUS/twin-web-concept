@@ -1,0 +1,42 @@
+{
+  "name": "twin-web-concept",
+  "version": "1.0.0",
+  "description": "Desktop-концепт Twin by TALENT по комплекту v1.3",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --host 0.0.0.0",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "check": "npm run typecheck && npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AURRRUS/twin-web-concept.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AURRRUS/twin-web-concept/issues"
+  },
+  "homepage": "https://github.com/AURRRUS/twin-web-concept#readme",
+  "dependencies": {
+    "@astrojs/react": "7.1.0",
+    "astro": "7.4.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  }
+}

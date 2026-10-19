@@ -1,0 +1,141 @@
+{
+  "brand": "Twin by TALENT",
+  "version": "1.2",
+  "status": "handoff-not-implemented",
+  "language": "ru",
+  "hero": {
+    "title": "Цифровая инфраструктура продаж девелоперского проекта.",
+    "body": "Раскрывайте преимущества проекта и помогайте покупателю выбирать — на сайте, дистанционно, через агентов и в офисе продаж.",
+    "primary": {
+      "label": "Посмотреть Twin",
+      "target": "/demo"
+    },
+    "secondary": {
+      "label": "Обсудить проект",
+      "target": "#contact"
+    }
+  },
+  "composition": {
+    "title": "Из чего состоит Twin",
+    "core": {
+      "id": "core",
+      "title": "Коммерческий цифровой двойник",
+      "label": "Ядро продукта"
+    },
+    "components": [
+      {
+        "id": "client-tools",
+        "title": "Клиентские инструменты",
+        "description": "Исследование, подбор и персонализация",
+        "extension": false,
+        "modalHref": "?component=client-tools#composition",
+        "futureRoute": "/product/client-tools",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "virtual-sales",
+        "title": "Виртуальный отдел продаж",
+        "description": "Рабочая среда команды и агентов",
+        "extension": false,
+        "modalHref": "?component=virtual-sales#composition",
+        "futureRoute": "/product/virtual-sales",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "content-system",
+        "title": "Контентная система",
+        "description": "Материалы на общей цифровой основе",
+        "extension": false,
+        "modalHref": "?component=content-system#composition",
+        "futureRoute": "/product/content-system",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "management",
+        "title": "Управление и аналитика",
+        "description": "Данные проекта, ассортимент и спрос",
+        "extension": false,
+        "modalHref": "?component=management#composition",
+        "futureRoute": "/product/management",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "integrations",
+        "title": "Интеграции",
+        "description": "Связь с CRM и системами девелопера",
+        "extension": false,
+        "modalHref": "?component=integrations#composition",
+        "futureRoute": "/product/integrations",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "commercial",
+        "title": "Коммерческие модули",
+        "description": "Ремонт, мебель и связанные сервисы",
+        "extension": true,
+        "modalHref": "?component=commercial#composition",
+        "futureRoute": "/product/commercial",
+        "futureRouteEnabled": false
+      }
+    ]
+  },
+  "channels": {
+    "initial": "office",
+    "items": [
+      {
+        "id": "site",
+        "title": "Сайт",
+        "mediaStatus": "illustrative-asset-provided"
+      },
+      {
+        "id": "online",
+        "title": "Онлайн-показ",
+        "mediaStatus": "illustrative-asset-provided"
+      },
+      {
+        "id": "agent",
+        "title": "Агент",
+        "mediaStatus": "illustrative-asset-provided"
+      },
+      {
+        "id": "office",
+        "title": "Офис продаж",
+        "mediaStatus": "illustrative-asset-provided"
+      }
+    ]
+  },
+  "delivery": {
+    "title": "Быстро. Доступно. Качественно.",
+    "subtitle": "В Twin сходятся все три.",
+    "duration": {
+      "value": 3,
+      "unit": "месяца",
+      "status": "owner-stated",
+      "startCondition": "to-be-fixed-per-project"
+    },
+    "budget": {
+      "value": 5000000,
+      "currency": "RUB",
+      "qualifier": "В среднем",
+      "status": "owner-stated-average"
+    },
+    "quality": {
+      "label": "Посмотрите в работе",
+      "target": "#product"
+    },
+    "note": "Состав решения, стоимость и график фиксируем для конкретного проекта."
+  },
+  "contact": {
+    "title": "Посмотрите, как Twin может работать на вашем проекте.",
+    "submitLabel": "Запросить демонстрацию",
+    "endpoint": null,
+    "demoMessage": "Демонстрационная форма: данные не отправлены",
+    "privacyUrl": null
+  },
+  "demo": {
+    "route": "/demo",
+    "overviewAnchor": "#product",
+    "config": "twin-demo-config.json",
+    "status": "specified-not-connected"
+  }
+}

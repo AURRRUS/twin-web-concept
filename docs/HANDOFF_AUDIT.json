@@ -1,0 +1,8 @@
+{
+  "scope": "Merged v1.2 plus v1.3 overlay; v1.3 takes precedence",
+  "expectedFiles": 76,
+  "matching": 76,
+  "missing": [],
+  "checksumMismatches": [],
+  "runtimeTests": "NOT_RUN"
+}

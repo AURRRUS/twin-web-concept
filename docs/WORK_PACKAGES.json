@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "1.0",
+  "packageVersion": "1.3",
+  "selectedWorkPackage": "TW-D05",
+  "note": "Текущий рабочий результат desktop; не принят владельцем и не опубликован. Исходный реестр handoff сохранён отдельно. Реальные подключения и mobile не выполнены.",
+  "packages": [
+    {
+      "id": "TW-00",
+      "title": "Карта реализации",
+      "stage": "preparation",
+      "status": "integrated",
+      "dependencies": [],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/test-results.json"
+      ]
+    },
+    {
+      "id": "TW-D01",
+      "title": "Каркас/header/hero",
+      "stage": "desktop",
+      "status": "integrated",
+      "dependencies": [
+        "TW-00"
+      ],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/test-results.json"
+      ]
+    },
+    {
+      "id": "TW-D02",
+      "title": "Архитектурная история",
+      "stage": "desktop",
+      "status": "integrated",
+      "dependencies": [
+        "TW-D01"
+      ],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/test-results.json"
+      ]
+    },
+    {
+      "id": "TW-D03",
+      "title": "Карта/диалоги/каналы",
+      "stage": "desktop",
+      "status": "integrated",
+      "dependencies": [
+        "TW-D02"
+      ],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/test-results.json"
+      ]
+    },
+    {
+      "id": "TW-D04",
+      "title": "Демо оболочка/viewer",
+      "stage": "desktop",
+      "status": "integrated",
+      "dependencies": [
+        "TW-D03"
+      ],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/demo-desktop.png"
+      ],
+      "scope": "Только оболочка и fixture",
+      "remaining": "Реальное подключение viewer: blocked, нужны ресурсы и контракт"
+    },
+    {
+      "id": "TW-D05",
+      "title": "Форма/интеграции/motion/desktop QA",
+      "stage": "desktop",
+      "status": "integrated",
+      "dependencies": [
+        "TW-D04"
+      ],
+      "implemented": true,
+      "evidence": [
+        "QA_REPORT.md",
+        "../artifacts/test-results.json"
+      ],
+      "scope": "Локальная форма, выключенная конфигурация, базовый motion и desktop-регрессия",
+      "remaining": "Реальная доставка/аналитика: blocked без сервисов; mobile отдельно"
+    },
+    {
+      "id": "TW-M01",
+      "title": "Адаптация контентных сцен",
+      "stage": "mobile",
+      "status": "queued",
+      "dependencies": [
+        "TW-D05"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-M02",
+      "title": "Демо/форма/диалоги",
+      "stage": "mobile",
+      "status": "queued",
+      "dependencies": [
+        "TW-M01"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-M03",
+      "title": "Устройства и сквозная приёмка",
+      "stage": "mobile",
+      "status": "queued",
+      "dependencies": [
+        "TW-M02"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-A01",
+      "title": "Одна CMS-страница",
+      "stage": "admin",
+      "status": "queued",
+      "dependencies": [
+        "TW-M03"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-A02",
+      "title": "Медиа/документы/каталог/интеграции",
+      "stage": "admin split required",
+      "status": "queued",
+      "dependencies": [
+        "TW-A01"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-I01",
+      "title": "Одна внутренняя ИИ-задача",
+      "stage": "AI separately scoped",
+      "status": "queued",
+      "dependencies": [
+        "TW-A01"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-I02",
+      "title": "Публичный консультант",
+      "stage": "AI separately scoped",
+      "status": "queued",
+      "dependencies": [
+        "TW-I01"
+      ],
+      "implemented": false,
+      "evidence": []
+    },
+    {
+      "id": "TW-I03",
+      "title": "Автозадача и feedback",
+      "stage": "automation separately scoped",
+      "status": "queued",
+      "dependencies": [
+        "TW-I01"
+      ],
+      "implemented": false,
+      "evidence": []
+    }
+  ],
+  "implementationVersion": "desktop-0.1",
+  "externalDependencies": [
+    {
+      "id": "TW-D04-connected",
+      "status": "blocked",
+      "reason": "Не предоставлен настоящий viewer и проверенное соответствие ID"
+    },
+    {
+      "id": "TW-D05-delivery",
+      "status": "blocked",
+      "reason": "Не предоставлены сервер доставки, политика данных и выбранные подключения"
+    }
+  ]
+}

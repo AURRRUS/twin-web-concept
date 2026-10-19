@@ -1,0 +1,42 @@
+{
+  "logo": {
+    "width": 1774,
+    "height": 887
+  },
+  "hero": {
+    "width": 1672,
+    "height": 941
+  },
+  "interior": {
+    "width": 1672,
+    "height": 941
+  },
+  "core": {
+    "width": 1448,
+    "height": 1086
+  },
+  "facade": {
+    "width": 1024,
+    "height": 1536
+  },
+  "office": {
+    "width": 1672,
+    "height": 941
+  },
+  "lot": {
+    "width": 1448,
+    "height": 1086
+  },
+  "agent": {
+    "width": 1672,
+    "height": 941
+  },
+  "site": {
+    "width": 1672,
+    "height": 941
+  },
+  "online": {
+    "width": 1672,
+    "height": 941
+  }
+}

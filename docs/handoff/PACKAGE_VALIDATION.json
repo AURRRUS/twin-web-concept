@@ -1,0 +1,13 @@
+{
+  "packageVersion": "1.2",
+  "checks": {
+    "jsonParse": "PASS",
+    "originalMediaBytePreservation": "PASS",
+    "preservedMediaCount": 47,
+    "masterBytePreservation": "PASS",
+    "primaryDemoRoute": "PASS"
+  },
+  "runtimeTests": "NOT_RUN",
+  "realTwinIntegration": "NOT_CONNECTED",
+  "newDemoUiStates": "SPECIFIED_NOT_RENDERED"
+}

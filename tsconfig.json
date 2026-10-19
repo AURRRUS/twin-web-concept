@@ -1,0 +1,6 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "react", "resolveJsonModule": true, "types": ["node"] },
+  "include": ["src/**/*", "tests/**/*", "playwright.config.ts"],
+  "exclude": ["dist", "node_modules"]
+}

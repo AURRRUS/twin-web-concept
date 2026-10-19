@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "mode": "fixture",
+  "connectedEnabled": false,
+  "viewer": {
+    "transport": null,
+    "url": null,
+    "allowedOrigin": null,
+    "adapterVersion": null
+  },
+  "catalog": {
+    "source": null,
+    "mappingFile": null
+  },
+  "capabilities": {
+    "selectLot": false,
+    "selectFloor": false,
+    "setView": false,
+    "selectionEvents": false,
+    "pause": false
+  },
+  "lead": {
+    "endpoint": null,
+    "enabled": false
+  },
+  "status": "template-not-connected"
+}

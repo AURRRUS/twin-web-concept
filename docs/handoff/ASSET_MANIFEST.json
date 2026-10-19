@@ -1,0 +1,400 @@
+[
+  {
+    "file": "02_BACKGROUNDS/01_HERO_COASTAL_PROJECT_BG.png",
+    "label": "Панорама / первый экран",
+    "usage": "S01; титульный слайд",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "has_alpha": false,
+    "notes": "Текст слева на белом поле или дополнительном CSS-градиенте; основной корпус справа; focal 78% 55%.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 2782745,
+    "sha256": "9fb9cd13c631c48e5cbc72115c6b559e3d379f1ca480945d33f33595d06d44e9"
+  },
+  {
+    "file": "02_BACKGROUNDS/02_FACADE_CONTINUOUS_STORY_BG.png",
+    "label": "Фасад / сквозная сцена",
+    "usage": "S02; вертикальная колонка слайда",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGB",
+    "has_alpha": false,
+    "notes": "Портретный кадр: фасад слева, море справа. Текст лучше рядом на белом; не растягивать в16:9.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 3111501,
+    "sha256": "553881b7436fae625750afafbc21470faa8cf6973cb819cd212a332adebc684f"
+  },
+  {
+    "file": "02_BACKGROUNDS/03_SPACE_INTERIOR_SEA_VIEW_BG.png",
+    "label": "Пространство / интерьер и вид",
+    "usage": "S02; пространство; модалка вида",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "has_alpha": false,
+    "notes": "Полноформатное медиа или правая колонка. Текст на отдельном белом поле; не накладывать на мебель/блики.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 2820287,
+    "sha256": "e0083a586c53c505b25806330814128d142dd13fffdb5182f74ffd34d93e65b5"
+  },
+  {
+    "file": "02_BACKGROUNDS/04_CORE_ISOMETRIC_PROJECT_ALPHA.png",
+    "label": "Изометрия / ядро продукта",
+    "usage": "S04; карта состава; небольшая модель S06",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "has_alpha": true,
+    "notes": "Прозрачный PNG. fit:contain. Надписи, линии и точки отдельными слоями; геометрия не live3D.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 1965287,
+    "sha256": "21a537889d01ebe70c877d76238f5214192a2a94d3c57d67ad844ec5279d0e01"
+  },
+  {
+    "file": "02_BACKGROUNDS/05_SALES_OFFICE_CHANNEL_BG.png",
+    "label": "Офис продаж / канал применения",
+    "usage": "S05; вкладка Офис продаж",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "has_alpha": false,
+    "notes": "Большой экран справа, стол снизу. Заголовок лучше отдельным полем сверху/слева; не запекать UI в фон.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 2631861,
+    "sha256": "2ea0bd75f8452cbcc8352c98a55bd3ec4e82db91aabe5fbe046fbe9317ed2baa"
+  },
+  {
+    "file": "02_BACKGROUNDS/06_LOT_AXONOMETRIC_CUTAWAY_ALPHA.png",
+    "label": "Лот / объёмная планировка",
+    "usage": "S02–S03; карточка выбранного лота",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "has_alpha": true,
+    "notes": "Прозрачный PNG, fit:contain. Демонстрационная планировка, не масштабный архитектурный план; параметры не выводить из изображения.",
+    "status": "AI-generated illustrative demo asset",
+    "bytes": 1817971,
+    "sha256": "415c4f9e1b0899385a591790f897c35be11e10156c1376dbe1949dedf48c8057"
+  },
+  {
+    "file": "02_BACKGROUNDS/07_DELIVERY_TRIANGLE_OVERLAY.svg",
+    "label": "Треугольник / редактируемый overlay",
+    "width": 1920,
+    "height": 1080,
+    "has_alpha": true,
+    "usage": "S06; геометрия под3 аргумента",
+    "notes": "SVG без текста. Не график данных. Подписи DOM/PowerPoint.",
+    "bytes": 432,
+    "sha256": "5f2dedcdef724ad1c240f205d38ad4f8c0e8d6ef1843f54d38b0e5c30147ff4b"
+  },
+  {
+    "file": "02_BACKGROUNDS/08_NEUTRAL_WHITE_SLIDE_BG.svg",
+    "label": "Белая основа слайда",
+    "width": 1920,
+    "height": 1080,
+    "has_alpha": false,
+    "usage": "Форма, модалки, состав и текстовые слайды",
+    "notes": "Нейтральная заливка. Для браузера предпочтителен CSS, SVG полезен как основа слайда.",
+    "bytes": 230,
+    "sha256": "006762376089f32ddab787890aac38e8c3b7dc78abf79e3e3b5282e32fbdb862"
+  },
+  {
+    "file": "05_LOGOS/TWIN_G_LOCKUP_DARK_GRAPHITE.png",
+    "label": "TWIN_G_LOCKUP_DARK_GRAPHITE",
+    "width": 1774,
+    "height": 887,
+    "has_alpha": false,
+    "bytes": 1222365,
+    "sha256": "f5bd086a81aab744e7167a89cb2da68e540acb556438f6633b657e6e624eff81",
+    "status": "working-raster-logo"
+  },
+  {
+    "file": "05_LOGOS/TWIN_G_LOCKUP_LIGHT_ALPHA.png",
+    "label": "TWIN_G_LOCKUP_LIGHT_ALPHA",
+    "width": 1774,
+    "height": 887,
+    "has_alpha": true,
+    "bytes": 412467,
+    "sha256": "8447b8403e2f122224069112e82d5c81eb8ab9d1c7cdf3087d00a0c7e8673913",
+    "status": "working-raster-logo"
+  },
+  {
+    "file": "07_UI_STATES/00_COMPOSITION_OVERVIEW.png",
+    "label": "00_COMPOSITION_OVERVIEW",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 400817,
+    "sha256": "798d105e8b73c64ad30d8b59a6db28bd60100f1ba9a6c748a49173b9ababb100",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_01_client-tools.png",
+    "label": "01_MODAL_01_client-tools",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 337351,
+    "sha256": "2dde661233b21c9c3b698933048db25ea1f9704dc2b69313a20803a4b3c49f20",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_02_virtual-sales.png",
+    "label": "01_MODAL_02_virtual-sales",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 193363,
+    "sha256": "6f5f7c368588fc7fe9f29e64de495197c161eed96cfa75b9785725208e9c40d0",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_03_content-system.png",
+    "label": "01_MODAL_03_content-system",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 268310,
+    "sha256": "c06bf0f2c5bd599ec94ae69da7125c7cae4a6865514f16891dedf04d167c083d",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_04_management.png",
+    "label": "01_MODAL_04_management",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 171382,
+    "sha256": "0272bb0143b95fd832d840285667d080b8727efc92200122ed142852d919ab38",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_05_integrations.png",
+    "label": "01_MODAL_05_integrations",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 141234,
+    "sha256": "6e6ae227e7ea32a68f52e700a5f29bdfc270fc000b19095ce29d3e8baa907bea",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_06_commercial.png",
+    "label": "01_MODAL_06_commercial",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 479465,
+    "sha256": "cbed3d58396908c10c0a0e82ed2cca900eb35bbedb96824fdf0adad351a766e1",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/01_MODAL_07_core.png",
+    "label": "01_MODAL_07_core",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 366574,
+    "sha256": "663eccd7510aad7625aba5285d34681124150ecf6624d1802968ed06cf1ccd04",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_agent.png",
+    "label": "02_CHANNEL_agent",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 905487,
+    "sha256": "573008f15608e84a1fb828d5f763919780606861d41cb8a60bef57814defccad",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_office.png",
+    "label": "02_CHANNEL_office",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 1074099,
+    "sha256": "f48eb14b2ed738eb157bb330db983e33b2962154311632ee7023fad6af6be52c",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_online.png",
+    "label": "02_CHANNEL_online",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 941214,
+    "sha256": "1340f1288ed9341d66a2a1835315b7100705214c3143298720b27e3d4f25936c",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/02_CHANNEL_site.png",
+    "label": "02_CHANNEL_site",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 852623,
+    "sha256": "f5148f2600111a2f8741038c10cb956f96206a4f01a645c1114b0f51a57f317b",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/03_PRODUCT_plan.png",
+    "label": "03_PRODUCT_plan",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 308828,
+    "sha256": "fdd861e3a6be39e0a0342c5e0e85a876ebc5ad31388ee18518f133bd15caf43a",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/03_PRODUCT_view.png",
+    "label": "03_PRODUCT_view",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 730644,
+    "sha256": "392394835019fccf4d4611825e57bcb88c87f3abb6f652f62f18012c8f6ed666",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_error.png",
+    "label": "04_FORM_error",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 62940,
+    "sha256": "7672098e53f32e90388ece7221052b1243b1c3c9df3e761130cab49e59bc5df4",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_idle.png",
+    "label": "04_FORM_idle",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 56637,
+    "sha256": "92dd8a1bbf3321d2b0213ada37d0948e7a2021b2b13be56b4f2a71b61875d487",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_invalid.png",
+    "label": "04_FORM_invalid",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 57275,
+    "sha256": "dc2f4d2c2feb5895eebfc021d8ededca0e3b03b7dedf6ac9af728290e6875e77",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_loading.png",
+    "label": "04_FORM_loading",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 59526,
+    "sha256": "06047311386e82913fc89b5561c5e05e01f64730bed8e34a849965990fad13d3",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/04_FORM_success.png",
+    "label": "04_FORM_success",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 63633,
+    "sha256": "47751e62c761f3c5e7b633148096698f6794a91b8591e9363b738bd46cf94a49",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/05_UI_CONTROLS.png",
+    "label": "05_UI_CONTROLS",
+    "width": 1440,
+    "height": 1000,
+    "has_alpha": false,
+    "bytes": 85260,
+    "sha256": "cc89f4c29766590021b249693ee096bb7468e8c5f7ccb7ddff018e79bc201afc",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_CHANNEL.png",
+    "label": "06_MOBILE_CHANNEL",
+    "width": 390,
+    "height": 1006,
+    "has_alpha": false,
+    "bytes": 186548,
+    "sha256": "1ae86655c845344dd031a356aed198a75f9fdf5364a60847d0ca8e00d7b78b65",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_FORM.png",
+    "label": "06_MOBILE_FORM",
+    "width": 390,
+    "height": 943,
+    "has_alpha": false,
+    "bytes": 53973,
+    "sha256": "2763516fb346eace623e2c60b3ae4fccf20d78ad2168642a8c2e65d33fa7e982",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_MODAL.png",
+    "label": "06_MOBILE_MODAL",
+    "width": 390,
+    "height": 844,
+    "has_alpha": false,
+    "bytes": 130822,
+    "sha256": "feee23afc816c39d4313b18f6dbac71d34e9b967cf0350a627ed39df55137b85",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "07_UI_STATES/06_MOBILE_MODAL_DETAILS.png",
+    "label": "06_MOBILE_MODAL_DETAILS",
+    "width": 390,
+    "height": 844,
+    "has_alpha": false,
+    "bytes": 128882,
+    "sha256": "00a8dac608798285f833ccf60648659449571a854e9c52a1c37f9f8cab7f8abe",
+    "status": "demo-state-render"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/01_CHANNEL_WEBSITE.png",
+    "label": "01_CHANNEL_WEBSITE",
+    "width": 1672,
+    "height": 941,
+    "has_alpha": false,
+    "bytes": 2046015,
+    "sha256": "afa7018e310ceb55a770231431e7d6b7011f84fa3ae291ce7c7cd14fae9584b7",
+    "status": "AI-generated illustrative scene"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/02_CHANNEL_ONLINE_VIEWING.png",
+    "label": "02_CHANNEL_ONLINE_VIEWING",
+    "width": 1672,
+    "height": 941,
+    "has_alpha": false,
+    "bytes": 2096225,
+    "sha256": "9880cf67c025e4eed3794dcae60632b0dd04aa08db1de1a02bf653f1a3c2ce2f",
+    "status": "AI-generated illustrative scene"
+  },
+  {
+    "file": "08_CHANNEL_MEDIA/03_CHANNEL_AGENT.png",
+    "label": "03_CHANNEL_AGENT",
+    "width": 1672,
+    "height": 941,
+    "has_alpha": false,
+    "bytes": 2175112,
+    "sha256": "c2f94bc21209a45a97af5f99eedac45f7f00ffadbed67d7ec4b56eb60bf7a7bc",
+    "status": "AI-generated illustrative scene"
+  },
+  {
+    "file": "04_DATA/twin-demo-config.json",
+    "label": "Шаблон подключения демо",
+    "usage": "Этапы A/B; неактивный контракт",
+    "status": "template-not-connected",
+    "bytes": 500,
+    "sha256": "2e8ba5a67bef454ec3d26b265a88272f76b18852dad6ff92544662f1c0c0f7de"
+  }
+]
