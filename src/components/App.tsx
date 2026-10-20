@@ -43,8 +43,10 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
   }
   useEffect(() => {
     const observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }, { threshold: 0.15 });
-    document.querySelectorAll('.composition, .delivery').forEach(el => observer.observe(el));
-    return () => observer.disconnect();
+    document.querySelectorAll('.composition, .delivery, .launch-steps').forEach(el => observer.observe(el));
+    const productObserver = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) { entry.target.classList.add('in-view'); productObserver.unobserve(entry.target); } }, { threshold: 0.35 });
+    document.querySelectorAll('.product-workspace').forEach(el => productObserver.observe(el));
+    return () => { observer.disconnect(); productObserver.disconnect(); };
   }, []);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
     <main id="main">{page === 'home' && <><Hero /><Journey /></>}

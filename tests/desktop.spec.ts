@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('desktop: real content, assets, anchors and screenshots', async ({ page }) => {
+  // Full-page PNG encoding on the shared cloud CPU can exceed the interaction timeout.
+  test.setTimeout(60_000);
   const errors: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
   await page.goto('/');

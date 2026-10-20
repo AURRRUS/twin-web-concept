@@ -3,7 +3,7 @@ import { Media } from './Media';
 import { Icon } from './Icon';
 
 const scenes = [
-  { id: 'project', title: 'Проект', detail: 'Окружение и архитектура', media: 'hero', alt: 'Окружение демонстрационного проекта у моря', target: 0.12 },
+  { id: 'project', title: 'Проект', detail: 'Окружение и архитектура', media: 'project', alt: 'Окружение демонстрационного проекта у моря', target: 0.12 },
   { id: 'space', title: 'Пространство', detail: 'Территория и пространство', media: 'interior', alt: 'Терраса и интерьер демонстрационного проекта', target: 0.49 },
   { id: 'lot', title: 'Лот', detail: 'Планировка, положение и вид', media: 'lot', alt: 'Иллюстративная объёмная планировка выбранного лота', target: 0.88 },
 ] as const;
@@ -54,6 +54,7 @@ export function Journey() {
       <div className="journey-facade"><Media name="facade" alt="Фасад демонстрационного проекта с террасами" /><span className="facade-mark mark-one" aria-hidden="true" /><span className="facade-mark mark-two" aria-hidden="true" /></div>
       <div className="journey-story"><div className="journey-intro"><h2 id={enhanced ? undefined : 'journey-heading'}>Покажите, что делает проект ценным.</h2><p>Окружение, архитектура, инфраструктура, планировка и вид — в связи с конкретным выбором покупателя.</p></div>
         <article id={enhanced ? undefined : 'project'} className="story-step"><span className="step-number">01</span><div><h3>Проект</h3><p>Окружение и архитектура</p></div><span className="story-connector" aria-hidden="true" /></article>
+        <Media name="project" alt="Панорама демонстрационного курорта с подписями окружения" className="journey-project" />
         <Media name="interior" alt="Иллюстративное пространство с террасой и видом на море" className="journey-interior" />
         <article id={enhanced ? undefined : 'space'} className="story-step"><span className="step-number">02</span><div><h3>Пространство</h3><p>Территория и пространство</p></div><span className="story-connector" aria-hidden="true" /></article>
         <div className="journey-lot"><article id={enhanced ? undefined : 'lot'} className="story-step"><span className="step-number">03</span><div><h3>Лот</h3><p>Планировка, положение и вид</p></div><span className="story-connector" aria-hidden="true" /></article><Media name="lot" alt="Демонстрационная объёмная планировка, не архитектурный чертёж" /></div>

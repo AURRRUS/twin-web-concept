@@ -1,0 +1,47 @@
+[
+  {
+    "role": "hero",
+    "providedFile": "1 экран Роскошный курорт у бирюзового моря.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sourceSha256": "0af2032cc607800aca1a8e1bca378d01117af722f4acd1c559424694213c43bf"
+  },
+  {
+    "role": "facade",
+    "providedFile": "2 экран вертикаль Роскошный курорт над лазурным морем.png",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "sourceSha256": "665c653f7eea0fe1be1111e63f08a4a4f6c4d991540e5bb28747e969419d88af"
+  },
+  {
+    "role": "project",
+    "providedFile": "2 экран состояние Проект Панорама роскошного курорта у моря.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sourceSha256": "a8c73d69a3bec6f788590a0fabb6886260f2592ba63994596e35e9b7ddc336a4"
+  },
+  {
+    "role": "interior",
+    "providedFile": "2 экран состояние Пространство Роскошный курорт с видом на море.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sourceSha256": "4bff95167dede9f4cbac13ecfc0cbaee8671a35cd8cfd7711b033b501b2d6925"
+  },
+  {
+    "role": "lot",
+    "providedFile": "2 экран состояние лот Средиземноморская квартира с террасой.png",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "sourceSha256": "079e5cc4373e0c5bf561b7bdcb15a68565a4f60918ee45741a73af88331f2bf6"
+  }
+]
