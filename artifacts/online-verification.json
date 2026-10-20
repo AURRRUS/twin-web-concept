@@ -1,10 +1,11 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "dd8c6b9b7b04bb4ab534fd09f3f709e5f6f7d00d",
+  "expectedSourceCommit": "216ff0664c96d7724c55eb73159207d686a301e8",
   "status": "PASS",
-  "checkedAt": "2026-10-20T00:58:03.059Z",
+  "checkedAt": "2026-10-20T01:02:24.262Z",
   "checks": [
     "Exact source commit matches the published build manifest",
+    "All five published architectural image bytes match the reviewed local files",
     "Published homepage HTTP 200 and loaded web typeface",
     "Published component dialog opens and closes",
     "Published channel tabs work",
@@ -14,8 +15,8 @@
   "pageErrors": [],
   "deployedVersion": {
     "version": "desktop-0.3",
-    "sourceCommit": "dd8c6b9b7b04bb4ab534fd09f3f709e5f6f7d00d",
-    "builtAt": "2026-10-20T00:57:55.142Z",
-    "previousDeploymentCommit": "58f92c0f064ff0e455f5f0dd728bdb68caeba495"
+    "sourceCommit": "216ff0664c96d7724c55eb73159207d686a301e8",
+    "builtAt": "2026-10-20T01:02:16.959Z",
+    "previousDeploymentCommit": "08b0cb6818a29c91c50c06a22a2e7d11ebd233b9"
   }
 }
