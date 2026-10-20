@@ -1,0 +1,252 @@
+[
+  {
+    "width": 1280,
+    "guides": {
+      ".site-header": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".product": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".composition": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".channels-heading": {
+        "left": 56.875,
+        "right": 676.875
+      },
+      ".channel-story": {
+        "left": 56.875,
+        "right": 1223.125
+      },
+      ".delivery": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".contact": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".site-footer": {
+        "left": 56.8888,
+        "right": 1223.1112
+      },
+      ".hero-copy": {
+        "left": 56.875
+      }
+    },
+    "navigation": "passed",
+    "channels": 4,
+    "dialog": "passed",
+    "form": "validation and local notice passed",
+    "demo": "view and parent reset passed",
+    "scenes": [
+      "Проект",
+      "Пространство",
+      "Лот",
+      "Проект"
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "guides": {
+      ".site-header": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".product": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".composition": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".channels-heading": {
+        "left": 63.984375,
+        "right": 683.984375
+      },
+      ".channel-story": {
+        "left": 63.9844,
+        "right": 1376.0156
+      },
+      ".delivery": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".contact": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".site-footer": {
+        "left": 63.9999,
+        "right": 1376.0001
+      },
+      ".hero-copy": {
+        "left": 63.984375
+      }
+    },
+    "navigation": "passed",
+    "channels": 4,
+    "dialog": "passed",
+    "form": "validation and local notice passed",
+    "demo": "view and parent reset passed",
+    "scenes": [
+      "Проект",
+      "Пространство",
+      "Лот",
+      "Проект"
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "guides": {
+      ".site-header": {
+        "left": 256,
+        "right": 1664
+      },
+      ".product": {
+        "left": 256,
+        "right": 1664
+      },
+      ".composition": {
+        "left": 256,
+        "right": 1664
+      },
+      ".channels-heading": {
+        "left": 256,
+        "right": 876
+      },
+      ".channel-story": {
+        "left": 256,
+        "right": 1664
+      },
+      ".delivery": {
+        "left": 256,
+        "right": 1664
+      },
+      ".contact": {
+        "left": 256,
+        "right": 1664
+      },
+      ".site-footer": {
+        "left": 256,
+        "right": 1664
+      },
+      ".hero-copy": {
+        "left": 256
+      }
+    },
+    "navigation": "passed",
+    "channels": 4,
+    "dialog": "passed",
+    "form": "validation and local notice passed",
+    "demo": "view and parent reset passed",
+    "scenes": [
+      "Проект",
+      "Пространство",
+      "Лот",
+      "Проект"
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "guides": {
+      ".site-header": {
+        "left": 20,
+        "right": 370
+      },
+      ".product": {
+        "left": 20,
+        "right": 370
+      },
+      ".composition": {
+        "left": 20,
+        "right": 370
+      },
+      ".channels-heading": {
+        "left": 20,
+        "right": 370
+      },
+      ".channel-story": {
+        "left": 20,
+        "right": 370
+      },
+      ".delivery": {
+        "left": 20,
+        "right": 370
+      },
+      ".contact": {
+        "left": 20,
+        "right": 370
+      },
+      ".site-footer": {
+        "left": 20,
+        "right": 370
+      },
+      ".hero-copy": {
+        "left": 20
+      }
+    },
+    "navigation": "passed",
+    "channels": 4,
+    "dialog": "passed",
+    "form": "validation and local notice passed",
+    "demo": "view and parent reset passed",
+    "scenes": [],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "guides": {
+      ".site-header": {
+        "left": 40,
+        "right": 728
+      },
+      ".product": {
+        "left": 40,
+        "right": 728
+      },
+      ".composition": {
+        "left": 40,
+        "right": 728
+      },
+      ".channels-heading": {
+        "left": 40,
+        "right": 531.515625
+      },
+      ".channel-story": {
+        "left": 40,
+        "right": 728
+      },
+      ".delivery": {
+        "left": 40,
+        "right": 728
+      },
+      ".contact": {
+        "left": 40,
+        "right": 728
+      },
+      ".site-footer": {
+        "left": 40,
+        "right": 728
+      },
+      ".hero-copy": {
+        "left": 40
+      }
+    },
+    "navigation": "passed",
+    "channels": 4,
+    "dialog": "passed",
+    "form": "validation and local notice passed",
+    "demo": "view and parent reset passed",
+    "scenes": [],
+    "overflow": false
+  }
+]
