@@ -1,0 +1,518 @@
+[
+  {
+    "viewport": 1280,
+    "client": 1280,
+    "scroll": 1265,
+    "boxes": {
+      ".site-header": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "0px",
+        "paddingRight": "54px"
+      },
+      ".hero-copy": {
+        "x": 32,
+        "width": 1000,
+        "right": 1032,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".product": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".composition": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".channels-heading": {
+        "x": 65,
+        "width": 620,
+        "right": 685,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".channel-story": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "65px",
+        "paddingRight": "65px"
+      },
+      ".delivery": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".contact": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "width": 1265,
+        "right": 1265,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".map-core > .media": {
+        "x": 274.234375,
+        "width": 716.53125,
+        "right": 990.765625,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".delivery-triangle": {
+        "x": 291.390625,
+        "width": 648.078125,
+        "right": 939.46875,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      }
+    },
+    "overflow": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "fonts": {
+      "heading": "\"RF Dewi\", sans-serif",
+      "body": "\"Inter Tight\", sans-serif"
+    },
+    "demoOverflow": false,
+    "errors": [],
+    "width": 1280
+  },
+  {
+    "viewport": 1440,
+    "client": 1440,
+    "scroll": 1425,
+    "boxes": {
+      ".site-header": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "0px",
+        "paddingRight": "54px"
+      },
+      ".hero-copy": {
+        "x": 32,
+        "width": 1000,
+        "right": 1032,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".product": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".composition": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".channels-heading": {
+        "x": 65,
+        "width": 620,
+        "right": 685,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".channel-story": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "65px",
+        "paddingRight": "65px"
+      },
+      ".delivery": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".contact": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "width": 1425,
+        "right": 1425,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".map-core > .media": {
+        "x": 303.828125,
+        "width": 817.34375,
+        "right": 1121.171875,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".delivery-triangle": {
+        "x": 323.390625,
+        "width": 739.28125,
+        "right": 1062.671875,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      }
+    },
+    "overflow": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "fonts": {
+      "heading": "\"RF Dewi\", sans-serif",
+      "body": "\"Inter Tight\", sans-serif"
+    },
+    "demoOverflow": false,
+    "errors": [],
+    "width": 1440
+  },
+  {
+    "viewport": 1920,
+    "client": 1920,
+    "scroll": 1905,
+    "boxes": {
+      ".site-header": {
+        "x": 0,
+        "width": 1905,
+        "right": 1905,
+        "paddingLeft": "120.5px",
+        "paddingRight": "54px"
+      },
+      ".hero-copy": {
+        "x": 152.5,
+        "width": 1000,
+        "right": 1152.5,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".product": {
+        "x": 184.5,
+        "width": 1536,
+        "right": 1720.5,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".composition": {
+        "x": 184.5,
+        "width": 1536,
+        "right": 1720.5,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".channels-heading": {
+        "x": 217.5,
+        "width": 620,
+        "right": 837.5,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".channel-story": {
+        "x": 152.5,
+        "width": 1600,
+        "right": 1752.5,
+        "paddingLeft": "65px",
+        "paddingRight": "65px"
+      },
+      ".delivery": {
+        "x": 184.5,
+        "width": 1536,
+        "right": 1720.5,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".contact": {
+        "x": 184.5,
+        "width": 1536,
+        "right": 1720.5,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".site-footer": {
+        "x": 184.5,
+        "width": 1536,
+        "right": 1720.5,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      ".map-core > .media": {
+        "x": 508.84375,
+        "width": 887.296875,
+        "right": 1396.140625,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".delivery-triangle": {
+        "x": 530.09375,
+        "width": 802.546875,
+        "right": 1332.640625,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      }
+    },
+    "overflow": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "fonts": {
+      "heading": "\"RF Dewi\", sans-serif",
+      "body": "\"Inter Tight\", sans-serif"
+    },
+    "demoOverflow": false,
+    "errors": [],
+    "width": 1920
+  },
+  {
+    "viewport": 390,
+    "client": 390,
+    "scroll": 375,
+    "boxes": {
+      ".site-header": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "18px",
+        "paddingRight": "18px"
+      },
+      ".hero-copy": {
+        "x": 20,
+        "width": 335,
+        "right": 355,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".product": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".composition": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".channels-heading": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".channel-story": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".delivery": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".contact": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "width": 375,
+        "right": 375,
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      },
+      ".map-core > .media": {
+        "x": 20,
+        "width": 335,
+        "right": 355,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".delivery-triangle": {
+        "x": 20,
+        "width": 335,
+        "right": 355,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      }
+    },
+    "overflow": [
+      "story-connector",
+      "story-connector",
+      "story-connector",
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "fonts": {
+      "heading": "\"RF Dewi\", sans-serif",
+      "body": "\"Inter Tight\", sans-serif"
+    },
+    "demoOverflow": false,
+    "errors": [],
+    "width": 390
+  },
+  {
+    "viewport": 768,
+    "client": 768,
+    "scroll": 753,
+    "boxes": {
+      ".site-header": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "35px",
+        "paddingRight": "35px"
+      },
+      ".hero-copy": {
+        "x": 52.703125,
+        "width": 564.75,
+        "right": 617.453125,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".product": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".composition": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".channels-heading": {
+        "x": 40,
+        "width": 481.90625,
+        "right": 521.90625,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".channel-story": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".delivery": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".contact": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "width": 753,
+        "right": 753,
+        "paddingLeft": "40px",
+        "paddingRight": "40px"
+      },
+      ".map-core > .media": {
+        "x": 164.4375,
+        "width": 424.109375,
+        "right": 588.546875,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      ".delivery-triangle": {
+        "x": 40,
+        "width": 518.203125,
+        "right": 558.203125,
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      }
+    },
+    "overflow": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "fonts": {
+      "heading": "\"RF Dewi\", sans-serif",
+      "body": "\"Inter Tight\", sans-serif"
+    },
+    "demoOverflow": false,
+    "errors": [],
+    "width": 768
+  }
+]
