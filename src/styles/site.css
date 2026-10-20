@@ -643,8 +643,9 @@ section[id], article[id] { scroll-margin-top: 24px; }
 
 /* Owner correction: one aligned left edge, three deliberate desktop lines. */
 @media (min-width: 951px) {
-  .hero .site-header { max-width: none; padding-left: max(20px, calc(4% - 32px)); }
-  .hero-copy { width: 1000px; max-width: 85%; margin-left: 4%; }
+  .hero { --content-left: max(32px, calc((100% - 1600px) / 2)); }
+  .hero .site-header { max-width: none; padding-left: max(0px, calc(var(--content-left) - 32px)); }
+  .hero-copy { width: 1000px; max-width: 85%; margin-left: var(--content-left); }
   .hero-copy h1 { font-size: clamp(44px, 3.85vw, 68px); line-height: 1.09; }
   .hero-copy h1 > span { white-space: nowrap; }
   .hero-copy p { width: 500px; max-width: 65%; }
