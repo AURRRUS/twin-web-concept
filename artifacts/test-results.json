@@ -126,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9433,
+                  "duration": 11723,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:02.449Z",
+                  "startTime": "2026-10-20T01:16:30.578Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -160,12 +160,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9785,
+                  "duration": 14102,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:13.229Z",
+                  "startTime": "2026-10-20T01:16:43.343Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -194,12 +194,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3927,
+                  "duration": 5070,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:23.052Z",
+                  "startTime": "2026-10-20T01:16:57.517Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -228,12 +228,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4733,
+                  "duration": 5073,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:27.040Z",
+                  "startTime": "2026-10-20T01:17:02.648Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -262,12 +262,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4056,
+                  "duration": 4539,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:31.810Z",
+                  "startTime": "2026-10-20T01:17:07.807Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -296,12 +296,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3058,
+                  "duration": 4024,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:35.908Z",
+                  "startTime": "2026-10-20T01:17:12.379Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -330,12 +330,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6747,
+                  "duration": 9991,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:39.011Z",
+                  "startTime": "2026-10-20T01:17:16.441Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -364,12 +364,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2759,
+                  "duration": 3116,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:45.809Z",
+                  "startTime": "2026-10-20T01:17:26.466Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -383,7 +383,7 @@
           "column": 1
         },
         {
-          "title": "desktop typeface loads and architectural scenes reverse without losing content",
+          "title": "desktop typeface and open architectural chapters remain available in both directions",
           "ok": true,
           "tags": [],
           "tests": [
@@ -398,12 +398,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4581,
+                  "duration": 5715,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:48.614Z",
+                  "startTime": "2026-10-20T01:17:29.615Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -411,7 +411,7 @@
               "status": "expected"
             }
           ],
-          "id": "12cc77c408bab7a1d6ba-536265f49b0ab861c123",
+          "id": "12cc77c408bab7a1d6ba-5343c9d8ed231aa41a86",
           "file": "desktop.spec.ts",
           "line": 154,
           "column": 1
@@ -432,12 +432,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1419,
+                  "duration": 2465,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T01:01:53.233Z",
+                  "startTime": "2026-10-20T01:17:35.359Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -447,7 +447,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-1e8a68f5be3c974aa4d7",
           "file": "desktop.spec.ts",
-          "line": 172,
+          "line": 173,
           "column": 1
         }
       ]
@@ -455,8 +455,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-20T01:00:56.953Z",
-    "duration": 58085.47,
+    "startTime": "2026-10-20T01:16:25.523Z",
+    "duration": 72964.08099999999,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,

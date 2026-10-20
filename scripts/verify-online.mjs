@@ -42,6 +42,14 @@ try {
   assert.match(await page.locator('h1').innerText(), /Цифровая/);
   assert.match(await page.locator('h1').evaluate(el => getComputedStyle(el).fontFamily), /Manrope Variable/);
   await page.locator('.hero').screenshot({ path: 'artifacts/online-first-screen.png', animations: 'disabled' });
+  assert.equal(await page.locator('.journey-chapter').count(), 3);
+  for (const id of ['project', 'space', 'lot']) {
+    const chapter = page.locator(`.journey-chapter-${id}`);
+    await chapter.scrollIntoViewIfNeeded();
+    assert((await chapter.locator('img').boundingBox()).width > 700);
+    await page.waitForFunction(id => { const img = document.querySelector(`.journey-chapter-${id} img`); return img?.complete && img.naturalWidth > 0; }, id);
+  }
+  result.checks.push('Published architectural chapters remain open with large loaded images');
   await page.locator('.component-client-tools').click();
   await page.getByRole('dialog').waitFor();
   await page.keyboard.press('Escape');

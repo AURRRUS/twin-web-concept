@@ -151,21 +151,22 @@ test('without JavaScript: server-rendered content and honest demo remain availab
   await context.close();
 });
 
-test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
+test('desktop typeface and open architectural chapters remain available in both directions', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
   expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Manrope Variable');
   expect(await page.evaluate(() => document.fonts.check('450 48px "Manrope Variable"', 'Цифровая инфраструктура'))).toBe(true);
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  for (const [progress, scene] of [[0.14, 'project'], [0.5, 'space'], [0.88, 'lot'], [0.5, 'space']] as const) {
-    await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
-    await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
-    await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    await page.locator('.journey-cinematic').screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
+  await expect(page.locator('.journey-chapter')).toHaveCount(3);
+  for (const scene of ['project', 'space', 'lot', 'space']) {
+    const chapter = page.locator(`.journey-chapter-${scene}`);
+    await chapter.scrollIntoViewIfNeeded();
+    await expect(chapter).toBeVisible();
+    await expect(chapter.locator('img')).toBeVisible();
+    expect(await chapter.locator('img').evaluate(img => img.getBoundingClientRect().width)).toBeGreaterThan(700);
+    await chapter.screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
-  await expect(page.locator('.journey-static')).toBeVisible();
+  for (const id of ['project', 'space', 'lot']) await expect(page.locator(`.journey-chapter-${id}`)).toBeVisible();
   await expect(page.locator('#lot')).toContainText('Планировка, положение и вид');
 });
 

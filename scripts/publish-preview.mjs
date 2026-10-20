@@ -25,7 +25,7 @@ try {
   }
   cpSync(dist, directory, { recursive: true });
   writeFileSync(join(directory, '.nojekyll'), '');
-  writeFileSync(join(directory, 'build-version.json'), JSON.stringify({ version: 'desktop-0.3', sourceCommit, builtAt: new Date().toISOString(), previousDeploymentCommit: previousCommit }, null, 2) + '\n');
+  writeFileSync(join(directory, 'build-version.json'), JSON.stringify({ version: 'desktop-0.4', sourceCommit, builtAt: new Date().toISOString(), previousDeploymentCommit: previousCommit }, null, 2) + '\n');
   git(['add', '.'], directory);
   if (!git(['diff', '--cached', '--name-only'], directory)) { console.log('No deployment changes.'); process.exit(0); }
   git(['-c', 'user.name=Codex', '-c', 'user.email=codex@users.noreply.github.com', 'commit', '-m', `Publish Twin desktop ${sourceCommit.slice(0, 7)}`], directory);
