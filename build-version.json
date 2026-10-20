@@ -1,6 +1,6 @@
 {
-  "version": "desktop-0.3",
-  "sourceCommit": "216ff0664c96d7724c55eb73159207d686a301e8",
-  "builtAt": "2026-10-20T01:02:16.959Z",
-  "previousDeploymentCommit": "08b0cb6818a29c91c50c06a22a2e7d11ebd233b9"
+  "version": "desktop-0.4",
+  "sourceCommit": "76d61119c49256e66e34cf95698ac0447570bd9f",
+  "builtAt": "2026-10-20T01:18:31.399Z",
+  "previousDeploymentCommit": "f6410e620f8d23ca7a0cabe8aea6b6d606a18c6f"
 }
