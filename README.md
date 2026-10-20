@@ -6,7 +6,7 @@ Desktop-реализация корпоративного сайта Twin по �
 
 Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Исходный код — в `codex/twin-desktop-v1-3`.
 
-Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [открытая композиция второго блока, desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
+Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
 ## Установка и запуск
 

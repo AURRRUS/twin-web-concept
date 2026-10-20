@@ -42,14 +42,15 @@ try {
   assert.match(await page.locator('h1').innerText(), /Цифровая/);
   assert.match(await page.locator('h1').evaluate(el => getComputedStyle(el).fontFamily), /Manrope Variable/);
   await page.locator('.hero').screenshot({ path: 'artifacts/online-first-screen.png', animations: 'disabled' });
-  assert.equal(await page.locator('.journey-chapter').count(), 3);
-  for (const id of ['project', 'space', 'lot']) {
-    const chapter = page.locator(`.journey-chapter-${id}`);
-    await chapter.scrollIntoViewIfNeeded();
-    assert((await chapter.locator('img').boundingBox()).width > 700);
-    await page.waitForFunction(id => { const img = document.querySelector(`.journey-chapter-${id} img`); return img?.complete && img.naturalWidth > 0; }, id);
+  await page.waitForFunction(() => document.querySelector('.journey')?.dataset.enhanced === 'true');
+  for (const [id, progress] of [['project', 0.14], ['space', 0.5], ['lot', 0.88]]) {
+    await page.locator('.journey').evaluate((el, progress) => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + (el.clientHeight - innerHeight) * progress, behavior: 'instant' }), progress);
+    await page.waitForFunction(id => document.querySelector('.journey').dataset.scene === id, id);
+    const material = page.locator(`.scene-material-${id}`);
+    assert((await material.boundingBox()).width > 780);
+    await page.waitForFunction(id => { const img = document.querySelector(`.scene-material-${id} img`); return img?.complete && img.naturalWidth > 0; }, id);
   }
-  result.checks.push('Published architectural chapters remain open with large loaded images');
+  result.checks.push('Published cinematic scenes use large loaded images and preserve three states');
   await page.locator('.component-client-tools').click();
   await page.getByRole('dialog').waitFor();
   await page.keyboard.press('Escape');
