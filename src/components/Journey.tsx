@@ -18,23 +18,36 @@ export function Journey() {
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0;
     let last = -1;
-    const update = () => {
+    let visualProgress: number | null = null;
+    let previousTime = 0;
+    const smoothstep = (value: number) => value * value * (3 - 2 * value);
+    const update = (time: number) => {
       frame = 0;
       if (document.hidden || !desktop.matches || reduced.matches) return;
       const rect = node.getBoundingClientRect();
       if (rect.top > innerHeight || rect.bottom < 0) return;
-      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - innerHeight)));
-      const space = Math.max(0, Math.min(1, (progress - 0.22) / 0.16));
-      const lot = Math.max(0, Math.min(1, (progress - 0.60) / 0.16));
+      const target = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - innerHeight)));
+      const elapsed = previousTime ? Math.min(64, time - previousTime) : 16;
+      previousTime = time;
+      visualProgress = visualProgress === null ? target : visualProgress + (target - visualProgress) * (1 - Math.exp(-elapsed / 85));
+      if (Math.abs(target - visualProgress) < 0.0001) visualProgress = target;
+      const progress = visualProgress;
+      const space = smoothstep(Math.max(0, Math.min(1, (progress - 0.22) / 0.16)));
+      const lot = smoothstep(Math.max(0, Math.min(1, (progress - 0.60) / 0.16)));
       node.style.setProperty('--scene-space', String(space));
       node.style.setProperty('--scene-lot', String(lot));
       node.style.setProperty('--facade-offset', `${progress * -3.5}%`);
       node.style.setProperty('--scene-progress', String(progress));
       const next = progress < 0.38 ? 0 : progress < 0.76 ? 1 : 2;
       if (next !== last) { last = next; setActive(next); window.dispatchEvent(new CustomEvent('twin:scene-active', { detail: scenes[next].id })); }
+      if (visualProgress !== target) frame = requestAnimationFrame(update);
     };
     const request = () => { if (!frame) frame = requestAnimationFrame(update); };
-    const configure = () => { setEnhanced(desktop.matches && !reduced.matches); request(); };
+    const configure = () => {
+      if (frame) { cancelAnimationFrame(frame); frame = 0; }
+      visualProgress = null; previousTime = 0;
+      setEnhanced(desktop.matches && !reduced.matches); request();
+    };
     jump.current = id => {
       const scene = scenes.find(s => s.id === id);
       if (!scene) return;
