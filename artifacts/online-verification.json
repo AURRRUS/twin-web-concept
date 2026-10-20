@@ -1,11 +1,12 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "c00ecaba714553d9fb859710dafe0b6c1a2c049a",
+  "expectedSourceCommit": "56154544f68abfeece6075c431b9b1b0e3c3e7df",
   "status": "PASS",
-  "checkedAt": "2026-10-20T01:25:43.854Z",
+  "checkedAt": "2026-10-20T01:37:55.748Z",
   "checks": [
     "Exact source commit matches the published build manifest",
     "All five published architectural image bytes match the reviewed local files",
+    "Provided RF Dewi and Inter Tight webfonts are actually loaded",
     "Published cinematic scenes use large loaded images and preserve three states",
     "Published homepage HTTP 200 and loaded web typeface",
     "Published component dialog opens and closes",
@@ -15,9 +16,9 @@
   ],
   "pageErrors": [],
   "deployedVersion": {
-    "version": "desktop-0.5",
-    "sourceCommit": "c00ecaba714553d9fb859710dafe0b6c1a2c049a",
-    "builtAt": "2026-10-20T01:25:36.085Z",
-    "previousDeploymentCommit": "eed087b9d5a5fcfe71a4a8ebdb573feaf9889643"
+    "version": "desktop-0.6",
+    "sourceCommit": "56154544f68abfeece6075c431b9b1b0e3c3e7df",
+    "builtAt": "2026-10-20T01:37:46.313Z",
+    "previousDeploymentCommit": "83fcc43223474bd926d02b15409275c863f50e9d"
   }
 }
