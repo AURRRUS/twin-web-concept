@@ -46,7 +46,22 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     document.querySelectorAll('.composition, .delivery, .launch-steps').forEach(el => observer.observe(el));
     const productObserver = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) { entry.target.classList.add('in-view'); productObserver.unobserve(entry.target); } }, { threshold: 0.35 });
     document.querySelectorAll('.product-workspace').forEach(el => productObserver.observe(el));
-    return () => { observer.disconnect(); productObserver.disconnect(); };
+    const revealObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) if (entry.isIntersecting) {
+        entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target);
+      }
+    }, { threshold: 0.08 });
+    const revealElements = document.querySelectorAll('.section-heading, .center-heading, .channels-heading, .contact-copy, .contact form');
+    revealElements.forEach(el => {
+      // Visible content never flashes out when hydration finishes.
+      if (el.getBoundingClientRect().top >= innerHeight) {
+        el.classList.add('reveal-ready'); revealObserver.observe(el);
+      }
+    });
+    return () => {
+      observer.disconnect(); productObserver.disconnect(); revealObserver.disconnect();
+      revealElements.forEach(el => el.classList.remove('reveal-ready'));
+    };
   }, []);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
     <main id="main">{page === 'home' && <><Hero /><Journey /></>}
