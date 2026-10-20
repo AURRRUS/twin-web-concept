@@ -49,3 +49,5 @@ PASS: typecheck, build, 10 браузерных сценариев. Девяты
 ## Desktop 0.6 — предоставленные RF Dewi / Inter Tight
 
 Прежняя зависимость Manrope удалена. RF Dewi 400/600/700 — заголовки и акценты; Inter Tight Variable 100–900 — основной текст/UI. Локальные WOFF2 получены из предоставленных архивов, кириллица и FontFace.status loaded проверены. Typecheck/build и 10 тестов PASS. Геометрия проверена при 1280×800, 1440×1000, 1920×1000 без overflow и пересечений второго блока. Подробности и происхождение — TYPOGRAPHY_IMPLEMENTED_2026-10-20.md и FONT_ASSETS_2026-10-20.json. Ранее зафиксированное отсутствие предоставленных гарнитур больше не является блокером: владелец передал их в этой задаче.
+
+Публикация desktop 0.6: PASS для 56154544f68abfeece6075c431b9b1b0e3c3e7df, static 3ca7675. В опубликованном Chromium RF Dewi/Inter Tight имеют FontFace.status loaded и проходят проверку кириллицы; CSS-family и preloads согласованы. Изображения/сцены/диалоги/каналы/демо проверены, pageErrors пуст. Отчёт artifacts/online-verification.json.
