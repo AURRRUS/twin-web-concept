@@ -126,7 +126,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .story-step p { font-size: 15px; max-width: 190px; margin-top: 8px; }
 .story-connector { position: absolute; left: -104px; top: 34px; width: 125px; height: 1px; background: #c79869; transform: rotate(-23deg); transform-origin: right; }
 .story-connector::before { content: ''; position: absolute; width: 9px; height: 9px; left: 0; top: -4px; border: 1px solid #b87e45; background: #fff; border-radius: 50%; }
-.journey-interior { height: 395px; margin-top: 5px; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 18%); }
+.journey-interior { height: 395px; margin-top: 5px; clip-path: none; }
 .journey-interior img { object-position: 58% 50%; }
 .journey-lot { display: grid; grid-template-columns: 33% 67%; align-items: center; padding: 0 18px 20px 0; }
 .journey-lot .story-step { padding-inline: 38px 0; gap: 18px; }
@@ -160,9 +160,9 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .scene-material-project { opacity: calc(1 - var(--scene-space, 0)); }
 .scene-material-space { opacity: calc(var(--scene-space, 0) * (1 - var(--scene-lot, 0))); }
 .scene-material-lot { opacity: var(--scene-lot, 0); }
-.scene-material-project > .media, .scene-material-space > .media { clip-path: polygon(15% 0, 100% 0, 100% 92%, 0 92%, 0 18%); }
-.scene-material img { object-position: 70% 50%; }
-.scene-material-lot > .media { padding: 4% 3% 3% 22%; }
+.scene-material-project > .media, .scene-material-space > .media { clip-path: none; }
+.scene-material img { object-fit: contain; object-position: center; }
+.scene-material-lot > .media { padding: 0; }
 .scene-material-lot img { object-fit: contain; }
 .scene-media-caption { position: absolute; bottom: 0; right: 5%; display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted); background: #fffffff2; padding: 7px 10px; }
 .scene-media-caption .icon { width: 16px; height: 16px; }
@@ -665,3 +665,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .journey-project { height: 340px; margin: 0 24px 24px; }
 .journey-project img { object-fit: contain; }
 @media (max-width: 600px) { .journey-project { order: 2; height: auto; margin: 0 20px 20px; } .journey-project img { height: auto; } }
+
+/* Owner review: rectangular supplied frames, no decorative corner masks. */
+.journey .media, .journey img { border-radius: 0; }
+.journey-interior img { object-fit: contain; }

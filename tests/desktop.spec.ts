@@ -117,7 +117,7 @@ test('form validates fields, keeps input and never pretends to send', async ({ p
 });
 
 test('broken image preserves text and channel navigation', async ({ page }) => {
-  await page.route('**/media/online.webp', route => route.abort());
+  await page.route(/\/media\/online\.webp(?:\?|$)/, route => route.abort());
   await page.goto('/#channels');
   await page.getByRole('tab', { name: 'Онлайн-показ' }).click();
   await expect(page.locator('.channel-scene')).toHaveClass(/media-failed/);

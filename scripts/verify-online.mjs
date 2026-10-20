@@ -1,6 +1,7 @@
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 const base = 'https://aurrrus.github.io/twin-web-concept/';
 const expected = process.env.TWIN_EXPECTED_COMMIT;
 const result = { site: base, expectedSourceCommit: expected || null, status: 'RUNNING', checkedAt: new Date().toISOString(), checks: [], pageErrors: [] };
@@ -22,6 +23,14 @@ try {
   if (expected) assert.equal(version.sourceCommit, expected);
   result.deployedVersion = version;
   result.checks.push('Exact source commit matches the published build manifest');
+  const media = JSON.parse(readFileSync(new URL('../src/lib/media.json', import.meta.url), 'utf8'));
+  for (const name of ['hero', 'facade', 'project', 'interior', 'lot']) {
+    const file = name === 'hero' ? 'hero-1672' : name;
+    const response = await fetch(`${base}media/${file}.webp?v=${media[name].revision}`, { signal: AbortSignal.timeout(15000) });
+    assert.equal(response.status, 200);
+    assert.equal(createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex').slice(0, 12), media[name].revision, `Wrong published image: ${name}`);
+  }
+  result.checks.push('All five published architectural image bytes match the reviewed local files');
   const executablePath = process.env.TWIN_CHROMIUM_PATH || ['/usr/bin/chromium', '/usr/bin/google-chrome', '/opt/google/chrome/chrome'].find(existsSync);
   browser = await chromium.launch({ ...(executablePath ? { executablePath } : {}), args: ['--no-sandbox'] });
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });

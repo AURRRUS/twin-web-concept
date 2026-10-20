@@ -1,46 +1,57 @@
 {
   "logo": {
     "width": 1774,
-    "height": 887
+    "height": 887,
+    "revision": "e32a898a8a97"
   },
   "hero": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "3071a7b159ea"
   },
   "interior": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "25d5a1551ec7"
   },
   "core": {
     "width": 1448,
-    "height": 1086
+    "height": 1086,
+    "revision": "a122efafb927"
   },
   "facade": {
     "width": 1024,
-    "height": 1536
+    "height": 1536,
+    "revision": "3ed8396a3a8d"
   },
   "office": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "1a2f0efb44fb"
   },
   "lot": {
     "width": 1448,
-    "height": 1086
+    "height": 1086,
+    "revision": "c18edf8af800"
   },
   "agent": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "6c8b9739c08c"
   },
   "site": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "06bad6fa4f9e"
   },
   "online": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "385ff02ca6fb"
   },
   "project": {
     "width": 1672,
-    "height": 941
+    "height": 941,
+    "revision": "e0dd9ec92f58"
   }
 }
