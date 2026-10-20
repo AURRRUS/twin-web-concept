@@ -1,7 +1,8 @@
-@import '@fontsource-variable/manrope';
+@font-face { font-family: 'RF Dewi'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/rf-dewi-regular.woff2') format('woff2'); }
+@font-face { font-family: 'RF Dewi'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/rf-dewi-semibold.woff2') format('woff2'); }
+@font-face { font-family: 'RF Dewi'; font-style: normal; font-weight: 700; font-display: swap; src: url('../assets/fonts/rf-dewi-bold.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('../assets/fonts/inter-tight-variable.woff2') format('woff2'); }
 
-/* Web implementation typography: a licensed geometric Cyrillic sans, not a claim
-   that the corporate font assignment has been confirmed. See VISUAL_DELIVERY.md. */
 :root {
   --paper: #fafaf8;
   --ink: #20272f;
@@ -12,7 +13,7 @@
   --ease: cubic-bezier(.22, 1, .36, 1);
   --fast: 160ms;
   --ui: 240ms;
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   color: var(--ink);
   background: #fff;
   font-synthesis: none;
@@ -31,9 +32,9 @@ button { border: 0; }
 button:disabled { cursor: default; opacity: .48; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin: 0; }
-h1, h2 { font-weight: 450; line-height: 1.035; letter-spacing: -.055em; }
+h1, h2 { font-family: 'RF Dewi', sans-serif; font-weight: 400; line-height: 1.08; letter-spacing: -.035em; }
 h2 { font-size: clamp(38px, 3.65vw, 58px); }
-h3 { font-weight: 600; letter-spacing: -.035em; }
+h3 { font-family: 'RF Dewi', sans-serif; font-weight: 600; letter-spacing: -.025em; }
 p { color: var(--muted); line-height: 1.55; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
   outline: 2px solid var(--bronze);
@@ -100,7 +101,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .site-header nav a:hover::after { transform: scaleX(1); }
 .header-cta { margin-left: auto; min-height: 49px; padding: 13px 24px; font-size: 13px; }
 .hero-copy { position: relative; width: 850px; max-width: 76%; margin: 48px 0 72px 4%; }
-.hero-copy h1 { font-size: clamp(48px, 4.15vw, 66px); font-weight: 450; line-height: 1.025; }
+.hero-copy h1 { font-size: clamp(48px, 4.15vw, 66px); font-weight: 400; line-height: 1.025; }
 .hero-copy h1 > span { display: block; }
 .hero-copy p { width: 440px; max-width: 78%; margin-top: 21px; font-size: 19px; font-weight: 400; line-height: 1.43; letter-spacing: -.02em; color: #707b88; }
 .actions { display: flex; align-items: center; gap: 35px; margin-top: 29px; }
@@ -122,7 +123,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .story-step { position: relative; z-index: 1; display: flex; align-items: baseline; gap: 22px; padding: 18px 40px; }
 .step-number { position: relative; color: var(--bronze); font-size: 19px; font-weight: 500; }
 .step-number::after { content: ''; position: absolute; height: 1px; width: 22px; background: var(--bronze-light); bottom: -12px; left: 0; }
-.story-step h3 { font-size: 23px; font-weight: 500; }
+.story-step h3 { font-size: 23px; font-weight: 400; }
 .story-step p { font-size: 15px; max-width: 190px; margin-top: 8px; }
 .story-connector { position: absolute; left: -104px; top: 34px; width: 125px; height: 1px; background: #c79869; transform: rotate(-23deg); transform-origin: right; }
 .story-connector::before { content: ''; position: absolute; width: 9px; height: 9px; left: 0; top: -4px; border: 1px solid #b87e45; background: #fff; border-radius: 50%; }
@@ -207,7 +208,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .canvas-compass > .icon { width: 32px; height: 32px; stroke-width: .7; }
 .lot-card { border-left: 1px solid var(--line); padding: 24px 18px; background: linear-gradient(160deg, #fcfdfc, #fff); }
 .lot-eyebrow { font-size: 8px; letter-spacing: .16em; color: #929aa0; }
-.lot-card h3 { margin: 6px 0 15px; font-size: 20px; font-weight: 550; }
+.lot-card h3 { margin: 6px 0 15px; font-size: 20px; font-weight: 600; }
 .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); }
 .tabs button { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 0; border-bottom: 2px solid transparent; padding: 11px 16px; color: #76818c; background: none; font-size: 12px; font-weight: 450; white-space: nowrap; transition: color var(--fast), background var(--fast); }
 .tabs button[aria-selected='true'] { color: #986330; border-bottom-color: #b4804c; }
@@ -235,7 +236,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 
 /* 04 — reconstructed isometric objects, live typography and individual paths. */
 .composition { padding-top: 80px; padding-bottom: 43px; }
-.composition .center-heading h2 { font-size: clamp(44px, 4.2vw, 65px); font-weight: 650; }
+.composition .center-heading h2 { font-size: clamp(44px, 4.2vw, 65px); font-weight: 600; }
 .composition-map { position: relative; display: grid; grid-template-columns: 27% 46% 27%; grid-template-rows: repeat(3, 245px); margin-top: 23px; }
 .composition-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
 .composition-lines g { stroke: #be8a54; stroke-width: 1.1; opacity: .65; transition: stroke-width var(--fast), opacity var(--fast); }
@@ -247,7 +248,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .map-core:hover > .media { transform: translateY(-2px); }
 .badge { display: inline-flex; align-items: center; justify-content: center; border-radius: 50px; padding: 7px 22px; color: white; background: linear-gradient(130deg, #c69665, #a36b36); box-shadow: inset 0 1px 0 #ffffff55, 0 4px 9px #9a6c3d12; font-size: 11px; text-transform: uppercase; line-height: 1.3; font-weight: 500; letter-spacing: .025em; }
 .map-core .badge { text-transform: none; font-size: 13px; }
-.map-core h3 { font-size: 31px; font-weight: 650; line-height: 1.1; margin-top: 16px; letter-spacing: -.055em; }
+.map-core h3 { font-size: 31px; font-weight: 600; line-height: 1.1; margin-top: 16px; letter-spacing: -.055em; }
 .core-explore { display: inline-flex; align-items: center; justify-content: center; color: #9c754e; font-size: 10px; margin-top: 13px; }
 .core-explore .arrow { width: 16px; height: 16px; margin-left: 8px; }
 .map-component { position: relative; z-index: 2; align-self: center; padding: 0 2px 8px; min-width: 0; transition: transform var(--fast) var(--ease); }
@@ -280,7 +281,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .dialog-close { position: absolute; right: 20px; top: 20px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #dde2e3; border-radius: 50%; background: white; transition: background var(--fast), color var(--fast); }
 .dialog-close .icon { width: 19px; height: 19px; }
 .dialog-close:hover { color: var(--bronze); background: #faf7f2; }
-.component-dialog h2 { max-width: 87%; font-size: 39px; line-height: 1.1; font-weight: 550; }
+.component-dialog h2 { max-width: 87%; font-size: 39px; line-height: 1.1; font-weight: 600; }
 .component-dialog h2:focus { outline: none; }
 .dialog-intro { font-size: 17px; max-width: 830px; margin: 18px 0 29px; }
 .dialog-body { display: grid; grid-template-columns: 1.12fr 1fr; gap: 38px; align-items: center; }
@@ -311,7 +312,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .channel-scene img { object-position: 54% 50%; animation: media-enter 240ms var(--ease); }
 .channel-scene::after { position: absolute; inset: 0; content: ''; pointer-events: none; background: linear-gradient(110deg, #fffffffe 0%, #ffffffeb 18%, #ffffff8a 32%, #ffffff00 53%); }
 .channel-story { display: flex; align-items: center; justify-content: space-between; gap: 45px; min-height: 118px; padding: 24px 65px; background: white; animation: content-enter 240ms var(--ease); }
-.channel-story h3 { font-size: 22px; font-weight: 550; margin-bottom: 5px; }
+.channel-story h3 { font-size: 22px; font-weight: 600; margin-bottom: 5px; }
 .channel-story p { font-size: 13px; }
 .channel-story > .text-link { flex-shrink: 0; font-size: 12px; }
 .noscript-channels { padding: 20px 65px; }
@@ -321,7 +322,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .delivery-composition { height: 615px; position: relative; }
 .delivery-copy { position: absolute; top: 18px; left: 0; width: 39%; z-index: 2; }
 .delivery-copy h2 { font-size: clamp(48px, 4.2vw, 65px); line-height: .98; font-weight: 700; letter-spacing: -.055em; }
-.delivery-copy h3 { font-size: 27px; line-height: 1.1; font-weight: 650; margin-top: 28px; }
+.delivery-copy h3 { font-size: 27px; line-height: 1.1; font-weight: 600; margin-top: 28px; }
 .delivery-copy p { font-size: 16px; margin-top: 14px; letter-spacing: -.025em; }
 .delivery-triangle { position: absolute; left: 20%; top: 83px; width: 57%; height: 490px; }
 .delivery-triangle svg { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; overflow: visible; }
@@ -330,7 +331,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .delivery-triangle > .media { position: absolute; left: 7%; top: 130px; width: 86%; height: 355px; background: transparent; }
 .delivery-triangle img { object-fit: contain; }
 .delivery-time { position: absolute; left: 43%; top: 0; text-align: center; z-index: 3; }
-.delivery-time strong { display: block; font-size: 45px; font-weight: 650; letter-spacing: -.06em; line-height: 1.1; margin-top: 10px; }
+.delivery-time strong { display: block; font-size: 45px; font-weight: 600; letter-spacing: -.06em; line-height: 1.1; margin-top: 10px; }
 .delivery-time p { font-size: 13px; margin-top: 6px; }
 .delivery-budget { position: absolute; left: 0; top: 385px; width: 29%; z-index: 3; }
 .delivery-budget p { font-size: 13px; margin-top: 9px; }
@@ -666,3 +667,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
   .journey-lot { grid-template-columns: 1fr; padding: 0 20px; }
   .journey-interior { height: 260px; }
 }
+
+.delivery-time strong, .delivery-budget strong { font-family: "RF Dewi", sans-serif; }
+.hero-copy p, .cinematic-intro p, .journey-intro p, .channel-story p { letter-spacing: 0; }

@@ -40,7 +40,11 @@ try {
   await page.locator('html.has-js').waitFor();
   await page.evaluate(() => document.fonts.ready);
   assert.match(await page.locator('h1').innerText(), /Цифровая/);
-  assert.match(await page.locator('h1').evaluate(el => getComputedStyle(el).fontFamily), /Manrope Variable/);
+  assert.match(await page.locator('h1').evaluate(el => getComputedStyle(el).fontFamily), /RF Dewi/);
+  assert.match(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily), /Inter Tight/);
+  assert(await page.evaluate(() => document.fonts.check('400 48px "RF Dewi"', 'ЦифроваяЁё') && document.fonts.check('400 16px "Inter Tight"', 'КириллицаЁё')));
+  assert(await page.evaluate(() => ['RF Dewi', 'Inter Tight'].every(name => [...document.fonts].some(face => face.family.replace(/["']/g, '') === name && face.status === 'loaded'))));
+  result.checks.push('Provided RF Dewi and Inter Tight webfonts are actually loaded');
   await page.locator('.hero').screenshot({ path: 'artifacts/online-first-screen.png', animations: 'disabled' });
   await page.waitForFunction(() => document.querySelector('.journey')?.dataset.enhanced === 'true');
   for (const [id, progress] of [['project', 0.14], ['space', 0.5], ['lot', 0.88]]) {

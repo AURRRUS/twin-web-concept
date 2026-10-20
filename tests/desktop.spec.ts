@@ -154,8 +154,10 @@ test('without JavaScript: server-rendered content and honest demo remain availab
 test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
-  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Manrope Variable');
-  expect(await page.evaluate(() => document.fonts.check('450 48px "Manrope Variable"', 'Цифровая инфраструктура'))).toBe(true);
+  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('RF Dewi');
+  expect(await page.evaluate(() => document.fonts.check('400 48px "RF Dewi"', 'Цифровая инфраструктура'))).toBe(true);
+  expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Inter Tight');
+  expect(await page.evaluate(() => document.fonts.check('400 16px "Inter Tight"', 'Кириллица Ёё'))).toBe(true);
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
   for (const [progress, scene] of [[0.14, 'project'], [0.5, 'space'], [0.88, 'lot'], [0.5, 'space']] as const) {
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);

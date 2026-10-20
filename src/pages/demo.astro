@@ -2,11 +2,15 @@
 import App from '../components/App';
 import { sitePath } from '../lib/paths';
 import '../styles/site.css';
+import dewiRegular from '../assets/fonts/rf-dewi-regular.woff2?url';
+import interTight from '../assets/fonts/inter-tight-variable.woff2?url';
 ---
 <!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preload" href={dewiRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interTight} as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>Демонстрационный интерфейс — Twin by TALENT</title>

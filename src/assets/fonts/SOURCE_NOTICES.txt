@@ -1,0 +1,12 @@
+RFDewi-Regular.ttf
+0: Copyright © 2018 by Russian Fonts. All rights reserved.
+8: Russian Fonts
+9: Misha Panfilov
+
+InterTight-VariableFont_wght.ttf
+0: Copyright 2022 The Inter Project Authors (https://github.com/rsms/inter-tight)
+7: Inter UI and Inter is a trademark of rsms.
+8: rsms
+9: Rasmus Andersson
+13: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+14: https://scripts.sil.org/OFL

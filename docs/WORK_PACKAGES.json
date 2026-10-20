@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "packageVersion": "1.3",
   "selectedWorkPackage": "TW-D05",
-  "note": "Последнее решение владельца: вернуть сменяемые сцены второго блока, увеличить изображения, сгладить появления. Открытая длинная композиция 0.4 отменена. Шрифт остаётся Manrope; назначения новой гарнитуры не получено.",
+  "note": "Подключены предоставленные владельцем RF Dewi (заголовки) и Inter Tight (текст/UI); прежний временный Manrope удалён. Крупные плавно сменяемые сцены 0.5 сохранены. Следующий этап после desktop-приёмки — mobile.",
   "packages": [
     {
       "id": "TW-00",
@@ -179,7 +179,7 @@
       "evidence": []
     }
   ],
-  "implementationVersion": "desktop-0.5",
+  "implementationVersion": "desktop-0.6",
   "externalDependencies": [
     {
       "id": "TW-D04-connected",

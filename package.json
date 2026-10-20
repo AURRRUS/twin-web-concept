@@ -27,7 +27,6 @@
   "homepage": "https://github.com/AURRRUS/twin-web-concept#readme",
   "dependencies": {
     "@astrojs/react": "7.1.0",
-    "@fontsource-variable/manrope": "5.3.0",
     "astro": "7.4.1",
     "react": "19.3.1",
     "react-dom": "19.3.1"

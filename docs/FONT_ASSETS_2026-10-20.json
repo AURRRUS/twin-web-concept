@@ -1,0 +1,38 @@
+[
+  {
+    "source": "Шрифт RFDewi/RFDewi-Regular.ttf",
+    "sourceSha256": "463499d0c37ace00e7a547c469630fb1c361b20c746faf195d97167198ca10ec",
+    "webFile": "src/assets/fonts/rf-dewi-regular.woff2",
+    "bytes": 28200,
+    "family": "RF Dewi",
+    "weight": 400,
+    "cyrillic": true
+  },
+  {
+    "source": "Шрифт RFDewi/RFDewi-Semibold.ttf",
+    "sourceSha256": "06c1c1180a83f738ab3be6fcba26892d27c0bb826d37b47a52f895e7b4b8bc8c",
+    "webFile": "src/assets/fonts/rf-dewi-semibold.woff2",
+    "bytes": 27916,
+    "family": "RF Dewi Semibold",
+    "weight": 600,
+    "cyrillic": true
+  },
+  {
+    "source": "Шрифт RFDewi/RFDewi-Bold.ttf",
+    "sourceSha256": "6e27a353e985cca0bd78c081c422dc1037e15e1ba32a64fddf431a3a39c24940",
+    "webFile": "src/assets/fonts/rf-dewi-bold.woff2",
+    "bytes": 28132,
+    "family": "RF Dewi",
+    "weight": 700,
+    "cyrillic": true
+  },
+  {
+    "source": "Шрифт inter tight/InterTight-VariableFont_wght.ttf",
+    "sourceSha256": "4b8ef9ed255ebe7341aa566554c0f3e87ee10ce06d2085f07ccf66f41ef96c28",
+    "webFile": "src/assets/fonts/inter-tight-variable.woff2",
+    "bytes": 232868,
+    "family": "Inter Tight",
+    "weight": 400,
+    "cyrillic": true
+  }
+]
