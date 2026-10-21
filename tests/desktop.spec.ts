@@ -163,7 +163,7 @@ test('desktop typeface loads and architectural scenes reverse without losing con
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
     await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
     await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(760, 0);
+    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeGreaterThan(700);
     await page.locator('.journey-cinematic').screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });

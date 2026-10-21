@@ -1,31 +1,25 @@
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const ease = (value: number) => { const t = clamp(value); return t * t * (3 - 2 * t); };
 
-/** Reversible scroll mapping: no timers or queued transitions. */
+/** Pure, reversible scroll choreography. Images remain opaque; only their masks change. */
 export function journeyFrame(progress: number) {
   const p = clamp(progress);
-  const from = p < .4 ? 0 : p < .8 ? 1 : 2;
-  const transitioning = (p >= .2 && p < .4) || (p >= .6 && p < .8);
+  const from = p < .38 ? 0 : p < .82 ? 1 : 2;
+  const start = from === 0 ? .18 : .62;
+  const transitioning = from < 2 && p >= start && p < start + .2;
   const to = transitioning ? from + 1 : from;
-  const q = transitioning ? (p - (from === 0 ? .2 : .6)) / .2 : 0;
-  const heading = [0, 0, 0], headingY = [0, 0, 0];
-  const media = [0, 0, 0], mediaY = [0, 0, 0];
-  const copy = [0, 0, 0], copyY = [0, 0, 0];
-  heading[from] = media[from] = copy[from] = 1;
+  const q = transitioning ? (p - start) / .2 : 0;
+  const text = [0, 0, 0], textY = [0, 0, 0];
+  const clip = [100, 100, 100], stack = [0, 0, 0];
+  text[from] = 1; clip[from] = 0;
   if (transitioning) {
-    heading[from] = 1 - ease(q / .15);
-    headingY[from] = -8 * (1 - heading[from]);
-    heading[to] = ease((q - .15) / .25);
-    headingY[to] = 12 * (1 - heading[to]);
-    // Compositing over an opaque previous frame prevents a white dip.
-    media[to] = ease((q - .4) / .4);
-    mediaY[to] = 12 * (1 - media[to]);
-    copy[from] = 1 - ease((q - .8) / .1);
-    copy[to] = ease((q - .9) / .1);
-    copyY[to] = 6 * (1 - copy[to]);
+    text[from] = 1 - ease(q / .15);
+    textY[from] = -8 * (1 - text[from]);
+    text[to] = ease((q - .15) / .2);
+    textY[to] = 12 * (1 - text[to]);
+    clip[to] = 100 * (1 - ease((q - .35) / .55));
+    stack[to] = 1;
   }
-  return { heading, headingY, media, mediaY, copy, copyY,
-    active: transitioning && q >= .8 ? to : from,
-    title: transitioning && q >= .15 ? to : from,
-    explanation: transitioning && q >= .8 ? to : from };
+  const active = transitioning && q >= .35 ? to : from;
+  return { text, textY, clip, stack, active, title: transitioning && q >= .15 ? to : from, explanation: transitioning && q >= .15 ? to : from };
 }

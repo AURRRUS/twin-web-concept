@@ -1,0 +1,123 @@
+{
+  "package": "TWIN_VISUAL_RECOVERY_2026-10-21",
+  "scope": "Twin only",
+  "assets": [
+    {
+      "role": "facade",
+      "path": "assets/12 ти этажный корпус.png",
+      "width": 1024,
+      "height": 1536,
+      "baked_interface": false
+    },
+    {
+      "role": "hero",
+      "path": "assets/Вид побережье.png",
+      "width": 2574,
+      "height": 1459,
+      "baked_interface": false
+    },
+    {
+      "role": "lot",
+      "path": "assets/План этажа 12 ти этажного корпуса.png",
+      "width": 1672,
+      "height": 941,
+      "baked_interface": true
+    },
+    {
+      "role": "space",
+      "path": "assets/Роскошный апартамент с видом на море.png",
+      "width": 1671,
+      "height": 941,
+      "baked_interface": true
+    },
+    {
+      "role": "project",
+      "path": "assets/Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "width": 1671,
+      "height": 941,
+      "baked_interface": true
+    }
+  ],
+  "files": [
+    {
+      "path": "00_EXECUTE.md",
+      "bytes": 4209,
+      "sha256": "bb4e1d7361c1d11514c4611496385a9a804d9e942562636809cc542014e0d14b"
+    },
+    {
+      "path": "01_VISUAL_AND_IMPLEMENTATION.md",
+      "bytes": 10913,
+      "sha256": "a54136387364f943fd046262868b1420a97a4d2f1b5b69fa3769b34413c3b294"
+    },
+    {
+      "path": "02_CONTENT.json",
+      "bytes": 3390,
+      "sha256": "db54f380eb1dd77bf86c4062ebc49f7d41d67192b08920098cc9d81f048e034b"
+    },
+    {
+      "path": "03_MOTION.md",
+      "bytes": 4741,
+      "sha256": "9342fde0542d250c6761ce91a2d53642d2a7d1a5f72a72f6b2eb0ceb21373579"
+    },
+    {
+      "path": "04_REVIEW_AND_ACCEPTANCE.md",
+      "bytes": 5779,
+      "sha256": "65e2d9a9f386c34ed74d187c1e81a458c52f7c256dc44e2639873842598d000c"
+    },
+    {
+      "path": "PROMPT_FOR_CODEX.txt",
+      "bytes": 1557,
+      "sha256": "d669a37bcb805faddbd8a7837877d24aecd4fc42d1aeb96f01408cc2542bca2b"
+    },
+    {
+      "path": "assets/12 ти этажный корпус.png",
+      "bytes": 3307034,
+      "sha256": "ccb1538b45f2656560c3bf183e2793e4c976c25c67602a29f0878400b1a98acd"
+    },
+    {
+      "path": "assets/Вид побережье.png",
+      "bytes": 5090265,
+      "sha256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05"
+    },
+    {
+      "path": "assets/План этажа 12 ти этажного корпуса.png",
+      "bytes": 2730797,
+      "sha256": "59f97a809c9d9fba23cc424377e423b067d5de4d7856d2e01076fc0cfca07741"
+    },
+    {
+      "path": "assets/Роскошный апартамент с видом на море.png",
+      "bytes": 2364052,
+      "sha256": "5bdd4da7e6a2d8913c92e0e103ff129837580a459ee3d30696b01dbf0839731a"
+    },
+    {
+      "path": "assets/Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "bytes": 3260940,
+      "sha256": "434c2a7c46c768bb1d0a7653a89fcf9734ccfa227e13d7a4e310594489c66efc"
+    },
+    {
+      "path": "evidence/Journey.tsx",
+      "bytes": 9321,
+      "sha256": "72c830dfd3c0474d8ab7c94da8f373916b0bbf8d1e30e4f74b7d0488354750b4"
+    },
+    {
+      "path": "evidence/branches.json",
+      "bytes": 1093,
+      "sha256": "8c6f161713b7fc7e2fba67db5a22b81ec6e553552bd2cf33779c209f2fb4e632"
+    },
+    {
+      "path": "evidence/site.css",
+      "bytes": 36881,
+      "sha256": "496f1dbec6bd691dc4afc67be2ca8bc8c7037457c27d7d9117de27709a4700b8"
+    },
+    {
+      "path": "evidence/twin-home-content.json",
+      "bytes": 4932,
+      "sha256": "09588a8861692cd7cdb6db6c4108bc94de7b6d07b82f55eb3ddf95d76820ba4f"
+    },
+    {
+      "path": "reference/TWIN_EXPECTED_LEVEL.png",
+      "bytes": 2946164,
+      "sha256": "b12bbbb03202cb4844f33b3a15b7f440f5172c936a600e1e3c0deb7be6e38ab6"
+    }
+  ]
+}

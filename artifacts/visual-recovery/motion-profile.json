@@ -1,0 +1,11 @@
+{
+  "viewport": "1440x900",
+  "browser": "Chromium /usr/bin/chromium, headless in managed environment, recording enabled",
+  "forwardFrames": 351,
+  "backwardFrames": 346,
+  "medianFrameIntervalMs": 16.7,
+  "p95FrameIntervalMs": 33.4,
+  "intervalsOver33ms": 22,
+  "pageErrors": [],
+  "note": "rAF cadence of this recorded run; not a cross-device FPS or INP guarantee"
+}
