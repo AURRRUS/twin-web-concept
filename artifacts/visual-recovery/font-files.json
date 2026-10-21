@@ -1,0 +1,22 @@
+[
+  {
+    "path": "src/assets/fonts/rf-dewi-semibold.woff2",
+    "sha256": "bd34b8ca2b84e7a0168fff7267c6daf435d2967f350aabb5cc46b0a07a920576",
+    "identicalToProvidedReference": true
+  },
+  {
+    "path": "src/assets/fonts/rf-dewi-regular.woff2",
+    "sha256": "5bd57630cbcb3f04ac838b7ca68c851d77685803c3884a42df71438a8f0d04c8",
+    "identicalToProvidedReference": true
+  },
+  {
+    "path": "src/assets/fonts/rf-dewi-bold.woff2",
+    "sha256": "4acc25ac108317556b0344180da83ff21279fd33a06f1a0f64263f86672525bc",
+    "identicalToProvidedReference": true
+  },
+  {
+    "path": "src/assets/fonts/inter-tight-variable.woff2",
+    "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b",
+    "identicalToProvidedReference": true
+  }
+]

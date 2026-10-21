@@ -156,3 +156,9 @@
 .channel-tabs { background: #fff; border-radius: 3px; box-shadow: 0 0 0 8px #fff; }
 .channel-tabs button { color: var(--muted); }
 .channels-heading > p { color: var(--ink); }
+/* Owner-provided fonts: retain their natural spacing and letterforms. */
+.hero-copy h1, .scene-text-group h2, .static-scene h2 { letter-spacing: normal; }
+.scene-navigation strong, .static-scene-nav strong { letter-spacing: normal; }
+/* One architectural edge replaces the rectangular white intrusion. */
+.cinematic-facade { clip-path: polygon(0 0, 100% 0, 100% 25%, 87.5% 38%, 87.5% 100%, 0 100%); }
+.scene-navigation { background: transparent; }

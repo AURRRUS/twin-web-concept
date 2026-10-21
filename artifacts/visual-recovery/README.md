@@ -21,4 +21,4 @@
 
 Дополнительные JPEG: остановки двух переходов в q=.1/.25/.5/.75/.95 и все четыре канала. Проверки: [layout](after/layout.json), [base path](basepath-checks.json), [контраст](contrast.json), [каденс записи](motion-profile.json).
 
-[Таблица приёмки и ограничения](../../docs/visual-recovery/ACCEPTANCE.md). Font-lock не установлен; Safari/iOS и полный WCAG не проверены. Запись не является гарантией60fps.
+[Таблица приёмки и ограничения](../../docs/visual-recovery/ACCEPTANCE.md). Предоставленные RF Dewi / Inter Tight подтверждены и проверены по реальным глифам; [назначение](../../docs/TYPOGRAPHY_LOCK_2026-10-21.md). Safari/iOS и полный WCAG не проверены. Запись не является гарантией60fps.

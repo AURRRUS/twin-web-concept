@@ -153,3 +153,17 @@ test('image original dialog works by keyboard, restores focus and laptop scenes 
   await page.setViewportSize({ width: 1440, height: 500 }); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
   expect(await page.locator('.journey').evaluate(el => el.clientHeight)).toBeLessThan(5000);
 });
+
+test('provided RF Dewi and Inter Tight render Cyrillic glyphs without fallback or compressed tracking', async ({ page }) => {
+  await page.goto('/'); await page.evaluate(() => document.fonts.ready);
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
+  const { root } = await cdp.send('DOM.getDocument');
+  for (const [selector, family] of [['h1', 'RF Dewi'], ['.scene-text-group h2', 'RF Dewi'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'Inter Tight']] as const) {
+    const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector });
+    const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
+    expect(fonts.length).toBeGreaterThan(0);
+    for (const font of fonts) { expect(font.familyName).toBe(family); expect(font.isCustomFont).toBe(true); expect(font.glyphCount).toBeGreaterThan(0); }
+    await expect(page.locator(selector).first()).toHaveCSS('letter-spacing', 'normal');
+  }
+});
