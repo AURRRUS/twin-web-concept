@@ -36,7 +36,7 @@ test('scene title leads media, frame stays fixed and progress reverses without a
   }
   for (const [progress, next, previous] of [[.28, 1, 0], [.68, 2, 1]] as const) {
     await go(progress);
-    expect(Number(await page.locator('.scene-headings h2').nth(next).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 3);
+    expect(Number(await page.locator('.scene-headings > [data-layer]').nth(next).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 3);
     expect(Number(await page.locator('.scene-material').nth(next).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(0, 3);
     expect(Number(await page.locator('.scene-material').nth(previous).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 3);
   }
@@ -85,5 +85,31 @@ test('hero line breaks and shared content guides follow the layout viewport', as
     expect(Math.abs(data.cta - data.R)).toBeLessThanOrEqual(2);
     if (width >= 1280) { expect(data.lines).toBeCloseTo(2, 1); expect(data.fontSize).toBeGreaterThanOrEqual(44); }
     if (width === 1024) expect(data.lines).toBeCloseTo(3, 1);
+  }
+});
+
+
+test('full scene text survives mobile and desktop uses the specified 1440 grid', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 }); await page.goto('/');
+  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
+  for (const [selector, x, width] of [['.cinematic-facade > .media', 0, 360], ['.scene-navigation', 392, 184], ['.journey-right', 616, 760]] as const) {
+    const box = await page.locator(selector).boundingBox();
+    expect(box!.x).toBeCloseTo(x, 0); expect(box!.width).toBeCloseTo(width, 0);
+  }
+  const paragraphs = [
+    'Окружение, архитектура, инфраструктура и расположение корпусов — помогите покупателю увидеть проект целиком и понять, как его преимущества связаны с выбором конкретного лота.',
+    'Покажите, как устроена жизнь внутри проекта: общественные зоны, интерьеры, террасы и виды. Помогите покупателю представить пространство будущего лота и понять, что находится за пределами его планировки.',
+    'Свяжите расположение лота в корпусе и на этаже с его планировкой, пространством и видом. Дайте покупателю последовательно рассмотреть детали выбранного варианта.',
+  ];
+  const descriptions = ['Окружение, архитектура и инфраструктура.', 'Общественные зоны, интерьеры и виды.', 'Расположение, планировка и детали выбора.'];
+  await expect(page.locator('.scene-explanations p')).toHaveText(paragraphs);
+  await expect(page.locator('.scene-navigation .scene-nav-description')).toHaveText(descriptions);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
+  await expect(page.locator('.static-scene > p')).toHaveText(paragraphs);
+  await expect(page.locator('.static-scene-nav .scene-nav-description')).toHaveText(descriptions);
+  for (const paragraph of await page.locator('.static-scene > p').all()) {
+    await expect(paragraph).toBeVisible();
+    expect(await paragraph.evaluate(el => el.scrollHeight <= el.clientHeight + 1)).toBe(true);
   }
 });

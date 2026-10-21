@@ -115,3 +115,27 @@
   .static-scene > p { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .scene-headings h2, .scene-material, .scene-explanations p { transform: none; } }
+
+/* Exact scene grid: 64 + 296 + 32 + 184 + 40 + 760 + 64 = 1440. */
+.journey-grid { grid-template-columns: minmax(0, 296fr) 32px 184px 40px minmax(0, 760fr); gap: 0; }
+.cinematic-facade { grid-column: 1; }
+.scene-navigation { grid-column: 3; }
+.journey-right { grid-column: 5; }
+.scene-navigation button, .static-scene-nav a { display: flex; align-items: baseline; gap: 8px; }
+.scene-navigation strong, .static-scene-nav strong { display: block; font-size: 20px; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.scene-nav-description { display: block; width: 184px; margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.scene-number { font-size: 12px; }
+.scene-eyebrow { font-size: 11px; line-height: 18px; letter-spacing: .14em; color: var(--bronze); margin-bottom: 16px; }
+.scene-headings { margin-bottom: 24px; }
+.scene-headings > [data-layer] { grid-area: 1 / 1; }
+.scene-headings h2 { font-size: 56px; line-height: 1.08; font-weight: 400; }
+.scene-headings h2 span, .static-scene h2 span { display: block; }
+.scene-explanations { display: grid; min-height: 0; font-size: 18px; line-height: 1.5; }
+.scene-explanations p { position: relative; inset: auto; grid-area: 1 / 1; margin: 0; }
+.scene-text-zone { flex-shrink: 0; margin-bottom: 28px; }
+.scene-materials { aspect-ratio: 16 / 9; max-height: none; }
+.scene-caption { margin-top: 0; }
+.static-scene-nav { flex-direction: column; align-items: flex-start; }
+.static-scene h2 { margin-bottom: 24px; font-weight: 400; line-height: 1.08; }
+.static-scene > p { margin: 0 0 28px; max-width: none; line-height: 1.5; }
+.static-scene > .media { aspect-ratio: 16 / 9; }

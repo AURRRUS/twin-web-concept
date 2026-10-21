@@ -163,13 +163,13 @@ test('desktop typeface loads and architectural scenes reverse without losing con
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
     await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
     await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeGreaterThan(780);
+    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(760, 0);
     await page.locator('.journey-cinematic').screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
   await expect(page.locator('.journey-static')).toBeVisible();
-  await expect(page.locator('#lot')).toContainText('Свяжите выбранный лот с корпусом, этажом и планировкой.');
+  await expect(page.locator('#lot')).toContainText('Свяжите расположение лота в корпусе и на этаже с его планировкой, пространством и видом. Дайте покупателю последовательно рассмотреть детали выбранного варианта.');
 });
 
 test('a foreign project cannot retain the known child lot', async ({ page }) => {

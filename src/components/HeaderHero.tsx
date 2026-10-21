@@ -16,7 +16,7 @@ export function Hero() {
     <Header />
     <div className="content-container hero-content"><div className="hero-copy">
       <h1 id="hero-heading"><span className="hero-line"><span className="hero-word">Цифровая </span>инфраструктура продаж </span><span className="hero-line">девелоперского проекта.</span></h1>
-      <p>{content.hero.body}</p>
+      <p>{content.hero.body.split('через агентов')[0]}<br />через агентов{content.hero.body.split('через агентов')[1]}</p>
       <div className="actions"><a className="button" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a><a className="text-link" href="#contact">Обсудить проект</a></div>
     </div></div>
     <span className="hero-caption"><span />Демонстрационный проект</span>

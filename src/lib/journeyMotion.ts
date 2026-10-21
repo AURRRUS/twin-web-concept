@@ -20,8 +20,8 @@ export function journeyFrame(progress: number) {
     // Compositing over an opaque previous frame prevents a white dip.
     media[to] = ease((q - .4) / .4);
     mediaY[to] = 12 * (1 - media[to]);
-    copy[from] = 1 - ease((q - .4) / .3);
-    copy[to] = ease((q - .8) / .2);
+    copy[from] = 1 - ease((q - .8) / .1);
+    copy[to] = ease((q - .9) / .1);
     copyY[to] = 6 * (1 - copy[to]);
   }
   return { heading, headingY, media, mediaY, copy, copyY,
