@@ -1,0 +1,18 @@
+[
+  {
+    "width": 1440,
+    "status": "PASS",
+    "basePath": "/twin-web-concept/",
+    "selection": "http://127.0.0.1:4326/twin-web-concept/#contact",
+    "errors": [],
+    "failedResponses": []
+  },
+  {
+    "width": 390,
+    "status": "PASS",
+    "basePath": "/twin-web-concept/",
+    "selection": "http://127.0.0.1:4326/twin-web-concept/#contact",
+    "errors": [],
+    "failedResponses": []
+  }
+]

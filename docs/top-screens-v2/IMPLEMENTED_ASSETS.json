@@ -1,0 +1,47 @@
+[
+  {
+    "key": "topHero",
+    "source": "Вид побережье.png",
+    "sourceSha256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05",
+    "output": "public/media/top-v2/hero.webp",
+    "outputSha256": "c5e3b94898d532526f65eb8037b7ee62dbd39f70f0890927a0495f6414e15f10",
+    "width": 2574,
+    "height": 1459
+  },
+  {
+    "key": "topFacade",
+    "source": "12 ти этажный корпус.png",
+    "sourceSha256": "ccb1538b45f2656560c3bf183e2793e4c976c25c67602a29f0878400b1a98acd",
+    "output": "public/media/top-v2/facade.webp",
+    "outputSha256": "dfcb7f928d76fe8bcbdf585aa3f7d20b3430915e81675b7b29f4a9768fee1d89",
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "key": "sceneProject",
+    "source": "Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+    "sourceSha256": "434c2a7c46c768bb1d0a7653a89fcf9734ccfa227e13d7a4e310594489c66efc",
+    "output": "public/media/top-v2/project.webp",
+    "outputSha256": "119607bbd554dbe521a967ff6694aab79dcfe53f94b75639d8cb8116084c9f2e",
+    "width": 1671,
+    "height": 941
+  },
+  {
+    "key": "sceneSpace",
+    "source": "Роскошный апартамент с видом на море.png",
+    "sourceSha256": "5bdd4da7e6a2d8913c92e0e103ff129837580a459ee3d30696b01dbf0839731a",
+    "output": "public/media/top-v2/space.webp",
+    "outputSha256": "6aec645ccd47fd9dbb3c3dcae496f312b0fb9f4cb947620fe1b0f0a0bbf85820",
+    "width": 1671,
+    "height": 941
+  },
+  {
+    "key": "sceneLot",
+    "source": "План этажа 12 ти этажного корпуса.png",
+    "sourceSha256": "59f97a809c9d9fba23cc424377e423b067d5de4d7856d2e01076fc0cfca07741",
+    "output": "public/media/top-v2/lot.webp",
+    "outputSha256": "890be38255e8e021caca8836738e8497a62f0c9175aaff9c061d03df512d29d3",
+    "width": 1672,
+    "height": 941
+  }
+]

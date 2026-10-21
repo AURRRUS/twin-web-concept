@@ -53,5 +53,41 @@
     "width": 1672,
     "height": 941,
     "revision": "e0dd9ec92f58"
+  },
+  "topHero": {
+    "width": 2574,
+    "height": 1459,
+    "file": "top-v2/hero.webp",
+    "revision": "c5e3b94898d5",
+    "variants": {
+      "640": "top-v2/hero-640.webp",
+      "1280": "top-v2/hero-1280.webp",
+      "1920": "top-v2/hero-1920.webp",
+      "2574": "top-v2/hero.webp"
+    }
+  },
+  "topFacade": {
+    "width": 1024,
+    "height": 1536,
+    "file": "top-v2/facade.webp",
+    "revision": "dfcb7f928d76"
+  },
+  "sceneProject": {
+    "width": 1671,
+    "height": 941,
+    "file": "top-v2/project.webp",
+    "revision": "119607bbd554"
+  },
+  "sceneSpace": {
+    "width": 1671,
+    "height": 941,
+    "file": "top-v2/space.webp",
+    "revision": "6aec645ccd47"
+  },
+  "sceneLot": {
+    "width": 1672,
+    "height": 941,
+    "file": "top-v2/lot.webp",
+    "revision": "890be38255e8"
   }
 }
