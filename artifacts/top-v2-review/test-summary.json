@@ -1,0 +1,25 @@
+{
+  "fullSuite": {
+    "command": "npm test",
+    "passed": 14,
+    "failed": 0,
+    "consoleResult": "14 passed (42.4s)"
+  },
+  "afterFinalCssFixes": {
+    "command": "npm test -- --grep 'scene title|hero line|without JavaScript'",
+    "passed": 3,
+    "failed": 0,
+    "consoleResult": "3 passed (9.0s)"
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "buildPreview": "PASS",
+  "lint": "No lint script defined in package.json",
+  "finalContainerCheck": {
+    "command": "npm test -- --grep 'hero line' --reporter=list",
+    "status": "PASS",
+    "passed": 1,
+    "failed": 0,
+    "consoleResult": "1 passed (3.8s)"
+  }
+}

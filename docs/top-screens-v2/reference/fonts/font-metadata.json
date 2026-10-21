@@ -1,0 +1,36 @@
+[
+  {
+    "file": "inter-tight-variable.woff2",
+    "names": [
+      "Inter Tight",
+      "Regular"
+    ],
+    "cyrillic_present": true
+  },
+  {
+    "file": "rf-dewi-bold.woff2",
+    "names": [
+      "Bold",
+      "RF Dewi"
+    ],
+    "cyrillic_present": true
+  },
+  {
+    "file": "rf-dewi-regular.woff2",
+    "names": [
+      "RF Dewi",
+      "Regular"
+    ],
+    "cyrillic_present": true
+  },
+  {
+    "file": "rf-dewi-semibold.woff2",
+    "names": [
+      "RF Dewi",
+      "RF Dewi Semibold",
+      "Regular",
+      "Semibold"
+    ],
+    "cyrillic_present": true
+  }
+]

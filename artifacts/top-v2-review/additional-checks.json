@@ -1,0 +1,63 @@
+{
+  "renderedFonts": {
+    ".hero-word": {
+      "fonts": [
+        {
+          "familyName": "RF Dewi",
+          "postScriptName": "RFDewi-Regular",
+          "isCustomFont": true,
+          "glyphCount": 9
+        }
+      ]
+    },
+    ".hero-copy p": {
+      "fonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 120
+        }
+      ]
+    },
+    ".scene-navigation strong": {
+      "fonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    }
+  },
+  "networkFonts": [
+    {
+      "name": "http://127.0.0.1:4324/_astro/rf-dewi-regular.DlCP0Zz-.woff2",
+      "duration": 16,
+      "transferSize": 28500
+    },
+    {
+      "name": "http://127.0.0.1:4324/_astro/inter-tight-variable.B1-0gBFF.woff2",
+      "duration": 16,
+      "transferSize": 233168
+    },
+    {
+      "name": "http://127.0.0.1:4324/_astro/rf-dewi-semibold.DlOZ7qG-.woff2",
+      "duration": 65.89999999990687,
+      "transferSize": 28216
+    },
+    {
+      "name": "http://127.0.0.1:4324/_astro/rf-dewi-bold.CGSTxV87.woff2",
+      "duration": 65.79999999981374,
+      "transferSize": 28432
+    }
+  ],
+  "blendModes": [
+    "normal",
+    "normal",
+    "normal"
+  ],
+  "noJavaScript": "all three scenes present",
+  "failedImage": "stable frame and visible error label"
+}

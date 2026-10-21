@@ -169,7 +169,7 @@ test('desktop typeface loads and architectural scenes reverse without losing con
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
   await expect(page.locator('.journey-static')).toBeVisible();
-  await expect(page.locator('#lot')).toContainText('Планировка, положение и вид');
+  await expect(page.locator('#lot')).toContainText('Свяжите выбранный лот с корпусом, этажом и планировкой.');
 });
 
 test('a foreign project cannot retain the known child lot', async ({ page }) => {

@@ -1,0 +1,3036 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "G": 20,
+    "C": 350,
+    "L": 20,
+    "R": 370,
+    "scroll": 390,
+    "logoX": 20.003125,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 251.40625,
+        "y": 23.5,
+        "right": 370,
+        "width": 118.59375,
+        "height": 43
+      },
+      ".hero-copy": {
+        "x": 20,
+        "y": 120,
+        "right": 370,
+        "width": 350,
+        "height": 365.34375
+      },
+      "h1": {
+        "x": 20,
+        "y": 120,
+        "right": 370,
+        "width": 350,
+        "height": 182.34375
+      },
+      ".hero-copy .actions": {
+        "x": 20,
+        "y": 430.34375,
+        "right": 370,
+        "width": 350,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 2742.15625,
+        "right": 390,
+        "width": 390,
+        "height": 1394.84375
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4137,
+        "right": 390,
+        "width": 390,
+        "height": 1729.484375
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6667.265625,
+        "right": 390,
+        "width": 390,
+        "height": 1864.796875
+      },
+      ".contact": {
+        "x": 0,
+        "y": 8532.0625,
+        "right": 390,
+        "width": 390,
+        "height": 965.875
+      }
+    },
+    "headingLines": 5,
+    "fontSize": "33.15px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 20,
+        "expected": 20,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 20.003125,
+        "expected": 20,
+        "deviation": 0.0031250000000007105
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 370,
+        "expected": 370,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "G": 32,
+    "C": 704,
+    "L": 32,
+    "R": 736,
+    "scroll": 768,
+    "logoX": 32.01020833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 533.296875,
+        "y": 28.5,
+        "right": 736,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 32,
+        "y": 156,
+        "right": 736,
+        "width": 704,
+        "height": 290
+      },
+      "h1": {
+        "x": 32,
+        "y": 156,
+        "right": 736,
+        "width": 704,
+        "height": 98
+      },
+      ".hero-copy .actions": {
+        "x": 32,
+        "y": 391,
+        "right": 736,
+        "width": 704,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 3302.296875,
+        "right": 768,
+        "width": 768,
+        "height": 1099.5625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4401.859375,
+        "right": 768,
+        "width": 768,
+        "height": 995
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6075.859375,
+        "right": 768,
+        "width": 768,
+        "height": 1020.15625
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7096.015625,
+        "right": 768,
+        "width": 768,
+        "height": 769.921875
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "44.544px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 32,
+        "expected": 32,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 32.01020833333334,
+        "expected": 32,
+        "deviation": 0.01020833333333826
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 736,
+        "expected": 736,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "G": 45.51110656,
+    "C": 932.9777868799999,
+    "L": 45.51110656000003,
+    "R": 978.48889344,
+    "scroll": 1024,
+    "logoX": 45.51020833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 775.796875,
+        "y": 28.5,
+        "right": 978.5,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 45.5,
+        "y": 156,
+        "right": 978.5,
+        "width": 933,
+        "height": 337.265625
+      },
+      "h1": {
+        "x": 45.5,
+        "y": 156,
+        "right": 978.5,
+        "width": 933,
+        "height": 145.265625
+      },
+      ".hero-copy .actions": {
+        "x": 45.5,
+        "y": 438.265625,
+        "right": 978.5,
+        "width": 933,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 3520.203125,
+        "right": 1024,
+        "width": 1024,
+        "height": 935.5625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4455.765625,
+        "right": 1024,
+        "width": 1024,
+        "height": 1070
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6274.765625,
+        "right": 1024,
+        "width": 1024,
+        "height": 871.96875
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7146.734375,
+        "right": 1024,
+        "width": 1024,
+        "height": 567.28125
+      }
+    },
+    "headingLines": 3,
+    "fontSize": "44.032px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 45.5,
+        "expected": 45.51110656000003,
+        "deviation": 0.011106560000030186
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 45.51020833333334,
+        "expected": 45.51110656000003,
+        "deviation": 0.0008982266666919259
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 978.5,
+        "expected": 978.48889344,
+        "deviation": 0.011106560000030186
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "G": 56.8888832,
+    "C": 1166.2222336,
+    "L": 56.88888320000001,
+    "R": 1223.1111168,
+    "scroll": 1280,
+    "logoX": 56.88520833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1020.421875,
+        "y": 28.5,
+        "right": 1223.125,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 56.875,
+        "y": 156,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 288.78125
+      },
+      "h1": {
+        "x": 56.875,
+        "y": 156,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 96.78125
+      },
+      ".hero-copy .actions": {
+        "x": 56.875,
+        "y": 389.78125,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 531.515625,
+        "y": 720,
+        "right": 1223.125,
+        "width": 691.609375,
+        "height": 800
+      },
+      ".scene-headings": {
+        "x": 531.515625,
+        "y": 828.984375,
+        "right": 1223.125,
+        "width": 691.609375,
+        "height": 37.265625
+      },
+      ".scene-materials": {
+        "x": 531.515625,
+        "y": 890.25,
+        "right": 1223.125,
+        "width": 691.609375,
+        "height": 432.25
+      },
+      ".scene-caption": {
+        "x": 531.515625,
+        "y": 1338.5,
+        "right": 1223.125,
+        "width": 691.609375,
+        "height": 72.5
+      },
+      ".cinematic-facade": {
+        "x": 56.875,
+        "y": 720,
+        "right": 333.515625,
+        "width": 276.640625,
+        "height": 800
+      },
+      ".scene-navigation": {
+        "x": 357.515625,
+        "y": 1020,
+        "right": 507.515625,
+        "width": 150,
+        "height": 200
+      },
+      ".product": {
+        "x": 0,
+        "y": 3120,
+        "right": 1280,
+        "width": 1280,
+        "height": 954.40625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4074.40625,
+        "right": 1280,
+        "width": 1280,
+        "height": 1140.546875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 5963.953125,
+        "right": 1280,
+        "width": 1280,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 6837.28125,
+        "right": 1280,
+        "width": 1280,
+        "height": 567.28125
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "44px",
+    "enhanced": "true",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "samples": [
+      {
+        "scene": "project",
+        "media": {
+          "x": 531.515625,
+          "y": 170.25,
+          "width": 691.609375,
+          "height": 432.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 1
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.1
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 531.515625,
+          "y": 170.25,
+          "width": 691.609375,
+          "height": 432.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.5
+      },
+      {
+        "scene": "lot",
+        "media": {
+          "x": 531.515625,
+          "y": 170.25,
+          "width": 691.609375,
+          "height": 432.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 1
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.9
+      }
+    ],
+    "frameMaxDeviation": 0.0,
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 56.875,
+        "expected": 56.88888320000001,
+        "deviation": 0.01388320000000931
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 56.88520833333334,
+        "expected": 56.88888320000001,
+        "deviation": 0.0036748666666710506
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1223.125,
+        "expected": 1223.1111168,
+        "deviation": 0.01388320000000931
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "journey-right.left",
+        "x": 531.515625,
+        "right": 1223.125,
+        "width": 691.609375,
+        "expected": 531.515625,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "R",
+        "x": 1223.125,
+        "expected": 1223.1111168,
+        "deviation": 0.01388320000000931
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "journey-right.left",
+        "x": 531.515625,
+        "right": 1223.125,
+        "width": 691.609375,
+        "expected": 531.515625,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "R",
+        "x": 1223.125,
+        "expected": 1223.1111168,
+        "deviation": 0.01388320000000931
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "journey-right.left",
+        "x": 531.515625,
+        "right": 1223.125,
+        "width": 691.609375,
+        "expected": 531.515625,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "R",
+        "x": 1223.125,
+        "expected": 1223.1111168,
+        "deviation": 0.01388320000000931
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "G": 63.999993599999996,
+    "C": 1312.0000128,
+    "L": 63.99999360000004,
+    "R": 1376.0000064,
+    "scroll": 1440,
+    "logoX": 63.99458333333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1173.3125,
+        "y": 28.5,
+        "right": 1376.015625,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 297.59375
+      },
+      "h1": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 105.59375
+      },
+      ".hero-copy .actions": {
+        "x": 63.984375,
+        "y": 398.59375,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 585.984375,
+        "y": 810,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "height": 900
+      },
+      ".scene-headings": {
+        "x": 585.984375,
+        "y": 935.90625,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "height": 41.921875
+      },
+      ".scene-materials": {
+        "x": 585.984375,
+        "y": 1001.828125,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "height": 493.765625
+      },
+      ".scene-caption": {
+        "x": 585.984375,
+        "y": 1511.59375,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "height": 72.5
+      },
+      ".cinematic-facade": {
+        "x": 63.984375,
+        "y": 810,
+        "right": 379.984375,
+        "width": 316,
+        "height": 900
+      },
+      ".scene-navigation": {
+        "x": 403.984375,
+        "y": 1160,
+        "right": 561.984375,
+        "width": 158,
+        "height": 200
+      },
+      ".product": {
+        "x": 0,
+        "y": 3510,
+        "right": 1440,
+        "width": 1440,
+        "height": 967.03125
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4477.03125,
+        "right": 1440,
+        "width": 1440,
+        "height": 1147.796875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6373.828125,
+        "right": 1440,
+        "width": 1440,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7247.15625,
+        "right": 1440,
+        "width": 1440,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "48px",
+    "enhanced": "true",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "samples": [
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 1
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.1
+      },
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0.352
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.25
+      },
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 5.77779e-32,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.28
+      },
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0.15625,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.3
+      },
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0.957031,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.35
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.5
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0.352
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.65
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 1
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0.15625,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.7
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 1
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0.957031,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.75
+      },
+      {
+        "scene": "lot",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 1
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.9
+      },
+      {
+        "scene": "project",
+        "media": {
+          "x": 585.984375,
+          "y": 191.828125,
+          "width": 790.03125,
+          "height": 493.765625
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 1
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.1
+      }
+    ],
+    "frameMaxDeviation": 0.0,
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 63.984375,
+        "expected": 63.99999360000004,
+        "deviation": 0.015618600000038896
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 63.99458333333334,
+        "expected": 63.99999360000004,
+        "deviation": 0.005410266666700636
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "journey-right.left",
+        "x": 585.984375,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "expected": 585.984375,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "journey-right.left",
+        "x": 585.984375,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "expected": 585.984375,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "journey-right.left",
+        "x": 585.984375,
+        "right": 1376.015625,
+        "width": 790.03125,
+        "expected": 585.984375,
+        "deviation": 0.0
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "G": 64,
+    "C": 1408,
+    "L": 256,
+    "R": 1664,
+    "scroll": 1920,
+    "logoX": 256.0102083333333,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1461.296875,
+        "y": 28.5,
+        "right": 1664,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 256,
+        "y": 156,
+        "right": 1376,
+        "width": 1120,
+        "height": 341.78125
+      },
+      "h1": {
+        "x": 256,
+        "y": 156,
+        "right": 1376,
+        "width": 1120,
+        "height": 140.78125
+      },
+      ".hero-copy .actions": {
+        "x": 256,
+        "y": 442.78125,
+        "right": 1376,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 814,
+        "y": 972,
+        "right": 1664,
+        "width": 850,
+        "height": 1080
+      },
+      ".scene-headings": {
+        "x": 814,
+        "y": 1165.484375,
+        "right": 1664,
+        "width": 850,
+        "height": 49.265625
+      },
+      ".scene-materials": {
+        "x": 814,
+        "y": 1238.75,
+        "right": 1664,
+        "width": 850,
+        "height": 531.25
+      },
+      ".scene-caption": {
+        "x": 814,
+        "y": 1786,
+        "right": 1664,
+        "width": 850,
+        "height": 72.5
+      },
+      ".cinematic-facade": {
+        "x": 256,
+        "y": 972,
+        "right": 596,
+        "width": 340,
+        "height": 1080
+      },
+      ".scene-navigation": {
+        "x": 620,
+        "y": 1412,
+        "right": 790,
+        "width": 170,
+        "height": 200
+      },
+      ".product": {
+        "x": 192,
+        "y": 4212,
+        "right": 1728,
+        "width": 1536,
+        "height": 978.75
+      },
+      ".composition": {
+        "x": 192,
+        "y": 5190.75,
+        "right": 1728,
+        "width": 1536,
+        "height": 1197.671875
+      },
+      ".delivery": {
+        "x": 192,
+        "y": 7137.421875,
+        "right": 1728,
+        "width": 1536,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 192,
+        "y": 8010.75,
+        "right": 1728,
+        "width": 1536,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "63.9999px",
+    "enhanced": "true",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "samples": [
+      {
+        "scene": "project",
+        "media": {
+          "x": 814,
+          "y": 266.75,
+          "width": 850,
+          "height": 531.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 1
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.1
+      },
+      {
+        "scene": "space",
+        "media": {
+          "x": 814,
+          "y": 266.75,
+          "width": 850,
+          "height": 531.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 1
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 0
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.5
+      },
+      {
+        "scene": "lot",
+        "media": {
+          "x": 814,
+          "y": 266.75,
+          "width": 850,
+          "height": 531.25
+        },
+        "headings": [
+          {
+            "text": "Покажите, что делает проект ценным.",
+            "opacity": 0
+          },
+          {
+            "text": "Дайте почувствовать пространство.",
+            "opacity": 0
+          },
+          {
+            "text": "Раскройте конкретный лот.",
+            "opacity": 1
+          }
+        ],
+        "images": [
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 0,
+            "fit": "contain",
+            "loaded": true
+          },
+          {
+            "opacity": 1,
+            "fit": "contain",
+            "loaded": true
+          }
+        ],
+        "p": 0.9
+      }
+    ],
+    "frameMaxDeviation": 0,
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 256,
+        "expected": 256,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 256.0102083333333,
+        "expected": 256,
+        "deviation": 0.010208333333309838
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1664,
+        "expected": 1664,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "journey-right.left",
+        "x": 814,
+        "right": 1664,
+        "width": 850,
+        "expected": 814,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-headings",
+        "binding": "R",
+        "x": 1664,
+        "expected": 1664,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "journey-right.left",
+        "x": 814,
+        "right": 1664,
+        "width": 850,
+        "expected": 814,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-materials",
+        "binding": "R",
+        "x": 1664,
+        "expected": 1664,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "journey-right.left",
+        "x": 814,
+        "right": 1664,
+        "width": 850,
+        "expected": 814,
+        "deviation": 0
+      },
+      {
+        "selector": ".scene-caption",
+        "binding": "R",
+        "x": 1664,
+        "expected": 1664,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 700,
+    "G": 63.999993599999996,
+    "C": 1312.0000128,
+    "L": 63.99999360000004,
+    "R": 1376.0000064,
+    "scroll": 1440,
+    "logoX": 63.99458333333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1173.3125,
+        "y": 28.5,
+        "right": 1376.015625,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 297.59375
+      },
+      "h1": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 105.59375
+      },
+      ".hero-copy .actions": {
+        "x": 63.984375,
+        "y": 398.59375,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 4246.125,
+        "right": 1440,
+        "width": 1440,
+        "height": 967.03125
+      },
+      ".composition": {
+        "x": 0,
+        "y": 5213.15625,
+        "right": 1440,
+        "width": 1440,
+        "height": 1147.796875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 7109.953125,
+        "right": 1440,
+        "width": 1440,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7983.28125,
+        "right": 1440,
+        "width": 1440,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "48px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": false,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 63.984375,
+        "expected": 63.99999360000004,
+        "deviation": 0.015618600000038896
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 63.99458333333334,
+        "expected": 63.99999360000004,
+        "deviation": 0.005410266666700636
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "G": 20,
+    "C": 350,
+    "L": 20,
+    "R": 370,
+    "scroll": 390,
+    "logoX": 20.003125,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 251.40625,
+        "y": 23.5,
+        "right": 370,
+        "width": 118.59375,
+        "height": 43
+      },
+      ".hero-copy": {
+        "x": 20,
+        "y": 120,
+        "right": 370,
+        "width": 350,
+        "height": 365.34375
+      },
+      "h1": {
+        "x": 20,
+        "y": 120,
+        "right": 370,
+        "width": 350,
+        "height": 182.34375
+      },
+      ".hero-copy .actions": {
+        "x": 20,
+        "y": 430.34375,
+        "right": 370,
+        "width": 350,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 2742.15625,
+        "right": 390,
+        "width": 390,
+        "height": 1394.84375
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4137,
+        "right": 390,
+        "width": 390,
+        "height": 1729.484375
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6667.265625,
+        "right": 390,
+        "width": 390,
+        "height": 1864.796875
+      },
+      ".contact": {
+        "x": 0,
+        "y": 8532.0625,
+        "right": 390,
+        "width": 390,
+        "height": 965.875
+      }
+    },
+    "headingLines": 5,
+    "fontSize": "33.15px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 20,
+        "expected": 20,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 20.003125,
+        "expected": 20,
+        "deviation": 0.0031250000000007105
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 370,
+        "expected": 370,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "G": 32,
+    "C": 704,
+    "L": 32,
+    "R": 736,
+    "scroll": 768,
+    "logoX": 32.01020833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 533.296875,
+        "y": 28.5,
+        "right": 736,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 32,
+        "y": 156,
+        "right": 736,
+        "width": 704,
+        "height": 290
+      },
+      "h1": {
+        "x": 32,
+        "y": 156,
+        "right": 736,
+        "width": 704,
+        "height": 98
+      },
+      ".hero-copy .actions": {
+        "x": 32,
+        "y": 391,
+        "right": 736,
+        "width": 704,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 3302.296875,
+        "right": 768,
+        "width": 768,
+        "height": 1099.5625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4401.859375,
+        "right": 768,
+        "width": 768,
+        "height": 995
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6075.859375,
+        "right": 768,
+        "width": 768,
+        "height": 1020.15625
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7096.015625,
+        "right": 768,
+        "width": 768,
+        "height": 769.921875
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "44.544px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 32,
+        "expected": 32,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 32.01020833333334,
+        "expected": 32,
+        "deviation": 0.01020833333333826
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 736,
+        "expected": 736,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "G": 45.51110656,
+    "C": 932.9777868799999,
+    "L": 45.51110656000003,
+    "R": 978.48889344,
+    "scroll": 1024,
+    "logoX": 45.51020833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 775.796875,
+        "y": 28.5,
+        "right": 978.5,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 45.5,
+        "y": 156,
+        "right": 978.5,
+        "width": 933,
+        "height": 337.265625
+      },
+      "h1": {
+        "x": 45.5,
+        "y": 156,
+        "right": 978.5,
+        "width": 933,
+        "height": 145.265625
+      },
+      ".hero-copy .actions": {
+        "x": 45.5,
+        "y": 438.265625,
+        "right": 978.5,
+        "width": 933,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 3520.203125,
+        "right": 1024,
+        "width": 1024,
+        "height": 935.5625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4455.765625,
+        "right": 1024,
+        "width": 1024,
+        "height": 1070
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6274.765625,
+        "right": 1024,
+        "width": 1024,
+        "height": 871.96875
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7146.734375,
+        "right": 1024,
+        "width": 1024,
+        "height": 567.28125
+      }
+    },
+    "headingLines": 3,
+    "fontSize": "44.032px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 45.5,
+        "expected": 45.51110656000003,
+        "deviation": 0.011106560000030186
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 45.51020833333334,
+        "expected": 45.51110656000003,
+        "deviation": 0.0008982266666919259
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 978.5,
+        "expected": 978.48889344,
+        "deviation": 0.011106560000030186
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "G": 56.8888832,
+    "C": 1166.2222336,
+    "L": 56.88888320000001,
+    "R": 1223.1111168,
+    "scroll": 1280,
+    "logoX": 56.88520833333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1020.421875,
+        "y": 28.5,
+        "right": 1223.125,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 56.875,
+        "y": 156,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 288.78125
+      },
+      "h1": {
+        "x": 56.875,
+        "y": 156,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 96.78125
+      },
+      ".hero-copy .actions": {
+        "x": 56.875,
+        "y": 389.78125,
+        "right": 1176.875,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 4012.796875,
+        "right": 1280,
+        "width": 1280,
+        "height": 954.40625
+      },
+      ".composition": {
+        "x": 0,
+        "y": 4967.203125,
+        "right": 1280,
+        "width": 1280,
+        "height": 1140.546875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 6856.75,
+        "right": 1280,
+        "width": 1280,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7730.078125,
+        "right": 1280,
+        "width": 1280,
+        "height": 567.28125
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "44px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 56.875,
+        "expected": 56.88888320000001,
+        "deviation": 0.01388320000000931
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 56.88520833333334,
+        "expected": 56.88888320000001,
+        "deviation": 0.0036748666666710506
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1223.125,
+        "expected": 1223.1111168,
+        "deviation": 0.01388320000000931
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "G": 63.999993599999996,
+    "C": 1312.0000128,
+    "L": 63.99999360000004,
+    "R": 1376.0000064,
+    "scroll": 1440,
+    "logoX": 63.99458333333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1173.3125,
+        "y": 28.5,
+        "right": 1376.015625,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 297.59375
+      },
+      "h1": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 105.59375
+      },
+      ".hero-copy .actions": {
+        "x": 63.984375,
+        "y": 398.59375,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 4376.125,
+        "right": 1440,
+        "width": 1440,
+        "height": 967.03125
+      },
+      ".composition": {
+        "x": 0,
+        "y": 5343.15625,
+        "right": 1440,
+        "width": 1440,
+        "height": 1147.796875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 7239.953125,
+        "right": 1440,
+        "width": 1440,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 8113.28125,
+        "right": 1440,
+        "width": 1440,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "48px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 63.984375,
+        "expected": 63.99999360000004,
+        "deviation": 0.015618600000038896
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 63.99458333333334,
+        "expected": 63.99999360000004,
+        "deviation": 0.005410266666700636
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "G": 64,
+    "C": 1408,
+    "L": 256,
+    "R": 1664,
+    "scroll": 1920,
+    "logoX": 256.0102083333333,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1461.296875,
+        "y": 28.5,
+        "right": 1664,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 256,
+        "y": 156,
+        "right": 1376,
+        "width": 1120,
+        "height": 341.78125
+      },
+      "h1": {
+        "x": 256,
+        "y": 156,
+        "right": 1376,
+        "width": 1120,
+        "height": 140.78125
+      },
+      ".hero-copy .actions": {
+        "x": 256,
+        "y": 442.78125,
+        "right": 1376,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 192,
+        "y": 4718.078125,
+        "right": 1728,
+        "width": 1536,
+        "height": 978.75
+      },
+      ".composition": {
+        "x": 192,
+        "y": 5696.828125,
+        "right": 1728,
+        "width": 1536,
+        "height": 1197.671875
+      },
+      ".delivery": {
+        "x": 192,
+        "y": 7643.5,
+        "right": 1728,
+        "width": 1536,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 192,
+        "y": 8516.828125,
+        "right": 1728,
+        "width": 1536,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "63.9999px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 256,
+        "expected": 256,
+        "deviation": 0
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 256.0102083333333,
+        "expected": 256,
+        "deviation": 0.010208333333309838
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1664,
+        "expected": 1664,
+        "deviation": 0
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 700,
+    "G": 63.999993599999996,
+    "C": 1312.0000128,
+    "L": 63.99999360000004,
+    "R": 1376.0000064,
+    "scroll": 1440,
+    "logoX": 63.99458333333334,
+    "boxes": {
+      ".site-header .header-cta": {
+        "x": 1173.3125,
+        "y": 28.5,
+        "right": 1376.015625,
+        "width": 202.703125,
+        "height": 51
+      },
+      ".hero-copy": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 297.59375
+      },
+      "h1": {
+        "x": 63.984375,
+        "y": 156,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 105.59375
+      },
+      ".hero-copy .actions": {
+        "x": 63.984375,
+        "y": 398.59375,
+        "right": 1183.984375,
+        "width": 1120,
+        "height": 55
+      },
+      ".journey-right": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-headings": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-materials": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-caption": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".cinematic-facade": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".scene-navigation": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      ".product": {
+        "x": 0,
+        "y": 4246.125,
+        "right": 1440,
+        "width": 1440,
+        "height": 967.03125
+      },
+      ".composition": {
+        "x": 0,
+        "y": 5213.15625,
+        "right": 1440,
+        "width": 1440,
+        "height": 1147.796875
+      },
+      ".delivery": {
+        "x": 0,
+        "y": 7109.953125,
+        "right": 1440,
+        "width": 1440,
+        "height": 873.328125
+      },
+      ".contact": {
+        "x": 0,
+        "y": 7983.28125,
+        "right": 1440,
+        "width": 1440,
+        "height": 552.890625
+      }
+    },
+    "headingLines": 2,
+    "fontSize": "48px",
+    "enhanced": "false",
+    "fonts": [
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "RF Dewi",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter Tight",
+        "status": "loaded"
+      }
+    ],
+    "reduced": true,
+    "errors": [],
+    "measurements": [
+      {
+        "selector": ".hero-copy",
+        "binding": "L",
+        "x": 63.984375,
+        "expected": 63.99999360000004,
+        "deviation": 0.015618600000038896
+      },
+      {
+        "selector": ".brand (visible alpha > 32 edge)",
+        "binding": "L",
+        "x": 63.99458333333334,
+        "expected": 63.99999360000004,
+        "deviation": 0.005410266666700636
+      },
+      {
+        "selector": ".header-cta",
+        "binding": "R",
+        "x": 1376.015625,
+        "expected": 1376.0000064,
+        "deviation": 0.015618599999925209
+      }
+    ]
+  }
+]
