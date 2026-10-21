@@ -1,0 +1,632 @@
+[
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "Цифровая",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      27,
+      266.921875,
+      67
+    ],
+    "minContrast": 14.92,
+    "required": 3
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "инфраструктура продаж",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      330.90625,
+      27,
+      620.3125,
+      67
+    ],
+    "minContrast": 13.07,
+    "required": 3
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "девелоперского проекта.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      88.765625,
+      628.21875,
+      67
+    ],
+    "minContrast": 14.34,
+    "required": 3
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "Раскрывайте преимущества проекта и помогайте покупателю выбирать — на сайте, дистанционно,",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      180.53125,
+      404.8125,
+      21
+    ],
+    "minContrast": 14.81,
+    "required": 4.5
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "Раскрывайте преимущества проекта и помогайте покупателю выбирать — на сайте, дистанционно,",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      207.53125,
+      403.34375,
+      21
+    ],
+    "minContrast": 14.8,
+    "required": 4.5
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "через агентов",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      234.53125,
+      113.203125,
+      21
+    ],
+    "minContrast": 15.04,
+    "required": 4.5
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "и в офисе продаж.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      177.1875,
+      234.53125,
+      153.765625,
+      21
+    ],
+    "minContrast": 14.95,
+    "required": 4.5
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "Посмотреть Twin",
+    "color": "rgb(255, 255, 255)",
+    "rect": [
+      90.984375,
+      309.28125,
+      112.75,
+      17
+    ],
+    "minContrast": 4.83,
+    "required": 4.5
+  },
+  {
+    "scene": "hero",
+    "state": 0,
+    "text": "Обсудить проект",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      306.734375,
+      308.9375,
+      110.15625,
+      17
+    ],
+    "minContrast": 14.72,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА",
+    "color": "rgb(139, 97, 56)",
+    "rect": [
+      63.984375,
+      16.828125,
+      207.765625,
+      12
+    ],
+    "minContrast": 4.57,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Один цифровой проект.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      40.828125,
+      551.640625,
+      64
+    ],
+    "minContrast": 5.29,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Вся система продаж.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      94.171875,
+      495.671875,
+      64
+    ],
+    "minContrast": 3.46,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Сайт",
+    "color": "rgb(146, 94, 46)",
+    "rect": [
+      116.921875,
+      193.015625,
+      26.625,
+      15
+    ],
+    "minContrast": 5.44,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Онлайн-показ",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      224.21875,
+      193.015625,
+      77.015625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Агент",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      379.84375,
+      193.015625,
+      30.78125,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Офис продаж",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      490.265625,
+      193.015625,
+      74.9375,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "Единая цифровая основа",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      243.515625,
+      182.96875,
+      20
+    ],
+    "minContrast": 13.15,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 0,
+    "text": "для всех каналов продаж",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      269.015625,
+      186.921875,
+      20
+    ],
+    "minContrast": 12.69,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА",
+    "color": "rgb(139, 97, 56)",
+    "rect": [
+      63.984375,
+      21.828125,
+      207.765625,
+      12
+    ],
+    "minContrast": 4.87,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Один цифровой проект.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      45.828125,
+      551.640625,
+      64
+    ],
+    "minContrast": 6.33,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Вся система продаж.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      99.171875,
+      495.671875,
+      64
+    ],
+    "minContrast": 6.09,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Сайт",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      116.921875,
+      198.015625,
+      26.625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Онлайн-показ",
+    "color": "rgb(146, 94, 46)",
+    "rect": [
+      224.21875,
+      198.015625,
+      77.015625,
+      15
+    ],
+    "minContrast": 5.44,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Агент",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      379.84375,
+      198.015625,
+      30.78125,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Офис продаж",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      490.265625,
+      198.015625,
+      74.9375,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "Единая цифровая основа",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      248.515625,
+      182.96875,
+      20
+    ],
+    "minContrast": 12.58,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 1,
+    "text": "для всех каналов продаж",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      274.015625,
+      186.921875,
+      20
+    ],
+    "minContrast": 12.25,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА",
+    "color": "rgb(139, 97, 56)",
+    "rect": [
+      63.984375,
+      13.828125,
+      207.765625,
+      12
+    ],
+    "minContrast": 4.6,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Один цифровой проект.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      37.828125,
+      551.640625,
+      64
+    ],
+    "minContrast": 4.65,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Вся система продаж.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      91.171875,
+      495.671875,
+      64
+    ],
+    "minContrast": 4.22,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Сайт",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      116.921875,
+      190.015625,
+      26.625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Онлайн-показ",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      224.21875,
+      190.015625,
+      77.015625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Агент",
+    "color": "rgb(146, 94, 46)",
+    "rect": [
+      379.84375,
+      190.015625,
+      30.78125,
+      15
+    ],
+    "minContrast": 5.44,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Офис продаж",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      490.265625,
+      190.015625,
+      74.9375,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "Единая цифровая основа",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      240.515625,
+      182.96875,
+      20
+    ],
+    "minContrast": 11.19,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 2,
+    "text": "для всех каналов продаж",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      266.015625,
+      186.921875,
+      20
+    ],
+    "minContrast": 11.06,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА",
+    "color": "rgb(139, 97, 56)",
+    "rect": [
+      63.984375,
+      13.828125,
+      207.765625,
+      12
+    ],
+    "minContrast": 5.03,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Один цифровой проект.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      37.828125,
+      551.640625,
+      64
+    ],
+    "minContrast": 3.54,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Вся система продаж.",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      91.171875,
+      495.671875,
+      64
+    ],
+    "minContrast": 7.69,
+    "required": 3
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Сайт",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      116.921875,
+      190.015625,
+      26.625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Онлайн-показ",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      224.21875,
+      190.015625,
+      77.015625,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Агент",
+    "color": "rgb(106, 116, 128)",
+    "rect": [
+      379.84375,
+      190.015625,
+      30.78125,
+      15
+    ],
+    "minContrast": 4.75,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Офис продаж",
+    "color": "rgb(146, 94, 46)",
+    "rect": [
+      490.265625,
+      190.015625,
+      74.9375,
+      15
+    ],
+    "minContrast": 5.44,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "Единая цифровая основа",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      240.515625,
+      182.96875,
+      20
+    ],
+    "minContrast": 13.71,
+    "required": 4.5
+  },
+  {
+    "scene": "channels",
+    "state": 3,
+    "text": "для всех каналов продаж",
+    "color": "rgb(32, 39, 47)",
+    "rect": [
+      63.984375,
+      266.015625,
+      186.921875,
+      20
+    ],
+    "minContrast": 13.37,
+    "required": 4.5
+  }
+]

@@ -507,7 +507,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
  .channel-story p { letter-spacing: 0; }
 
 /* Reveal only off-screen content after hydration; native scrolling stays responsive. */
-.reveal-ready { opacity: 0; transform: translateY(18px); transition: opacity 640ms var(--ease), transform 640ms var(--ease); }
+.reveal-ready { opacity: 0; transform: translateY(18px); transition: opacity 420ms var(--ease), transform 420ms var(--ease); }
 .reveal-ready.in-view, .reveal-ready:focus-within { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal-ready { opacity: 1; transform: none; transition: none; }
