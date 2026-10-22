@@ -49,9 +49,9 @@ try {
   assert.equal(await page.locator('.header-cta').textContent(), 'Обсудить проект');
   assert.equal(await page.locator('.header-cta').getAttribute('href'), '/twin-web-concept/#contact');
   assert.equal(await page.locator('.hero .actions a').count(), 1);
-  assert.equal(await page.locator('.hero-channel-line').textContent(), 'через агентов и в офисе продаж.');
+  assert.equal(await page.locator('.hero-copy p').textContent(), 'Раскрывайте преимущества проекта и помогайте покупателю выбирать — на сайте, дистанционно, через агентов и в офисе продаж.');
   assert(Math.abs(await page.locator('.journey').evaluate(e=>e.clientHeight) - 900*3.4) <= 1);
-  result.checks.push('Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and channel line break');
+  result.checks.push('Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and exact two-row subtitle');
   let frame;
   for (const [id, progress] of [['project', .07], ['space', .5], ['lot', .93], ['space', .5], ['project', .07]]) {
     await page.locator('.journey').evaluate((el, p) => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + (el.clientHeight - innerHeight) * p, behavior: 'instant' }), progress);
@@ -60,13 +60,24 @@ try {
     const viewport = page.viewportSize().width, sceneWidth = Math.min(viewport, 1920);
     const gutter = viewport >= 1400 ? 64 : 56;
     const inset = Math.max(gutter, (sceneWidth - 1408) / 2);
-    const expectedWidth = sceneWidth * .62 + 64 - 224 - 24 - inset;
+    const expectedWidth = sceneWidth * .65 + 80 - 208 - 24 - inset;
     assert(Math.abs(box.width - expectedWidth) <= 1, `Media geometry ${box.width} != ${expectedWidth}`);
     if (frame) for (const key of ['x', 'y', 'width', 'height']) assert(Math.abs(frame[key] - box[key]) <= 1);
     frame = box;
     await page.locator(`.scene-material-${id} img`).evaluate(async img => { img.loading = 'eager'; await img.decode(); });
   }
   result.checks.push('Three reversible scenes have stable frames at the specified geometry');
+  await page.waitForFunction(() => document.querySelector('.delivery-host').dataset.enhanced === 'true');
+  let prefix, suffix;
+  for (const progress of [.68,.84,.98,.68]) {
+    await page.locator('.delivery-host').evaluate((el,p)=>window.scrollTo({top:el.getBoundingClientRect().top+scrollY+(el.clientHeight-innerHeight)*p,behavior:'instant'}),progress);
+    await page.waitForFunction(p=>Math.abs(Number(document.querySelector('.delivery-host').dataset.progress)-p)<.002,progress);
+    const visual = await page.locator('.delivery-copy').evaluate(el=>({prefix:el.querySelector('.effect-row>span').getBoundingClientRect().x,suffix:el.querySelector('.effect-row>span:last-child').getBoundingClientRect().x,unit:el.querySelector('.iv-probe').getBoundingClientRect().width,width:el.querySelector('.iv-window').getBoundingClientRect().width}));
+    if (prefix === undefined) {prefix=visual.prefix;suffix=visual.suffix;}
+    assert(Math.abs(visual.prefix-prefix)<1, 'Effect prefix moved during insertion');
+    if(progress===.98) {assert(visual.unit>0);assert(Math.abs(visual.suffix-suffix-visual.unit)<1);assert(Math.abs(visual.width-visual.unit)<1);}
+  }
+  result.checks.push('Published Delivery scrolls and reverses; actual iv glyph width unfolds while Effect prefix stays fixed');
   await page.locator('.journey-cinematic .scene-expand').click();
   await page.getByRole('dialog').locator('img').evaluate(async img => await img.decode());
   await page.keyboard.press('Escape');
@@ -93,7 +104,7 @@ try {
         });
       }), 'Published navigation has separated readable rows without image collision');
     }
-    else assert.equal(await page.locator('.static-scene').count(), 3);
+    else {assert.equal(await page.locator('.static-scene').count(), 3);assert.equal(await page.locator('.delivery-host').getAttribute('data-enhanced'),'false');}
   }
   result.checks.push('Published laptop, wide, tablet and phone breakpoints match owner contract');
   assert.deepEqual(result.pageErrors, []); assert.deepEqual(result.failedResponses, []);

@@ -263,9 +263,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
 .launch-steps p { font-size: 11px; line-height: 1.6; margin-top: 7px; }
 .launch-steps > li > .arrow { width: 17px; height: 17px; margin: 18px 0 0 auto; color: #b88756; }
 .delivery .section-note { margin-top: 40px; }
-.delivery.in-view .triangle-edge { animation: draw-edge 240ms ease-out both; }
-.delivery.in-view .edge-two { animation-delay: 120ms; }
-.delivery.in-view .edge-three { animation-delay: 240ms; }
 
 /* 07 — quiet ending, generous text and precise inputs. */
 .contact { display: grid; grid-template-columns: .95fr 1.05fr; gap: 62px; padding-top: 60px; padding-bottom: 55px; border-top: 1px solid #e5e9ea; }
@@ -302,7 +299,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
 @keyframes dialog-enter { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
 @keyframes dialog-exit { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(.99); } }
 @keyframes backdrop-exit { from { background: #202b3666; } to { background: #202b3600; } }
-@keyframes draw-edge { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
 
 @media (min-width: 1700px) {
   .composition-map { grid-template-rows: repeat(3, 260px); }

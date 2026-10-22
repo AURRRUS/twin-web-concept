@@ -41,8 +41,7 @@
 .scene-text-zone {    position: relative; }
 .scene-text-group { grid-area: 1 / 1; background: #fff; }
 .scene-text-group h2 span, .static-scene h2 span { display: block; }
-.scene-navigation { grid-column: 1; grid-row: 2 / 4; align-self: stretch;    position: relative; }
-.scene-navigation::before { content: ''; position: absolute; height: 1px; width: 70px; top: 22%; right: calc(100% - 16px); transform: rotate(-16deg); transform-origin: right; background: var(--bronze-light); }
+.scene-navigation { grid-column: 1; grid-row: 2; align-self: stretch;    position: relative; }
 .scene-navigation button, .static-scene-nav a { position: relative;  background: transparent; text-align: left; color: var(--muted); }
 .scene-navigation button[aria-pressed='true'] { color: var(--ink); }
 .scene-navigation button[aria-pressed='true']::after { content: ''; position: absolute; left: 0; top: 40px; height: 1px; width: 14px; background: var(--bronze); }

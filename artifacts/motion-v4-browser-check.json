@@ -1,0 +1,368 @@
+{
+  "environment": "Headless Chromium in shared cloud; native wheel input",
+  "entrances": [
+    {
+      "selector": "[data-craft-reveal=\"product-title\"]",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.537225",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.1066)",
+          "clip": "inset(46.2775% 0px 0px)",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.921026",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.89537)",
+          "clip": "inset(7.89738% 0px 0px)",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": "[data-craft-reveal=\"workspace\"]",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 24)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.694117",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.34119)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": ".map-core",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.686015",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.02376)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.946629",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.853935)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": ".component-client-tools",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.101133",
+          "transform": "matrix(1, 0, 0, 1, 0, 17.9773)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.865959",
+          "transform": "matrix(1, 0, 0, 1, 0, 2.68082)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": ".channel-image-reveal",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "inset(0px 31.4018% 0px 0px)",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "inset(0px 6.53167% 0px 0px)",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": ".contact-copy",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.675436",
+          "transform": "matrix(1, 0, 0, 1, 0, 6.49127)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.955097",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.898054)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "selector": ".contact form",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true,
+          "animations": 0
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.805072",
+          "transform": "matrix(1, 0, 0, 1, 0, 3.89856)",
+          "clip": "none",
+          "waiting": false,
+          "animations": 1
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false,
+          "animations": 0
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "p": "0.0496",
+      "label": "Качественно",
+      "ivWidth": "0px",
+      "prefix": 64,
+      "answer": "0"
+    },
+    {
+      "p": "0.3496",
+      "label": "Качественно",
+      "ivWidth": "0px",
+      "prefix": 64,
+      "answer": "0.0899326"
+    },
+    {
+      "p": "0.6804",
+      "label": "Эффектно",
+      "ivWidth": "0px",
+      "prefix": 64,
+      "answer": "1"
+    },
+    {
+      "p": "0.8402",
+      "label": "Эффективно",
+      "ivWidth": "35.9688px",
+      "prefix": 64,
+      "answer": "1"
+    },
+    {
+      "p": "0.9804",
+      "label": "Эффективно",
+      "ivWidth": "65.9219px",
+      "prefix": 64,
+      "answer": "1"
+    },
+    {
+      "p": "0.8402",
+      "label": "Эффективно",
+      "ivWidth": "35.9688px",
+      "prefix": 64,
+      "answer": "1"
+    },
+    {
+      "p": "0.6804",
+      "label": "Эффектно",
+      "ivWidth": "0px",
+      "prefix": 64,
+      "answer": "1"
+    }
+  ],
+  "visibility": {
+    "actualTabStates": [
+      "visible",
+      "visible"
+    ],
+    "actualEvents": [],
+    "explicitVisibilityResumeWord": "Эффектно"
+  },
+  "performance": {
+    "samples": 40,
+    "medianFrameMs": 16.700000000000045,
+    "p95FrameMs": 16.800000000000182,
+    "longTasksMs": []
+  },
+  "metrics": {
+    "before": [
+      {
+        "name": "LayoutDuration",
+        "value": 0
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 0.000033
+      }
+    ],
+    "after": [
+      {
+        "name": "LayoutDuration",
+        "value": 0.001745
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.004518
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.003547
+      },
+      {
+        "name": "TaskDuration",
+        "value": 0.027774
+      }
+    ]
+  },
+  "limits": "Not physical trackpad or Safari/iOS. Headless tab visibility may remain visible; explicit visibility event exercises resume separately."
+}

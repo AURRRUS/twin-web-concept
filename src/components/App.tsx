@@ -43,12 +43,10 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     window.history.replaceState(window.history.state, '', url);
   }
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }, { threshold: 0.15 });
-    document.querySelectorAll('.delivery').forEach(el => observer.observe(el));
     const cleanup = initCraftReveals();
     const leave = () => cleanup();
     document.addEventListener('astro:before-swap', leave);
-    return () => { observer.disconnect(); cleanup(); document.removeEventListener('astro:before-swap', leave); };
+    return () => { cleanup(); document.removeEventListener('astro:before-swap', leave); };
   }, []);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
     <main id="main">{page === 'home' && <><Hero /><Journey /></>}

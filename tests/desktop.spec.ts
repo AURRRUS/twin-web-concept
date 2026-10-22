@@ -10,7 +10,7 @@ test('desktop: real content, assets and anchors', async ({ page }) => {
   await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0).every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.locator('.delivery').scrollIntoViewIfNeeded();
-  await expect(page.locator('.delivery')).toHaveClass(/in-view/);
+  await expect(page.locator('.delivery-host')).toHaveAttribute('data-enhanced','true');
   await page.evaluate(() => Promise.all([...document.querySelectorAll('.triangle-edge')].flatMap(element => element.getAnimations()).map(animation => animation.finished)));
   expect(errors).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -155,7 +155,7 @@ test('desktop typeface loads and architectural scenes reverse without losing con
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
     await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
     await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(644.8, 0);
+    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(720, 0);
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
