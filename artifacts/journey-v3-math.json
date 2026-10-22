@@ -1,0 +1,8 @@
+{
+  "samples": 10001,
+  "noBlankText": true,
+  "baseMediaPresent": true,
+  "bounds": true,
+  "deterministicReverse": true,
+  "maxOpacityStep": 0.003749968750000554
+}

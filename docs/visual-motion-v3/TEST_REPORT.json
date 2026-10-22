@@ -1,0 +1,24 @@
+{
+  "samples": 10001,
+  "noBlankText": true,
+  "baseMediaPresent": true,
+  "bounds": true,
+  "deterministicReverse": true,
+  "maxOpacityStep": 0.003749968749999666,
+  "black_font": {
+    "file": "RFDewiExpanded-Black.ttf",
+    "os2_weight": 900,
+    "cyrillic": true,
+    "sha256": "0e1a5c76340ffb4071bf738f38dc0003a8c7fe08a10adb4d54bfa40eb2550cd6"
+  },
+  "font_measurement": {
+    "first_line_width_at_60px": 890.3125,
+    "available_width_at_1440px": 982,
+    "method": "FreeType / Pillow RAQM, not browser layout"
+  },
+  "limits": [
+    "No live site modifications",
+    "No browser integration test of corrected module",
+    "No performance or aesthetic PASS inferred from pure-state tests"
+  ]
+}

@@ -1,47 +1,55 @@
-/** One observer for short, role-specific cascades; scene scrub owns only inner layers. */
+/** Short entrances own outer slots; the pure Journey driver owns only inner scene layers. */
 export function initCraftReveals(root:Document=document){
  const nodes=[...root.querySelectorAll<HTMLElement>('[data-craft-reveal]')],reduced=matchMedia('(prefers-reduced-motion:reduce)'),small=matchMedia('(max-width:1279px)');
- const animations=new Map<HTMLElement,Animation>();let observer:IntersectionObserver|undefined,pointerDown=false;
+ const animations=new Map<HTMLElement,Animation>(),observers:IntersectionObserver[]=[];
+ let pointerDown=false,resizeRaf=0;
  const group=(n:HTMLElement)=>{
-  const pair=n.dataset.craftPair;
-  if(pair)return root.querySelector<HTMLElement>(`.map-component[data-craft-pair="${pair}"]`)||n;
-  return n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy')||n;
+  if(n.dataset.craftPair)return root.querySelector<HTMLElement>(`.map-component[data-craft-pair="${n.dataset.craftPair}"]`)||n;
+  return ['eyebrow','title','body'].includes(n.dataset.craftReveal||'')?n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy,.scene-text-zone,.static-scene')||n:n;
  };
- const groups=new Map<HTMLElement,HTMLElement[]>();
+ const groups=new Map<HTMLElement,HTMLElement[]>(),registered=new WeakSet<HTMLElement>();
  for(const n of nodes){const g=group(n);groups.set(g,[...(groups.get(g)||[]),n]);}
  const settle=(node:Element)=>{
-  for(const n of nodes)if(node.contains(n)||n===node){n.removeAttribute('data-craft-waiting');observer?.unobserve(n);animations.get(n)?.cancel();animations.delete(n);}
+  for(const [g,list]of groups)if(node.contains(g)||g===node){for(const o of observers)o.unobserve(g);for(const n of list){n.removeAttribute('data-craft-waiting');animations.get(n)?.cancel();animations.delete(n);}}
  };
  const start=(n:HTMLElement)=>{
   if(!n.hasAttribute('data-craft-waiting'))return;
   n.removeAttribute('data-craft-waiting');if(reduced.matches)return;
-  const role=n.dataset.craftReveal||'fact',isMedia=role==='media'||role==='composition-core';
-  let delay=role==='eyebrow'?0:role==='title'?80:role==='body'?250:isMedia?420:400;
-  // Existing pair indices remain spatially meaningful; new timing is shared by line and card.
-  if(n.dataset.craftDelay&&role==='fact')delay=Number(n.dataset.craftDelay);
-  if(n.dataset.craftPair)delay=Number(n.dataset.craftDelay)||400;
-  let duration=role==='eyebrow'?420:role==='title'?620:role==='body'?600:isMedia?900:600;
-  const y=role==='eyebrow'?6:role==='title'?18:role==='body'?12:isMedia?-24:14;
+  const role=n.dataset.craftReveal||'fact',isMedia=role==='media'||role==='composition-core',visual=isMedia||role==='contact-form';
+  let delay=role==='eyebrow'?0:role==='title'?100:role==='body'?360:visual?600:0;
+  let duration=role==='eyebrow'?420:role==='title'?700:role==='body'?650:visual?1050:700;
+  const y=role==='eyebrow'?6:role==='title'?18:role==='body'?12:isMedia?-32:14;
   const initial:Keyframe={opacity:0,transform:`translateY(${y}px)`},final:Keyframe={opacity:1,transform:'translateY(0px)'};
   if(role==='title'){initial.clipPath='inset(0 0 100% 0)';final.clipPath='inset(0 0 0% 0)';}
-  if(isMedia){initial.transform=`translateY(${y}px) scale(${small.matches?1.02:1.045})`;final.transform='translateY(0px) scale(1)';}
+  if(isMedia){initial.transform=`translateY(${y}px) scale(${small.matches?1.02:1.06})`;final.transform='translateY(0px) scale(1)';}
   if(small.matches){duration=Math.min(350,duration);delay=Math.min(140,delay*.25);}
-  const frames=isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final];
-  try{const a=n.animate(frames,{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(n);}
+  try{const a=n.animate(isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final],{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(group(n));}
  };
  if(!reduced.matches&&'IntersectionObserver'in window&&typeof Element.prototype.animate==='function'){
-  observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){for(const n of groups.get(e.target as HTMLElement)||[])start(n);observer?.unobserve(e.target);}}, {rootMargin:'0px 0px -18% 0px',threshold:0});
-  for(const [g,list]of groups){for(const n of list)if(n.getBoundingClientRect().top>=innerHeight)n.setAttribute('data-craft-waiting','');observer.observe(g);}
+  for(const margin of['-20%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){for(const n of groups.get(e.target as HTMLElement)||[])start(n);for(const o of observers)o.unobserve(e.target);}}, {rootMargin:`0px 0px ${margin} 0px`,threshold:0}));
  }
+ const register=()=>{
+  if(reduced.matches||!observers.length)return;
+  for(const [g,list]of groups){
+   // Hidden fallback copies do not run, and may be registered after a breakpoint change.
+   if(!g.getClientRects().length){for(const o of observers)o.unobserve(g);registered.delete(g);settle(g);continue;}
+   if(registered.has(g))continue;
+   registered.add(g);
+   const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||'')),threshold=heading?.80:.85;
+   if(g.getBoundingClientRect().top>=innerHeight*threshold)for(const n of list)n.setAttribute('data-craft-waiting','');
+   observers[heading?0:1].observe(g);
+  }
+ };
+ register();const resize=()=>{cancelAnimationFrame(resizeRaf);resizeRaf=requestAnimationFrame(register);};window.addEventListener('resize',resize);
  const focus=(e:Event)=>{if(pointerDown)return;for(const [n,a]of animations)if(n.contains(e.target as Node)){a.cancel();animations.delete(n);}for(const [g]of groups)if(g.contains(e.target as Node))settle(g);};
  const anchor=()=>{let id=location.hash.slice(1);try{id=decodeURIComponent(id);}catch{}const t=document.getElementById(id);if(t)settle(t);};
- const motionChange=()=>{if(reduced.matches){observer?.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
+ const motionChange=()=>{if(reduced.matches){for(const o of observers)o.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
  const sceneSettle=(e:Event)=>settle(e.target as Element);
  const pointer=()=>{pointerDown=true;};const keyboard=()=>{pointerDown=false;};const click=(e:Event)=>{pointerDown=false;focus(e);};
  root.addEventListener('pointerdown',pointer,true);root.addEventListener('keydown',keyboard,true);root.addEventListener('pointercancel',keyboard,true);root.addEventListener('click',click,true);
  root.addEventListener('focusin',focus);root.addEventListener('twin:settle-reveal',sceneSettle);window.addEventListener('hashchange',anchor);reduced.addEventListener('change',motionChange);anchor();
- // The photo is never hidden; only the hero's independent text groups enter on load.
- const heroNodes=[['.hero h1',0],['.hero-description',140],['.hero-channels',280],['.hero .actions',380]] as const;
- if(!reduced.matches&&scrollY<20)for(const [selector,delay]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0},{opacity:1}],{duration:small.matches?350:500,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
- return()=>{root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);observer?.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
+ // The clean photograph never disappears; the four text/action groups enter once.
+ const heroNodes=[['.hero h1',100,700],['.hero-description',360,650],['.hero-channels',500,650],['.hero .actions',650,600]] as const;
+ if(!reduced.matches&&scrollY<20)for(const [selector,delay,duration]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:small.matches?350:duration,delay:small.matches?Math.min(140,delay*.25):delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
+ return()=>{cancelAnimationFrame(resizeRaf);window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
 }

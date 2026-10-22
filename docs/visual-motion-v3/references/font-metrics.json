@@ -1,0 +1,32 @@
+{
+  "Было: Bold 700 / 38 px": {
+    "first_line_width_px": 542.09,
+    "font_size_px": 38,
+    "first_line_ink_bbox": [
+      0,
+      11,
+      542,
+      44
+    ]
+  },
+  "Сравнение: Bold 700 / 60 px": {
+    "first_line_width_px": 855.97,
+    "font_size_px": 60,
+    "first_line_ink_bbox": [
+      0,
+      18,
+      856,
+      70
+    ]
+  },
+  "Выбрано для Journey: Black 900 / 60 px": {
+    "first_line_width_px": 890.31,
+    "font_size_px": 60,
+    "first_line_ink_bbox": [
+      0,
+      18,
+      890,
+      69
+    ]
+  }
+}

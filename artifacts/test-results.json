@@ -111,7 +111,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "component computed styles follow correction V2 at all three specified sizes",
+          "title": "component computed styles follow visual motion V3 at all three specified sizes",
           "ok": true,
           "tags": [],
           "tests": [
@@ -126,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4524,
+                  "duration": 3624,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:28.464Z",
+                  "startTime": "2026-10-22T23:26:11.582Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -139,7 +139,7 @@
               "status": "expected"
             }
           ],
-          "id": "c47710147f1c2cf562ba-ed89d9a5c7344426c0f5",
+          "id": "c47710147f1c2cf562ba-00b74773a60df895adbd",
           "file": "correction-v2.spec.ts",
           "line": 4,
           "column": 1
@@ -160,12 +160,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5603,
+                  "duration": 5638,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:33.383Z",
+                  "startTime": "2026-10-22T23:26:15.698Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -194,12 +194,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2386,
+                  "duration": 2123,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:39.074Z",
+                  "startTime": "2026-10-22T23:26:21.352Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -228,12 +228,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14,
+                  "duration": 6,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:41.526Z",
+                  "startTime": "2026-10-22T23:26:23.530Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -270,12 +270,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3849,
+                  "duration": 3790,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:28.565Z",
+                  "startTime": "2026-10-22T23:26:11.582Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -304,12 +304,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 10017,
+                  "duration": 9122,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:32.786Z",
+                  "startTime": "2026-10-22T23:26:15.849Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -338,12 +338,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3804,
+                  "duration": 3999,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:42.866Z",
+                  "startTime": "2026-10-22T23:26:25.029Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -372,12 +372,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3784,
+                  "duration": 2890,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:46.757Z",
+                  "startTime": "2026-10-22T23:26:29.046Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -406,12 +406,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4504,
+                  "duration": 4056,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:50.554Z",
+                  "startTime": "2026-10-22T23:26:31.968Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -440,12 +440,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3372,
+                  "duration": 3186,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:55.073Z",
+                  "startTime": "2026-10-22T23:26:36.038Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -474,12 +474,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2287,
+                  "duration": 2036,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:58.460Z",
+                  "startTime": "2026-10-22T23:26:39.244Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -508,12 +508,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2168,
+                  "duration": 1945,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:00.768Z",
+                  "startTime": "2026-10-22T23:26:41.298Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -542,12 +542,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2214,
+                  "duration": 3362,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:02.949Z",
+                  "startTime": "2026-10-22T23:26:43.287Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -576,12 +576,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1353,
+                  "duration": 1108,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:05.187Z",
+                  "startTime": "2026-10-22T23:26:46.665Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -608,7 +608,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -618,12 +618,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3902,
+                  "duration": 3899,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:41.576Z",
+                  "startTime": "2026-10-22T23:26:23.561Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -633,7 +633,7 @@
           ],
           "id": "f562975c8f919afd593b-6fe0a837b4286fc76fc6",
           "file": "motion-v4.spec.ts",
-          "line": 4,
+          "line": 5,
           "column": 1
         },
         {
@@ -642,7 +642,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -652,12 +652,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7838,
+                  "duration": 7151,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:45.538Z",
+                  "startTime": "2026-10-22T23:26:27.479Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -667,7 +667,7 @@
           ],
           "id": "f562975c8f919afd593b-906877a4f92c571c476d",
           "file": "motion-v4.spec.ts",
-          "line": 12,
+          "line": 13,
           "column": 1
         },
         {
@@ -676,7 +676,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -686,12 +686,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 24149,
+                  "duration": 24666,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:38:53.399Z",
+                  "startTime": "2026-10-22T23:26:34.652Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -701,7 +701,7 @@
           ],
           "id": "f562975c8f919afd593b-0d9652ce8bebfb375e33",
           "file": "motion-v4.spec.ts",
-          "line": 17,
+          "line": 18,
           "column": 1
         }
       ]
@@ -718,7 +718,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -728,12 +728,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5664,
+                  "duration": 4599,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:06.648Z",
+                  "startTime": "2026-10-22T23:26:47.853Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -743,7 +743,7 @@
           ],
           "id": "472f259022e25a651642-bdce8c33c214c8407e34",
           "file": "motion.spec.ts",
-          "line": 10,
+          "line": 11,
           "column": 1
         },
         {
@@ -752,7 +752,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -762,12 +762,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 10882,
+                  "duration": 31660,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:12.336Z",
+                  "startTime": "2026-10-22T23:26:52.474Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -777,7 +777,7 @@
           ],
           "id": "472f259022e25a651642-7d283254fe8c7f016023",
           "file": "motion.spec.ts",
-          "line": 13,
+          "line": 14,
           "column": 1
         },
         {
@@ -786,7 +786,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -796,12 +796,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1623,
+                  "duration": 2566,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:23.233Z",
+                  "startTime": "2026-10-22T23:27:24.154Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -811,7 +811,7 @@
           ],
           "id": "472f259022e25a651642-fe51aa9d1d33b3331d38",
           "file": "motion.spec.ts",
-          "line": 23,
+          "line": 24,
           "column": 1
         },
         {
@@ -820,7 +820,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -830,12 +830,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1701,
+                  "duration": 2812,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:24.872Z",
+                  "startTime": "2026-10-22T23:27:26.742Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -845,7 +845,7 @@
           ],
           "id": "472f259022e25a651642-b6fb35ee820645922938",
           "file": "motion.spec.ts",
-          "line": 26,
+          "line": 27,
           "column": 1
         },
         {
@@ -854,7 +854,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -864,12 +864,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 994,
+                  "duration": 2095,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:26.586Z",
+                  "startTime": "2026-10-22T23:27:29.573Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -879,7 +879,7 @@
           ],
           "id": "472f259022e25a651642-362cbbdfa84795413c36",
           "file": "motion.spec.ts",
-          "line": 31,
+          "line": 32,
           "column": 1
         },
         {
@@ -888,7 +888,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -898,12 +898,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 7178,
+                  "duration": 27152,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:27.594Z",
+                  "startTime": "2026-10-22T23:27:31.680Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -913,7 +913,7 @@
           ],
           "id": "472f259022e25a651642-a92b6188fc5fda6eca3f",
           "file": "motion.spec.ts",
-          "line": 38,
+          "line": 39,
           "column": 1
         },
         {
@@ -922,7 +922,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -932,12 +932,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2124,
+                  "duration": 3512,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:34.789Z",
+                  "startTime": "2026-10-22T23:27:58.845Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -947,16 +947,16 @@
           ],
           "id": "472f259022e25a651642-eff63d3b2cc48fc19651",
           "file": "motion.spec.ts",
-          "line": 44,
+          "line": 45,
           "column": 1
         },
         {
-          "title": "rendered Cyrillic uses the real Expanded700 and Inter variable files",
+          "title": "rendered Cyrillic uses the real Expanded900 and Inter variable files",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -966,12 +966,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 843,
+                  "duration": 750,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:36.925Z",
+                  "startTime": "2026-10-22T23:28:02.375Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -979,18 +979,18 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-152e2ab987ebd4ed702d",
+          "id": "472f259022e25a651642-57b712d5364aaa95eea5",
           "file": "motion.spec.ts",
-          "line": 48,
+          "line": 49,
           "column": 1
         },
         {
-          "title": "exact correction V2 type metrics at desktop, tablet and phone sizes",
+          "title": "exact visual motion V3 type metrics at desktop, tablet and phone sizes",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -1005,7 +1005,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:37.787Z",
+                  "startTime": "2026-10-22T23:28:03.144Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1013,9 +1013,9 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-86a28864629e3445281f",
+          "id": "472f259022e25a651642-a19bd6d8dc368e8b2dc2",
           "file": "motion.spec.ts",
-          "line": 52,
+          "line": 53,
           "column": 1
         },
         {
@@ -1024,7 +1024,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -1034,12 +1034,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2065,
+                  "duration": 2292,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:40.599Z",
+                  "startTime": "2026-10-22T23:28:05.955Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1049,7 +1049,7 @@
           ],
           "id": "472f259022e25a651642-2a1a32d9cf180f7523e5",
           "file": "motion.spec.ts",
-          "line": 55,
+          "line": 56,
           "column": 1
         },
         {
@@ -1058,7 +1058,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -1068,12 +1068,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1042,
+                  "duration": 993,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:42.682Z",
+                  "startTime": "2026-10-22T23:28:08.267Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1083,7 +1083,7 @@
           ],
           "id": "472f259022e25a651642-e06d8d360942527dbf7c",
           "file": "motion.spec.ts",
-          "line": 59,
+          "line": 60,
           "column": 1
         },
         {
@@ -1092,7 +1092,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -1102,12 +1102,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1403,
+                  "duration": 2937,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:43.735Z",
+                  "startTime": "2026-10-22T23:28:09.271Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1117,11 +1117,87 @@
           ],
           "id": "472f259022e25a651642-ad2b610e5a0365e5772d",
           "file": "motion.spec.ts",
-          "line": 63,
+          "line": 64,
           "column": 1
         },
         {
           "title": "mobile menu retains keyboard-accessible routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 755,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T23:28:12.223Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "472f259022e25a651642-a6c38a5a4df8b5a6de8d",
+          "file": "motion.spec.ts",
+          "line": 67,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "visual-motion-v3.spec.ts",
+      "file": "visual-motion-v3.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "V3 DOM has no blank title or body at both transitions and in reverse",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T23:26:59.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8b00ff6b6b391858e6a-7bb46172beb3c6ae068c",
+          "file": "visual-motion-v3.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "entry survives reaching pin and a large native scroll is smoothed rather than snapped",
           "ok": true,
           "tags": [],
           "tests": [
@@ -1133,15 +1209,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 762,
+                  "duration": 5687,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T22:39:45.150Z",
+                  "startTime": "2026-10-22T23:27:47.067Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1149,9 +1225,77 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-a6c38a5a4df8b5a6de8d",
-          "file": "motion.spec.ts",
-          "line": 66,
+          "id": "e8b00ff6b6b391858e6a-58ef68bebdfb8e8107a1",
+          "file": "visual-motion-v3.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "acceptance viewport matrix retains Black type, readable UI and native fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6327,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T23:27:52.784Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8b00ff6b6b391858e6a-cd4a44fbc25fd81dfc28",
+          "file": "visual-motion-v3.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "scene hashes restore the right state and visibility lifecycle resumes one driver",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2535,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T23:27:59.143Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8b00ff6b6b391858e6a-2547a4c9da11b4591c84",
+          "file": "visual-motion-v3.spec.ts",
+          "line": 18,
           "column": 1
         }
       ]
@@ -1159,9 +1303,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-22T22:38:27.161Z",
-    "duration": 78899.75200000001,
-    "expected": 30,
+    "startTime": "2026-10-22T23:26:10.169Z",
+    "duration": 123003.172,
+    "expected": 34,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {assertCorrectionMetrics} from '../scripts/assert-correction-metrics.mjs';
 import {deliveryFrame} from '../src/lib/deliveryMotion';
-test('component computed styles follow correction V2 at all three specified sizes',async({page})=>{
+test('component computed styles follow visual motion V3 at all three specified sizes',async({page})=>{
  for(const[width,height]of[[1440,900],[1920,1080],[390,844]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).not.toHaveAttribute('data-enhanced','pending');await page.evaluate(()=>document.fonts.ready);await assertCorrectionMetrics(page);}
 });
 test('tablet and low desktop retain facade, one active scene and usable native buttons',async({page})=>{

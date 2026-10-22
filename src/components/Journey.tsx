@@ -25,19 +25,18 @@ export function Journey() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const origin = useRef<HTMLElement | null>(null);
-  const jump = useRef<(id: string) => void>(() => {});
+  const jump = useRef<(id: string, immediate?: boolean) => void>(() => {});
   useEffect(() => {
     const node = host.current!;
     const panel = node.querySelector<HTMLElement>('.journey-cinematic')!;
     const desktop = matchMedia('(min-width: 1280px)');
     const columns = matchMedia('(min-width: 1024px)');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    let enabled = false, disposed = false, fontsReady = false, imagesReady = false, atPin = false;
+    let enabled = false, disposed = false, fontsReady = false, imagesReady = false, hashChecked = false;
     let current = { active: -1, title: -1, explanation: -1 };
     let driver: ReturnType<typeof createProgressDriver> | undefined;
     const read = () => {
       const rect = node.getBoundingClientRect();
-      atPin = rect.top <= 0;
       return Math.max(0, Math.min(1, -rect.top / Math.max(1, node.offsetHeight - panel.offsetHeight)));
     };
     const write = (frame: ReturnType<typeof journeyFrame>, progress: number) => {
@@ -45,7 +44,6 @@ export function Journey() {
         frame[group].forEach((value, index) => node.style.setProperty(`--${group}-${index}`, `${value}${group.endsWith('Y') ? 'px' : group === 'titleClip' ? '%' : ''}`));
       }
       node.style.setProperty('--scene-progress', String(progress));
-      if (atPin && !node.dataset.entrySettled) {node.dataset.entrySettled = 'true';node.dispatchEvent(new CustomEvent('twin:settle-reveal', {bubbles:true}));}
       if (current.active !== frame.active || current.title !== frame.title || current.explanation !== frame.explanation) {
         if (current.active !== frame.active) window.dispatchEvent(new CustomEvent('twin:scene-active', { detail: scenes[frame.active].id }));
         current = { active: frame.active, title: frame.title, explanation: frame.explanation };
@@ -77,9 +75,10 @@ export function Journey() {
       enabled = fits; node.dataset.motionEnabled = String(fits); setMotionEnabled(fits); setLayoutReady(true);
       if (!fits && mode === 'desktop') write(journeyFrame(scenes[Math.max(0,current.active)].target), scenes[Math.max(0,current.active)].target);
       if (fits) { driver = createProgressDriver(read, write); requestAnimationFrame(() => { if (!disposed) driver?.snap(); }); }
+      if (!hashChecked) { hashChecked = true; requestAnimationFrame(() => { if (!disposed) hashJump(); }); }
     };
     const visibility = () => { if (document.hidden) { driver?.destroy(); driver = undefined; } else if (enabled) { driver = createProgressDriver(read, write); driver.snap(); } };
-    jump.current = id => {
+    jump.current = (id, immediate = false) => {
       const scene = scenes.find(item => item.id === id);
       if (!scene) return;
       if (!enabled) {
@@ -87,7 +86,14 @@ export function Journey() {
         else document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
         return;
       }
-      window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + Math.max(0, node.offsetHeight - panel.offsetHeight) * scene.target, behavior: 'smooth' });
+      window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + Math.max(0, node.offsetHeight - panel.offsetHeight) * scene.target, behavior: immediate ? 'instant' : 'smooth' });
+      if (immediate) { driver?.snap(); node.dispatchEvent(new CustomEvent('twin:settle-reveal', {bubbles:true})); }
+    };
+    const hashJump = () => {
+      const id = location.hash.slice(1);
+      if (!scenes.some(scene => scene.id === id)) return;
+      jump.current(id, true);
+      if (!enabled && columns.matches) node.scrollIntoView({behavior:'instant'});
     };
     const onJump = (event: Event) => jump.current((event as CustomEvent<string>).detail);
     const decode = new IntersectionObserver(entries => {
@@ -97,17 +103,17 @@ export function Journey() {
     }, { rootMargin: '100% 0px' });
     decode.observe(node);
     const resize = new ResizeObserver(request); resize.observe(node);
-    void Promise.all([400, 600, 700].map(weight => document.fonts.load(`${weight} 24px "Twin Dewi Expanded"`, 'ЦифроваяЁё'))).then(() => {
+    void Promise.all([400, 600, 700, 900].map(weight => document.fonts.load(`${weight} 24px "Twin Dewi Expanded"`, 'ЦифроваяЁё'))).then(() => {
       fontsReady = true; configure(); return document.fonts.ready;
     }).then(configure);
     columns.addEventListener('change', configure); desktop.addEventListener('change', configure); reduced.addEventListener('change', configure);
     window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', configure);
-    window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
+    window.addEventListener('hashchange', hashJump); window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
     return () => {
       disposed = true; driver?.destroy(); decode.disconnect(); resize.disconnect();
       columns.removeEventListener('change', configure); desktop.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
       window.removeEventListener('scroll', request); window.removeEventListener('resize', configure);
-      window.removeEventListener('twin:journey', onJump); document.removeEventListener('visibilitychange', visibility);
+      window.removeEventListener('hashchange', hashJump); window.removeEventListener('twin:journey', onJump); document.removeEventListener('visibilitychange', visibility);
     };
   }, []);
   useEffect(() => {
@@ -139,7 +145,7 @@ export function Journey() {
             <div className="scene-body-slot" data-craft-reveal="body">{scenes.map((scene,index)=><p className="scene-body-group" data-layer={index} key={scene.id} aria-hidden={reading.explanation!==index}>{scene.body}</p>)}</div>
           </div>
           <nav className="scene-navigation" aria-label="Масштаб исследования">{scenes.map((scene, index) => <button key={scene.id} type="button" id={layoutMode === 'desktop' ? scene.id : undefined} aria-pressed={reading.active === index} aria-current={reading.active === index ? 'step' : undefined} onClick={() => jump.current(scene.id)}>{navigation(scene, index)}</button>)}</nav>
-          <div className="scene-materials" data-craft-reveal="media" data-craft-delay="420">{scenes.map((scene, index) => <div key={scene.id} data-layer={index} className={`scene-material scene-material-${scene.id}`} aria-hidden={reading.active !== index}><Media name={scene.media} alt={scene.alt} /></div>)}</div>
+          <div className="scene-materials"><div className="scene-sheet-entry" data-craft-reveal="media">{scenes.map((scene, index) => <div key={scene.id} data-layer={index} className={`scene-material scene-material-${scene.id}`} aria-hidden={reading.active !== index}><Media name={scene.media} alt={scene.alt} /></div>)}</div></div>
           <div className="scene-caption"><small>{disclaimer}</small><a className="scene-demo" href={sitePath('/demo')}>Открыть демо</a>{expandLink(scenes[reading.active].id)}</div>
         </div>
       </div>
