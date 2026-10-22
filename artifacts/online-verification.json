@@ -1,14 +1,15 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "84fda425a345c4c02a7c7ce47f3387f2907430fd",
+  "expectedSourceCommit": "203a4d68ef23a61150c1147678988a7e42e30ae3",
   "status": "PASS",
-  "checkedAt": "2026-10-22T13:26:42.435Z",
+  "checkedAt": "2026-10-22T15:43:05.605Z",
   "checks": [
     "Published manifest matches exact source commit",
     "All five current top-screen images match local checksums",
     "Expanded 400/600/700 and Inter Tight HTTP 200; exact H1 metrics and rendered custom Expanded glyphs; no terminal heading dots or hero overlay",
-    "Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and channel line break",
+    "Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and exact two-row subtitle",
     "Three reversible scenes have stable frames at the specified geometry",
+    "Published Delivery scrolls and reverses; actual iv glyph width unfolds while Effect prefix stays fixed",
     "Original dialog, component dialog, channel tabs and selected view handoff to /demo work",
     "Published laptop, wide, tablet and phone breakpoints match owner contract"
   ],
@@ -16,9 +17,9 @@
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "84fda425a345c4c02a7c7ce47f3387f2907430fd",
-    "builtAt": "2026-10-22T13:26:11.752Z",
-    "previousDeploymentCommit": "65b7ae9b4496986a4601fda40a5a41b116985451"
+    "sourceCommit": "203a4d68ef23a61150c1147678988a7e42e30ae3",
+    "builtAt": "2026-10-22T15:42:15.896Z",
+    "previousDeploymentCommit": "8c9226938e985ef1c7e5499055f93c43a30a9326"
   },
   "typography": {
     "width": 1440,
@@ -51,7 +52,7 @@
       "Коммерческий цифровой двойник",
       "Один цифровой проектВся система продаж",
       "Показать больше на встрече",
-      "БыстроДоступноКачественно",
+      "БыстроДоступноивКачественно, эффектно, эффективноКачественно · Эффектно · ЭффективноКачественноЭффективноКачественноЭффективно",
       "В Twin сходятся все три",
       "Посмотрите в работе",
       "Материалы и задачи",
