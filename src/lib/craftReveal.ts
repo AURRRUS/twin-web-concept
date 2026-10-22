@@ -2,7 +2,11 @@
 export function initCraftReveals(root:Document=document){
  const nodes=[...root.querySelectorAll<HTMLElement>('[data-craft-reveal]')],reduced=matchMedia('(prefers-reduced-motion:reduce)'),small=matchMedia('(max-width:1279px)');
  const animations=new Map<HTMLElement,Animation>();let observer:IntersectionObserver|undefined,pointerDown=false;
- const group=(n:HTMLElement)=>n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy,.composition-map')||n;
+ const group=(n:HTMLElement)=>{
+  const pair=n.dataset.craftPair;
+  if(pair)return root.querySelector<HTMLElement>(`.map-component[data-craft-pair="${pair}"]`)||n;
+  return n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy')||n;
+ };
  const groups=new Map<HTMLElement,HTMLElement[]>();
  for(const n of nodes){const g=group(n);groups.set(g,[...(groups.get(g)||[]),n]);}
  const settle=(node:Element)=>{

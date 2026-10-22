@@ -71,9 +71,6 @@
 .scene-original-inner > img { display: block; max-width: 100%; max-height: 72svh; object-fit: contain; }
 .scene-original-inner > a { align-self: flex-start; }
 .button:active { transform: translateY(1px); }
-@media (min-width: 1100px) and (max-height: 850px) {
-  .scene-text-zone { margin-left: 80px; }
-}
 @media (max-width: 600px) {
   .journey-static { padding-block: 32px; }
   .static-facade { height: 320px; }
