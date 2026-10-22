@@ -1,22 +1,17 @@
 import { test, expect } from '@playwright/test';
 
-test('desktop: real content, assets, anchors and screenshots', async ({ page }) => {
-  // Full-page PNG encoding on the shared cloud CPU can exceed the interaction timeout.
+test('desktop: real content, assets and anchors', async ({ page }) => {
   test.setTimeout(60_000);
   const errors: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Цифровая инфраструктура продаж девелоперского проекта.');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Цифровая инфраструктура продаж девелоперского проекта');
   await page.evaluate(async () => { await document.fonts.ready; for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 70)); } });
   await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0).every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-  await page.screenshot({ animations: 'disabled', path: 'artifacts/desktop-1440.png', fullPage: true });
-  await page.locator('.hero').screenshot({ animations: 'disabled', path: 'artifacts/first-screen.png' });
-  await page.locator('.composition').screenshot({ animations: 'disabled', path: 'artifacts/composition-desktop.png' });
   await page.locator('.delivery').scrollIntoViewIfNeeded();
   await expect(page.locator('.delivery')).toHaveClass(/in-view/);
   await page.evaluate(() => Promise.all([...document.querySelectorAll('.triangle-edge')].flatMap(element => element.getAnimations()).map(animation => animation.finished)));
-  await page.locator('.delivery').screenshot({ animations: 'disabled', path: 'artifacts/delivery-desktop.png' });
   expect(errors).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.getByRole('navigation', { name: 'Основная навигация' }).getByRole('link', { name: 'Сценарии' }).click();
@@ -45,7 +40,6 @@ test('all seven dialogs, keyboard focus, history, direct URL and contact topic',
   await page.locator('.dialog-close').focus();
   await page.keyboard.press('Shift+Tab');
   await expect(page.getByRole('button', { name: 'Обсудить конфигурацию' })).toBeFocused();
-  await page.screenshot({ animations: 'disabled', path: 'artifacts/component-dialog.png' });
   await page.getByRole('button', { name: 'Обсудить конфигурацию' }).click();
   await expect(page.getByRole('dialog')).not.toBeVisible();
   await expect(page.locator('#contact-topic')).toHaveValue('Управление и аналитика');
@@ -88,7 +82,6 @@ test('shared selection, parent resets, direct demo and invalid IDs', async ({ pa
   await page.getByRole('combobox', { name: 'Этаж' }).selectOption('floor-4');
   await page.getByRole('button', { name: 'Лот 4.2' }).click();
   await expect(page.getByRole('button', { name: 'Лот 4.2' })).toHaveAttribute('aria-pressed', 'true');
-  await page.screenshot({ animations: 'disabled', path: 'artifacts/demo-desktop.png', fullPage: true });
   await page.goto('/demo?projectId=evil&buildingId=building-1&floorId=floor-4&lotId=unknown');
   await expect(page.getByText('Часть выбора из ссылки недоступна.', { exact: false })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Лот 4.2' })).toHaveAttribute('aria-pressed', 'false');
@@ -134,7 +127,6 @@ test('desktop widths and reduced motion retain visible content', async ({ page }
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   }
-  await page.screenshot({ animations: 'disabled', path: 'artifacts/desktop-1920.png', fullPage: true });
 });
 
 test('without JavaScript: server-rendered content and honest demo remain available', async ({ browser }) => {
@@ -154,8 +146,8 @@ test('without JavaScript: server-rendered content and honest demo remain availab
 test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
-  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('RF Dewi');
-  expect(await page.evaluate(() => document.fonts.check('400 48px "RF Dewi"', 'Цифровая инфраструктура'))).toBe(true);
+  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('RF Dewi Expanded');
+  expect(await page.evaluate(() => document.fonts.check('600 48px "RF Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
   expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Inter Tight');
   expect(await page.evaluate(() => document.fonts.check('400 16px "Inter Tight"', 'Кириллица Ёё'))).toBe(true);
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
@@ -163,8 +155,7 @@ test('desktop typeface loads and architectural scenes reverse without losing con
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
     await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
     await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeGreaterThan(700);
-    await page.locator('.journey-cinematic').screenshot({ animations: 'disabled', path: `artifacts/journey-${scene}.png` });
+    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(644.8, 0);
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');

@@ -15,7 +15,7 @@ export function Channels() {
   const prefix = useId();
   const channel = channels[active];
   return <section className="channels" id="channels" aria-labelledby="channels-heading">
-    <div className="channels-heading"><span className="eyebrow">ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА</span><h2 id="channels-heading">Один цифровой проект.<br />Вся система продаж.</h2>
+    <div className="channels-heading"><span className="eyebrow">ЧЕТЫРЕ КАНАЛА · ОДНА ОСНОВА</span><h2 id="channels-heading">Один цифровой проект<br />Вся система продаж</h2>
       <div role="tablist" aria-label="Каналы продаж" className="tabs channel-tabs" style={{ '--active-tab': active } as CSSProperties} onKeyDown={e => { if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) { e.preventDefault(); const next = e.key === 'Home' ? 0 : e.key === 'End' ? 3 : (active + (e.key === 'ArrowRight' ? 1 : 3)) % 4; setActive(next); document.getElementById(`${prefix}-${channels[next].id}`)?.focus(); } }}>
         {channels.map((item, i) => <button key={item.id} type="button" role="tab" id={`${prefix}-${item.id}`} aria-selected={active === i} tabIndex={active === i ? 0 : -1} aria-controls={`${prefix}-panel`} onClick={() => setActive(i)}>{item.title}</button>)}
       </div><p>Единая цифровая основа<br />для всех каналов продаж</p>

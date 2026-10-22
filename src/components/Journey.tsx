@@ -19,6 +19,7 @@ const original = (id: string) => sitePath(`/media/recovery-original/${id}.png`);
 export function Journey() {
   const host = useRef<HTMLElement>(null);
   const [enhanced, setEnhanced] = useState(false);
+  const [layoutReady, setLayoutReady] = useState(false);
   const [reading, setReading] = useState({ active: 0, title: 0, explanation: 0 });
   const [expanded, setExpanded] = useState<string | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -27,9 +28,9 @@ export function Journey() {
   useEffect(() => {
     const node = host.current!;
     const panel = node.querySelector<HTMLElement>('.journey-cinematic')!;
-    const desktop = matchMedia('(min-width: 1100px)');
+    const desktop = matchMedia('(min-width: 1280px)');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    let enabled = false, raf = 0, disposed = false;
+    let enabled = false, raf = 0, disposed = false, fontsReady = false;
     let current = { active: -1, title: -1, explanation: -1 };
     const update = () => {
       raf = 0;
@@ -49,9 +50,9 @@ export function Journey() {
     };
     const request = () => { if (!raf && !document.hidden && enabled) raf = requestAnimationFrame(update); };
     const configure = () => {
-      if (disposed) return;
+      if (disposed || !fontsReady) return;
       cancelAnimationFrame(raf); raf = 0;
-      let fits = desktop.matches && !reduced.matches;
+      let fits = desktop.matches && innerHeight >= 680 && !reduced.matches;
       if (fits) {
         // Measure the real text and image footprint, including the longest hidden text group.
         node.dataset.measuring = 'true'; panel.hidden = false;
@@ -61,11 +62,11 @@ export function Journey() {
         const nav = panel.querySelector<HTMLElement>('.scene-navigation')!;
         const caption = panel.querySelector<HTMLElement>('.scene-caption')!;
         const css = getComputedStyle(right);
-        const needed = text.offsetHeight + 28 + Math.max(nav.scrollHeight, image.offsetHeight + caption.offsetHeight + 8) + parseFloat(css.paddingTop) + parseFloat(css.paddingBottom);
+        const needed = text.offsetHeight + parseFloat(getComputedStyle(text).marginBottom) + Math.max(nav.scrollHeight, image.offsetHeight + caption.offsetHeight + 8) + parseFloat(css.paddingTop) + parseFloat(css.paddingBottom);
         fits = needed <= innerHeight;
         delete node.dataset.measuring;
       }
-      enabled = fits; panel.hidden = !fits; setEnhanced(fits); request();
+      enabled = fits; panel.hidden = !fits; setEnhanced(fits); setLayoutReady(true); request();
     };
     const visibility = () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else request(); };
     jump.current = id => {
@@ -82,7 +83,9 @@ export function Journey() {
     }, { rootMargin: '100% 0px' });
     decode.observe(node);
     const resize = new ResizeObserver(request); resize.observe(node);
-    configure(); void document.fonts.ready.then(configure);
+    void Promise.all([400, 600, 700].map(weight => document.fonts.load(`${weight} 24px "RF Dewi Expanded"`, 'ЦифроваяЁё'))).then(() => {
+      fontsReady = true; configure(); return document.fonts.ready;
+    }).then(configure);
     desktop.addEventListener('change', configure); reduced.addEventListener('change', configure);
     window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', configure);
     window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
@@ -105,7 +108,7 @@ export function Journey() {
     event.preventDefault(); origin.current = event.currentTarget; setExpanded(id);
   };
   const expandLink = (id: string) => <a className="scene-expand" href={original(id)} onClick={event => expand(event, id)}>Развернуть изображение<span aria-hidden="true"> ↗</span></a>;
-  return <section ref={host} className="journey" data-enhanced={enhanced} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
+  return <section ref={host} className="journey" data-enhanced={layoutReady ? enhanced : 'pending'} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
     <div className="journey-static content-container" hidden={enhanced}>
       <Media name="topFacade" alt="Вертикальный фасад демонстрационного проекта" className="static-facade" />
       <nav className="static-scene-nav" aria-label="Масштаб исследования">{scenes.map((scene, index) => <a key={scene.id} href={`#${scene.id}`}>{navigation(scene, index)}</a>)}</nav>
@@ -113,7 +116,7 @@ export function Journey() {
         <div className="scene-eyebrow">{scene.eyebrow}</div><h2>{heading(scene)}</h2><p>{scene.body}</p><Media name={scene.media} alt={scene.alt} /><div className="scene-caption"><small>{disclaimer}</small>{expandLink(scene.id)}</div>
       </article>)}
     </div>
-    <div className="journey-cinematic" hidden={!enhanced}>
+    <div className="journey-cinematic" hidden={layoutReady && !enhanced}>
       <div className="journey-grid">
         <div className="cinematic-facade"><Media name="topFacade" alt="Постоянный вертикальный фасад проекта" /></div>
         <div className="journey-right">

@@ -3,14 +3,18 @@ import App from '../components/App';
 import { sitePath } from '../lib/paths';
 import '../styles/site.css';
 import '../styles/top-screens.css';
-import dewiRegular from '../assets/fonts/rf-dewi-regular.woff2?url';
+import '../styles/twin-type-and-layout.css';
+import dewiRegular from '../assets/fonts/RFDewiExpanded-Regular.ttf?url';
+import dewiSemibold from '../assets/fonts/RFDewiExpanded-Semibold.ttf?url';
 import interTight from '../assets/fonts/inter-tight-variable.woff2?url';
 ---
 <!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preload" href={dewiRegular} as="font" type="font/woff2" crossorigin />
+    <script is:inline>document.documentElement.classList.add('has-js');</script>
+    <link rel="preload" href={dewiRegular} as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href={dewiSemibold} as="font" type="font/ttf" crossorigin />
     <link rel="preload" href={interTight} as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Twin — цифровая инфраструктура продаж девелоперского проекта. Коммерческий цифровой двойник и единая основа для всех каналов продаж." />

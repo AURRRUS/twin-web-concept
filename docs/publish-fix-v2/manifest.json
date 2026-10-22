@@ -1,0 +1,194 @@
+{
+  "package": "TWIN_PUBLISH_FIX_v2_2026-10-21",
+  "scope": "Twin only",
+  "assets": [
+    {
+      "role": "facade",
+      "path": "assets/12 ти этажный корпус.png",
+      "width": 1024,
+      "height": 1536,
+      "baked_interface": false
+    },
+    {
+      "role": "hero",
+      "path": "assets/Вид побережье.png",
+      "width": 2574,
+      "height": 1459,
+      "baked_interface": false
+    },
+    {
+      "role": "lot",
+      "path": "assets/План этажа 12 ти этажного корпуса.png",
+      "width": 1672,
+      "height": 941,
+      "baked_interface": true
+    },
+    {
+      "role": "space",
+      "path": "assets/Роскошный апартамент с видом на море.png",
+      "width": 1671,
+      "height": 941,
+      "baked_interface": true
+    },
+    {
+      "role": "project",
+      "path": "assets/Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "width": 1671,
+      "height": 941,
+      "baked_interface": true
+    }
+  ],
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 3220,
+      "sha256": "4add771ffba46efd4b67cf548d5d892bc68647a21d36183d6f9a7d9167d22019"
+    },
+    {
+      "path": "01_OWNER_RULES.md",
+      "bytes": 3991,
+      "sha256": "6a404b17c8eb1d1d784b22b3e8f60dc2c3dcf7a54bb627c53556c61386273a6a"
+    },
+    {
+      "path": "02_TYPE_AND_LAYOUT.md",
+      "bytes": 11921,
+      "sha256": "714a6e6b4cd67adf92ce73189f543cf9d2e3898dcb395e8356aa821abe9b0bb6"
+    },
+    {
+      "path": "03_CONTENT.json",
+      "bytes": 4464,
+      "sha256": "1c22b082b8e109e7cd6783394532eef0967b865c27e04e628710ee3da36ba0f9"
+    },
+    {
+      "path": "04_MOTION.md",
+      "bytes": 5143,
+      "sha256": "b08a946a28a0f8fcd94e0376afb0f379435638a6f49cb5b0d01968d70d2f7eb7"
+    },
+    {
+      "path": "05_PUBLISH_AND_CHECK.md",
+      "bytes": 7118,
+      "sha256": "a43942f131c80da3264892ac90a231f985271a350b5732c434cf8c8c78fc479c"
+    },
+    {
+      "path": "06_EMBEDDED_WORKFLOW.md",
+      "bytes": 2138,
+      "sha256": "3281bba3ec146420752665be4b4c1fab4f4c7cf2d7abe583ca0b362a5e4473ef"
+    },
+    {
+      "path": "07_OBSERVED_CAUSE.md",
+      "bytes": 2700,
+      "sha256": "47c35c10b86a3112c1b1db7d508613d3bceadb8cacc945c24172fc44f68948c9"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 4259,
+      "sha256": "8c58127e896df67fa0f88605b675292dc231b15347124adda25ec720120c2b1a"
+    },
+    {
+      "path": "PROMPT_FOR_CODEX.txt",
+      "bytes": 2625,
+      "sha256": "20b0a9593f1b4d88d71c9c4127399d7637b425c085c6163bd7806033c1c8f993"
+    },
+    {
+      "path": "assets/12 ти этажный корпус.png",
+      "bytes": 3307034,
+      "sha256": "ccb1538b45f2656560c3bf183e2793e4c976c25c67602a29f0878400b1a98acd"
+    },
+    {
+      "path": "assets/Вид побережье.png",
+      "bytes": 5090265,
+      "sha256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05"
+    },
+    {
+      "path": "assets/План этажа 12 ти этажного корпуса.png",
+      "bytes": 2730797,
+      "sha256": "59f97a809c9d9fba23cc424377e423b067d5de4d7856d2e01076fc0cfca07741"
+    },
+    {
+      "path": "assets/Роскошный апартамент с видом на море.png",
+      "bytes": 2364052,
+      "sha256": "5bdd4da7e6a2d8913c92e0e103ff129837580a459ee3d30696b01dbf0839731a"
+    },
+    {
+      "path": "assets/Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "bytes": 3260940,
+      "sha256": "434c2a7c46c768bb1d0a7653a89fcf9734ccfa227e13d7a4e310594489c66efc"
+    },
+    {
+      "path": "implementation/HeaderHero.patch.md",
+      "bytes": 1798,
+      "sha256": "defc81a800cdcf3299cae42a2d0fa594f92379891e3e2950ec5a7fce707be9b4"
+    },
+    {
+      "path": "implementation/assert-twin-type.mjs",
+      "bytes": 2375,
+      "sha256": "8784848dadf3ff26691962b35a9ab15359013cd7bc60cfbcc2bae2f5d7c3ea14"
+    },
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Bold.ttf",
+      "bytes": 84760,
+      "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+    },
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Regular.ttf",
+      "bytes": 85596,
+      "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+    },
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Semibold.ttf",
+      "bytes": 85372,
+      "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+    },
+    {
+      "path": "implementation/fonts/inter-tight-variable.woff2",
+      "bytes": 232868,
+      "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b"
+    },
+    {
+      "path": "implementation/twin-type-and-layout.css",
+      "bytes": 7951,
+      "sha256": "8a27dd00ca133eefff580c375d195357f9a73b9cc5163629e397f393ff14b9a3"
+    },
+    {
+      "path": "reference/TWIN_EXPECTED_LEVEL.png",
+      "bytes": 2946164,
+      "sha256": "b12bbbb03202cb4844f33b3a15b7f440f5172c936a600e1e3c0deb7be6e38ab6"
+    }
+  ],
+  "supersedes": [
+    "TWIN_EXECUTION_LOCK_2026-10-21",
+    "TWIN_VISUAL_RECOVERY_2026-10-21",
+    "TWIN_TOP_SCREENS_v2",
+    "TWIN_TOP_SCREENS_v2_1"
+  ],
+  "font_family": "RF Dewi Expanded",
+  "publication_authorized": true,
+  "heading_terminal_full_stops": false,
+  "hero_light_overlay": false,
+  "fonts": [
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Bold.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 700,
+      "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+    },
+    {
+      "path": "implementation/fonts/inter-tight-variable.woff2",
+      "family": "Inter Tight",
+      "weight": "100 900 (existing project font-face declaration)",
+      "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b"
+    },
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Semibold.ttf",
+      "family": "RF Dewi Expanded Semibold",
+      "weight": 600,
+      "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+    },
+    {
+      "path": "implementation/fonts/RFDewiExpanded-Regular.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 400,
+      "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export function ProductDemo({ selection, onChange, full = false }: { selection: 
   const selectLot = () => onChange({ ...selection, lotId: fixture.lotId });
   const chooseView = (view: Selection['view']) => onChange({ ...selection, view });
   return <section className={`product section ${full ? 'full-demo' : ''}`} id="product" aria-labelledby={`${id}-title`}>
-    <div className="section-heading"><div><span className="eyebrow">TWIN В РАБОТЕ</span>{full ? <h1 id={`${id}-title`}>Исследуйте проект.<br />Рассмотрите конкретный лот.</h1> : <h2 id={`${id}-title`}>Исследуйте проект.<br />Рассмотрите конкретный лот.</h2>}</div>
+    <div className="section-heading"><div><span className="eyebrow">TWIN В РАБОТЕ</span>{full ? <h1 id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h1> : <h2 id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h2>}</div>
       <button className="text-link" onClick={() => onChange({ ...selection, buildingId: null, floorId: null, lotId: null })}><Icon name="arrow" className="back-arrow" />Вернуться к проекту</button></div>
     <p className="demo-label"><span className="status-dot" />Демонстрационный интерфейс · один корпус, один этаж, один лот</p>
     {full && <div className="viewer-notice"><strong>Настоящий Twin пока не подключён.</strong><p>Здесь можно проверить пример выбора и материалы лота. Изображения иллюстративные; цены и наличие не предоставлены.</p><a className="text-link" href="#demo-catalog">Перейти к доступному примеру ↓</a></div>}

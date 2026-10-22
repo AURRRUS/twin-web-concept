@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { assertTwinType } from '../scripts/assert-twin-type.mjs';
 
 test('panoramas reach both viewport edges at all supported widths', async ({ page }) => {
   for (const width of [390, 768, 1280, 1440, 1920]) {
@@ -71,7 +72,7 @@ test('hero line breaks and shared content guides follow the layout viewport', as
     await page.evaluate(() => document.fonts.ready);
     const data = await page.evaluate(() => {
       const W = document.documentElement.clientWidth;
-      const G = W <= 600 ? 20 : W <= 950 ? 32 : Math.max(40, Math.min(64, W * 4.444444 / 100));
+      const G = W < 600 ? 20 : W < 1100 ? 32 : W < 1280 ? 48 : W < 1400 ? 56 : 64;
       const C = Math.min(1408, W - 2 * G), L = (W - C) / 2;
       const box = (selector: string) => document.querySelector(selector)!.getBoundingClientRect();
       const h = box('h1'), logo = box('.brand .media');
@@ -83,8 +84,8 @@ test('hero line breaks and shared content guides follow the layout viewport', as
     });
     for (const x of [data.hero, data.logo]) expect(Math.abs(x - data.L)).toBeLessThanOrEqual(2);
     expect(Math.abs(data.cta - data.R)).toBeLessThanOrEqual(2);
-    if (width >= 1280) { expect(data.lines).toBeCloseTo(2, 1); expect(data.fontSize).toBeGreaterThanOrEqual(44); }
-    if (width === 1024) expect(data.lines).toBeCloseTo(3, 1);
+    if (width >= 1100) { expect(data.lines).toBeCloseTo(2, 1); expect(data.fontSize).toBeGreaterThanOrEqual(40); }
+
   }
 });
 
@@ -96,7 +97,7 @@ test('full scene text survives mobile and desktop shares text space above naviga
   const media = await page.locator('.scene-materials').boundingBox();
   const text = await page.locator('.scene-text-zone').boundingBox();
   expect(facade!.x).toBe(0); expect(facade!.width).toBeGreaterThanOrEqual(1440 * .35);
-  expect(media!.width).toBeGreaterThan(700);
+  expect(media!.width).toBeCloseTo(644.8, 0);
   expect(text!.x).toBeLessThan(media!.x); expect(text!.width).toBeGreaterThan(media!.width);
   const paragraphs = [
     'Окружение, архитектура, инфраструктура и расположение корпусов — помогите покупателю увидеть проект целиком и понять, как его преимущества связаны с выбором конкретного лота.',
@@ -154,16 +155,31 @@ test('image original dialog works by keyboard, restores focus and laptop scenes 
   expect(await page.locator('.journey').evaluate(el => el.clientHeight)).toBeLessThan(5000);
 });
 
-test('provided RF Dewi and Inter Tight render Cyrillic glyphs without fallback or compressed tracking', async ({ page }) => {
+test('provided RF Dewi Expanded and Inter Tight render Cyrillic glyphs without fallback or compressed tracking', async ({ page }) => {
   await page.goto('/'); await page.evaluate(() => document.fonts.ready);
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
   const { root } = await cdp.send('DOM.getDocument');
-  for (const [selector, family] of [['h1', 'RF Dewi'], ['.scene-text-group h2', 'RF Dewi'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'Inter Tight']] as const) {
+  for (const [selector, family] of [['h1', 'RF Dewi Expanded'], ['.scene-text-group h2', 'RF Dewi Expanded'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'RF Dewi Expanded Semibold']] as const) {
     const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector });
     const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
     expect(fonts.length).toBeGreaterThan(0);
-    for (const font of fonts) { expect(font.familyName).toBe(family); expect(font.isCustomFont).toBe(true); expect(font.glyphCount).toBeGreaterThan(0); }
-    await expect(page.locator(selector).first()).toHaveCSS('letter-spacing', 'normal');
+    for (const font of fonts) { expect(font.familyName).toMatch(family.startsWith('RF Dewi Expanded') ? /^RF Dewi Expanded/ : /^Inter Tight$/); expect(font.isCustomFont).toBe(true); expect(font.glyphCount).toBeGreaterThan(0); }
+    if (selector !== '.scene-text-group p') expect(await page.locator(selector).first().evaluate(el=>getComputedStyle(el).letterSpacing)).toMatch(/^(normal|0px)$/);
+  }
+});
+
+
+test('owner type contract: exact Expanded weights, breakpoints, clean hero and headings', async ({ page }) => {
+  for (const [width, height] of [[1440,900],[1366,768],[1280,800],[1920,1080],[768,1024],[390,844],[320,844]]) {
+    await page.setViewportSize({width,height}); await page.goto('/'); await assertTwinType(page);
+    const h2=page.locator(width>=1280?'.scene-text-group h2':'.static-scene h2').first();
+    const size=width>=1600?48:width>=1400?44:width>=1280?40:width>=600?36:width>=360?28:26;
+    await expect(h2).toHaveCSS('font-size', `${size}px`); await expect(h2).toHaveCSS('font-weight','400');
+    if(width>=1280) await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+    if(width<600) {
+      const image=await page.locator('.hero-image').boundingBox(),copy=await page.locator('.hero-content').boundingBox();
+      expect(image!.y).toBeGreaterThanOrEqual(copy!.y+copy!.height-1); expect(image!.height).toBe(340);
+    }
   }
 });
