@@ -4,9 +4,9 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Текущие исходники — `codex/twin-craft-pass`, продолжение опубликованного `a81a2a4`.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Текущие исходники — `codex/twin-motion-v4`, продолжение опубликованного `84fda42`.
 
-Актуальная задача — [TWIN_CRAFT_PASS_2026-10-22](docs/craft-pass/00_EXECUTE.md): Expanded Regular400 в H1, полная структура навигации, hero100svh, обновлённые CTA и каскад сцен, единые появления нижних секций. Публикация этой правки прямо разрешена владельцем; опубликованный исходный commit проверяется по `build-version.json`.
+Актуальная задача — [TWIN_MOTION_V4_2026-10-22](docs/motion-v4/00_EXECUTE.md): двухстрочный hero, крупнее медиа Journey и бронзовый выбор, scroll-сцена треугольника со вставкой «ив», разные появления по ролям. Официальные Expanded400/600/700 и Inter Tight сохранены. Публикация этой правки прямо разрешена владельцем; опубликованный исходный commit проверяется по `build-version.json`.
 
 Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
@@ -73,7 +73,7 @@ npm test
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-craft-pass
+git push origin codex/twin-motion-v4
 npm run build:preview
 npm run publish:preview
 ```

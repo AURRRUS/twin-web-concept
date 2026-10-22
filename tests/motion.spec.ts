@@ -97,7 +97,7 @@ test('full scene text survives mobile and desktop shares text space above naviga
   const media = await page.locator('.scene-materials').boundingBox();
   const text = await page.locator('.scene-text-zone').boundingBox();
   expect(facade!.x).toBe(0); expect(facade!.width).toBeGreaterThanOrEqual(1440 * .35);
-  expect(media!.width).toBeCloseTo(644.8, 0);
+  expect(media!.width).toBeCloseTo(720, 0);
   expect(text!.x).toBeLessThan(media!.x); expect(text!.width).toBeGreaterThan(media!.width);
   const paragraphs = [
     'Окружение, архитектура, инфраструктура и расположение корпусов — помогите покупателю увидеть проект целиком и понять, как его преимущества связаны с выбором конкретного лота.',
@@ -195,7 +195,7 @@ test('craft hero CTA, full height and separated navigation geometry', async ({ p
     await expect(page.locator('.header-cta')).toHaveText('Обсудить проект');
     await expect(page.locator('.header-cta')).toHaveAttribute('href', '/#contact');
     await expect(page.locator('.hero .actions a')).toHaveCount(1);
-    await expect(page.locator('.hero-channel-line')).toHaveCSS('display','block');
+    await expect(page.locator('.hero-subtitle-row').last()).toHaveCSS('white-space','nowrap');
     const media = (await page.locator('.scene-materials').boundingBox())!;
     for (const button of await page.locator('.scene-navigation button').all()) {
       const title=button.locator('strong'), description=button.locator('.scene-nav-description');
