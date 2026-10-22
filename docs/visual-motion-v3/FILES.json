@@ -1,0 +1,122 @@
+[
+  {
+    "file": "00_EXECUTE.md",
+    "bytes": 4612,
+    "sha256": "667793d65733301538afa1a39ce80963c5ae6d8ea71cb90a4d5ce8d21e85952f"
+  },
+  {
+    "file": "01_VISUAL.md",
+    "bytes": 8745,
+    "sha256": "318e46df255a859441e74356add942b98873dc172ed9ce1a909c1b857c4611e3"
+  },
+  {
+    "file": "02_CONTENT.json",
+    "bytes": 5325,
+    "sha256": "46861e033c9fe5dca1ffe2c4395660afaa8221c6a894cc15447e8aeb48290c2f"
+  },
+  {
+    "file": "03_MOTION.md",
+    "bytes": 9308,
+    "sha256": "73ed7ef880b5fbe74ca8b12c1eb919930196cfdecfead567ee54db826a5aa993"
+  },
+  {
+    "file": "04_ACCEPTANCE.md",
+    "bytes": 4741,
+    "sha256": "87a05b8754628ff5273aa85f74f653db4ea6f3e439f21fa9b66a9e1a925c9abc"
+  },
+  {
+    "file": "PROMPT.txt",
+    "bytes": 1963,
+    "sha256": "c088b69b2bcc70c258fd720cbb9f2a7a13163d2a4298e20b1fae6362ef720b8c"
+  },
+  {
+    "file": "TEST_REPORT.json",
+    "bytes": 701,
+    "sha256": "8c18b9625e8906dcf1c59fe3dd447918d5648462a92f3931f949670f43b53581"
+  },
+  {
+    "file": "assets/facade.png",
+    "bytes": 3307034,
+    "sha256": "ccb1538b45f2656560c3bf183e2793e4c976c25c67602a29f0878400b1a98acd"
+  },
+  {
+    "file": "assets/hero.png",
+    "bytes": 5090265,
+    "sha256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05"
+  },
+  {
+    "file": "assets/lot.png",
+    "bytes": 2730797,
+    "sha256": "59f97a809c9d9fba23cc424377e423b067d5de4d7856d2e01076fc0cfca07741"
+  },
+  {
+    "file": "assets/project.png",
+    "bytes": 3260940,
+    "sha256": "434c2a7c46c768bb1d0a7653a89fcf9734ccfa227e13d7a4e310594489c66efc"
+  },
+  {
+    "file": "assets/space.png",
+    "bytes": 2364052,
+    "sha256": "5bdd4da7e6a2d8913c92e0e103ff129837580a459ee3d30696b01dbf0839731a"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Black.ttf",
+    "bytes": 84188,
+    "sha256": "0e1a5c76340ffb4071bf738f38dc0003a8c7fe08a10adb4d54bfa40eb2550cd6"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Bold.ttf",
+    "bytes": 84760,
+    "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Regular.ttf",
+    "bytes": 85596,
+    "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Semibold.ttf",
+    "bytes": 85372,
+    "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+  },
+  {
+    "file": "fonts/inter-tight-variable.woff2",
+    "bytes": 232868,
+    "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b"
+  },
+  {
+    "file": "implementation/check-journey.mjs",
+    "bytes": 1385,
+    "sha256": "3e87b4996d32ce27840d05116e5361fcce1f1abbf5af832022fc47f88949532a"
+  },
+  {
+    "file": "implementation/journeyFrameV3.d.mts",
+    "bytes": 531,
+    "sha256": "ac53619bbfb7ca1298316547f405d6053c26a77f915f4d41502c4b1ec464ab48"
+  },
+  {
+    "file": "implementation/journeyFrameV3.mjs",
+    "bytes": 2168,
+    "sha256": "b13cafd09257d17fcbc31acfbbdccece2cc69b59c6e6d13378ee49dc9e4d7248"
+  },
+  {
+    "file": "references/REAL_FONT_COMPARISON.png",
+    "bytes": 84209,
+    "sha256": "ea621691e37e511024f0cc379144f90ac2c467d3f90c1f74ba63c9bbbbcfb22c"
+  },
+  {
+    "file": "references/font-metrics.json",
+    "bytes": 551,
+    "sha256": "337050ece1b02cde9c10f29991ef5fea7f68b2fa9c473008af1d54508af060c3"
+  },
+  {
+    "file": "references/journey-composition.png",
+    "bytes": 2613414,
+    "sha256": "dad26932a129b3ca675763f9eb3b32ed21d94bf2df2f8ed178ba5ad3934d2397"
+  },
+  {
+    "file": "references/triangle-direction.png",
+    "bytes": 1659322,
+    "sha256": "df2b167112fe410b9f8ebd44fdc5d0d83854c2b81c864b96967f41ea495f9f79"
+  }
+]

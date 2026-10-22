@@ -23,7 +23,7 @@ export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
    if(fits)render();else {node.removeAttribute('style');delete node.dataset.progress;delete node.dataset.word;labels.forEach(l=>l.textContent='Эффективно');lastLabel='';}
   };
   const visibility=()=>{cancelAnimationFrame(raf);raf=0;if(!document.hidden)render();};
-  void Promise.all([400,600,700].map(w=>document.fonts.load(`${w} 24px "Twin Dewi Expanded"`,'Эффективно'))).then(()=>document.fonts.ready).then(()=>{ready=true;configure();});
+  void Promise.all([400,600,700,900].map(w=>document.fonts.load(`${w} 24px "Twin Dewi Expanded"`,'Эффективно'))).then(()=>document.fonts.ready).then(()=>{ready=true;configure();});
   const focus=()=>{for(const key of ['lead','answer','qualities','model','facts','proof'])node.style.setProperty(`--delivery-${key}`,'1');};
   desktop.addEventListener('change',configure);reduced.addEventListener('change',configure);window.addEventListener('resize',configure);window.addEventListener('scroll',request,{passive:true});document.addEventListener('visibilitychange',visibility);node.addEventListener('focusin',focus);
   return()=>{disposed=true;cancelAnimationFrame(raf);desktop.removeEventListener('change',configure);reduced.removeEventListener('change',configure);window.removeEventListener('resize',configure);window.removeEventListener('scroll',request);document.removeEventListener('visibilitychange',visibility);node.removeEventListener('focusin',focus);};

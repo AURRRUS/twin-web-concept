@@ -1,33 +1,35 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "4e92edd1a1d98f5a1bcbe04ad1a8380537841cb9",
+  "expectedSourceCommit": "6c1a3472054839b5b19665f23ca91fcf533ee874",
   "status": "PASS",
-  "checkedAt": "2026-10-22T22:41:18.709Z",
+  "checkedAt": "2026-10-22T23:35:18.224Z",
   "checks": [
     "Exact published source commit confirmed",
     "Five original-role optimized assets match source hashes",
-    "True Expanded700 heading,400 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
+    "True Expanded Black900 headings,600 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
     "Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes",
     "Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking",
+    "28 actual DOM samples: complementary title/body opacity, no residual clip, base image and stable z-order; Black60 first-line geometry confirmed",
+    "Actual triangle edge/fact/model/proof/insertion phases and holds verified forwards and backwards, with unchanged420svh host",
     "Triangle qualities, fixed numbers, one real demo proof link, no capsules/fake Play; measured reversible iv insertion",
     "Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work",
-    "Published1920/1440/1280/1024/768/390/360/320 widths, full text and native mobile flow",
+    "Published1920×1080/1440×900/1366×768/1280×720/1024×768/768×1024/390×844/360×740/320×844, full text and native mobile flow",
     "Reduced motion retains desktop columns, manual scene buttons and final word"
   ],
   "pageErrors": [],
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "4e92edd1a1d98f5a1bcbe04ad1a8380537841cb9",
-    "builtAt": "2026-10-22T22:40:58.152Z",
-    "previousDeploymentCommit": "678e16de5c079bea8f7f564afa2b4e46fdcb0a63"
+    "sourceCommit": "6c1a3472054839b5b19665f23ca91fcf533ee874",
+    "builtAt": "2026-10-22T23:32:31.907Z",
+    "previousDeploymentCommit": "7c08c16562805773334349b6a82d12c53efa6fb3"
   },
   "typography": {
     "width": 1440,
     "family": "Twin Dewi Expanded",
-    "weight": "700",
-    "size": 44,
-    "leading": 51.92,
+    "weight": "900",
+    "size": 48,
+    "leading": 54.72,
     "tracking": 0,
     "wash": false,
     "headings": [
@@ -74,6 +76,10 @@
       {
         "weight": "700",
         "status": "loaded"
+      },
+      {
+        "weight": "900",
+        "status": "loaded"
       }
     ],
     "overflow": false
@@ -87,9 +93,9 @@
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 44,
-        "leading": 51.92,
+        "weight": 900,
+        "size": 48,
+        "leading": 54.72,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -98,9 +104,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -108,9 +114,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -118,9 +124,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -128,9 +134,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
           "tracking": 0,
           "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
@@ -138,9 +144,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -148,9 +154,9 @@
         {
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 60,
+          "leading": 68.4,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -161,9 +167,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -171,9 +177,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -183,7 +189,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -193,7 +199,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -203,7 +209,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -213,7 +219,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -223,7 +229,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -233,7 +239,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -243,19 +249,91 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 27,
+          "leading": 35.1,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 40,
+          "leading": 48,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
           "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "leading": 27,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -265,7 +343,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -296,20 +374,20 @@
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 56,
-        "leading": 66.08,
+        "weight": 900,
+        "size": 60,
+        "leading": 68.4,
         "tracking": 0,
-        "transform": "none",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0316338)",
         "synthesis": "none"
       },
       "h2": [
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -317,9 +395,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -327,9 +405,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -337,9 +415,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
@@ -347,9 +425,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -357,9 +435,9 @@
         {
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 46,
-          "leading": 56.12,
+          "weight": 900,
+          "size": 72,
+          "leading": 82.08,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -370,20 +448,20 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 20,
-          "leading": 31,
-          "tracking": 0.2,
-          "transform": "none",
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.855226)",
           "synthesis": "none"
         },
         {
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 20,
-          "leading": 31,
-          "tracking": 0.2,
-          "transform": "none",
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 3.78645)",
           "synthesis": "none"
         },
         {
@@ -392,7 +470,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -402,7 +480,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -412,7 +490,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -422,7 +500,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -432,7 +510,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -442,7 +520,7 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -452,19 +530,91 @@
           "weight": 450,
           "size": 20,
           "leading": 31,
-          "tracking": 0.2,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0.22,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 25.5,
+          "tracking": 0.255,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 32,
+          "leading": 41.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 48,
+          "leading": 57.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -472,9 +622,9 @@
           "selector": ".launch-steps p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 16,
-          "leading": 24.8,
-          "tracking": 0.16,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
@@ -499,26 +649,26 @@
     },
     {
       "viewport": {
-        "width": 1440,
-        "height": 800
+        "width": 1366,
+        "height": 768
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 44,
-        "leading": 51.92,
+        "weight": 900,
+        "size": 46.15,
+        "leading": 52.611,
         "tracking": 0,
-        "transform": "none",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0436955)",
         "synthesis": "none"
       },
       "h2": [
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -526,9 +676,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -536,9 +686,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -546,19 +696,19 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transform": "none",
           "synthesis": "none"
         },
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -566,9 +716,9 @@
         {
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 46.36,
+          "weight": 900,
+          "size": 58.15,
+          "leading": 66.291,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -579,20 +729,20 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
-          "transform": "none",
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.03279)",
           "synthesis": "none"
         },
         {
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
-          "transform": "none",
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 4.45995)",
           "synthesis": "none"
         },
         {
@@ -601,7 +751,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -611,7 +761,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -621,7 +771,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -631,7 +781,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -641,7 +791,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -651,7 +801,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -661,19 +811,91 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.2292,
+          "leading": 34.0979,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7667,
+          "leading": 46.52,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
           "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "leading": 27,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -683,7 +905,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -694,9 +916,9 @@
         "staticVisible": false
       },
       "triangle": {
-        "active": true,
-        "host": 3360,
-        "panel": 800
+        "active": false,
+        "host": 759.375,
+        "panel": 759.375
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -709,14 +931,14 @@
     {
       "viewport": {
         "width": 1280,
-        "height": 800
+        "height": 720
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 40,
-        "leading": 47.2,
+        "weight": 900,
+        "size": 44,
+        "leading": 50.16,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -725,9 +947,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -735,9 +957,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -745,9 +967,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -755,19 +977,19 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
           "tracking": 0,
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transform": "none",
           "synthesis": "none"
         },
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -775,9 +997,9 @@
         {
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 35.3333,
-          "leading": 43.1067,
+          "weight": 900,
+          "size": 56,
+          "leading": 63.84,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -788,20 +1010,20 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
-          "transform": "none",
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.000124253)",
           "synthesis": "none"
         },
         {
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
-          "transform": "none",
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0406713)",
           "synthesis": "none"
         },
         {
@@ -810,7 +1032,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -820,7 +1042,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -830,7 +1052,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -840,7 +1062,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -850,7 +1072,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -860,7 +1082,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -870,19 +1092,91 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 25.3333,
+          "leading": 32.9333,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 45.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
           "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "leading": 27,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -892,20 +1186,20 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
       },
       "journey": {
         "layout": "desktop",
-        "motion": "true",
+        "motion": "false",
         "staticVisible": false
       },
       "triangle": {
-        "active": true,
-        "host": 3360,
-        "panel": 800
+        "active": false,
+        "host": 748.953125,
+        "panel": 748.953125
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -918,14 +1212,14 @@
     {
       "viewport": {
         "width": 1024,
-        "height": 900
+        "height": 768
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 38,
-        "leading": 44.84,
+        "weight": 900,
+        "size": 40,
+        "leading": 45.6,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -934,9 +1228,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 42,
+          "leading": 48.72,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -944,9 +1238,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 42,
+          "leading": 48.72,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -954,9 +1248,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 42,
+          "leading": 48.72,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -964,9 +1258,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 42,
+          "leading": 48.72,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -974,9 +1268,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 42,
+          "leading": 48.72,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -984,9 +1278,9 @@
         {
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 36,
+          "leading": 41.04,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -997,9 +1291,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1007,9 +1301,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1019,7 +1313,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -1029,7 +1323,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1039,7 +1333,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1049,7 +1343,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1059,7 +1353,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1069,7 +1363,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1079,19 +1373,91 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 25,
+          "leading": 32.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 45.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
           "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "leading": 27,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1101,7 +1467,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -1113,8 +1479,8 @@
       },
       "triangle": {
         "active": false,
-        "host": 1278.578125,
-        "panel": 1278.578125
+        "host": 1301.359375,
+        "panel": 1301.359375
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1127,14 +1493,14 @@
     {
       "viewport": {
         "width": 768,
-        "height": 900
+        "height": 1024
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 38,
-        "leading": 44.84,
+        "weight": 900,
+        "size": 40,
+        "leading": 45.6,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -1143,9 +1509,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 43.1257,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1153,9 +1519,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 43.1257,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1163,9 +1529,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 43.1257,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1173,9 +1539,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 43.1257,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1183,9 +1549,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 43.1257,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1193,9 +1559,9 @@
         {
           "selector": ".static-scene h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 32,
-          "leading": 39.04,
+          "weight": 900,
+          "size": 37.1773,
+          "leading": 42.3821,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1206,9 +1572,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1216,9 +1582,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.18,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1228,7 +1594,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1238,7 +1604,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1248,7 +1614,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1258,7 +1624,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1268,7 +1634,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1278,7 +1644,7 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1288,19 +1654,91 @@
           "weight": 450,
           "size": 18,
           "leading": 27.9,
-          "tracking": 0.18,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 25,
+          "leading": 32.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 45.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
           "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "leading": 27,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1310,7 +1748,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -1322,8 +1760,8 @@
       },
       "triangle": {
         "active": false,
-        "host": 1278.578125,
-        "panel": 1278.578125
+        "host": 1338.859375,
+        "panel": 1338.859375
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1341,9 +1779,9 @@
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 29,
-        "leading": 34.22,
+        "weight": 900,
+        "size": 30,
+        "leading": 34.2,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -1352,9 +1790,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1362,9 +1800,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1372,9 +1810,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1382,9 +1820,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1392,9 +1830,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1402,9 +1840,9 @@
         {
           "selector": ".static-scene h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.06,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1415,9 +1853,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1425,9 +1863,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1437,7 +1875,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1447,7 +1885,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1457,7 +1895,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1467,7 +1905,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1477,7 +1915,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1487,7 +1925,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1497,19 +1935,91 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 15,
+          "leading": 22.5,
+          "tracking": 0.225,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 21,
+          "leading": 27.3,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 34,
+          "leading": 40.8,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1519,7 +2029,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -1531,8 +2041,8 @@
       },
       "triangle": {
         "active": false,
-        "host": 1257.0625,
-        "panel": 1257.0625
+        "host": 1276.71875,
+        "panel": 1276.71875
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1545,14 +2055,14 @@
     {
       "viewport": {
         "width": 360,
-        "height": 844
+        "height": 740
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
-        "size": 29,
-        "leading": 34.22,
+        "weight": 900,
+        "size": 26,
+        "leading": 29.64,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -1561,9 +2071,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1571,9 +2081,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1581,9 +2091,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1591,9 +2101,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1601,9 +2111,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.64,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1611,9 +2121,9 @@
         {
           "selector": ".static-scene h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 27,
-          "leading": 32.94,
+          "weight": 900,
+          "size": 29,
+          "leading": 33.06,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1624,9 +2134,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1634,9 +2144,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1646,7 +2156,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1656,7 +2166,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1666,7 +2176,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1676,7 +2186,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1686,7 +2196,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1696,7 +2206,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1706,19 +2216,91 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 15,
+          "leading": 22.5,
+          "tracking": 0.225,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 21,
+          "leading": 27.3,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 34,
+          "leading": 40.8,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1728,7 +2310,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -1740,8 +2322,8 @@
       },
       "triangle": {
         "active": false,
-        "host": 1285.859375,
-        "panel": 1285.859375
+        "host": 1310.34375,
+        "panel": 1310.34375
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1759,9 +2341,9 @@
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 700,
+        "weight": 900,
         "size": 25,
-        "leading": 29.5,
+        "leading": 28.5,
         "tracking": 0,
         "transform": "none",
         "synthesis": "none"
@@ -1770,9 +2352,9 @@
         {
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 31.32,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1780,9 +2362,9 @@
         {
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 31.32,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1790,9 +2372,9 @@
         {
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 31.32,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1800,9 +2382,9 @@
         {
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 31.32,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1810,9 +2392,9 @@
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 31.32,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1820,9 +2402,9 @@
         {
           "selector": ".static-scene h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 25,
-          "leading": 30.5,
+          "weight": 900,
+          "size": 27,
+          "leading": 30.78,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1833,9 +2415,9 @@
           "selector": ".hero-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1843,9 +2425,9 @@
           "selector": ".hero-channels",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.17,
+          "size": 18,
+          "leading": 27,
+          "tracking": 0.27,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1855,7 +2437,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1865,7 +2447,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1875,7 +2457,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1885,7 +2467,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1895,7 +2477,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1905,7 +2487,7 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1915,19 +2497,91 @@
           "weight": 450,
           "size": 17,
           "leading": 26.35,
-          "tracking": 0.17,
+          "tracking": 0.255,
           "transform": "none",
           "synthesis": "none"
         }
       ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 15,
+          "leading": 22.5,
+          "tracking": 0.225,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 21,
+          "leading": 27.3,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 34,
+          "leading": 40.8,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
       "steps": {
         "heading": {
           "selector": ".launch-steps h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 25,
-          "tracking": 0.2,
+          "size": 19,
+          "leading": 25.65,
+          "tracking": 0,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1937,7 +2591,7 @@
           "weight": 450,
           "size": 16,
           "leading": 24.8,
-          "tracking": 0.16,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         }
@@ -1949,8 +2603,8 @@
       },
       "triangle": {
         "active": false,
-        "host": 1302.671875,
-        "panel": 1302.671875
+        "host": 1354.53125,
+        "panel": 1354.53125
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1959,6 +2613,2157 @@
         "formShadow": "none",
         "formBorder": "0px"
       }
+    }
+  ],
+  "journeySamples": [
+    {
+      "progress": 0.20597560009464733,
+      "title": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 18)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.22301085315933847,
+      "title": [
+        {
+          "opacity": 0.983856,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.129155)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0161444,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 17.7094)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.2360625564562079,
+      "title": [
+        {
+          "opacity": 0.645747,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -2.83403)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.354254,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.6234)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.28000964653797794,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0.985368,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.0877929)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0146322,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.8244)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.3090037507083742,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0.521342,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -2.87195)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.478658,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 6.25611)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.37901044094477304,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0.815031,
+          "clip": "none",
+          "transform": "matrix(1.06371, 0, 0, 1.06371, 0, -38.2248)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.43903848433386305,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60379)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6040533356576132,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 18)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6230490441857619,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.983455,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.132364)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0165454,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 17.7022)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6360648714772095,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.645663,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -2.8347)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.354337,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.6219)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6800058412295374,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.98539,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.0876629)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0146105,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.8247)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.7090301503434833,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.520777,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -2.87534)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.479223,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 6.24933)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.7790110626828898,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0.815049,
+          "clip": "none",
+          "transform": "matrix(1.06371, 0, 0, 1.06371, 0, -38.2244)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.8390381981178532,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60387)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.8390381981178532,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60387)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.780916688202173,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0.86872,
+          "clip": "none",
+          "transform": "matrix(1.06179, 0, 0, 1.06179, 0, -37.0728)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.7109135363735896,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.480429,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -3.11743)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.519571,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.76514)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6819151009178602,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.972651,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.164092)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0273486,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.6718)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6379241116776903,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.577566,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -3.37947)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.422434,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 10.3962)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.6249675932204191,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.957561,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.339508)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0424386,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 17.2361)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.605987267482843,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 18)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.44098680511717636,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1.00183, 0, 0, 1.00183, 0, -1.09953)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.38096217889906414,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -6)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0.869916,
+          "clip": "none",
+          "transform": "matrix(1.06174, 0, 0, 1.06174, 0, -37.0448)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.31094059493597537,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0.479849,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -3.1209)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.520151,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.75819)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.2819441287187173,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)",
+          "z": "auto"
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0.972429,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.165423)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.0275705,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 11.6692)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.23792476907069965,
+      "title": [
+        {
+          "opacity": 0.577542,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -3.37966)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.422458,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 10.3958)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.2249681736973634,
+      "title": [
+        {
+          "opacity": 0.957552,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.339584)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0.042448,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 17.2359)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    },
+    {
+      "progress": 0.20598164135652805,
+      "title": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 18)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "body": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "z": "auto"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "auto"
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2"
+        },
+        {
+          "opacity": 0,
+          "clip": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3"
+        }
+      ],
+      "titleParent": {
+        "opacity": 1,
+        "clip": "none"
+      },
+      "bodyParent": {
+        "opacity": 1,
+        "clip": "none"
+      }
+    }
+  ],
+  "journeyFirstLine": {
+    "width": 890.34375,
+    "height": 72,
+    "leading": 68.4
+  },
+  "triangleSamples": [
+    {
+      "progress": 0.04,
+      "lead": 0.49941,
+      "answer": 0,
+      "facts": 0,
+      "model": 0,
+      "proof": 0,
+      "edges": [
+        0,
+        0,
+        0
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.1299,
+      "lead": 1,
+      "answer": 0.498486,
+      "facts": 0,
+      "model": 0,
+      "proof": 0,
+      "edges": [
+        0,
+        0,
+        0
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.24,
+      "lead": 1,
+      "answer": 1,
+      "facts": 0.499607,
+      "model": 0,
+      "proof": 0,
+      "edges": [
+        0.999999175144,
+        0,
+        0
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.3601,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 0,
+      "proof": 0,
+      "edges": [
+        1,
+        1,
+        0.501343
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.4698,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 0.497445,
+      "proof": 0.497445,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.6198,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 1,
+      "proof": 1,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.7799,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 1,
+      "proof": 1,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 0.4987386079601784
+    },
+    {
+      "progress": 0.9198,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 1,
+      "proof": 1,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 1
+    },
+    {
+      "progress": 0.7799,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 1,
+      "proof": 1,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 0.4987386079601784
+    },
+    {
+      "progress": 0.4698,
+      "lead": 1,
+      "answer": 1,
+      "facts": 1,
+      "model": 0.497445,
+      "proof": 0.497445,
+      "edges": [
+        1,
+        1,
+        1
+      ],
+      "insert": 0
+    },
+    {
+      "progress": 0.24,
+      "lead": 1,
+      "answer": 1,
+      "facts": 0.499607,
+      "model": 0,
+      "proof": 0,
+      "edges": [
+        0.999999175144,
+        0,
+        0
+      ],
+      "insert": 0
     }
   ]
 }

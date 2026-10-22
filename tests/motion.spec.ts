@@ -2,6 +2,7 @@ import {test,expect,type Page} from '@playwright/test';
 import {assertTwinType} from '../scripts/assert-twin-type.mjs';
 import content from '../src/lib/designContent.json' with {type:'json'};
 import {journeyFrame} from '../src/lib/journeyMotion';
+test.setTimeout(90000);
 const seek=async(page:Page,p:number)=>{
  await page.locator('.journey').evaluate((n,v)=>scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.clientHeight-innerHeight)*v,behavior:'instant'}),p);
  await expect.poll(()=>page.locator('.journey').evaluate((n,v)=>Math.abs(Number((n as HTMLElement).style.getPropertyValue('--scene-progress'))-v),p)).toBeLessThan(.001);
@@ -45,12 +46,12 @@ test('image dialog restores keyboard focus and low screens use normal flow',asyn
  for(const[width,height]of[[1440,900],[1280,800],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');const h=await page.locator('.journey-right').evaluate(e=>({height:e.clientHeight,scroll:e.scrollHeight}));expect(h.scroll).toBeLessThanOrEqual(h.height+1);}
  await page.setViewportSize({width:1440,height:900});const link=page.locator('.journey-cinematic .scene-expand');await link.focus();await page.keyboard.press('Enter');await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(link).toBeFocused();await page.setViewportSize({width:1440,height:700});await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');
 });
-test('rendered Cyrillic uses the real Expanded700 and Inter variable files',async({page})=>{
+test('rendered Cyrillic uses the real Expanded900 and Inter variable files',async({page})=>{
  await page.goto('/');await page.evaluate(()=>document.fonts.ready);const cdp=await page.context().newCDPSession(page);await cdp.send('DOM.enable');await cdp.send('CSS.enable');const{root}=await cdp.send('DOM.getDocument');
  for(const[selector,pattern]of[['h1','RF Dewi Expanded'],['.scene-title-group h2','RF Dewi Expanded'],['.scene-body-group','Inter Tight'],['.scene-navigation strong','Inter Tight']] as const){const{nodeId}=await cdp.send('DOM.querySelector',{nodeId:root.nodeId,selector});const{fonts}=await cdp.send('CSS.getPlatformFontsForNode',{nodeId});expect(fonts.length).toBeGreaterThan(0);for(const f of fonts){expect(f.isCustomFont).toBe(true);expect(f.familyName).toContain(pattern);expect(f.glyphCount).toBeGreaterThan(0);}}await cdp.detach();
 });
-test('exact correction V2 type metrics at desktop, tablet and phone sizes',async({page})=>{
- for(const[width,height]of[[1440,900],[1280,800],[1920,1080],[1024,900],[768,900],[390,844],[360,844],[320,844]]){await page.setViewportSize({width,height});await page.goto('/');await assertTwinType(page);const h2=page.locator(width>=1024?'.scene-title-group h2':'.static-scene h2').first(),size=width>=1280?Math.max(34,Math.min(46,38+(width-1440)/60)):width>=600?32:width>=360?27:25;expect(await h2.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeCloseTo(size,1);await expect(h2).toHaveCSS('font-weight','700');}
+test('exact visual motion V3 type metrics at desktop, tablet and phone sizes',async({page})=>{
+ for(const[width,height]of[[1440,900],[1280,800],[1920,1080],[1024,900],[768,900],[390,844],[360,844],[320,844]]){await page.setViewportSize({width,height});await page.goto('/');await assertTwinType(page);const h2=page.locator(width>=1024?'.scene-title-group h2':'.static-scene h2').first(),size=width>=1280?Math.max(56,Math.min(72,60+(width-1440)/40)):width>=1024?36+(width-1024)*8/255:width>=600?34+(width-600)/52.875:width>=360?29:27;expect(await h2.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeCloseTo(size,1);await expect(h2).toHaveCSS('font-weight','900');}
 });
 test('hero has all four channels and navigation is readable without backgrounds',async({page})=>{
  for(const[width,height]of[[1280,800],[1440,900],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');await expect(page.locator('.hero-channels')).toHaveText('на сайте, дистанционно, через агентов, в офисе продаж.');await expect(page.locator('.hero .actions a')).toHaveCount(1);

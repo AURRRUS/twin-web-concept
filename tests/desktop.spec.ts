@@ -149,7 +149,7 @@ test('desktop typeface loads and architectural scenes reverse without losing con
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
   expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Twin Dewi Expanded');
-  expect(await page.evaluate(() => document.fonts.check('700 48px "Twin Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
+  expect(await page.evaluate(() => document.fonts.check('900 48px "Twin Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
   expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Twin Inter Tight');
   expect(await page.evaluate(() => document.fonts.check('450 16px "Twin Inter Tight"', 'Кириллица Ёё'))).toBe(true);
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
