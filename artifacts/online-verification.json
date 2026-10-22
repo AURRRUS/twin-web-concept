@@ -1,32 +1,34 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "203a4d68ef23a61150c1147678988a7e42e30ae3",
+  "expectedSourceCommit": "1a01c58731d53490c4f0709cb8ff0365f94ac85a",
   "status": "PASS",
-  "checkedAt": "2026-10-22T15:43:05.605Z",
+  "checkedAt": "2026-10-22T17:56:27.318Z",
   "checks": [
-    "Published manifest matches exact source commit",
-    "All five current top-screen images match local checksums",
-    "Expanded 400/600/700 and Inter Tight HTTP 200; exact H1 metrics and rendered custom Expanded glyphs; no terminal heading dots or hero overlay",
-    "Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and exact two-row subtitle",
-    "Three reversible scenes have stable frames at the specified geometry",
-    "Published Delivery scrolls and reverses; actual iv glyph width unfolds while Effect prefix stays fixed",
-    "Original dialog, component dialog, channel tabs and selected view handoff to /demo work",
-    "Published laptop, wide, tablet and phone breakpoints match owner contract"
+    "Exact published source commit confirmed",
+    "Five original-role optimized assets match source hashes",
+    "True Expanded600 heading,400 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
+    "Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes",
+    "Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking",
+    "Triangle qualities, fixed numbers, one real demo proof link, no capsules/fake Play; measured reversible iv insertion",
+    "Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work",
+    "Published1920/1440/1280/1024/768/390/360/320 widths, full text and native mobile flow",
+    "Reduced motion leaves full static content and final word"
   ],
   "pageErrors": [],
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "203a4d68ef23a61150c1147678988a7e42e30ae3",
-    "builtAt": "2026-10-22T15:42:15.896Z",
-    "previousDeploymentCommit": "8c9226938e985ef1c7e5499055f93c43a30a9326"
+    "sourceCommit": "1a01c58731d53490c4f0709cb8ff0365f94ac85a",
+    "builtAt": "2026-10-22T17:54:48.595Z",
+    "previousDeploymentCommit": "536a01879afa72a0f9282ccd42875bac9405b443"
   },
   "typography": {
     "width": 1440,
-    "family": "RF Dewi Expanded",
-    "weight": "400",
-    "size": 48,
-    "leading": 56,
+    "family": "Twin Dewi Expanded",
+    "weight": "600",
+    "size": 44,
+    "leading": 49.28,
+    "tracking": -0.66,
     "wash": false,
     "headings": [
       "Цифровая инфраструктура продаж девелоперского проекта",
@@ -35,7 +37,7 @@
       "Раскройте конкретный лот",
       "Исследуйте проектРассмотрите конкретный лот",
       "Выбранный лот",
-      "Из чего состоит Twin",
+      "Единая цифровая основа",
       "Коммерческийцифровой двойник",
       "Клиентские инструменты",
       "Виртуальный отдел продаж",
@@ -50,16 +52,15 @@
       "Интеграции",
       "Коммерческие модули",
       "Коммерческий цифровой двойник",
-      "Один цифровой проектВся система продаж",
+      "Четыре канала —одна основа",
       "Показать больше на встрече",
-      "БыстроДоступноивКачественно, эффектно, эффективноКачественно · Эффектно · ЭффективноКачественноЭффективноКачественноЭффективно",
-      "В Twin сходятся все три",
+      "В Twin сходятся все три качества",
       "Посмотрите в работе",
       "Материалы и задачи",
       "Состав решения",
       "Разработка",
       "Проверка и запуск",
-      "Посмотрите, как Twin может работать на вашем проекте"
+      "Посмотрите, как Twin может работать на вашем проекте"
     ],
     "faces": [
       {
