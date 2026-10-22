@@ -1,0 +1,9 @@
+{
+  "environment": "Headless Chromium, cloud shared environment; one short native wheel forward/reverse pass",
+  "frames": 105,
+  "medianMs": 16.699999999999818,
+  "p95Ms": 16.700000000000273,
+  "longTasksMs": [],
+  "trace": "/tmp/twin-craft-performance-trace.json",
+  "limitation": "Not a measurement on owner hardware or Safari/iOS"
+}

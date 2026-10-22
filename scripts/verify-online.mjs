@@ -45,8 +45,15 @@ try {
   assert.equal(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily.split(',')[0].replace(/["']/g, '').trim()), 'Inter Tight');
   result.checks.push('Expanded 400/600/700 and Inter Tight HTTP 200; exact H1 metrics and rendered custom Expanded glyphs; no terminal heading dots or hero overlay');
   await page.waitForFunction(() => document.querySelector('.journey')?.dataset.enhanced === 'true');
+  assert.equal((await page.locator('.hero').boundingBox()).height, 900);
+  assert.equal(await page.locator('.header-cta').textContent(), 'Обсудить проект');
+  assert.equal(await page.locator('.header-cta').getAttribute('href'), '/twin-web-concept/#contact');
+  assert.equal(await page.locator('.hero .actions a').count(), 1);
+  assert.equal(await page.locator('.hero-channel-line').textContent(), 'через агентов и в офисе продаж.');
+  assert(Math.abs(await page.locator('.journey').evaluate(e=>e.clientHeight) - 900*3.4) <= 1);
+  result.checks.push('Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and channel line break');
   let frame;
-  for (const [id, progress] of [['project', .09], ['space', .5], ['lot', .91], ['space', .5], ['project', .09]]) {
+  for (const [id, progress] of [['project', .07], ['space', .5], ['lot', .93], ['space', .5], ['project', .07]]) {
     await page.locator('.journey').evaluate((el, p) => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + (el.clientHeight - innerHeight) * p, behavior: 'instant' }), progress);
     await page.waitForFunction(id => document.querySelector('.journey').dataset.scene === id, id);
     const box = await page.locator('.scene-materials').boundingBox();
@@ -75,7 +82,17 @@ try {
   result.checks.push('Original dialog, component dialog, channel tabs and selected view handoff to /demo work');
   for (const [width, height] of [[1366,768], [1280,800], [1920,1080], [768,1024], [390,844], [320,844]]) {
     await page.setViewportSize({ width, height }); await page.goto(base, { waitUntil: 'networkidle' }); await assertTwinType(page);
-    if (width >= 1280) await page.waitForFunction(() => document.querySelector('.journey').dataset.enhanced === 'true');
+    if (width >= 1280) {
+      await page.waitForFunction(() => document.querySelector('.journey').dataset.enhanced === 'true');
+      assert(await page.locator('.scene-navigation').evaluate(nav=>{
+        const edge=document.querySelector('.scene-materials').getBoundingClientRect().left;
+        return [...nav.querySelectorAll('button')].every(button=>{
+          const title=button.querySelector('strong'),description=button.querySelector('.scene-nav-description');
+          const a=title.getBoundingClientRect(),b=description.getBoundingClientRect();
+          return getComputedStyle(title).display==='block'&&getComputedStyle(description).display==='block'&&getComputedStyle(title).fontWeight==='400'&&b.top>=a.bottom+7.9&&a.right<edge&&b.right<edge&&button.scrollWidth<=button.clientWidth;
+        });
+      }), 'Published navigation has separated readable rows without image collision');
+    }
     else assert.equal(await page.locator('.static-scene').count(), 3);
   }
   result.checks.push('Published laptop, wide, tablet and phone breakpoints match owner contract');

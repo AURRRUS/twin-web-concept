@@ -469,20 +469,7 @@ section[id], article[id] { scroll-margin-top: 24px; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .button:hover, .map-component:hover, .map-core:hover > .media { transform: none; }
 }
-.product-workspace.in-view { animation: product-appear 400ms var(--ease) both; }
-.launch-steps.in-view { animation: supporting-appear 240ms var(--ease) both; }
-@keyframes product-appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes supporting-appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-@media (prefers-reduced-motion: reduce) {
-  .product-workspace.in-view, .launch-steps.in-view{ animation: none; }
-}
 
 .product .media img[src*="/lot.webp"] { mix-blend-mode: multiply; }
  .channel-story p { letter-spacing: 0; }
 
-/* Reveal only off-screen content after hydration; native scrolling stays responsive. */
-.reveal-ready { opacity: 0; transform: translateY(18px); transition: opacity 420ms var(--ease), transform 420ms var(--ease); }
-.reveal-ready.in-view, .reveal-ready:focus-within { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) {
-  .reveal-ready { opacity: 1; transform: none; transition: none; }
-}

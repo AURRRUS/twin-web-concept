@@ -4,9 +4,9 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Текущие исходники — `codex/twin-publish-fix-v2`, база `codex/twin-visual-recovery`.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Текущие исходники — `codex/twin-craft-pass`, продолжение опубликованного `a81a2a4`.
 
-Актуальная задача — `TWIN_PUBLISH_FIX_v2_2026-10-21`, ветка `codex/twin-publish-fix-v2`: RF Dewi Expanded400/600/700, точные размеры, чистое фото hero без засветления, заголовки без конечных точек. Публикация этой правки прямо разрешена владельцем; опубликованный исходный commit проверяется по `build-version.json`.
+Актуальная задача — [TWIN_CRAFT_PASS_2026-10-22](docs/craft-pass/00_EXECUTE.md): Expanded Regular400 в H1, полная структура навигации, hero100svh, обновлённые CTA и каскад сцен, единые появления нижних секций. Публикация этой правки прямо разрешена владельцем; опубликованный исходный commit проверяется по `build-version.json`.
 
 Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
@@ -15,7 +15,7 @@ Desktop-реализация корпоративного сайта Twin по �
 Нужны Node.js 24 и npm. Используется текущая папка проекта, отдельный worktree не нужен.
 
 ```sh
-cd /workspace/twin-web-concept
+cd /workspace/work/twin-grid-pr
 npm ci
 npm run dev -- --background --port 4321
 ```
@@ -49,7 +49,7 @@ npm test
 
 `npm test` проверяет **собранную** версию, поэтому после изменения кода сначала выполните build. Playwright запускает Chromium из `/usr/bin/chromium`, который доступен в текущей облачной среде. На другом компьютере укажите путь к своему Chromium в `playwright.config.ts` либо настройте браузер Playwright. Никакие токены или внешние сервисы для локальной проверки не нужны.
 
-Тесты поднимают свой preview в foreground, если на порту 4350 нет сервера. Для чистой проверки сначала остановите свой dev/preview. Отчёт: `artifacts/test-results.json`; скриншоты создаются тестами. `npm run check` последовательно выполняет typecheck, build, test.
+Тесты поднимают свой preview в foreground, если на порту 4350 нет сервера. Для чистой проверки сначала остановите свой dev/preview. Отчёт: `artifacts/test-results.json`. `npm run check` последовательно выполняет typecheck, build, test.
 
 ## Что реализовано
 
@@ -73,7 +73,7 @@ npm test
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-desktop-v1-3
+git push origin codex/twin-craft-pass
 npm run build:preview
 npm run publish:preview
 ```
