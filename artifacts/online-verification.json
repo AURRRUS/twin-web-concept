@@ -1,24 +1,78 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "4be59614c63e7d3a3514e73671e11fbd3e473ed0",
+  "expectedSourceCommit": "a81a2a47086c90975053734b5e45633d7458588e",
   "status": "PASS",
-  "checkedAt": "2026-10-20T14:25:53.315Z",
+  "checkedAt": "2026-10-22T12:17:17.731Z",
   "checks": [
-    "Exact source commit matches the published build manifest",
-    "All five published architectural image bytes match the reviewed local files",
-    "Provided RF Dewi and Inter Tight webfonts are actually loaded",
-    "Published cinematic scenes use large loaded images and preserve three states",
-    "Published homepage HTTP 200 and loaded web typeface",
-    "Published component dialog opens and closes",
-    "Published channel tabs work",
-    "Published demo receives the selected view",
-    "No browser page errors or broken visible images"
+    "Published manifest matches exact source commit",
+    "All five current top-screen images match local checksums",
+    "Expanded 400/600/700 and Inter Tight HTTP 200; exact H1 metrics and rendered custom Expanded glyphs; no terminal heading dots or hero overlay",
+    "Three reversible scenes have stable frames at the specified geometry",
+    "Original dialog, component dialog, channel tabs and selected view handoff to /demo work",
+    "Published laptop, wide, tablet and phone breakpoints match owner contract"
   ],
   "pageErrors": [],
+  "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "4be59614c63e7d3a3514e73671e11fbd3e473ed0",
-    "builtAt": "2026-10-20T14:23:34.603Z",
-    "previousDeploymentCommit": "3ca76753aa21a7ee1573869e2e165f5e302b4404"
+    "sourceCommit": "a81a2a47086c90975053734b5e45633d7458588e",
+    "builtAt": "2026-10-22T12:16:30.502Z",
+    "previousDeploymentCommit": "65b35dc63eba79a0decb9aed70bb996c7c35fda9"
+  },
+  "typography": {
+    "width": 1440,
+    "family": "RF Dewi Expanded",
+    "weight": "600",
+    "size": 48,
+    "leading": 56,
+    "wash": false,
+    "headings": [
+      "Цифровая инфраструктура продаж девелоперского проекта",
+      "Покажите, что делает проект ценным",
+      "Дайте почувствовать пространство",
+      "Раскройте конкретный лот",
+      "Исследуйте проектРассмотрите конкретный лот",
+      "Выбранный лот",
+      "Из чего состоит Twin",
+      "Коммерческийцифровой двойник",
+      "Клиентские инструменты",
+      "Виртуальный отдел продаж",
+      "Контентная система",
+      "Управление и аналитика",
+      "Интеграции",
+      "Коммерческие модули",
+      "Клиентские инструменты",
+      "Виртуальный отдел продаж",
+      "Контентная система",
+      "Управление и аналитика",
+      "Интеграции",
+      "Коммерческие модули",
+      "Коммерческий цифровой двойник",
+      "Один цифровой проектВся система продаж",
+      "Показать больше на встрече",
+      "БыстроДоступноКачественно",
+      "В Twin сходятся все три",
+      "Посмотрите в работе",
+      "Материалы и задачи",
+      "Состав решения",
+      "Разработка",
+      "Проверка и запуск",
+      "Посмотрите, как Twin может работать на вашем проекте"
+    ],
+    "faces": [
+      {
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "overflow": false
   }
 }
