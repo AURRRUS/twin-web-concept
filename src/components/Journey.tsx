@@ -18,7 +18,8 @@ const original = (id: string) => sitePath(`/media/recovery-original/${id}.png`);
 
 export function Journey() {
   const host = useRef<HTMLElement>(null);
-  const [enhanced, setEnhanced] = useState(false);
+  const [motionEnabled, setMotionEnabled] = useState(false);
+  const [layoutMode, setLayoutMode] = useState<'desktop' | 'mobile'>('mobile');
   const [layoutReady, setLayoutReady] = useState(false);
   const [reading, setReading] = useState({ active: 0, title: 0, explanation: 0 });
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -29,6 +30,7 @@ export function Journey() {
     const node = host.current!;
     const panel = node.querySelector<HTMLElement>('.journey-cinematic')!;
     const desktop = matchMedia('(min-width: 1280px)');
+    const columns = matchMedia('(min-width: 1024px)');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     let enabled = false, disposed = false, fontsReady = false, imagesReady = false, atPin = false;
     let current = { active: -1, title: -1, explanation: -1 };
@@ -54,6 +56,10 @@ export function Journey() {
     const configure = () => {
       if (disposed || !fontsReady || !imagesReady) return;
       driver?.destroy(); driver = undefined;
+      const mode = columns.matches ? 'desktop' : 'mobile';
+      node.dataset.layoutMode = mode;
+      setLayoutMode(mode);
+      panel.hidden = mode !== 'desktop';
       let fits = desktop.matches && innerHeight >= 760 && !reduced.matches;
       if (fits) {
         // Measure the real text and image footprint, including the longest hidden text group.
@@ -68,14 +74,19 @@ export function Journey() {
         fits = needed <= innerHeight;
         delete node.dataset.measuring;
       }
-      enabled = fits; panel.hidden = !fits; setEnhanced(fits); setLayoutReady(true);
+      enabled = fits; node.dataset.motionEnabled = String(fits); setMotionEnabled(fits); setLayoutReady(true);
+      if (!fits && mode === 'desktop') write(journeyFrame(scenes[Math.max(0,current.active)].target), scenes[Math.max(0,current.active)].target);
       if (fits) { driver = createProgressDriver(read, write); requestAnimationFrame(() => { if (!disposed) driver?.snap(); }); }
     };
     const visibility = () => { if (document.hidden) { driver?.destroy(); driver = undefined; } else if (enabled) { driver = createProgressDriver(read, write); driver.snap(); } };
     jump.current = id => {
       const scene = scenes.find(item => item.id === id);
       if (!scene) return;
-      if (!enabled) { document.getElementById(id)?.scrollIntoView({ behavior: 'auto' }); return; }
+      if (!enabled) {
+        if (columns.matches) {write(journeyFrame(scene.target),scene.target);node.dispatchEvent(new CustomEvent('twin:settle-reveal',{bubbles:true}));}
+        else document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
+        return;
+      }
       window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + Math.max(0, node.offsetHeight - panel.offsetHeight) * scene.target, behavior: 'smooth' });
     };
     const onJump = (event: Event) => jump.current((event as CustomEvent<string>).detail);
@@ -89,12 +100,12 @@ export function Journey() {
     void Promise.all([400, 600, 700].map(weight => document.fonts.load(`${weight} 24px "Twin Dewi Expanded"`, 'ЦифроваяЁё'))).then(() => {
       fontsReady = true; configure(); return document.fonts.ready;
     }).then(configure);
-    desktop.addEventListener('change', configure); reduced.addEventListener('change', configure);
+    columns.addEventListener('change', configure); desktop.addEventListener('change', configure); reduced.addEventListener('change', configure);
     window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', configure);
     window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
     return () => {
       disposed = true; driver?.destroy(); decode.disconnect(); resize.disconnect();
-      desktop.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
+      columns.removeEventListener('change', configure); desktop.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
       window.removeEventListener('scroll', request); window.removeEventListener('resize', configure);
       window.removeEventListener('twin:journey', onJump); document.removeEventListener('visibilitychange', visibility);
     };
@@ -111,15 +122,15 @@ export function Journey() {
     event.preventDefault(); origin.current = event.currentTarget; setExpanded(id);
   };
   const expandLink = (id: string) => <a className="scene-expand" href={original(id)} onClick={event => expand(event, id)}>Развернуть изображение<span aria-hidden="true"> ↗</span></a>;
-  return <section ref={host} className="journey" data-enhanced={layoutReady ? enhanced : 'pending'} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
-    <div className="journey-static content-container" hidden={enhanced}>
+  return <section ref={host} className="journey" data-enhanced={layoutReady ? motionEnabled : 'pending'} data-layout-mode={layoutMode} data-motion-enabled={motionEnabled} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
+    <div className="journey-static content-container" hidden={layoutMode === 'desktop'}>
       <Media name="topFacade" alt="Вертикальный фасад демонстрационного проекта" className="static-facade" />
       <nav className="static-scene-nav" aria-label="Масштаб исследования">{scenes.map((scene, index) => <a key={scene.id} href={`#${scene.id}`}>{navigation(scene, index)}</a>)}</nav>
-      {scenes.map(scene => <article key={scene.id} id={enhanced ? undefined : scene.id} className="static-scene">
+      {scenes.map(scene => <article key={scene.id} id={layoutMode === 'desktop' ? undefined : scene.id} className="static-scene">
         <div data-craft-reveal="eyebrow" className="scene-eyebrow">{scene.eyebrow}</div><h2 data-craft-reveal="title">{heading(scene)}</h2><p data-craft-reveal="body">{scene.body}</p><div className="static-media-viewport"><div data-craft-reveal="media"><Media name={scene.media} alt={scene.alt} /></div></div><div className="scene-caption"><small>{disclaimer}</small>{expandLink(scene.id)}</div>
       </article>)}
     </div>
-    <div className="journey-cinematic" hidden={layoutReady && !enhanced}>
+    <div className="journey-cinematic" hidden={layoutReady && layoutMode !== 'desktop'}>
       <div className="journey-grid">
         <div className="cinematic-facade"><Media name="topFacade" alt="Постоянный вертикальный фасад проекта" /></div>
         <div className="journey-right">
@@ -127,7 +138,7 @@ export function Journey() {
             <div className="scene-title-slot" data-craft-reveal="title">{scenes.map((scene,index)=><div className="scene-title-group" data-layer={index} key={scene.id} aria-hidden={reading.title!==index}><div className="scene-eyebrow">{scene.eyebrow}</div><h2>{heading(scene)}</h2></div>)}</div>
             <div className="scene-body-slot" data-craft-reveal="body">{scenes.map((scene,index)=><p className="scene-body-group" data-layer={index} key={scene.id} aria-hidden={reading.explanation!==index}>{scene.body}</p>)}</div>
           </div>
-          <nav className="scene-navigation" aria-label="Масштаб исследования">{scenes.map((scene, index) => <button key={scene.id} type="button" id={enhanced ? scene.id : undefined} aria-pressed={reading.active === index} aria-current={reading.active === index ? 'step' : undefined} onClick={() => jump.current(scene.id)}>{navigation(scene, index)}</button>)}</nav>
+          <nav className="scene-navigation" aria-label="Масштаб исследования">{scenes.map((scene, index) => <button key={scene.id} type="button" id={layoutMode === 'desktop' ? scene.id : undefined} aria-pressed={reading.active === index} aria-current={reading.active === index ? 'step' : undefined} onClick={() => jump.current(scene.id)}>{navigation(scene, index)}</button>)}</nav>
           <div className="scene-materials" data-craft-reveal="media" data-craft-delay="420">{scenes.map((scene, index) => <div key={scene.id} data-layer={index} className={`scene-material scene-material-${scene.id}`} aria-hidden={reading.active !== index}><Media name={scene.media} alt={scene.alt} /></div>)}</div>
           <div className="scene-caption"><small>{disclaimer}</small><a className="scene-demo" href={sitePath('/demo')}>Открыть демо</a>{expandLink(scenes[reading.active].id)}</div>
         </div>
