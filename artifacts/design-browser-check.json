@@ -1,0 +1,1464 @@
+{
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "journey": "true",
+      "delivery": "true",
+      "frame": {
+        "x": 864.796875,
+        "y": 1426.90625,
+        "width": 1055.203125,
+        "height": 593.546875,
+        "top": 1426.90625,
+        "right": 1920,
+        "bottom": 2020.453125,
+        "left": 864.796875
+      },
+      "h1": "600 56px / 62.72px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "journey": "true",
+      "delivery": "true",
+      "frame": {
+        "x": 671.59375,
+        "y": 1190.953125,
+        "width": 768.40625,
+        "height": 432.21875,
+        "top": 1190.953125,
+        "right": 1440,
+        "bottom": 1623.171875,
+        "left": 671.59375
+      },
+      "h1": "600 44px / 49.28px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 1440,
+      "height": 800,
+      "scrollWidth": 1440,
+      "journey": "true",
+      "delivery": "true",
+      "frame": {
+        "x": 671.59375,
+        "y": 1090.953125,
+        "width": 768.40625,
+        "height": 432.21875,
+        "top": 1090.953125,
+        "right": 1440,
+        "bottom": 1523.171875,
+        "left": 671.59375
+      },
+      "h1": "600 44px / 49.28px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "scrollWidth": 1280,
+      "journey": "true",
+      "delivery": "true",
+      "frame": {
+        "x": 625.1875,
+        "y": 1111.734375,
+        "width": 654.8125,
+        "height": 368.328125,
+        "top": 1111.734375,
+        "right": 1280,
+        "bottom": 1480.0625,
+        "left": 625.1875
+      },
+      "h1": "600 40px / 44.8px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "journey": "false",
+      "delivery": "false",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "h1": "600 38px / 42.56px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "journey": "false",
+      "delivery": "false",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "h1": "600 38px / 42.56px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "journey": "false",
+      "delivery": "false",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "h1": "600 29px / 32.48px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 360,
+      "height": 844,
+      "scrollWidth": 360,
+      "journey": "false",
+      "delivery": "false",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "h1": "600 29px / 32.48px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "scrollWidth": 320,
+      "journey": "false",
+      "delivery": "false",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "h1": "600 25px / 28px \"Twin Dewi Expanded\", sans-serif",
+      "channels": "на сайте, дистанционно, через агентов, в офисе продаж."
+    }
+  ],
+  "journey": [
+    {
+      "progress": "0.1",
+      "active": "project",
+      "titles": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "1",
+        "0",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.2",
+      "active": "project",
+      "titles": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 18)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "1",
+        "0",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2",
+          "bounds": {
+            "x": 640.8574829101562,
+            "y": 225.66436767578125,
+            "width": 829.8788452148438,
+            "height": 466.7962646484375,
+            "top": 225.66436767578125,
+            "right": 1470.736328125,
+            "bottom": 692.4606323242188,
+            "left": 640.8574829101562
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.25992063492063494",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "0.391921",
+          "transform": "matrix(1, 0, 0, 1, 0, 10.9454)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
+          "z": "2",
+          "bounds": {
+            "x": 640.8574829101562,
+            "y": 225.66436767578125,
+            "width": 829.8788452148438,
+            "height": 466.7962646484375,
+            "top": 225.66436767578125,
+            "right": 1470.736328125,
+            "bottom": 692.4606323242188,
+            "left": 640.8574829101562
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.325",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0.648",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0.0553936",
+          "transform": "matrix(1.07965, 0, 0, 1.07965, 0, -47.7924)",
+          "z": "2",
+          "bounds": {
+            "x": 640.9903564453125,
+            "y": 225.94667053222656,
+            "width": 829.613037109375,
+            "height": 466.64678955078125,
+            "top": 225.94667053222656,
+            "right": 1470.6033935546875,
+            "bottom": 692.5934600830078,
+            "left": 640.9903564453125
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.4",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "1",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1.0264, 0, 0, 1.0264, 0, -15.8398)",
+          "z": "2",
+          "bounds": {
+            "x": 661.450927734375,
+            "y": 269.40814208984375,
+            "width": 788.69189453125,
+            "height": 443.629150390625,
+            "top": 269.40814208984375,
+            "right": 1450.142822265625,
+            "bottom": 713.0372924804688,
+            "left": 661.450927734375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.45",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "1",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.5246031746031746",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "1",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.5996031746031746",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "1",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.7246031746031746",
+      "active": "lot",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0",
+        "0.640364"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0.0473421",
+          "transform": "matrix(1.07971, 0, 0, 1.07971, 0, -47.8237)",
+          "z": "3",
+          "bounds": {
+            "x": 640.9703369140625,
+            "y": 225.90415954589844,
+            "width": 829.653076171875,
+            "height": 466.66925048828125,
+            "top": 225.90415954589844,
+            "right": 1470.6234130859375,
+            "bottom": 692.5734100341797,
+            "left": 640.9703369140625
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.8496031746031746",
+      "active": "lot",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0",
+        "1"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, -0.00133903)",
+          "z": "3",
+          "bounds": {
+            "x": 671.5928955078125,
+            "y": 290.9512939453125,
+            "width": 768.407958984375,
+            "height": 432.2197265625,
+            "top": 290.9512939453125,
+            "right": 1440.0008544921875,
+            "bottom": 723.1710205078125,
+            "left": 671.5928955078125
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.9246031746031746",
+      "active": "lot",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0",
+        "1"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.7246031746031746",
+      "active": "lot",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0",
+        "0.640364"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0.0473421",
+          "transform": "matrix(1.07971, 0, 0, 1.07971, 0, -47.8237)",
+          "z": "3",
+          "bounds": {
+            "x": 640.9703369140625,
+            "y": 225.90415954589844,
+            "width": 829.653076171875,
+            "height": 466.66925048828125,
+            "top": 225.90415954589844,
+            "right": 1470.6234130859375,
+            "bottom": 692.5734100341797,
+            "left": 640.9703369140625
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.325",
+      "active": "space",
+      "titles": [
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -8)"
+        },
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "0",
+        "0.648",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0.0553936",
+          "transform": "matrix(1.07965, 0, 0, 1.07965, 0, -47.7924)",
+          "z": "2",
+          "bounds": {
+            "x": 640.9903564453125,
+            "y": 225.94667053222656,
+            "width": 829.613037109375,
+            "height": 466.64678955078125,
+            "top": 225.94667053222656,
+            "right": 1470.6033935546875,
+            "bottom": 692.5934600830078,
+            "left": 640.9903564453125
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    },
+    {
+      "progress": "0.1",
+      "active": "project",
+      "titles": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "bodies": [
+        "1",
+        "0",
+        "0"
+      ],
+      "sheets": [
+        {
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "1",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "2",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        },
+        {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "z": "3",
+          "bounds": {
+            "x": 671.59375,
+            "y": 290.953125,
+            "width": 768.40625,
+            "height": 432.21875,
+            "top": 290.953125,
+            "right": 1440,
+            "bottom": 723.171875,
+            "left": 671.59375
+          }
+        }
+      ]
+    }
+  ],
+  "delivery": [
+    {
+      "p": "0.0495",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "0"
+    },
+    {
+      "p": "0.1495",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "0.365018"
+    },
+    {
+      "p": "0.3495",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.5495",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.6395",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.7395",
+      "word": "Эффектно",
+      "ivWidth": 19.8125,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.8395",
+      "word": "Эффективно",
+      "ivWidth": 39.890625,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.9495",
+      "word": "Эффективно",
+      "ivWidth": 39.90625,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.7395",
+      "word": "Эффектно",
+      "ivWidth": 19.8125,
+      "prefixX": 447.890625,
+      "answer": "1"
+    },
+    {
+      "p": "0.5495",
+      "word": "Эффектно",
+      "ivWidth": 0,
+      "prefixX": 447.890625,
+      "answer": "1"
+    }
+  ],
+  "entrances": [
+    {
+      "selector": ".product h2",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.141929",
+          "transform": "matrix(1, 0, 0, 1, 0, 15.4453)",
+          "clip": "inset(0px 0px 85.8071%)",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.983162",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.303083)",
+          "clip": "inset(0px 0px 1.68379%)",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".product-workspace",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1.045, 0, 0, 1.045, 0, -24)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.728583",
+          "transform": "matrix(1.03844, 0, 0, 1.03844, 0, -20.5028)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".map-core",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1.045, 0, 0, 1.045, 0, -24)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "1",
+          "transform": "matrix(1.03499, 0, 0, 1.03499, 0, -18.6633)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".component-client-tools",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 14)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.43751",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.87486)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".channel-image-motion",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1.045, 0, 0, 1.045, 0, -24)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "1",
+          "transform": "matrix(1.035, 0, 0, 1.035, 0, -18.6685)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".contact-copy h2",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0.141595",
+          "transform": "matrix(1, 0, 0, 1, 0, 15.4513)",
+          "clip": "inset(0px 0px 85.8405%)",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.986961",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.234706)",
+          "clip": "inset(0px 0px 1.30392%)",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": ".contact form",
+      "samples": [
+        {
+          "phase": "before",
+          "opacity": "0",
+          "transform": "none",
+          "clip": "none",
+          "waiting": true
+        },
+        {
+          "phase": "entry",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 14)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "middle",
+          "opacity": "0.342891",
+          "transform": "matrix(1, 0, 0, 1, 0, 9.19953)",
+          "clip": "none",
+          "waiting": false
+        },
+        {
+          "phase": "final",
+          "opacity": "1",
+          "transform": "none",
+          "clip": "none",
+          "waiting": false
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "longTasks": []
+}

@@ -1,223 +1,68 @@
-import { test, expect } from '@playwright/test';
-import { assertTwinType } from '../scripts/assert-twin-type.mjs';
-
-test('panoramas reach both viewport edges at all supported widths', async ({ page }) => {
-  for (const width of [390, 768, 1280, 1440, 1920]) {
-    await page.setViewportSize({ width, height: 1000 });
-    await page.goto('/');
-    for (const selector of ['.hero', '.journey', '.channels']) {
-      const bounds = await page.locator(selector).evaluate(el => {
-        const rect = el.getBoundingClientRect();
-        return { left: rect.left, right: rect.right, viewport: document.documentElement.clientWidth };
-      });
-      expect(bounds.left).toBeCloseTo(0, 0);
-      expect(bounds.right).toBeCloseTo(bounds.viewport, 0);
-    }
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  }
+import {test,expect,type Page} from '@playwright/test';
+import {assertTwinType} from '../scripts/assert-twin-type.mjs';
+import content from '../src/lib/designContent.json' with {type:'json'};
+import {journeyFrame} from '../src/lib/journeyMotion';
+const seek=async(page:Page,p:number)=>{
+ await page.locator('.journey').evaluate((n,v)=>scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.clientHeight-innerHeight)*v,behavior:'instant'}),p);
+ await expect.poll(()=>page.locator('.journey').evaluate((n,v)=>Math.abs(Number((n as HTMLElement).style.getPropertyValue('--scene-progress'))-v),p)).toBeLessThan(.001);
+ await page.waitForTimeout(100);
+};
+test('panoramas reach both viewport edges at all supported widths',async({page})=>{
+ for(const width of[360,390,768,1024,1280,1440,1920]){await page.setViewportSize({width,height:900});await page.goto('/');for(const s of['.hero','.journey','.channels']){const r=await page.locator(s).boundingBox();expect(r!.x).toBe(0);expect(r!.width).toBe(width);}expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
+});
+test('title, body and full sheet have separate phases and reversible progress',async({page})=>{
+ await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+ await seek(page,.1);const frame=(await page.locator('.scene-materials').boundingBox())!;
+ for(const p of[.2,.26,.3,.325,.4,.45,.525,.6,.725,.85,.925,.725,.325,.1]){await seek(page,p);const r=(await page.locator('.scene-materials').boundingBox())!;for(const k of['x','y','width','height'] as const)expect(r[k]).toBeCloseTo(frame[k],0);}
+ await seek(page,.30);await expect(page.locator('.scene-title-group').nth(1)).toHaveCSS('opacity','1');await expect(page.locator('.scene-material').nth(1)).toHaveCSS('opacity','0');
+ const body=await page.locator('.scene-body-group').nth(1).evaluate(e=>+getComputedStyle(e).opacity);expect(body).toBeGreaterThan(0);expect(body).toBeLessThan(.4);
+ await seek(page,.4);const incoming=(await page.locator('.scene-material').nth(1).boundingBox())!;expect(incoming.width).toBeGreaterThan(frame.width);expect(incoming.y).toBeLessThan(frame.y);
+ await page.locator('.scene-navigation button').nth(2).focus();await page.keyboard.press('Enter');await expect(page.locator('.journey')).toHaveAttribute('data-scene','lot');
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.journey-static')).toBeVisible();await expect(page.locator('.static-scene')).toHaveCount(3);
+});
+test('reveals finish when reached and reduced motion settles pending groups',async({page})=>{
+ await page.goto('/');await page.locator('.contact-copy').scrollIntoViewIfNeeded();await expect(page.locator('#contact-heading')).toHaveCSS('opacity','1');await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('[data-craft-waiting]')).toHaveCount(0);
+});
+test('hero line breaks and content guides follow the viewport',async({page})=>{
+ for(const[width,height]of[[390,844],[768,900],[1024,900],[1280,800],[1440,900],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await page.evaluate(()=>document.fonts.ready);
+ const data=await page.evaluate(()=>{const n=document.querySelector<HTMLElement>('.hero-content')!,s=getComputedStyle(n),g=parseFloat(s.paddingLeft),C=Math.min(1728,innerWidth-2*g),r=document.querySelector('h1')!.getBoundingClientRect();return{left:(innerWidth-C)/2,x:r.x,lines:r.height/parseFloat(getComputedStyle(document.querySelector('h1')!).lineHeight)}});expect(data.x).toBeCloseTo(data.left,0);if(width>=1280)expect(data.lines).toBeCloseTo(2,1);
+ }
+});
+test('complete scene content stays readable and navigation shares the media top edge',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+ await expect(page.locator('.scene-body-group')).toHaveText(content.journey.map(s=>s.body));
+ const nav=(await page.locator('.scene-navigation').boundingBox())!,media=(await page.locator('.scene-materials').boundingBox())!;expect(media.width).toBeCloseTo(768.4,0);expect(media.x+media.width).toBeCloseTo(1440,0);expect(nav.y).toBe(media.y);
+ await page.setViewportSize({width:390,height:844});await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');await expect(page.locator('.static-scene>p')).toHaveText(content.journey.map(s=>s.body));await expect(page.locator('.static-scene-nav .scene-nav-description')).toHaveText(content.journey.map(s=>s.navigation_description_lines.join(' ')));
+ for(const p of await page.locator('.static-scene>p').all())expect(await p.evaluate(e=>e.scrollHeight<=e.clientHeight+1)).toBe(true);
+});
+test('sheet rank stays constant while scale, position and opacity follow the absolute frame',async({page})=>{
+ await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+ for(const p of[.20,.26,.325,.4,.45,.60,.725,.85,.925,.725,.325,.1]){await seek(page,p);const value=await page.locator('.journey').evaluate(n=>Number((n as HTMLElement).style.getPropertyValue('--scene-progress'))),f=journeyFrame(value);
+ for(let i=0;i<3;i++){const style=await page.locator('.scene-material').nth(i).evaluate(e=>({opacity:+getComputedStyle(e).opacity,z:+getComputedStyle(e).zIndex}));expect(style.opacity).toBeCloseTo(f.mediaOpacity[i],3);expect(style.z).toBe(i+1);}
+ }
+});
+test('image dialog restores keyboard focus and low screens use normal flow',async({page})=>{
+ for(const[width,height]of[[1440,900],[1280,800],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');const h=await page.locator('.journey-right').evaluate(e=>({height:e.clientHeight,scroll:e.scrollHeight}));expect(h.scroll).toBeLessThanOrEqual(h.height+1);}
+ await page.setViewportSize({width:1440,height:900});const link=page.locator('.journey-cinematic .scene-expand');await link.focus();await page.keyboard.press('Enter');await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(link).toBeFocused();await page.setViewportSize({width:1440,height:700});await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');
+});
+test('rendered Cyrillic uses the real Expanded600 and Inter variable files',async({page})=>{
+ await page.goto('/');await page.evaluate(()=>document.fonts.ready);const cdp=await page.context().newCDPSession(page);await cdp.send('DOM.enable');await cdp.send('CSS.enable');const{root}=await cdp.send('DOM.getDocument');
+ for(const[selector,pattern]of[['h1','RF Dewi Expanded'],['.scene-title-group h2','RF Dewi Expanded'],['.scene-body-group','Inter Tight'],['.scene-navigation strong','Inter Tight']] as const){const{nodeId}=await cdp.send('DOM.querySelector',{nodeId:root.nodeId,selector});const{fonts}=await cdp.send('CSS.getPlatformFontsForNode',{nodeId});expect(fonts.length).toBeGreaterThan(0);for(const f of fonts){expect(f.isCustomFont).toBe(true);expect(f.familyName).toContain(pattern);expect(f.glyphCount).toBeGreaterThan(0);}}await cdp.detach();
+});
+test('exact handoff type metrics at desktop, tablet and phone sizes',async({page})=>{
+ for(const[width,height]of[[1440,900],[1280,800],[1920,1080],[1024,900],[768,900],[390,844],[360,844],[320,844]]){await page.setViewportSize({width,height});await page.goto('/');await assertTwinType(page);const h2=page.locator(width>=1280?'.scene-title-group h2':'.static-scene h2').first(),size=width>=1280?Math.max(34,Math.min(46,38+(width-1440)/60)):width>=600?32:width>=360?27:25;expect(await h2.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeCloseTo(size,1);await expect(h2).toHaveCSS('font-weight','600');}
+});
+test('hero has all four channels and navigation is readable without backgrounds',async({page})=>{
+ for(const[width,height]of[[1280,800],[1440,900],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');await expect(page.locator('.hero-channels')).toHaveText('на сайте, дистанционно, через агентов, в офисе продаж.');await expect(page.locator('.hero .actions a')).toHaveCount(1);
+ for(const n of await page.locator('.scene-navigation button').all()){await expect(n).toHaveCSS('background-color','rgba(0, 0, 0, 0)');const a=(await n.locator('strong').boundingBox())!,b=(await n.locator('.scene-nav-description').boundingBox())!;expect(b.y).toBeGreaterThanOrEqual(a.y+a.height+7.9);await expect(n.locator('strong')).toHaveCSS('font-weight','600');}}
+});
+test('entrances are one-shot and focus makes contact immediately usable',async({page})=>{
+ await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');const h=page.locator('.center-heading h2');await expect(h).toHaveAttribute('data-craft-waiting','');await h.scrollIntoViewIfNeeded();await expect(h).not.toHaveAttribute('data-craft-waiting');await page.locator('#contact-name').focus();expect(await page.locator('.contact form').evaluate(e=>e.getAnimations().length)).toBe(0);
 });
 
-test('scene title leads media, frame stays fixed and progress reverses without a queue', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  const go = async (progress: number) => {
-    await page.evaluate(value => {
-      const node = document.querySelector('.journey')!;
-      const panel = node.querySelector('.journey-cinematic')!;
-      window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - panel.clientHeight) * value, behavior: 'instant' });
-    }, progress);
-    await page.waitForTimeout(850);
-  };
-  await go(.10);
-  const baseline = await page.locator('.scene-materials').boundingBox();
-  for (const progress of [.28, .30, .35, .50, .68, .70, .75, .90, .10]) {
-    await go(progress);
-    const frame = await page.locator('.scene-materials').boundingBox();
-    for (const key of ['x', 'y', 'width', 'height'] as const) expect(Math.abs(frame![key] - baseline![key])).toBeLessThanOrEqual(2);
-  }
-  for (const [progress, next, previous] of [[.29, 1, 0], [.71, 2, 1]] as const) {
-    await go(progress);
-    expect(Number(await page.locator('.scene-text-group').nth(next).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 2);
-    expect(await page.locator('.scene-material').nth(next).evaluate(el => parseFloat(getComputedStyle(el).clipPath.split(' ')[1]))).toBeGreaterThan(95);
-    expect(Number(await page.locator('.scene-material').nth(previous).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 3);
-  }
-  await go(.30);
-  const opacity = await page.locator('.scene-material-space').evaluate(el => getComputedStyle(el).opacity);
-  await page.waitForTimeout(150);
-  expect(await page.locator('.scene-material-space').evaluate(el => getComputedStyle(el).opacity)).toBe(opacity);
-  await page.locator('.scene-navigation button').nth(2).focus();
-  await page.keyboard.press('Enter');
-  await expect(page.locator('.journey')).toHaveAttribute('data-scene', 'lot');
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
-  await expect(page.locator('.journey-static')).toBeVisible();
-  await expect(page.locator('.static-scene')).toHaveCount(3);
+test('a failed scene image keeps full text and exposes the real demo link',async({page})=>{
+ await page.route(/\/media\/top-v2\/project[^/]*\.webp/,route=>route.abort());await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');await seek(page,.1);await expect(page.locator('.scene-material-project .media-failed')).toBeVisible();await expect(page.locator('.journey-cinematic .scene-demo')).toBeVisible();await expect(page.locator('.journey-cinematic .scene-demo')).toHaveAttribute('href','/demo');await expect(page.locator('.scene-body-group').first()).toHaveText(content.journey[0].body);
 });
-
-test('reveals finish when reached and stay readable with reduced motion', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.locator('html')).toHaveClass(/has-js/);
-  await page.locator('.contact-copy').scrollIntoViewIfNeeded();
-  await expect(page.locator('.contact-copy')).toHaveCSS('opacity', '1');
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  for (const selector of ['.section-heading', '.center-heading', '.channels-heading', '.contact-copy', '.contact form']) {
-    const elements = page.locator(selector);
-    for (let i = 0; i < await elements.count(); i++) await expect(elements.nth(i)).toHaveCSS('opacity', '1');
-  }
-});
-
-test('hero line breaks and shared content guides follow the layout viewport', async ({ page }) => {
-  for (const [width, height] of [[390,844],[768,1024],[1024,768],[1280,800],[1440,900],[1920,1080],[1440,700]]) {
-    await page.setViewportSize({ width, height }); await page.goto('/');
-    await page.evaluate(() => document.fonts.ready);
-    const data = await page.evaluate(() => {
-      const W = document.documentElement.clientWidth;
-      const G = W < 600 ? 20 : W < 1100 ? 32 : W < 1280 ? 48 : W < 1400 ? 56 : 64;
-      const C = Math.min(1408, W - 2 * G), L = (W - C) / 2;
-      const box = (selector: string) => document.querySelector(selector)!.getBoundingClientRect();
-      const h = box('h1'), logo = box('.brand .media');
-      const scale = Math.min(logo.width / 1200, logo.height / 600);
-      return { L, R: L + C, hero: box('.hero-copy').x, cta: box('.header-cta').right,
-        logo: logo.x + (logo.width - 1200 * scale) / 2 + 128 * scale,
-        lines: h.height / parseFloat(getComputedStyle(document.querySelector('h1')!).lineHeight),
-        fontSize: parseFloat(getComputedStyle(document.querySelector('h1')!).fontSize) };
-    });
-    for (const x of [data.hero, data.logo]) expect(Math.abs(x - data.L)).toBeLessThanOrEqual(2);
-    expect(Math.abs(data.cta - data.R)).toBeLessThanOrEqual(2);
-    if (width >= 1100) { expect(data.lines).toBeCloseTo(2, 1); expect(data.fontSize).toBeGreaterThanOrEqual(40); }
-
-  }
-});
-
-
-test('full scene text survives mobile and desktop shares text space above navigation and media', async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 }); await page.goto('/');
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  const facade = await page.locator('.cinematic-facade').boundingBox();
-  const media = await page.locator('.scene-materials').boundingBox();
-  const text = await page.locator('.scene-text-zone').boundingBox();
-  expect(facade!.x).toBe(0); expect(facade!.width).toBeGreaterThanOrEqual(1440 * .35);
-  expect(media!.width).toBeCloseTo(720, 0);
-  expect(text!.x).toBeLessThan(media!.x); expect(text!.width).toBeGreaterThan(media!.width);
-  const paragraphs = [
-    'Окружение, архитектура, инфраструктура и расположение корпусов — помогите покупателю увидеть проект целиком и понять, как его преимущества связаны с выбором конкретного лота.',
-    'Покажите, как устроена жизнь внутри проекта: общественные зоны, интерьеры, террасы и виды. Помогите покупателю представить пространство будущего лота и понять, что находится за пределами его планировки.',
-    'Свяжите расположение лота в корпусе и на этаже с его планировкой, пространством и видом. Дайте покупателю последовательно рассмотреть детали выбранного варианта.',
-  ];
-  const descriptions = ['Окружение, архитектура и инфраструктура.', 'Общественные зоны, интерьеры и виды.', 'Расположение, планировка и детали выбора.'];
-  await expect(page.locator('.scene-text-group > p')).toHaveText(paragraphs);
-  await expect(page.locator('.scene-navigation .scene-nav-description')).toHaveText(descriptions);
-  await page.setViewportSize({ width: 390, height: 844 });
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
-  await expect(page.locator('.static-scene > p')).toHaveText(paragraphs);
-  await expect(page.locator('.static-scene-nav .scene-nav-description')).toHaveText(descriptions);
-  for (const paragraph of await page.locator('.static-scene > p').all()) {
-    await expect(paragraph).toBeVisible();
-    expect(await paragraph.evaluate(el => el.scrollHeight <= el.clientHeight + 1)).toBe(true);
-  }
-});
-
-
-test('opaque mask follows the specified overlapping text entry and media phases reversibly', async ({ page }) => {
-  test.setTimeout(45000);
-  await page.goto('/'); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  for (const start of [.14, .56]) {
-    for (const q of [.1, .25, .55, .75, .95, .75, .55, .25, .1]) {
-      await page.evaluate(p => { const n = document.querySelector('.journey')!; window.scrollTo({ top: n.getBoundingClientRect().top + scrollY + (n.clientHeight - innerHeight) * p, behavior: 'instant' }); }, start + .30 * q);
-      await page.waitForTimeout(850);
-      for (const image of await page.locator('.scene-material').all()) await expect(image).toHaveCSS('opacity', '1');
-      const next = start === .14 ? 1 : 2;
-      if (q >= .5) {
-        await expect(page.locator('.scene-navigation button').nth(next)).toHaveAttribute('aria-pressed', 'true');
-        await expect(page.locator('.scene-text-group').nth(next)).toHaveCSS('opacity', '1');
-        await expect(page.locator('.scene-text-group').nth(next)).toHaveAttribute('aria-hidden', 'false');
-      }
-      if (q < .4) expect(await page.locator('.scene-material').nth(next).evaluate(el => parseFloat(getComputedStyle(el).clipPath.split(' ')[1]))).toBeGreaterThan(95);
-    }
-  }
-});
-
-test('image original dialog works by keyboard, restores focus and laptop scenes fit', async ({ page }) => {
-  for (const [width, height] of [[1440,900], [1366,768], [1280,800], [1920,1080]]) {
-    await page.setViewportSize({ width, height }); await page.goto('/'); await page.evaluate(() => document.fonts.ready);
-    await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-    const size = await page.locator('.journey-right').evaluate(el => ({ height: el.clientHeight, content: el.scrollHeight }));
-    expect(size.content).toBeLessThanOrEqual(size.height + 1);
-  }
-  await page.setViewportSize({ width: 1440, height: 900 });
-  const link = page.locator('.journey-cinematic .scene-expand');
-  await link.focus(); await page.keyboard.press('Enter');
-  await expect(page.getByRole('dialog')).toBeVisible();
-  await expect(page.getByRole('dialog').locator('img')).toHaveAttribute('src', /recovery-original\/project.png/);
-  await page.keyboard.press('Escape'); await expect(page.getByRole('dialog')).toBeHidden(); await expect(link).toBeFocused();
-  await page.locator('.scene-navigation button').nth(2).focus(); await page.keyboard.press('Space');
-  await expect(page.locator('.journey')).toHaveAttribute('data-scene', 'lot');
-  await page.setViewportSize({ width: 1440, height: 500 }); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
-  expect(await page.locator('.journey').evaluate(el => el.clientHeight)).toBeLessThan(5000);
-});
-
-test('provided RF Dewi Expanded and Inter Tight render Cyrillic glyphs without fallback or compressed tracking', async ({ page }) => {
-  await page.goto('/'); await page.evaluate(() => document.fonts.ready);
-  const cdp = await page.context().newCDPSession(page);
-  await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
-  const { root } = await cdp.send('DOM.getDocument');
-  for (const [selector, family] of [['h1', 'RF Dewi Expanded'], ['.scene-text-group h2', 'RF Dewi Expanded'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'RF Dewi Expanded']] as const) {
-    const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector });
-    const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
-    expect(fonts.length).toBeGreaterThan(0);
-    for (const font of fonts) { expect(font.familyName).toMatch(family.startsWith('RF Dewi Expanded') ? /^RF Dewi Expanded/ : /^Inter Tight$/); expect(font.isCustomFont).toBe(true); expect(font.glyphCount).toBeGreaterThan(0); }
-    if (selector !== '.scene-text-group p') expect(await page.locator(selector).first().evaluate(el=>getComputedStyle(el).letterSpacing)).toMatch(/^(normal|0px)$/);
-  }
-});
-
-
-test('owner type contract: exact Expanded weights, breakpoints, clean hero and headings', async ({ page }) => {
-  for (const [width, height] of [[1440,900],[1366,768],[1280,800],[1920,1080],[768,1024],[390,844],[320,844]]) {
-    await page.setViewportSize({width,height}); await page.goto('/'); await assertTwinType(page);
-    const h2=page.locator(width>=1280?'.scene-text-group h2':'.static-scene h2').first();
-    const size=width>=1600?48:width>=1400?44:width>=1280?40:width>=600?36:width>=360?28:26;
-    await expect(h2).toHaveCSS('font-size', `${size}px`); await expect(h2).toHaveCSS('font-weight','400');
-    if(width>=1280) await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
-    if(width<600) {
-      const image=await page.locator('.hero-image').boundingBox(),copy=await page.locator('.hero-content').boundingBox();
-      expect(image!.y).toBeGreaterThanOrEqual(copy!.y+copy!.height-1); expect(image!.height).toBe(340);
-    }
-  }
-});
-
-
-test('craft hero CTA, full height and separated navigation geometry', async ({ page }) => {
-  for (const [width,height] of [[1280,800],[1366,768],[1440,900],[1920,1080]]) {
-    await page.setViewportSize({width,height}); await page.goto('/');
-    await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
-    await expect(page.locator('.hero h1')).toHaveCSS('font-weight','400');
-    expect((await page.locator('.hero').boundingBox())!.height).toBe(height);
-    await expect(page.locator('.header-cta')).toHaveText('Обсудить проект');
-    await expect(page.locator('.header-cta')).toHaveAttribute('href', '/#contact');
-    await expect(page.locator('.hero .actions a')).toHaveCount(1);
-    await expect(page.locator('.hero-subtitle-row').last()).toHaveCSS('white-space','nowrap');
-    const media = (await page.locator('.scene-materials').boundingBox())!;
-    for (const button of await page.locator('.scene-navigation button').all()) {
-      const title=button.locator('strong'), description=button.locator('.scene-nav-description');
-      await expect(title).toHaveCSS('display','block'); await expect(description).toHaveCSS('display','block');
-      await expect(title).toHaveCSS('font-weight','400'); await expect(title).toHaveCSS('font-size','18px');
-      const a=(await title.boundingBox())!,b=(await description.boundingBox())!;
-      expect(b.y-a.y-a.height).toBeGreaterThanOrEqual(8);
-      expect(a.x+a.width).toBeLessThan(media.x); expect(b.x+b.width).toBeLessThan(media.x);
-      expect(await button.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
-    }
-  }
-});
-
-test('craft entrance is one-shot, focus cancels delays and reduced motion clears waiting', async ({page})=>{
-  await page.goto('/'); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
-  const header=page.locator('.center-heading');
-  await expect(header).toHaveAttribute('data-craft-waiting','');
-  await header.scrollIntoViewIfNeeded(); await expect(header).not.toHaveAttribute('data-craft-waiting');
-  await page.waitForTimeout(1100);
-  await page.locator('.contact input').first().focus();
-  expect(await page.locator('.contact form').evaluate(e=>e.getAnimations().length)).toBe(0);
-  await expect(page.locator('.contact form')).toHaveCSS('opacity','1');
-  await page.emulateMedia({reducedMotion:'reduce'});
-  await expect(page.locator('[data-craft-waiting]')).toHaveCount(0);
+test('mobile menu retains keyboard-accessible routes',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/');await page.locator('.mobile-navigation summary').focus();await page.keyboard.press('Enter');const nav=page.getByRole('navigation',{name:'Мобильная навигация'});await expect(nav).toBeVisible();await nav.getByRole('link',{name:'Продукт',exact:true}).click();await expect(page).toHaveURL(/#product$/);
 });

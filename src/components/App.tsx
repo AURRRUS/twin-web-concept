@@ -13,6 +13,7 @@ import { fixture, initialSelection, validateSelection, type Selection } from '..
 
 export default function App({ page }: { page: 'home' | 'demo' }) {
   const [selection, setSelection] = useState<Selection>(initialSelection);
+  const [hydrated, setHydrated] = useState(false);
   const [topic, setTopic] = useState('');
   const [selectionNotice, setSelectionNotice] = useState('');
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
         try { const stored = sessionStorage.getItem('twin-selection-v1'); if (stored) setSelection(validateSelection(JSON.parse(stored))); } catch { /* Storage is optional. */ }
       }
     };
-    load(); window.addEventListener('popstate', load);
+    load(); setHydrated(true); window.addEventListener('popstate', load);
     document.documentElement.classList.add('has-js');
     return () => window.removeEventListener('popstate', load);
   }, []);
@@ -49,7 +50,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     return () => { cleanup(); document.removeEventListener('astro:before-swap', leave); };
   }, []);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
-    <main id="main">{page === 'home' && <><Hero /><Journey /></>}
+    <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero /><Journey /></>}
       {selectionNotice && <p className="selection-notice" role="status">{selectionNotice}</p>}
       <ProductDemo selection={selection} onChange={updateSelection} full={page === 'demo'} />
       {page === 'home' && <><Composition onTopic={setTopic} /><Channels /><Delivery /><ContactForm topic={topic} onTopic={setTopic} selection={selection} /></>}

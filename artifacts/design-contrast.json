@@ -1,0 +1,74 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "samples": [
+      {
+        "selector": ".hero h1 .bronze",
+        "color": "rgb(139, 97, 56)",
+        "minimumContrastAcrossTextBounds": 4.454,
+        "threshold": 3
+      },
+      {
+        "selector": ".hero-description",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 10.917,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".hero-channels",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 12.786,
+        "threshold": 4.5
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "samples": [
+      {
+        "selector": ".hero h1 .bronze",
+        "color": "rgb(139, 97, 56)",
+        "minimumContrastAcrossTextBounds": 4.454,
+        "threshold": 3
+      },
+      {
+        "selector": ".hero-description",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 11.653,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".hero-channels",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 13.209,
+        "threshold": 4.5
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "samples": [
+      {
+        "selector": ".hero h1 .bronze",
+        "color": "rgb(139, 97, 56)",
+        "minimumContrastAcrossTextBounds": 5.434,
+        "threshold": 3
+      },
+      {
+        "selector": ".hero-description",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 15.079,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".hero-channels",
+        "color": "rgb(32, 39, 47)",
+        "minimumContrastAcrossTextBounds": 15.079,
+        "threshold": 4.5
+      }
+    ]
+  }
+]

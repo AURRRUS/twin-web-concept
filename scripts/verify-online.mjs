@@ -1,117 +1,41 @@
-import { chromium } from '@playwright/test';
+import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
-import { assertTwinType } from './assert-twin-type.mjs';
-const base = 'https://aurrrus.github.io/twin-web-concept/';
-const expected = process.env.TWIN_EXPECTED_COMMIT;
-const result = { site: base, expectedSourceCommit: expected || null, status: 'RUNNING', checkedAt: new Date().toISOString(), checks: [], pageErrors: [], failedResponses: [] };
-mkdirSync('artifacts', { recursive: true });
-let browser;
-try {
-  let version;
-  for (let n = 0; n < (expected ? 30 : 1); n++) {
-    const response = await fetch(base + 'build-version.json?check=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
-    assert.equal(response.status, 200, 'Build manifest HTTP'); version = await response.json();
-    if (!expected || version.sourceCommit === expected) break;
-    if (n === 29) throw new Error('Expected source commit has not reached GitHub Pages');
-    await new Promise(resolve => setTimeout(resolve, 10000));
-  }
-  if (expected) assert.equal(version.sourceCommit, expected);
-  result.deployedVersion = version;
-  result.checks.push('Published manifest matches exact source commit');
-  const media = JSON.parse(readFileSync(new URL('../src/lib/media.json', import.meta.url), 'utf8'));
-  await Promise.all(['topHero', 'topFacade', 'sceneProject', 'sceneSpace', 'sceneLot'].map(async name => {
-    const file = media[name];
-    const response = await fetch(`${base}media/${file.file}?v=${file.revision}`, { signal: AbortSignal.timeout(15000) });
-    assert.equal(response.status, 200);
-    assert.equal(createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex').slice(0, 12), file.revision, `Published asset differs: ${name}`);
-  }));
-  result.checks.push('All five current top-screen images match local checksums');
-  const executablePath = process.env.TWIN_CHROMIUM_PATH || ['/usr/bin/chromium', '/usr/bin/google-chrome', '/opt/google/chrome/chrome'].find(existsSync);
-  browser = await chromium.launch({ ...(executablePath ? { executablePath } : {}), args: ['--no-sandbox'], ...(process.env.HTTPS_PROXY ? { proxy: { server: process.env.HTTPS_PROXY } } : {}) });
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-  const loadedFonts = new Set();
-  page.on('pageerror', error => result.pageErrors.push(error.message));
-  page.on('response', response => {
-    if (response.status() >= 400) result.failedResponses.push({ url: response.url(), status: response.status() });
-    if (/RFDewiExpanded-.*\.ttf|inter-tight-variable.*\.woff2/.test(response.url()) && response.status() === 200) loadedFonts.add(response.url());
-  });
-  assert.equal((await page.goto(`${base}?v=${(expected || version.sourceCommit).slice(0, 7)}`, { waitUntil: 'networkidle' })).status(), 200);
-  await page.locator('html.has-js').waitFor();
-  result.typography = await assertTwinType(page);
-  for (const role of ['Regular', 'Semibold', 'Bold']) assert([...loadedFonts].some(url => url.includes(`RFDewiExpanded-${role}`)), `Font HTTP 200 missing: ${role}`);
-  assert([...loadedFonts].some(url => url.includes('inter-tight-variable')));
-  assert.equal(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily.split(',')[0].replace(/["']/g, '').trim()), 'Inter Tight');
-  result.checks.push('Expanded 400/600/700 and Inter Tight HTTP 200; exact H1 metrics and rendered custom Expanded glyphs; no terminal heading dots or hero overlay');
-  await page.waitForFunction(() => document.querySelector('.journey')?.dataset.enhanced === 'true');
-  assert.equal((await page.locator('.hero').boundingBox()).height, 900);
-  assert.equal(await page.locator('.header-cta').textContent(), 'Обсудить проект');
-  assert.equal(await page.locator('.header-cta').getAttribute('href'), '/twin-web-concept/#contact');
-  assert.equal(await page.locator('.hero .actions a').count(), 1);
-  assert.equal(await page.locator('.hero-copy p').textContent(), 'Раскрывайте преимущества проекта и помогайте покупателю выбирать — на сайте, дистанционно, через агентов и в офисе продаж.');
-  assert(Math.abs(await page.locator('.journey').evaluate(e=>e.clientHeight) - 900*3.4) <= 1);
-  result.checks.push('Craft hero Regular400, 100svh, outlined contact CTA, single demo CTA and exact two-row subtitle');
-  let frame;
-  for (const [id, progress] of [['project', .07], ['space', .5], ['lot', .93], ['space', .5], ['project', .07]]) {
-    await page.locator('.journey').evaluate((el, p) => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + (el.clientHeight - innerHeight) * p, behavior: 'instant' }), progress);
-    await page.waitForFunction(id => document.querySelector('.journey').dataset.scene === id, id);
-    const box = await page.locator('.scene-materials').boundingBox();
-    const viewport = page.viewportSize().width, sceneWidth = Math.min(viewport, 1920);
-    const gutter = viewport >= 1400 ? 64 : 56;
-    const inset = Math.max(gutter, (sceneWidth - 1408) / 2);
-    const expectedWidth = sceneWidth * .65 + 80 - 208 - 24 - inset;
-    assert(Math.abs(box.width - expectedWidth) <= 1, `Media geometry ${box.width} != ${expectedWidth}`);
-    if (frame) for (const key of ['x', 'y', 'width', 'height']) assert(Math.abs(frame[key] - box[key]) <= 1);
-    frame = box;
-    await page.locator(`.scene-material-${id} img`).evaluate(async img => { img.loading = 'eager'; await img.decode(); });
-  }
-  result.checks.push('Three reversible scenes have stable frames at the specified geometry');
-  await page.waitForFunction(() => document.querySelector('.delivery-host').dataset.enhanced === 'true');
-  let prefix, suffix;
-  for (const progress of [.68,.84,.98,.68]) {
-    await page.locator('.delivery-host').evaluate((el,p)=>window.scrollTo({top:el.getBoundingClientRect().top+scrollY+(el.clientHeight-innerHeight)*p,behavior:'instant'}),progress);
-    await page.waitForFunction(p=>Math.abs(Number(document.querySelector('.delivery-host').dataset.progress)-p)<.002,progress);
-    const visual = await page.locator('.delivery-copy').evaluate(el=>({prefix:el.querySelector('.effect-row>span').getBoundingClientRect().x,suffix:el.querySelector('.effect-row>span:last-child').getBoundingClientRect().x,unit:el.querySelector('.iv-probe').getBoundingClientRect().width,width:el.querySelector('.iv-window').getBoundingClientRect().width}));
-    if (prefix === undefined) {prefix=visual.prefix;suffix=visual.suffix;}
-    assert(Math.abs(visual.prefix-prefix)<1, 'Effect prefix moved during insertion');
-    if(progress===.98) {assert(visual.unit>0);assert(Math.abs(visual.suffix-suffix-visual.unit)<1);assert(Math.abs(visual.width-visual.unit)<1);}
-  }
-  result.checks.push('Published Delivery scrolls and reverses; actual iv glyph width unfolds while Effect prefix stays fixed');
-  await page.locator('.journey-cinematic .scene-expand').click();
-  await page.getByRole('dialog').locator('img').evaluate(async img => await img.decode());
-  await page.keyboard.press('Escape');
-  await page.locator('.component-client-tools').click(); await page.getByRole('dialog').waitFor();
-  await page.keyboard.press('Escape'); await page.getByRole('dialog').waitFor({ state: 'hidden' });
-  await page.getByRole('tab', { name: 'Агент', exact: true }).click();
-  assert.equal(await page.getByRole('tab', { name: 'Агент', exact: true }).getAttribute('aria-selected'), 'true');
-  await page.getByRole('tab', { name: 'Вид', exact: true }).click();
-  await page.getByRole('link', { name: 'Открыть демо', exact: true }).click();
-  await page.getByText('Настоящий Twin пока не подключён.').waitFor();
-  assert.equal(await page.getByRole('tab', { name: 'Вид', exact: true }).getAttribute('aria-selected'), 'true');
-  assert((await page.url()).includes('/twin-web-concept/demo'));
-  result.checks.push('Original dialog, component dialog, channel tabs and selected view handoff to /demo work');
-  for (const [width, height] of [[1366,768], [1280,800], [1920,1080], [768,1024], [390,844], [320,844]]) {
-    await page.setViewportSize({ width, height }); await page.goto(base, { waitUntil: 'networkidle' }); await assertTwinType(page);
-    if (width >= 1280) {
-      await page.waitForFunction(() => document.querySelector('.journey').dataset.enhanced === 'true');
-      assert(await page.locator('.scene-navigation').evaluate(nav=>{
-        const edge=document.querySelector('.scene-materials').getBoundingClientRect().left;
-        return [...nav.querySelectorAll('button')].every(button=>{
-          const title=button.querySelector('strong'),description=button.querySelector('.scene-nav-description');
-          const a=title.getBoundingClientRect(),b=description.getBoundingClientRect();
-          return getComputedStyle(title).display==='block'&&getComputedStyle(description).display==='block'&&getComputedStyle(title).fontWeight==='400'&&b.top>=a.bottom+7.9&&a.right<edge&&b.right<edge&&button.scrollWidth<=button.clientWidth;
-        });
-      }), 'Published navigation has separated readable rows without image collision');
-    }
-    else {assert.equal(await page.locator('.static-scene').count(), 3);assert.equal(await page.locator('.delivery-host').getAttribute('data-enhanced'),'false');}
-  }
-  result.checks.push('Published laptop, wide, tablet and phone breakpoints match owner contract');
-  assert.deepEqual(result.pageErrors, []); assert.deepEqual(result.failedResponses, []);
-  result.status = 'PASS';
-} catch (error) { result.status = 'FAIL'; result.error = String(error); process.exitCode = 1; }
-finally {
-  if (browser) await browser.close();
-  writeFileSync('artifacts/online-verification.json', JSON.stringify(result, null, 2) + '\n');
-  console.log(JSON.stringify(result, null, 2));
-}
+import {createHash} from 'node:crypto';
+import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {assertTwinType} from './assert-twin-type.mjs';
+const base='https://aurrrus.github.io/twin-web-concept/',expected=process.env.TWIN_EXPECTED_COMMIT;
+const copy=JSON.parse(readFileSync(new URL('../src/lib/designContent.json',import.meta.url),'utf8'));
+const result={site:base,expectedSourceCommit:expected||null,status:'RUNNING',checkedAt:new Date().toISOString(),checks:[],pageErrors:[],failedResponses:[]};
+mkdirSync('artifacts',{recursive:true});let browser;
+try{
+ let version;
+ for(let i=0;i<(expected?30:1);i++){const r=await fetch(base+'build-version.json?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(15000)});assert.equal(r.status,200);version=await r.json();if(!expected||version.sourceCommit===expected)break;if(i===29)throw Error('Expected source commit has not reached GitHub Pages');await new Promise(r=>setTimeout(r,10000));}
+ if(expected)assert.equal(version.sourceCommit,expected);result.deployedVersion=version;result.checks.push('Exact published source commit confirmed');
+ const media=JSON.parse(readFileSync(new URL('../src/lib/media.json',import.meta.url),'utf8'));
+ await Promise.all(['topHero','topFacade','sceneProject','sceneSpace','sceneLot'].map(async key=>{const m=media[key],r=await fetch(`${base}media/${m.file}?v=${m.revision}`,{signal:AbortSignal.timeout(15000)});assert.equal(r.status,200);assert.equal(createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex').slice(0,12),m.revision);}));result.checks.push('Five original-role optimized assets match source hashes');
+ const executablePath=process.env.TWIN_CHROMIUM_PATH||['/usr/bin/chromium','/usr/bin/google-chrome'].find(existsSync);
+ browser=await chromium.launch({...(executablePath?{executablePath}:{}),args:['--no-sandbox'],...(process.env.HTTPS_PROXY?{proxy:{server:process.env.HTTPS_PROXY}}:{})});
+ const page=await browser.newPage({viewport:{width:1440,height:900}}),fonts=new Set();
+ page.on('pageerror',e=>result.pageErrors.push(e.message));page.on('response',r=>{if(r.status()>=400)result.failedResponses.push({url:r.url(),status:r.status()});if(r.status()===200&&/RFDewiExpanded-.*\.ttf|inter-tight-variable.*\.woff2/.test(r.url()))fonts.add(r.url());});
+ const ready=async()=>{await page.locator('main[data-hydrated="true"]').waitFor();await page.waitForFunction(()=>document.querySelector('.journey').dataset.enhanced!=='pending');};
+ assert.equal((await page.goto(base+'?v='+version.sourceCommit.slice(0,7),{waitUntil:'networkidle'})).status(),200);await ready();result.typography=await assertTwinType(page);
+ for(const role of['Regular','Semibold','Bold'])assert([...fonts].some(f=>f.includes('RFDewiExpanded-'+role)));assert([...fonts].some(f=>f.includes('inter-tight-variable')));
+ assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).fontFamily.split(',')[0].replace(/["']/g,'').trim()),'Twin Inter Tight');result.checks.push('True Expanded600 heading,400 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified');
+ const normalize=s=>s.replace(/\s+/g,' ').trim();
+ const hero=normalize((await page.locator('.hero-description').textContent())+' '+await page.locator('.hero-channels').textContent());assert.equal(hero,copy.hero.body);assert.equal(await page.locator('.hero .actions a').count(),1);assert.equal((await page.locator('.hero').boundingBox()).height,900);assert.equal(await page.locator('.hero h1 .bronze').textContent(),'инфраструктура продаж');
+ assert.equal(await page.locator('.header-cta').getAttribute('href'),'/twin-web-concept/#contact');result.checks.push('Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes');
+ assert.deepEqual(await page.locator('.scene-body-group').allTextContents(),copy.journey.map(s=>s.body));
+ let frame;
+ const seek=async(selector,p)=>{await page.locator(selector).evaluate((n,v)=>scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.clientHeight-innerHeight)*v,behavior:'instant'}),p);if(selector==='.journey')await page.waitForFunction(v=>Math.abs(Number(document.querySelector('.journey').style.getPropertyValue('--scene-progress'))-v)<.001,p);else await page.waitForFunction(v=>Math.abs(Number(document.querySelector('.delivery-host').dataset.progress)-v)<.002,p);};
+ for(const[id,p]of[['project',.1],['space',.525],['lot',.925],['space',.525],['project',.1]]){await seek('.journey',p);await page.waitForFunction(id=>document.querySelector('.journey').dataset.scene===id,id);const box=await page.locator('.scene-materials').boundingBox();assert(Math.abs(box.width-768.4)<1);assert(Math.abs(box.x+box.width-1440)<1);if(frame)for(const k of['x','y','width','height'])assert(Math.abs(frame[k]-box[k])<1);frame=box;assert.equal(await page.locator('.scene-navigation button[aria-current="step"]').count(),1);}
+ await seek('.journey',.30);assert(Number(await page.locator('.scene-title-group').nth(1).evaluate(e=>getComputedStyle(e).opacity))>.995);assert(Number(await page.locator('.scene-material').nth(1).evaluate(e=>getComputedStyle(e).opacity))<.005);await seek('.journey',.40);assert((await page.locator('.scene-material').nth(1).boundingBox()).width>frame.width);result.checks.push('Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking');
+ let prefix,suffix;
+ for(const p of[.55,.74,.90,.55]){await seek('.delivery-host',p);const v=await page.locator('.delivery-copy').evaluate(e=>({prefix:e.querySelector('.effect-row>span').getBoundingClientRect().x,suffix:e.querySelector('.effect-row>span:last-child').getBoundingClientRect().x,unit:e.querySelector('.iv-probe').getBoundingClientRect().width}));if(prefix===undefined){prefix=v.prefix;suffix=v.suffix;}assert(Math.abs(v.prefix-prefix)<1);if(p===.90){assert(v.unit>0);assert(Math.abs(v.suffix-suffix-v.unit)<1);}}
+ assert.equal(await page.locator('.delivery-quality a').count(),1);assert.equal(await page.locator('.delivery .badge,.delivery .poster-action').count(),0);assert.equal(await page.locator('.delivery-answer').textContent(),copy.triangle.heading);result.checks.push('Triangle qualities, fixed numbers, one real demo proof link, no capsules/fake Play; measured reversible iv insertion');
+ await page.locator('.journey-cinematic .scene-expand').click();await page.getByRole('dialog').locator('img').evaluate(async e=>e.decode());await page.keyboard.press('Escape');await page.locator('.component-client-tools').click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});
+ await page.getByRole('tab',{name:'Агент',exact:true}).click();assert.equal(await page.getByRole('tab',{name:'Агент',exact:true}).getAttribute('aria-selected'),'true');await page.getByRole('tab',{name:'Вид',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.lot-card [aria-selected="true"]')?.textContent==='Вид');await page.getByRole('link',{name:'Открыть демо',exact:true}).click();await page.getByText('Настоящий Twin пока не подключён.').waitFor();assert.equal(await page.getByRole('tab',{name:'Вид',exact:true}).getAttribute('aria-selected'),'true');assert(page.url().includes('/twin-web-concept/demo'));result.checks.push('Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work');
+ for(const[width,height]of[[1920,1080],[1440,800],[1280,800],[1024,900],[768,900],[390,844],[360,844],[320,844]]){await page.setViewportSize({width,height});await page.goto(base,{waitUntil:'networkidle'});await ready();await assertTwinType(page);if(width<1280){assert.equal(await page.locator('.journey').getAttribute('data-enhanced'),'false');assert.equal(await page.locator('.delivery-host').getAttribute('data-enhanced'),'false');assert.equal(await page.locator('.static-scene').count(),3);}}
+ result.checks.push('Published1920/1440/1280/1024/768/390/360/320 widths, full text and native mobile flow');
+ await page.emulateMedia({reducedMotion:'reduce'});await page.setViewportSize({width:1440,height:900});await page.goto(base,{waitUntil:'networkidle'});await ready();assert.equal(await page.locator('.journey').getAttribute('data-enhanced'),'false');assert.equal(await page.locator('.delivery-word-static').textContent(),'Эффективно');result.checks.push('Reduced motion leaves full static content and final word');
+ assert.deepEqual(result.pageErrors,[]);assert.deepEqual(result.failedResponses,[]);result.status='PASS';
+}catch(e){result.status='FAIL';result.error=String(e);process.exitCode=1;}finally{if(browser)await browser.close();writeFileSync('artifacts/online-verification.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));}
