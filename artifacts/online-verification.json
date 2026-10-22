@@ -1,34 +1,34 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "1a01c58731d53490c4f0709cb8ff0365f94ac85a",
+  "expectedSourceCommit": "4e92edd1a1d98f5a1bcbe04ad1a8380537841cb9",
   "status": "PASS",
-  "checkedAt": "2026-10-22T17:56:27.318Z",
+  "checkedAt": "2026-10-22T22:41:18.709Z",
   "checks": [
     "Exact published source commit confirmed",
     "Five original-role optimized assets match source hashes",
-    "True Expanded600 heading,400 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
+    "True Expanded700 heading,400 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
     "Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes",
     "Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking",
     "Triangle qualities, fixed numbers, one real demo proof link, no capsules/fake Play; measured reversible iv insertion",
     "Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work",
     "Published1920/1440/1280/1024/768/390/360/320 widths, full text and native mobile flow",
-    "Reduced motion leaves full static content and final word"
+    "Reduced motion retains desktop columns, manual scene buttons and final word"
   ],
   "pageErrors": [],
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "1a01c58731d53490c4f0709cb8ff0365f94ac85a",
-    "builtAt": "2026-10-22T17:54:48.595Z",
-    "previousDeploymentCommit": "536a01879afa72a0f9282ccd42875bac9405b443"
+    "sourceCommit": "4e92edd1a1d98f5a1bcbe04ad1a8380537841cb9",
+    "builtAt": "2026-10-22T22:40:58.152Z",
+    "previousDeploymentCommit": "678e16de5c079bea8f7f564afa2b4e46fdcb0a63"
   },
   "typography": {
     "width": 1440,
     "family": "Twin Dewi Expanded",
-    "weight": "600",
+    "weight": "700",
     "size": 44,
-    "leading": 49.28,
-    "tracking": -0.66,
+    "leading": 51.92,
+    "tracking": 0,
     "wash": false,
     "headings": [
       "Цифровая инфраструктура продаж девелоперского проекта",
@@ -77,5 +77,1888 @@
       }
     ],
     "overflow": false
-  }
+  },
+  "computedMetrics": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 44,
+        "leading": 51.92,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "host": 3780,
+        "panel": 900
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 56,
+        "leading": 66.08,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 46,
+          "leading": 56.12,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "host": 4536,
+        "panel": 1080
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 44,
+        "leading": 51.92,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38,
+          "leading": 46.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "false",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "host": 3360,
+        "panel": 800
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 40,
+        "leading": 47.2,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 35.3333,
+          "leading": 43.1067,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "host": 3360,
+        "panel": 800
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 38,
+        "leading": 44.84,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "false",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": false,
+        "host": 1278.578125,
+        "panel": 1278.578125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 38,
+        "leading": 44.84,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 32,
+          "leading": 39.04,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "mobile",
+        "motion": "false",
+        "staticVisible": true
+      },
+      "triangle": {
+        "active": false,
+        "host": 1278.578125,
+        "panel": 1278.578125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 29,
+        "leading": 34.22,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "mobile",
+        "motion": "false",
+        "staticVisible": true
+      },
+      "triangle": {
+        "active": false,
+        "host": 1257.0625,
+        "panel": 1257.0625
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 844
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 29,
+        "leading": 34.22,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 27,
+          "leading": 32.94,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "mobile",
+        "motion": "false",
+        "staticVisible": true
+      },
+      "triangle": {
+        "active": false,
+        "host": 1285.859375,
+        "panel": 1285.859375
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 700,
+        "size": 25,
+        "leading": 29.5,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 25,
+          "leading": 30.5,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".static-scene>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 26.35,
+          "tracking": 0.17,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 25,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.16,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "mobile",
+        "motion": "false",
+        "staticVisible": true
+      },
+      "triangle": {
+        "active": false,
+        "host": 1302.671875,
+        "panel": 1302.671875
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    }
+  ]
 }
