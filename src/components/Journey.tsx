@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Media } from './Media';
-import { journeyFrame } from '../lib/journeyMotion';
+import { journeyFrame, createProgressDriver, sceneTargets } from '../lib/journeyMotion';
 import content from '../lib/journeyContent.json';
 import { sitePath } from '../lib/paths';
 
 const materials = [
-  { media: 'sceneProject', alt: 'Иллюстрация интерфейса: инфраструктура прибрежного проекта', target: .09 },
-  { media: 'sceneSpace', alt: 'Иллюстрация интерфейса: терраса с видом на море', target: .50 },
-  { media: 'sceneLot', alt: 'Иллюстрация интерфейса: план этажа и выбранный лот', target: .91 },
+  { media: 'sceneProject', alt: 'Иллюстрация интерфейса: инфраструктура прибрежного проекта', target: sceneTargets[0] },
+  { media: 'sceneSpace', alt: 'Иллюстрация интерфейса: терраса с видом на море', target: sceneTargets[1] },
+  { media: 'sceneLot', alt: 'Иллюстрация интерфейса: план этажа и выбранный лот', target: sceneTargets[2] },
 ] as const;
 const scenes = content.journey.map((scene, index) => ({ ...scene, ...materials[index] }));
 type Scene = typeof scenes[number];
@@ -30,14 +30,14 @@ export function Journey() {
     const panel = node.querySelector<HTMLElement>('.journey-cinematic')!;
     const desktop = matchMedia('(min-width: 1280px)');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    let enabled = false, raf = 0, disposed = false, fontsReady = false;
+    let enabled = false, disposed = false, fontsReady = false;
     let current = { active: -1, title: -1, explanation: -1 };
-    const update = () => {
-      raf = 0;
-      if (document.hidden || !enabled) return;
+    let driver: ReturnType<typeof createProgressDriver> | undefined;
+    const read = () => {
       const rect = node.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, node.offsetHeight - panel.offsetHeight)));
-      const frame = journeyFrame(progress);
+      return Math.max(0, Math.min(1, -rect.top / Math.max(1, node.offsetHeight - panel.offsetHeight)));
+    };
+    const write = (frame: ReturnType<typeof journeyFrame>, progress: number) => {
       for (const group of ['text', 'textY', 'clip', 'stack'] as const) {
         frame[group].forEach((value, index) => node.style.setProperty(`--${group}-${index}`, `${value}${group === 'textY' ? 'px' : group === 'clip' ? '%' : ''}`));
       }
@@ -48,10 +48,10 @@ export function Journey() {
         setReading(current);
       }
     };
-    const request = () => { if (!raf && !document.hidden && enabled) raf = requestAnimationFrame(update); };
+    const request = () => driver?.request();
     const configure = () => {
       if (disposed || !fontsReady) return;
-      cancelAnimationFrame(raf); raf = 0;
+      driver?.destroy(); driver = undefined;
       let fits = desktop.matches && innerHeight >= 680 && !reduced.matches;
       if (fits) {
         // Measure the real text and image footprint, including the longest hidden text group.
@@ -66,9 +66,10 @@ export function Journey() {
         fits = needed <= innerHeight;
         delete node.dataset.measuring;
       }
-      enabled = fits; panel.hidden = !fits; setEnhanced(fits); setLayoutReady(true); request();
+      enabled = fits; panel.hidden = !fits; setEnhanced(fits); setLayoutReady(true);
+      if (fits) { driver = createProgressDriver(read, write); requestAnimationFrame(() => { if (!disposed) driver?.snap(); }); }
     };
-    const visibility = () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else request(); };
+    const visibility = () => { if (document.hidden) { driver?.destroy(); driver = undefined; } else if (enabled) { driver = createProgressDriver(read, write); driver.snap(); } };
     jump.current = id => {
       const scene = scenes.find(item => item.id === id);
       if (!scene) return;
@@ -90,7 +91,7 @@ export function Journey() {
     window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', configure);
     window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
     return () => {
-      disposed = true; cancelAnimationFrame(raf); decode.disconnect(); resize.disconnect();
+      disposed = true; driver?.destroy(); decode.disconnect(); resize.disconnect();
       desktop.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
       window.removeEventListener('scroll', request); window.removeEventListener('resize', configure);
       window.removeEventListener('twin:journey', onJump); document.removeEventListener('visibilitychange', visibility);

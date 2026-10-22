@@ -26,7 +26,7 @@ test('scene title leads media, frame stays fixed and progress reverses without a
       const panel = node.querySelector('.journey-cinematic')!;
       window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - panel.clientHeight) * value, behavior: 'instant' });
     }, progress);
-    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    await page.waitForTimeout(850);
   };
   await go(.10);
   const baseline = await page.locator('.scene-materials').boundingBox();
@@ -35,10 +35,10 @@ test('scene title leads media, frame stays fixed and progress reverses without a
     const frame = await page.locator('.scene-materials').boundingBox();
     for (const key of ['x', 'y', 'width', 'height'] as const) expect(Math.abs(frame![key] - baseline![key])).toBeLessThanOrEqual(2);
   }
-  for (const [progress, next, previous] of [[.25, 1, 0], [.69, 2, 1]] as const) {
+  for (const [progress, next, previous] of [[.29, 1, 0], [.71, 2, 1]] as const) {
     await go(progress);
     expect(Number(await page.locator('.scene-text-group').nth(next).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 2);
-    expect(await page.locator('.scene-material').nth(next).evaluate(el => getComputedStyle(el).clipPath)).toBe('inset(100% 0px 0px)');
+    expect(await page.locator('.scene-material').nth(next).evaluate(el => parseFloat(getComputedStyle(el).clipPath.split(' ')[1]))).toBeGreaterThan(95);
     expect(Number(await page.locator('.scene-material').nth(previous).evaluate(el => getComputedStyle(el).opacity))).toBeCloseTo(1, 3);
   }
   await go(.30);
@@ -118,20 +118,21 @@ test('full scene text survives mobile and desktop shares text space above naviga
 });
 
 
-test('opaque mask never blends UI and the complete text changes before the image', async ({ page }) => {
+test('opaque mask follows the specified overlapping text entry and media phases reversibly', async ({ page }) => {
+  test.setTimeout(45000);
   await page.goto('/'); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  for (const start of [.18, .62]) {
-    for (const q of [.1, .25, .5, .75, .95, .75, .5, .25, .1]) {
-      await page.evaluate(p => { const n = document.querySelector('.journey')!; window.scrollTo({ top: n.getBoundingClientRect().top + scrollY + (n.clientHeight - innerHeight) * p, behavior: 'instant' }); }, start + .2 * q);
-      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  for (const start of [.14, .56]) {
+    for (const q of [.1, .25, .55, .75, .95, .75, .55, .25, .1]) {
+      await page.evaluate(p => { const n = document.querySelector('.journey')!; window.scrollTo({ top: n.getBoundingClientRect().top + scrollY + (n.clientHeight - innerHeight) * p, behavior: 'instant' }); }, start + .30 * q);
+      await page.waitForTimeout(850);
       for (const image of await page.locator('.scene-material').all()) await expect(image).toHaveCSS('opacity', '1');
-      const next = start === .18 ? 1 : 2;
-      if (q >= .35) {
+      const next = start === .14 ? 1 : 2;
+      if (q >= .5) {
         await expect(page.locator('.scene-navigation button').nth(next)).toHaveAttribute('aria-pressed', 'true');
         await expect(page.locator('.scene-text-group').nth(next)).toHaveCSS('opacity', '1');
         await expect(page.locator('.scene-text-group').nth(next)).toHaveAttribute('aria-hidden', 'false');
       }
-      if (q < .35) expect(await page.locator('.scene-material').nth(next).evaluate(el => getComputedStyle(el).clipPath)).toBe('inset(100% 0px 0px)');
+      if (q < .4) expect(await page.locator('.scene-material').nth(next).evaluate(el => parseFloat(getComputedStyle(el).clipPath.split(' ')[1]))).toBeGreaterThan(95);
     }
   }
 });
@@ -160,7 +161,7 @@ test('provided RF Dewi Expanded and Inter Tight render Cyrillic glyphs without f
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
   const { root } = await cdp.send('DOM.getDocument');
-  for (const [selector, family] of [['h1', 'RF Dewi Expanded'], ['.scene-text-group h2', 'RF Dewi Expanded'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'RF Dewi Expanded Semibold']] as const) {
+  for (const [selector, family] of [['h1', 'RF Dewi Expanded'], ['.scene-text-group h2', 'RF Dewi Expanded'], ['.scene-text-group p', 'Inter Tight'], ['.scene-navigation strong', 'RF Dewi Expanded']] as const) {
     const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector });
     const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
     expect(fonts.length).toBeGreaterThan(0);
@@ -182,4 +183,41 @@ test('owner type contract: exact Expanded weights, breakpoints, clean hero and h
       expect(image!.y).toBeGreaterThanOrEqual(copy!.y+copy!.height-1); expect(image!.height).toBe(340);
     }
   }
+});
+
+
+test('craft hero CTA, full height and separated navigation geometry', async ({ page }) => {
+  for (const [width,height] of [[1280,800],[1366,768],[1440,900],[1920,1080]]) {
+    await page.setViewportSize({width,height}); await page.goto('/');
+    await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+    await expect(page.locator('.hero h1')).toHaveCSS('font-weight','400');
+    expect((await page.locator('.hero').boundingBox())!.height).toBe(height);
+    await expect(page.locator('.header-cta')).toHaveText('Обсудить проект');
+    await expect(page.locator('.header-cta')).toHaveAttribute('href', '/#contact');
+    await expect(page.locator('.hero .actions a')).toHaveCount(1);
+    await expect(page.locator('.hero-channel-line')).toHaveCSS('display','block');
+    const media = (await page.locator('.scene-materials').boundingBox())!;
+    for (const button of await page.locator('.scene-navigation button').all()) {
+      const title=button.locator('strong'), description=button.locator('.scene-nav-description');
+      await expect(title).toHaveCSS('display','block'); await expect(description).toHaveCSS('display','block');
+      await expect(title).toHaveCSS('font-weight','400'); await expect(title).toHaveCSS('font-size','18px');
+      const a=(await title.boundingBox())!,b=(await description.boundingBox())!;
+      expect(b.y-a.y-a.height).toBeGreaterThanOrEqual(8);
+      expect(a.x+a.width).toBeLessThan(media.x); expect(b.x+b.width).toBeLessThan(media.x);
+      expect(await button.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
+    }
+  }
+});
+
+test('craft entrance is one-shot, focus cancels delays and reduced motion clears waiting', async ({page})=>{
+  await page.goto('/'); await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
+  const header=page.locator('.center-heading');
+  await expect(header).toHaveAttribute('data-craft-waiting','');
+  await header.scrollIntoViewIfNeeded(); await expect(header).not.toHaveAttribute('data-craft-waiting');
+  await page.waitForTimeout(1100);
+  await page.locator('.contact input').first().focus();
+  expect(await page.locator('.contact form').evaluate(e=>e.getAnimations().length)).toBe(0);
+  await expect(page.locator('.contact form')).toHaveCSS('opacity','1');
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await expect(page.locator('[data-craft-waiting]')).toHaveCount(0);
 });
