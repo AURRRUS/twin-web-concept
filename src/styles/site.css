@@ -8,7 +8,7 @@
   --ease: cubic-bezier(.22, 1, .36, 1);
   --fast: 160ms;
   --ui: 240ms;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Twin Inter Tight', sans-serif;
   color: var(--ink);
   background: #fff;
   font-synthesis: none;

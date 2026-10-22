@@ -1,0 +1,87 @@
+[
+  {
+    "file": "00_START_HERE.md",
+    "bytes": 4926,
+    "sha256": "5f11c39bf7ebaa0a24ef3f1eda818fcae50c3e1667b7f66fcd4614b2224f5531"
+  },
+  {
+    "file": "01_DESIGN.md",
+    "bytes": 15082,
+    "sha256": "742f53e314d7894ba133cf7545748f62905f5616d898bc0db79141a8a8837975"
+  },
+  {
+    "file": "02_CONTENT.json",
+    "bytes": 5294,
+    "sha256": "e223e0de8975e68222d14eeb1b0dbb4945fec9beffcd490611184e49c5e4458d"
+  },
+  {
+    "file": "03_MOTION.md",
+    "bytes": 12145,
+    "sha256": "402eff84ab2deaeeccf60b5fb266d90ecf5beab7433a4f73071eabc143742af8"
+  },
+  {
+    "file": "04_ACCEPTANCE.md",
+    "bytes": 5449,
+    "sha256": "e0b0b132864ef76469f978f521449e14f336e124c661931ea5bce5d22d95ee4d"
+  },
+  {
+    "file": "PROMPT.txt",
+    "bytes": 1687,
+    "sha256": "4191a143cf3b9727f67e6f9e20a6926c036096067a0d7eb32a9af10b2ab88345"
+  },
+  {
+    "file": "assets/facade.png",
+    "bytes": 3307034,
+    "sha256": "ccb1538b45f2656560c3bf183e2793e4c976c25c67602a29f0878400b1a98acd"
+  },
+  {
+    "file": "assets/hero.png",
+    "bytes": 5090265,
+    "sha256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05"
+  },
+  {
+    "file": "assets/lot.png",
+    "bytes": 2730797,
+    "sha256": "59f97a809c9d9fba23cc424377e423b067d5de4d7856d2e01076fc0cfca07741"
+  },
+  {
+    "file": "assets/project.png",
+    "bytes": 3260940,
+    "sha256": "434c2a7c46c768bb1d0a7653a89fcf9734ccfa227e13d7a4e310594489c66efc"
+  },
+  {
+    "file": "assets/space.png",
+    "bytes": 2364052,
+    "sha256": "5bdd4da7e6a2d8913c92e0e103ff129837580a459ee3d30696b01dbf0839731a"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Bold.ttf",
+    "bytes": 84760,
+    "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Regular.ttf",
+    "bytes": 85596,
+    "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+  },
+  {
+    "file": "fonts/RFDewiExpanded-Semibold.ttf",
+    "bytes": 85372,
+    "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+  },
+  {
+    "file": "fonts/inter-tight-variable.woff2",
+    "bytes": 232868,
+    "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b"
+  },
+  {
+    "file": "references/journey-composition.png",
+    "bytes": 2613414,
+    "sha256": "dad26932a129b3ca675763f9eb3b32ed21d94bf2df2f8ed178ba5ad3934d2397"
+  },
+  {
+    "file": "references/triangle-direction.png",
+    "bytes": 1659322,
+    "sha256": "df2b167112fe410b9f8ebd44fdc5d0d83854c2b81c864b96967f41ea495f9f79"
+  }
+]

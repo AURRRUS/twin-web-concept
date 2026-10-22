@@ -1,0 +1,13 @@
+{
+  "method": "Explicit document.hidden plus visibilitychange lifecycle events in headless Chromium; actual tab switching in headless remains visible",
+  "journey": {
+    "progress": "0.9246031746031746",
+    "active": "lot"
+  },
+  "delivery": {
+    "progress": "0.8995",
+    "word": "Эффективно",
+    "insert": 39.90625
+  },
+  "limitations": "Not physical foreground/background on Safari/iOS"
+}

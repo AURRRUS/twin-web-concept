@@ -20,7 +20,7 @@ test('desktop: real content, assets and anchors', async ({ page }) => {
 
 test('all seven dialogs, keyboard focus, history, direct URL and contact topic', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('html')).toHaveClass(/has-js/);
+  await expect(page.locator('main')).toHaveAttribute('data-hydrated','true');
   for (const id of ['client-tools', 'virtual-sales', 'content-system', 'management', 'integrations', 'commercial', 'core']) {
     const link = page.locator(`.composition-map a[href="?component=${id}#composition"]`);
     await link.click();
@@ -68,8 +68,10 @@ test('channel tabs support all four states and keyboard', async ({ page }) => {
 
 test('shared selection, parent resets, direct demo and invalid IDs', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('html')).toHaveClass(/has-js/);
+  await expect(page.locator('main')).toHaveAttribute('data-hydrated','true');
   await page.getByRole('tab', { name: 'Вид', exact: true }).click();
+  await expect(page.getByRole('tab', { name: 'Вид', exact: true })).toHaveAttribute('aria-selected','true');
+  await expect(page.getByRole('link', { name: 'Открыть демо', exact: true })).toHaveAttribute('href', /view=view/);
   await page.getByRole('link', { name: 'Открыть демо', exact: true }).click();
   await expect(page).toHaveURL(/\/demo\?.*view=view/);
   await expect(page.getByRole('tab', { name: 'Вид', exact: true })).toHaveAttribute('aria-selected', 'true');
@@ -146,16 +148,16 @@ test('without JavaScript: server-rendered content and honest demo remain availab
 test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
-  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('RF Dewi Expanded');
-  expect(await page.evaluate(() => document.fonts.check('600 48px "RF Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
-  expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Inter Tight');
-  expect(await page.evaluate(() => document.fonts.check('400 16px "Inter Tight"', 'Кириллица Ёё'))).toBe(true);
+  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Twin Dewi Expanded');
+  expect(await page.evaluate(() => document.fonts.check('600 48px "Twin Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
+  expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Twin Inter Tight');
+  expect(await page.evaluate(() => document.fonts.check('400 16px "Twin Inter Tight"', 'Кириллица Ёё'))).toBe(true);
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
   for (const [progress, scene] of [[0.14, 'project'], [0.5, 'space'], [0.88, 'lot'], [0.5, 'space']] as const) {
     await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
     await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
     await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(720, 0);
+    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(768.4, 0);
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');

@@ -1,0 +1,23 @@
+{
+  "bundleAssetsMatchedInExistingSources": {
+    "space.png": [
+      "docs/top-screens-v2/assets/Роскошный апартамент с видом на море.png",
+      "public/media/recovery-original/space.png"
+    ],
+    "hero.png": [
+      "docs/top-screens-v2/assets/Вид побережье.png"
+    ],
+    "project.png": [
+      "docs/top-screens-v2/assets/Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "public/media/recovery-original/project.png"
+    ],
+    "lot.png": [
+      "docs/top-screens-v2/assets/План этажа 12 ти этажного корпуса.png",
+      "public/media/recovery-original/lot.png"
+    ],
+    "facade.png": [
+      "docs/top-screens-v2/assets/12 ти этажный корпус.png"
+    ]
+  },
+  "allFiveMatched": true
+}

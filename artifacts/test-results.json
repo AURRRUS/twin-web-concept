@@ -126,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3206,
+                  "duration": 3886,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:14.843Z",
+                  "startTime": "2026-10-22T17:50:48.176Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -160,12 +160,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9199,
+                  "duration": 9305,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:18.428Z",
+                  "startTime": "2026-10-22T17:50:52.360Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -194,12 +194,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3812,
+                  "duration": 3630,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:27.664Z",
+                  "startTime": "2026-10-22T17:51:01.683Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -228,12 +228,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2353,
+                  "duration": 2476,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:31.544Z",
+                  "startTime": "2026-10-22T17:51:05.369Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -262,12 +262,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3039,
+                  "duration": 3879,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:33.925Z",
+                  "startTime": "2026-10-22T17:51:07.859Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -277,7 +277,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-60ede2b63b185748e757",
           "file": "desktop.spec.ts",
-          "line": 90,
+          "line": 92,
           "column": 1
         },
         {
@@ -296,12 +296,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2912,
+                  "duration": 3057,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:36.973Z",
+                  "startTime": "2026-10-22T17:51:11.774Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -311,7 +311,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-7c4e25dda9ddd75b6554",
           "file": "desktop.spec.ts",
-          "line": 112,
+          "line": 114,
           "column": 1
         },
         {
@@ -330,12 +330,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1847,
+                  "duration": 1947,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:39.926Z",
+                  "startTime": "2026-10-22T17:51:14.891Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -345,7 +345,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-f1825e3ab2990ee884ea",
           "file": "desktop.spec.ts",
-          "line": 122,
+          "line": 124,
           "column": 1
         },
         {
@@ -364,12 +364,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2062,
+                  "duration": 1901,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:41.790Z",
+                  "startTime": "2026-10-22T17:51:16.850Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -379,7 +379,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-8529bf59c105c10a674e",
           "file": "desktop.spec.ts",
-          "line": 132,
+          "line": 134,
           "column": 1
         },
         {
@@ -398,12 +398,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2298,
+                  "duration": 2391,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:43.932Z",
+                  "startTime": "2026-10-22T17:51:18.783Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -413,7 +413,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-536265f49b0ab861c123",
           "file": "desktop.spec.ts",
-          "line": 146,
+          "line": 148,
           "column": 1
         },
         {
@@ -432,12 +432,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1222,
+                  "duration": 1260,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:46.242Z",
+                  "startTime": "2026-10-22T17:51:21.185Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -447,7 +447,7 @@
           ],
           "id": "12cc77c408bab7a1d6ba-1e8a68f5be3c974aa4d7",
           "file": "desktop.spec.ts",
-          "line": 166,
+          "line": 168,
           "column": 1
         }
       ]
@@ -459,7 +459,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "delivery storyboard is reversible with real glyph insertion and fixed surrounding geometry",
+          "title": "triangle storyboard reverses and only the measured iv insertion moves the suffix",
           "ok": true,
           "tags": [],
           "tests": [
@@ -474,12 +474,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5033,
+                  "duration": 3861,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:14.779Z",
+                  "startTime": "2026-10-22T17:50:48.238Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -487,13 +487,13 @@
               "status": "expected"
             }
           ],
-          "id": "f562975c8f919afd593b-91ef253b1f6b4468ebef",
+          "id": "f562975c8f919afd593b-6fe0a837b4286fc76fc6",
           "file": "motion-v4.spec.ts",
-          "line": 9,
+          "line": 4,
           "column": 1
         },
         {
-          "title": "static delivery and exact subtitle survive phone, reduced motion and no JS",
+          "title": "full current copy, static final word and no-JS delivery survive supported breakpoints",
           "ok": true,
           "tags": [],
           "tests": [
@@ -508,12 +508,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6286,
+                  "duration": 7486,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:20.227Z",
+                  "startTime": "2026-10-22T17:50:52.446Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -521,13 +521,13 @@
               "status": "expected"
             }
           ],
-          "id": "f562975c8f919afd593b-09efa582c133246780ab",
+          "id": "f562975c8f919afd593b-906877a4f92c571c476d",
           "file": "motion-v4.spec.ts",
-          "line": 39,
+          "line": 12,
           "column": 1
         },
         {
-          "title": "role entrances have distinct masks and timings; anchors and keyboard reveal immediately",
+          "title": "role cascades use title masks and distinct body/media timings; anchors and focus settle them",
           "ok": true,
           "tags": [],
           "tests": [
@@ -542,12 +542,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 16208,
+                  "duration": 19255,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:26.553Z",
+                  "startTime": "2026-10-22T17:50:59.963Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -555,9 +555,9 @@
               "status": "expected"
             }
           ],
-          "id": "f562975c8f919afd593b-f51b09a244e81a008a7c",
+          "id": "f562975c8f919afd593b-0d9652ce8bebfb375e33",
           "file": "motion-v4.spec.ts",
-          "line": 54,
+          "line": 17,
           "column": 1
         }
       ]
@@ -584,12 +584,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4104,
+                  "duration": 4520,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:42.837Z",
+                  "startTime": "2026-10-22T17:51:19.290Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -599,11 +599,11 @@
           ],
           "id": "472f259022e25a651642-bdce8c33c214c8407e34",
           "file": "motion.spec.ts",
-          "line": 4,
+          "line": 10,
           "column": 1
         },
         {
-          "title": "scene title leads media, frame stays fixed and progress reverses without a queue",
+          "title": "title, body and full sheet have separate phases and reversible progress",
           "ok": true,
           "tags": [],
           "tests": [
@@ -618,12 +618,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 13852,
+                  "duration": 10418,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:37:46.958Z",
+                  "startTime": "2026-10-22T17:51:23.868Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -631,13 +631,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-b00f19f5eabfa4cb5c98",
+          "id": "472f259022e25a651642-7d283254fe8c7f016023",
           "file": "motion.spec.ts",
-          "line": 20,
+          "line": 13,
           "column": 1
         },
         {
-          "title": "reveals finish when reached and stay readable with reduced motion",
+          "title": "reveals finish when reached and reduced motion settles pending groups",
           "ok": true,
           "tags": [],
           "tests": [
@@ -652,12 +652,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1737,
+                  "duration": 1710,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:00.827Z",
+                  "startTime": "2026-10-22T17:51:34.298Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -665,13 +665,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-b33f35b23d26ab013bf5",
+          "id": "472f259022e25a651642-fe51aa9d1d33b3331d38",
           "file": "motion.spec.ts",
-          "line": 57,
+          "line": 23,
           "column": 1
         },
         {
-          "title": "hero line breaks and shared content guides follow the layout viewport",
+          "title": "hero line breaks and content guides follow the viewport",
           "ok": true,
           "tags": [],
           "tests": [
@@ -686,12 +686,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2083,
+                  "duration": 1893,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:02.580Z",
+                  "startTime": "2026-10-22T17:51:36.049Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -699,13 +699,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-bf298c1e46ad08078773",
+          "id": "472f259022e25a651642-b6fb35ee820645922938",
           "file": "motion.spec.ts",
-          "line": 69,
+          "line": 26,
           "column": 1
         },
         {
-          "title": "full scene text survives mobile and desktop shares text space above navigation and media",
+          "title": "complete scene content stays readable and navigation shares the media top edge",
           "ok": true,
           "tags": [],
           "tests": [
@@ -720,12 +720,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 882,
+                  "duration": 1037,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:04.681Z",
+                  "startTime": "2026-10-22T17:51:37.961Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -733,47 +733,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-c98ee245e99fb4492df6",
+          "id": "472f259022e25a651642-362cbbdfa84795413c36",
           "file": "motion.spec.ts",
-          "line": 93,
+          "line": 31,
           "column": 1
         },
         {
-          "title": "opaque mask follows the specified overlapping text entry and media phases reversibly",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 17296,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-22T15:38:05.575Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "472f259022e25a651642-0a546a22762b35f5cd6d",
-          "file": "motion.spec.ts",
-          "line": 121,
-          "column": 1
-        },
-        {
-          "title": "image original dialog works by keyboard, restores focus and laptop scenes fit",
+          "title": "sheet rank stays constant while scale, position and opacity follow the absolute frame",
           "ok": true,
           "tags": [],
           "tests": [
@@ -788,12 +754,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3555,
+                  "duration": 7477,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:22.885Z",
+                  "startTime": "2026-10-22T17:51:39.017Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -801,13 +767,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-c44902a709efcdba4d4d",
+          "id": "472f259022e25a651642-a92b6188fc5fda6eca3f",
           "file": "motion.spec.ts",
-          "line": 140,
+          "line": 38,
           "column": 1
         },
         {
-          "title": "provided RF Dewi Expanded and Inter Tight render Cyrillic glyphs without fallback or compressed tracking",
+          "title": "image dialog restores keyboard focus and low screens use normal flow",
           "ok": true,
           "tags": [],
           "tests": [
@@ -822,12 +788,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 902,
+                  "duration": 2092,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:26.460Z",
+                  "startTime": "2026-10-22T17:51:46.509Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -835,13 +801,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-dc8c1f1319b6e33bd3fc",
+          "id": "472f259022e25a651642-eff63d3b2cc48fc19651",
           "file": "motion.spec.ts",
-          "line": 159,
+          "line": 44,
           "column": 1
         },
         {
-          "title": "owner type contract: exact Expanded weights, breakpoints, clean hero and headings",
+          "title": "rendered Cyrillic uses the real Expanded600 and Inter variable files",
           "ok": true,
           "tags": [],
           "tests": [
@@ -856,12 +822,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3117,
+                  "duration": 724,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:27.375Z",
+                  "startTime": "2026-10-22T17:51:48.630Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -869,13 +835,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-480bbe2fcf91f9e809d5",
+          "id": "472f259022e25a651642-8735e3d23740f43bd854",
           "file": "motion.spec.ts",
-          "line": 174,
+          "line": 48,
           "column": 1
         },
         {
-          "title": "craft hero CTA, full height and separated navigation geometry",
+          "title": "exact handoff type metrics at desktop, tablet and phone sizes",
           "ok": true,
           "tags": [],
           "tests": [
@@ -890,12 +856,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3407,
+                  "duration": 2802,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:30.530Z",
+                  "startTime": "2026-10-22T17:51:49.372Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -903,13 +869,13 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-c3ddc6fbce6bedbaaeff",
+          "id": "472f259022e25a651642-ea1c986b9723561dd9c3",
           "file": "motion.spec.ts",
-          "line": 189,
+          "line": 52,
           "column": 1
         },
         {
-          "title": "craft entrance is one-shot, focus cancels delays and reduced motion clears waiting",
+          "title": "hero has all four channels and navigation is readable without backgrounds",
           "ok": true,
           "tags": [],
           "tests": [
@@ -924,12 +890,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2478,
+                  "duration": 2266,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-22T15:38:33.949Z",
+                  "startTime": "2026-10-22T17:51:52.184Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -937,9 +903,111 @@
               "status": "expected"
             }
           ],
-          "id": "472f259022e25a651642-cacf266bc5da009298cf",
+          "id": "472f259022e25a651642-2a1a32d9cf180f7523e5",
           "file": "motion.spec.ts",
-          "line": 212,
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "entrances are one-shot and focus makes contact immediately usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1056,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T17:51:54.462Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "472f259022e25a651642-e06d8d360942527dbf7c",
+          "file": "motion.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "a failed scene image keeps full text and exposes the real demo link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T17:51:55.528Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "472f259022e25a651642-ad2b610e5a0365e5772d",
+          "file": "motion.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "mobile menu retains keyboard-accessible routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 735,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T17:51:56.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "472f259022e25a651642-a6c38a5a4df8b5a6de8d",
+          "file": "motion.spec.ts",
+          "line": 66,
           "column": 1
         }
       ]
@@ -947,9 +1015,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-22T15:37:13.510Z",
-    "duration": 83059.428,
-    "expected": 24,
+    "startTime": "2026-10-22T17:50:46.897Z",
+    "duration": 70888.23899999999,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
