@@ -1,0 +1,150 @@
+{
+  "sourceCommit": "6c1a3472054839b5b19665f23ca91fcf533ee874",
+  "checkedAt": "2026-10-22T23:39:08.586Z",
+  "fonts": [
+    {
+      "selector": "h1",
+      "computed": {
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": "900",
+        "size": "48px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "RF Dewi Expanded Black",
+          "postScriptName": "RFDewiExpanded-Black",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "selector": ".scene-title-group h2",
+      "computed": {
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": "900",
+        "size": "60px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "RF Dewi Expanded Black",
+          "postScriptName": "RFDewiExpanded-Black",
+          "isCustomFont": true,
+          "glyphCount": 33
+        }
+      ]
+    },
+    {
+      "selector": ".hero-description",
+      "computed": {
+        "family": "\"Twin Inter Tight\", sans-serif",
+        "weight": "450",
+        "size": "20px",
+        "tracking": "0.3px",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 64
+        }
+      ]
+    },
+    {
+      "selector": ".delivery-qualities",
+      "computed": {
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": "600",
+        "size": "27px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "RF Dewi Expanded Semibold",
+          "postScriptName": "RFDewiExpanded-Semibold",
+          "isCustomFont": true,
+          "glyphCount": 14
+        }
+      ]
+    },
+    {
+      "selector": ".delivery-time strong",
+      "computed": {
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": "700",
+        "size": "40px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "RF Dewi Expanded",
+          "postScriptName": "RFDewiExpanded-Bold",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "selector": ".map-component h3",
+      "computed": {
+        "family": "\"Twin Inter Tight\", sans-serif",
+        "weight": "600",
+        "size": "20px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 22
+        }
+      ]
+    },
+    {
+      "selector": ".launch-steps h3",
+      "computed": {
+        "family": "\"Twin Inter Tight\", sans-serif",
+        "weight": "600",
+        "size": "20px",
+        "tracking": "normal",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ]
+    },
+    {
+      "selector": ".scene-navigation strong",
+      "computed": {
+        "family": "\"Twin Inter Tight\", sans-serif",
+        "weight": "600",
+        "size": "20px",
+        "tracking": "0.2px",
+        "synthesis": "none"
+      },
+      "platformFonts": [
+        {
+          "familyName": "Inter Tight",
+          "postScriptName": "InterTight-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    }
+  ]
+}
