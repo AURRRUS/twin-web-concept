@@ -89,5 +89,11 @@
     "height": 941,
     "file": "top-v2/lot.webp",
     "revision": "890be38255e8"
+  },
+  "compositionCore": {
+    "width": 1448,
+    "height": 1086,
+    "file": "composition-core-20261023.png",
+    "revision": "643c5107ecf0"
   }
 }

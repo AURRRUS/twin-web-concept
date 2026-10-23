@@ -25,7 +25,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
         const valid = validateSelection(input);
         setSelection(valid);
         const invalid = keys.some(key => params.has(key) && params.get(key) !== valid[key]);
-        setSelectionNotice(invalid ? 'Часть выбора из ссылки недоступна. Показан доступный уровень демонстрационного проекта.' : '');
+        setSelectionNotice(invalid ? 'Часть выбора из ссылки недоступна. Показан доступный уровень демонстрационного проекта.' : '');
       } else {
         try { const stored = sessionStorage.getItem('twin-selection-v1'); if (stored) setSelection(validateSelection(JSON.parse(stored))); } catch { /* Storage is optional. */ }
       }
@@ -49,12 +49,12 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     document.addEventListener('astro:before-swap', leave);
     return () => { cleanup(); document.removeEventListener('astro:before-swap', leave); };
   }, []);
-  return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
+  return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
     <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero /><Journey /></>}
       {selectionNotice && <p className="selection-notice" role="status">{selectionNotice}</p>}
       <ProductDemo selection={selection} onChange={updateSelection} full={page === 'demo'} />
       {page === 'home' && <><Composition onTopic={setTopic} /><Channels /><Delivery /><ContactForm topic={topic} onTopic={setTopic} selection={selection} /></>}
     </main>
-    <footer className="site-footer"><a href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" /></a><nav aria-label="Навигация внизу страницы"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#composition')}>Состав и запуск</a></nav><span>Демонстрационный проект</span></footer>
+    <footer className="site-footer"><a href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" /></a><nav aria-label="Навигация внизу страницы"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#composition')}>Состав</a><a href={sitePath('/#launch')}>Запуск</a></nav><span>Демонстрационный проект</span></footer>
   </>;
 }

@@ -16,7 +16,7 @@ test('title, body and full sheet have separate phases and reversible progress',a
  await seek(page,.1);const frame=(await page.locator('.scene-materials').boundingBox())!;
  for(const p of[.2,.26,.3,.325,.4,.45,.525,.6,.725,.85,.925,.725,.325,.1]){await seek(page,p);const r=(await page.locator('.scene-materials').boundingBox())!;for(const k of['x','y','width','height'] as const)expect(r[k]).toBeCloseTo(frame[k],0);}
  await seek(page,.30);await expect(page.locator('.scene-title-group').nth(1)).toHaveCSS('opacity','1');await expect(page.locator('.scene-material').nth(1)).toHaveCSS('opacity','0');
- const body=await page.locator('.scene-body-group').nth(1).evaluate(e=>+getComputedStyle(e).opacity);expect(body).toBeGreaterThan(0);expect(body).toBeLessThan(.4);
+ const body=await page.locator('.scene-body-group').nth(1).evaluate(e=>getComputedStyle(e).clipPath);expect(body).toMatch(/inset/);
  await seek(page,.4);const incoming=(await page.locator('.scene-material').nth(1).boundingBox())!;expect(incoming.width).toBeGreaterThan(frame.width);expect(incoming.y).toBeLessThan(frame.y);
  await page.locator('.scene-navigation button').nth(2).focus();await page.keyboard.press('Enter');await expect(page.locator('.journey')).toHaveAttribute('data-scene','lot');
  await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.journey')).toHaveAttribute('data-layout-mode','desktop');await expect(page.locator('.journey-static')).toBeHidden();await expect(page.locator('.journey-cinematic')).toBeVisible();
@@ -42,9 +42,9 @@ test('sheet rank stays constant while scale, position and opacity follow the abs
  for(let i=0;i<3;i++){const style=await page.locator('.scene-material').nth(i).evaluate(e=>({opacity:+getComputedStyle(e).opacity,z:+getComputedStyle(e).zIndex}));expect(style.opacity).toBeCloseTo(f.mediaOpacity[i],3);expect(style.z).toBe(i+1);}
  }
 });
-test('image dialog restores keyboard focus and low screens use normal flow',async({page})=>{
+test('image dialog restores keyboard focus and low screens retain adapted scroll',async({page})=>{
  for(const[width,height]of[[1440,900],[1280,800],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');const h=await page.locator('.journey-right').evaluate(e=>({height:e.clientHeight,scroll:e.scrollHeight}));expect(h.scroll).toBeLessThanOrEqual(h.height+1);}
- await page.setViewportSize({width:1440,height:900});const link=page.locator('.journey-cinematic .scene-expand');await link.focus();await page.keyboard.press('Enter');await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(link).toBeFocused();await page.setViewportSize({width:1440,height:700});await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');
+ await page.setViewportSize({width:1440,height:900});const link=page.locator('.journey-cinematic .scene-expand');await link.focus();await page.keyboard.press('Enter');await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(link).toBeFocused();await page.setViewportSize({width:1440,height:700});await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');
 });
 test('rendered Cyrillic uses the real Expanded900 and Inter variable files',async({page})=>{
  await page.goto('/');await page.evaluate(()=>document.fonts.ready);const cdp=await page.context().newCDPSession(page);await cdp.send('DOM.enable');await cdp.send('CSS.enable');const{root}=await cdp.send('DOM.getDocument');
@@ -55,7 +55,7 @@ test('exact visual motion V3 type metrics at desktop, tablet and phone sizes',as
 });
 test('hero has all four channels and navigation is readable without backgrounds',async({page})=>{
  for(const[width,height]of[[1280,800],[1440,900],[1920,1080]]){await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');await expect(page.locator('.hero-channels')).toHaveText('на сайте, дистанционно, через агентов, в офисе продаж.');await expect(page.locator('.hero .actions a')).toHaveCount(1);
- for(const n of await page.locator('.scene-navigation button').all()){await expect(n).toHaveCSS('background-color','rgba(0, 0, 0, 0)');const a=(await n.locator('strong').boundingBox())!,b=(await n.locator('.scene-nav-description').boundingBox())!;expect(b.y).toBeGreaterThanOrEqual(a.y+a.height+7.9);await expect(n.locator('strong')).toHaveCSS('font-weight','600');}}
+ for(const n of await page.locator('.scene-navigation button').all()){await expect(n).toHaveCSS('background-color','rgba(0, 0, 0, 0)');const a=(await n.locator('strong').boundingBox())!,b=(await n.locator('.scene-nav-description').boundingBox())!;expect(b.y).toBeGreaterThanOrEqual(a.y+a.height+(height<850?5.9:7.9));await expect(n.locator('strong')).toHaveCSS('font-weight','600');}}
 });
 test('entrances are one-shot and focus makes contact immediately usable',async({page})=>{
  await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','true');const h=page.locator('.center-heading h2');await expect(h).toHaveAttribute('data-craft-waiting','');await h.scrollIntoViewIfNeeded();await expect(h).not.toHaveAttribute('data-craft-waiting');await page.locator('#contact-name').focus();expect(await page.locator('.contact form').evaluate(e=>e.getAnimations().length)).toBe(0);

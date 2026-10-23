@@ -1,0 +1,502 @@
+{
+  "base": "https://aurrrus.github.io/twin-web-concept/",
+  "viewportShots": [
+    "journey-1920x1080.png",
+    "journey-1920x900.png",
+    "journey-1440x900.png",
+    "journey-1366x768.png",
+    "journey-1366x700.png",
+    "journey-1280x800.png",
+    "journey-1024x768.png"
+  ],
+  "walk": [
+    {
+      "selector": "product",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "media",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "composition",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "composition-core",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "channels",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "media",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "delivery-host",
+      "visible": []
+    },
+    {
+      "selector": "launch",
+      "visible": [
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "contact",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "contact-form",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "launch",
+      "visible": [
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "delivery-host",
+      "visible": []
+    },
+    {
+      "selector": "channels",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "media",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "composition",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 0.65,
+          "waiting": false
+        },
+        {
+          "role": "composition-core",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "fact",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    },
+    {
+      "selector": "product",
+      "visible": [
+        {
+          "role": "eyebrow",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "title",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "body",
+          "opacity": 1,
+          "waiting": false
+        },
+        {
+          "role": "media",
+          "opacity": 1,
+          "waiting": false
+        }
+      ]
+    }
+  ],
+  "pausedTriangle": "0.0721",
+  "mask": {
+    "progress": 0.24841712155587248,
+    "title": [
+      {
+        "opacity": 1,
+        "clip": "inset(0% 0px 52.5003%)",
+        "z": "auto",
+        "top": 32,
+        "bottom": 111.977619875,
+        "height": 168.375,
+        "visible": 79.977619875
+      },
+      {
+        "opacity": 1,
+        "clip": "inset(47.4997% 0px 0%)",
+        "z": "auto",
+        "top": 111.97761987499999,
+        "bottom": 200.375,
+        "height": 168.375,
+        "visible": 88.39738012500001
+      },
+      {
+        "opacity": 0,
+        "clip": "inset(0% 0px)",
+        "z": "auto",
+        "top": 32,
+        "bottom": 200.375,
+        "height": 168.375,
+        "visible": 0
+      }
+    ],
+    "body": [
+      {
+        "opacity": 1,
+        "clip": "inset(0% 0px)",
+        "z": "auto",
+        "top": 220.375,
+        "bottom": 276.15625,
+        "height": 55.78125,
+        "visible": 55.78125
+      },
+      {
+        "opacity": 0,
+        "clip": "inset(100% 0px 0%)",
+        "z": "auto",
+        "top": 276.15625,
+        "bottom": 276.15625,
+        "height": 55.78125,
+        "visible": 0
+      },
+      {
+        "opacity": 0,
+        "clip": "inset(0% 0px)",
+        "z": "auto",
+        "top": 220.375,
+        "bottom": 276.15625,
+        "height": 55.78125,
+        "visible": 0
+      }
+    ],
+    "media": [
+      {
+        "opacity": 1,
+        "clip": "none",
+        "z": "1",
+        "top": 304.15625,
+        "bottom": 736.375,
+        "height": 432.21875,
+        "visible": 432.21875
+      },
+      {
+        "opacity": 0,
+        "clip": "none",
+        "z": "2",
+        "top": 254.86749267578125,
+        "bottom": 721.6637573242188,
+        "height": 466.7962646484375,
+        "visible": 0
+      },
+      {
+        "opacity": 0,
+        "clip": "none",
+        "z": "3",
+        "top": 304.15625,
+        "bottom": 736.375,
+        "height": 432.21875,
+        "visible": 0
+      }
+    ],
+    "parents": [
+      1,
+      1
+    ]
+  }
+}

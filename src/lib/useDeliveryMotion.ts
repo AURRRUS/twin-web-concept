@@ -1,31 +1,41 @@
 import { useEffect, type RefObject } from 'react';
 import { deliveryFrame } from './deliveryMotion';
+const clamp=(v:number)=>Math.max(0,Math.min(1,v));
+const phase=(v:number,a=0,b=1)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t);};
+/** Native scroll reveals only advance. Small screens also gate each lower group locally. */
 export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
  useEffect(()=>{
-  const node=host.current!,panel=node.querySelector<HTMLElement>('.delivery-panel')!,composition=node.querySelector<HTMLElement>('.delivery-composition')!;
-  const desktop=matchMedia('(min-width:1280px)'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
-  let disposed=false,ready=false,enabled=false,raf=0,lastLabel='';
+  const node=host.current!,reduced=matchMedia('(prefers-reduced-motion:reduce)');
+  let disposed=false,raf=0,ready=false,progress=0,lastLabel='';
+  const values:Record<string,number>={};
   const labels=[...node.querySelectorAll<HTMLElement>('[data-word-label],[data-proof-label]')];
-  const render=()=>{
-   raf=0;if(disposed||document.hidden||!enabled)return;
-   const p=Math.max(0,Math.min(1,-node.getBoundingClientRect().top/Math.max(1,node.offsetHeight-panel.offsetHeight))),f=deliveryFrame(p);
-   f.edges.forEach((v,i)=>node.style.setProperty(`--delivery-edge-${i}`,String(v)));
-   for(const key of ['lead','answer','qualities','model','facts','proof'] as const)node.style.setProperty(`--delivery-${key}`,String(f[key]));
-   node.style.setProperty('--iv-reveal',String(f.insert));node.dataset.progress=p.toFixed(4);node.dataset.word=f.label;
-   if(f.label!==lastLabel){labels.forEach(label=>label.textContent=f.label);lastLabel=f.label;}
+  const local=(selector:string,end=.15)=>{const y=node.querySelector(selector)!.getBoundingClientRect().top;return clamp((innerHeight*.85-y)/(innerHeight*(.85-end)));};
+  const write=(next:ReturnType<typeof deliveryFrame>&{time:number;budget:number})=>{
+   const advance=(key:string,v:number)=>{const value=Math.max(values[key]||0,v);values[key]=value;node.style.setProperty(key,String(value));return value;};
+   next.edges.forEach((v,i)=>advance(`--delivery-edge-${i}`,v));
+   for(const key of ['lead','answer','qualities','model','time','budget','proof'] as const)advance(`--delivery-${key}`,next[key]);
+   const insert=advance('--iv-reveal',next.insert),label=insert<.5?'Эффектно':'Эффективно';
+   node.dataset.progress=progress.toFixed(4);node.dataset.word=label;
+   node.dataset.motionState=Object.values(values).every(v=>v>=1)?'complete':Object.values(values).some(v=>v>0)?'playing':'armed';
+   if(label!==lastLabel){labels.forEach(n=>n.textContent=label);lastLabel=label;}
   };
-  const request=()=>{if(enabled&&!document.hidden&&!raf)raf=requestAnimationFrame(render);};
-  const configure=()=>{
-   if(disposed||!ready)return;cancelAnimationFrame(raf);raf=0;node.dataset.enhanced='false';
-   let fits=desktop.matches&&innerHeight>=760&&!reduced.matches;
-   if(fits){const box=composition.getBoundingClientRect();const needed=Math.max(composition.scrollHeight,...[...composition.querySelectorAll<HTMLElement>('.delivery-stage>div')].map(e=>e.getBoundingClientRect().bottom-box.top));fits=needed+32<=innerHeight;}
-   enabled=fits;node.dataset.enhanced=String(fits);
-   if(fits)render();else {node.removeAttribute('style');delete node.dataset.progress;delete node.dataset.word;labels.forEach(l=>l.textContent='Эффективно');lastLabel='';}
+  const settle=()=>{progress=1;write({...deliveryFrame(1),time:1,budget:1});};
+  const update=()=>{
+   raf=0;if(disposed||!ready||document.hidden)return;
+   if(reduced.matches){node.dataset.enhanced='false';settle();return;}
+   node.dataset.enhanced='true';
+   progress=Math.max(progress,clamp((innerHeight*.85-node.getBoundingClientRect().top)/(innerHeight*.70)));
+   const f=deliveryFrame(progress),tall=innerWidth<1280||node.offsetHeight>innerHeight*.95;
+   if(tall){
+    const triangle=local('.delivery-triangle'),proof=phase(local('.delivery-quality',.40));
+    write({...f,lead:phase(local('.delivery-lead',.55)),answer:phase(local('.delivery-answer',.55)),qualities:phase(local('.delivery-qualities',.55)),edges:[phase(triangle,0,.2),phase(triangle,.2,.4),phase(triangle,.4,.6)],model:phase(triangle,.55,.85),time:phase(local('.delivery-time',.40)),budget:phase(local('.delivery-budget',.40)),proof,insert:phase(local('.delivery-quality',.40),.6,1)});
+   }else write({...f,time:f.facts,budget:f.facts});
   };
-  const visibility=()=>{cancelAnimationFrame(raf);raf=0;if(!document.hidden)render();};
-  void Promise.all([400,600,700,900].map(w=>document.fonts.load(`${w} 24px "Twin Dewi Expanded"`,'Эффективно'))).then(()=>document.fonts.ready).then(()=>{ready=true;configure();});
-  const focus=()=>{for(const key of ['lead','answer','qualities','model','facts','proof'])node.style.setProperty(`--delivery-${key}`,'1');};
-  desktop.addEventListener('change',configure);reduced.addEventListener('change',configure);window.addEventListener('resize',configure);window.addEventListener('scroll',request,{passive:true});document.addEventListener('visibilitychange',visibility);node.addEventListener('focusin',focus);
-  return()=>{disposed=true;cancelAnimationFrame(raf);desktop.removeEventListener('change',configure);reduced.removeEventListener('change',configure);window.removeEventListener('resize',configure);window.removeEventListener('scroll',request);document.removeEventListener('visibilitychange',visibility);node.removeEventListener('focusin',focus);};
+  const request=()=>{if(!disposed&&ready&&!raf&&!document.hidden)raf=requestAnimationFrame(update);};
+  const visibility=()=>{cancelAnimationFrame(raf);raf=0;if(!document.hidden)request();};
+  const focus=()=>{settle();};
+  void document.fonts.ready.then(()=>{if(disposed)return;ready=true;node.dataset.motionType='scroll-once';update();});
+  window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request);reduced.addEventListener('change',request);document.addEventListener('visibilitychange',visibility);node.addEventListener('focusin',focus);
+  return()=>{disposed=true;cancelAnimationFrame(raf);window.removeEventListener('scroll',request);window.removeEventListener('resize',request);reduced.removeEventListener('change',request);document.removeEventListener('visibilitychange',visibility);node.removeEventListener('focusin',focus);};
  },[host]);
 }

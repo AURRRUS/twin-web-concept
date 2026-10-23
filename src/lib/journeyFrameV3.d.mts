@@ -1,6 +1,6 @@
 export interface JourneyFrame {
- titleOpacity:number[];titleY:number[];titleClip:number[];
- bodyOpacity:number[];bodyY:number[];mediaOpacity:number[];mediaScale:number[];mediaY:number[];
+ titleOpacity:number[];titleY:number[];titleClip:number[];titleClipTop:number[];titleClipBottom:number[];
+ bodyOpacity:number[];bodyY:number[];bodyClipTop:number[];bodyClipBottom:number[];mediaOpacity:number[];mediaScale:number[];mediaY:number[];
  active:number;title:number;explanation:number;
 }
 export const sceneTargets:number[];

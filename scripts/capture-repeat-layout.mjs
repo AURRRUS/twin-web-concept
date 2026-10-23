@@ -1,0 +1,11 @@
+import{chromium}from'@playwright/test';
+import{mkdirSync}from'node:fs';
+const base=process.env.TWIN_CAPTURE_URL||'http://localhost:4332/',out=process.env.TWIN_CAPTURE_DIR||'/tmp/twin-repeat';mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],...(base.startsWith('https')&&process.env.HTTPS_PROXY?{proxy:{server:process.env.HTTPS_PROXY}}:{})});
+try{const page=await browser.newPage({ignoreHTTPSErrors:true,viewport:{width:1440,height:900}});await page.goto(base,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelector('.journey').dataset.enhanced==='true');
+const seek=async p=>{await page.locator('.journey').evaluate((n,p)=>scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.clientHeight-innerHeight)*p,behavior:'instant'}),p);await page.waitForFunction(p=>Math.abs(Number(document.querySelector('.journey').style.getPropertyValue('--scene-progress'))-p)<.001,p);await page.waitForTimeout(1800);};
+for(const[id,p]of[['project',.1],['masked',.2475],['title-before-image',.30],['space',.525],['lot',.925]]){await seek(p);await page.screenshot({path:`${out}/journey-${id}-1440.png`});}
+for(const[width,height]of[[1440,900],[1363,936]]){await page.setViewportSize({width,height});await page.locator('.composition').evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY,behavior:'instant'}));await page.waitForTimeout(1800);await page.screenshot({path:`${out}/composition-${width}.png`});}
+await page.setViewportSize({width:1440,height:900});await page.locator('.delivery-host').evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-32,behavior:'instant'}));await page.waitForTimeout(2700);await page.screenshot({path:`${out}/triangle-1440.png`});
+await page.setViewportSize({width:390,height:844});await page.goto(base,{waitUntil:'networkidle'});await page.locator('.journey').evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY,behavior:'instant'}));await page.waitForTimeout(1000);await page.screenshot({path:`${out}/journey-390.png`});await page.locator('.composition').evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY,behavior:'instant'}));await page.waitForTimeout(1000);await page.screenshot({path:`${out}/composition-390.png`});console.log(out);
+}finally{await browser.close();}

@@ -1,28 +1,30 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "6c1a3472054839b5b19665f23ca91fcf533ee874",
+  "expectedSourceCommit": "8ad56176929f7d27f373fc7164202ff3456795bf",
   "status": "PASS",
-  "checkedAt": "2026-10-22T23:35:18.224Z",
+  "checkedAt": "2026-10-23T18:18:04.473Z",
   "checks": [
     "Exact published source commit confirmed",
-    "Five original-role optimized assets match source hashes",
+    "Original-role assets plus new transparent Composition PNG and unchanged triangle core match source hashes",
     "True Expanded Black900 headings,600 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
     "Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes",
     "Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking",
-    "28 actual DOM samples: complementary title/body opacity, no residual clip, base image and stable z-order; Black60 first-line geometry confirmed",
-    "Actual triangle edge/fact/model/proof/insertion phases and holds verified forwards and backwards, with unchanged420svh host",
-    "Triangle qualities, fixed numbers, one real demo proof link, no capsules/fake Play; measured reversible iv insertion",
+    "28 actual DOM samples: partitioned title/body masks, binary text opacity, base image and stable z-order; Black60 first-line geometry confirmed",
+    "Full-exit reentry repeats the outer cascade; return from below retains Lot; partial passes do not restart",
+    "Triangle advances with native scroll and retains every reached phase on reverse/reentry; stable height and no sticky or timer",
     "Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work",
-    "Published1920×1080/1440×900/1366×768/1280×720/1024×768/768×1024/390×844/360×740/320×844, full text and native mobile flow",
-    "Reduced motion retains desktop columns, manual scene buttons and final word"
+    "Pinned Journey down/up/full-exit reentry and all three buttons verified at all seven required desktop sizes; mobile local triangle visibility and native scenes verified",
+    "New transparent owner PNG displayed in Composition and core dialog; unchanged triangle core and four channel tabs verified",
+    "Desktop/mobile launch anchor reaches its true final scroll offset; long native smooth scroll is awaited by position instead of a 500ms deadline",
+    "Reduced motion retains desktop columns, manual Lot button, static complete triangle and final word"
   ],
   "pageErrors": [],
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "6c1a3472054839b5b19665f23ca91fcf533ee874",
-    "builtAt": "2026-10-22T23:32:31.907Z",
-    "previousDeploymentCommit": "7c08c16562805773334349b6a82d12c53efa6fb3"
+    "sourceCommit": "8ad56176929f7d27f373fc7164202ff3456795bf",
+    "builtAt": "2026-10-23T18:17:49.931Z",
+    "previousDeploymentCommit": "7059cc28dfc2499f81d0159db9db3d2967e76d99"
   },
   "typography": {
     "width": 1440,
@@ -44,24 +46,24 @@
       "Клиентские инструменты",
       "Виртуальный отдел продаж",
       "Контентная система",
-      "Управление и аналитика",
+      "Управление и аналитика",
       "Интеграции",
       "Коммерческие модули",
       "Клиентские инструменты",
       "Виртуальный отдел продаж",
       "Контентная система",
-      "Управление и аналитика",
+      "Управление и аналитика",
       "Интеграции",
       "Коммерческие модули",
       "Коммерческий цифровой двойник",
       "Четыре канала —одна основа",
-      "Показать больше на встрече",
-      "В Twin сходятся все три качества",
-      "Посмотрите в работе",
-      "Материалы и задачи",
+      "Показать больше на встрече",
+      "В Twin сходятся все три качества",
+      "Посмотрите в работе",
+      "Материалы и задачи",
       "Состав решения",
       "Разработка",
-      "Проверка и запуск",
+      "Проверка и запуск",
       "Посмотрите, как Twin может работать на вашем проекте"
     ],
     "faces": [
@@ -207,9 +209,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -355,8 +357,11 @@
       },
       "triangle": {
         "active": true,
-        "host": 3780,
-        "panel": 900
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 768.328125,
+        "panel": 768.328125
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -378,7 +383,7 @@
         "size": 60,
         "leading": 68.4,
         "tracking": 0,
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0316338)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00165606)",
         "synthesis": "none"
       },
       "h2": [
@@ -451,7 +456,7 @@
           "size": 22,
           "leading": 33,
           "tracking": 0.33,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.855226)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.24752)",
           "synthesis": "none"
         },
         {
@@ -461,16 +466,16 @@
           "size": 22,
           "leading": 33,
           "tracking": 0.33,
-          "transform": "matrix(1, 0, 0, 1, 0, 3.78645)",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.33601)",
           "synthesis": "none"
         },
         {
           "selector": ".scene-body-group",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 20,
-          "leading": 31,
-          "tracking": 0.3,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
           "transform": "matrix(1, 0, 0, 1, 0, 0)",
           "synthesis": "none"
         },
@@ -488,9 +493,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 20,
-          "leading": 31,
-          "tracking": 0.3,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -580,8 +585,8 @@
           "selector": ".map-component h3",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 22,
-          "leading": 29.7,
+          "size": 20,
+          "leading": 27,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -636,8 +641,11 @@
       },
       "triangle": {
         "active": true,
-        "host": 4536,
-        "panel": 1080
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 829.53125,
+        "panel": 829.53125
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -649,17 +657,17 @@
     },
     {
       "viewport": {
-        "width": 1366,
-        "height": 768
+        "width": 1920,
+        "height": 900
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
         "weight": 900,
-        "size": 46.15,
-        "leading": 52.611,
+        "size": 60,
+        "leading": 68.4,
         "tracking": 0,
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0436955)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00979156)",
         "synthesis": "none"
       },
       "h2": [
@@ -667,8 +675,8 @@
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -677,8 +685,8 @@
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -687,8 +695,8 @@
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -697,18 +705,18 @@
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -717,8 +725,292 @@
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 58.15,
-          "leading": 66.291,
+          "size": 72,
+          "leading": 82.08,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.473543)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 2.27754)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0.22,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 25.5,
+          "tracking": 0.255,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 32,
+          "leading": 41.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 48,
+          "leading": 57.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 829.53125,
+        "panel": 829.53125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 48,
+        "leading": 54.72,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00165125)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 60,
+          "leading": 68.4,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -732,7 +1024,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 1.03279)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.24731)",
           "synthesis": "none"
         },
         {
@@ -742,7 +1034,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 4.45995)",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.3351)",
           "synthesis": "none"
         },
         {
@@ -769,9 +1061,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -834,6 +1126,290 @@
           "size": 16,
           "leading": 24,
           "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 27,
+          "leading": 35.1,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 40,
+          "leading": 48,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 768.328125,
+        "panel": 768.328125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 46.15,
+        "leading": 52.611,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0436898)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 58.15,
+          "leading": 66.291,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.03271)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 4.45965)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -912,11 +1488,14 @@
       },
       "journey": {
         "layout": "desktop",
-        "motion": "false",
+        "motion": "true",
         "staticVisible": false
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 759.375,
         "panel": 759.375
       },
@@ -930,17 +1509,17 @@
     },
     {
       "viewport": {
-        "width": 1280,
-        "height": 720
+        "width": 1366,
+        "height": 700
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
         "weight": 900,
-        "size": 44,
-        "leading": 50.16,
+        "size": 46.15,
+        "leading": 52.611,
         "tracking": 0,
-        "transform": "none",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00595252)",
         "synthesis": "none"
       },
       "h2": [
@@ -948,8 +1527,8 @@
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -958,8 +1537,8 @@
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -968,8 +1547,8 @@
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -978,18 +1557,18 @@
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
+          "size": 44.4583,
+          "leading": 51.5717,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -998,8 +1577,8 @@
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 56,
-          "leading": 63.84,
+          "size": 58.15,
+          "leading": 66.291,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -1013,7 +1592,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.000124253)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.384037)",
           "synthesis": "none"
         },
         {
@@ -1023,7 +1602,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.0406713)",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.91046)",
           "synthesis": "none"
         },
         {
@@ -1050,9 +1629,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1102,9 +1681,9 @@
           "selector": ".scene-navigation strong",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1112,9 +1691,293 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.2292,
+          "leading": 34.0979,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7667,
+          "leading": 46.52,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 759.375,
+        "panel": 759.375
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 44,
+        "leading": 50.16,
+        "tracking": 0,
+        "transform": "none",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 42.6667,
+          "leading": 49.4933,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 56,
+          "leading": 63.84,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
           "size": 16,
           "leading": 24,
           "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1193,11 +2056,14 @@
       },
       "journey": {
         "layout": "desktop",
-        "motion": "false",
+        "motion": "true",
         "staticVisible": false
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 748.953125,
         "panel": 748.953125
       },
@@ -1262,7 +2128,7 @@
           "size": 42,
           "leading": 48.72,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
@@ -1331,9 +2197,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1383,9 +2249,9 @@
           "selector": ".scene-navigation strong",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1393,9 +2259,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1474,13 +2340,300 @@
       },
       "journey": {
         "layout": "desktop",
-        "motion": "false",
+        "motion": "true",
         "staticVisible": false
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 1301.359375,
         "panel": 1301.359375
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 46.075,
+        "leading": 52.5255,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0436549)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 58.075,
+          "leading": 66.2055,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.03222)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 4.45779)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.1979,
+          "leading": 34.0573,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7167,
+          "leading": 46.46,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 759.015625,
+        "panel": 759.015625
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1543,7 +2696,7 @@
           "size": 37.1773,
           "leading": 43.1257,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
@@ -1612,9 +2765,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1759,7 +2912,10 @@
         "staticVisible": true
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 1338.859375,
         "panel": 1338.859375
       },
@@ -1824,7 +2980,7 @@
           "size": 29,
           "leading": 33.64,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
@@ -1893,9 +3049,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.255,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1955,9 +3111,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2040,7 +3196,10 @@
         "staticVisible": true
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 1276.71875,
         "panel": 1276.71875
       },
@@ -2105,7 +3264,7 @@
           "size": 29,
           "leading": 33.64,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
@@ -2174,9 +3333,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.255,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2236,9 +3395,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2321,7 +3480,10 @@
         "staticVisible": true
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 1310.34375,
         "panel": 1310.34375
       },
@@ -2386,7 +3548,7 @@
           "size": 27,
           "leading": 31.32,
           "tracking": 0,
-          "transform": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
         },
         {
@@ -2455,9 +3617,9 @@
           "selector": ".map-component p",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 17,
-          "leading": 26.35,
-          "tracking": 0.255,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2517,9 +3679,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2602,7 +3764,10 @@
         "staticVisible": true
       },
       "triangle": {
-        "active": false,
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
         "host": 1354.53125,
         "panel": 1354.53125
       },
@@ -2615,1994 +3780,2801 @@
       }
     }
   ],
+  "descriptions": [
+    {
+      "text": "Покажите окружение, архитектуру и инфраструктуру Помогите связать преимущества проекта с выбором лота",
+      "style": {
+        "size": 18,
+        "weight": "450",
+        "leading": 27.9,
+        "tracking": 0.27
+      },
+      "height": 55.78125,
+      "lines": [
+        {
+          "height": 21,
+          "rects": 1
+        },
+        {
+          "height": 21,
+          "rects": 1
+        }
+      ]
+    },
+    {
+      "text": "Покажите общественные зоны, интерьеры, террасы и виды Помогите представить жизнь внутри проекта и будущего лота",
+      "style": {
+        "size": 18,
+        "weight": "450",
+        "leading": 27.9,
+        "tracking": 0.27
+      },
+      "height": 55.78125,
+      "lines": [
+        {
+          "height": 21,
+          "rects": 1
+        },
+        {
+          "height": 21,
+          "rects": 1
+        }
+      ]
+    },
+    {
+      "text": "Покажите лот в корпусе, на этаже и на планировке Свяжите его расположение, пространство и вид",
+      "style": {
+        "size": 18,
+        "weight": "450",
+        "leading": 27.9,
+        "tracking": 0.27
+      },
+      "height": 55.78125,
+      "lines": [
+        {
+          "height": 21,
+          "rects": 1
+        },
+        {
+          "height": 21,
+          "rects": 1
+        }
+      ]
+    }
+  ],
+  "composition": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "heading": {
+      "x": 170,
+      "y": 5438.328125,
+      "width": 1100,
+      "height": 120.84375,
+      "top": 5438.328125,
+      "right": 1270,
+      "bottom": 5559.171875,
+      "left": 170
+    },
+    "map": {
+      "x": 64,
+      "y": 5583.171875,
+      "width": 1312,
+      "height": 600,
+      "top": 5583.171875,
+      "right": 1376,
+      "bottom": 6183.171875,
+      "left": 64
+    },
+    "primaryHeight": 744.84375,
+    "cards": [
+      {
+        "x": 64,
+        "y": 5588.5,
+        "bottom": 5764.5,
+        "right": 418.234375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      },
+      {
+        "x": 64,
+        "y": 5795.15625,
+        "bottom": 5971.15625,
+        "right": 418.234375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      },
+      {
+        "x": 64,
+        "y": 6001.828125,
+        "bottom": 6177.828125,
+        "right": 418.234375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      },
+      {
+        "x": 1021.75,
+        "y": 5588.5,
+        "bottom": 5764.5,
+        "right": 1375.984375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      },
+      {
+        "x": 1021.75,
+        "y": 5795.15625,
+        "bottom": 5971.15625,
+        "right": 1375.984375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      },
+      {
+        "x": 1021.75,
+        "y": 6001.828125,
+        "bottom": 6177.828125,
+        "right": 1375.984375,
+        "height": 176,
+        "width": 354.234375,
+        "overflow": false
+      }
+    ],
+    "paths": [
+      "M237 57H351.6264L509.92 125.4",
+      "M237 264H323.73839999999996L443.52 243",
+      "M237 471H373.93679999999995L563.04 360.6",
+      "M1075 57H960.3736L802.0799999999999 125.4",
+      "M1075 264H988.2616L868.48 243",
+      "M1075 471H938.0632L748.96 360.6"
+    ],
+    "core": {
+      "x": 418.234375,
+      "y": 5616.234375,
+      "width": 603.515625,
+      "height": 533.875,
+      "top": 5616.234375,
+      "right": 1021.75,
+      "bottom": 6150.109375,
+      "left": 418.234375
+    }
+  },
   "journeySamples": [
     {
-      "progress": 0.20597560009464733,
+      "progress": 0.2059761478188632,
       "title": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 18)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 200.375,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.22301085315933847,
+      "progress": 0.2230032181899724,
       "title": [
         {
-          "opacity": 0.983856,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.129155)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 0.861917%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 198.92374725125,
+          "height": 168.375,
+          "visible": 166.92374725125
         },
         {
-          "opacity": 0.0161444,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 17.7094)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(99.1381% 0px 0%)",
+          "z": "auto",
+          "top": 198.923775875,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 1.4512241250000102
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.2360625564562079,
+      "progress": 0.23606209364815892,
       "title": [
         {
-          "opacity": 0.645747,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -2.83403)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 20.6045%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 165.682173125,
+          "height": 168.375,
+          "visible": 133.682173125
         },
         {
-          "opacity": 0.354254,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.6234)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(79.3955% 0px 0%)",
+          "z": "auto",
+          "top": 165.682173125,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 34.69282687500001
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.28000964653797794,
+      "progress": 0.28000963681851304,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
-          "opacity": 0.985368,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.0877929)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 6.59355e-06%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.1562463220354,
+          "height": 55.78125,
+          "visible": 55.78124632203539
         },
         {
-          "opacity": 0.0146322,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.8244)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.3090037507083742,
+      "progress": 0.3090037504104361,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
-          "opacity": 0.521342,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -2.87195)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 41.9629%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 252.74881984375,
+          "height": 55.78125,
+          "visible": 32.37381984375
         },
         {
-          "opacity": 0.478658,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 6.25611)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(58.0371% 0px 0%)",
+          "z": "auto",
+          "top": 252.74881984375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 23.40743015625
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.37901044094477304,
+      "progress": 0.3790104409416089,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0.815031,
           "clip": "none",
-          "transform": "matrix(1.06371, 0, 0, 1.06371, 0, -38.2248)",
-          "z": "2"
+          "z": "2",
+          "top": 264.90521240234375,
+          "bottom": 724.6597290039062,
+          "height": 459.7545166015625,
+          "visible": 459.7545166015625
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.43903848433386305,
+      "progress": 0.43903819151485346,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60379)",
-          "z": "2"
+          "z": "2",
+          "top": 302.5093078613281,
+          "bottom": 735.8834228515625,
+          "height": 433.3741149902344,
+          "visible": 433.3741149902344
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6040533356576132,
+      "progress": 0.6040531342127431,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 18)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 200.375,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6230490441857619,
+      "progress": 0.6230493820290267,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
-          "opacity": 0.983455,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.132364)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 0.888102%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 198.8796582575,
+          "height": 168.375,
+          "visible": 166.8796582575
         },
         {
-          "opacity": 0.0165454,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 17.7022)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(99.1119% 0px 0%)",
+          "z": "auto",
+          "top": 198.879661625,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 1.4953383749999887
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6360648714772095,
+      "progress": 0.6360645101103714,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
-          "opacity": 0.645663,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -2.8347)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 20.61%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 165.6729125,
+          "height": 168.375,
+          "visible": 133.6729125
         },
         {
-          "opacity": 0.354337,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.6219)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(79.39% 0px 0%)",
+          "z": "auto",
+          "top": 165.6729125,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 34.702087500000005
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6800058412295374,
+      "progress": 0.680005836764591,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
-          "opacity": 0.98539,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.0876629)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 2.41887e-06%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.1562486507241,
+          "height": 55.78125,
+          "visible": 55.78124865072408
         },
         {
-          "opacity": 0.0146105,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.8247)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.7090301503434833,
+      "progress": 0.7090301502688113,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
-          "opacity": 0.520777,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -2.87534)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 42.0231%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 252.71523953125,
+          "height": 55.78125,
+          "visible": 32.34023953125
         },
         {
-          "opacity": 0.479223,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 6.24933)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(57.9769% 0px 0%)",
+          "z": "auto",
+          "top": 252.71523953125,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 23.44101046875
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.7790110626828898,
+      "progress": 0.7790110626820971,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0.815049,
           "clip": "none",
-          "transform": "matrix(1.06371, 0, 0, 1.06371, 0, -38.2244)",
-          "z": "3"
+          "z": "3",
+          "top": 264.90557861328125,
+          "bottom": 724.6598510742188,
+          "height": 459.7542724609375,
+          "visible": 459.7542724609375
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.8390381981178532,
+      "progress": 0.8390381981178449,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60387)",
-          "z": "3"
+          "z": "3",
+          "top": 302.5093078613281,
+          "bottom": 735.8834228515625,
+          "height": 433.3741149902344,
+          "visible": 433.3741149902344
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.8390381981178532,
+      "progress": 0.839085299185698,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1.00267, 0, 0, 1.00267, 0, -1.60387)",
-          "z": "3"
+          "z": "3",
+          "top": 302.52288818359375,
+          "bottom": 735.887451171875,
+          "height": 433.36456298828125,
+          "visible": 433.36456298828125
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.780916688202173,
+      "progress": 0.7809170079790478,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
-          "opacity": 0.86872,
+          "opacity": 0.868728,
           "clip": "none",
-          "transform": "matrix(1.06179, 0, 0, 1.06179, 0, -37.0728)",
-          "z": "3"
+          "z": "3",
+          "top": 266.0882568359375,
+          "bottom": 725.0128173828125,
+          "height": 458.924560546875,
+          "visible": 458.924560546875
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.7109135363735896,
+      "progress": 0.7109135425983352,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
-          "opacity": 0.480429,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -3.11743)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 46.3419%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 250.30615890625,
+          "height": 55.78125,
+          "visible": 29.931158906249998
         },
         {
-          "opacity": 0.519571,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 5.76514)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(53.6581% 0px 0%)",
+          "z": "auto",
+          "top": 250.30615890625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 25.850091093750002
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6819151009178602,
+      "progress": 0.6819144833617641,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
-          "opacity": 0.972651,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.164092)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 0.255144%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.0139274875,
+          "height": 55.78125,
+          "visible": 55.6389274875
         },
         {
-          "opacity": 0.0273486,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.6718)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(99.7449% 0px 0%)",
+          "z": "auto",
+          "top": 276.01395203125,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0.14229796875000034
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6379241116776903,
+      "progress": 0.6379245611316566,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
-          "opacity": 0.577566,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -3.37947)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 24.9406%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 158.38126475,
+          "height": 168.375,
+          "visible": 126.38126475
         },
         {
-          "opacity": 0.422434,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 10.3962)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(75.0594% 0px 0%)",
+          "z": "auto",
+          "top": 158.38126474999999,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 41.993735250000015
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.6249675932204191,
+      "progress": 0.6249681566286874,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
-          "opacity": 0.957561,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.339508)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 2.30045%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 196.5016173125,
+          "height": 168.375,
+          "visible": 164.5016173125
         },
         {
-          "opacity": 0.0424386,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 17.2361)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(97.6996% 0px 0%)",
+          "z": "auto",
+          "top": 196.50170150000002,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 3.8732984999999758
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.605987267482843,
+      "progress": 0.6059873016504236,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 18)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 200.375,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "2"
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "3"
+          "z": "3",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.44098680511717636,
+      "progress": 0.44098680538513985,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1.00183, 0, 0, 1.00183, 0, -1.09953)",
-          "z": "2"
+          "z": "2",
+          "top": 303.0271911621094,
+          "bottom": 736.0380249023438,
+          "height": 433.0108337402344,
+          "visible": 433.0108337402344
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.38096217889906414,
+      "progress": 0.3809531611341145,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -6)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
-          "opacity": 0.869916,
+          "opacity": 0.869679,
           "clip": "none",
-          "transform": "matrix(1.06174, 0, 0, 1.06174, 0, -37.0448)",
-          "z": "2"
+          "z": "2",
+          "top": 266.111083984375,
+          "bottom": 725.0196533203125,
+          "height": 458.9085693359375,
+          "visible": 458.9085693359375
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.31094059493597537,
+      "progress": 0.3109417192805345,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
-          "opacity": 0.479849,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -3.1209)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 46.4067%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 250.27001265625,
+          "height": 55.78125,
+          "visible": 29.89501265625
         },
         {
-          "opacity": 0.520151,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 5.75819)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(53.5933% 0px 0%)",
+          "z": "auto",
+          "top": 250.27001265625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 25.88623734375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.2819441287187173,
+      "progress": 0.28194169743784625,
       "title": [
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -8)",
-          "z": "auto"
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
-          "opacity": 0.972429,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.165423)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 0.262374%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.009894503125,
+          "height": 55.78125,
+          "visible": 55.634894503125
         },
         {
-          "opacity": 0.0275705,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 11.6692)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(99.7376% 0px 0%)",
+          "z": "auto",
+          "top": 276.00988,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0.14636999999999745
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.23792476907069965,
+      "progress": 0.23792517772942381,
       "title": [
         {
-          "opacity": 0.577542,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -3.37966)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 24.942%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 158.3789075,
+          "height": 168.375,
+          "visible": 126.3789075
         },
         {
-          "opacity": 0.422458,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 10.3958)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(75.058% 0px 0%)",
+          "z": "auto",
+          "top": 158.37890750000003,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 41.99609249999999
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.2249681736973634,
+      "progress": 0.22496820724211425,
       "title": [
         {
-          "opacity": 0.957552,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, -0.339584)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(0% 0px 2.30049%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 196.5015499625,
+          "height": 168.375,
+          "visible": 164.5015499625
         },
         {
-          "opacity": 0.042448,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 17.2359)",
-          "z": "auto"
+          "opacity": 1,
+          "clip": "inset(97.6995% 0px 0%)",
+          "z": "auto",
+          "top": 196.50153312499998,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 3.8734668750000196
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     },
     {
-      "progress": 0.20598164135652805,
+      "progress": 0.2059873047198467,
       "title": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 18)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 200.375,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
         }
       ],
       "body": [
         {
           "opacity": 1,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "z": "auto"
+          "clip": "inset(100% 0px 0%)",
+          "z": "auto",
+          "top": 276.15625,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         },
         {
           "opacity": 0,
-          "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "auto"
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
         }
       ],
       "media": [
         {
           "opacity": 1,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "1"
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1.08, 0, 0, 1.08, 0, -48)",
-          "z": "2"
+          "z": "2",
+          "top": 254.86749267578125,
+          "bottom": 721.6637573242188,
+          "height": 466.7962646484375,
+          "visible": 0
         },
         {
           "opacity": 0,
           "clip": "none",
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "z": "3"
+          "z": "3",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 0
         }
       ],
-      "titleParent": {
-        "opacity": 1,
-        "clip": "none"
-      },
-      "bodyParent": {
-        "opacity": 1,
-        "clip": "none"
-      }
+      "parents": [
+        1,
+        1
+      ]
     }
   ],
   "journeyFirstLine": {
@@ -4610,160 +6582,765 @@
     "height": 72,
     "leading": 68.4
   },
+  "triangle": {
+    "geometry": {
+      "x": 64,
+      "y": 5235.546875,
+      "width": 1312,
+      "height": 768.328125
+    },
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "values": {
+          "lead": 0,
+          "answer": 0,
+          "qualities": 0,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.0721,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 0.8104891093401686,
+          "answer": 0,
+          "qualities": 0,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.3579,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.6436,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.7146297961636993,
+          "time": 0.7146297961636993,
+          "budget": 0.7146297961636993,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      }
+    ],
+    "final": {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    }
+  },
   "triangleSamples": [
     {
-      "progress": 0.04,
-      "lead": 0.49941,
-      "answer": 0,
-      "facts": 0,
-      "model": 0,
-      "proof": 0,
-      "edges": [
-        0,
-        0,
-        0
-      ],
+      "progress": 0,
+      "state": "armed",
+      "word": "Эффектно",
+      "values": {
+        "lead": 0,
+        "answer": 0,
+        "qualities": 0,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.1299,
-      "lead": 1,
-      "answer": 0.498486,
-      "facts": 0,
-      "model": 0,
-      "proof": 0,
-      "edges": [
-        0,
-        0,
-        0
-      ],
+      "progress": 0.0721,
+      "state": "playing",
+      "word": "Эффектно",
+      "values": {
+        "lead": 0.8104891093401686,
+        "answer": 0,
+        "qualities": 0,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.24,
-      "lead": 1,
-      "answer": 1,
-      "facts": 0.499607,
-      "model": 0,
-      "proof": 0,
-      "edges": [
-        0.999999175144,
-        0,
-        0
-      ],
+      "progress": 0.3579,
+      "state": "playing",
+      "word": "Эффектно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.3601,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 0,
-      "proof": 0,
-      "edges": [
-        1,
-        1,
-        0.501343
-      ],
+      "progress": 0.6436,
+      "state": "playing",
+      "word": "Эффектно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 0.7146297961636993,
+        "time": 0.7146297961636993,
+        "budget": 0.7146297961636993,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.4698,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 0.497445,
-      "proof": 0.497445,
-      "edges": [
-        1,
-        1,
-        1
-      ],
-      "insert": 0
-    },
-    {
-      "progress": 0.6198,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 1,
-      "proof": 1,
-      "edges": [
-        1,
-        1,
-        1
-      ],
-      "insert": 0
-    },
-    {
-      "progress": 0.7799,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 1,
-      "proof": 1,
-      "edges": [
-        1,
-        1,
-        1
-      ],
-      "insert": 0.4987386079601784
-    },
-    {
-      "progress": 0.9198,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 1,
-      "proof": 1,
-      "edges": [
-        1,
-        1,
-        1
-      ],
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
       "insert": 1
     },
     {
-      "progress": 0.7799,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 1,
-      "proof": 1,
-      "edges": [
-        1,
-        1,
-        1
-      ],
-      "insert": 0.4987386079601784
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
     },
     {
-      "progress": 0.4698,
-      "lead": 1,
-      "answer": 1,
-      "facts": 1,
-      "model": 0.497445,
-      "proof": 0.497445,
-      "edges": [
-        1,
-        1,
-        1
-      ],
-      "insert": 0
-    },
-    {
-      "progress": 0.24,
-      "lead": 1,
-      "answer": 1,
-      "facts": 0.499607,
-      "model": 0,
-      "proof": 0,
-      "edges": [
-        0.999999175144,
-        0,
-        0
-      ],
-      "insert": 0
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
     }
-  ]
+  ],
+  "scrollMatrix": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "panel": 1080,
+      "position": "sticky",
+      "needed": "1007",
+      "media": {
+        "x": 864.796875,
+        "y": 332.9375,
+        "width": 1055.203125,
+        "height": 593.546875,
+        "bottom": 926.484375
+      },
+      "caption": {
+        "x": 864.796875,
+        "y": 934.484375,
+        "width": 1055.203125,
+        "height": 32,
+        "bottom": 966.484375
+      },
+      "navigation": {
+        "x": 612.796875,
+        "y": 332.9375,
+        "width": 220,
+        "height": 593.546875,
+        "bottom": 926.484375
+      },
+      "text": {
+        "x": 612.796875,
+        "y": 32,
+        "width": 1307.203125,
+        "height": 272.9375,
+        "bottom": 304.9375
+      },
+      "buttons": [
+        {
+          "height": 198,
+          "scroll": 198
+        },
+        {
+          "height": 198,
+          "scroll": 198
+        },
+        {
+          "height": 198,
+          "scroll": 198
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1920,
+      "height": 900,
+      "panel": 900,
+      "position": "sticky",
+      "needed": "900",
+      "media": {
+        "x": 864.796875,
+        "y": 332.9375,
+        "width": 865.765625,
+        "height": 486.984375,
+        "bottom": 819.921875
+      },
+      "caption": {
+        "x": 864.796875,
+        "y": 827.921875,
+        "width": 1055.203125,
+        "height": 32,
+        "bottom": 859.921875
+      },
+      "navigation": {
+        "x": 612.796875,
+        "y": 332.9375,
+        "width": 220,
+        "height": 486.984375,
+        "bottom": 819.921875
+      },
+      "text": {
+        "x": 612.796875,
+        "y": 32,
+        "width": 1307.203125,
+        "height": 272.9375,
+        "bottom": 304.9375
+      },
+      "buttons": [
+        {
+          "height": 162,
+          "scroll": 162
+        },
+        {
+          "height": 162,
+          "scroll": 162
+        },
+        {
+          "height": 162,
+          "scroll": 162
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "panel": 900,
+      "position": "sticky",
+      "needed": "816",
+      "media": {
+        "x": 671.59375,
+        "y": 304.15625,
+        "width": 768.40625,
+        "height": 432.21875,
+        "bottom": 736.375
+      },
+      "caption": {
+        "x": 671.59375,
+        "y": 744.375,
+        "width": 768.40625,
+        "height": 32,
+        "bottom": 776.375
+      },
+      "navigation": {
+        "x": 457.59375,
+        "y": 304.15625,
+        "width": 190,
+        "height": 432.21875,
+        "bottom": 736.375
+      },
+      "text": {
+        "x": 457.59375,
+        "y": 32,
+        "width": 982.40625,
+        "height": 244.15625,
+        "bottom": 276.15625
+      },
+      "buttons": [
+        {
+          "height": 144,
+          "scroll": 144
+        },
+        {
+          "height": 144,
+          "scroll": 144
+        },
+        {
+          "height": 144,
+          "scroll": 144
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "panel": 768,
+      "position": "sticky",
+      "needed": "719",
+      "media": {
+        "x": 650.125,
+        "y": 259.96875,
+        "width": 715.875,
+        "height": 402.671875,
+        "bottom": 662.640625
+      },
+      "caption": {
+        "x": 650.125,
+        "y": 670.640625,
+        "width": 715.875,
+        "height": 32,
+        "bottom": 702.640625
+      },
+      "navigation": {
+        "x": 436.125,
+        "y": 259.96875,
+        "width": 190,
+        "height": 402.671875,
+        "bottom": 662.640625
+      },
+      "text": {
+        "x": 436.125,
+        "y": 16,
+        "width": 929.875,
+        "height": 227.96875,
+        "bottom": 243.96875
+      },
+      "buttons": [
+        {
+          "height": 134,
+          "scroll": 134
+        },
+        {
+          "height": 134,
+          "scroll": 134
+        },
+        {
+          "height": 134,
+          "scroll": 134
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1366,
+      "height": 700,
+      "panel": 700,
+      "position": "sticky",
+      "needed": "700",
+      "media": {
+        "x": 650.125,
+        "y": 259.96875,
+        "width": 682.65625,
+        "height": 383.984375,
+        "bottom": 643.953125
+      },
+      "caption": {
+        "x": 650.125,
+        "y": 651.953125,
+        "width": 715.875,
+        "height": 32,
+        "bottom": 683.953125
+      },
+      "navigation": {
+        "x": 436.125,
+        "y": 259.96875,
+        "width": 190,
+        "height": 383.984375,
+        "bottom": 643.953125
+      },
+      "text": {
+        "x": 436.125,
+        "y": 16,
+        "width": 929.875,
+        "height": 227.96875,
+        "bottom": 243.96875
+      },
+      "buttons": [
+        {
+          "height": 128,
+          "scroll": 128
+        },
+        {
+          "height": 128,
+          "scroll": 128
+        },
+        {
+          "height": 128,
+          "scroll": 128
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "panel": 800,
+      "position": "sticky",
+      "needed": "679",
+      "media": {
+        "x": 625.1875,
+        "y": 255.03125,
+        "width": 654.8125,
+        "height": 368.328125,
+        "bottom": 623.359375
+      },
+      "caption": {
+        "x": 625.1875,
+        "y": 631.359375,
+        "width": 654.8125,
+        "height": 32,
+        "bottom": 663.359375
+      },
+      "navigation": {
+        "x": 411.1875,
+        "y": 255.03125,
+        "width": 190,
+        "height": 368.328125,
+        "bottom": 623.359375
+      },
+      "text": {
+        "x": 411.1875,
+        "y": 16,
+        "width": 868.8125,
+        "height": 223.03125,
+        "bottom": 239.03125
+      },
+      "buttons": [
+        {
+          "height": 123,
+          "scroll": 123
+        },
+        {
+          "height": 123,
+          "scroll": 123
+        },
+        {
+          "height": 123,
+          "scroll": 123
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "panel": 768,
+      "position": "sticky",
+      "needed": "581",
+      "media": {
+        "x": 469.75,
+        "y": 209.4375,
+        "width": 554.25,
+        "height": 311.765625,
+        "bottom": 521.203125
+      },
+      "caption": {
+        "x": 269.75,
+        "y": 533.328125,
+        "width": 754.25,
+        "height": 32,
+        "bottom": 565.328125
+      },
+      "navigation": {
+        "x": 269.75,
+        "y": 209.4375,
+        "width": 180,
+        "height": 315.890625,
+        "bottom": 525.328125
+      },
+      "text": {
+        "x": 269.75,
+        "y": 16,
+        "width": 754.25,
+        "height": 177.4375,
+        "bottom": 193.4375
+      },
+      "buttons": [
+        {
+          "height": 105,
+          "scroll": 105
+        },
+        {
+          "height": 105,
+          "scroll": 105
+        },
+        {
+          "height": 105,
+          "scroll": 105
+        }
+      ],
+      "fit": "contain"
+    }
+  ],
+  "mobileTriangle": {
+    "geometry": {
+      "x": 20,
+      "y": 366.234375,
+      "width": 350,
+      "height": 1276.71875
+    },
+    "samples": [
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.6435,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.999679025724437,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      }
+    ],
+    "final": {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    }
+  },
+  "coreAsset": {
+    "url": "https://aurrrus.github.io/twin-web-concept/media/composition-core-20261023.png?v=643c5107ecf0",
+    "width": 1448,
+    "height": 1086,
+    "fit": "contain",
+    "filter": "none"
+  },
+  "launchAnchor": [
+    {
+      "url": "https://aurrrus.github.io/twin-web-concept/#launch",
+      "top": 56.875,
+      "first": {
+        "x": 64,
+        "y": 56.875,
+        "width": 310,
+        "height": 140.28125,
+        "top": 56.875,
+        "right": 374,
+        "bottom": 197.15625,
+        "left": 64
+      }
+    },
+    {
+      "url": "https://aurrrus.github.io/twin-web-concept/#launch",
+      "top": 56.953125,
+      "first": {
+        "x": 20,
+        "y": 56.953125,
+        "width": 350,
+        "height": 114.125,
+        "top": 56.953125,
+        "right": 370,
+        "bottom": 171.078125,
+        "left": 20
+      }
+    }
+  ],
+  "followup": {
+    "reason": "The initial 500ms anchor assertion ran during the native 8k-pixel smooth scroll; final position was correct. The verifier now awaits the actual anchor offset.",
+    "initialReport": "artifacts/scroll-recovery/online-first-pass.json",
+    "completedAt": "2026-10-23T18:23:45.888Z"
+  }
 }
