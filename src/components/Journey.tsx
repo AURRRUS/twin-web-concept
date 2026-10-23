@@ -6,13 +6,14 @@ import { sitePath } from '../lib/paths';
 
 const materials = [
   { media: 'sceneProject', alt: 'Иллюстрация интерфейса: инфраструктура прибрежного проекта', target: sceneTargets[0] },
-  { media: 'sceneSpace', alt: 'Иллюстрация интерфейса: терраса с видом на море', target: sceneTargets[1] },
-  { media: 'sceneLot', alt: 'Иллюстрация интерфейса: план этажа и выбранный лот', target: sceneTargets[2] },
+  { media: 'sceneSpace', alt: 'Иллюстрация интерфейса: терраса с видом на море', target: sceneTargets[1] },
+  { media: 'sceneLot', alt: 'Иллюстрация интерфейса: план этажа и выбранный лот', target: sceneTargets[2] },
 ] as const;
 const scenes = content.journey.map((scene, index) => ({ ...scene, ...materials[index] }));
 type Scene = typeof scenes[number];
 const heading = (scene: Scene) => <><span>{scene.heading_lines[0]}</span>{' '}<span className="bronze">{scene.heading_lines[1]}</span></>;
 const navigation = (scene: Scene, index: number) => <><span className="scene-number">0{index + 1}</span><span><strong>{scene.navigation_title}</strong><span className="scene-nav-description">{scene.navigation_description_lines[0]}{' '}<br />{scene.navigation_description_lines[1]}</span></span></>;
+const description = (scene: Scene) => scene.body_lines.map((line,index) => <span className="scene-body-line" key={index}>{line}{index === 0 ? ' ' : ''}</span>);
 const disclaimer = 'Иллюстрация интерфейса. Данные демонстрационные.';
 const original = (id: string) => sitePath(`/media/recovery-original/${id}.png`);
 
@@ -40,8 +41,8 @@ export function Journey() {
       return Math.max(0, Math.min(1, -rect.top / Math.max(1, node.offsetHeight - panel.offsetHeight)));
     };
     const write = (frame: ReturnType<typeof journeyFrame>, progress: number) => {
-      for (const group of ['titleOpacity','titleY','titleClip','bodyOpacity','bodyY','mediaOpacity','mediaScale','mediaY'] as const) {
-        frame[group].forEach((value, index) => node.style.setProperty(`--${group}-${index}`, `${value}${group.endsWith('Y') ? 'px' : group === 'titleClip' ? '%' : ''}`));
+      for (const group of ['titleOpacity','titleY','titleClip','titleClipTop','titleClipBottom','bodyOpacity','bodyY','bodyClipTop','bodyClipBottom','mediaOpacity','mediaScale','mediaY'] as const) {
+        frame[group].forEach((value, index) => node.style.setProperty(`--${group}-${index}`, `${value}${group.endsWith('Y') ? 'px' : group.includes('Clip') ? '%' : ''}`));
       }
       node.style.setProperty('--scene-progress', String(progress));
       if (current.active !== frame.active || current.title !== frame.title || current.explanation !== frame.explanation) {
@@ -128,12 +129,12 @@ export function Journey() {
     event.preventDefault(); origin.current = event.currentTarget; setExpanded(id);
   };
   const expandLink = (id: string) => <a className="scene-expand" href={original(id)} onClick={event => expand(event, id)}>Развернуть изображение<span aria-hidden="true"> ↗</span></a>;
-  return <section ref={host} className="journey" data-enhanced={layoutReady ? motionEnabled : 'pending'} data-layout-mode={layoutMode} data-motion-enabled={motionEnabled} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
+  return <section ref={host} className="journey" data-craft-repeat="after-exit" data-enhanced={layoutReady ? motionEnabled : 'pending'} data-layout-mode={layoutMode} data-motion-enabled={motionEnabled} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
     <div className="journey-static content-container" hidden={layoutMode === 'desktop'}>
       <Media name="topFacade" alt="Вертикальный фасад демонстрационного проекта" className="static-facade" />
       <nav className="static-scene-nav" aria-label="Масштаб исследования">{scenes.map((scene, index) => <a key={scene.id} href={`#${scene.id}`}>{navigation(scene, index)}</a>)}</nav>
       {scenes.map(scene => <article key={scene.id} id={layoutMode === 'desktop' ? undefined : scene.id} className="static-scene">
-        <div data-craft-reveal="eyebrow" className="scene-eyebrow">{scene.eyebrow}</div><h2 data-craft-reveal="title">{heading(scene)}</h2><p data-craft-reveal="body">{scene.body}</p><div className="static-media-viewport"><div data-craft-reveal="media"><Media name={scene.media} alt={scene.alt} /></div></div><div className="scene-caption"><small>{disclaimer}</small>{expandLink(scene.id)}</div>
+        <div data-craft-reveal="eyebrow" className="scene-eyebrow">{scene.eyebrow}</div><h2 data-craft-reveal="title">{heading(scene)}</h2><p data-craft-reveal="body">{description(scene)}</p><div className="static-media-viewport"><div data-craft-reveal="media"><Media name={scene.media} alt={scene.alt} /></div></div><div className="scene-caption"><small>{disclaimer}</small>{expandLink(scene.id)}</div>
       </article>)}
     </div>
     <div className="journey-cinematic" hidden={layoutReady && layoutMode !== 'desktop'}>
@@ -142,7 +143,7 @@ export function Journey() {
         <div className="journey-right">
           <div className="scene-text-zone">
             <div className="scene-title-slot" data-craft-reveal="title">{scenes.map((scene,index)=><div className="scene-title-group" data-layer={index} key={scene.id} aria-hidden={reading.title!==index}><div className="scene-eyebrow">{scene.eyebrow}</div><h2>{heading(scene)}</h2></div>)}</div>
-            <div className="scene-body-slot" data-craft-reveal="body">{scenes.map((scene,index)=><p className="scene-body-group" data-layer={index} key={scene.id} aria-hidden={reading.explanation!==index}>{scene.body}</p>)}</div>
+            <div className="scene-body-slot" data-craft-reveal="body">{scenes.map((scene,index)=><p className="scene-body-group" data-layer={index} key={scene.id} aria-hidden={reading.explanation!==index}>{description(scene)}</p>)}</div>
           </div>
           <nav className="scene-navigation" aria-label="Масштаб исследования">{scenes.map((scene, index) => <button key={scene.id} type="button" id={layoutMode === 'desktop' ? scene.id : undefined} aria-pressed={reading.active === index} aria-current={reading.active === index ? 'step' : undefined} onClick={() => jump.current(scene.id)}>{navigation(scene, index)}</button>)}</nav>
           <div className="scene-materials"><div className="scene-sheet-entry" data-craft-reveal="media">{scenes.map((scene, index) => <div key={scene.id} data-layer={index} className={`scene-material scene-material-${scene.id}`} aria-hidden={reading.active !== index}><Media name={scene.media} alt={scene.alt} /></div>)}</div></div>
@@ -152,7 +153,7 @@ export function Journey() {
       <div className="scene-progress" aria-hidden="true"><span /></div>
     </div>
     <dialog ref={dialog} className="scene-original-dialog" aria-labelledby="scene-original-title" onCancel={event => { event.preventDefault(); setExpanded(null); }} onClick={event => { if (event.target === event.currentTarget) setExpanded(null); }}>
-      {expanded && <div className="scene-original-inner"><div className="scene-original-header"><h2 id="scene-original-title">{scenes.find(scene => scene.id === expanded)?.navigation_title} — полный оригинал</h2><button type="button" onClick={() => setExpanded(null)} autoFocus>Закрыть ×</button></div><img src={original(expanded)} alt={scenes.find(scene => scene.id === expanded)?.alt} /><a className="text-link" href={original(expanded)} target="_blank" rel="noreferrer">Открыть оригинал в отдельной вкладке ↗</a></div>}
+      {expanded && <div className="scene-original-inner"><div className="scene-original-header"><h2 id="scene-original-title">{scenes.find(scene => scene.id === expanded)?.navigation_title} — полный оригинал</h2><button type="button" onClick={() => setExpanded(null)} autoFocus>Закрыть ×</button></div><img src={original(expanded)} alt={scenes.find(scene => scene.id === expanded)?.alt} /><a className="text-link" href={original(expanded)} target="_blank" rel="noreferrer">Открыть оригинал в отдельной вкладке ↗</a></div>}
     </dialog>
   </section>;
 }

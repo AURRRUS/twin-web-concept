@@ -1,8 +1,8 @@
 import { sitePath } from '../lib/paths';
 import { useEffect, useId, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
-import content from '../../docs/handoff/04_DATA/twin-home-content.json';
-import rawDialogs from '../../docs/handoff/06_UI_KIT/modal-content.json';
+import content from '../lib/compositionContent.json';
+import rawDialogs from '../lib/componentDialogs.json';
 import { Media, Arrow } from './Media';
 import { Icon } from './Icon';
 
@@ -24,10 +24,6 @@ function ComponentArt({ id, detail = false }: { id: string; detail?: boolean }) 
   if (id === 'commercial') return <Media name="interior" alt="Пример интерьерного решения" />;
   return <img src={sitePath(`/media/${id}.svg`)} alt="" loading="lazy" width="1000" height="700" />;
 }
-const routes = [
-  'M300 110H365L492 230', 'M300 350H400L487 360', 'M300 590H380L500 475',
-  'M1000 110H930L805 230', 'M1000 350H900L815 360', 'M1000 590H920L800 475',
-];
 export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
   const [active, setActive] = useState<string | null>(null);
   const [closing, setClosing] = useState(false);
@@ -75,17 +71,31 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
     else { const url = new URL(window.location.href); url.searchParams.delete('component'); window.history.replaceState({}, '', url); readUrl(); }
   }
   function discuss(title: string) {
-    onTopic(title); restorePending.current = false;
+    onTopic(title.replace(/\u00a0/g, ' ')); restorePending.current = false;
     const url = new URL(window.location.href); url.searchParams.delete('component'); url.hash = 'contact';
     window.history.replaceState({}, '', url); createdEntry.current = false; assign(null);
     requestAnimationFrame(() => { document.getElementById('contact')?.scrollIntoView(); document.getElementById('contact-topic')?.focus({ preventScroll: true }); });
   }
+  const map = useRef<HTMLDivElement>(null);
+  const [canvas,setCanvas]=useState({width:1300,height:600});
+  const [connections, setConnections] = useState<{path:string;x:number;y:number}[]>([...Array(6)].map((_,i)=>{const left=i<3,x=left?351:949,y=[60,266,472][i%3],tx=left?505:795,ty=[114,232,350][i%3];return{path:`M${x} ${y}H${left?420:880}L${tx} ${ty}`,x,y};}));
+  useEffect(() => {
+    const node=map.current!;let raf=0,alive=true;
+    // Layout coordinates ignore the entrance/hover transforms of individual cards.
+    const rect=(element:HTMLElement)=>{let x=0,y=0,n:HTMLElement|null=element;while(n&&n!==node){x+=n.offsetLeft;y+=n.offsetTop;n=n.offsetParent as HTMLElement|null;}return{x,y,w:element.offsetWidth,h:element.offsetHeight};};
+    const measure=()=>{raf=0;if(!alive)return;const core=rect(node.querySelector<HTMLElement>('.map-core>.media')!);
+      setCanvas({width:node.clientWidth,height:node.clientHeight});
+      setConnections([...node.querySelectorAll<HTMLElement>('.component-art')].map((art,i)=>{const box=rect(art),left=i<3,x=left?box.x+box.w:box.x,y=box.y+box.h/2,tx=core.x+core.w*(i%3===0?(left?.28:.72):(left?.18:.82)),ty=core.y+core.h*[.22,.5,.78][i%3],elbow=x+(tx-x)*.42;return{path:`M${x} ${y}H${elbow}L${tx} ${ty}`,x,y};}));
+    };
+    const request=()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(measure);};const observer=new ResizeObserver(request);observer.observe(node);node.querySelectorAll<HTMLElement>('.map-core,.map-component').forEach(n=>observer.observe(n));void document.fonts.ready.then(request);request();
+    return()=>{alive=false;cancelAnimationFrame(raf);observer.disconnect();};
+  }, []);
   const info = getDialog(active);
   return <section id="composition" className="composition section" aria-labelledby="composition-heading">
-    <div className="center-heading"><span data-craft-reveal="eyebrow" className="eyebrow">Из чего состоит Twin</span><h2 data-craft-reveal="title" id="composition-heading">Единая <span className="bronze">цифровая основа</span></h2><p data-craft-reveal="body">Коммерческий цифровой двойник и связанные компоненты системы продаж</p></div>
-    <div className="composition-map" data-focused={focused || ''}>
-      <svg className="composition-lines" viewBox="0 0 1300 700" preserveAspectRatio="none" aria-hidden="true">
-        {routes.map((route, i) => <g data-craft-pair={items[i].id} data-craft-reveal="fact" key={items[i].id} data-active={focused === items[i].id}><path d={route} fill="none" /><circle cx={i < 3 ? 300 : 1000} cy={[110, 350, 590, 110, 350, 590][i]} r="4" /></g>)}
+    <div className="center-heading"><span data-craft-reveal="eyebrow" className="eyebrow">Из чего состоит Twin</span><h2 data-craft-reveal="title" id="composition-heading">Единая <span className="bronze">цифровая основа</span></h2><p data-craft-reveal="body">Коммерческий цифровой двойник и связанные компоненты системы продаж</p></div>
+    <div ref={map} className="composition-map" data-focused={focused || ''}>
+      <svg className="composition-lines" viewBox={`0 0 ${canvas.width} ${canvas.height}`} preserveAspectRatio="none" aria-hidden="true">
+        {connections.map((route, i) => <g data-craft-pair={items[i].id} data-craft-reveal="fact" key={items[i].id} data-active={focused === items[i].id}><path d={route.path} fill="none" /><circle cx={route.x} cy={route.y} r="4" /></g>)}
       </svg>
       <a data-craft-reveal="composition-core" className="map-core" href="?component=core#composition" onClick={e => open(e, 'core')} onFocus={() => setFocused('core')} onBlur={() => setFocused(null)}><ComponentArt id="core" /><span className="badge">Ядро продукта</span><h3>Коммерческий<br />цифровой двойник</h3><span className="core-explore">Исследовать ядро <Arrow /></span></a>
       {items.map((item, i) => <a data-craft-pair={item.id} data-craft-reveal="fact" key={item.id} className={`map-component component-${item.id}`} href={item.modalHref} onClick={e => open(e, item.id)} onPointerEnter={() => setFocused(item.id)} onPointerLeave={() => setFocused(null)} onFocus={() => setFocused(item.id)} onBlur={() => setFocused(null)} style={{ gridArea: ['1 / 1', '2 / 1', '3 / 1', '1 / 3', '2 / 3', '3 / 3'][i], '--component-index': i } as CSSProperties}>
@@ -95,7 +105,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       </a>)}
     </div>
     <p className="section-note">Конфигурация собирается под задачи проекта</p>
-    <details className="composition-descriptions"><summary>Состав и условия подключения — текстовая версия<Icon name="down" /></summary><div>{dialogs.map(([id, title, intro, , list, note]) => <article key={id} id={`description-${id}`}><h3>{title}</h3><p>{intro}</p><ul>{list.map(text => <li key={text}>{text}</li>)}</ul><p>{note}</p></article>)}</div></details>
+    <details className="composition-descriptions"><summary>Состав и условия подключения — текстовая версия<Icon name="down" /></summary><div>{dialogs.map(([id, title, intro, , list, note]) => <article key={id} id={`description-${id}`}><h3>{title}</h3><p>{intro}</p><ul>{list.map(text => <li key={text}>{text}</li>)}</ul><p>{note}</p></article>)}</div></details>
     <dialog ref={dialog} className="component-dialog" data-closing={closing} aria-labelledby="component-dialog-title" aria-describedby="component-dialog-intro" onKeyDown={e => {
       if (e.key !== 'Tab') return;
       const controls = [...e.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),[tabindex="0"]')];
@@ -103,7 +113,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       if (e.shiftKey && (document.activeElement === first || document.activeElement === heading.current)) { e.preventDefault(); last?.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
     }} onCancel={e => { e.preventDefault(); close(); }} onClick={e => { if (e.target === e.currentTarget) close(); }}>
-      {info && <div className="dialog-inner"><button className="dialog-close" aria-label="Закрыть описание компонента" onClick={close}><Icon name="close" /></button><span className="eyebrow">СОСТАВ TWIN {info[0] === 'commercial' ? '· РАСШИРЕНИЕ' : ''}</span><h2 ref={heading} tabIndex={-1} id="component-dialog-title">{info[1]}</h2><p id="component-dialog-intro" className="dialog-intro">{info[2]}</p><div className="dialog-body"><div className="dialog-art"><ComponentArt id={info[0]} detail /></div><div><h3>В составе решения</h3><ul>{info[4].map(text => <li key={text}><Icon name="check" />{text}</li>)}</ul><p>Связано с общей цифровой моделью проекта.</p></div></div><div className="dialog-footer"><p>{info[5]}</p><button className="button" onClick={() => discuss(info[1])}>Обсудить конфигурацию<Arrow /></button></div></div>}
+      {info && <div className="dialog-inner"><button className="dialog-close" aria-label="Закрыть описание компонента" onClick={close}><Icon name="close" /></button><span className="eyebrow">СОСТАВ TWIN {info[0] === 'commercial' ? '· РАСШИРЕНИЕ' : ''}</span><h2 ref={heading} tabIndex={-1} id="component-dialog-title">{info[1]}</h2><p id="component-dialog-intro" className="dialog-intro">{info[2]}</p><div className="dialog-body"><div className="dialog-art"><ComponentArt id={info[0]} detail /></div><div><h3>В составе решения</h3><ul>{info[4].map(text => <li key={text}><Icon name="check" />{text}</li>)}</ul><p>Связано с общей цифровой моделью проекта.</p></div></div><div className="dialog-footer"><p>{info[5]}</p><button className="button" onClick={() => discuss(info[1])}>Обсудить конфигурацию<Arrow /></button></div></div>}
     </dialog>
   </section>;
 }

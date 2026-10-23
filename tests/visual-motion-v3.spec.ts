@@ -2,7 +2,7 @@ import{test,expect,type Page}from'@playwright/test';
 import{inspectJourneyTransition}from'../scripts/assert-journey-transition.mjs';
 import{assertCorrectionMetrics}from'../scripts/assert-correction-metrics.mjs';
 const seek=async(p:Page,v:number)=>{await p.locator('.journey').evaluate((n,x)=>scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.clientHeight-innerHeight)*x,behavior:'instant'}),v);await expect.poll(()=>p.locator('.journey').evaluate((n,x)=>Math.abs(Number((n as HTMLElement).style.getPropertyValue('--scene-progress'))-x),v)).toBeLessThan(.0005);};
-test('V3 DOM has no blank title or body at both transitions and in reverse',async({page})=>{
+test('V3 DOM has masked title and body replacement at both transitions and in reverse',async({page})=>{
  test.setTimeout(90000);await page.setViewportSize({width:1440,height:900});await page.goto('/');await expect(page.locator('.journey')).toHaveAttribute('data-motion-enabled','true');await seek(page,.1);await page.locator('.journey-cinematic [data-craft-reveal]').evaluateAll(nodes=>Promise.allSettled(nodes.flatMap(n=>n.getAnimations()).map(a=>a.finished)));
  const points=[.205,.224,.237,.281,.31,.38,.44,.605,.624,.637,.681,.71,.78,.84];for(const p of[...points,...points.toReversed()]){await seek(page,p);await inspectJourneyTransition(page);}
  await seek(page,.30);expect(Number(await page.locator('.scene-title-group').nth(1).evaluate(n=>getComputedStyle(n).opacity))).toBeGreaterThan(.999);await expect(page.locator('.scene-material').nth(1)).toHaveCSS('opacity','0');

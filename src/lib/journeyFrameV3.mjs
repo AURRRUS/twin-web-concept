@@ -6,22 +6,21 @@ export function journeyFrame(progress) {
   const p=clamp(progress),from=p<.45?0:p<.85?1:2,start=from===0?.20:.60;
   const moving=from<2&&p>=start&&p<start+.25,q=moving?clamp((p-start)/.25):0,to=moving?from+1:from;
   const titleOpacity=[0,0,0],titleY=[0,0,0],titleClip=[0,0,0],bodyOpacity=[0,0,0],bodyY=[0,0,0];
+  const titleClipTop=[0,0,0],titleClipBottom=[0,0,0],bodyClipTop=[0,0,0],bodyClipBottom=[0,0,0];
   const mediaOpacity=[0,0,0],mediaScale=[1,1,1],mediaY=[0,0,0];
   titleOpacity[from]=bodyOpacity[from]=1;
   for(let i=0;i<=from;i++)mediaOpacity[i]=1;
   if(moving){
-    // Shorter permitted heading crossfade (03_MOTION): less overlapping type at Black60.
-    const title=phase(q,.08,.24),body=phase(q,.30,.58),sheet=phase(q,.60,1);
-    // Complementary opacity: never a state with both old and new text hidden.
-    titleOpacity[from]=1-title;titleOpacity[to]=title;
-    titleY[from]=-8*title;titleY[to]=18*(1-title);
-    bodyOpacity[from]=1-body;bodyOpacity[to]=body;
-    bodyY[from]=-6*body;bodyY[to]=12*(1-body);
+    const title=phase(q,.08,.30),body=phase(q,.32,.58),sheet=phase(q,.60,1);
+    // A shared spatial boundary replaces text; readable lines never alpha-blend.
+    for(const [t,opacity,top,bottom] of [[title,titleOpacity,titleClipTop,titleClipBottom],[body,bodyOpacity,bodyClipTop,bodyClipBottom]]){
+      opacity[from]=t<1?1:0;opacity[to]=t>0?1:0;bottom[from]=100*t;top[to]=100*(1-t);
+    }
     mediaOpacity[to]=phase(q,.60,.76);
-    mediaScale[to]=1+.08*(1-sheet);mediaY[to]=-48*(1-sheet);
+    mediaScale[to]=1+.08*(1-sheet);mediaY[to]=-32*(1-sheet);
   }
   const active=moving&&q>=.10?to:from;
-  return {titleOpacity,titleY,titleClip,bodyOpacity,bodyY,mediaOpacity,mediaScale,mediaY,
+  return {titleOpacity,titleY,titleClip,titleClipTop,titleClipBottom,bodyOpacity,bodyY,bodyClipTop,bodyClipBottom,mediaOpacity,mediaScale,mediaY,
     active,title:moving&&q>=.16?to:from,explanation:moving&&q>=.44?to:from};
 }
 export function createProgressDriver(read,write){

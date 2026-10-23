@@ -1,0 +1,66 @@
+{
+  "composition": {
+    "title": "Из чего состоит Twin",
+    "core": {
+      "id": "core",
+      "title": "Коммерческий цифровой двойник",
+      "label": "Ядро продукта"
+    },
+    "components": [
+      {
+        "id": "client-tools",
+        "title": "Клиентские инструменты",
+        "description": "Исследование, подбор и персонализация",
+        "extension": false,
+        "modalHref": "?component=client-tools#composition",
+        "futureRoute": "/product/client-tools",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "virtual-sales",
+        "title": "Виртуальный отдел продаж",
+        "description": "Рабочая среда команды и агентов",
+        "extension": false,
+        "modalHref": "?component=virtual-sales#composition",
+        "futureRoute": "/product/virtual-sales",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "content-system",
+        "title": "Контентная система",
+        "description": "Материалы на общей цифровой основе",
+        "extension": false,
+        "modalHref": "?component=content-system#composition",
+        "futureRoute": "/product/content-system",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "management",
+        "title": "Управление и аналитика",
+        "description": "Данные проекта, ассортимент и спрос",
+        "extension": false,
+        "modalHref": "?component=management#composition",
+        "futureRoute": "/product/management",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "integrations",
+        "title": "Интеграции",
+        "description": "Связь с CRM и системами девелопера",
+        "extension": false,
+        "modalHref": "?component=integrations#composition",
+        "futureRoute": "/product/integrations",
+        "futureRouteEnabled": false
+      },
+      {
+        "id": "commercial",
+        "title": "Коммерческие модули",
+        "description": "Ремонт, мебель и связанные сервисы",
+        "extension": true,
+        "modalHref": "?component=commercial#composition",
+        "futureRoute": "/product/commercial",
+        "futureRouteEnabled": false
+      }
+    ]
+  }
+}

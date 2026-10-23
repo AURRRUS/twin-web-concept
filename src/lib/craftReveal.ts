@@ -2,8 +2,11 @@
 export function initCraftReveals(root:Document=document){
  const nodes=[...root.querySelectorAll<HTMLElement>('[data-craft-reveal]')],reduced=matchMedia('(prefers-reduced-motion:reduce)'),small=matchMedia('(max-width:1279px)');
  const animations=new Map<HTMLElement,Animation>(),observers:IntersectionObserver[]=[];
+ const replayHosts=[...root.querySelectorAll<HTMLElement>('[data-craft-repeat="after-exit"]')],replayState=new Map(replayHosts.map(n=>[n,{played:false,armed:true,cycles:0}]));
  let pointerDown=false,resizeRaf=0;
  const group=(n:HTMLElement)=>{
+  const cinematic=n.closest<HTMLElement>('.journey-cinematic');
+  if(cinematic)return cinematic.querySelector<HTMLElement>('.scene-title-slot')||n;
   if(n.dataset.craftPair)return root.querySelector<HTMLElement>(`.map-component[data-craft-pair="${n.dataset.craftPair}"]`)||n;
   return ['eyebrow','title','body'].includes(n.dataset.craftReveal||'')?n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy,.scene-text-zone,.static-scene')||n:n;
  };
@@ -26,7 +29,9 @@ export function initCraftReveals(root:Document=document){
   try{const a=n.animate(isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final],{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(group(n));}
  };
  if(!reduced.matches&&'IntersectionObserver'in window&&typeof Element.prototype.animate==='function'){
-  for(const margin of['-20%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){for(const n of groups.get(e.target as HTMLElement)||[])start(n);for(const o of observers)o.unobserve(e.target);}}, {rootMargin:`0px 0px ${margin} 0px`,threshold:0}));
+  for(const margin of['-20%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){const g=e.target as HTMLElement,host=g.closest<HTMLElement>('[data-craft-repeat="after-exit"]'),state=host&&replayState.get(host);
+    if(state?.armed){state.armed=false;state.played=true;state.cycles++;host!.dataset.entryCycle=String(state.cycles);delete host!.dataset.entryArmed;}
+    for(const n of groups.get(g)||[])start(n);for(const o of observers)o.unobserve(e.target);}}, {rootMargin:`0px 0px ${margin} 0px`,threshold:0}));
  }
  const register=()=>{
   if(reduced.matches||!observers.length)return;
@@ -40,16 +45,29 @@ export function initCraftReveals(root:Document=document){
    observers[heading?0:1].observe(g);
   }
  };
+ const replayObserver=!reduced.matches&&observers.length?new IntersectionObserver(entries=>{
+  for(const entry of entries){const host=entry.target as HTMLElement,state=replayState.get(host)!;
+   const r=entry.boundingClientRect,fullyOutside=r.bottom<=0||r.top>=innerHeight;
+   if(!fullyOutside||!state.played||state.armed)continue;
+   state.armed=true;host.dataset.entryArmed='true';
+   for(const [g,list]of groups)if(host.contains(g)&&g.getClientRects().length){
+    for(const n of list){animations.get(n)?.cancel();animations.delete(n);n.setAttribute('data-craft-waiting','');}
+    for(const o of observers)o.unobserve(g);
+    const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||''));observers[heading?0:1].observe(g);
+   }
+  }
+ },{threshold:[0,0.00001]}):undefined;
+ for(const host of replayHosts)replayObserver?.observe(host);
  register();const resize=()=>{cancelAnimationFrame(resizeRaf);resizeRaf=requestAnimationFrame(register);};window.addEventListener('resize',resize);
  const focus=(e:Event)=>{if(pointerDown)return;for(const [n,a]of animations)if(n.contains(e.target as Node)){a.cancel();animations.delete(n);}for(const [g]of groups)if(g.contains(e.target as Node))settle(g);};
  const anchor=()=>{let id=location.hash.slice(1);try{id=decodeURIComponent(id);}catch{}const t=document.getElementById(id);if(t)settle(t);};
- const motionChange=()=>{if(reduced.matches){for(const o of observers)o.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
- const sceneSettle=(e:Event)=>settle(e.target as Element);
+ const motionChange=()=>{if(reduced.matches){for(const o of observers)o.disconnect();replayObserver?.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
+ const sceneSettle=(e:Event)=>{const target=e.target as HTMLElement;const state=replayState.get(target);if(state){state.played=true;state.armed=false;}settle(target);};
  const pointer=()=>{pointerDown=true;};const keyboard=()=>{pointerDown=false;};const click=(e:Event)=>{pointerDown=false;focus(e);};
  root.addEventListener('pointerdown',pointer,true);root.addEventListener('keydown',keyboard,true);root.addEventListener('pointercancel',keyboard,true);root.addEventListener('click',click,true);
  root.addEventListener('focusin',focus);root.addEventListener('twin:settle-reveal',sceneSettle);window.addEventListener('hashchange',anchor);reduced.addEventListener('change',motionChange);anchor();
  // The clean photograph never disappears; the four text/action groups enter once.
  const heroNodes=[['.hero h1',100,700],['.hero-description',360,650],['.hero-channels',500,650],['.hero .actions',650,600]] as const;
  if(!reduced.matches&&scrollY<20)for(const [selector,delay,duration]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:small.matches?350:duration,delay:small.matches?Math.min(140,delay*.25):delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
- return()=>{cancelAnimationFrame(resizeRaf);window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
+ return()=>{cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
 }

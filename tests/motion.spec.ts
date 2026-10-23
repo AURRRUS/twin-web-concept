@@ -16,7 +16,7 @@ test('title, body and full sheet have separate phases and reversible progress',a
  await seek(page,.1);const frame=(await page.locator('.scene-materials').boundingBox())!;
  for(const p of[.2,.26,.3,.325,.4,.45,.525,.6,.725,.85,.925,.725,.325,.1]){await seek(page,p);const r=(await page.locator('.scene-materials').boundingBox())!;for(const k of['x','y','width','height'] as const)expect(r[k]).toBeCloseTo(frame[k],0);}
  await seek(page,.30);await expect(page.locator('.scene-title-group').nth(1)).toHaveCSS('opacity','1');await expect(page.locator('.scene-material').nth(1)).toHaveCSS('opacity','0');
- const body=await page.locator('.scene-body-group').nth(1).evaluate(e=>+getComputedStyle(e).opacity);expect(body).toBeGreaterThan(0);expect(body).toBeLessThan(.4);
+ const body=await page.locator('.scene-body-group').nth(1).evaluate(e=>getComputedStyle(e).clipPath);expect(body).toMatch(/inset/);
  await seek(page,.4);const incoming=(await page.locator('.scene-material').nth(1).boundingBox())!;expect(incoming.width).toBeGreaterThan(frame.width);expect(incoming.y).toBeLessThan(frame.y);
  await page.locator('.scene-navigation button').nth(2).focus();await page.keyboard.press('Enter');await expect(page.locator('.journey')).toHaveAttribute('data-scene','lot');
  await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.journey')).toHaveAttribute('data-layout-mode','desktop');await expect(page.locator('.journey-static')).toBeHidden();await expect(page.locator('.journey-cinematic')).toBeVisible();
