@@ -13,7 +13,7 @@ const getDialog = (id: string | null) => dialogs.find(d => d[0] === id);
 function ComponentArt({ id, detail = false }: { id: string; detail?: boolean }) {
   const [failed, setFailed] = useState(false);
   const clipId = useId().replace(/:/g, '');
-  if (id === 'core') return <Media name="core" alt="Иллюстративная изометрическая модель проекта" />;
+  if (id === 'core') return <Media name="compositionCore" alt="Изометрическая модель демонстрационного курортного проекта" />;
   if (!detail && !failed) {
     const index = items.findIndex(item => item.id === id);
     return <svg className="component-illustration" viewBox={`${index * 362} 175 362 350`} role="img" aria-label={`Иллюстрация: ${items[index].title}`}>
