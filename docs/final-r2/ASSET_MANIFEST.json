@@ -1,0 +1,133 @@
+{
+  "package": "TWIN_FINAL_HANDOFF_2026-10-23",
+  "revision": "FINAL_R2",
+  "asset_count": 9,
+  "files": [
+    {
+      "original_filename": "Самостоятельный выбор курортной недвижимости.png",
+      "file": "assets/channels/site.png",
+      "role": "channels.site",
+      "bytes": 2178282,
+      "sha256": "12107827c9dc810068200d083225473e3ed3eeb4fb78e788289f79cbcf54e35e",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Живой видеопросмотр курортной недвижимости.png",
+      "file": "assets/channels/online.png",
+      "role": "channels.online",
+      "bytes": 2241637,
+      "sha256": "afd5e008f77ec2e24b4a8e7ce43a1ff7d23d12536270904d432c5d8509c667db",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Агент и покупатель выбирают апартаменты.png",
+      "file": "assets/channels/agent.png",
+      "role": "channels.agent",
+      "bytes": 2287709,
+      "sha256": "e21913cefcdd5cf611125c73ae599f891a67e810764f67ab2d112671dc085b34",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Выбор курортной недвижимости в офисе.png",
+      "file": "assets/channels/office.png",
+      "role": "channels.office",
+      "bytes": 2583221,
+      "sha256": "6d86bda9235cd35837a485d4715c3b74604359ab97a33cf693cfd26f761fb3f2",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Роскошный курорт у моря_ инфраструктура и резиденции 1.png",
+      "file": "assets/journey/project.png",
+      "role": "journey.project",
+      "bytes": 3819478,
+      "sha256": "fa60b9a9c55718d87bb168b55cae323b99be5eddb1be5e87594c607cce4690b7",
+      "width": 1671,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Морской курорт_ выбор апартаментов(1).png",
+      "file": "assets/journey/corpus.png",
+      "role": "journey.corpus",
+      "bytes": 3656624,
+      "sha256": "538708c2067ea13718e7f46dfa2e72a791d21a5eeb01c77eb16644645a14a13a",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "План этажа 12 ти этажного корпуса.png",
+      "file": "assets/journey/floor.png",
+      "role": "journey.floor",
+      "bytes": 3449678,
+      "sha256": "d5e7f36c3cf32847ec5c3e8184698c8653b864eba329995aca64516b1cfab217",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Роскошный апартамент с видом на море.png",
+      "file": "assets/journey/lot.png",
+      "role": "journey.lot",
+      "bytes": 3310727,
+      "sha256": "e156ffc74104f91fa2a4b595b9ba9611eca7d517cf162a65e65efb52a4c33ff8",
+      "width": 1671,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "original_filename": "Роскошный морской курорт на закате.png",
+      "file": "assets/composition/composition-core.png",
+      "role": "composition.compositionCore",
+      "bytes": 594092,
+      "sha256": "1d71fc44eb811c11734b3fd6f4b647ec9cf62b39cde5fa6938670c92d24d65c6",
+      "width": 1448,
+      "height": 1086,
+      "mode": "P",
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    }
+  ]
+}

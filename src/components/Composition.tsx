@@ -87,8 +87,8 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       setCanvas({width:node.clientWidth,height:node.clientHeight});
       setConnections([...node.querySelectorAll<HTMLElement>('.component-art')].map((art,i)=>{const box=rect(art),left=i<3,x=left?box.x+box.w:box.x,y=box.y+box.h/2,tx=core.x+core.w*(i%3===0?(left?.28:.72):i%3===2?(left?.36:.64):(left?.18:.82)),ty=core.y+core.h*[.22,.5,.78][i%3],elbow=x+(tx-x)*.42;return{path:`M${x} ${y}H${elbow}L${tx} ${ty}`,x,y};}));
     };
-    const request=()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(measure);};const observer=new ResizeObserver(request);observer.observe(node);node.querySelectorAll<HTMLElement>('.map-core,.map-component').forEach(n=>observer.observe(n));void document.fonts.ready.then(request);request();
-    return()=>{alive=false;cancelAnimationFrame(raf);observer.disconnect();};
+    const request=()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(measure);};const observer=new ResizeObserver(request);observer.observe(node);node.querySelectorAll<HTMLElement>('.map-core,.map-component').forEach(n=>observer.observe(n));const coreImage=node.querySelector<HTMLImageElement>('.map-core img');coreImage?.addEventListener('load',request);void document.fonts.ready.then(request);request();
+    return()=>{alive=false;coreImage?.removeEventListener('load',request);cancelAnimationFrame(raf);observer.disconnect();};
   }, []);
   const info = getDialog(active);
   return <section id="composition" className="composition section" aria-labelledby="composition-heading">

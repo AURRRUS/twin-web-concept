@@ -208,23 +208,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
 
 /* 05 — one photographic scene, one stable tab surface. */
 .channels { position: relative; isolation: isolate; max-width: none; margin: auto; border-top: 1px solid #e7e9e5; background: #fafaf7; }
-.channels-heading { position: absolute; top: 46px; left: var(--content-inset); z-index: 2; width: 620px; max-width: 52%; }
-.channels-heading > .eyebrow { margin-bottom: 16px; }
-.channels-heading > p { margin-top: 18px; font-size: var(--body-size); }
-.channel-tabs { position: relative; width: 530px; max-width: 100%; margin-top: 25px; border-bottom-color: #cbd3da; }
-.channel-tabs::after { position: absolute; bottom: -1px; left: 0; content: ''; width: 25%; height: 2px; background: #a66e36; transform: translateX(calc(var(--active-tab) * 100%)); transition: transform 160ms var(--ease); }
-.channel-tabs button { position: relative; flex: 1; min-width: 0; padding: 11px 8px; font-size: 14px; border: 0; }
-.channel-tabs button + button::before { content: ''; position: absolute; left: 0; top: 16px; height: 10px; width: 1px; background: #dce1e3; }
-.channel-tabs button[aria-selected='true'] { color: #925e2e; }
-.channel-scene { height: 630px; }
-.channel-scene img { object-position: 54% 50%; transition: opacity 480ms var(--ease); }
-.has-js .channel-scene[data-media-state='loading'] img { opacity: 0; }
-.channel-scene::after { position: absolute; inset: 0; content: ''; pointer-events: none; background: linear-gradient(110deg, #fffffffe 0%, #ffffffeb 18%, #ffffff8a 32%, #ffffff00 53%); }
-.channel-story { display: flex; align-items: center; justify-content: space-between; gap: 45px; min-height: 118px; padding: 24px var(--content-inset); background: white; animation: content-enter 480ms var(--ease); }
-.channel-story h3 { font-size: 22px; font-weight: 600; margin-bottom: 5px; }
-.channel-story p { font-size: 14px; }
-.channel-story > .text-link { flex-shrink: 0; font-size: 14px; }
-.noscript-channels { padding: 20px var(--content-inset); }
 
 /* 06 — the three arguments stay readable, the model stays subordinate. */
 .delivery { padding-top: 65px; padding-bottom: 45px; }
@@ -314,7 +297,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
   .map-component h3 { font-size: 16px; }
   .map-core > .media { height: 450px; }
   .map-core h3 { font-size: 28px; }
-  .channels-heading { width: 570px; }
   .delivery-copy h3 { font-size: 24px; }
   .delivery-time strong { font-size: 39px; }
   .delivery-budget strong { font-size: 49px; }
@@ -339,9 +321,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
   .map-core { min-height: 500px; }
   .map-core > .media { height: 360px; }
   .map-core h3 { font-size: 24px; }
-  .channels-heading { width: 500px; max-width: 64%; }
-  .channel-tabs button { font-size: 14px; }
-  .channel-scene { height: 560px; }
   .delivery-composition { height: 660px; }
   .delivery-copy h3 { font-size: 22px; }
   .delivery-copy p { font-size: 14px; }
@@ -403,15 +382,6 @@ section[id], article[id] { scroll-margin-top: 24px; }
   .section-note { font-size: 14px; gap: 10px; }
   .section-note::before, .section-note::after { width: 25px; }
   .composition-descriptions > div { grid-template-columns: 1fr; }
-  .channels-heading { position: relative; top: auto; left: auto; width: auto; max-width: none; background: #fff; padding: 40px var(--page-gutter) 23px; }
-  .channels-heading > p { font-size: 15px; }
-  .channel-tabs { width: 100%; margin-top: 22px; }
-  .channel-tabs button { font-size: 14px; padding-inline: 5px; }
-  .channel-scene { height: 300px; }
-  .channel-scene::after { display: none; }
-  .channel-story { display: block; padding: 22px var(--page-gutter); min-height: 160px; }
-  .channel-story h3 { font-size: 21px; }
-  .channel-story .text-link { margin-top: 13px; }
   .delivery-composition { height: auto; display: flex; flex-direction: column; gap: 27px; }
   .delivery-copy, .delivery-time, .delivery-budget, .delivery-quality, .delivery-triangle { position: relative; inset: auto; width: 100%; }
   .delivery-copy h3 { font-size: 25px; }

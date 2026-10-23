@@ -95,5 +95,53 @@
     "height": 1086,
     "file": "composition-core-20261023.png",
     "revision": "643c5107ecf0"
+  },
+  "r2ChannelsSite": {
+    "file": "final-r2/channels/site.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "12107827c9dc"
+  },
+  "r2ChannelsOnline": {
+    "file": "final-r2/channels/online.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "afd5e008f77e"
+  },
+  "r2ChannelsAgent": {
+    "file": "final-r2/channels/agent.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "e21913cefcdd"
+  },
+  "r2ChannelsOffice": {
+    "file": "final-r2/channels/office.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "6d86bda9235c"
+  },
+  "r2JourneyProject": {
+    "file": "final-r2/journey/project.png",
+    "width": 1671,
+    "height": 941,
+    "revision": "fa60b9a9c557"
+  },
+  "r2JourneyCorpus": {
+    "file": "final-r2/journey/corpus.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "538708c2067e"
+  },
+  "r2JourneyFloor": {
+    "file": "final-r2/journey/floor.png",
+    "width": 1672,
+    "height": 941,
+    "revision": "d5e7f36c3cf3"
+  },
+  "r2JourneyLot": {
+    "file": "final-r2/journey/lot.png",
+    "width": 1671,
+    "height": 941,
+    "revision": "e156ffc74104"
   }
 }

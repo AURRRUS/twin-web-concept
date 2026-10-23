@@ -1,21 +1,17 @@
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Media } from './Media';
 import { journeyFrame, createProgressDriver, sceneTargets } from '../lib/journeyMotion';
-import content from '../lib/designContent.json';
+import content from '../lib/journeyStates.json';
+import {bindShortWords} from '../lib/text';
 import { sitePath } from '../lib/paths';
 
-const materials = [
-  { media: 'sceneProject', alt: 'Иллюстрация интерфейса: инфраструктура прибрежного проекта', target: sceneTargets[0] },
-  { media: 'sceneSpace', alt: 'Иллюстрация интерфейса: терраса с видом на море', target: sceneTargets[1] },
-  { media: 'sceneLot', alt: 'Иллюстрация интерфейса: план этажа и выбранный лот', target: sceneTargets[2] },
-] as const;
-const scenes = content.journey.map((scene, index) => ({ ...scene, ...materials[index] }));
+const scenes=content.states.map((s,index)=>({...s,heading_lines:s.title.map(bindShortWords),body_lines:s.description.map(bindShortWords),navigation_title:s.label,navigation_description_lines:s.navigation.map(bindShortWords),media:({project:'r2JourneyProject',corpus:'r2JourneyCorpus',floor:'r2JourneyFloor',lot:'r2JourneyLot'} as const)[s.id as 'project'|'corpus'|'floor'|'lot'],alt:`Иллюстрация интерфейса — ${s.label}`,target:sceneTargets[index]}));
 type Scene = typeof scenes[number];
 const heading = (scene: Scene) => <><span>{scene.heading_lines[0]}</span>{' '}<span className="bronze">{scene.heading_lines[1]}</span></>;
 const navigation = (scene: Scene, index: number) => <><span className="scene-number">0{index + 1}</span><span><strong>{scene.navigation_title}</strong><span className="scene-nav-description">{scene.navigation_description_lines[0]}{' '}<br />{scene.navigation_description_lines[1]}</span></span></>;
 const description = (scene: Scene) => scene.body_lines.map((line,index) => <span className="scene-body-line" key={index}>{line}{index === 0 ? ' ' : ''}</span>);
 const disclaimer = 'Иллюстрация интерфейса. Данные демонстрационные.';
-const original = (id: string) => sitePath(`/media/recovery-original/${id}.png`);
+const original = (id: string) => sitePath(`/media/final-r2/journey/${id}.png`);
 
 export function Journey() {
   const host = useRef<HTMLElement>(null);
@@ -40,7 +36,7 @@ export function Journey() {
       return Math.max(0, Math.min(1, -rect.top / Math.max(1, node.offsetHeight - panel.offsetHeight)));
     };
     const write = (frame: ReturnType<typeof journeyFrame>, progress: number) => {
-      for (const group of ['titleOpacity','titleY','titleClip','titleClipTop','titleClipBottom','bodyOpacity','bodyY','bodyClipTop','bodyClipBottom','mediaOpacity','mediaScale','mediaY'] as const) {
+      for (const group of ['titleOpacity','titleY','titleClip','titleClipTop','titleClipBottom','bodyOpacity','bodyY','bodyClipTop','bodyClipBottom','mediaOpacity','mediaScale','mediaY','mediaClipBottom'] as const) {
         frame[group].forEach((value, index) => node.style.setProperty(`--${group}-${index}`, `${value}${group.endsWith('Y') ? 'px' : group.includes('Clip') ? '%' : ''}`));
       }
       node.style.setProperty('--scene-progress', String(progress));
@@ -52,9 +48,10 @@ export function Journey() {
     };
     const request = () => driver?.request();
     const configure = () => {
-      if (disposed || !fontsReady || !imagesReady) return;
+      if (disposed || !fontsReady) return;
+      if(columns.matches && !reduced.matches && !imagesReady)return;
       driver?.destroy(); driver = undefined;
-      const mode = columns.matches ? 'desktop' : 'mobile';
+      let mode:'desktop'|'mobile' = columns.matches && !reduced.matches ? 'desktop' : 'mobile';
       node.dataset.layoutMode = mode;
       setLayoutMode(mode);
       panel.hidden = mode !== 'desktop';
@@ -68,14 +65,12 @@ export function Journey() {
         const image = panel.querySelector<HTMLElement>('.scene-materials')!;
         const nav = panel.querySelector<HTMLElement>('.scene-navigation')!;
         const caption = panel.querySelector<HTMLElement>('.scene-caption')!;
-        const css = getComputedStyle(right);
-        const fixed = text.offsetHeight + parseFloat(getComputedStyle(text).marginBottom) + caption.offsetHeight + parseFloat(getComputedStyle(caption).marginTop) + parseFloat(css.paddingTop) + parseFloat(css.paddingBottom);
-        node.style.setProperty('--journey-media-height', `${Math.max(0, innerHeight - fixed)}px`);
-        const needed = fixed + Math.max(nav.scrollHeight, image.offsetHeight);
-        node.dataset.neededHeight = String(needed);
-        fits = needed <= innerHeight + 1;
+        node.dataset.motionEnabled='true';
+        const measure=()=>{const css=getComputedStyle(right);const fixed=text.offsetHeight+parseFloat(getComputedStyle(text).marginBottom)+caption.offsetHeight+parseFloat(getComputedStyle(caption).marginTop)+parseFloat(css.paddingTop)+parseFloat(css.paddingBottom);node.style.setProperty('--journey-media-height',`${Math.max(0,innerHeight-fixed)}px`);const needed=fixed+Math.max(nav.scrollHeight,image.offsetHeight);node.dataset.neededHeight=String(needed);return needed<=innerHeight+1;};
+        fits=measure();if(!fits&&node.dataset.density==='regular'){node.dataset.density='compact';fits=measure();}
         delete node.dataset.measuring;
       }
+      if(!fits&&mode==='desktop'){mode='mobile';node.dataset.layoutMode=mode;setLayoutMode(mode);panel.hidden=true;}
       enabled = fits; node.dataset.motionEnabled = String(fits); setMotionEnabled(fits); setLayoutReady(true);
       if (!fits && mode === 'desktop') write(journeyFrame(scenes[Math.max(0,current.active)].target), scenes[Math.max(0,current.active)].target);
       if (fits) { driver = createProgressDriver(read, write); requestAnimationFrame(() => { if (!disposed) driver?.snap(); }); }
@@ -86,7 +81,7 @@ export function Journey() {
       const scene = scenes.find(item => item.id === id);
       if (!scene) return;
       if (!enabled) {
-        if (columns.matches) {write(journeyFrame(scene.target),scene.target);node.dispatchEvent(new CustomEvent('twin:settle-reveal',{bubbles:true}));}
+        if (node.dataset.layoutMode==='desktop') {write(journeyFrame(scene.target),scene.target);node.dispatchEvent(new CustomEvent('twin:settle-reveal',{bubbles:true}));}
         else document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
         return;
       }
@@ -97,7 +92,7 @@ export function Journey() {
       const id = location.hash.slice(1);
       if (!scenes.some(scene => scene.id === id)) return;
       jump.current(id, true);
-      if (!enabled && columns.matches) node.scrollIntoView({behavior:'instant'});
+      if (!enabled && node.dataset.layoutMode==='desktop') node.scrollIntoView({behavior:'instant'});
     };
     const onJump = (event: Event) => jump.current((event as CustomEvent<string>).detail);
     const decode = new IntersectionObserver(entries => {
@@ -132,7 +127,7 @@ export function Journey() {
     event.preventDefault(); origin.current = event.currentTarget; setExpanded(id);
   };
   const expandLink = (id: string) => <a className="scene-expand" href={original(id)} onClick={event => expand(event, id)}>Развернуть изображение<span aria-hidden="true"> ↗</span></a>;
-  return <section ref={host} className="journey" data-craft-repeat="after-exit" data-enhanced={layoutReady ? motionEnabled : 'pending'} data-layout-mode={layoutMode} data-motion-enabled={motionEnabled} data-scene={scenes[reading.active].id} aria-label="Проект, пространство и лот">
+  return <section ref={host} className="journey" data-craft-repeat="after-exit" data-enhanced={layoutReady ? motionEnabled : 'pending'} data-layout-mode={layoutMode} data-motion-enabled={motionEnabled} data-scene={scenes[reading.active].id} aria-label="Проект, корпус, этаж и лот">
     <div className="journey-static content-container" hidden={layoutMode === 'desktop'}>
       <Media name="topFacade" alt="Вертикальный фасад демонстрационного проекта" className="static-facade" />
       <nav className="static-scene-nav" aria-label="Масштаб исследования">{scenes.map((scene, index) => <a key={scene.id} href={`#${scene.id}`}>{navigation(scene, index)}</a>)}</nav>
