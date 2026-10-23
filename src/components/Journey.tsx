@@ -5,7 +5,7 @@ import content from '../lib/journeyStates.json';
 import {bindShortWords} from '../lib/text';
 import { sitePath } from '../lib/paths';
 
-const scenes=content.states.map((s,index)=>({...s,heading_lines:s.title.map(bindShortWords),body_lines:s.description.map(bindShortWords),navigation_title:s.label,navigation_description_lines:s.navigation.map(bindShortWords),media:({project:'r2JourneyProject',corpus:'r2JourneyCorpus',floor:'r2JourneyFloor',lot:'r2JourneyLot'} as const)[s.id as 'project'|'corpus'|'floor'|'lot'],alt:`Иллюстрация интерфейса — ${s.label}`,target:sceneTargets[index]}));
+const scenes=content.states.map((s,index)=>({...s,eyebrow:bindShortWords(s.eyebrow),heading_lines:s.title.map(bindShortWords),body_lines:s.description.map(bindShortWords),navigation_title:s.label,navigation_description_lines:s.navigation.map(bindShortWords),media:({project:'r2JourneyProject',corpus:'r2JourneyCorpus',floor:'r2JourneyFloor',lot:'r2JourneyLot'} as const)[s.id as 'project'|'corpus'|'floor'|'lot'],alt:`Иллюстрация интерфейса — ${s.label}`,target:sceneTargets[index]}));
 type Scene = typeof scenes[number];
 const heading = (scene: Scene) => <><span>{scene.heading_lines[0]}</span>{' '}<span className="bronze">{scene.heading_lines[1]}</span></>;
 const navigation = (scene: Scene, index: number) => <><span className="scene-number">0{index + 1}</span><span><strong>{scene.navigation_title}</strong><span className="scene-nav-description">{scene.navigation_description_lines[0]}{' '}<br />{scene.navigation_description_lines[1]}</span></span></>;
