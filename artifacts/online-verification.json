@@ -1,28 +1,30 @@
 {
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "ccce17dacd1481a4f32f4931df4d7a63ca978d90",
+  "expectedSourceCommit": "8ad56176929f7d27f373fc7164202ff3456795bf",
   "status": "PASS",
-  "checkedAt": "2026-10-23T15:33:19.484Z",
+  "checkedAt": "2026-10-23T18:18:04.473Z",
   "checks": [
     "Exact published source commit confirmed",
-    "Five original-role optimized assets match source hashes",
+    "Original-role assets plus new transparent Composition PNG and unchanged triangle core match source hashes",
     "True Expanded Black900 headings,600 qualities,700 numbers and Inter variable fonts load HTTP200; exact metrics/custom glyphs verified",
     "Exact hero copy/four channels, two heading lines, bronze phrase, clean photograph and existing CTA routes",
     "Stable full-width media slot; independent title/body/sheet phases; fixed sheet rank and reversible scale/Y stacking",
     "28 actual DOM samples: partitioned title/body masks, binary text opacity, base image and stable z-order; Black60 first-line geometry confirmed",
     "Full-exit reentry repeats the outer cascade; return from below retains Lot; partial passes do not restart",
-    "Native-flow triangle: short one-time sequence, all final facts visible, stable section height, no reverse/replay on return",
+    "Triangle advances with native scroll and retains every reached phase on reverse/reentry; stable height and no sticky or timer",
     "Original/component dialogs, channel keyboard/tabs and selection handoff to real demo route work",
-    "Published1920×1080/1440×900/1366×768/1280×720/1024×768/768×1024/390×844/360×740/320×844, full text and native mobile flow",
-    "Reduced motion retains desktop columns, manual scene buttons and final word"
+    "Pinned Journey down/up/full-exit reentry and all three buttons verified at all seven required desktop sizes; mobile local triangle visibility and native scenes verified",
+    "New transparent owner PNG displayed in Composition and core dialog; unchanged triangle core and four channel tabs verified",
+    "Desktop/mobile launch anchor reaches its true final scroll offset; long native smooth scroll is awaited by position instead of a 500ms deadline",
+    "Reduced motion retains desktop columns, manual Lot button, static complete triangle and final word"
   ],
   "pageErrors": [],
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "ccce17dacd1481a4f32f4931df4d7a63ca978d90",
-    "builtAt": "2026-10-23T15:33:09.926Z",
-    "previousDeploymentCommit": "c1bd6c136eaadbf98d5af568e9e8f2908eee91f1"
+    "sourceCommit": "8ad56176929f7d27f373fc7164202ff3456795bf",
+    "builtAt": "2026-10-23T18:17:49.931Z",
+    "previousDeploymentCommit": "7059cc28dfc2499f81d0159db9db3d2967e76d99"
   },
   "typography": {
     "width": 1440,
@@ -180,7 +182,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.0124713)",
+          "transform": "none",
           "synthesis": "none"
         },
         {
@@ -355,7 +357,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 768.328125,
@@ -381,7 +383,7 @@
         "size": 60,
         "leading": 68.4,
         "tracking": 0,
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0316268)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00165606)",
         "synthesis": "none"
       },
       "h2": [
@@ -454,7 +456,7 @@
           "size": 22,
           "leading": 33,
           "tracking": 0.33,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.855119)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.24752)",
           "synthesis": "none"
         },
         {
@@ -464,7 +466,7 @@
           "size": 22,
           "leading": 33,
           "tracking": 0.33,
-          "transform": "matrix(1, 0, 0, 1, 0, 3.78604)",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.33601)",
           "synthesis": "none"
         },
         {
@@ -639,7 +641,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 829.53125,
@@ -655,17 +657,17 @@
     },
     {
       "viewport": {
-        "width": 1363,
-        "height": 936
+        "width": 1920,
+        "height": 900
       },
       "h1": {
         "selector": "h1",
         "family": "\"Twin Dewi Expanded\", sans-serif",
         "weight": 900,
-        "size": 46.075,
-        "leading": 52.5255,
+        "size": 60,
+        "leading": 68.4,
         "tracking": 0,
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0151012)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00979156)",
         "synthesis": "none"
       },
       "h2": [
@@ -673,8 +675,8 @@
           "selector": ".product h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.3958,
-          "leading": 51.4992,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -683,8 +685,8 @@
           "selector": ".center-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.3958,
-          "leading": 51.4992,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -693,8 +695,8 @@
           "selector": ".channels-heading h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.3958,
-          "leading": 51.4992,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -703,8 +705,8 @@
           "selector": ".delivery-answer",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.3958,
-          "leading": 51.4992,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "matrix(1, 0, 0, 1, 0, 12)",
           "synthesis": "none"
@@ -713,8 +715,8 @@
           "selector": ".contact-copy h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 44.3958,
-          "leading": 51.4992,
+          "size": 56,
+          "leading": 64.96,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -723,8 +725,292 @@
           "selector": ".scene-title-group h2",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 900,
-          "size": 58.075,
-          "leading": 66.2055,
+          "size": 72,
+          "leading": 82.08,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.473543)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 22,
+          "leading": 33,
+          "tracking": 0.33,
+          "transform": "matrix(1, 0, 0, 1, 0, 2.27754)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 31,
+          "tracking": 0.3,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0.22,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 17,
+          "leading": 25.5,
+          "tracking": 0.255,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 32,
+          "leading": 41.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 48,
+          "leading": 57.6,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 22,
+          "leading": 29.7,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 829.53125,
+        "panel": 829.53125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 48,
+        "leading": 54.72,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00165125)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 46,
+          "leading": 53.36,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 60,
+          "leading": 68.4,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -738,7 +1024,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.579467)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.24731)",
           "synthesis": "none"
         },
         {
@@ -748,7 +1034,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 2.70485)",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.3351)",
           "synthesis": "none"
         },
         {
@@ -847,8 +1133,8 @@
           "selector": ".delivery-qualities",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 600,
-          "size": 26.1979,
-          "leading": 34.0573,
+          "size": 27,
+          "leading": 35.1,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -857,8 +1143,8 @@
           "selector": ".delivery-time strong",
           "family": "\"Twin Dewi Expanded\", sans-serif",
           "weight": 700,
-          "size": 38.7167,
-          "leading": 46.46,
+          "size": 40,
+          "leading": 48,
           "tracking": 0,
           "transform": "none",
           "synthesis": "none"
@@ -923,11 +1209,579 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
-        "host": 759.015625,
-        "panel": 759.015625
+        "host": 768.328125,
+        "panel": 768.328125
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 46.15,
+        "leading": 52.611,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0436898)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 58.15,
+          "leading": 66.291,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.03271)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 4.45965)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.2292,
+          "leading": 34.0979,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7667,
+          "leading": 46.52,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 759.375,
+        "panel": 759.375
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 700
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 46.15,
+        "leading": 52.611,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00595252)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.4583,
+          "leading": 51.5717,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 58.15,
+          "leading": 66.291,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.384037)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.91046)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.2292,
+          "leading": 34.0979,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7667,
+          "leading": 46.52,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 759.375,
+        "panel": 759.375
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -1022,7 +1876,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.0354168)",
+          "transform": "none",
           "synthesis": "none"
         },
         {
@@ -1032,7 +1886,7 @@
           "size": 20,
           "leading": 30,
           "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.337962)",
+          "transform": "none",
           "synthesis": "none"
         },
         {
@@ -1111,9 +1965,9 @@
           "selector": ".scene-navigation strong",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1121,9 +1975,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1207,575 +2061,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
-        "state": "armed",
-        "position": "static",
-        "host": 748.953125,
-        "panel": 748.953125
-      },
-      "contact": {
-        "background": "rgb(32, 39, 47)",
-        "color": "rgb(245, 243, 239)",
-        "formBackground": "rgba(0, 0, 0, 0)",
-        "formShadow": "none",
-        "formBorder": "0px"
-      }
-    },
-    {
-      "viewport": {
-        "width": 1366,
-        "height": 768
-      },
-      "h1": {
-        "selector": "h1",
-        "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 900,
-        "size": 46.15,
-        "leading": 52.611,
-        "tracking": 0,
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0222639)",
-        "synthesis": "none"
-      },
-      "h2": [
-        {
-          "selector": ".product h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".center-heading h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channels-heading h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".delivery-answer",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
-          "tracking": 0,
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".contact-copy h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 44.4583,
-          "leading": 51.5717,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".scene-title-group h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 58.15,
-          "leading": 66.291,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      ],
-      "paragraphs": [
-        {
-          "selector": ".hero-description",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 20,
-          "leading": 30,
-          "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.705718)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".hero-channels",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 20,
-          "leading": 30,
-          "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 3.20539)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".scene-body-group",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".center-heading>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".map-component p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channels-heading>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channel-story p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".delivery-lead",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".contact-copy>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      ],
-      "roles": {
-        "navigation": {
-          "selector": ".scene-navigation strong",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "navigationBody": {
-          "selector": ".scene-nav-description",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "quality": {
-          "selector": ".delivery-qualities",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 600,
-          "size": 26.2292,
-          "leading": 34.0979,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "number": {
-          "selector": ".delivery-time strong",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38.7667,
-          "leading": 46.52,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "card": {
-          "selector": ".map-component h3",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "label": {
-          "selector": ".contact label",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24.8,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "input": {
-          "selector": ".contact input",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      },
-      "steps": {
-        "heading": {
-          "selector": ".launch-steps h3",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "body": {
-          "selector": ".launch-steps p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24.8,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      },
-      "journey": {
-        "layout": "desktop",
-        "motion": "false",
-        "staticVisible": false
-      },
-      "triangle": {
-        "active": true,
-        "type": "once",
-        "state": "armed",
-        "position": "static",
-        "host": 759.375,
-        "panel": 759.375
-      },
-      "contact": {
-        "background": "rgb(32, 39, 47)",
-        "color": "rgb(245, 243, 239)",
-        "formBackground": "rgba(0, 0, 0, 0)",
-        "formShadow": "none",
-        "formBorder": "0px"
-      }
-    },
-    {
-      "viewport": {
-        "width": 1280,
-        "height": 720
-      },
-      "h1": {
-        "selector": "h1",
-        "family": "\"Twin Dewi Expanded\", sans-serif",
-        "weight": 900,
-        "size": 44,
-        "leading": 50.16,
-        "tracking": 0,
-        "transform": "none",
-        "synthesis": "none"
-      },
-      "h2": [
-        {
-          "selector": ".product h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".center-heading h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channels-heading h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".delivery-answer",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
-          "tracking": 0,
-          "transform": "matrix(1, 0, 0, 1, 0, 12)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".contact-copy h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 42.6667,
-          "leading": 49.4933,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".scene-title-group h2",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 900,
-          "size": 56,
-          "leading": 63.84,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      ],
-      "paragraphs": [
-        {
-          "selector": ".hero-description",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 20,
-          "leading": 30,
-          "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.00606098)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".hero-channels",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 20,
-          "leading": 30,
-          "tracking": 0.3,
-          "transform": "matrix(1, 0, 0, 1, 0, 0.131836)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".scene-body-group",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "matrix(1, 0, 0, 1, 0, 0)",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".center-heading>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".map-component p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channels-heading>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".channel-story p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".delivery-lead",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        {
-          "selector": ".contact-copy>p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      ],
-      "roles": {
-        "navigation": {
-          "selector": ".scene-navigation strong",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "navigationBody": {
-          "selector": ".scene-nav-description",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "quality": {
-          "selector": ".delivery-qualities",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 600,
-          "size": 25.3333,
-          "leading": 32.9333,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "number": {
-          "selector": ".delivery-time strong",
-          "family": "\"Twin Dewi Expanded\", sans-serif",
-          "weight": 700,
-          "size": 38,
-          "leading": 45.6,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "card": {
-          "selector": ".map-component h3",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "label": {
-          "selector": ".contact label",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24.8,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "input": {
-          "selector": ".contact input",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 18,
-          "leading": 27.9,
-          "tracking": 0.27,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      },
-      "steps": {
-        "heading": {
-          "selector": ".launch-steps h3",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0,
-          "transform": "none",
-          "synthesis": "none"
-        },
-        "body": {
-          "selector": ".launch-steps p",
-          "family": "\"Twin Inter Tight\", sans-serif",
-          "weight": 450,
-          "size": 16,
-          "leading": 24.8,
-          "tracking": 0.24,
-          "transform": "none",
-          "synthesis": "none"
-        }
-      },
-      "journey": {
-        "layout": "desktop",
-        "motion": "false",
-        "staticVisible": false
-      },
-      "triangle": {
-        "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 748.953125,
@@ -1963,9 +2249,9 @@
           "selector": ".scene-navigation strong",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 600,
-          "size": 20,
-          "leading": 27,
-          "tracking": 0.2,
+          "size": 18,
+          "leading": 24.3,
+          "tracking": 0.18,
           "transform": "none",
           "synthesis": "none"
         },
@@ -1973,9 +2259,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 16,
-          "leading": 24,
-          "tracking": 0.24,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2054,16 +2340,300 @@
       },
       "journey": {
         "layout": "desktop",
-        "motion": "false",
+        "motion": "true",
         "staticVisible": false
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 1301.359375,
         "panel": 1301.359375
+      },
+      "contact": {
+        "background": "rgb(32, 39, 47)",
+        "color": "rgb(245, 243, 239)",
+        "formBackground": "rgba(0, 0, 0, 0)",
+        "formShadow": "none",
+        "formBorder": "0px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "h1": {
+        "selector": "h1",
+        "family": "\"Twin Dewi Expanded\", sans-serif",
+        "weight": 900,
+        "size": 46.075,
+        "leading": 52.5255,
+        "tracking": 0,
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0436549)",
+        "synthesis": "none"
+      },
+      "h2": [
+        {
+          "selector": ".product h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-answer",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 44.3958,
+          "leading": 51.4992,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-title-group h2",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 900,
+          "size": 58.075,
+          "leading": 66.2055,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "paragraphs": [
+        {
+          "selector": ".hero-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.03222)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".hero-channels",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 20,
+          "leading": 30,
+          "tracking": 0.3,
+          "transform": "matrix(1, 0, 0, 1, 0, 4.45779)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".scene-body-group",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".center-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".map-component p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channels-heading>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".channel-story p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".delivery-lead",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        {
+          "selector": ".contact-copy>p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      ],
+      "roles": {
+        "navigation": {
+          "selector": ".scene-navigation strong",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0.2,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "navigationBody": {
+          "selector": ".scene-nav-description",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "quality": {
+          "selector": ".delivery-qualities",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 600,
+          "size": 26.1979,
+          "leading": 34.0573,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "number": {
+          "selector": ".delivery-time strong",
+          "family": "\"Twin Dewi Expanded\", sans-serif",
+          "weight": 700,
+          "size": 38.7167,
+          "leading": 46.46,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "card": {
+          "selector": ".map-component h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "label": {
+          "selector": ".contact label",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "input": {
+          "selector": ".contact input",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 18,
+          "leading": 27.9,
+          "tracking": 0.27,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "steps": {
+        "heading": {
+          "selector": ".launch-steps h3",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 600,
+          "size": 20,
+          "leading": 27,
+          "tracking": 0,
+          "transform": "none",
+          "synthesis": "none"
+        },
+        "body": {
+          "selector": ".launch-steps p",
+          "family": "\"Twin Inter Tight\", sans-serif",
+          "weight": 450,
+          "size": 16,
+          "leading": 24.8,
+          "tracking": 0.24,
+          "transform": "none",
+          "synthesis": "none"
+        }
+      },
+      "journey": {
+        "layout": "desktop",
+        "motion": "true",
+        "staticVisible": false
+      },
+      "triangle": {
+        "active": true,
+        "type": "scroll-once",
+        "state": "armed",
+        "position": "static",
+        "host": 759.015625,
+        "panel": 759.015625
       },
       "contact": {
         "background": "rgb(32, 39, 47)",
@@ -2343,7 +2913,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 1338.859375,
@@ -2541,9 +3111,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2627,7 +3197,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 1276.71875,
@@ -2825,9 +3395,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -2911,7 +3481,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 1310.34375,
@@ -3109,9 +3679,9 @@
           "selector": ".scene-nav-description",
           "family": "\"Twin Inter Tight\", sans-serif",
           "weight": 450,
-          "size": 15,
-          "leading": 22.5,
-          "tracking": 0.225,
+          "size": 14,
+          "leading": 21,
+          "tracking": 0.21,
           "transform": "none",
           "synthesis": "none"
         },
@@ -3195,7 +3765,7 @@
       },
       "triangle": {
         "active": true,
-        "type": "once",
+        "type": "scroll-once",
         "state": "armed",
         "position": "static",
         "host": 1354.53125,
@@ -3355,27 +3925,27 @@
       }
     ],
     "paths": [
-      "M237 57H351.6264L509.92 113.4",
-      "M237 264H323.73839999999996L443.52 231",
-      "M237 471H323.73839999999996L443.52 348.6",
-      "M1075 57H960.3736L802.0799999999999 113.4",
-      "M1075 264H988.2616L868.48 231",
-      "M1075 471H988.2616L868.48 348.6"
+      "M237 57H351.6264L509.92 125.4",
+      "M237 264H323.73839999999996L443.52 243",
+      "M237 471H373.93679999999995L563.04 360.6",
+      "M1075 57H960.3736L802.0799999999999 125.4",
+      "M1075 264H988.2616L868.48 243",
+      "M1075 471H938.0632L748.96 360.6"
     ],
     "core": {
       "x": 418.234375,
-      "y": 5604.234375,
+      "y": 5616.234375,
       "width": 603.515625,
-      "height": 557.875,
-      "top": 5604.234375,
+      "height": 533.875,
+      "top": 5616.234375,
       "right": 1021.75,
-      "bottom": 6162.109375,
+      "bottom": 6150.109375,
       "left": 418.234375
     }
   },
   "journeySamples": [
     {
-      "progress": 0.20597504161796376,
+      "progress": 0.2059761478188632,
       "title": [
         {
           "opacity": 1,
@@ -3469,25 +4039,25 @@
       ]
     },
     {
-      "progress": 0.2230104650226327,
+      "progress": 0.2230032181899724,
       "title": [
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 0.866002%)",
+          "clip": "inset(0% 0px 0.861917%)",
           "z": "auto",
           "top": 32,
-          "bottom": 198.9168691325,
+          "bottom": 198.92374725125,
           "height": 168.375,
-          "visible": 166.9168691325
+          "visible": 166.92374725125
         },
         {
           "opacity": 1,
-          "clip": "inset(99.134% 0px 0%)",
+          "clip": "inset(99.1381% 0px 0%)",
           "z": "auto",
-          "top": 198.91687249999998,
+          "top": 198.923775875,
           "bottom": 200.375,
           "height": 168.375,
-          "visible": 1.4581275000000176
+          "visible": 1.4512241250000102
         },
         {
           "opacity": 0,
@@ -3563,25 +4133,25 @@
       ]
     },
     {
-      "progress": 0.23606253292857043,
+      "progress": 0.23606209364815892,
       "title": [
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 20.6055%)",
+          "clip": "inset(0% 0px 20.6045%)",
           "z": "auto",
           "top": 32,
-          "bottom": 165.680489375,
+          "bottom": 165.682173125,
           "height": 168.375,
-          "visible": 133.680489375
+          "visible": 133.682173125
         },
         {
           "opacity": 1,
-          "clip": "inset(79.3945% 0px 0%)",
+          "clip": "inset(79.3955% 0px 0%)",
           "z": "auto",
-          "top": 165.680489375,
+          "top": 165.682173125,
           "bottom": 200.375,
           "height": 168.375,
-          "visible": 34.69451062499999
+          "visible": 34.69282687500001
         },
         {
           "opacity": 0,
@@ -3657,7 +4227,7 @@
       ]
     },
     {
-      "progress": 0.28001007446236453,
+      "progress": 0.28000963681851304,
       "title": [
         {
           "opacity": 0,
@@ -3690,12 +4260,12 @@
       "body": [
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 7.20599e-06%)",
+          "clip": "inset(0% 0px 6.59355e-06%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 276.1562459804087,
+          "bottom": 276.1562463220354,
           "height": 55.78125,
-          "visible": 55.781245980408706
+          "visible": 55.78124632203539
         },
         {
           "opacity": 1,
@@ -3751,7 +4321,7 @@
       ]
     },
     {
-      "progress": 0.309003346971544,
+      "progress": 0.3090037504104361,
       "title": [
         {
           "opacity": 0,
@@ -3784,21 +4354,21 @@
       "body": [
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 41.9619%)",
+          "clip": "inset(0% 0px 41.9629%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 252.74937765625,
+          "bottom": 252.74881984375,
           "height": 55.78125,
-          "visible": 32.37437765625
+          "visible": 32.37381984375
         },
         {
           "opacity": 1,
-          "clip": "inset(58.0381% 0px 0%)",
+          "clip": "inset(58.0371% 0px 0%)",
           "z": "auto",
-          "top": 252.74937765625,
+          "top": 252.74881984375,
           "bottom": 276.15625,
           "height": 55.78125,
-          "visible": 23.406872343750003
+          "visible": 23.40743015625
         },
         {
           "opacity": 0,
@@ -3845,7 +4415,7 @@
       ]
     },
     {
-      "progress": 0.3790107781558103,
+      "progress": 0.3790104409416089,
       "title": [
         {
           "opacity": 0,
@@ -3915,13 +4485,13 @@
           "visible": 432.21875
         },
         {
-          "opacity": 0.815041,
+          "opacity": 0.815031,
           "clip": "none",
           "z": "2",
-          "top": 264.9053955078125,
-          "bottom": 724.6597900390625,
-          "height": 459.75439453125,
-          "visible": 459.75439453125
+          "top": 264.90521240234375,
+          "bottom": 724.6597290039062,
+          "height": 459.7545166015625,
+          "visible": 459.7545166015625
         },
         {
           "opacity": 0,
@@ -3939,7 +4509,7 @@
       ]
     },
     {
-      "progress": 0.43903848791347494,
+      "progress": 0.43903819151485346,
       "title": [
         {
           "opacity": 0,
@@ -4012,10 +4582,10 @@
           "opacity": 1,
           "clip": "none",
           "z": "2",
-          "top": 302.5093994140625,
-          "bottom": 735.8834838867188,
-          "height": 433.37408447265625,
-          "visible": 433.37408447265625
+          "top": 302.5093078613281,
+          "bottom": 735.8834228515625,
+          "height": 433.3741149902344,
+          "visible": 433.3741149902344
         },
         {
           "opacity": 0,
@@ -4033,7 +4603,7 @@
       ]
     },
     {
-      "progress": 0.6040528132393007,
+      "progress": 0.6040531342127431,
       "title": [
         {
           "opacity": 0,
@@ -4127,7 +4697,7 @@
       ]
     },
     {
-      "progress": 0.62304902407619,
+      "progress": 0.6230493820290267,
       "title": [
         {
           "opacity": 0,
@@ -4140,21 +4710,21 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 0.887898%)",
+          "clip": "inset(0% 0px 0.888102%)",
           "z": "auto",
           "top": 32,
-          "bottom": 198.8800017425,
+          "bottom": 198.8796582575,
           "height": 168.375,
-          "visible": 166.8800017425
+          "visible": 166.8796582575
         },
         {
           "opacity": 1,
-          "clip": "inset(99.1121% 0px 0%)",
+          "clip": "inset(99.1119% 0px 0%)",
           "z": "auto",
-          "top": 198.87999837499999,
+          "top": 198.879661625,
           "bottom": 200.375,
           "height": 168.375,
-          "visible": 1.4950016250000147
+          "visible": 1.4953383749999887
         }
       ],
       "body": [
@@ -4221,7 +4791,7 @@
       ]
     },
     {
-      "progress": 0.63606487025823,
+      "progress": 0.6360645101103714,
       "title": [
         {
           "opacity": 0,
@@ -4234,21 +4804,21 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 20.6108%)",
+          "clip": "inset(0% 0px 20.61%)",
           "z": "auto",
           "top": 32,
-          "bottom": 165.67156549999999,
+          "bottom": 165.6729125,
           "height": 168.375,
-          "visible": 133.67156549999999
+          "visible": 133.6729125
         },
         {
           "opacity": 1,
-          "clip": "inset(79.3892% 0px 0%)",
+          "clip": "inset(79.39% 0px 0%)",
           "z": "auto",
-          "top": 165.67156549999999,
+          "top": 165.6729125,
           "bottom": 200.375,
           "height": 168.375,
-          "visible": 34.703434500000014
+          "visible": 34.702087500000005
         }
       ],
       "body": [
@@ -4315,7 +4885,7 @@
       ]
     },
     {
-      "progress": 0.6800058412144763,
+      "progress": 0.680005836764591,
       "title": [
         {
           "opacity": 0,
@@ -4357,12 +4927,12 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 2.42256e-06%)",
+          "clip": "inset(0% 0px 2.41887e-06%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 276.1562486486657,
+          "bottom": 276.1562486507241,
           "height": 55.78125,
-          "visible": 55.78124864866575
+          "visible": 55.78124865072408
         },
         {
           "opacity": 1,
@@ -4409,7 +4979,7 @@
       ]
     },
     {
-      "progress": 0.7090301503432314,
+      "progress": 0.7090301502688113,
       "title": [
         {
           "opacity": 0,
@@ -4503,7 +5073,7 @@
       ]
     },
     {
-      "progress": 0.779010721313455,
+      "progress": 0.7790110626820971,
       "title": [
         {
           "opacity": 0,
@@ -4582,13 +5152,13 @@
           "visible": 432.21875
         },
         {
-          "opacity": 0.815039,
+          "opacity": 0.815049,
           "clip": "none",
           "z": "3",
-          "top": 264.9053955078125,
-          "bottom": 724.6597290039062,
-          "height": 459.75433349609375,
-          "visible": 459.75433349609375
+          "top": 264.90557861328125,
+          "bottom": 724.6598510742188,
+          "height": 459.7542724609375,
+          "visible": 459.7542724609375
         }
       ],
       "parents": [
@@ -4597,101 +5167,7 @@
       ]
     },
     {
-      "progress": 0.8390384873100737,
-      "title": [
-        {
-          "opacity": 0,
-          "clip": "inset(0% 0px)",
-          "z": "auto",
-          "top": 32,
-          "bottom": 200.375,
-          "height": 168.375,
-          "visible": 0
-        },
-        {
-          "opacity": 0,
-          "clip": "inset(0% 0px 100%)",
-          "z": "auto",
-          "top": 32,
-          "bottom": 32,
-          "height": 168.375,
-          "visible": 0
-        },
-        {
-          "opacity": 1,
-          "clip": "inset(0% 0px)",
-          "z": "auto",
-          "top": 32,
-          "bottom": 200.375,
-          "height": 168.375,
-          "visible": 168.375
-        }
-      ],
-      "body": [
-        {
-          "opacity": 0,
-          "clip": "inset(0% 0px)",
-          "z": "auto",
-          "top": 220.375,
-          "bottom": 276.15625,
-          "height": 55.78125,
-          "visible": 0
-        },
-        {
-          "opacity": 0,
-          "clip": "inset(0% 0px 100%)",
-          "z": "auto",
-          "top": 220.375,
-          "bottom": 220.375,
-          "height": 55.78125,
-          "visible": 0
-        },
-        {
-          "opacity": 1,
-          "clip": "inset(0% 0px)",
-          "z": "auto",
-          "top": 220.375,
-          "bottom": 276.15625,
-          "height": 55.78125,
-          "visible": 55.78125
-        }
-      ],
-      "media": [
-        {
-          "opacity": 1,
-          "clip": "none",
-          "z": "1",
-          "top": 304.15625,
-          "bottom": 736.375,
-          "height": 432.21875,
-          "visible": 432.21875
-        },
-        {
-          "opacity": 1,
-          "clip": "none",
-          "z": "2",
-          "top": 304.15625,
-          "bottom": 736.375,
-          "height": 432.21875,
-          "visible": 432.21875
-        },
-        {
-          "opacity": 1,
-          "clip": "none",
-          "z": "3",
-          "top": 302.5093994140625,
-          "bottom": 735.8834838867188,
-          "height": 433.37408447265625,
-          "visible": 433.37408447265625
-        }
-      ],
-      "parents": [
-        1,
-        1
-      ]
-    },
-    {
-      "progress": 0.8390384873100737,
+      "progress": 0.8390381981178449,
       "title": [
         {
           "opacity": 0,
@@ -4773,10 +5249,10 @@
           "opacity": 1,
           "clip": "none",
           "z": "3",
-          "top": 302.5093994140625,
-          "bottom": 735.8834838867188,
-          "height": 433.37408447265625,
-          "visible": 433.37408447265625
+          "top": 302.5093078613281,
+          "bottom": 735.8834228515625,
+          "height": 433.3741149902344,
+          "visible": 433.3741149902344
         }
       ],
       "parents": [
@@ -4785,7 +5261,7 @@
       ]
     },
     {
-      "progress": 0.7809166934200552,
+      "progress": 0.839085299185698,
       "title": [
         {
           "opacity": 0,
@@ -4864,13 +5340,13 @@
           "visible": 432.21875
         },
         {
-          "opacity": 0.86872,
+          "opacity": 1,
           "clip": "none",
           "z": "3",
-          "top": 266.08807373046875,
-          "bottom": 725.0127563476562,
-          "height": 458.9246826171875,
-          "visible": 458.9246826171875
+          "top": 302.52288818359375,
+          "bottom": 735.887451171875,
+          "height": 433.36456298828125,
+          "visible": 433.36456298828125
         }
       ],
       "parents": [
@@ -4879,7 +5355,101 @@
       ]
     },
     {
-      "progress": 0.7109135364751602,
+      "progress": 0.7809170079790478,
+      "title": [
+        {
+          "opacity": 0,
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 0
+        },
+        {
+          "opacity": 0,
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 32,
+          "height": 168.375,
+          "visible": 0
+        },
+        {
+          "opacity": 1,
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 32,
+          "bottom": 200.375,
+          "height": 168.375,
+          "visible": 168.375
+        }
+      ],
+      "body": [
+        {
+          "opacity": 0,
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 0
+        },
+        {
+          "opacity": 0,
+          "clip": "inset(0% 0px 100%)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 220.375,
+          "height": 55.78125,
+          "visible": 0
+        },
+        {
+          "opacity": 1,
+          "clip": "inset(0% 0px)",
+          "z": "auto",
+          "top": 220.375,
+          "bottom": 276.15625,
+          "height": 55.78125,
+          "visible": 55.78125
+        }
+      ],
+      "media": [
+        {
+          "opacity": 1,
+          "clip": "none",
+          "z": "1",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
+        },
+        {
+          "opacity": 1,
+          "clip": "none",
+          "z": "2",
+          "top": 304.15625,
+          "bottom": 736.375,
+          "height": 432.21875,
+          "visible": 432.21875
+        },
+        {
+          "opacity": 0.868728,
+          "clip": "none",
+          "z": "3",
+          "top": 266.0882568359375,
+          "bottom": 725.0128173828125,
+          "height": 458.924560546875,
+          "visible": 458.924560546875
+        }
+      ],
+      "parents": [
+        1,
+        1
+      ]
+    },
+    {
+      "progress": 0.7109135425983352,
       "title": [
         {
           "opacity": 0,
@@ -4921,21 +5491,21 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 46.3418%)",
+          "clip": "inset(0% 0px 46.3419%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 250.30621468750002,
+          "bottom": 250.30615890625,
           "height": 55.78125,
-          "visible": 29.931214687500002
+          "visible": 29.931158906249998
         },
         {
           "opacity": 1,
-          "clip": "inset(53.6582% 0px 0%)",
+          "clip": "inset(53.6581% 0px 0%)",
           "z": "auto",
-          "top": 250.30621468750002,
+          "top": 250.30615890625,
           "bottom": 276.15625,
           "height": 55.78125,
-          "visible": 25.850035312499998
+          "visible": 25.850091093750002
         }
       ],
       "media": [
@@ -4973,7 +5543,7 @@
       ]
     },
     {
-      "progress": 0.6819151009224088,
+      "progress": 0.6819144833617641,
       "title": [
         {
           "opacity": 0,
@@ -5015,21 +5585,21 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 0.255307%)",
+          "clip": "inset(0% 0px 0.255144%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 276.0138365640625,
+          "bottom": 276.0139274875,
           "height": 55.78125,
-          "visible": 55.6388365640625
+          "visible": 55.6389274875
         },
         {
           "opacity": 1,
-          "clip": "inset(99.7447% 0px 0%)",
+          "clip": "inset(99.7449% 0px 0%)",
           "z": "auto",
-          "top": 276.01384046875,
+          "top": 276.01395203125,
           "bottom": 276.15625,
           "height": 55.78125,
-          "visible": 0.14240953125000289
+          "visible": 0.14229796875000034
         }
       ],
       "media": [
@@ -5067,7 +5637,7 @@
       ]
     },
     {
-      "progress": 0.6379241116777933,
+      "progress": 0.6379245611316566,
       "title": [
         {
           "opacity": 0,
@@ -5080,21 +5650,21 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 24.9395%)",
+          "clip": "inset(0% 0px 24.9406%)",
           "z": "auto",
           "top": 32,
-          "bottom": 158.383116875,
+          "bottom": 158.38126475,
           "height": 168.375,
-          "visible": 126.38311687500001
+          "visible": 126.38126475
         },
         {
           "opacity": 1,
-          "clip": "inset(75.0605% 0px 0%)",
+          "clip": "inset(75.0594% 0px 0%)",
           "z": "auto",
-          "top": 158.383116875,
+          "top": 158.38126474999999,
           "bottom": 200.375,
           "height": 168.375,
-          "visible": 41.99188312499999
+          "visible": 41.993735250000015
         }
       ],
       "body": [
@@ -5161,7 +5731,7 @@
       ]
     },
     {
-      "progress": 0.6249681197352678,
+      "progress": 0.6249681566286874,
       "title": [
         {
           "opacity": 0,
@@ -5174,12 +5744,12 @@
         },
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 2.30042%)",
+          "clip": "inset(0% 0px 2.30045%)",
           "z": "auto",
           "top": 32,
-          "bottom": 196.501667825,
+          "bottom": 196.5016173125,
           "height": 168.375,
-          "visible": 164.501667825
+          "visible": 164.5016173125
         },
         {
           "opacity": 1,
@@ -5255,7 +5825,7 @@
       ]
     },
     {
-      "progress": 0.6059872994130427,
+      "progress": 0.6059873016504236,
       "title": [
         {
           "opacity": 0,
@@ -5349,7 +5919,7 @@
       ]
     },
     {
-      "progress": 0.440986212654272,
+      "progress": 0.44098680538513985,
       "title": [
         {
           "opacity": 0,
@@ -5422,10 +5992,10 @@
           "opacity": 1,
           "clip": "none",
           "z": "2",
-          "top": 303.02703857421875,
-          "bottom": 736.0379638671875,
-          "height": 433.01092529296875,
-          "visible": 433.01092529296875
+          "top": 303.0271911621094,
+          "bottom": 736.0380249023438,
+          "height": 433.0108337402344,
+          "visible": 433.0108337402344
         },
         {
           "opacity": 0,
@@ -5443,7 +6013,7 @@
       ]
     },
     {
-      "progress": 0.3809536911993244,
+      "progress": 0.3809531611341145,
       "title": [
         {
           "opacity": 0,
@@ -5513,13 +6083,13 @@
           "visible": 432.21875
         },
         {
-          "opacity": 0.869693,
+          "opacity": 0.869679,
           "clip": "none",
           "z": "2",
-          "top": 266.1114501953125,
-          "bottom": 725.0197143554688,
-          "height": 458.90826416015625,
-          "visible": 458.90826416015625
+          "top": 266.111083984375,
+          "bottom": 725.0196533203125,
+          "height": 458.9085693359375,
+          "visible": 458.9085693359375
         },
         {
           "opacity": 0,
@@ -5537,7 +6107,7 @@
       ]
     },
     {
-      "progress": 0.3109417269001606,
+      "progress": 0.3109417192805345,
       "title": [
         {
           "opacity": 0,
@@ -5631,7 +6201,7 @@
       ]
     },
     {
-      "progress": 0.2819412623083646,
+      "progress": 0.28194169743784625,
       "title": [
         {
           "opacity": 0,
@@ -5664,21 +6234,21 @@
       "body": [
         {
           "opacity": 1,
-          "clip": "inset(0% 0px 0.262258%)",
+          "clip": "inset(0% 0px 0.262374%)",
           "z": "auto",
           "top": 220.375,
-          "bottom": 276.009959209375,
+          "bottom": 276.009894503125,
           "height": 55.78125,
-          "visible": 55.634959209375
+          "visible": 55.634894503125
         },
         {
           "opacity": 1,
-          "clip": "inset(99.7377% 0px 0%)",
+          "clip": "inset(99.7376% 0px 0%)",
           "z": "auto",
-          "top": 276.00993578125,
+          "top": 276.00988,
           "bottom": 276.15625,
           "height": 55.78125,
-          "visible": 0.14631421874999262
+          "visible": 0.14636999999999745
         },
         {
           "opacity": 0,
@@ -5725,7 +6295,7 @@
       ]
     },
     {
-      "progress": 0.2379251678705602,
+      "progress": 0.23792517772942381,
       "title": [
         {
           "opacity": 1,
@@ -5819,7 +6389,7 @@
       ]
     },
     {
-      "progress": 0.22496820643284945,
+      "progress": 0.22496820724211425,
       "title": [
         {
           "opacity": 1,
@@ -5913,7 +6483,7 @@
       ]
     },
     {
-      "progress": 0.2059873046707693,
+      "progress": 0.2059873047198467,
       "title": [
         {
           "opacity": 1,
@@ -6012,160 +6582,765 @@
     "height": 72,
     "leading": 68.4
   },
+  "triangle": {
+    "geometry": {
+      "x": 64,
+      "y": 5235.546875,
+      "width": 1312,
+      "height": 768.328125
+    },
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "values": {
+          "lead": 0,
+          "answer": 0,
+          "qualities": 0,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.0721,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 0.8104891093401686,
+          "answer": 0,
+          "qualities": 0,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.3579,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.6436,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.7146297961636993,
+          "time": 0.7146297961636993,
+          "budget": 0.7146297961636993,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 1,
+          "time": 1,
+          "budget": 1,
+          "proof": 1
+        },
+        "insert": 1
+      }
+    ],
+    "final": {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    }
+  },
   "triangleSamples": [
     {
-      "progress": 0.0053,
+      "progress": 0,
+      "state": "armed",
       "word": "Эффектно",
-      "lead": 0.00810416910375541,
-      "answer": 0,
+      "values": {
+        "lead": 0,
+        "answer": 0,
+        "qualities": 0,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.0539,
+      "progress": 0.0721,
+      "state": "playing",
       "word": "Эффектно",
-      "lead": 0.5580086287951624,
-      "answer": 0,
+      "values": {
+        "lead": 0.8104891093401686,
+        "answer": 0,
+        "qualities": 0,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.0955,
+      "progress": 0.3579,
+      "state": "playing",
       "word": "Эффектно",
-      "lead": 0.9942142133779489,
-      "answer": 0.023545524365223863,
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 0,
+        "time": 0,
+        "budget": 0,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.1442,
+      "progress": 0.6436,
+      "state": "playing",
       "word": "Эффектно",
-      "lead": 1,
-      "answer": 0.3198574171457585,
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 0.7146297961636993,
+        "time": 0.7146297961636993,
+        "budget": 0.7146297961636993,
+        "proof": 0
+      },
       "insert": 0
     },
     {
-      "progress": 0.1928,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 0.7364822870200269,
-      "insert": 0
-    },
-    {
-      "progress": 0.2344,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 0.9763321759040343,
-      "insert": 0
-    },
-    {
-      "progress": 0.283,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.3247,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.3733,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.4219,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.4636,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.5122,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.5608,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.6025,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.6511,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.6927,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.7414,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.783,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.8316,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0
-    },
-    {
-      "progress": 0.8802,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0.05671236102099645
-    },
-    {
-      "progress": 0.9219,
-      "word": "Эффектно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0.4137778186132111
-    },
-    {
-      "progress": 0.9705,
+      "progress": 1,
+      "state": "complete",
       "word": "Эффективно",
-      "lead": 1,
-      "answer": 1,
-      "insert": 0.8855101129206593
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    },
+    {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    },
+    {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
     }
-  ]
+  ],
+  "scrollMatrix": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "panel": 1080,
+      "position": "sticky",
+      "needed": "1007",
+      "media": {
+        "x": 864.796875,
+        "y": 332.9375,
+        "width": 1055.203125,
+        "height": 593.546875,
+        "bottom": 926.484375
+      },
+      "caption": {
+        "x": 864.796875,
+        "y": 934.484375,
+        "width": 1055.203125,
+        "height": 32,
+        "bottom": 966.484375
+      },
+      "navigation": {
+        "x": 612.796875,
+        "y": 332.9375,
+        "width": 220,
+        "height": 593.546875,
+        "bottom": 926.484375
+      },
+      "text": {
+        "x": 612.796875,
+        "y": 32,
+        "width": 1307.203125,
+        "height": 272.9375,
+        "bottom": 304.9375
+      },
+      "buttons": [
+        {
+          "height": 198,
+          "scroll": 198
+        },
+        {
+          "height": 198,
+          "scroll": 198
+        },
+        {
+          "height": 198,
+          "scroll": 198
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1920,
+      "height": 900,
+      "panel": 900,
+      "position": "sticky",
+      "needed": "900",
+      "media": {
+        "x": 864.796875,
+        "y": 332.9375,
+        "width": 865.765625,
+        "height": 486.984375,
+        "bottom": 819.921875
+      },
+      "caption": {
+        "x": 864.796875,
+        "y": 827.921875,
+        "width": 1055.203125,
+        "height": 32,
+        "bottom": 859.921875
+      },
+      "navigation": {
+        "x": 612.796875,
+        "y": 332.9375,
+        "width": 220,
+        "height": 486.984375,
+        "bottom": 819.921875
+      },
+      "text": {
+        "x": 612.796875,
+        "y": 32,
+        "width": 1307.203125,
+        "height": 272.9375,
+        "bottom": 304.9375
+      },
+      "buttons": [
+        {
+          "height": 162,
+          "scroll": 162
+        },
+        {
+          "height": 162,
+          "scroll": 162
+        },
+        {
+          "height": 162,
+          "scroll": 162
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "panel": 900,
+      "position": "sticky",
+      "needed": "816",
+      "media": {
+        "x": 671.59375,
+        "y": 304.15625,
+        "width": 768.40625,
+        "height": 432.21875,
+        "bottom": 736.375
+      },
+      "caption": {
+        "x": 671.59375,
+        "y": 744.375,
+        "width": 768.40625,
+        "height": 32,
+        "bottom": 776.375
+      },
+      "navigation": {
+        "x": 457.59375,
+        "y": 304.15625,
+        "width": 190,
+        "height": 432.21875,
+        "bottom": 736.375
+      },
+      "text": {
+        "x": 457.59375,
+        "y": 32,
+        "width": 982.40625,
+        "height": 244.15625,
+        "bottom": 276.15625
+      },
+      "buttons": [
+        {
+          "height": 144,
+          "scroll": 144
+        },
+        {
+          "height": 144,
+          "scroll": 144
+        },
+        {
+          "height": 144,
+          "scroll": 144
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "panel": 768,
+      "position": "sticky",
+      "needed": "719",
+      "media": {
+        "x": 650.125,
+        "y": 259.96875,
+        "width": 715.875,
+        "height": 402.671875,
+        "bottom": 662.640625
+      },
+      "caption": {
+        "x": 650.125,
+        "y": 670.640625,
+        "width": 715.875,
+        "height": 32,
+        "bottom": 702.640625
+      },
+      "navigation": {
+        "x": 436.125,
+        "y": 259.96875,
+        "width": 190,
+        "height": 402.671875,
+        "bottom": 662.640625
+      },
+      "text": {
+        "x": 436.125,
+        "y": 16,
+        "width": 929.875,
+        "height": 227.96875,
+        "bottom": 243.96875
+      },
+      "buttons": [
+        {
+          "height": 134,
+          "scroll": 134
+        },
+        {
+          "height": 134,
+          "scroll": 134
+        },
+        {
+          "height": 134,
+          "scroll": 134
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1366,
+      "height": 700,
+      "panel": 700,
+      "position": "sticky",
+      "needed": "700",
+      "media": {
+        "x": 650.125,
+        "y": 259.96875,
+        "width": 682.65625,
+        "height": 383.984375,
+        "bottom": 643.953125
+      },
+      "caption": {
+        "x": 650.125,
+        "y": 651.953125,
+        "width": 715.875,
+        "height": 32,
+        "bottom": 683.953125
+      },
+      "navigation": {
+        "x": 436.125,
+        "y": 259.96875,
+        "width": 190,
+        "height": 383.984375,
+        "bottom": 643.953125
+      },
+      "text": {
+        "x": 436.125,
+        "y": 16,
+        "width": 929.875,
+        "height": 227.96875,
+        "bottom": 243.96875
+      },
+      "buttons": [
+        {
+          "height": 128,
+          "scroll": 128
+        },
+        {
+          "height": 128,
+          "scroll": 128
+        },
+        {
+          "height": 128,
+          "scroll": 128
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "panel": 800,
+      "position": "sticky",
+      "needed": "679",
+      "media": {
+        "x": 625.1875,
+        "y": 255.03125,
+        "width": 654.8125,
+        "height": 368.328125,
+        "bottom": 623.359375
+      },
+      "caption": {
+        "x": 625.1875,
+        "y": 631.359375,
+        "width": 654.8125,
+        "height": 32,
+        "bottom": 663.359375
+      },
+      "navigation": {
+        "x": 411.1875,
+        "y": 255.03125,
+        "width": 190,
+        "height": 368.328125,
+        "bottom": 623.359375
+      },
+      "text": {
+        "x": 411.1875,
+        "y": 16,
+        "width": 868.8125,
+        "height": 223.03125,
+        "bottom": 239.03125
+      },
+      "buttons": [
+        {
+          "height": 123,
+          "scroll": 123
+        },
+        {
+          "height": 123,
+          "scroll": 123
+        },
+        {
+          "height": 123,
+          "scroll": 123
+        }
+      ],
+      "fit": "contain"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "panel": 768,
+      "position": "sticky",
+      "needed": "581",
+      "media": {
+        "x": 469.75,
+        "y": 209.4375,
+        "width": 554.25,
+        "height": 311.765625,
+        "bottom": 521.203125
+      },
+      "caption": {
+        "x": 269.75,
+        "y": 533.328125,
+        "width": 754.25,
+        "height": 32,
+        "bottom": 565.328125
+      },
+      "navigation": {
+        "x": 269.75,
+        "y": 209.4375,
+        "width": 180,
+        "height": 315.890625,
+        "bottom": 525.328125
+      },
+      "text": {
+        "x": 269.75,
+        "y": 16,
+        "width": 754.25,
+        "height": 177.4375,
+        "bottom": 193.4375
+      },
+      "buttons": [
+        {
+          "height": 105,
+          "scroll": 105
+        },
+        {
+          "height": 105,
+          "scroll": 105
+        },
+        {
+          "height": 105,
+          "scroll": 105
+        }
+      ],
+      "fit": "contain"
+    }
+  ],
+  "mobileTriangle": {
+    "geometry": {
+      "x": 20,
+      "y": 366.234375,
+      "width": 350,
+      "height": 1276.71875
+    },
+    "samples": [
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.5944,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.9570879293689225,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 0.6435,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 0.999679025724437,
+          "model": 0,
+          "time": 0,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "playing",
+        "word": "Эффектно",
+        "values": {
+          "lead": 1,
+          "answer": 1,
+          "qualities": 1,
+          "model": 0.19410748751540488,
+          "time": 0.010538061787951523,
+          "budget": 0,
+          "proof": 0
+        },
+        "insert": 0
+      }
+    ],
+    "final": {
+      "progress": 1,
+      "state": "complete",
+      "word": "Эффективно",
+      "values": {
+        "lead": 1,
+        "answer": 1,
+        "qualities": 1,
+        "model": 1,
+        "time": 1,
+        "budget": 1,
+        "proof": 1
+      },
+      "insert": 1
+    }
+  },
+  "coreAsset": {
+    "url": "https://aurrrus.github.io/twin-web-concept/media/composition-core-20261023.png?v=643c5107ecf0",
+    "width": 1448,
+    "height": 1086,
+    "fit": "contain",
+    "filter": "none"
+  },
+  "launchAnchor": [
+    {
+      "url": "https://aurrrus.github.io/twin-web-concept/#launch",
+      "top": 56.875,
+      "first": {
+        "x": 64,
+        "y": 56.875,
+        "width": 310,
+        "height": 140.28125,
+        "top": 56.875,
+        "right": 374,
+        "bottom": 197.15625,
+        "left": 64
+      }
+    },
+    {
+      "url": "https://aurrrus.github.io/twin-web-concept/#launch",
+      "top": 56.953125,
+      "first": {
+        "x": 20,
+        "y": 56.953125,
+        "width": 350,
+        "height": 114.125,
+        "top": 56.953125,
+        "right": 370,
+        "bottom": 171.078125,
+        "left": 20
+      }
+    }
+  ],
+  "followup": {
+    "reason": "The initial 500ms anchor assertion ran during the native 8k-pixel smooth scroll; final position was correct. The verifier now awaits the actual anchor offset.",
+    "initialReport": "artifacts/scroll-recovery/online-first-pass.json",
+    "completedAt": "2026-10-23T18:23:45.888Z"
+  }
 }

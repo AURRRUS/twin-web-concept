@@ -24,3 +24,10 @@ export async function assertTriangleScroll(page){
  await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await host.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*.85,behavior:'instant'}));await page.waitForTimeout(80);assert.deepEqual(await snapshot(),final);
  return{geometry,samples,final};
 }
+export async function assertLaunchAnchor(page){
+ const mobile=page.viewportSize().width<=950;
+ if(mobile){const menu=page.locator('.mobile-navigation');if(!await menu.evaluate(n=>n.open))await menu.locator('summary').click();}
+ const nav=page.getByRole('navigation',{name:mobile?'Мобильная навигация':'Основная навигация'});await nav.getByRole('link',{name:'Запуск',exact:true}).click();await page.waitForURL('**/#launch');
+ await page.waitForFunction(()=>{const n=document.getElementById('launch'),expected=parseFloat(getComputedStyle(n).scrollMarginTop)+parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop);return Math.abs(n.getBoundingClientRect().top-expected)<2;});
+ return page.locator('#launch').evaluate(n=>({url:location.href,top:n.getBoundingClientRect().top,first:n.querySelector('li').getBoundingClientRect().toJSON()}));
+}

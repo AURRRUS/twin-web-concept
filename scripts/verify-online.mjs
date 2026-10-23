@@ -6,7 +6,7 @@ import {assertTwinType} from './assert-twin-type.mjs';
 import {assertCorrectionMetrics} from './assert-correction-metrics.mjs';
 import {inspectJourneyTransition} from './assert-journey-transition.mjs';
 import {inspectDescriptions,inspectComposition,inspectOrphans} from './inspect-layout.mjs';
-import {assertJourneyScroll,assertTriangleScroll,scrollViewports} from './assert-scroll-recovery.mjs';
+import {assertJourneyScroll,assertTriangleScroll,assertLaunchAnchor,scrollViewports} from './assert-scroll-recovery.mjs';
 const base='https://aurrrus.github.io/twin-web-concept/',expected=process.env.TWIN_EXPECTED_COMMIT;
 const copy=JSON.parse(readFileSync(new URL('../src/lib/designContent.json',import.meta.url),'utf8'));
 const result={site:base,expectedSourceCommit:expected||null,status:'RUNNING',checkedAt:new Date().toISOString(),checks:[],pageErrors:[],failedResponses:[]};
@@ -62,7 +62,7 @@ try{
  await page.locator('.map-core').click();await page.getByRole('dialog').waitFor();const coreImage=page.getByRole('dialog').locator('img');await coreImage.evaluate(n=>n.decode());assert((await coreImage.getAttribute('src')).includes('composition-core-20261023.png'));assert.equal(await coreImage.evaluate(n=>getComputedStyle(n).objectFit),'contain');await page.keyboard.press('Escape');
  result.coreAsset=await page.locator('.map-core img').evaluate(n=>({url:n.currentSrc,width:n.naturalWidth,height:n.naturalHeight,fit:getComputedStyle(n).objectFit,filter:getComputedStyle(n).filter}));assert(result.coreAsset.url.includes('composition-core-20261023.png'));assert.equal(result.coreAsset.width,1448);assert.equal(result.coreAsset.height,1086);assert.equal(result.coreAsset.fit,'contain');assert.equal(result.coreAsset.filter,'none');assert(!(await page.locator('.delivery-triangle img').getAttribute('src')).includes('composition-core'));
  for(const name of['Сайт','Онлайн-показ','Агент','Офис продаж']){await page.getByRole('tab',{name,exact:true}).click();await page.locator('.channel-scene img').evaluate(n=>n.decode());assert.equal(await page.locator('.channel-image-motion').evaluate(n=>getComputedStyle(n).opacity),'1');}
- await page.getByRole('navigation',{name:'Основная навигация'}).getByRole('link',{name:'Запуск',exact:true}).click();await page.waitForURL('**/#launch');await page.waitForTimeout(500);assert(await page.locator('#launch').evaluate(n=>n.getBoundingClientRect().top>=-1&&n.getBoundingClientRect().top<innerHeight));
+ result.launchAnchor=await assertLaunchAnchor(page);
  result.checks.push('New transparent owner PNG displayed in Composition and its core dialog, triangle core preserved; four channel tabs and stable launch anchor work');
  await page.emulateMedia({reducedMotion:'reduce'});await page.setViewportSize({width:1440,height:900});await page.goto(base,{waitUntil:'networkidle'});await ready();assert.equal(await page.locator('.journey').getAttribute('data-enhanced'),'false');assert.equal(await page.locator('.delivery-word-static').textContent(),'Эффективно');assert.equal(await page.locator('.journey').getAttribute('data-layout-mode'),'desktop');assert.equal(await page.locator('.static-scene:visible').count(),0);result.checks.push('Reduced motion retains desktop columns, manual scene buttons and final word');
  assert.deepEqual(result.pageErrors,[]);assert.deepEqual(result.failedResponses,[]);result.status='PASS';
