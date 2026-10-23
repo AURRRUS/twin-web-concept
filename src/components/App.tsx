@@ -55,6 +55,6 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
       <ProductDemo selection={selection} onChange={updateSelection} full={page === 'demo'} />
       {page === 'home' && <><Composition onTopic={setTopic} /><Channels /><Delivery /><ContactForm topic={topic} onTopic={setTopic} selection={selection} /></>}
     </main>
-    <footer className="site-footer"><a href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" /></a><nav aria-label="Навигация внизу страницы"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#composition')}>Состав и запуск</a></nav><span>Демонстрационный проект</span></footer>
+    <footer className="site-footer"><a href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" /></a><nav aria-label="Навигация внизу страницы"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#composition')}>Состав</a><a href={sitePath('/#launch')}>Запуск</a></nav><span>Демонстрационный проект</span></footer>
   </>;
 }

@@ -30,7 +30,6 @@ export function Journey() {
   useEffect(() => {
     const node = host.current!;
     const panel = node.querySelector<HTMLElement>('.journey-cinematic')!;
-    const desktop = matchMedia('(min-width: 1280px)');
     const columns = matchMedia('(min-width: 1024px)');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     let enabled = false, disposed = false, fontsReady = false, imagesReady = false, hashChecked = false;
@@ -59,7 +58,8 @@ export function Journey() {
       node.dataset.layoutMode = mode;
       setLayoutMode(mode);
       panel.hidden = mode !== 'desktop';
-      let fits = desktop.matches && innerHeight >= 760 && !reduced.matches;
+      node.dataset.density = innerHeight < 850 ? 'compact' : 'regular';
+      let fits = columns.matches && !reduced.matches;
       if (fits) {
         // Measure the real text and image footprint, including the longest hidden text group.
         node.dataset.measuring = 'true'; panel.hidden = false;
@@ -69,8 +69,11 @@ export function Journey() {
         const nav = panel.querySelector<HTMLElement>('.scene-navigation')!;
         const caption = panel.querySelector<HTMLElement>('.scene-caption')!;
         const css = getComputedStyle(right);
-        const needed = text.offsetHeight + parseFloat(getComputedStyle(text).marginBottom) + Math.max(nav.scrollHeight, image.offsetHeight + caption.offsetHeight + 8) + parseFloat(css.paddingTop) + parseFloat(css.paddingBottom);
-        fits = needed <= innerHeight;
+        const fixed = text.offsetHeight + parseFloat(getComputedStyle(text).marginBottom) + caption.offsetHeight + parseFloat(getComputedStyle(caption).marginTop) + parseFloat(css.paddingTop) + parseFloat(css.paddingBottom);
+        node.style.setProperty('--journey-media-height', `${Math.max(0, innerHeight - fixed)}px`);
+        const needed = fixed + Math.max(nav.scrollHeight, image.offsetHeight);
+        node.dataset.neededHeight = String(needed);
+        fits = needed <= innerHeight + 1;
         delete node.dataset.measuring;
       }
       enabled = fits; node.dataset.motionEnabled = String(fits); setMotionEnabled(fits); setLayoutReady(true);
@@ -107,12 +110,12 @@ export function Journey() {
     void Promise.all([400, 600, 700, 900].map(weight => document.fonts.load(`${weight} 24px "Twin Dewi Expanded"`, 'ЦифроваяЁё'))).then(() => {
       fontsReady = true; configure(); return document.fonts.ready;
     }).then(configure);
-    columns.addEventListener('change', configure); desktop.addEventListener('change', configure); reduced.addEventListener('change', configure);
+    columns.addEventListener('change', configure); reduced.addEventListener('change', configure);
     window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', configure);
     window.addEventListener('hashchange', hashJump); window.addEventListener('twin:journey', onJump); document.addEventListener('visibilitychange', visibility);
     return () => {
       disposed = true; driver?.destroy(); decode.disconnect(); resize.disconnect();
-      columns.removeEventListener('change', configure); desktop.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
+      columns.removeEventListener('change', configure); reduced.removeEventListener('change', configure);
       window.removeEventListener('scroll', request); window.removeEventListener('resize', configure);
       window.removeEventListener('hashchange', hashJump); window.removeEventListener('twin:journey', onJump); document.removeEventListener('visibilitychange', visibility);
     };

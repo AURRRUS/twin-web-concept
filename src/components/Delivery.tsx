@@ -26,7 +26,7 @@ export function Delivery(){
         <div className="delivery-quality"><span className="quality-label" data-proof-label="">Эффективно</span><h3>{copy.proof_heading}</h3><a className="delivery-proof" href={sitePath('/demo')}><Media name="interior" alt="Иллюстративное пространство у моря"/><p className="proof-caption">{copy.proof_caption}</p><span className="text-link">{copy.action.label}<Arrow/></span></a></div>
       </div>
     </div></div></div>
-    <ol className="launch-steps">{steps.map(([title,body,icon],i)=><li data-craft-reveal="fact" key={title}><span className="launch-number"><Icon name={icon}/></span><div><span className="launch-index">0{i+1}</span><h3>{title}</h3><p>{body}</p></div>{i<3&&<Arrow/>}</li>)}</ol>
+    <ol className="launch-steps" id="launch" aria-label="Этапы запуска">{steps.map(([title,body,icon],i)=><li data-craft-reveal="fact" key={title}><span className="launch-number"><Icon name={icon}/></span><div><span className="launch-index">0{i+1}</span><h3>{title}</h3><p>{body}</p></div>{i<3&&<Arrow/>}</li>)}</ol>
     <p className="section-note">Состав решения, стоимость и график фиксируем для конкретного проекта.</p>
   </section>;
 }

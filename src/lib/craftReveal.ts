@@ -3,7 +3,7 @@ export function initCraftReveals(root:Document=document){
  const nodes=[...root.querySelectorAll<HTMLElement>('[data-craft-reveal]')],reduced=matchMedia('(prefers-reduced-motion:reduce)'),small=matchMedia('(max-width:1279px)');
  const animations=new Map<HTMLElement,Animation>(),observers:IntersectionObserver[]=[];
  const replayHosts=[...root.querySelectorAll<HTMLElement>('[data-craft-repeat="after-exit"]')],replayState=new Map(replayHosts.map(n=>[n,{played:false,armed:true,cycles:0}]));
- let pointerDown=false,resizeRaf=0;
+ let pointerDown=false,resizeRaf=0,scrollRaf=0;
  const group=(n:HTMLElement)=>{
   const cinematic=n.closest<HTMLElement>('.journey-cinematic');
   if(cinematic)return cinematic.querySelector<HTMLElement>('.scene-title-slot')||n;
@@ -59,6 +59,11 @@ export function initCraftReveals(root:Document=document){
  },{threshold:[0,0.00001]}):undefined;
  for(const host of replayHosts)replayObserver?.observe(host);
  register();const resize=()=>{cancelAnimationFrame(resizeRaf);resizeRaf=requestAnimationFrame(register);};window.addEventListener('resize',resize);
+ // A fast native jump settles groups already passed; Journey owns its separate replay policy.
+ const settlePassed=()=>{scrollRaf=0;for(const [g]of groups)if(!g.closest('.journey')&&g.getClientRects().length&&g.getBoundingClientRect().bottom<=0)settle(g);};
+ const scroll=()=>{if(!scrollRaf)scrollRaf=requestAnimationFrame(settlePassed);};
+ const visibility=()=>{if(document.hidden)return;settlePassed();for(const [g]of groups)if(!g.closest('.journey')&&g.getClientRects().length){const r=g.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)settle(g);}};
+ window.addEventListener('scroll',scroll,{passive:true});root.addEventListener('visibilitychange',visibility);
  const focus=(e:Event)=>{if(pointerDown)return;for(const [n,a]of animations)if(n.contains(e.target as Node)){a.cancel();animations.delete(n);}for(const [g]of groups)if(g.contains(e.target as Node))settle(g);};
  const anchor=()=>{let id=location.hash.slice(1);try{id=decodeURIComponent(id);}catch{}const t=document.getElementById(id);if(t)settle(t);};
  const motionChange=()=>{if(reduced.matches){for(const o of observers)o.disconnect();replayObserver?.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
@@ -69,5 +74,5 @@ export function initCraftReveals(root:Document=document){
  // The clean photograph never disappears; the four text/action groups enter once.
  const heroNodes=[['.hero h1',100,700],['.hero-description',360,650],['.hero-channels',500,650],['.hero .actions',650,600]] as const;
  if(!reduced.matches&&scrollY<20)for(const [selector,delay,duration]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:small.matches?350:duration,delay:small.matches?Math.min(140,delay*.25):delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
- return()=>{cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
+ return()=>{cancelAnimationFrame(scrollRaf);window.removeEventListener('scroll',scroll);root.removeEventListener('visibilitychange',visibility);cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
 }

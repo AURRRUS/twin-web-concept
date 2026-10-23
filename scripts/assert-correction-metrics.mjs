@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 /** Read the browser's computed contract, including component overrides, not just root tokens. */
 export async function assertCorrectionMetrics(page){
- await page.waitForFunction(()=>document.querySelector('.delivery-host')?.dataset.motionType==='once');
+ await page.waitForFunction(()=>document.querySelector('.delivery-host')?.dataset.motionType==='scroll-once');
  const d=await page.evaluate(()=>{
   const style=selector=>{const n=document.querySelector(selector),s=getComputedStyle(n);return{selector,family:s.fontFamily,weight:Number(s.fontWeight),size:parseFloat(s.fontSize),leading:parseFloat(s.lineHeight),tracking:parseFloat(s.letterSpacing)||0,transform:s.transform,synthesis:s.fontSynthesis};};
   const journey=document.querySelector('.journey'),host=document.querySelector('.delivery-host'),panel=document.querySelector('.delivery-panel'),form=getComputedStyle(document.querySelector('.contact form'));
@@ -16,7 +16,7 @@ export async function assertCorrectionMetrics(page){
  assert(d.steps.heading.family.includes('Twin Inter Tight'));assert.equal(d.steps.heading.weight,600);assert.equal(d.steps.heading.size,d.viewport.width>=1280?Math.min(22,Math.max(20,20+(d.viewport.width-1440)/240)):d.viewport.width>=600?20:19);assert.equal(d.steps.body.weight,450);assert.equal(d.steps.body.size,d.viewport.width>=1280?Math.min(18,Math.max(16,16+(d.viewport.width-1440)/240)):16);
  assert.equal(d.roles.quality.weight,600);assert(d.roles.quality.family.includes('Twin Dewi Expanded'));assert.equal(d.roles.quality.tracking,0);assert.equal(d.roles.number.weight,700);assert.equal(d.roles.number.tracking,0);assert.equal(d.roles.card.weight,600);assert(d.roles.card.family.includes('Twin Inter Tight'));assert.equal(d.roles.label.size,16);assert.equal(d.roles.input.size,18);
  assert.equal(d.journey.layout,d.viewport.width>=1024?'desktop':'mobile');assert.equal(d.journey.staticVisible,d.viewport.width<1024);
- assert.equal(d.triangle.type,'once');assert.equal(d.triangle.position,'static');assert(Math.abs(d.triangle.host-d.triangle.panel)<1);
+ assert.equal(d.triangle.type,'scroll-once');assert.equal(d.triangle.position,'static');assert(Math.abs(d.triangle.host-d.triangle.panel)<1);
  assert.equal(d.contact.background,'rgb(32, 39, 47)');assert.equal(d.contact.formBackground,'rgba(0, 0, 0, 0)');assert.equal(d.contact.formShadow,'none');assert.equal(d.contact.formBorder,'0px');
  return d;
 }
