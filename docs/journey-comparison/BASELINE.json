@@ -1,0 +1,13 @@
+{
+  "sourceBase": "f4a1c17512d1b1c2098336cb809ac5c295f05a79",
+  "publishedBeforeTask": {
+    "version": "desktop-0.6",
+    "sourceCommit": "45e91358d7e05b025ead7031baede574832cda5b",
+    "builtAt": "2026-10-24T12:49:02.198Z",
+    "previousDeploymentCommit": "f3f4f10e8013873446f498fd092a81e5cb35cbb9"
+  },
+  "sourceBackup": "backup/before-journey-comparison-2026-10-24",
+  "publishedBackup": "backup/pages-before-journey-comparison-2026-10-24",
+  "workingBranch": "codex/twin-journey-comparison",
+  "uncommittedChangesAtStart": false
+}
