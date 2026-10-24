@@ -3,5 +3,6 @@
   "publishedSource": "c9fa164939af0b821fd103a5321f6f902c297851",
   "backup": "backup/before-type-channels-2026-10-24",
   "workingBranch": "codex/twin-type-channels",
-  "uncommittedChangesAtStart": false
+  "uncommittedChangesAtStart": false,
+  "publishedBuildBeforeTask": "b1026259be5c16c80d2c9f4f3a3d400400657ae8"
 }
