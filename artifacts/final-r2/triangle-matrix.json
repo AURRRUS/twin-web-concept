@@ -1,0 +1,940 @@
+[
+  {
+    "width": 1920,
+    "height": 787,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.124,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.16620568692823529,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.374,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.749,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.28162587549999646
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 32,
+      "left": 32,
+      "right": 32,
+      "textTop": 36,
+      "textLeft": 122.78125,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1920,
+    "height": 777,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1249,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.1722185105181317,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3749,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7499,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.29026472810509163
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 32,
+      "left": 32,
+      "right": 32,
+      "textTop": 36,
+      "textLeft": 122.78125,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1440,
+    "height": 742,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1263,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.18183527518240852,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3763,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7513,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.3039979956312898
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 32,
+      "left": 32,
+      "right": 32,
+      "textTop": 35.890625,
+      "textLeft": 51.3125,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1366,
+    "height": 693,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1257,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.17802840697494543,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3764,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7507,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.29857368750182495
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 74.640625,
+      "left": 32,
+      "right": 32,
+      "textTop": 78.53125,
+      "textLeft": 35.65625,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1366,
+    "height": 693,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1244,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.16929399127169417,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3744,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7494,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.28606805820927567
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 74.640625,
+      "left": 32,
+      "right": 32,
+      "textTop": 78.53125,
+      "textLeft": 35.65625,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1280,
+    "height": 710,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1252,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.17479218850084904,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3752,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7502,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.29395004385151235
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 70.484375,
+      "left": 32,
+      "right": 32,
+      "textTop": 74.375,
+      "textLeft": 90.1875,
+      "textRight": 32
+    }
+  },
+  {
+    "width": 1024,
+    "height": 709,
+    "samples": [
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0,
+        "state": "armed",
+        "word": "Эффектно",
+        "vars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.1251,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          0.1738114612173051,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.3758,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 0.7501,
+        "state": "playing",
+        "word": "Эффектно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.29254658224831304
+        ],
+        "insert": 0
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      },
+      {
+        "progress": 1,
+        "state": "complete",
+        "word": "Эффективно",
+        "vars": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "insert": 1
+      }
+    ],
+    "gaps": {
+      "top": 85.484375,
+      "left": 32,
+      "right": 32,
+      "textTop": 89.375,
+      "textLeft": 36.03125,
+      "textRight": 32
+    }
+  }
+]

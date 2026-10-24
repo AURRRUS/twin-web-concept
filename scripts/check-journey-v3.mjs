@@ -1,8 +1,4 @@
-import assert from 'node:assert/strict';
-import{journeyFrame}from'../src/lib/journeyFrameV3.mjs';
-for(let i=0;i<=10000;i++){
- const p=i/10000,f=journeyFrame(p);
- for(const role of['title','body']){const opacity=f[role+'Opacity'],top=f[role+'ClipTop'],bottom=f[role+'ClipBottom'];const bands=opacity.map((o,j)=>o?{top:top[j]/100,bottom:1-bottom[j]/100}:null).filter(Boolean).sort((a,b)=>a.top-b.top);assert(Math.abs(bands.reduce((sum,n)=>sum+Math.max(0,n.bottom-n.top),0)-1)<1e-8);for(let j=1;j<bands.length;j++)assert(bands[j-1].bottom<=bands[j].top+1e-8);assert(opacity.every(n=>n===0||n===1));}
- assert.equal(f.mediaOpacity[0],1);assert(f.mediaScale.every(n=>n>=1&&n<=1.08));assert(f.mediaY.every(n=>n>=-32&&n<=0));assert.deepEqual(f,journeyFrame(p));
-}
-console.log(JSON.stringify({samples:10001,maskedReplacement:true,noOverlappingText:true,noBlankText:true,baseMediaPresent:true,deterministicReverse:true},null,2));
+import assert from'node:assert/strict';import{journeyFrame,sceneTargets,journeyStops}from'../src/lib/journeyFrameV3.mjs';import{channelFrame,channelTargets}from'../src/lib/channelMotion.mjs';
+for(let i=0;i<=10000;i++){const p=i/10000,f=journeyFrame(p);for(const role of['title','body']){const op=f[role+'Opacity'],top=f[role+'ClipTop'],bottom=f[role+'ClipBottom'];assert.equal(op.length,4);assert(op.every(v=>v===0||v===1));const visible=op.map((v,j)=>({top:top[j],bottom:100-bottom[j],v})).filter(b=>b.v&&b.bottom>b.top+.0001).sort((a,b)=>a.top-b.top);for(let j=1;j<visible.length;j++)assert(visible[j-1].bottom<=visible[j].top+.001);if(role==='title')assert(visible.length>0);}assert.equal(f.mediaOpacity[0],1);assert(f.mediaOpacity.every(v=>v===0||v===1));assert(f.mediaScale.every(v=>v>=1&&v<=1.070001));assert(f.mediaY.every(v=>v>=-32&&v<=0));assert.deepEqual(f,journeyFrame(p));const c=channelFrame(p,600);assert(c.scale.every(v=>v>=.92&&v<=1));assert(c.y.every(v=>v>=-32&&v<=632));}
+for(const p of sceneTargets)assert(journeyFrame(p).mediaScale.every(v=>v===1));for(const[p,i]of channelTargets.map((p,i)=>[p,i]))assert.equal(channelFrame(p,600).active,i);
+console.log(JSON.stringify({samples:10001,scenes:4,stops:journeyStops,journeyNoTextOverlap:true,opaqueSheets:true,channelReversibleStack:true}));

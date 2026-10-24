@@ -1,0 +1,9 @@
+{
+  "sourceCommit": "4207d1c3e60493fef4e5629c2ba8bccf7f030b6b",
+  "sourceBackup": "backup/before-final-handoff-2026-10-23",
+  "publishedSourceCommit": "8ad56176929f7d27f373fc7164202ff3456795bf",
+  "publishedBuildCommit": "8a5813f2ac2bfed98962c617e6867e67f3baa3c4",
+  "publishedBackup": "backup/pages-before-final-handoff-2026-10-23",
+  "workingBranch": "codex/twin-final-r2",
+  "uncommittedChangesAtStart": false
+}

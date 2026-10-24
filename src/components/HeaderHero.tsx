@@ -16,7 +16,7 @@ export function Hero() {
     <div className="content-container hero-content"><div className="hero-copy">
       <h1 id="hero-heading"><span className="hero-line">Цифровая <em className="bronze">инфраструктура продаж</em></span>{' '}<span className="hero-line">девелоперского проекта</span></h1>
       <p className="hero-description"><span>Раскрывайте преимущества проекта</span>{' '}<span>и помогайте покупателю выбирать:</span></p>
-      <p className="hero-channels">на сайте, дистанционно, через агентов, в офисе продаж.</p>
+      <p className="hero-channels">на сайте, дистанционно, через агентов и в офисе продаж</p>
       <div className="actions"><a className="button" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a></div>
     </div></div>
     <span className="hero-caption"><span />Демонстрационный проект</span>

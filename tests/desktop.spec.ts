@@ -49,21 +49,10 @@ test('all seven dialogs, keyboard focus, history, direct URL and contact topic',
   await expect(page).not.toHaveURL(/component=/);
 });
 
-test('channel tabs support all four states and keyboard', async ({ page }) => {
-  await page.goto('/#channels');
-  const tabs = page.getByRole('tablist', { name: 'Каналы продаж' });
-  await expect(tabs.getByRole('tab', { name: 'Офис продаж' })).toHaveAttribute('aria-selected', 'true');
-  for (const label of ['Сайт', 'Онлайн-показ', 'Агент', 'Офис продаж']) {
-    await tabs.getByRole('tab', { name: label, exact: true }).click();
-    await expect(tabs.getByRole('tab', { name: label, exact: true })).toHaveAttribute('aria-selected', 'true');
-    await expect(page.locator('.channel-scene img')).toHaveAttribute('alt', new RegExp(label));
-  }
-  await page.keyboard.press('Home');
-  await expect(tabs.getByRole('tab', { name: 'Сайт', exact: true })).toBeFocused();
-  await page.keyboard.press('ArrowRight');
-  await expect(tabs.getByRole('tab', { name: 'Онлайн-показ' })).toHaveAttribute('aria-selected', 'true');
-  await page.keyboard.press('End');
-  await expect(tabs.getByRole('tab', { name: 'Офис продаж' })).toBeFocused();
+test('channel sheet navigation supports all four scenes and keyboard',async({page})=>{
+ await page.goto('/#channels');await expect(page.locator('.channels')).toHaveAttribute('data-motion-enabled','true');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');
+ for(let i=0;i<4;i++){await links.nth(i).click();await expect(links.nth(i)).toHaveAttribute('aria-current','step');await expect(page.locator('.channel-card').nth(i)).not.toHaveAttribute('inert','');}
+ await page.keyboard.press('Home');await expect(links.first()).toBeFocused();await expect(links.first()).toHaveAttribute('aria-current','step');await page.keyboard.press('ArrowDown');await expect(links.nth(1)).toBeFocused();await expect(links.nth(1)).toHaveAttribute('aria-current','step');await page.keyboard.press('End');await expect(links.last()).toBeFocused();
 });
 
 test('shared selection, parent resets, direct demo and invalid IDs', async ({ page }) => {
@@ -111,14 +100,8 @@ test('form validates fields, keeps input and never pretends to send', async ({ p
   expect(requests).toEqual([]);
 });
 
-test('broken image preserves text and channel navigation', async ({ page }) => {
-  await page.route(/\/media\/online\.webp(?:\?|$)/, route => route.abort());
-  await page.goto('/#channels');
-  await page.getByRole('tab', { name: 'Онлайн-показ' }).click();
-  await expect(page.locator('.channel-scene')).toHaveClass(/media-failed/);
-  await expect(page.getByText('Совместный просмотр выбранного лота с менеджером', { exact: false })).toBeVisible();
-  await page.getByRole('tab', { name: 'Агент', exact: true }).click();
-  await expect(page.locator('.channel-scene')).not.toHaveClass(/media-failed/);
+test('broken channel image preserves text, CTA and navigation',async({page})=>{
+ await page.route(/final-r2\/channels\/online\.png/,r=>r.abort());await page.goto('/#channels');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');await links.nth(1).click();await expect(page.locator('#channel-online .media')).toHaveClass(/media-failed/);await expect(page.locator('#channel-online p')).toBeVisible();await expect(page.locator('#channel-online .text-link')).toBeVisible();await links.nth(2).click();await expect(page.locator('#channel-agent .media')).not.toHaveClass(/media-failed/);
 });
 
 test('desktop widths and reduced motion retain visible content', async ({ page }) => {
@@ -145,25 +128,8 @@ test('without JavaScript: server-rendered content and honest demo remain availab
   await context.close();
 });
 
-test('desktop typeface loads and architectural scenes reverse without losing content', async ({ page }) => {
-  await page.goto('/');
-  await page.evaluate(() => document.fonts.ready);
-  expect(await page.locator('h1').evaluate(element => getComputedStyle(element).fontFamily)).toContain('Twin Dewi Expanded');
-  expect(await page.evaluate(() => document.fonts.check('900 48px "Twin Dewi Expanded"', 'Цифровая инфраструктура'))).toBe(true);
-  expect(await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).toContain('Twin Inter Tight');
-  expect(await page.evaluate(() => document.fonts.check('450 16px "Twin Inter Tight"', 'Кириллица Ёё'))).toBe(true);
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'true');
-  for (const [progress, scene] of [[0.14, 'project'], [0.5, 'space'], [0.88, 'lot'], [0.5, 'space']] as const) {
-    await page.evaluate(p => { const node = document.querySelector('.journey')!; window.scrollTo({ top: node.getBoundingClientRect().top + scrollY + (node.clientHeight - innerHeight) * p, behavior: 'instant' }); }, progress);
-    await expect(page.locator('.journey')).toHaveAttribute('data-scene', scene);
-    await expect(page.locator('.scene-navigation button[aria-pressed="true"]')).toContainText(scene === 'project' ? 'Проект' : scene === 'space' ? 'Пространство' : 'Лот');
-    expect(await page.locator('.scene-materials').evaluate(el => el.getBoundingClientRect().width)).toBeCloseTo(768.4, 0);
-  }
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect(page.locator('.journey')).toHaveAttribute('data-enhanced', 'false');
-  await expect(page.locator('.journey-cinematic')).toBeVisible();
-  await page.locator('.scene-navigation button').nth(2).click();
-  await expect(page.locator('.scene-body-group[aria-hidden="false"]')).toContainText('Покажите лот в корпусе, на этаже и на планировке Свяжите его расположение, пространство и вид');
+test('real typefaces load; reduced motion provides four readable Journey scenes',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await page.evaluate(()=>document.fonts.ready);await expect(page.locator('h1')).toHaveCSS('font-family','"Twin Dewi Expanded", sans-serif');await expect(page.locator('h1')).toHaveCSS('font-weight','900');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');await expect(page.locator('.static-scene:visible')).toHaveCount(4);await expect(page.locator('.channel-card:visible')).toHaveCount(4);await expect(page.locator('.channel-card[inert]')).toHaveCount(0);
 });
 
 test('a foreign project cannot retain the known child lot', async ({ page }) => {

@@ -1,39 +1,29 @@
-// Pure scene state. DOM integration stays in the existing Journey component.
-export const clamp = x => Math.max(0, Math.min(1, x));
-const phase = (q,a,b) => { const t=clamp((q-a)/(b-a));return t*t*(3-2*t); };
-export const sceneTargets = [.10,.525,.925];
-export function journeyFrame(progress) {
-  const p=clamp(progress),from=p<.45?0:p<.85?1:2,start=from===0?.20:.60;
-  const moving=from<2&&p>=start&&p<start+.25,q=moving?clamp((p-start)/.25):0,to=moving?from+1:from;
-  const titleOpacity=[0,0,0],titleY=[0,0,0],titleClip=[0,0,0],bodyOpacity=[0,0,0],bodyY=[0,0,0];
-  const titleClipTop=[0,0,0],titleClipBottom=[0,0,0],bodyClipTop=[0,0,0],bodyClipBottom=[0,0,0];
-  const mediaOpacity=[0,0,0],mediaScale=[1,1,1],mediaY=[0,0,0];
-  titleOpacity[from]=bodyOpacity[from]=1;
-  for(let i=0;i<=from;i++)mediaOpacity[i]=1;
-  if(moving){
-    const title=phase(q,.08,.30),body=phase(q,.32,.58),sheet=phase(q,.60,1);
-    // A shared spatial boundary replaces text; readable lines never alpha-blend.
-    for(const [t,opacity,top,bottom] of [[title,titleOpacity,titleClipTop,titleClipBottom],[body,bodyOpacity,bodyClipTop,bodyClipBottom]]){
-      opacity[from]=t<1?1:0;opacity[to]=t>0?1:0;bottom[from]=100*t;top[to]=100*(1-t);
-    }
-    mediaOpacity[to]=phase(q,.60,.76);
-    mediaScale[to]=1+.08*(1-sheet);mediaY[to]=-32*(1-sheet);
-  }
-  const active=moving&&q>=.10?to:from;
-  return {titleOpacity,titleY,titleClip,titleClipTop,titleClipBottom,bodyOpacity,bodyY,bodyClipTop,bodyClipBottom,mediaOpacity,mediaScale,mediaY,
-    active,title:moving&&q>=.16?to:from,explanation:moving&&q>=.44?to:from};
+// FINAL R2: four readable stops and three scroll-controlled masked cascades.
+export const clamp=x=>Math.max(0,Math.min(1,x));
+export const smoothstep=x=>{const t=clamp(x);return t*t*(3-2*t);};
+const phase=(q,a,b)=>smoothstep((q-a)/(b-a));
+export const journeyTravel=373;
+const hold=42,first=56,transition=(journeyTravel-first-3*hold)/3;
+export const journeyStops=Array.from({length:4},(_,i)=>{const a=i===0?0:first+i*transition+(i-1)*hold,b=a+(i===0?first:hold);return[a/journeyTravel,b/journeyTravel];});
+export const sceneTargets=journeyStops.map(([a,b])=>(a+b)/2);
+export function journeyFrame(progress){
+ const p=clamp(progress),n=4;
+ let from=3,to=3,q=0,moving=false;
+ for(let i=0;i<3;i++){const start=journeyStops[i][1],end=journeyStops[i+1][0];if(p<start){from=to=i;break;}if(p<end){from=i;to=i+1;q=(p-start)/(end-start);moving=true;break;}}
+ const arr=()=>Array(n).fill(0),titleOpacity=arr(),titleY=arr(),titleClip=arr(),titleClipTop=arr(),titleClipBottom=arr(),bodyOpacity=arr(),bodyY=arr(),bodyClipTop=arr(),bodyClipBottom=arr(),mediaOpacity=arr(),mediaScale=Array(n).fill(1),mediaY=arr(),mediaClipBottom=arr();
+ titleOpacity[from]=bodyOpacity[from]=1;for(let i=0;i<=from;i++)mediaOpacity[i]=1;
+ if(moving){
+  const out=phase(q,0,.20),title=phase(q,.15,.40),body=phase(q,.30,.55),sheet=phase(q,.45,1);
+  titleOpacity[from]=bodyOpacity[from]=out<1?1:0;titleClipBottom[from]=bodyClipBottom[from]=100*out;
+  titleOpacity[to]=title>0?1:0;titleClipTop[to]=100*(1-title);bodyOpacity[to]=body>0?1:0;bodyClipTop[to]=100*(1-body);
+  mediaOpacity[to]=sheet>0?1:0;mediaClipBottom[to]=100*(1-sheet);mediaScale[to]=1+.07*(1-sheet);mediaY[to]=-32*(1-sheet);
+ }
+ return{titleOpacity,titleY,titleClip,titleClipTop,titleClipBottom,bodyOpacity,bodyY,bodyClipTop,bodyClipBottom,mediaOpacity,mediaScale,mediaY,mediaClipBottom,active:moving&&q>=.6?to:from,title:moving&&q>=.275?to:from,explanation:moving&&q>=.425?to:from};
 }
 export function createProgressDriver(read,write){
-  let current=clamp(read()),raf=0,last=0,disposed=false;
-  const tick=now=>{
-    raf=0;if(disposed||document.hidden)return;
-    const target=clamp(read()),dt=last?Math.min(48,now-last):16.67;last=now;
-    current+=(target-current)*(1-Math.exp(-dt/220));
-    if(Math.abs(target-current)<.0001)current=target;
-    write(journeyFrame(current),current);
-    if(current!==target)raf=requestAnimationFrame(tick);else last=0;
-  };
-  const request=()=>{if(!disposed&&!raf&&!document.hidden)raf=requestAnimationFrame(tick);};
-  const snap=()=>{cancelAnimationFrame(raf);raf=0;last=0;current=clamp(read());write(journeyFrame(current),current);};
-  return {request,snap,destroy(){disposed=true;cancelAnimationFrame(raf);}};
+ let current=clamp(read()),raf=0,last=0,disposed=false;
+ const tick=now=>{raf=0;if(disposed||document.hidden)return;const target=clamp(read()),dt=last?Math.min(48,now-last):16.67;last=now;current+=(target-current)*(1-Math.exp(-dt/220));if(Math.abs(target-current)<.0001)current=target;write(journeyFrame(current),current);if(current!==target)raf=requestAnimationFrame(tick);else last=0;};
+ const request=()=>{if(!disposed&&!raf&&!document.hidden)raf=requestAnimationFrame(tick);};
+ const snap=()=>{cancelAnimationFrame(raf);raf=0;last=0;current=clamp(read());write(journeyFrame(current),current);};
+ return{request,snap,destroy(){disposed=true;cancelAnimationFrame(raf);}};
 }

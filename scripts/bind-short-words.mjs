@@ -2,7 +2,7 @@ import{parse}from'@babel/parser';
 import{readdirSync,readFileSync,writeFileSync}from'node:fs';
 import{join}from'node:path';
 import{bindShortWords}from'./text-bind.mjs';
-const files=[];for(const dir of['src/components','src/lib'])for(const name of readdirSync(dir))if(/\.(tsx?|json)$/.test(name)&&!name.endsWith('.d.ts'))files.push(join(dir,name));
+const files=[];for(const dir of['src/components','src/lib'])for(const name of readdirSync(dir))if(/\.(tsx?|json)$/.test(name)&&!name.endsWith('.d.ts')&&name!=='journeyStates.json')files.push(join(dir,name));
 let changed=0;
 for(const file of files){const source=readFileSync(file,'utf8');let result=source;
  if(file.endsWith('.json')){const visit=value=>typeof value==='string'?bindShortWords(value):Array.isArray(value)?value.map(visit):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([k,v])=>[k,visit(v)])):value;result=JSON.stringify(visit(JSON.parse(source)),null,2)+'\n';}

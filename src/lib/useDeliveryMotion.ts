@@ -9,7 +9,7 @@ export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
   let disposed=false,raf=0,ready=false,progress=0,lastLabel='';
   const values:Record<string,number>={};
   const labels=[...node.querySelectorAll<HTMLElement>('[data-word-label],[data-proof-label]')];
-  const local=(selector:string,end=.15)=>{const y=node.querySelector(selector)!.getBoundingClientRect().top;return clamp((innerHeight*.85-y)/(innerHeight*(.85-end)));};
+  const local=(selector:string,end=.15)=>{const y=node.querySelector(selector)!.getBoundingClientRect().top;return clamp((innerHeight*.55-y)/(innerHeight*(.55-end)));};
   const write=(next:ReturnType<typeof deliveryFrame>&{time:number;budget:number})=>{
    const advance=(key:string,v:number)=>{const value=Math.max(values[key]||0,v);values[key]=value;node.style.setProperty(key,String(value));return value;};
    next.edges.forEach((v,i)=>advance(`--delivery-edge-${i}`,v));
@@ -24,11 +24,11 @@ export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
    raf=0;if(disposed||!ready||document.hidden)return;
    if(reduced.matches){node.dataset.enhanced='false';settle();return;}
    node.dataset.enhanced='true';
-   progress=Math.max(progress,clamp((innerHeight*.85-node.getBoundingClientRect().top)/(innerHeight*.70)));
-   const f=deliveryFrame(progress),tall=innerWidth<1280||node.offsetHeight>innerHeight*.95;
+   progress=Math.max(progress,clamp((innerHeight*.55-node.querySelector('.delivery-composition')!.getBoundingClientRect().top)/(innerHeight*.40)));
+   const f=deliveryFrame(progress),tall=innerWidth<1024;
    if(tall){
     const triangle=local('.delivery-triangle'),proof=phase(local('.delivery-quality',.40));
-    write({...f,lead:phase(local('.delivery-lead',.55)),answer:phase(local('.delivery-answer',.55)),qualities:phase(local('.delivery-qualities',.55)),edges:[phase(triangle,0,.2),phase(triangle,.2,.4),phase(triangle,.4,.6)],model:phase(triangle,.55,.85),time:phase(local('.delivery-time',.40)),budget:phase(local('.delivery-budget',.40)),proof,insert:phase(local('.delivery-quality',.40),.6,1)});
+    write({...f,lead:phase(local('.delivery-lead',.30)),answer:phase(local('.delivery-answer',.30)),qualities:phase(local('.delivery-qualities',.30)),edges:[phase(triangle,0,.2),phase(triangle,.2,.4),phase(triangle,.4,.6)],model:phase(triangle,.55,.85),time:phase(local('.delivery-time',.40)),budget:phase(local('.delivery-budget',.40)),proof,insert:phase(local('.delivery-quality',.40),.6,1)});
    }else write({...f,time:f.facts,budget:f.facts});
   };
   const request=()=>{if(!disposed&&ready&&!raf&&!document.hidden)raf=requestAnimationFrame(update);};

@@ -18,18 +18,17 @@ export function initCraftReveals(root:Document=document){
  const start=(n:HTMLElement)=>{
   if(!n.hasAttribute('data-craft-waiting'))return;
   n.removeAttribute('data-craft-waiting');if(reduced.matches)return;
-  const role=n.dataset.craftReveal||'fact',isMedia=role==='media'||role==='composition-core',visual=isMedia||role==='contact-form';
-  let delay=role==='eyebrow'?0:role==='title'?100:role==='body'?360:visual?600:0;
-  let duration=role==='eyebrow'?420:role==='title'?700:role==='body'?650:visual?1050:700;
-  const y=role==='eyebrow'?6:role==='title'?18:role==='body'?12:isMedia?-32:14;
+  const role=n.dataset.craftReveal||'fact',journey=!!n.closest('.journey-cinematic'),isMedia=role==='media'||role==='composition-core',visual=isMedia||role==='contact-form';
+  const delay=journey?(role==='title'?100:role==='body'?360:600):role==='eyebrow'||role==='title'?0:role==='body'?90:180;
+  const duration=journey?(role==='title'?700:role==='body'?650:1050):600;
+  const y=journey?(role==='title'?18:role==='body'?12:-32):20;
   const initial:Keyframe={opacity:0,transform:`translateY(${y}px)`},final:Keyframe={opacity:1,transform:'translateY(0px)'};
-  if(role==='title'){initial.clipPath='inset(0 0 100% 0)';final.clipPath='inset(0 0 0% 0)';}
-  if(isMedia){initial.transform=`translateY(${y}px) scale(${small.matches?1.02:1.06})`;final.transform='translateY(0px) scale(1)';}
-  if(small.matches){duration=Math.min(350,duration);delay=Math.min(140,delay*.25);}
-  try{const a=n.animate(isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final],{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(group(n));}
+  if(journey&&role==='title'){initial.clipPath='inset(0 0 100% 0)';final.clipPath='inset(0 0 0% 0)';}
+  if(journey&&isMedia){initial.transform=`translateY(-32px) scale(1.06)`;final.transform='translateY(0px) scale(1)';}
+  try{const a=n.animate(journey&&isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final],{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(group(n));}
  };
  if(!reduced.matches&&'IntersectionObserver'in window&&typeof Element.prototype.animate==='function'){
-  for(const margin of['-20%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){const g=e.target as HTMLElement,host=g.closest<HTMLElement>('[data-craft-repeat="after-exit"]'),state=host&&replayState.get(host);
+  for(const margin of['-15%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){const g=e.target as HTMLElement,host=g.closest<HTMLElement>('[data-craft-repeat="after-exit"]'),state=host&&replayState.get(host);
     if(state?.armed){state.armed=false;state.played=true;state.cycles++;host!.dataset.entryCycle=String(state.cycles);delete host!.dataset.entryArmed;}
     for(const n of groups.get(g)||[])start(n);for(const o of observers)o.unobserve(e.target);}}, {rootMargin:`0px 0px ${margin} 0px`,threshold:0}));
  }
@@ -40,7 +39,7 @@ export function initCraftReveals(root:Document=document){
    if(!g.getClientRects().length){for(const o of observers)o.unobserve(g);registered.delete(g);settle(g);continue;}
    if(registered.has(g))continue;
    registered.add(g);
-   const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||'')),threshold=heading?.80:.85;
+   const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||'')),threshold=.85;
    if(g.getBoundingClientRect().top>=innerHeight*threshold)for(const n of list)n.setAttribute('data-craft-waiting','');
    observers[heading?0:1].observe(g);
   }
@@ -72,7 +71,7 @@ export function initCraftReveals(root:Document=document){
  root.addEventListener('pointerdown',pointer,true);root.addEventListener('keydown',keyboard,true);root.addEventListener('pointercancel',keyboard,true);root.addEventListener('click',click,true);
  root.addEventListener('focusin',focus);root.addEventListener('twin:settle-reveal',sceneSettle);window.addEventListener('hashchange',anchor);reduced.addEventListener('change',motionChange);anchor();
  // The clean photograph never disappears; the four text/action groups enter once.
- const heroNodes=[['.hero h1',100,700],['.hero-description',360,650],['.hero-channels',500,650],['.hero .actions',650,600]] as const;
- if(!reduced.matches&&scrollY<20)for(const [selector,delay,duration]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:small.matches?350:duration,delay:small.matches?Math.min(140,delay*.25):delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
+ const heroNodes=[['.hero h1',0],['.hero-description',90],['.hero-channels',180],['.hero .actions',270]] as const;
+ if(!reduced.matches&&scrollY<20)for(const [selector,delay]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:600,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
  return()=>{cancelAnimationFrame(scrollRaf);window.removeEventListener('scroll',scroll);root.removeEventListener('visibilitychange',visibility);cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
 }
