@@ -4,9 +4,9 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-type-channels` поверх сохранённого FINAL R2.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-journey-comparison` поверх сохранённых FINAL R2 и типографической доработки.
 
-Актуальная задача — [иерархия шрифтов и новая композиция каналов](docs/type-channels/REQUEST.md): реальные Black900/Bold700/Semibold600, общая шапка над обратимой стопкой, однократный треугольник без завершения по фокусу. Канонические правила — `src/styles/design.css`.
+Актуальная задача — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
 
 Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
@@ -73,7 +73,7 @@ Responsive проверяется в Chromium на1920/1440/1280/1024/768/390/36
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-type-channels
+git push origin codex/twin-journey-comparison
 npm run build:preview
 npm run publish:preview
 ```

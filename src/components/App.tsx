@@ -2,7 +2,7 @@ import { sitePath } from '../lib/paths';
 import { useEffect, useState } from 'react';
 import { initCraftReveals } from '../lib/craftReveal';
 import { Header, Hero } from './HeaderHero';
-import { Journey } from './Journey';
+import { JourneyComparisons } from './JourneyComparisons';
 import { ProductDemo } from './ProductDemo';
 import { Composition } from './Composition';
 import { Channels } from './Channels';
@@ -50,7 +50,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     return () => { cleanup(); document.removeEventListener('astro:before-swap', leave); };
   }, []);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
-    <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero /><Journey /></>}
+    <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero /><JourneyComparisons /></>}
       {selectionNotice && <p className="selection-notice" role="status">{selectionNotice}</p>}
       <ProductDemo selection={selection} onChange={updateSelection} full={page === 'demo'} />
       {page === 'home' && <><Composition onTopic={setTopic} /><Channels /><Delivery /><ContactForm topic={topic} onTopic={setTopic} selection={selection} /></>}

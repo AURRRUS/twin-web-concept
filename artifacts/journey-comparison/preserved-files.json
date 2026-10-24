@@ -1,0 +1,67 @@
+[
+  {
+    "file": "src/components/Journey.tsx",
+    "sha256": "eed3f3afabbeed9c928acfad04a5f63e21bebcc3ac6e6672fa375d71edcbf9e1",
+    "unchanged": true
+  },
+  {
+    "file": "src/lib/journeyFrameV3.mjs",
+    "sha256": "68e207a83fa1ed70d1e3e0f06c84cbd523ec11463de77cb960a74790114ab6a3",
+    "unchanged": true
+  },
+  {
+    "file": "src/styles/design.css",
+    "sha256": "93f6328e028b40cc5a0294e19f7595cf21dbda24e7451bc8c5c80da9ce31c6da",
+    "unchanged": true
+  },
+  {
+    "file": "src/styles/site.css",
+    "sha256": "5a1f495679eb74de24a3a1f7667c4c8d4a1d8f365f61b5f0101e75143b14bee5",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/HeaderHero.tsx",
+    "sha256": "d77bc739ca7d128a56ffe5d88f7193c385927212243241a10bf32476ba7c2af7",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/Channels.tsx",
+    "sha256": "b5c3d963451fb380b3169a8051b1dbf8bb1f3555b477b52c79d0b064552051cf",
+    "unchanged": true
+  },
+  {
+    "file": "src/lib/useDeliveryMotion.ts",
+    "sha256": "cb7efb39c0a88c8e3ddcce35adba6b8be57ba6917275057ab26c12964579f5cb",
+    "unchanged": true
+  },
+  {
+    "file": "src/lib/journeyStates.json",
+    "sha256": "ee89064d7a8d1b913d22eac005ab8c109ee1c871b179546d05ae87ea52a4aafa",
+    "unchanged": true
+  },
+  {
+    "file": "src/lib/media.json",
+    "sha256": "44e535eb35ae095c7209535631617a505ecc98759cae1bfe6cf1e3a4a843001e",
+    "unchanged": true
+  },
+  {
+    "file": "public/media/final-r2/journey/project.png",
+    "sha256": "fa60b9a9c55718d87bb168b55cae323b99be5eddb1be5e87594c607cce4690b7",
+    "unchanged": true
+  },
+  {
+    "file": "public/media/final-r2/journey/corpus.png",
+    "sha256": "538708c2067ea13718e7f46dfa2e72a791d21a5eeb01c77eb16644645a14a13a",
+    "unchanged": true
+  },
+  {
+    "file": "public/media/final-r2/journey/floor.png",
+    "sha256": "d5e7f36c3cf32847ec5c3e8184698c8653b864eba329995aca64516b1cfab217",
+    "unchanged": true
+  },
+  {
+    "file": "public/media/final-r2/journey/lot.png",
+    "sha256": "e156ffc74104f91fa2a4b595b9ba9611eca7d517cf162a65e65efb52a4c33ff8",
+    "unchanged": true
+  }
+]
