@@ -1,14 +1,16 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "site": "https://aurrrus.github.io/twin-web-concept/",
-  "expectedSourceCommit": "a6d6db7fcf7dae323bc25278d802e921b96d9e08",
+  "expectedSourceCommit": "c9fa164939af0b821fd103a5321f6f902c297851",
   "revision": "FINAL_R2",
-  "at": "2026-10-23T20:28:33.266Z",
+  "at": "2026-10-24T01:02:03.938Z",
   "checks": [
     "Actual published sourceCommit confirmed",
     "All nine owner assets match full SHA256; hero/facade/triangle core preserved",
     "All seven desktop sizes: four Journey states, three cascades, reverse, full reentry, navigation, opaque channel sheets, exact stops, stable pause and accessible CTAs",
-    "Late 55%-15% triangle, retained progress, fixed-width masked word and >=24px graphic/text gaps; new transparent core/dialog and stable launch anchor"
+    "Late 55%-15% triangle, retained progress, fixed-width masked word and >=24px graphic/text gaps; new transparent core/dialog and stable launch anchor",
+    "Phone/reduced-motion: four full Journey scenes and four channel articles in native flow, no pin, long spacer, hidden CTA or overflow",
+    "Demo route and selection query remain functional and honest"
   ],
   "matrix": [
     {
@@ -244,7 +246,7 @@
             ]
           },
           {
-            "progress": 0.3761553240159571,
+            "progress": 0.37615587075915907,
             "title": [
               {
                 "opacity": 0,
@@ -349,7 +351,7 @@
             ]
           },
           {
-            "progress": 0.6594147332635761,
+            "progress": 0.6594142341363483,
             "title": [
               {
                 "opacity": 0,
@@ -454,7 +456,7 @@
             ]
           },
           {
-            "progress": 0.9427332997654395,
+            "progress": 0.9427334205869456,
             "title": [
               {
                 "opacity": 0,
@@ -559,7 +561,7 @@
             ]
           },
           {
-            "progress": 0.6613382932438276,
+            "progress": 0.6613371949899158,
             "title": [
               {
                 "opacity": 0,
@@ -664,7 +666,7 @@
             ]
           },
           {
-            "progress": 0.37807825494948455,
+            "progress": 0.37807913162990636,
             "title": [
               {
                 "opacity": 0,
@@ -769,7 +771,7 @@
             ]
           },
           {
-            "progress": 0.07600889369279015,
+            "progress": 0.076008426915399,
             "title": [
               {
                 "opacity": 1,
@@ -2482,7 +2484,7 @@
             ]
           },
           {
-            "progress": 0.3761683246848142,
+            "progress": 0.37616832468481415,
             "title": [
               {
                 "opacity": 0,
@@ -2587,7 +2589,7 @@
             ]
           },
           {
-            "progress": 0.6594503551459034,
+            "progress": 0.659450656368875,
             "title": [
               {
                 "opacity": 0,
@@ -2692,7 +2694,7 @@
             ]
           },
           {
-            "progress": 0.9427392915027604,
+            "progress": 0.9427392922056159,
             "title": [
               {
                 "opacity": 0,
@@ -2797,7 +2799,7 @@
             ]
           },
           {
-            "progress": 0.661322486894012,
+            "progress": 0.6613224868970193,
             "title": [
               {
                 "opacity": 0,
@@ -2902,7 +2904,7 @@
             ]
           },
           {
-            "progress": 0.37809080196648753,
+            "progress": 0.37809124223528984,
             "title": [
               {
                 "opacity": 0,
@@ -3007,7 +3009,7 @@
             ]
           },
           {
-            "progress": 0.07602405847789365,
+            "progress": 0.07602405986838641,
             "title": [
               {
                 "opacity": 1,
@@ -4825,7 +4827,7 @@
             ]
           },
           {
-            "progress": 0.6594505179580112,
+            "progress": 0.6594503551459033,
             "title": [
               {
                 "opacity": 0,
@@ -4930,7 +4932,7 @@
             ]
           },
           {
-            "progress": 0.9427392918826563,
+            "progress": 0.9427392915027603,
             "title": [
               {
                 "opacity": 0,
@@ -5035,7 +5037,7 @@
             ]
           },
           {
-            "progress": 0.6613224868956374,
+            "progress": 0.6613224868940119,
             "title": [
               {
                 "opacity": 0,
@@ -5140,7 +5142,7 @@
             ]
           },
           {
-            "progress": 0.3780908019664931,
+            "progress": 0.37802042256696294,
             "title": [
               {
                 "opacity": 0,
@@ -5245,7 +5247,7 @@
             ]
           },
           {
-            "progress": 0.07602449359238912,
+            "progress": 0.07602383619994801,
             "title": [
               {
                 "opacity": 1,
@@ -5350,22 +5352,22 @@
             ]
           },
           {
-            "progress": 0.1790438545929903,
+            "progress": 0.17904344953296453,
             "title": [
               {
                 "opacity": 1,
                 "top": 16,
-                "bottom": 30.7042700625,
+                "bottom": 30.706597718750004,
                 "height": 232.765625,
-                "visible": 14.704270062500001,
+                "visible": 14.706597718750004,
                 "z": "auto"
               },
               {
                 "opacity": 1,
-                "top": 244.789289828125,
+                "top": 244.79022089062502,
                 "bottom": 248.765625,
                 "height": 232.765625,
-                "visible": 3.9763351718750073,
+                "visible": 3.9754041093749777,
                 "z": "auto"
               },
               {
@@ -5389,9 +5391,9 @@
               {
                 "opacity": 1,
                 "top": 260.765625,
-                "bottom": 264.289438125,
+                "bottom": 264.2899959375,
                 "height": 55.78125,
-                "visible": 3.5238131249999967,
+                "visible": 3.524370937499995,
                 "z": "auto"
               },
               {
@@ -5455,7 +5457,7 @@
             ]
           },
           {
-            "progress": 0.20890303281747033,
+            "progress": 0.20890302214495657,
             "title": [
               {
                 "opacity": 0,
@@ -5560,7 +5562,7 @@
             ]
           },
           {
-            "progress": 0.2345187344411315,
+            "progress": 0.2345187341138301,
             "title": [
               {
                 "opacity": 0,
@@ -5665,7 +5667,7 @@
             ]
           },
           {
-            "progress": 0.27720076413281736,
+            "progress": 0.27720076412734357,
             "title": [
               {
                 "opacity": 0,
@@ -5770,7 +5772,7 @@
             ]
           },
           {
-            "progress": 0.46235292793479366,
+            "progress": 0.46235292793476834,
             "title": [
               {
                 "opacity": 0,
@@ -5875,7 +5877,7 @@
             ]
           },
           {
-            "progress": 0.49219185437678464,
+            "progress": 0.4921922214968585,
             "title": [
               {
                 "opacity": 0,
@@ -5895,10 +5897,10 @@
               },
               {
                 "opacity": 1,
-                "top": 45.50769828125,
+                "top": 45.505603390625,
                 "bottom": 248.765625,
                 "height": 232.765625,
-                "visible": 203.25792671875,
+                "visible": 203.260021609375,
                 "z": "auto"
               },
               {
@@ -5929,10 +5931,10 @@
               },
               {
                 "opacity": 1,
-                "top": 311.91162046875,
+                "top": 311.91123,
                 "bottom": 316.546875,
                 "height": 55.78125,
-                "visible": 4.6352545312500055,
+                "visible": 4.635645000000004,
                 "z": "auto"
               },
               {
@@ -5980,7 +5982,7 @@
             ]
           },
           {
-            "progress": 0.5178073902655219,
+            "progress": 0.5178074015242484,
             "title": [
               {
                 "opacity": 0,
@@ -6085,7 +6087,7 @@
             ]
           },
           {
-            "progress": 0.5604894148013857,
+            "progress": 0.5604890849347259,
             "title": [
               {
                 "opacity": 0,
@@ -6173,10 +6175,10 @@
               },
               {
                 "opacity": 1,
-                "top": 311.47723388671875,
-                "bottom": 557.9404408103028,
-                "height": 445.74517822265625,
-                "visible": 246.463206923584,
+                "top": 311.47698974609375,
+                "bottom": 557.9380691862793,
+                "height": 445.745361328125,
+                "visible": 246.46107944018553,
                 "z": "3"
               },
               {
@@ -6190,7 +6192,7 @@
             ]
           },
           {
-            "progress": 0.745641578516074,
+            "progress": 0.7456415769940332,
             "title": [
               {
                 "opacity": 0,
@@ -6295,7 +6297,7 @@
             ]
           },
           {
-            "progress": 0.7754808720777456,
+            "progress": 0.7754808720376429,
             "title": [
               {
                 "opacity": 0,
@@ -6400,7 +6402,7 @@
             ]
           },
           {
-            "progress": 0.8010960521051245,
+            "progress": 0.8010964203892784,
             "title": [
               {
                 "opacity": 0,
@@ -6462,10 +6464,10 @@
               },
               {
                 "opacity": 1,
-                "top": 267.8202796875,
+                "top": 267.81977765625,
                 "bottom": 316.546875,
                 "height": 55.78125,
-                "visible": 48.7265953125,
+                "visible": 48.72709734375,
                 "z": "auto"
               }
             ],
@@ -6496,16 +6498,16 @@
               },
               {
                 "opacity": 1,
-                "top": 286.29022216796875,
-                "bottom": 294.82733253576663,
-                "height": 461.91485595703125,
-                "visible": 8.53711036779788,
+                "top": 286.2903137207031,
+                "bottom": 294.8283473541259,
+                "height": 461.9148254394531,
+                "visible": 8.538033633422799,
                 "z": "4"
               }
             ]
           },
           {
-            "progress": 0.8437780655705527,
+            "progress": 0.8437777416775947,
             "title": [
               {
                 "opacity": 0,
@@ -6601,10 +6603,10 @@
               },
               {
                 "opacity": 1,
-                "top": 311.47723388671875,
-                "bottom": 557.9404408103028,
-                "height": 445.74517822265625,
-                "visible": 246.463206923584,
+                "top": 311.47698974609375,
+                "bottom": 557.9380691862793,
+                "height": 445.745361328125,
+                "visible": 246.46107944018553,
                 "z": "4"
               }
             ]
@@ -8218,7 +8220,7 @@
             ]
           },
           {
-            "progress": 0.37614363154623603,
+            "progress": 0.37614303516995157,
             "title": [
               {
                 "opacity": 0,
@@ -8323,7 +8325,7 @@
             ]
           },
           {
-            "progress": 0.6594206322088627,
+            "progress": 0.6594209100700443,
             "title": [
               {
                 "opacity": 0,
@@ -8428,7 +8430,7 @@
             ]
           },
           {
-            "progress": 0.9427404800238877,
+            "progress": 0.9427404807233637,
             "title": [
               {
                 "opacity": 0,
@@ -8533,7 +8535,7 @@
             ]
           },
           {
-            "progress": 0.6613393385289204,
+            "progress": 0.6613387457421019,
             "title": [
               {
                 "opacity": 0,
@@ -8638,7 +8640,7 @@
             ]
           },
           {
-            "progress": 0.3780906703154864,
+            "progress": 0.37809169326534364,
             "title": [
               {
                 "opacity": 0,
@@ -8743,7 +8745,7 @@
             ]
           },
           {
-            "progress": 0.07600117298395209,
+            "progress": 0.07600117621618441,
             "title": [
               {
                 "opacity": 1,
@@ -10456,7 +10458,7 @@
             ]
           },
           {
-            "progress": 0.3761628216994417,
+            "progress": 0.37616280249156997,
             "title": [
               {
                 "opacity": 0,
@@ -10561,7 +10563,7 @@
             ]
           },
           {
-            "progress": 0.6594510725232283,
+            "progress": 0.6594512999401477,
             "title": [
               {
                 "opacity": 0,
@@ -10666,7 +10668,7 @@
             ]
           },
           {
-            "progress": 0.9427027996128808,
+            "progress": 0.9427028001047324,
             "title": [
               {
                 "opacity": 0,
@@ -10771,7 +10773,7 @@
             ]
           },
           {
-            "progress": 0.6614034885082927,
+            "progress": 0.6614036654717663,
             "title": [
               {
                 "opacity": 0,
@@ -10876,7 +10878,7 @@
             ]
           },
           {
-            "progress": 0.37808456500814364,
+            "progress": 0.3780845657653288,
             "title": [
               {
                 "opacity": 0,
@@ -10981,7 +10983,7 @@
             ]
           },
           {
-            "progress": 0.07602403877982436,
+            "progress": 0.07602403878221577,
             "title": [
               {
                 "opacity": 1,
@@ -12694,7 +12696,7 @@
             ]
           },
           {
-            "progress": 0.37612628764303124,
+            "progress": 0.3761258855351875,
             "title": [
               {
                 "opacity": 0,
@@ -12799,7 +12801,7 @@
             ]
           },
           {
-            "progress": 0.6594165393033604,
+            "progress": 0.6594160136259998,
             "title": [
               {
                 "opacity": 0,
@@ -12904,7 +12906,7 @@
             ]
           },
           {
-            "progress": 0.9427020638552324,
+            "progress": 0.9427023637186825,
             "title": [
               {
                 "opacity": 0,
@@ -13009,7 +13011,7 @@
             ]
           },
           {
-            "progress": 0.6613964802147794,
+            "progress": 0.6613964814978244,
             "title": [
               {
                 "opacity": 0,
@@ -13114,7 +13116,7 @@
             ]
           },
           {
-            "progress": 0.37805614783745484,
+            "progress": 0.3780561478421715,
             "title": [
               {
                 "opacity": 0,
@@ -13219,7 +13221,7 @@
             ]
           },
           {
-            "progress": 0.07602438409513915,
+            "progress": 0.07602438409515405,
             "title": [
               {
                 "opacity": 1,
@@ -14932,7 +14934,7 @@
             ]
           },
           {
-            "progress": 0.37614363154623603,
+            "progress": 0.37614327377251405,
             "title": [
               {
                 "opacity": 0,
@@ -15037,7 +15039,7 @@
             ]
           },
           {
-            "progress": 0.6594206322088628,
+            "progress": 0.6594209105860878,
             "title": [
               {
                 "opacity": 0,
@@ -15142,7 +15144,7 @@
             ]
           },
           {
-            "progress": 0.9427404800238877,
+            "progress": 0.9427404807246628,
             "title": [
               {
                 "opacity": 0,
@@ -15247,7 +15249,7 @@
             ]
           },
           {
-            "progress": 0.6613393385289204,
+            "progress": 0.6613399315917109,
             "title": [
               {
                 "opacity": 0,
@@ -15352,7 +15354,7 @@
             ]
           },
           {
-            "progress": 0.3780911828499309,
+            "progress": 0.37809067266649793,
             "title": [
               {
                 "opacity": 0,
@@ -15457,7 +15459,7 @@
             ]
           },
           {
-            "progress": 0.07600117460341603,
+            "progress": 0.07600117299138065,
             "title": [
               {
                 "opacity": 1,
@@ -16942,9 +16944,9 @@
   "failedResponses": [],
   "deployedVersion": {
     "version": "desktop-0.6",
-    "sourceCommit": "a6d6db7fcf7dae323bc25278d802e921b96d9e08",
-    "builtAt": "2026-10-23T20:25:48.908Z",
-    "previousDeploymentCommit": "8a5813f2ac2bfed98962c617e6867e67f3baa3c4"
+    "sourceCommit": "c9fa164939af0b821fd103a5321f6f902c297851",
+    "builtAt": "2026-10-23T22:48:34.737Z",
+    "previousDeploymentCommit": "15fb7f4d42998032a57e094783ce09f279f4cb48"
   },
   "assets": [
     {
@@ -17227,6 +17229,20 @@
       "left": 418.234375
     }
   },
-  "fallback": [],
-  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     next: 'ПРЕИМУЩЕСТВАМ',\n+     text: 'ПРОЕКТ — ОТ ОКРУЖЕНИЯ К ПРЕИМУЩЕСТВАМ',\n+     word: 'К'\n+   }\n+ ]\n- []\n"
+  "fallback": [
+    {
+      "width": 390,
+      "height": 844,
+      "reduce": false,
+      "journey": 4,
+      "channels": 4
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "reduce": true,
+      "journey": 4,
+      "channels": 4
+    }
+  ]
 }

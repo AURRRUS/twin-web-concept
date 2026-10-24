@@ -26,3 +26,5 @@
 Доказательства: artifacts/final-r2/full-suite.json, after-style-cleanup.json, triangle-matrix.json. Онлайн-проверка точного sourceCommit/9SHA256/реальных шрифтов/всех7размеров записывается в ONLINE.md после публикации.
 
 Реальные ограничения: Chromium с эмуляцией viewport; Safari/iOS и физические устройства не проверены. Visibility lifecycle проверен синтетическим событием. Форма/CRM/Twin API остаются демонстрационными и не объявлены подключёнными.
+
+Опубликованная приёмка FINAL R2: [ONLINE.md](ONLINE.md), sourceCommit `c9fa164939af0b821fd103a5321f6f902c297851`, все7desktop+mobile/reduced PASS. PR№10.
