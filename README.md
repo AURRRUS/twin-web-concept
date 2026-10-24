@@ -4,9 +4,9 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Обновления выпускаются в существующую ветку `twin-preview`. Текущие исходники — `codex/twin-design-handoff`, продолжение опубликованного `203a4d6`.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-type-channels` поверх сохранённого FINAL R2.
 
-Актуальная задача — [TWIN_DESIGN_HANDOFF_2026-10-22](docs/design-handoff/00_START_HERE.md): единая композиция1728px, реальные Semibold600/Regular400/Bold700, точный контент, бронзовые акценты, раздельные текстовые слоты и медиаслои, короткие каскады и треугольник Эффектно→Эффективно. Активные стили — `src/styles/design.css`. Публикация прямо разрешена владельцем; соответствие проверяется по `build-version.json`.
+Актуальная задача — [иерархия шрифтов и новая композиция каналов](docs/type-channels/REQUEST.md): реальные Black900/Bold700/Semibold600, общая шапка над обратимой стопкой, однократный треугольник без завершения по фокусу. Канонические правила — `src/styles/design.css`.
 
 Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
@@ -73,7 +73,7 @@ Responsive проверяется в Chromium на1920/1440/1280/1024/768/390/36
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-final-r2
+git push origin codex/twin-type-channels
 npm run build:preview
 npm run publish:preview
 ```
