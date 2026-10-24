@@ -34,7 +34,7 @@ Journey: четыре состояния и три перехода; host473svh/
 
 [Все снимки](../../artifacts/final-r2/online). Journey1440×900: [Проект](../../artifacts/final-r2/online/journey-project-1440.png), [Корпус](../../artifacts/final-r2/online/journey-corpus-1440.png), [Этаж](../../artifacts/final-r2/online/journey-floor-1440.png), [Лот](../../artifacts/final-r2/online/journey-lot-1440.png), [промежуточный кадр](../../artifacts/final-r2/online/journey-transition.png). [Стопка в переходе](../../artifacts/final-r2/online/channel-transition.png), [mobile390×844](../../artifacts/final-r2/online/phone-journey.png), [треугольник](../../artifacts/final-r2/online/triangle-0.14.png).
 
-Полный машинный онлайн-отчёт: [online-verification.json](../../artifacts/online-verification.json). Локальная серия: [full-suite.json](../../artifacts/final-r2/full-suite.json). Доказательства сохранены отдельным последующим коммитом без изменения опубликованного frontend.
+Полный машинный онлайн-отчёт: [online-verification.json](../../artifacts/final-r2/online-verification.json). Локальная серия: [full-suite.json](../../artifacts/final-r2/full-suite.json). Доказательства сохранены отдельным последующим коммитом без изменения опубликованного frontend.
 
 ## Реальные ограничения
 

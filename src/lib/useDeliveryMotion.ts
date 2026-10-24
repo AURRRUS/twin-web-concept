@@ -6,7 +6,7 @@ const phase=(v:number,a=0,b=1)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t);}
 export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
  useEffect(()=>{
   const node=host.current!,reduced=matchMedia('(prefers-reduced-motion:reduce)');
-  let disposed=false,raf=0,ready=false,progress=0,lastLabel='';
+  let disposed=false,raf=0,ready=false,progress=0,lastLabel='',lastY=scrollY,initialized=false;
   const values:Record<string,number>={};
   const labels=[...node.querySelectorAll<HTMLElement>('[data-word-label],[data-proof-label]')];
   const local=(selector:string,end=.15)=>{const y=node.querySelector(selector)!.getBoundingClientRect().top;return clamp((innerHeight*.55-y)/(innerHeight*(.55-end)));};
@@ -23,7 +23,11 @@ export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
   const update=()=>{
    raf=0;if(disposed||!ready||document.hidden)return;
    if(reduced.matches){node.dataset.enhanced='false';settle();return;}
+   // Wait for the preceding track to have its final geometry; fallback stays readable.
+   if(document.querySelector('.channels[data-enhanced="pending"],.channels[data-measuring]'))return;
    node.dataset.enhanced='true';
+   const moved=Math.abs(scrollY-lastY)>.5;lastY=scrollY;
+   if(initialized&&!moved)return;initialized=true;
    progress=Math.max(progress,clamp((innerHeight*.55-node.querySelector('.delivery-composition')!.getBoundingClientRect().top)/(innerHeight*.40)));
    const f=deliveryFrame(progress),tall=innerWidth<1024;
    if(tall){
@@ -33,9 +37,12 @@ export function useDeliveryMotion(host:RefObject<HTMLDivElement|null>){
   };
   const request=()=>{if(!disposed&&ready&&!raf&&!document.hidden)raf=requestAnimationFrame(update);};
   const visibility=()=>{cancelAnimationFrame(raf);raf=0;if(!document.hidden)request();};
-  const focus=()=>{settle();};
-  void document.fonts.ready.then(()=>{if(disposed)return;ready=true;node.dataset.motionType='scroll-once';update();});
-  window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request);reduced.addEventListener('change',request);document.addEventListener('visibilitychange',visibility);node.addEventListener('focusin',focus);
-  return()=>{disposed=true;cancelAnimationFrame(raf);window.removeEventListener('scroll',request);window.removeEventListener('resize',request);reduced.removeEventListener('change',request);document.removeEventListener('visibilitychange',visibility);node.removeEventListener('focusin',focus);};
+  const resize=()=>{lastY=scrollY;request();};
+  const geometry=new ResizeObserver(()=>{lastY=scrollY;if(!initialized)request();});geometry.observe(document.body);
+  const focus=(event:FocusEvent)=>{const target=event.target as HTMLElement;if(target.closest('.delivery-quality'))node.querySelector<HTMLElement>('.delivery-quality')!.style.setProperty('--delivery-focus','1');};
+  const blur=(event:FocusEvent)=>{const quality=node.querySelector<HTMLElement>('.delivery-quality')!;if(!quality.contains(event.relatedTarget as Node|null))quality.style.removeProperty('--delivery-focus');};
+  void document.fonts.ready.then(()=>{if(disposed)return;ready=true;node.dataset.motionType='scroll-once';write({...deliveryFrame(0),time:0,budget:0});update();});
+  window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',resize);reduced.addEventListener('change',request);document.addEventListener('visibilitychange',visibility);node.addEventListener('focusin',focus);node.addEventListener('focusout',blur);
+  return()=>{disposed=true;geometry.disconnect();cancelAnimationFrame(raf);window.removeEventListener('scroll',request);window.removeEventListener('resize',resize);reduced.removeEventListener('change',request);document.removeEventListener('visibilitychange',visibility);node.removeEventListener('focusin',focus);node.removeEventListener('focusout',blur);};
  },[host]);
 }

@@ -4,9 +4,9 @@
       "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
       "/workspace/work/twin-grid-pr/node_modules/.bin/playwright",
       "test",
-      "tests/final-r2.spec.ts",
+      "tests/type-channels.spec.ts",
       "-g",
-      "phone and reduced"
+      "new header and full CTA"
     ],
     "configFile": "/workspace/work/twin-grid-pr/playwright.config.ts",
     "rootDir": "/workspace/work/twin-grid-pr/tests",
@@ -108,13 +108,13 @@
   },
   "suites": [
     {
-      "title": "final-r2.spec.ts",
-      "file": "final-r2.spec.ts",
+      "title": "type-channels.spec.ts",
+      "file": "type-channels.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "phone and reduced motion provide all four Journey scenes and all four plain channel cards",
+          "title": "new header and full CTA fit; menu stays Dewi and compact height falls back",
           "ok": true,
           "tags": [],
           "tests": [
@@ -129,12 +129,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1964,
+                  "duration": 15502,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-23T22:47:47.468Z",
+                  "startTime": "2026-10-24T12:48:03.741Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -142,8 +142,8 @@
               "status": "expected"
             }
           ],
-          "id": "a05fba49ef2800524d18-0e95d65c6c52166eed3f",
-          "file": "final-r2.spec.ts",
+          "id": "5baedfee2676ddf6f74d-898fee6448dba4f49356",
+          "file": "type-channels.spec.ts",
           "line": 5,
           "column": 1
         }
@@ -152,8 +152,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-23T22:47:46.045Z",
-    "duration": 3698.779,
+    "startTime": "2026-10-24T12:48:02.400Z",
+    "duration": 17158.68,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

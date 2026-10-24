@@ -1,0 +1,51 @@
+{
+  "version": {
+    "version": "desktop-0.6",
+    "sourceCommit": "45e91358d7e05b025ead7031baede574832cda5b",
+    "builtAt": "2026-10-24T12:49:02.198Z",
+    "previousDeploymentCommit": "f3f4f10e8013873446f498fd092a81e5cb35cbb9"
+  },
+  "html": {
+    "published": "b2535e2d70f04d784a12514f546545a3eaabfd0a5b05c2554ad57fcc38974377",
+    "local": "b2535e2d70f04d784a12514f546545a3eaabfd0a5b05c2554ad57fcc38974377"
+  },
+  "mobile": [
+    {
+      "text": "01 На сайте",
+      "width": 167,
+      "scroll": 167,
+      "gap": "4px",
+      "padding": "6px",
+      "font": "\"Twin Dewi Expanded\", sans-serif",
+      "weight": "600"
+    },
+    {
+      "text": "02 Дистанционно",
+      "width": 167,
+      "scroll": 167,
+      "gap": "4px",
+      "padding": "6px",
+      "font": "\"Twin Dewi Expanded\", sans-serif",
+      "weight": "600"
+    },
+    {
+      "text": "03 Через агентов",
+      "width": 167,
+      "scroll": 167,
+      "gap": "4px",
+      "padding": "6px",
+      "font": "\"Twin Dewi Expanded\", sans-serif",
+      "weight": "600"
+    },
+    {
+      "text": "04 В офисе продаж",
+      "width": 167,
+      "scroll": 167,
+      "gap": "4px",
+      "padding": "6px",
+      "font": "\"Twin Dewi Expanded\", sans-serif",
+      "weight": "600"
+    }
+  ],
+  "status": "PASS"
+}
