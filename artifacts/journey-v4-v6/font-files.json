@@ -1,0 +1,33 @@
+[
+  {
+    "file": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+    "sha256": "0e1a5c76340ffb4071bf738f38dc0003a8c7fe08a10adb4d54bfa40eb2550cd6",
+    "weight": 900,
+    "postscript": "RFDewiExpanded-Black"
+  },
+  {
+    "file": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+    "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1",
+    "weight": 600,
+    "postscript": "RFDewiExpanded-Semibold"
+  },
+  {
+    "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+    "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d",
+    "weight": 700,
+    "postscript": "RFDewiExpanded-Bold"
+  },
+  {
+    "file": "src/assets/fonts/inter-tight-variable.woff2",
+    "sha256": "48ccec20345beaa404bf4a16595be5d248f0b5d034764c694780e97863f29e2b",
+    "weight": 400,
+    "postscript": "InterTight-Regular",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "max": 900.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "host_svh": 500,
+  "panel_svh": 100,
+  "read_intervals": [
+    [
+      0,
+      0.16
+    ],
+    [
+      0.28,
+      0.44
+    ],
+    [
+      0.56,
+      0.72
+    ],
+    [
+      0.84,
+      1
+    ]
+  ],
+  "transition_intervals": [
+    [
+      0.16,
+      0.28
+    ],
+    [
+      0.44,
+      0.56
+    ],
+    [
+      0.72,
+      0.84
+    ]
+  ],
+  "nav_progress": [
+    0.08,
+    0.36,
+    0.64,
+    0.92
+  ],
+  "transition_local": {
+    "heading_out": [
+      0,
+      0.22
+    ],
+    "heading_in": [
+      0.12,
+      0.48
+    ],
+    "description_out": [
+      0,
+      0.25
+    ],
+    "description_in": [
+      0.32,
+      0.66
+    ],
+    "image": [
+      0.22,
+      1
+    ]
+  },
+  "max_scroll_response_ms": 120,
+  "reversible": true,
+  "once": false,
+  "fallback": "width<1024 OR height<600 OR reduced-motion: no long pin; see SPEC.md"
+}

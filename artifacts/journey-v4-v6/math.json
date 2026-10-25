@@ -1,0 +1,12 @@
+{
+  "frames": 20001,
+  "readingTargets": [
+    0.08,
+    0.36,
+    0.64,
+    0.92
+  ],
+  "phaseBounds": true,
+  "disjointHeadings": true,
+  "reversible": true
+}
