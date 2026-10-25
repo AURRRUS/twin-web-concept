@@ -1,0 +1,18 @@
+{
+  "docs/top-screens-v2/reference/source/HeaderHero.tsx": true,
+  "src/components/App.tsx": true,
+  "src/components/Channels.tsx": true,
+  "src/components/Composition.tsx": true,
+  "src/components/ContactForm.tsx": true,
+  "src/components/Delivery.tsx": true,
+  "src/components/HeaderHero.tsx": true,
+  "src/components/Journey.tsx": true,
+  "src/components/ProductDemo.tsx": true,
+  "src/lib/journeyFrameV3.mjs": true,
+  "src/styles/design.css": true,
+  "src/styles/site.css": true,
+  "function useOriginalDialog": true,
+  "function PinnedComparison": true,
+  "function Chapters": true,
+  "oldComparisonCssPrefixUnchanged": true
+}

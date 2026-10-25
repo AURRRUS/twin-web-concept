@@ -1,0 +1,26 @@
+[
+  {
+    "id": "project",
+    "sha256": "fa60b9a9c55718d87bb168b55cae323b99be5eddb1be5e87594c607cce4690b7",
+    "archiveIdentical": true,
+    "reusedWithoutDuplicate": true
+  },
+  {
+    "id": "corpus",
+    "sha256": "538708c2067ea13718e7f46dfa2e72a791d21a5eeb01c77eb16644645a14a13a",
+    "archiveIdentical": true,
+    "reusedWithoutDuplicate": true
+  },
+  {
+    "id": "floor",
+    "sha256": "d5e7f36c3cf32847ec5c3e8184698c8653b864eba329995aca64516b1cfab217",
+    "archiveIdentical": true,
+    "reusedWithoutDuplicate": true
+  },
+  {
+    "id": "lot",
+    "sha256": "e156ffc74104f91fa2a4b595b9ba9611eca7d517cf162a65e65efb52a4c33ff8",
+    "archiveIdentical": true,
+    "reusedWithoutDuplicate": true
+  }
+]

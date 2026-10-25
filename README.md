@@ -4,9 +4,9 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-journey-comparison` поверх сохранённых FINAL R2 и типографической доработки.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-journey-v4-v6` поверх сохранённых FINAL R2 и типографической доработки.
 
-Актуальная задача — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
+Предыдущее сравнение — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
 
 Снимки и машинные отчёты находятся в `artifacts/`. Последняя переработка: [увеличенные сменяемые сцены, desktop 0.5](docs/SECOND_BLOCK_LARGE_SCENES_2026-10-20.md). История: [вариант desktop 0.4](docs/SECOND_BLOCK_REWORK_2026-10-20.md). Предыдущие правки: [экраны и кадры](docs/CORRECTIONS_2026-10-20.md). Предыдущая визуальная доработка: [desktop 0.2](docs/VISUAL_DELIVERY.md). Состояние именно публичной проверки фиксирует `artifacts/online-verification.json`, если отчёт уже получен.
 
@@ -73,7 +73,7 @@ Responsive проверяется в Chromium на1920/1440/1280/1024/768/390/36
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-journey-comparison
+git push origin codex/twin-journey-v4-v6
 npm run build:preview
 npm run publish:preview
 ```
@@ -106,3 +106,5 @@ Journey: Проект→Корпус→Этаж→Лот, четыре исхо�
 Проверки: npm run typecheck, npm run build, npm test; node scripts/check-journey-v3.mjs проверяет10001кадр обеих обратимых механик; node scripts/bind-short-words.mjs --check — идемпотентность текста. Прежние реализации тестов трёх сцен/табов заменены проверками R2, функциональные проверки формы/демо/7диалогов сохранены. TWIN_EXPECTED_COMMIT=<sha> npm run verify:online сверяет точную публикацию,9исходных SHA256, реальные шрифты и обе механики на7размерах, треугольник и fallback. Результаты — artifacts/online-verification.json.
 
 Исходное состояние и rollback: [BASELINE](docs/final-r2/BASELINE.json) и [ROLLBACK](docs/final-r2/ROLLBACK.md). Резервные ветки не передвигать. После сохранения source commit публиковать существующим npm run build:preview / npm run publish:preview, без force-push и без дополнительного согласования снимков.
+
+Актуальный пакет: [Journey V4–V6 R1](docs/journey-v4-v6/START_HERE.md). После исходного и вариантов1–3 добавлены Большая сцена / Горизонтальный маршрут / Архитектурные плоскости. Реализация, проверки и ограничения: [IMPLEMENTATION](docs/journey-v4-v6/IMPLEMENTATION.md). Публичные доказательства: [ONLINE](docs/journey-v4-v6/ONLINE.md).

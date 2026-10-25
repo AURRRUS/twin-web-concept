@@ -7,7 +7,7 @@ test('desktop: real content, assets and anchors', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Цифровая инфраструктура продаж девелоперского проекта');
   await page.evaluate(async () => { await document.fonts.ready; for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 70)); } });
-  await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0).every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0 && (!(image as HTMLImageElement).complete || !(image as HTMLImageElement).naturalWidth)).map(image=>({src:(image as HTMLImageElement).src,root:image.closest('section')?.className,loading:(image as HTMLImageElement).loading})))).toEqual([]);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.locator('.delivery').scrollIntoViewIfNeeded();
   await expect(page.locator('.delivery-host')).toHaveAttribute('data-enhanced','true');
