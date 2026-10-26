@@ -13,7 +13,8 @@
       "buyer_question": "Что есть рядом и насколько мне подходит это место",
       "sales_label": "Для команды продаж",
       "sales_application": "Объясняйте преимущества расположения на конкретных деталях",
-      "media_path": "public/media/final-r2/journey/project.png"
+      "media_path": "public/media/final-r2/journey/project.png",
+      "route_label": "Проект и окружение"
     },
     {
       "id": "corpus",
@@ -27,7 +28,8 @@
       "buyer_question": "Какой корпус выбрать по расположению и видам",
       "sales_label": "Для команды продаж",
       "sales_application": "Сравнивайте корпуса вместе с покупателем",
-      "media_path": "public/media/final-r2/journey/corpus.png"
+      "media_path": "public/media/final-r2/journey/corpus.png",
+      "route_label": "Выбор корпуса"
     },
     {
       "id": "floor",
@@ -41,7 +43,8 @@
       "buyer_question": "Какие варианты стоит сравнить на этом этаже",
       "sales_label": "Для команды продаж",
       "sales_application": "Обсуждайте конкретные варианты на одном плане",
-      "media_path": "public/media/final-r2/journey/floor.png"
+      "media_path": "public/media/final-r2/journey/floor.png",
+      "route_label": "Выбор на этаже"
     },
     {
       "id": "lot",
@@ -55,7 +58,8 @@
       "buyer_question": "Как устроено пространство и что я буду видеть из окна",
       "sales_label": "Для команды продаж",
       "sales_application": "Ведите предметный разговор о выбранном лоте",
-      "media_path": "public/media/final-r2/journey/lot.png"
+      "media_path": "public/media/final-r2/journey/lot.png",
+      "route_label": "Знакомство с лотом"
     }
   ],
   "journey_disclaimer": "Иллюстрация интерфейса · демонстрационный проект",

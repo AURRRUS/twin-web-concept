@@ -4,7 +4,9 @@
       "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
       "/workspace/work/twin-grid-pr/node_modules/.bin/playwright",
       "test",
-      "tests/visual-r2.spec.ts"
+      "tests/layout-scroll.spec.ts",
+      "tests/sales-story.spec.ts",
+      "tests/type-channels.spec.ts"
     ],
     "configFile": "/workspace/work/twin-grid-pr/playwright.config.ts",
     "rootDir": "/workspace/work/twin-grid-pr/tests",
@@ -18,7 +20,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
@@ -27,7 +29,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "",
         "name": "",
@@ -47,7 +49,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "name": "",
         "testDir": "/workspace/work/twin-grid-pr/tests",
@@ -106,13 +108,13 @@
   },
   "suites": [
     {
-      "title": "visual-r2.spec.ts",
-      "file": "visual-r2.spec.ts",
+      "title": "layout-scroll.spec.ts",
+      "file": "layout-scroll.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "R2 static geometry and all reading states 1920x1080",
+          "title": "Layout V3 static geometry and all reading states 1920x1080",
           "ok": true,
           "tags": [],
           "tests": [
@@ -127,12 +129,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7381,
+                  "duration": 10397,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:56:45.598Z",
+                  "startTime": "2026-10-26T06:05:20.669Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -140,13 +142,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-8ebaca227098356b3081",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-3d0bdd80ed990eb06681",
+          "file": "layout-scroll.spec.ts",
           "line": 4,
           "column": 84
         },
         {
-          "title": "R2 static geometry and all reading states 1440x900",
+          "title": "Layout V3 static geometry and all reading states 1440x900",
           "ok": true,
           "tags": [],
           "tests": [
@@ -161,12 +163,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6736,
+                  "duration": 10228,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:56:53.177Z",
+                  "startTime": "2026-10-26T06:05:31.473Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -174,13 +176,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-c6f70c45640aa3f862fa",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-343df0d914027d91014d",
+          "file": "layout-scroll.spec.ts",
           "line": 4,
           "column": 84
         },
         {
-          "title": "R2 static geometry and all reading states 1366x768",
+          "title": "Layout V3 static geometry and all reading states 1366x768",
           "ok": true,
           "tags": [],
           "tests": [
@@ -195,12 +197,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3615,
+                  "duration": 8018,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:56:59.923Z",
+                  "startTime": "2026-10-26T06:05:41.714Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -208,13 +210,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-b4132b638e5f6a711704",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-ac78c350e4373035c59f",
+          "file": "layout-scroll.spec.ts",
           "line": 4,
           "column": 84
         },
         {
-          "title": "R2 static geometry and all reading states 1280x720",
+          "title": "Layout V3 static geometry and all reading states 1280x720",
           "ok": true,
           "tags": [],
           "tests": [
@@ -229,12 +231,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3551,
+                  "duration": 8252,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:03.560Z",
+                  "startTime": "2026-10-26T06:05:49.749Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -242,13 +244,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-c24cedffaa3ffb537054",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-731ca3c6c40ac78db423",
+          "file": "layout-scroll.spec.ts",
           "line": 4,
           "column": 84
         },
         {
-          "title": "R2 static geometry and all reading states 1100x680",
+          "title": "Layout V3 static geometry and all reading states 1100x680",
           "ok": true,
           "tags": [],
           "tests": [
@@ -263,12 +265,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3614,
+                  "duration": 10833,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:07.125Z",
+                  "startTime": "2026-10-26T06:05:58.011Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -276,13 +278,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-14d2140b7ba215dc9cd9",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-9b1f197ac479b6fdf104",
+          "file": "layout-scroll.spec.ts",
           "line": 4,
           "column": 84
         },
         {
-          "title": "R2 slow media decode repaints at real progress without layout or scroll rollback",
+          "title": "Layout V3 slow media decode repaints at real progress without layout or scroll rollback",
           "ok": true,
           "tags": [],
           "tests": [
@@ -297,12 +299,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 883,
+                  "duration": 2207,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:10.753Z",
+                  "startTime": "2026-10-26T06:06:08.898Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -310,13 +312,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-72917a1b125a23f9c2bb",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-d54877f315638bbd4043",
+          "file": "layout-scroll.spec.ts",
           "line": 7,
           "column": 1
         },
         {
-          "title": "R2 media error is readable and retry works while stopped",
+          "title": "Layout V3 media error is readable and retry works while stopped",
           "ok": true,
           "tags": [],
           "tests": [
@@ -331,12 +333,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1266,
+                  "duration": 2298,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:11.652Z",
+                  "startTime": "2026-10-26T06:06:11.143Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -344,13 +346,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-57ebd7a6a74a839f6a5d",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-e86aaf377b9a8e3f966d",
+          "file": "layout-scroll.spec.ts",
           "line": 8,
           "column": 1
         },
         {
-          "title": "R2 resize preserves selected scene; scene stops while entry is independent",
+          "title": "Layout V3 resize preserves selected scene; scene stops while entry is independent",
           "ok": true,
           "tags": [],
           "tests": [
@@ -365,12 +367,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1671,
+                  "duration": 2989,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:12.932Z",
+                  "startTime": "2026-10-26T06:06:13.457Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -378,13 +380,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-7f0d0a33a3b209a03be5",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-0bc500a67fdd5c13341e",
+          "file": "layout-scroll.spec.ts",
           "line": 9,
           "column": 1
         },
         {
-          "title": "R2 generic entry recovers from fast scroll, Back and reduced-motion without owning inner layers",
+          "title": "Layout V3 generic entry recovers from fast scroll, Back and reduced-motion without owning inner layers",
           "ok": true,
           "tags": [],
           "tests": [
@@ -399,12 +401,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1087,
+                  "duration": 2119,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:14.612Z",
+                  "startTime": "2026-10-26T06:06:16.476Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -412,13 +414,13 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-1e765aae26ced0c32f52",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-e8d32468d0caaafb02cc",
+          "file": "layout-scroll.spec.ts",
           "line": 10,
           "column": 1
         },
         {
-          "title": "R2 animation initialization failure leaves usable content",
+          "title": "Layout V3 animation initialization failure leaves usable content",
           "ok": true,
           "tags": [],
           "tests": [
@@ -433,12 +435,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1522,
+                  "duration": 2159,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-26T01:57:15.713Z",
+                  "startTime": "2026-10-26T06:06:18.608Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -446,9 +448,773 @@
               "status": "expected"
             }
           ],
-          "id": "fc458654916a78d73884-4d442881a723059fd415",
-          "file": "visual-r2.spec.ts",
+          "id": "f134e7276f403fc02a58-6e77b3a3763b56b1df2f",
+          "file": "layout-scroll.spec.ts",
           "line": 11,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "sales-story.spec.ts",
+      "file": "sales-story.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Sales story 1920x1080: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:05:20.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-ae9e56fc71f285ea049c",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1440x900: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 26940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:05:33.964Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-ce51cf912a9aac558de8",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1366x768: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:00.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-33a9f45f5b6e4d518395",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1280x720: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12767,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:13.083Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-a85c6e9e16e4eb492db4",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1024x768: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:20.796Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-892b83799292c3629463",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 768x1024: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2215,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:22.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-37eeb86f13f53faea932",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 320x568: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2022,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:25.126Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-76e724c198ff828a8d0a",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 360x800: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2578,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:25.874Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-e2b42e6472031d9b4ee7",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 390x844: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:27.161Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-4a4da581b5a7bf27dc69",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 430x932: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2822,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:28.465Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-de05fee0b288645fd8ab",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 844x390: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2384,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:29.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-23418e994b441c258b33",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "mobile zoom/pan/Back restores scene, focus and scroll; demo is full page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3710,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:31.351Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-f5eb84bb53e61f3e46c7",
+          "file": "sales-story.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "mobile form has no hidden required company, preserves optional input and consent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3509,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:32.184Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-6d16d942bb3e227e97dc",
+          "file": "sales-story.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "low window/reduced motion/resize and hidden-tab reconciliation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:35.082Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-76775c6fc2dc41d21f8f",
+          "file": "sales-story.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "legacy hashes enable comparison without dropping query; exit retains context",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:35.743Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-31d1aa3181250281fd65",
+          "file": "sales-story.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "story phase arithmetic never combines two rasters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:38.687Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-bac14b56b5c9e2932d19",
+          "file": "sales-story.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "real font glyphs, type roles, contrast and heading punctuation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:38.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-3b6e3b56c5f622fede3e",
+          "file": "sales-story.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "hero demo carries the current selection but excludes technical comparison data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2953,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:41.571Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-3f0b54931b5135306309",
+          "file": "sales-story.spec.ts",
+          "line": 15,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "type-channels.spec.ts",
+      "file": "type-channels.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "three arguments reveal near their own diagram, remain final and avoid text/model collisions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3437,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:43.394Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5baedfee2676ddf6f74d-f96f86250911d1409d43",
+          "file": "type-channels.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "mobile arguments are local; optional form stays transparent on graphite",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1341,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:46.884Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5baedfee2676ddf6f74d-90aeb84175f8ea731fce",
+          "file": "type-channels.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Delivery lower groups use their own visibility and resize does not consume progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1174,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:48.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5baedfee2676ddf6f74d-79bfa97b9a91850bb022",
+          "file": "type-channels.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "mobile navigation stays within viewport and links remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T06:06:49.422Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5baedfee2676ddf6f74d-dc3cd39bea251810cf9e",
+          "file": "type-channels.spec.ts",
+          "line": 5,
           "column": 1
         }
       ]
@@ -456,9 +1222,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-26T01:56:45.174Z",
-    "duration": 32187.992,
-    "expected": 10,
+    "startTime": "2026-10-26T06:05:20.154Z",
+    "duration": 91458.21399999999,
+    "expected": 32,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
