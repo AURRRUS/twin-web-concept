@@ -1,0 +1,45 @@
+{
+  "id": "JRN-001",
+  "mode": "prepare",
+  "status": "ready",
+  "outcome": "Связная и читаемая композиция второго экрана: раскрывающиеся бронзовые состояния и крупный настоящий product UI",
+  "baseline": "78cdf6f5732fe62ecb2992bb78d049c0aa5f8719",
+  "scope": [
+    "Основной Journey",
+    "Связанные данные, стили и motion; соседние блоки сохраняются"
+  ],
+  "sources": [
+    ".twin/DECISIONS.md",
+    ".twin/tokens.json",
+    ".twin/assets.json",
+    ".twin/tasks/JRN-001/TASK.md",
+    ".twin/tasks/JRN-001/VISUAL.md",
+    ".twin/tasks/JRN-001/MOTION.md",
+    ".twin/tasks/JRN-001/content.json"
+  ],
+  "roles": [
+    "section",
+    "navigation",
+    "card",
+    "label",
+    "support"
+  ],
+  "responsive": [
+    "Desktop split 25%/remaining",
+    "Низкое окно: fit-check и flow fallback",
+    "Mobile: одноколоночная группа с изображением, без длинного pin"
+  ],
+  "acceptance": [
+    "G0–G7 по ACCEPTANCE.md",
+    "Читаемые две группы пояснений",
+    "Без двоения, обрезания и сжатия шрифтов",
+    "Reverse, re-entry, keyboard, reduced-motion"
+  ],
+  "motionChanged": true,
+  "motionContract": "MOTION.md",
+  "publication": {
+    "allowed": false,
+    "reason": "Владелец поручил сначала систему, затем отдельную реализацию второго экрана"
+  },
+  "openQuestions": []
+}

@@ -1,0 +1,14 @@
+interface:
+  display_name: Frontend Engineer
+  short_description: Реализация и проверка веб-интерфейсов с брендом и motion
+  default_prompt: 'Используй frontend-engineer: изучи проект, реализуй интерфейс и
+    проверь в браузере'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

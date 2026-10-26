@@ -11,7 +11,12 @@
     "check": "npm run typecheck && npm run build && npm test",
     "build:preview": "TWIN_BASE_PATH=/twin-web-concept npm run build",
     "publish:preview": "node scripts/publish-preview.mjs",
-    "verify:online": "node scripts/verify-online.mjs"
+    "verify:online": "node scripts/verify-online.mjs",
+    "twin:tokens": "node scripts/twin-system.mjs tokens",
+    "twin:check": "node scripts/twin-system.mjs check",
+    "twin:task": "node scripts/twin-system.mjs task",
+    "twin:guard": "node scripts/twin-system.mjs guard",
+    "twin:test": "node --test scripts/twin-system.test.mjs"
   },
   "repository": {
     "type": "git",

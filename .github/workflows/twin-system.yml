@@ -1,0 +1,33 @@
+name: Twin system contract
+on:
+  push:
+    branches: ['work/twin-site-system', 'work/twin-task/**']
+  pull_request:
+    branches: ['work/twin-site-system']
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run twin:check
+      - run: npm run twin:test
+      - run: npm run typecheck
+      - run: npm run build:preview
+      - name: Guard changed declarations
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != "0000000000000000000000000000000000000000" ]; then
+            npm run twin:guard -- "$BASE_SHA"
+          else
+            echo 'No comparison base: declaration guard not run for branch creation'
+          fi

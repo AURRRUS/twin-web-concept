@@ -1,0 +1,14 @@
+interface:
+  display_name: Code Motion · HTML / Canvas / MP4
+  short_description: 'ТЗ и кодовая анимация: HTML, Canvas и экспорт 60 FPS'
+  default_prompt: 'Используй $code-motion: подготовь ТЗ и HTML-анимацию по моему сценарию
+    с экспортом MP4 в 60 FPS.'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -24,3 +24,5 @@ Thumbs.db
 .cache/
 test-results/
 playwright-report/
+
+.agents/skills/**/__pycache__/

@@ -1,0 +1,76 @@
+{
+  "fonts": [
+    {
+      "id": "regular",
+      "path": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "RF Dewi",
+      "weight": 400,
+      "sha256": "5bd57630cbcb3f04ac838b7ca68c851d77685803c3884a42df71438a8f0d04c8"
+    },
+    {
+      "id": "semibold",
+      "path": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "RF Dewi",
+      "weight": 600,
+      "sha256": "bd34b8ca2b84e7a0168fff7267c6daf435d2967f350aabb5cc46b0a07a920576"
+    },
+    {
+      "id": "bold",
+      "path": "src/assets/fonts/rf-dewi-bold.woff2",
+      "family": "RF Dewi",
+      "weight": 700,
+      "sha256": "4acc25ac108317556b0344180da83ff21279fd33a06f1a0f64263f86672525bc"
+    },
+    {
+      "id": "expanded-regular",
+      "path": "src/assets/fonts/RFDewiExpanded-Regular.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 400,
+      "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+    },
+    {
+      "id": "expanded-semibold",
+      "path": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 600,
+      "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+    },
+    {
+      "id": "expanded-bold",
+      "path": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 700,
+      "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+    },
+    {
+      "id": "expanded-black",
+      "path": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+      "family": "RF Dewi Expanded",
+      "weight": 900,
+      "sha256": "0e1a5c76340ffb4071bf738f38dc0003a8c7fe08a10adb4d54bfa40eb2550cd6"
+    }
+  ],
+  "images": [
+    {
+      "id": "project",
+      "path": "public/media/final-r2/journey/project.png",
+      "sha256": "fa60b9a9c55718d87bb168b55cae323b99be5eddb1be5e87594c607cce4690b7"
+    },
+    {
+      "id": "corpus",
+      "path": "public/media/final-r2/journey/corpus.png",
+      "sha256": "538708c2067ea13718e7f46dfa2e72a791d21a5eeb01c77eb16644645a14a13a"
+    },
+    {
+      "id": "floor",
+      "path": "public/media/final-r2/journey/floor.png",
+      "sha256": "d5e7f36c3cf32847ec5c3e8184698c8653b864eba329995aca64516b1cfab217"
+    },
+    {
+      "id": "lot",
+      "path": "public/media/final-r2/journey/lot.png",
+      "sha256": "e156ffc74104f91fa2a4b595b9ba9611eca7d517cf162a65e65efb52a4c33ff8"
+    }
+  ],
+  "references": []
+}

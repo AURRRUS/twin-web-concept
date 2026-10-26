@@ -1,0 +1,921 @@
+{
+  "source": "Installed user skills copied 2026-10-26; project overrides listed in each skill; not an installer",
+  "files": [
+    {
+      "path": ".agents/skills/code-motion/PROJECT_OVERRIDE.md",
+      "sha256": "4a2e0222659eb46fdb736a9e2ceb523156361a87e43bfa4ec2f543addfd27cad"
+    },
+    {
+      "path": ".agents/skills/code-motion/SKILL.md",
+      "sha256": "c71fcb872d771669c99de2b9f9c0d593dd3435fee8204e0e6bb0bd1c7c0ddff8"
+    },
+    {
+      "path": ".agents/skills/code-motion/agents/openai.yaml",
+      "sha256": "7a4c30ffc12b4e198382235e8d46c7149be0bbfc3605b3b9c6bbf5f305736f32"
+    },
+    {
+      "path": ".agents/skills/code-motion/assets/icon.svg",
+      "sha256": "8936b24f674a1250d999e2c2b5901374fb4240426f32bd1ae340c352a90d617d"
+    },
+    {
+      "path": ".agents/skills/code-motion/assets/motion-template.html",
+      "sha256": "7654a534a6778471b327c9c6c246bf97a9503fc40e983a3bc7f953cff779bc78"
+    },
+    {
+      "path": ".agents/skills/code-motion/references/implementation.md",
+      "sha256": "0ea2d456961a12e4d025f00789fe955caa4e985434da3541f1b94d1000ec73a0"
+    },
+    {
+      "path": ".agents/skills/code-motion/references/motion-spec.md",
+      "sha256": "b90c54bb76e35d577b3bf1f6e4d043eac2c7baa2ca0acaeb190133caede3e0d9"
+    },
+    {
+      "path": ".agents/skills/code-motion/scripts/render_motion.cjs",
+      "sha256": "4a7da9da93b41499a5103b9f1860082188113ef002b84b5b27c58fcb993e47b4"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/accessibility.md",
+      "sha256": "25da9792f584490877c8f5ca461dbd36b5ca2188880d3b5bdaf12d71dd19fe65"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/brand-and-operations.md",
+      "sha256": "ac20c66be8ac7299562cb8fc2f864d14b95cda4f6dc8ce6ff1a3436e089c5b78"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/components.md",
+      "sha256": "cfb6b7beea5c6d598beb4af216ca2813f6befea2881684cb5aacdd9e98466062"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/frameworks.md",
+      "sha256": "60a840742c49b5811aae8ff1a06d8ae1acc3efda53008eb3ed7bfda319f360e3"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/review-and-research.md",
+      "sha256": "71e27700b3d185de8a0443bb976a72dce8d2e6c274e8da38a7fed3ec861775c2"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/tokens-and-color.md",
+      "sha256": "0b618cd236fccf1d83144bc38ce3f525be82bb9cbcf03f1446178cd1555e2334"
+    },
+    {
+      "path": ".agents/skills/design-review/.claude/rules/typography-and-spacing.md",
+      "sha256": "45c32f6be0f45b5bcdc6d80c12103ecc67c118c5176479fa2848472cc8af9606"
+    },
+    {
+      "path": ".agents/skills/design-review/CLAUDE.md",
+      "sha256": "55bfc2cec34f8b0945109b5bb5c5eec9f6d25e62f1c72a6fe6673b394337373f"
+    },
+    {
+      "path": ".agents/skills/design-review/LICENSE",
+      "sha256": "c8f168486c91894115315055a08e017cedb41189b331196f879c74b985a51f81"
+    },
+    {
+      "path": ".agents/skills/design-review/PROJECT_OVERRIDE.md",
+      "sha256": "4a2e0222659eb46fdb736a9e2ceb523156361a87e43bfa4ec2f543addfd27cad"
+    },
+    {
+      "path": ".agents/skills/design-review/SKILL.md",
+      "sha256": "0ed7e0f6f13e4a9cfb3bdf9101324e088a260f312dc70ba2c9376679808adc5a"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/aria-patterns.md",
+      "sha256": "8ed32fa72df6da4fbceba9b4aca0c7bb54626959468ac8acbc005fc38016f37a"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/cognitive.md",
+      "sha256": "b3e87e721e111bfc40c3f591cae2536f7ac043157a8e60ac46782b63a7a7612d"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/i18n-rtl.md",
+      "sha256": "8e82d01ccb976160217e2801df951ca60094e361c02321546cff41cc5e5fd9cf"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/vision.md",
+      "sha256": "de78abe345b898749b122184396ef19ab07ac6f149051811a7ec091675b17a38"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/wcag-aaa.md",
+      "sha256": "7a4ed38a22cf26a62aaf06bd41b3e92098ca51838d3c2d52ca905a21167f6138"
+    },
+    {
+      "path": ".agents/skills/design-review/accessibility/wcag-checklist.md",
+      "sha256": "851de0ea6ebdfce538a7c7d2864777216709aff92f2f3c515a0cf21d1d12d188"
+    },
+    {
+      "path": ".agents/skills/design-review/agents/openai.yaml",
+      "sha256": "a34a5c618bd3b5fb639e2f885b6467ee0b8c6fd8f6bc783d29caa0a3c38dfa66"
+    },
+    {
+      "path": ".agents/skills/design-review/assets/icon.svg",
+      "sha256": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b"
+    },
+    {
+      "path": ".agents/skills/design-review/components/atoms.md",
+      "sha256": "485ff89ea0d20c83bc580c239c5126d79c3c6a5831a970b3c5bf9432756cc850"
+    },
+    {
+      "path": ".agents/skills/design-review/components/data-display.md",
+      "sha256": "86c8a014312925435cffc331731325308b83b84c3b8e90560c1249dbf5fd28fb"
+    },
+    {
+      "path": ".agents/skills/design-review/components/data-viz.md",
+      "sha256": "0017228551ac74761291b20a067f1aa2c9cc96f9d371fd5ce9c967bb192a9e86"
+    },
+    {
+      "path": ".agents/skills/design-review/components/feedback.md",
+      "sha256": "1deffc956fbc7bbae91aef9d05d74b0f9f1c35147a5e14d494d8ba33e1ed9614"
+    },
+    {
+      "path": ".agents/skills/design-review/components/forms-advanced.md",
+      "sha256": "7fd10a3dcf1a2cef665babddd9b856700117fbfb00c9079048f1585db1a93d5f"
+    },
+    {
+      "path": ".agents/skills/design-review/components/icon-system.md",
+      "sha256": "7b892fecc43b95cbf396082956bcf456f78452ed429ed98bb4ad3d859b07e533"
+    },
+    {
+      "path": ".agents/skills/design-review/components/molecules.md",
+      "sha256": "65518a3c6292ea2a103b9304ac6e75cd1cb9b8badbf9f86113d1a8b1ed2d1d63"
+    },
+    {
+      "path": ".agents/skills/design-review/components/navigation.md",
+      "sha256": "3320393793e84510d8e2341648440c641ed5692bf460c6589524ebb8823b37b2"
+    },
+    {
+      "path": ".agents/skills/design-review/components/organisms.md",
+      "sha256": "f54f9e2b653222857257f38d939587a00480d41a371df19be85194e665e60bee"
+    },
+    {
+      "path": ".agents/skills/design-review/components/overlays.md",
+      "sha256": "2e4477494f881ff091e30bb4b0b08bbcb2ce8d9eb810d2e49c04f2581da0d2b3"
+    },
+    {
+      "path": ".agents/skills/design-review/components/templates.md",
+      "sha256": "5dea088cde609263d32ae22ef4a78372e57d870f9bc12e39a9d5100dff0048cd"
+    },
+    {
+      "path": ".agents/skills/design-review/content/voice-tone.md",
+      "sha256": "cb519d27718149790d6beef5d5740f04bd00508dc9226cd7f43392cfa9258c91"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/Button.tsx",
+      "sha256": "00b93c61ee6ee369f4c0fe15664a7a0be4ed1baebd896367a7141028ea392bfa"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/Modal.tsx",
+      "sha256": "351b38031ac201471a3d0ef8d57334a68d7786b7ccdf6fc453b69897003dfa0f"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/README.md",
+      "sha256": "e239e94f338755c01e666bac68d8327a8bc4f73f5b6a610b574eddd8b18c42e7"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/components.css",
+      "sha256": "8cad6335c385c2c0549a99d6a9d970237107b54d219b4e228f8c60a7b3fd3a8e"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/render-harness.css",
+      "sha256": "651810df8909ec4f5074562afd901130831ad5121137ebf46de86c84a3de7b80"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/golden/theme.css",
+      "sha256": "cb6521622b547705de56c5397118ada2ad9fe9a17aaf7327ef3b9bad0bab0d19"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/BRIEF.md",
+      "sha256": "5e14ff6b6f17daffca6fddf4bd362fbbb54fd48d3590c03643a9428b79b8d3d3"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/Dashboard.tsx",
+      "sha256": "36ea9c9f07da5e48c4c08dd662f1c8bc6075040b1cf4cb02621f0fb5fd52b680"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/Settings.tsx",
+      "sha256": "56c84bc8c2ad06547231d9f69ebc588f3c68298ba7742c8fd92b3d629f645a8d"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/StatCard.tsx",
+      "sha256": "7375d06fbf1f00e4e36e94276044bb76d0aab127dc5e5906865021bd1348617a"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/preview.html",
+      "sha256": "c66191f333adb3e229e934505096af5eb5de402ac6740bac794c755bb40e0221"
+    },
+    {
+      "path": ".agents/skills/design-review/examples/sample-app/styles.css",
+      "sha256": "a5f92a7361925f4165c9f715ac352c3aea4223236cb64401328dcc4addb3c489"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapter-protocol.md",
+      "sha256": "e205dd7fa97fe6d6939a7989071463782c374e1fea12d9d4503ac7be845535be"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/angular.md",
+      "sha256": "3d8e989af78cfc5a34f8a83855058e919467104835be9ce4b472b8fc803e2668"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/astro.md",
+      "sha256": "d8213618f110a9200fbe784996dfc5d492ae757407b741eb6b14cbf3de4fcc29"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/bootstrap.md",
+      "sha256": "ca55385543c35354e37612856802e1bebbd2a26548dfa394a066b4ad2c8849dc"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/chakra.md",
+      "sha256": "0746d3ae4a47083a6d7c5d49d721a5d359e7652a474a58a337a7159999eb2141"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/css-in-js.md",
+      "sha256": "942501e3f978a5d093201e43a2eae8da178c710f336b3d49da49eb92c3e657ff"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/flutter.md",
+      "sha256": "a7fe3f30ef6649a151b9ee85fbd4f6b847e35efbae194e443e6eecaa09fa3c08"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/jetpack-compose.md",
+      "sha256": "11534396f79477ce6c97f7c9677b35b5b0033a2c757bbcbee1beebb88956ff4d"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/mantine.md",
+      "sha256": "2fe05ed4527982fb30e4efd643d4170c883e0a55f8501b23d19cb07ab3a0ce6b"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/mui.md",
+      "sha256": "709362501ba5cd667fbed72e4303a187e8a64f1071107520f9a1966a365a7082"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/qwik.md",
+      "sha256": "844a410a577ca596aa39ca559ab562448f8f3982be9e4602dbd15555d17dbaa1"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/react-native.md",
+      "sha256": "131f2b764951d60a39212f449943500254a4d755056ed793649a8a4372fa741c"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/solid.md",
+      "sha256": "c50a4afc9bab6fd46503da4e424715d08dfaf4214672a5df4c110508fe66f078"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/svelte.md",
+      "sha256": "085b0a6d0be66d3070e1dd07f6c358f37d69db4c1958906e85487eb2251a2e92"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/vanilla-css.md",
+      "sha256": "90c267fed2b85522436755c0ec0e2943af143a4ed8d416035d3584cea0a9beb4"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/vue.md",
+      "sha256": "dbd29e844c672b624ab74c3aef0483a5f4e47922d129c701f2a5ec3cc44f0604"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/adapters/web-components-lit.md",
+      "sha256": "41850593f30c4a2c252a898d775c085fc2ce00768a97aabe5a05f4b64f2aa7b9"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/nextjs.md",
+      "sha256": "aff7019b6d948f28be2f3eedca2d2cc9310a1d4fb0b4d0e07da9182fea467696"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/react-tailwind.md",
+      "sha256": "b2ade36f0c30683d03c7d9ecd2ab02d38d6d5e3737db93bd2f5eeadbb80a7fc5"
+    },
+    {
+      "path": ".agents/skills/design-review/frameworks/swiftui.md",
+      "sha256": "95e385bc5338b3f05659badd74b2b1b595fb5e27c3c7b2764720618308ac530a"
+    },
+    {
+      "path": ".agents/skills/design-review/package-lock.json",
+      "sha256": "93dc6bfef0a7398cd5a8978a1d83eb708c6c13211dd159e3c251bb938970395f"
+    },
+    {
+      "path": ".agents/skills/design-review/package.json",
+      "sha256": "3aa784fd22bc215d6120e266cca2d926e665282bd4472139e36c275debbb9962"
+    },
+    {
+      "path": ".agents/skills/design-review/references/recovery-source.json",
+      "sha256": "e010f23a040b2d8d77047891e6380724b737243ebfeb708256d38c9bbf431028"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/_targets.mjs",
+      "sha256": "1cb15514ec68a93db5d99c58a0ff3d892001f8b255a0f2f9546648e2c087e0b9"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/accuracy_report.mjs",
+      "sha256": "73c057eeeaaff435ea26819d091540be6e0e6e3678c92b03efb7de17b2e61b0f"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/axe_audit.mjs",
+      "sha256": "cbfe359877dc0de09c81b9a39741b5955c77b7c45e7f508e827964ff87705ffe"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/build_gemini_extension.mjs",
+      "sha256": "4dc94691d2ce0bfae1dca930fe5ce010aacb8c0a6d7ad0897f04ec33dc671344"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/build_tokens.mjs",
+      "sha256": "2bddae9d1b67ba64c368ad4ccf22cceb155ce3687360785ea1c96d15bc5f036c"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/check_links.py",
+      "sha256": "547b155bc5c31b7ea53bb3b7f8825093e1aacc65f31c94d2181c76ed187d3b12"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/check_no_emoji.py",
+      "sha256": "776c38c93cc07ef5f45c6de88210b9f773048254e0d7099a035d95e8d3d27fdf"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/contrast.py",
+      "sha256": "97600543d7e280e423e6fac337f4e3e6b49d5cea01454b3de6ac9f812a53f038"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/design_systems.py",
+      "sha256": "05fc32b7000243fb4e07ee63a04f01f73299eec6a52d483958828f24d545a61c"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/gate.mjs",
+      "sha256": "1a574bb676ae13f23fbc5a38ebae5415fe7750bba182e715d2b5da652d56ed50"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/import_library.py",
+      "sha256": "dab4ac74ef17e1de27aa837bb3b7376f0935fb8a03a9c1e36f896b97eee94730"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/library.mjs",
+      "sha256": "a2bddd1cca771e8879862bd5c8c316eb814146753fe4b7fd4a7b41729c1d1b15"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/lint_hardcodes.py",
+      "sha256": "c301803893571b12678e5a084bd52f7cad6548c4c427b1f2097ed3b47229573a"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/lint_intent.mjs",
+      "sha256": "dbe390beec9fbc9a8bb4fd024f3f9f76c226162f14808e2146a7fe630566872f"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/lint_native_select.py",
+      "sha256": "a2f0f04d0876d53d7f96aa837fa7df62259cc46f9e4995b6857407f7c88ff7ea"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/lint_taste.py",
+      "sha256": "b86cb654100683062cde4a475e0ac5da391a8b323a607d7f3d927e6be7cc5cd3"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/measure_install_paths.py",
+      "sha256": "0f5e5a91a68aa6173611ffbaf575ac944422d1bccc267369da701124059ce8a9"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/measure_render.mjs",
+      "sha256": "095c46d0b4f8a1ce648b534b8b23725832410daa1b55d5d1254a550b707b1afa"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/observe.mjs",
+      "sha256": "1e614c2e6eb4faf9d5b4a8029a21bf8d2d6732a1a1131aa88680a752ee69a0e2"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/render_framework_source.mjs",
+      "sha256": "3fb360eed9311bd768324e9df5965da28a32c8c6fcff44d3bf86a640c8046de5"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/scaffold_component.py",
+      "sha256": "45c49be502dc4ef542ce1d8cba9639932ba2a2b1af8d71284731467fcd6ed7ee"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/screenshot_docs.mjs",
+      "sha256": "2b59d6b156c207285f6d3a0904a814a8cb4c685fb0be927cf470f4549067f029"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/slop_tells.mjs",
+      "sha256": "1cad137e537841809a961faea370d022639c15f1e2727e5c98955aba713ad7ed"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/taste_audit.mjs",
+      "sha256": "c2bd39677f51f95b0f69ae3a52cd832c28f58c75230e765fafb508bf0e5a747a"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/update_homebrew_formula.mjs",
+      "sha256": "254b778c00e33dc1075e335fba5f9b79aff2141ffb92722af45a3b1a6187fe60"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_agents_surface.py",
+      "sha256": "5afb41335aa9d8f08826cd5efe2a396cc7cd07fed21efaaa78ca115e4a935fa7"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_component_spec.py",
+      "sha256": "74c6284b10fa0c9bf3f80a7da7e8f03749acaa1e990207056162afce27d04fe4"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_contrast.py",
+      "sha256": "8974b579d6ff9be2710798eebab9719df67fbbd2adb1ac44f612bc6fd42fd649"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_instruction_surface.py",
+      "sha256": "44750c2df7f714851930ac1bb1b5894eb914e2d38c9afd8cd92644317d492db3"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_template.py",
+      "sha256": "21adb58df1d12cfa261883954c2c3409d7e7eafd41aaf5177148ecfc07415390"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_theme_refs.py",
+      "sha256": "b64287a26d129a386baabd0eec22cf22204d46161f9a8bc517400930ddc02e54"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/validate_tokens.py",
+      "sha256": "dbbd3bc79a003d44ebbe9812cb8eb953bdf7bf7963549099840496fd267fd1a9"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_focustrap.mjs",
+      "sha256": "c8892ac369fcb206d8dfdc7b94122080a288fbb75b1d954f1fae47037b696350"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_interactive.mjs",
+      "sha256": "639103e7f4c315134b4c412d8c801c3b303dd402310826f602b05b11f377162b"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_keyboard.mjs",
+      "sha256": "e29f0ca800ce7311372d92976269ccdea00fe2c55a6b026a18d9d4018bd7420a"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_mobile_first.mjs",
+      "sha256": "5f7e50468a96df4750f28b6b8797a82be4eefb31791af6096f18b6f81a769eb7"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_overflow.mjs",
+      "sha256": "bda27dc1b4065ee9d041fd94576282cb8d0a3752ec5946938abbda30b7a03608"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_reduced_motion.mjs",
+      "sha256": "7c3f19f31d344eb099288f06aa2128b9f24dddd1e30a6fc81223497547d28f90"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_responsive.mjs",
+      "sha256": "c11cf1610db69879a7339b971601ad5b9035b5eb4eaffa4b65e72b0ae2787b24"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_rtl.mjs",
+      "sha256": "5311b48f5950a975fdfa450de83d5b087ea7d68fbda7e6335f9fa1adc86e6ddd"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_screen_economy.mjs",
+      "sha256": "bc82f548d25069708de624374f16117c1f79d3d2300665c5af60794acd0e1996"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_spacing.mjs",
+      "sha256": "d81ce8ca5b443b47d954e7d70f1b19ae84a5fd522865164a2761fad4ea3ad0d0"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_states.mjs",
+      "sha256": "14575e56d3ca82028b79b8da69901631cd612a6b8f886fd8bdc531ac667e2985"
+    },
+    {
+      "path": ".agents/skills/design-review/scripts/verify_target_size.mjs",
+      "sha256": "fa3731d2ccaea14f4cf5af8a6c06872e7d09feae98b7716b4ee7159b98fc7330"
+    },
+    {
+      "path": ".agents/skills/design-review/taste/aesthetic-systems.md",
+      "sha256": "9ec9dbcdea11941a7a1028bb75e80b4a39250e5c6170bd321477db1831e494a3"
+    },
+    {
+      "path": ".agents/skills/design-review/taste/design-taste.md",
+      "sha256": "a655c53e32aea1d2a042dfc0937814b093182405ba0fe8bd9963735a1d4d211c"
+    },
+    {
+      "path": ".agents/skills/design-review/taste/motion-choreography.md",
+      "sha256": "02a5e75a8c957cc068ece13362d0e3f9d51045c3432e83af13336b8cec2e7a9d"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/blur.json",
+      "sha256": "3cf449f44cf11af0dab68fc3b12172bddf6bdbab2b205d3b5c61968fea4bf4f0"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/borders.json",
+      "sha256": "5accef4c7f7ebf8a42fca37603665bf03c17ce95bcba319a75f2147a49d89edc"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/breakpoints.json",
+      "sha256": "530b2a2449e0831b501e4f13450044c6a7dc44176db9eb49d258f9a78988e75d"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/colors.json",
+      "sha256": "440f6fc578d49780401d7df9159a25bd5a2d884f6e1c40e86e787a4d1c50e271"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/data-viz.json",
+      "sha256": "446727b32f7ebfb5edc7c8858a66f9949ac0e245bfdbc86327dc665bf9fe340c"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/gradients.json",
+      "sha256": "d6e36df774dd74d17909e8a90af0b58cb4168a7e1a1811cd492095ed5f104727"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/motion.json",
+      "sha256": "f0180f546c5f7cec1db61f19400622cd8ffeef3d322815f69a842abae40d8bc8"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/opacity.json",
+      "sha256": "88b645196740ebf1360def96ba89929f5847d1e32847fd6a5c19d7708330a5c1"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/shadows.json",
+      "sha256": "f494f27a29722f21dc16c1c8d28c14c03c34759339081630b34d9b9cd6608da1"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/sizing.json",
+      "sha256": "e4f77a3a64651ee03dbe9f935b46134cc9f827089edce1336001843b6bfe62c4"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/spacing.json",
+      "sha256": "85962243e8ad70e4b8e20eb0a396af438a807a781e8afbcf4f35aa802cd59ced"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/states.json",
+      "sha256": "d520aae35e5c669ce27b3c2cc8e377a402f51026f39bf48164906a9b94d8b9a7"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/theming.json",
+      "sha256": "330047d8445c429b03fac457e783b24d57d4446a8bdceb0cc24ace525d16fd86"
+    },
+    {
+      "path": ".agents/skills/design-review/tokens/typography.json",
+      "sha256": "342ebede6b72fefe65e5bdb7ef3ccbe7e16a2370c8e72cc6b56e6876d152eb8b"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/design-qa.md",
+      "sha256": "2c9e15a7a6937d8fb22773373d86d7a27acd1f41cd9bcb0a3c26c13a990c76dd"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/design-review.md",
+      "sha256": "6b04ee40ce855f182c28a99b292fdf62451b129c7dd7a623b9abf613092be0e0"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/design-to-code.md",
+      "sha256": "c26696aebdc28744c916b6397048ec2f0db32f0f347cc1d414bf0324afb1096a"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/figma-integration.md",
+      "sha256": "b44c946d58b792ad560c560af3abead71da810c0b0eb9b3303d73de6c725d141"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/governance.md",
+      "sha256": "cbbdea683020e7f4150c61c2ea7207c743a53e5301b393a3311b66cec3c49f32"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/performance.md",
+      "sha256": "837a3b9e1823712da0d58791331c8d41ce0afd3ff65f0d9683b677dc9e5a8571"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/prototyping.md",
+      "sha256": "54d60cbd51a5d3be658033106cddef9b1c54a1d49ccda957eb1c2a826127bf34"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/redesign-audit.md",
+      "sha256": "7fcf382a293d1a3b959f0d363b43eb58f681d31f46cec66784e23f3506f5a78c"
+    },
+    {
+      "path": ".agents/skills/design-review/workflows/token-build.md",
+      "sha256": "fdce8c62483a16c8fd6948b273c4416c38061e3b494fb498e846904550da8f0b"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/PROJECT_OVERRIDE.md",
+      "sha256": "4a2e0222659eb46fdb736a9e2ceb523156361a87e43bfa4ec2f543addfd27cad"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/SKILL.md",
+      "sha256": "809b05c4bf2bf5d443681ed50c7ce7c47702db28c1327f6def2adefbbf10a080"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/agents/openai.yaml",
+      "sha256": "a9b16a6c3fab670fb2e0022435adb7379d428b8dd4a3ffe91e95b4a347b52c3f"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/assets/icon.svg",
+      "sha256": "8936b24f674a1250d999e2c2b5901374fb4240426f32bd1ae340c352a90d617d"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/implementation.md",
+      "sha256": "b26a36f98611a0adefdf67f93ecaa5de03e761ab109e2c07e74487c757519a89"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/motion.md",
+      "sha256": "03f9a2cc3738a7a01c3b86ce2d9abd9cd5fd3323cd7175278d2b00c2d477fed5"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/routing.md",
+      "sha256": "3b45af3ca7cb4a19ad93408da86200c4e5be32cd507df54146f8a9570ceb669a"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/sources.md",
+      "sha256": "b219e041f6b9a3dd5666d8efd2236e85d3a1ee2bfd49041de4f70aaeae6816c5"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/verification.md",
+      "sha256": "4468f1517287c74bb3fc83745a6b71323a83ade0ad9b4dbd88d337eb3e8bb5ea"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/scripts/check_resources.py",
+      "sha256": "d8cabc235f089fcb1de6131fb84bcd08685c77aa7a760b8f66477cdc733e1beb"
+    },
+    {
+      "path": ".agents/skills/twin-site/SKILL.md",
+      "sha256": "624b8098ce896921698dccfa688156a438ad6042cea073fb3cff5afa9919b0ba"
+    },
+    {
+      "path": ".agents/skills/twin-site/agents/openai.yaml",
+      "sha256": "0d4d1485a11bd6a1e9c3e6e879482e7d7e7edee878e6ebba479b8d38d24c0758"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/PROJECT_OVERRIDE.md",
+      "sha256": "4a2e0222659eb46fdb736a9e2ceb523156361a87e43bfa4ec2f543addfd27cad"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/SKILL.md",
+      "sha256": "6daa0e58c0420bbf561408ec20f1f05ebb3aa1f37a1283ee9d0723ebcb681127"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/agents/openai.yaml",
+      "sha256": "728bea810793d50bd103f42e8260efac24eb7f1a037c64fe1db098b0f73626e5"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/assets/icon.svg",
+      "sha256": "9be88f8dd4c5e658961515c71389eafd45142ffa68bcae58e8dcff57d178ed91"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/app-interface.csv",
+      "sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/catalog-summary.json",
+      "sha256": "65fe0b64480a8a827738297d0a64ca55c627d4afcb774fe4555c59cea8dd6905"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/charts.csv",
+      "sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/colors.csv",
+      "sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/data-provenance.json",
+      "sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/icons.csv",
+      "sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/landing.csv",
+      "sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/motion.csv",
+      "sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/products.csv",
+      "sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/react-performance.csv",
+      "sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "sha256": "c36ee8470926b4a0748d241363c71664c9969c2edbc62f7f72de0db73880fac6"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "sha256": "2d2b9c198e875106a30f7ee68341a9ee0033cad60a7e130cf23152783e08aeda"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "sha256": "97542e0ba34915a0ff7578be20e1619495df47c95c8c1c39b83e3785e1de771f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/styles.csv",
+      "sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/typography.csv",
+      "sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/references/pro-rules.md",
+      "sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/references/quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/core.py",
+      "sha256": "e544826963efefce3c59b65e18d83d92a5baf571f05458025bf1fa9021eced42"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/design_system.py",
+      "sha256": "6a94743c3362c9c7e6d1450b94f4014d9ea752e7b4e151f6f0bdb217e0544bf7"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/search.py",
+      "sha256": "8373e2dd2d560d9853ec116140de0e0d5bee45a6abe5e041173c84e1c36a7f87"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+      "sha256": "22d8dc81a7d6827b7e8b64b53e7d184210fb9759e8e294e0d5133c81cc460176"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "sha256": "c608ad5c4084ebc50a4bbbfb69ea2456c01fd5519c457e18410fffd250ae948f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "sha256": "4e0761b839dc6b2187a370e82eddc0aed8a7ff10c09e28dd814bb3656dac595b"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "sha256": "30bffc29ae348416a2de2f9c6c418e768e4578f136b0f4bac5d2f70124f2e9ba"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "sha256": "6243a48a4619986768c4628e2d0c98ff195beba71ba9be5df8f0c52fc6d90c0b"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "sha256": "68362c9a700c13b96f000784a0198c1c7e117a7088a01c85744e44233038fe9d"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "sha256": "ae4d0bb076240824e1b643c2270d1f8cc0952a69502ec1e622b7dedd85b930bb"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "sha256": "500588c757d6de03e3d7e69b27a8b8b1f88ccf6bb0333e4c1e9b0d6a4f112475"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "sha256": "d79f2ee0afdbc2f87776733e145df3538a16a25d7c2fba0056bb48295dad0ded"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "sha256": "1c57a1d76bcc0cdd3632d4c18b9c0e79576b4591df39831c9607e5d0eb4f2cec"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+      "sha256": "38398452985116e74e31bd6bccca0f4decd1bbfe4eebc1ac99f7a1836baaf77f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+      "sha256": "e77d36eebbf6ddc2860946a02cdb659351da6c09f2688f1ed30939a418099646"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+      "sha256": "9d738e11c6b82fecc8d0946e7b38515518ded5ed3294a7eb19a021c4edb5b57d"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+      "sha256": "3e2ca5d12702318f641ae62d0c14f22a3bcc84d84e79b863c0e947d475604adb"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+      "sha256": "3527fe2f4b852f69f07c17ddc0d615d9a6e025c924e45a33985579a94a8d2118"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+      "sha256": "3ffc6b4905c9ea26d7ac4527ab154d153584231aee71b2ae4bd017977fa09cc5"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+      "sha256": "0360d6e10080c0bca214f2b0bbad582ba50702a542ce21013351aca54938df3a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+      "sha256": "517ba1ba6195c94811126d1162139c51aff77fc68c3e320c7bb6c1e89e76bc9b"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+      "sha256": "904f90bc6d364763673fa6067d98a4227d535760fa8b6d26abe22208176997ca"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+      "sha256": "2fe56a4d6fe5fff15ff592274b0eeaba925146cefea6c0fa29d8f1b77c9aca1f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+      "sha256": "cd14d0092e8a454d213aa104b53e4e70ba698491fa00fde9fdec5ca8a3d70011"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+      "sha256": "b51d32ee8a15505b87cb81957fb2d1b385e041e8beb4463c311d236bfd29ebd4"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+      "sha256": "becc5fa40e7516613d4e9930f226aa483e3796090c17cb16542c93d1927e680d"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/validate_data.py",
+      "sha256": "718ad4cbb227436015c9c2bc80fc583d6ed738b01c1a940ef85e350780d99f58"
+    }
+  ]
+}
