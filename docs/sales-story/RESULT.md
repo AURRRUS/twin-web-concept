@@ -4,7 +4,11 @@
 Сравнение: https://aurrrus.github.io/twin-web-concept/?compare=journey
 Journey4: https://aurrrus.github.io/twin-web-concept/#journey-variant-4
 
-Точная версия публикации и итог online-проверки добавляются после штатного push и проверки Pages. Этот исходный commit не объявляет локальные изменения уже опубликованными.
+**Публикация и онлайн-проверка: PASS.** Фактический sourceCommit: `ebca1258da38b473d51d7067d353832ae2463743`. Pages commit: `7ad69df00765bcbed015669a501d3272df573e4a`. HTML опубликованной страницы совпал с локальным dist по SHA256. GitHub Pages deployment завершён успешно. Все11размеров проверены в реальном опубликованном Chromium, JS-ошибок0, HTTP400+0.
+
+[Source commit](https://github.com/AURRRUS/twin-web-concept/commit/ebca1258da38b473d51d7067d353832ae2463743) · [Pages commit](https://github.com/AURRRUS/twin-web-concept/commit/7ad69df00765bcbed015669a501d3272df573e4a) · [PR14](https://github.com/AURRRUS/twin-web-concept/pull/14).
+
+[Машинный online-отчёт](../../artifacts/sales-story/online/verification.json) · [Снимки с Pages](../../artifacts/sales-story/online). Отчётный commit после публикации меняет только доказательства/документы/QA-скрипт и не подменяет sourceCommit сборки.
 
 ## Реализовано
 
@@ -23,7 +27,7 @@ Mobile: читаемый hero,4кнопки Journey/деталь/полный к
 - Реальные custom fonts проверены через CDP: Expanded Black900, Bold700, Semibold600, variable Inter Tight450 и500 для вопроса. Файлы совпали с архивом по SHA256. На1440 H2 Journey44px/1.12, вопрос22px/500/1.4, применение17px/450/1.5; H3каналов24px/700. Заголовки/верхняя навигация — Dewi, tracking0; UI-текст.015em, без синтетики и scaleX.
 - План и карточки лота показаны целиком в полном режиме; мобильные focus-координаты выбраны после просмотра исходников. В обычном initial-load нет PNG Journey или медиа неактивных сравнений; WebP-производные сохраняют исходную геометрию. В одной холодной локальной загрузке1440 измерен CLS0; это не обещание полевых Core Web Vitals.
 
-Подробности реализации: IMPLEMENTATION.md. Проверенные снимки и машинные кадры: artifacts/sales-story/local; окончательные опубликованные — artifacts/sales-story/online после проверки Pages.
+Подробности реализации: IMPLEMENTATION.md. Проверенные снимки и машинные кадры: artifacts/sales-story/local; опубликованные — artifacts/sales-story/online (PASS).
 
 ## Резервы
 
@@ -40,4 +44,14 @@ Mobile: читаемый hero,4кнопки Journey/деталь/полный к
 
 ## Запуск и продолжение
 
-npm ci; npm run dev. Проверки: npm run typecheck; npm run build; npm test. Браузер: npm run preview -- --port4360, затем node scripts/verify-sales-story.mjs. Публикация штатная: npm run build:preview && npm run publish:preview из чистого commit. Online-команда с TWIN_URL/TWIN_EXPECTED_COMMIT/TWIN_QA_DIR приведена в README.
+npm ci; npm run dev. Проверки: npm run typecheck; npm run build; npm test. Браузер: npm run preview -- --port 4360, затем node scripts/verify-sales-story.mjs. Публикация штатная: npm run build:preview && npm run publish:preview из чистого commit. Online-команда с TWIN_URL/TWIN_EXPECTED_COMMIT/TWIN_QA_DIR приведена в README.
+
+## Фактическая online-сверка
+
+Обычный режим содержит ровно1Journey, сравнение7вариантов. Все6старых входов на исходный/1/2/3/5/6 автоматически включают compare=journey; выход сохраняет view/campaign и удаляет только compare. Reduced-motion — switch без длинного трека; mobile4истории каналов. Back медиа возвращает фокус, /demo открывается отдельной страницей без compare и сохраняет честное уведомление. Эмуляция zoom200% не даёт горизонтального переполнения.
+
+Через CDP подтверждены Black900 для Journey/H2каналов, Bold700 для мысли канала, Semibold600 для маршрута/верхней навигации; Inter450 для применения и500 для вопроса. На1440 реальные кегли44/24/16/17/22px соответственно. Все они custom fonts, font-synthesis:none. CSS tracking заголовков0, вопросов.33px и применения.255px, что соответствует.015em.
+
+Матрица11размеров завершилась успешно в первом online-проходе. Проверка demo-перехода сначала измерила opacity0.998145 за несколько миллисекунд до завершения конечной анимации: это сбой фиксированного500ms-ожидания QA, не изменение frontend. Первичный отчёт сохранён в first-verification.json. Ожидание заменено проверкой фактического завершения анимации; дальнейшие zoom/Back/demo/reduced/legacy/выход повторно проверены на том же sourceCommit с повторной сверкой SHA HTML. Завершающий verification.json — PASS; успешные11строк матрицы переиспользованы с зафиксированным временем и тем же SHA.
+
+Визуально просмотрены опубликованные Journey/промежуточный кадр, фотографии каналов, итоговые аргументы, мобильные деталь/состав/демо/контакт. Снимки фиксируют устойчивые состояния: одноразовые входные анимации завершены, scroll-контролируемые кадры не подменены статическими картинками.
