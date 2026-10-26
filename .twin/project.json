@@ -8,5 +8,18 @@
   "defaultMode": "prepare",
   "pendingTask": null,
   "liveUrl": "https://aurrrus.github.io/twin-web-concept/",
-  "lastCompletedTask": "JRN-001"
+  "lastCompletedTask": "JRN-001",
+  "versions": {
+    "v1": {
+      "branch": "work/twin-site-system",
+      "entry": "TWIN_START.md"
+    },
+    "v2": {
+      "branch": "work/twin-v2",
+      "entry": "V2_START.md",
+      "activeTask": "VIS-002",
+      "status": "prepared-not-implemented",
+      "routeTarget": "/v2/"
+    }
+  }
 }
