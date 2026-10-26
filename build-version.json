@@ -1,6 +1,7 @@
 {
-  "version": "desktop-0.6",
-  "sourceCommit": "092841fb93139c4432df5f8fcb330e81fabd0082",
-  "builtAt": "2026-10-26T07:07:29.364Z",
-  "previousDeploymentCommit": "dbcf85406462270b19eceba489603468c8793004"
+  "version": "journey-craft-1",
+  "sourceCommit": "6e8f294dbd178e2c7ec66d2fbada96865211e808",
+  "builtAt": "2026-10-26T11:56:18.122597+00:00",
+  "previousDeploymentCommit": "0a325d42df0da958201e8e084a37509958d0b28a",
+  "previousHomepageDeploymentCommit": "d10effd3d3e0a3396acc7ac6a6a97182c7a613f6"
 }
