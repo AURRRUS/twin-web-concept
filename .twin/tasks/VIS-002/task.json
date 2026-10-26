@@ -1,0 +1,55 @@
+{
+  "id": "VIS-002",
+  "mode": "execute",
+  "status": "ready",
+  "outcome": "Отдельная Twin V2: связка hero и Journey, бело-бронзовый UI, buyer copy, реальные ассеты, адаптив и обратимый scroll; безопасная публикация /v2/",
+  "baseline": "0336e131b27f302574e16fad9c56eb70fcb15c5f",
+  "scope": [
+    "V2 entry, hero, transition, four-state Journey",
+    "V2-only tokens, responsive, motion, subtree publisher, browser QA"
+  ],
+  "sources": [
+    "V2_START.md",
+    "docs/v2/MASTER.md",
+    "docs/v2/DECISIONS.md",
+    "docs/v2/GENERATION_PROMPT_MASK_TWIN.md",
+    ".twin/assets.json",
+    ".twin/v2/tokens.json",
+    ".twin/v2/assets.json",
+    ".twin/tasks/VIS-002/TASK.md",
+    ".twin/tasks/VIS-002/VISUAL.md",
+    ".twin/tasks/VIS-002/MOTION.md",
+    ".twin/tasks/VIS-002/RELEASE.md",
+    ".twin/tasks/VIS-002/ACCEPTANCE.md",
+    ".twin/tasks/VIS-002/content.json",
+    "docs/v2/references/overview-upper.jpg",
+    "docs/v2/references/overview-lower.jpg",
+    "docs/v2/references/journey-white-bronze.jpg"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "navigation",
+    "card",
+    "body",
+    "button",
+    "note"
+  ],
+  "responsive": [
+    "Desktop split + content fit",
+    "Low viewport compact heading or 4-group flow",
+    "Mobile accessible accordion, no long pin"
+  ],
+  "acceptance": [
+    "Все критерии ACCEPTANCE.md",
+    "Последний бело-бронзовый reference выше обзоров",
+    "V1 untouched outside deployment v2 subtree"
+  ],
+  "motionChanged": true,
+  "motionContract": "MOTION.md",
+  "publication": {
+    "allowed": true,
+    "reason": "Отдельная V2 по поручению владельца; только /v2/, без замены V1, после проверок без этапа согласования снимков"
+  },
+  "openQuestions": []
+}

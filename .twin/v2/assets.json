@@ -1,0 +1,124 @@
+{
+  "production": {
+    "fonts": [
+      {
+        "id": "regular",
+        "path": "src/assets/fonts/rf-dewi-regular.woff2",
+        "family": "RF Dewi",
+        "weight": 400,
+        "sha256": "5bd57630cbcb3f04ac838b7ca68c851d77685803c3884a42df71438a8f0d04c8"
+      },
+      {
+        "id": "semibold",
+        "path": "src/assets/fonts/rf-dewi-semibold.woff2",
+        "family": "RF Dewi",
+        "weight": 600,
+        "sha256": "bd34b8ca2b84e7a0168fff7267c6daf435d2967f350aabb5cc46b0a07a920576"
+      },
+      {
+        "id": "bold",
+        "path": "src/assets/fonts/rf-dewi-bold.woff2",
+        "family": "RF Dewi",
+        "weight": 700,
+        "sha256": "4acc25ac108317556b0344180da83ff21279fd33a06f1a0f64263f86672525bc"
+      },
+      {
+        "id": "expanded-regular",
+        "path": "src/assets/fonts/RFDewiExpanded-Regular.ttf",
+        "family": "RF Dewi Expanded",
+        "weight": 400,
+        "sha256": "587671a624dfa2a74c4adbb9f89fe37914794e3599168b151006176d4c418160"
+      },
+      {
+        "id": "expanded-semibold",
+        "path": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+        "family": "RF Dewi Expanded",
+        "weight": 600,
+        "sha256": "d06e7dbc94b490432f47929dce60c6b56d081dfea34733b5169b6238aa5865d1"
+      },
+      {
+        "id": "expanded-bold",
+        "path": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+        "family": "RF Dewi Expanded",
+        "weight": 700,
+        "sha256": "b83e2c6d91ef691da891de119a6a4f784e6af40e674b961cb55bfb4db3a5aa8d"
+      },
+      {
+        "id": "expanded-black",
+        "path": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+        "family": "RF Dewi Expanded",
+        "weight": 900,
+        "sha256": "0e1a5c76340ffb4071bf738f38dc0003a8c7fe08a10adb4d54bfa40eb2550cd6"
+      }
+    ],
+    "images": [
+      {
+        "id": "project",
+        "path": "public/media/final-r2/journey/project.png",
+        "sha256": "fa60b9a9c55718d87bb168b55cae323b99be5eddb1be5e87594c607cce4690b7"
+      },
+      {
+        "id": "corpus",
+        "path": "public/media/final-r2/journey/corpus.png",
+        "sha256": "538708c2067ea13718e7f46dfa2e72a791d21a5eeb01c77eb16644645a14a13a"
+      },
+      {
+        "id": "floor",
+        "path": "public/media/final-r2/journey/floor.png",
+        "sha256": "d5e7f36c3cf32847ec5c3e8184698c8653b864eba329995aca64516b1cfab217"
+      },
+      {
+        "id": "lot",
+        "path": "public/media/final-r2/journey/lot.png",
+        "sha256": "e156ffc74104f91fa2a4b595b9ba9611eca7d517cf162a65e65efb52a4c33ff8"
+      }
+    ],
+    "references": []
+  },
+  "references": [
+    {
+      "id": "overview-upper",
+      "path": "docs/v2/references/overview-upper.jpg",
+      "bytes": 408406,
+      "width": 841,
+      "height": 1870,
+      "sha256": "3bbcaebddc99f29311630443ff0fdd900f9310795f389fede44116597a1fe0c9",
+      "role": "R:overall-direction; overridden by owner corrections",
+      "runtime": false
+    },
+    {
+      "id": "overview-lower",
+      "path": "docs/v2/references/overview-lower.jpg",
+      "bytes": 335151,
+      "width": 891,
+      "height": 1766,
+      "sha256": "5b1d9d71a5031aa5dc0d0ea026687c2c5f014cbab371535c887dcfefd2111629",
+      "role": "R:overall-direction; overridden by owner corrections",
+      "runtime": false
+    },
+    {
+      "id": "journey-white-bronze",
+      "path": "docs/v2/references/journey-white-bronze.jpg",
+      "bytes": 343425,
+      "width": 1512,
+      "height": 1040,
+      "sha256": "c9e681748565cb811bef4c99759c7be42ca13759c374ecadc26742615bbf4764",
+      "role": "C:latest-local-priority",
+      "runtime": false
+    }
+  ],
+  "additional": [
+    {
+      "path": "public/media/top-v2/hero.webp",
+      "role": "hero S; actual source, inspect before layout"
+    },
+    {
+      "path": "public/media/composition-core-20261023.png",
+      "role": "future composition core: whole project, not lot"
+    },
+    {
+      "path": "public/media/logo.webp",
+      "role": "existing identity; verify against current header"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "repository": "AURRRUS/twin-web-concept",
+  "version": "v2",
+  "branch": "work/twin-v2",
+  "v1CanonicalBranch": "work/twin-site-system",
+  "sourceBaseline": "0336e131b27f302574e16fad9c56eb70fcb15c5f",
+  "pagesBaseline": "504b5738ec53cf6abbf4c40e8499071063cb7fbd",
+  "status": "prepared-not-implemented",
+  "activeTask": "VIS-002",
+  "route": "/v2/",
+  "productionBasePath": "/twin-web-concept",
+  "publication": {
+    "allowed": true,
+    "scope": "v2 subtree only; preserve existing V1 bytes",
+    "basis": "Владелец поручил отдельную V2 и включил production workflow; прежнее правило публикации без согласования снимков"
+  },
+  "nextTask": "Hero + Journey, not whole-page migration"
+}
