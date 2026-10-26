@@ -1,5 +1,5 @@
 {
-  "status": "ready",
-  "implementation": "not-started",
-  "publication": "not-authorized"
+  "status": "implemented",
+  "implementation": "verified locally",
+  "publication": "authorized, pending online verification"
 }

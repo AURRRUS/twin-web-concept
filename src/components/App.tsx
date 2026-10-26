@@ -7,7 +7,7 @@ import { ProductDemo } from './ProductDemo';
 import { Composition } from './Composition';
 import { Channels } from './Channels';
 import { Delivery, Launch } from './Delivery';
-import { JourneyV4 } from './JourneyV4';
+import { JourneyAccordion } from './JourneyAccordion';
 import storyContent from '../lib/salesStoryContent.json';
 import {bindShortWords} from '../lib/text';
 import { ContactForm } from './ContactForm';
@@ -36,7 +36,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
       }
     };
     const compareMode=()=>{const u=new URL(location.href),legacy=/^#journey-(?:original|variant-[12356])(?:-|$)/.test(u.hash);if(legacy&&u.searchParams.get('compare')!=='journey'){u.searchParams.set('compare','journey');history.replaceState(history.state,'',u)}setCompare(u.searchParams.get('compare')==='journey')};
-    const demoEntry=(e:MouseEvent)=>{const link=(e.target as Element).closest<HTMLAnchorElement>('a[href]');if(page!=='home'||!link||!new URL(link.href).pathname.replace(/\/$/,'').endsWith('/demo'))return;const target=new URL(link.href);target.searchParams.delete('compare');for(const key of ['projectId','buildingId','floorId','lotId','view']as const){const v=selectionRef.current[key];if(v)target.searchParams.set(key,v);else target.searchParams.delete(key)}link.href=target.href;try{sessionStorage.setItem('twin-demo-origin',JSON.stringify({url:location.href,scroll:scrollY,focus:link.id||'',journeyScene:document.querySelector<HTMLElement>('.story-journey')?.dataset.active,detail:document.querySelector<HTMLElement>('.story-journey .story-media-stage')?.dataset.detail}))}catch{}};document.addEventListener('click',demoEntry);
+    const demoEntry=(e:MouseEvent)=>{const link=(e.target as Element).closest<HTMLAnchorElement>('a[href]');if(page!=='home'||!link||!new URL(link.href).pathname.replace(/\/$/,'').endsWith('/demo'))return;const target=new URL(link.href);target.searchParams.delete('compare');for(const key of ['projectId','buildingId','floorId','lotId','view']as const){const v=selectionRef.current[key];if(v)target.searchParams.set(key,v);else target.searchParams.delete(key)}link.href=target.href;try{sessionStorage.setItem('twin-demo-origin',JSON.stringify({url:location.href,scroll:scrollY,focus:link.id||'',journeyScene:document.querySelector<HTMLElement>('.twin-journey, .story-journey')?.dataset.active,detail:document.querySelector<HTMLElement>('.story-journey .story-media-stage')?.dataset.detail}))}catch{}};document.addEventListener('click',demoEntry);
     compareMode();load();
     if(page==='home'){try{if(sessionStorage.getItem('twin-demo-restore')==='true'){sessionStorage.removeItem('twin-demo-restore');const origin=JSON.parse(sessionStorage.getItem('twin-demo-origin')||'null');if(origin)void document.fonts.ready.then(()=>requestAnimationFrame(()=>{scrollTo({top:origin.scroll,behavior:'instant'});document.getElementById(origin.focus||'open-demo')?.focus({preventScroll:true})}))}}catch{}}
      setHydrated(true); window.addEventListener('popstate', load);window.addEventListener('hashchange',compareMode);window.addEventListener('popstate',compareMode);
@@ -59,7 +59,7 @@ export default function App({ page }: { page: 'home' | 'demo' }) {
     return () => { cleanup(); document.removeEventListener('astro:before-swap', leave); };
   }, [compare]);
   return <><a className="skip-link" href="#main">Перейти к содержанию</a>{page === 'demo' && <Header demo />}
-    <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero />{compare?<><a className="story-compare-exit story-shell" href="#journey-variant-4" onClick={e=>{e.preventDefault();const u=new URL(location.href);u.searchParams.delete('compare');u.hash='journey-variant-4';history.replaceState(history.state,'',u);setCompare(false);requestAnimationFrame(()=>document.getElementById('journey-variant-4')?.scrollIntoView())}}>Вернуться к основному сайту</a><JourneyComparisons /></>:<section id="journey-variant-4"><JourneyV4/></section>}<p className="story-bridge story-shell">{bindShortWords(storyContent.bridges.after_journey)}</p></>}
+    <main id="main" data-hydrated={hydrated}>{page === 'home' && <><Hero />{compare?<><a className="story-compare-exit story-shell" href="#journey-variant-4" onClick={e=>{e.preventDefault();const u=new URL(location.href);u.searchParams.delete('compare');u.hash='journey-variant-4';history.replaceState(history.state,'',u);setCompare(false);requestAnimationFrame(()=>document.getElementById('journey-variant-4')?.scrollIntoView())}}>Вернуться к основному сайту</a><JourneyComparisons /></>:<section id="journey-variant-4"><JourneyAccordion/></section>}<p className="story-bridge story-shell">{bindShortWords(storyContent.bridges.after_journey)}</p></>}
       {selectionNotice && <p className="selection-notice" role="status">{selectionNotice}</p>}
       <ProductDemo selection={selection} onChange={updateSelection} full={page === 'demo'} />
       {page === 'home' && <><Composition onTopic={setTopic} /><p className="story-bridge story-shell">{bindShortWords(storyContent.bridges.before_channels)}</p><Channels /><Delivery /><Launch /><ContactForm topic={topic} onTopic={setTopic} selection={selection} /></>}
