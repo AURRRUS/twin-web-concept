@@ -19,9 +19,11 @@ export function initCraftReveals(root:Document=document){
   if(!n.hasAttribute('data-craft-waiting'))return;
   n.removeAttribute('data-craft-waiting');if(reduced.matches)return;
   const role=n.dataset.craftReveal||'fact',journey=!!n.closest('.journey-cinematic'),isMedia=role==='media'||role==='composition-core',visual=isMedia||role==='contact-form';
-  const delay=journey?(role==='title'?100:role==='body'?360:600):role==='eyebrow'||role==='title'?0:role==='body'?90:180;
-  const duration=journey?(role==='title'?700:role==='body'?650:1050):600;
-  const y=journey?(role==='title'?18:role==='body'?12:-32):20;
+  const launch=role==='launch'?Math.max(0,[...n.parentElement!.children].indexOf(n))*70:0;
+  const channel=!!n.closest('.story-channel-stories');
+  const delay=channel?(role==='title'?0:role==='body'?40:80):role==='launch'?launch:journey?(role==='title'?100:role==='body'?360:600):role==='eyebrow'||role==='title'?0:role==='body'?60:120;
+  const duration=journey?(role==='title'?700:role==='body'?650:1050):420;
+  const y=journey?(role==='title'?18:role==='body'?12:-32):12;
   const initial:Keyframe={opacity:0,transform:`translateY(${y}px)`},final:Keyframe={opacity:1,transform:'translateY(0px)'};
   if(journey&&role==='title'){initial.clipPath='inset(0 0 100% 0)';final.clipPath='inset(0 0 0% 0)';}
   if(journey&&isMedia){initial.transform=`translateY(-32px) scale(1.06)`;final.transform='translateY(0px) scale(1)';}
@@ -71,7 +73,7 @@ export function initCraftReveals(root:Document=document){
  root.addEventListener('pointerdown',pointer,true);root.addEventListener('keydown',keyboard,true);root.addEventListener('pointercancel',keyboard,true);root.addEventListener('click',click,true);
  root.addEventListener('focusin',focus);root.addEventListener('twin:settle-reveal',sceneSettle);window.addEventListener('hashchange',anchor);reduced.addEventListener('change',motionChange);anchor();
  // The clean photograph never disappears; the four text/action groups enter once.
- const heroNodes=[['.hero h1',0],['.hero-description',90],['.hero-channels',180],['.hero .actions',270]] as const;
- if(!reduced.matches&&scrollY<20)for(const [selector,delay]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:600,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
+ const heroNodes=[['.hero h1',0],['.hero-description',60],['.hero-channels',120],['.hero .actions',180]] as const;
+ if(!reduced.matches&&scrollY<20)for(const [selector,delay]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
  return()=>{cancelAnimationFrame(scrollRaf);window.removeEventListener('scroll',scroll);root.removeEventListener('visibilitychange',visibility);cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
 }

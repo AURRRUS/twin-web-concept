@@ -1,0 +1,775 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/work/twin-grid-pr/node_modules/.bin/playwright",
+      "test",
+      "tests/sales-story.spec.ts"
+    ],
+    "configFile": "/workspace/work/twin-grid-pr/playwright.config.ts",
+    "rootDir": "/workspace/work/twin-grid-pr/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/work/twin-grid-pr/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/work/twin-grid-pr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/work/twin-grid-pr/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "",
+        "testDir": "/workspace/work/twin-grid-pr/tests",
+        "snapshotDir": "/workspace/work/twin-grid-pr/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4350",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "launchOptions": {
+            "executablePath": "/usr/bin/chromium",
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --ignore-lock --port 4350",
+      "url": "http://127.0.0.1:4350",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "sales-story.spec.ts",
+      "file": "sales-story.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Sales story 1920x1080: main path, all scenes and responsive",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9567,
+                  "error": {
+                    "message": "AssertionError: No premature reveal",
+                    "stack": "AssertionError: No premature reveal\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565",
+                    "location": {
+                      "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                      "column": 90,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                        "column": 90,
+                        "line": 13
+                      },
+                      "message": "AssertionError: No premature reveal\n\n   at ../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:01.698Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-19-c5af9-h-all-scenes-and-responsive/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-19-c5af9-h-all-scenes-and-responsive/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                    "column": 90,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-ae9e56fc71f285ea049c",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1440x900: main path, all scenes and responsive",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 22842,
+                  "error": {
+                    "message": "AssertionError: No premature reveal",
+                    "stack": "AssertionError: No premature reveal\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565",
+                    "location": {
+                      "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                      "column": 90,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                        "column": 90,
+                        "line": 13
+                      },
+                      "message": "AssertionError: No premature reveal\n\n   at ../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:01.698Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-14-43aa9-h-all-scenes-and-responsive/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-14-43aa9-h-all-scenes-and-responsive/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                    "column": 90,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-ce51cf912a9aac558de8",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1366x768: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6980,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:13.187Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-33a9f45f5b6e4d518395",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1280x720: main path, all scenes and responsive",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7682,
+                  "error": {
+                    "message": "AssertionError: No premature reveal",
+                    "stack": "AssertionError: No premature reveal\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565",
+                    "location": {
+                      "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                      "column": 90,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                        "column": 90,
+                        "line": 13
+                      },
+                      "message": "AssertionError: No premature reveal\n\n   at ../scripts/sales-story-qa.mjs:13\n\n  11 |  await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().bottom+scrollY+80,behavior:'instant'}));await storySeek(p,kind,targets[3]);assert.equal(await root.getAttribute('data-scene'),data[3].id);await root.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight-80,behavior:'instant'}));await storySeek(p,kind,targets[0]);for(const i of[0,3,1]){await root.locator('.story-route').locator(kind==='journey'?'button':'a').nth(i).click();await p.waitForFunction(({sel,target})=>Math.abs(Number(document.querySelector(sel).dataset.progress)-target)<.002,{sel:kind==='journey'?'.story-journey':'.story-channels',target:targets[i]});assert.equal(await root.getAttribute('data-scene'),data[i].id)}return frames;\n  12 | }\n> 13 | export async function checkStoryQualities(p){const n=p.locator('.story-quality-diagram');assert(Number(await n.getAttribute('data-progress')||0)<.001,'No premature reveal');const values=[];for(const top of[.79,.6,.4,.15]){await n.evaluate((n,top)=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*top,behavior:'instant'}),top);await p.waitForTimeout(60);values.push(Number(await n.getAttribute('data-progress')))}assert(values[1]>values[0]&&values[2]>values[1]&&values[3]>.999);const final=await n.getAttribute('style');await p.waitForTimeout(160);assert.equal(await n.getAttribute('style'),final);await n.evaluate(n=>scrollTo({top:n.getBoundingClientRect().top+scrollY-innerHeight*1.2,behavior:'instant'}));await p.waitForTimeout(60);assert.equal(await n.getAttribute('style'),final);assert.equal(await n.getAttribute('data-word'),'Эффективно');assert.equal(await p.locator('#launch').evaluate(n=>n.tagName),'SECTION');return values}\n     |                                                                                          ^\n  14 | export function checkStoryMath(){for(let i=0;i<=20000;i++){const p=i/20000,j=journeyStoryFrame(p),c=channelStoryFrame(p);assert(j.oldOpacity*j.newOpacity===0);assert(j.active>=0&&j.active<=3&&c.active>=0&&c.active<=3);assert.deepEqual(j,journeyStoryFrame(p));for(const v of Object.values(qualityStoryFrame(p)))assert(v>=0&&v<=1)}return{frames:20001,imageNonOverlap:true,reversible:true}}\n  15 |\n    at checkStoryQualities (/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs:13:90)\n    at /workspace/work/twin-grid-pr/tests/sales-story.spec.ts:3:565"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:20.540Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-12-e53d9-h-all-scenes-and-responsive/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/work/twin-grid-pr/test-results/sales-story-Sales-story-12-e53d9-h-all-scenes-and-responsive/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/work/twin-grid-pr/scripts/sales-story-qa.mjs",
+                    "column": 90,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-a85c6e9e16e4eb492db4",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 1024x768: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:27.142Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-892b83799292c3629463",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 768x1024: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1852,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:29.188Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-37eeb86f13f53faea932",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 320x568: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:30.683Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-76e724c198ff828a8d0a",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 360x800: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2016,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:31.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-e2b42e6472031d9b4ee7",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 390x844: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:33.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-4a4da581b5a7bf27dc69",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 430x932: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2327,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:33.340Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-de05fee0b288645fd8ab",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "Sales story 844x390: main path, all scenes and responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:35.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-23418e994b441c258b33",
+          "file": "sales-story.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "mobile zoom/pan/Back restores scene, focus and scroll; demo is full page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3254,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:35.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-f5eb84bb53e61f3e46c7",
+          "file": "sales-story.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "mobile form has no hidden required company, preserves optional input and consent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:37.336Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-6d16d942bb3e227e97dc",
+          "file": "sales-story.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "low window/reduced motion/resize and hidden-tab reconciliation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3376,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:39.036Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-76775c6fc2dc41d21f8f",
+          "file": "sales-story.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "legacy hashes enable comparison without dropping query; exit retains context",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4322,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:39.759Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-31d1aa3181250281fd65",
+          "file": "sales-story.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "story phase arithmetic never combines two rasters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 293,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T20:31:42.447Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8199ca0853df61544b1-bac14b56b5c9e2932d19",
+          "file": "sales-story.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-25T20:31:00.285Z",
+    "duration": 43934.443,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

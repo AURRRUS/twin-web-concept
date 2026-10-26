@@ -1,0 +1,171 @@
+{
+  "status": "Owner accepted direction; exact implementation copy locked by this handoff; not research findings",
+  "journey": [
+    {
+      "id": "project",
+      "index": 1,
+      "label": "Проект",
+      "heading": {
+        "main": "Покажите, что делает",
+        "bronze": "проект ценным"
+      },
+      "buyer_label": "Покупателю важно понять",
+      "buyer_question": "Что есть рядом и насколько мне подходит это место",
+      "sales_label": "Для команды продаж",
+      "sales_application": "Объясняйте преимущества расположения на конкретных деталях",
+      "media_path": "public/media/final-r2/journey/project.png"
+    },
+    {
+      "id": "corpus",
+      "index": 2,
+      "label": "Корпус",
+      "heading": {
+        "main": "Раскройте преимущества",
+        "bronze": "каждого корпуса"
+      },
+      "buyer_label": "Покупателю важно понять",
+      "buyer_question": "Какой корпус выбрать по расположению и видам",
+      "sales_label": "Для команды продаж",
+      "sales_application": "Сравнивайте корпуса вместе с покупателем",
+      "media_path": "public/media/final-r2/journey/corpus.png"
+    },
+    {
+      "id": "floor",
+      "index": 3,
+      "label": "Этаж",
+      "heading": {
+        "main": "Упростите выбор",
+        "bronze": "подходящего лота"
+      },
+      "buyer_label": "Покупателю важно понять",
+      "buyer_question": "Какие варианты стоит сравнить на этом этаже",
+      "sales_label": "Для команды продаж",
+      "sales_application": "Обсуждайте конкретные варианты на одном плане",
+      "media_path": "public/media/final-r2/journey/floor.png"
+    },
+    {
+      "id": "lot",
+      "index": 4,
+      "label": "Лот",
+      "heading": {
+        "main": "Дайте почувствовать",
+        "bronze": "пространство лота"
+      },
+      "buyer_label": "Покупателю важно понять",
+      "buyer_question": "Как устроено пространство и что я буду видеть из окна",
+      "sales_label": "Для команды продаж",
+      "sales_application": "Ведите предметный разговор о выбранном лоте",
+      "media_path": "public/media/final-r2/journey/lot.png"
+    }
+  ],
+  "journey_disclaimer": "Иллюстрация интерфейса · демонстрационный проект",
+  "expand": "Развернуть",
+  "bridges": {
+    "after_journey": "От знакомства с проектом — к обсуждению конкретного лота",
+    "before_channels": "Используйте эту основу во всех каналах продаж"
+  },
+  "channels_heading": {
+    "main": "Четыре канала —",
+    "bronze": "одна основа"
+  },
+  "channels_description": "Показывайте один проект в разных сценариях покупки",
+  "channels": [
+    {
+      "id": "site",
+      "index": 1,
+      "label": "На сайте",
+      "title": "Покупатель изучает сам",
+      "description": "Рассматривает проект и лоты, прежде чем обратиться",
+      "media_path": "public/media/final-r2/channels/site.png"
+    },
+    {
+      "id": "online",
+      "index": 2,
+      "label": "Дистанционно",
+      "title": "Менеджер показывает онлайн",
+      "description": "Обсуждает проект и конкретный лот вместе с покупателем",
+      "media_path": "public/media/final-r2/channels/online.png"
+    },
+    {
+      "id": "agent",
+      "index": 3,
+      "label": "Через агентов",
+      "title": "Агент показывает на встрече",
+      "description": "Использует материалы проекта и подборку в разговоре",
+      "media_path": "public/media/final-r2/channels/agent.png"
+    },
+    {
+      "id": "office",
+      "index": 4,
+      "label": "В офисе продаж",
+      "title": "Команда показывает на большом экране",
+      "description": "Сравнивает расположение, планировки и виды вместе с покупателем",
+      "media_path": "public/media/final-r2/channels/office.png"
+    }
+  ],
+  "qualities": {
+    "lead": "Обычно предлагают выбрать два",
+    "heading": {
+      "main": "В Twin сходятся",
+      "bronze": "все три качества"
+    },
+    "arguments": [
+      {
+        "id": "time",
+        "label": "Быстро",
+        "value": "3 месяца",
+        "description": "Разработка и сдача проекта",
+        "status": "Условие из текущего сайта, не новая гарантия"
+      },
+      {
+        "id": "budget",
+        "label": "Доступно",
+        "prefix": "В среднем",
+        "value": "5 млн ₽",
+        "description": "Конфигурация под задачи проекта",
+        "status": "Условие из текущего сайта; не вывод о рынке"
+      },
+      {
+        "id": "application",
+        "initial_label": "Эффектно",
+        "final_label": "Эффективно",
+        "value": "Помогайте выбирать",
+        "description": "Корпус, этаж, планировка и вид — в одном сценарии",
+        "status": "Функциональное объяснение; без обещания ROI/конверсии"
+      }
+    ],
+    "note": "Состав решения, стоимость и график фиксируем для конкретного проекта"
+  },
+  "launch": {
+    "heading": "Как запускаем Twin на проекте",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Материалы и задачи",
+        "description": "Изучаем проект и цели"
+      },
+      {
+        "index": "02",
+        "title": "Состав решения",
+        "description": "Предлагаем конфигурацию и фиксируем параметры"
+      },
+      {
+        "index": "03",
+        "title": "Разработка",
+        "description": "Создаём и наполняем двойник"
+      },
+      {
+        "index": "04",
+        "title": "Проверка и запуск",
+        "description": "Тестируем и запускаем"
+      }
+    ]
+  },
+  "cta": {
+    "demo": "Посмотреть Twin",
+    "contact": "Обсудить проект",
+    "mobile_demo": "Открыть демо",
+    "mobile_form_details": "Дополнить запрос"
+  },
+  "unchanged": "Hero desktop, positioning, Composition content, contact wording and honest demo/integration statuses remain current. Mobile reflows these sections; do not replace their full text."
+}

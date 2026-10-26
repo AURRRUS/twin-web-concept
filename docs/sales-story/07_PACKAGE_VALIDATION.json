@@ -1,0 +1,103 @@
+{
+  "fonts": [
+    {
+      "file": "RFDewiExpanded-Black.ttf",
+      "weight": 900,
+      "cyrillic": true
+    },
+    {
+      "file": "RFDewiExpanded-Bold.ttf",
+      "weight": 700,
+      "cyrillic": true
+    },
+    {
+      "file": "RFDewiExpanded-Regular.ttf",
+      "weight": 400,
+      "cyrillic": true
+    },
+    {
+      "file": "RFDewiExpanded-Semibold.ttf",
+      "weight": 600,
+      "cyrillic": true
+    },
+    {
+      "file": "inter-tight-variable.woff2",
+      "weight": 400,
+      "cyrillic": true,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "max": 900.0
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "assets/channels/agent.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/channels/office.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/channels/online.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/channels/site.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/composition-core.png",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "file": "assets/journey/corpus.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/journey/floor.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "assets/journey/lot.png",
+      "dimensions": [
+        1671,
+        941
+      ]
+    },
+    {
+      "file": "assets/journey/project.png",
+      "dimensions": [
+        1671,
+        941
+      ]
+    }
+  ],
+  "scope": "Package validation only; website implementation and user testing not performed by this handoff",
+  "source_commit": "7a91cece7ffc3fb66edb9aa6d2a81b044846101d"
+}

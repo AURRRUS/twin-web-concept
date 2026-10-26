@@ -1,0 +1,130 @@
+[
+  {
+    "path": "public/media/sales-story/journey/lot-840.webp",
+    "bytes": 103556,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/lot-1672.webp",
+    "bytes": 291408,
+    "dimensions": [
+      1671,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/project-840.webp",
+    "bytes": 146482,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/project-1672.webp",
+    "bytes": 470170,
+    "dimensions": [
+      1671,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/floor-840.webp",
+    "bytes": 118990,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/floor-1672.webp",
+    "bytes": 319536,
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/corpus-840.webp",
+    "bytes": 131470,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/journey/corpus-1672.webp",
+    "bytes": 410792,
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/agent-840.webp",
+    "bytes": 80194,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/agent-1672.webp",
+    "bytes": 219508,
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/online-840.webp",
+    "bytes": 87194,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/online-1672.webp",
+    "bytes": 245606,
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/office-840.webp",
+    "bytes": 107548,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/office-1672.webp",
+    "bytes": 320730,
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/site-840.webp",
+    "bytes": 78788,
+    "dimensions": [
+      840,
+      473
+    ]
+  },
+  {
+    "path": "public/media/sales-story/channels/site-1672.webp",
+    "bytes": 218590,
+    "dimensions": [
+      1672,
+      941
+    ]
+  }
+]

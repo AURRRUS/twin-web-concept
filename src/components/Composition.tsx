@@ -74,7 +74,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
     onTopic(title.replace(/\u00a0/g, ' ')); restorePending.current = false;
     const url = new URL(window.location.href); url.searchParams.delete('component'); url.hash = 'contact';
     window.history.replaceState({}, '', url); createdEntry.current = false; assign(null);
-    requestAnimationFrame(() => { document.getElementById('contact')?.scrollIntoView(); document.getElementById('contact-topic')?.focus({ preventScroll: true }); });
+    requestAnimationFrame(() => { document.getElementById('contact')?.scrollIntoView(); document.querySelector('#contact .contact-details')?.setAttribute('open',''); document.getElementById('contact-topic')?.focus({ preventScroll: true }); });
   }
   const map = useRef<HTMLDivElement>(null);
   const [canvas,setCanvas]=useState({width:1300,height:600});
@@ -97,7 +97,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       <svg className="composition-lines" viewBox={`0 0 ${canvas.width} ${canvas.height}`} preserveAspectRatio="none" aria-hidden="true">
         {connections.map((route, i) => <g data-craft-pair={items[i].id} data-craft-reveal="fact" key={items[i].id} data-active={focused === items[i].id}><path d={route.path} fill="none" /><circle cx={route.x} cy={route.y} r="4" /></g>)}
       </svg>
-      <a data-craft-reveal="composition-core" className="map-core" href="?component=core#composition" onClick={e => open(e, 'core')} onFocus={() => setFocused('core')} onBlur={() => setFocused(null)}><ComponentArt id="core" /><span className="badge">Ядро продукта</span><h3>Коммерческий<br />цифровой двойник</h3><span className="core-explore">Исследовать ядро <Arrow /></span></a>
+      <a data-craft-reveal="composition-core" className="map-core" href="?component=core#composition" onClick={e => open(e, 'core')} onFocus={() => setFocused('core')} onBlur={() => setFocused(null)}><ComponentArt id="core" /><span className="badge">Ядро продукта</span><h3>Коммерческий{' '}<br />цифровой двойник</h3><span className="core-explore">Исследовать ядро <Arrow /></span></a>
       {items.map((item, i) => <a data-craft-pair={item.id} data-craft-reveal="fact" key={item.id} className={`map-component component-${item.id}`} href={item.modalHref} onClick={e => open(e, item.id)} onPointerEnter={() => setFocused(item.id)} onPointerLeave={() => setFocused(null)} onFocus={() => setFocused(item.id)} onBlur={() => setFocused(null)} style={{ gridArea: ['1 / 1', '2 / 1', '3 / 1', '1 / 3', '2 / 3', '3 / 3'][i], '--component-index': i } as CSSProperties}>
         <div className="component-art"><ComponentArt id={item.id} /></div>
         {item.extension && <span className="extension">Расширение</span>}
