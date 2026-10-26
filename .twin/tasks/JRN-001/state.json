@@ -1,5 +1,7 @@
 {
-  "status": "implemented",
-  "implementation": "verified locally",
-  "publication": "authorized, pending online verification"
+  "status": "released",
+  "sourceCommit": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+  "pagesCommit": "504b5738ec53cf6abbf4c40e8499071063cb7fbd",
+  "online": "verified",
+  "ownerVisualApproval": "pending"
 }

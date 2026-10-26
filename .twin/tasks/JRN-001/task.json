@@ -1,7 +1,7 @@
 {
   "id": "JRN-001",
   "mode": "execute",
-  "status": "implemented",
+  "status": "released",
   "outcome": "Связная и читаемая композиция второго экрана: раскрывающиеся бронзовые состояния и крупный настоящий product UI",
   "baseline": "b3c3418073618af2259ff46ec26a55e39ebb64ff",
   "scope": [
