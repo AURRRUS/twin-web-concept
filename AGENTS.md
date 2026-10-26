@@ -87,3 +87,11 @@ Journey: H2/вопрос покупателя, маршрут над полны�
 Каналы:28/72,gap40, активные мысль/пояснение слева; справа фотография без белого подвала,400/100svh и обратимая стопка. ОдинCTA. Mobile —4истории в потоке. Три качества: разные вершины для3месяцев/в среднем5млн/Помогайте выбирать; без фото справа и повторной строки качеств, модель вторична, монотонный локальный reveal. Самостоятельный #launch.
 
 Сохранять реальные Black900/Bold700/Semibold600 и variable Inter450/вопрос500, нулевой tracking заголовков/.015em тела, no synthetic/no scaleX. Канонические новые компоненты — journeyV4.css и salesStory.css, без влияния на сохранённые сравнительные механики. Desktop hero сохранён, mobile — собственная компоновка. Без длинных мобильных треков, скрытого required-company и фиктивной отправки/viewer. Zoom/Back/фокус/позиция и передача selection в /demo обязательны. После подходящих проверок публиковать штатно без одобрения скриншотов; подтвердить sourceCommit/Pages commit и реальное поведение онлайн.
+
+# Visual Correction R2 — 26 октября 2026
+
+[00_START_HERE](docs/visual-correction-r2/00_START_HERE.md) и01_DIAGNOSIS/02_LAYOUT/03_SCROLL/04_CONTENT/05_MOBILE/06_ACCEPTANCE заменяют конфликтующие геометрию и motion R1. Общий Journey frame, без отдельной ширины медиа/canvas-измерения текста. Каналы42/58, весь текст/маршрут/CTA слева;2×2nav при16px. Качества38/62 с proportional720/760canvas, равносторонними координатами и model52.78% — core, не asset состава.
+
+Layout/geometry/pure frame/paint/entry раздельны. Pure frame+JSON из reference заменяют старый вычислитель; один driver на host. p по DOM-hostTop/H/V, без подмены readiness. Decode/error →repaint, не layout. Resize сохраняет active, preload локальный; cleanup. Entry только внешние data-entry, внутренние scene/quality исключены. Современные entryonce, сцены reversible/repeat; исходное сравнение сохраняет свой repeat-entry. Мобильную логику, hero, состав, демо, контакт и сравнения не перестраивать.
+
+База и сверенные до правок резервы — BASELINE.md. После build/typecheck и браузерной приёмки публиковать штатно без одобрения снимков. Онлайн подтвердить sourceCommit/Pages commit и реальные геометрию/поведение. Тесты Playwright используют общий preview4360.

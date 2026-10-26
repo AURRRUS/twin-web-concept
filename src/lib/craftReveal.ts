@@ -1,79 +1,81 @@
-/** Short entrances own outer slots; the pure Journey driver owns only inner scene layers. */
-export function initCraftReveals(root:Document=document){
- const nodes=[...root.querySelectorAll<HTMLElement>('[data-craft-reveal]')],reduced=matchMedia('(prefers-reduced-motion:reduce)'),small=matchMedia('(max-width:1279px)');
- const animations=new Map<HTMLElement,Animation>(),observers:IntersectionObserver[]=[];
- const replayHosts=[...root.querySelectorAll<HTMLElement>('[data-craft-repeat="after-exit"]')],replayState=new Map(replayHosts.map(n=>[n,{played:false,armed:true,cycles:0}]));
- let pointerDown=false,resizeRaf=0,scrollRaf=0;
- const group=(n:HTMLElement)=>{
-  const cinematic=n.closest<HTMLElement>('.journey-cinematic');
-  if(cinematic)return cinematic.querySelector<HTMLElement>('.scene-title-slot')||n;
-  if(n.dataset.craftPair)return root.querySelector<HTMLElement>(`.map-component[data-craft-pair="${n.dataset.craftPair}"]`)||n;
-  return ['eyebrow','title','body'].includes(n.dataset.craftReveal||'')?n.closest<HTMLElement>('.section-heading,.center-heading,.channels-heading,.contact-copy,.scene-text-zone,.static-scene')||n:n;
- };
- const groups=new Map<HTMLElement,HTMLElement[]>(),registered=new WeakSet<HTMLElement>();
- for(const n of nodes){const g=group(n);groups.set(g,[...(groups.get(g)||[]),n]);}
- const settle=(node:Element)=>{
-  for(const [g,list]of groups)if(node.contains(g)||g===node){for(const o of observers)o.unobserve(g);for(const n of list){n.removeAttribute('data-craft-waiting');animations.get(n)?.cancel();animations.delete(n);}}
- };
- const start=(n:HTMLElement)=>{
-  if(!n.hasAttribute('data-craft-waiting'))return;
-  n.removeAttribute('data-craft-waiting');if(reduced.matches)return;
-  const role=n.dataset.craftReveal||'fact',journey=!!n.closest('.journey-cinematic'),isMedia=role==='media'||role==='composition-core',visual=isMedia||role==='contact-form';
-  const launch=role==='launch'?Math.max(0,[...n.parentElement!.children].indexOf(n))*70:0;
-  const channel=!!n.closest('.story-channel-stories');
-  const delay=channel?(role==='title'?0:role==='body'?40:80):role==='launch'?launch:journey?(role==='title'?100:role==='body'?360:600):role==='eyebrow'||role==='title'?0:role==='body'?60:120;
-  const duration=journey?(role==='title'?700:role==='body'?650:1050):420;
-  const y=journey?(role==='title'?18:role==='body'?12:-32):12;
-  const initial:Keyframe={opacity:0,transform:`translateY(${y}px)`},final:Keyframe={opacity:1,transform:'translateY(0px)'};
-  if(journey&&role==='title'){initial.clipPath='inset(0 0 100% 0)';final.clipPath='inset(0 0 0% 0)';}
-  if(journey&&isMedia){initial.transform=`translateY(-32px) scale(1.06)`;final.transform='translateY(0px) scale(1)';}
-  try{const a=n.animate(journey&&isMedia?[initial,{opacity:1,offset:.2},final]:[initial,final],{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>{if(animations.get(n)===a)animations.delete(n);});}catch{settle(group(n));}
- };
- if(!reduced.matches&&'IntersectionObserver'in window&&typeof Element.prototype.animate==='function'){
-  for(const margin of['-15%','-15%'])observers.push(new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){const g=e.target as HTMLElement,host=g.closest<HTMLElement>('[data-craft-repeat="after-exit"]'),state=host&&replayState.get(host);
-    if(state?.armed){state.armed=false;state.played=true;state.cycles++;host!.dataset.entryCycle=String(state.cycles);delete host!.dataset.entryArmed;}
-    for(const n of groups.get(g)||[])start(n);for(const o of observers)o.unobserve(e.target);}}, {rootMargin:`0px 0px ${margin} 0px`,threshold:0}));
- }
- const register=()=>{
-  if(reduced.matches||!observers.length)return;
-  for(const [g,list]of groups){
-   // Hidden fallback copies do not run, and may be registered after a breakpoint change.
-   if(!g.getClientRects().length){for(const o of observers)o.unobserve(g);registered.delete(g);settle(g);continue;}
-   if(registered.has(g))continue;
-   registered.add(g);
-   const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||'')),threshold=.85;
-   if(g.getBoundingClientRect().top>=innerHeight*threshold)for(const n of list)n.setAttribute('data-craft-waiting','');
-   observers[heading?0:1].observe(g);
-  }
- };
- const replayObserver=!reduced.matches&&observers.length?new IntersectionObserver(entries=>{
-  for(const entry of entries){const host=entry.target as HTMLElement,state=replayState.get(host)!;
-   const r=entry.boundingClientRect,fullyOutside=r.bottom<=0||r.top>=innerHeight;
-   if(!fullyOutside||!state.played||state.armed)continue;
-   state.armed=true;host.dataset.entryArmed='true';
-   for(const [g,list]of groups)if(host.contains(g)&&g.getClientRects().length){
-    for(const n of list){animations.get(n)?.cancel();animations.delete(n);n.setAttribute('data-craft-waiting','');}
-    for(const o of observers)o.unobserve(g);
-    const heading=list.some(n=>['eyebrow','title','body'].includes(n.dataset.craftReveal||''));observers[heading?0:1].observe(g);
-   }
-  }
- },{threshold:[0,0.00001]}):undefined;
- for(const host of replayHosts)replayObserver?.observe(host);
- register();const resize=()=>{cancelAnimationFrame(resizeRaf);resizeRaf=requestAnimationFrame(register);};window.addEventListener('resize',resize);
- // A fast native jump settles groups already passed; Journey owns its separate replay policy.
- const settlePassed=()=>{scrollRaf=0;for(const [g]of groups)if(!g.closest('.journey')&&g.getClientRects().length&&g.getBoundingClientRect().bottom<=0)settle(g);};
- const scroll=()=>{if(!scrollRaf)scrollRaf=requestAnimationFrame(settlePassed);};
- const visibility=()=>{if(document.hidden)return;settlePassed();for(const [g]of groups)if(!g.closest('.journey')&&g.getClientRects().length){const r=g.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)settle(g);}};
- window.addEventListener('scroll',scroll,{passive:true});root.addEventListener('visibilitychange',visibility);
- const focus=(e:Event)=>{if(pointerDown)return;for(const [n,a]of animations)if(n.contains(e.target as Node)){a.cancel();animations.delete(n);}for(const [g]of groups)if(g.contains(e.target as Node))settle(g);};
- const anchor=()=>{let id=location.hash.slice(1);try{id=decodeURIComponent(id);}catch{}const t=document.getElementById(id);if(t)settle(t);};
- const motionChange=()=>{if(reduced.matches){for(const o of observers)o.disconnect();replayObserver?.disconnect();settle(root.documentElement);for(const a of animations.values())a.cancel();animations.clear();}};
- const sceneSettle=(e:Event)=>{const target=e.target as HTMLElement;const state=replayState.get(target);if(state){state.played=true;state.armed=false;}settle(target);};
- const pointer=()=>{pointerDown=true;};const keyboard=()=>{pointerDown=false;};const click=(e:Event)=>{pointerDown=false;focus(e);};
- root.addEventListener('pointerdown',pointer,true);root.addEventListener('keydown',keyboard,true);root.addEventListener('pointercancel',keyboard,true);root.addEventListener('click',click,true);
- root.addEventListener('focusin',focus);root.addEventListener('twin:settle-reveal',sceneSettle);window.addEventListener('hashchange',anchor);reduced.addEventListener('change',motionChange);anchor();
- // The clean photograph never disappears; the four text/action groups enter once.
- const heroNodes=[['.hero h1',0],['.hero-description',60],['.hero-channels',120],['.hero .actions',180]] as const;
- if(!reduced.matches&&scrollY<20)for(const [selector,delay]of heroNodes){const n=root.querySelector<HTMLElement>(selector);if(n){const a=n.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.set(n,a);a.finished.catch(()=>{}).finally(()=>animations.delete(n));}}
- return()=>{cancelAnimationFrame(scrollRaf);window.removeEventListener('scroll',scroll);root.removeEventListener('visibilitychange',visibility);cancelAnimationFrame(resizeRaf);replayObserver?.disconnect();window.removeEventListener('resize',resize);root.removeEventListener('pointerdown',pointer,true);root.removeEventListener('keydown',keyboard,true);root.removeEventListener('pointercancel',keyboard,true);root.removeEventListener('click',click,true);for(const o of observers)o.disconnect();root.removeEventListener('focusin',focus);root.removeEventListener('twin:settle-reveal',sceneSettle);window.removeEventListener('hashchange',anchor);reduced.removeEventListener('change',motionChange);for(const a of animations.values())a.cancel();for(const n of nodes)n.removeAttribute('data-craft-waiting');};
+/** Entry owns only outer shells; pure scroll painters exclusively own scene layers. */
+export function initCraftReveals(root: Document = document) {
+  const reduced = matchMedia('(prefers-reduced-motion:reduce)');
+  const controlled = '[data-story-title],[data-story-question],[data-story-sales],.story-photo,.quality-canvas,.scene-title-group,.scene-body-group,.scene-material';
+  const candidates = [...root.querySelectorAll<HTMLElement>('[data-entry],[data-craft-reveal]')];
+  const nodes = candidates.filter(node => node instanceof HTMLElement && !node.closest(controlled) && !node.parentElement?.closest('[data-entry]'));
+  const animations = new Map<HTMLElement, Animation>();
+  let legacyObserver: IntersectionObserver | undefined;
+  const legacyHosts=[...root.querySelectorAll<HTMLElement>('.journey[data-craft-repeat="after-exit"]')];
+  const legacyState=new Map(legacyHosts.map(host=>[host,{played:false,armed:true}]));
+  let observer: IntersectionObserver | undefined, scrollRaf = 0, resizeRaf = 0, disposed = false;
+  const settle = (node: HTMLElement) => {
+    node.removeAttribute('data-entry-waiting');
+    node.removeAttribute('data-craft-waiting');
+    animations.get(node)?.cancel(); animations.delete(node);
+    node.dataset.entrySeen = 'true'; observer?.unobserve(node);
+  };
+  const reveal = (node: HTMLElement) => {
+    if (!node.hasAttribute('data-entry-waiting')) return;
+    node.removeAttribute('data-entry-waiting'); node.dataset.entrySeen = 'true'; observer?.unobserve(node);
+    if (reduced.matches) return;
+    const role = node.dataset.entry || node.dataset.craftReveal || 'group';
+    const story = role === 'story-frame';
+    const delay = role === 'launch' ? Math.min(210, [...node.parentElement!.children].indexOf(node) * 70) : role === 'body' ? 60 : ['media', 'contact-form', 'form'].includes(role) ? 120 : 0;
+    try {
+      const animation = node.animate([{ opacity: 0, transform: `translateY(${story ? 12 : 14}px)` }, { opacity: 1, transform: 'none' }], { duration: story ? 400 : 420, delay, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'backwards' });
+      animations.set(node, animation);
+      animation.finished.catch(() => {}).finally(() => { if (animations.get(node) === animation) animations.delete(node); });
+    } catch { settle(node); }
+  };
+  const register = () => {
+    if (disposed) return;
+    observer?.disconnect();
+    if (reduced.matches || !('IntersectionObserver' in window) || typeof Element.prototype.animate !== 'function') { nodes.forEach(settle); return; }
+    try {
+      observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) reveal(entry.target as HTMLElement); }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
+      for (const node of nodes) {
+        if (!node.getClientRects().length) { node.removeAttribute('data-entry-waiting'); continue; }
+        node.dataset.entry ||= node.dataset.craftReveal || 'group';
+        if (node.dataset.entrySeen === 'true') continue;
+        const rect = node.getBoundingClientRect();
+        if (rect.top < innerHeight * .88) { settle(node); continue; }
+        observer.observe(node);
+        node.setAttribute('data-entry-waiting', '');
+      }
+    } catch { nodes.forEach(settle); }
+  };
+  const settlePassed = () => {
+    scrollRaf = 0;
+    for (const node of nodes) if (node.hasAttribute('data-entry-waiting') && node.getClientRects().length && node.getBoundingClientRect().bottom <= 0) settle(node);
+  };
+  const scroll = () => { if (!scrollRaf) scrollRaf = requestAnimationFrame(settlePassed); };
+  const resize = () => { cancelAnimationFrame(resizeRaf); resizeRaf = requestAnimationFrame(register); };
+  const lifecycle = () => { if (!document.hidden) { settlePassed(); for (const node of nodes) { const r = node.getBoundingClientRect(); if (node.getClientRects().length && r.top < innerHeight && r.bottom > 0) settle(node); } } };
+  const revealTarget = (target: Element) => { for (const node of nodes) if (node.contains(target) || target.contains(node)) settle(node); };
+  const focus = (event: Event) => { if (event.target instanceof Element) revealTarget(event.target); };
+  const anchor = () => { let id = location.hash.slice(1); try { id = decodeURIComponent(id); } catch {} const target = root.getElementById(id); if (target) revealTarget(target); };
+  const change = () => { if (reduced.matches) { nodes.forEach(settle); observer?.disconnect(); } else register(); };
+  register(); anchor();
+  // Preserve the original comparison's repeatable outer entrance; modern story entry remains once.
+  if(legacyHosts.length&&!reduced.matches&&'IntersectionObserver'in window){try{
+    legacyObserver=new IntersectionObserver(entries=>{for(const entry of entries){const host=entry.target as HTMLElement,state=legacyState.get(host)!;const r=entry.boundingClientRect;
+      if(entry.isIntersecting&&state.armed){state.armed=false;state.played=true;host.dataset.entryCycle=String(Number(host.dataset.entryCycle||0)+1);delete host.dataset.entryArmed;
+        for(const node of nodes)if(host.contains(node)&&node.getClientRects().length){delete node.dataset.entrySeen;node.setAttribute('data-entry-waiting','');observer?.observe(node)}
+      }else if(state.played&&(r.bottom<=0||r.top>=innerHeight)){state.armed=true;host.dataset.entryArmed='true'}
+    }},{threshold:[0,.00001]});legacyHosts.forEach(host=>legacyObserver!.observe(host));
+  }catch{nodes.forEach(settle)}}
+
+  window.addEventListener('scroll', scroll, { passive: true }); window.addEventListener('resize', resize);
+  window.addEventListener('hashchange', anchor); window.addEventListener('popstate', lifecycle); window.addEventListener('pageshow', lifecycle);
+  root.addEventListener('twin:story-layout', resize); root.addEventListener('focusin', focus); root.addEventListener('visibilitychange', lifecycle); root.addEventListener('twin:settle-reveal', focus);
+  reduced.addEventListener('change', change);
+  return () => {
+    disposed = true; cancelAnimationFrame(scrollRaf); cancelAnimationFrame(resizeRaf); observer?.disconnect();legacyObserver?.disconnect();
+    nodes.forEach(settle); animations.forEach(a => a.cancel()); animations.clear();
+    window.removeEventListener('scroll', scroll); window.removeEventListener('resize', resize); window.removeEventListener('hashchange', anchor);
+    window.removeEventListener('popstate', lifecycle); window.removeEventListener('pageshow', lifecycle);
+    root.removeEventListener('twin:story-layout', resize); root.removeEventListener('focusin', focus); root.removeEventListener('visibilitychange', lifecycle); root.removeEventListener('twin:settle-reveal', focus);
+    reduced.removeEventListener('change', change);
+  };
 }

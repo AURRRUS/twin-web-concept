@@ -1,23 +1,124 @@
-import{useEffect,useRef,useState}from'react';
-import{journeyStoryFrame,channelStoryFrame,journeyTargets,channelTargets,clamp}from'./salesStoryFrame.mjs';
-/** A single native-scroll frame per instance; layout and motion are independent. */
-export function useStoryTrack(kind:'journey'|'channels'){
- const host=useRef<HTMLElement>(null),jump=useRef<(i:number,instant?:boolean)=>void>(()=>{}),[mode,setMode]=useState<'flow'|'pin'|'switch'>('flow'),[active,setActive]=useState(0);
- useEffect(()=>{const n=host.current!,panel=n.querySelector<HTMLElement>('.story-panel')!,reduce=matchMedia('(prefers-reduced-motion:reduce)'),media=n.querySelector<HTMLElement>('.story-media-stage')!,titles=[...n.querySelectorAll<HTMLElement>('[data-story-title]')],questions=[...n.querySelectorAll<HTMLElement>('[data-story-question]')],sales=[...n.querySelectorAll<HTMLElement>('[data-story-sales]')],layers=[...n.querySelectorAll<HTMLElement>('.story-photo')];let disposed=false,raf=0,enabled=false,selected=0,fonts=false,visible=false,last=-1,currentActive=0,hashDone=false;
- try{if(kind==='journey'&&sessionStorage.getItem('twin-demo-restore')==='true'){const origin=JSON.parse(sessionStorage.getItem('twin-demo-origin')||'null');selected=Number(origin?.journeyScene)||0}}catch{}
- const texts=(nodes:HTMLElement[],from:number,to:number,moving:boolean,out:number,enter:number)=>nodes.forEach((e,i)=>{const old=moving&&i===from,next=moving&&i===to,show=moving?(old&&out<1)||(next&&enter>0):i===from;e.style.visibility=show?'visible':'hidden';e.style.clipPath=old?`inset(0 0 ${out*100}% 0)`:next?`inset(${(1-enter)*100}% 0 0 0)`:'none';e.style.transform=`translateY(${old?-12*out:next?14*(1-enter):0}px)`;e.setAttribute('aria-hidden',String(!show));});
- const paint=()=>{raf=0;if(disposed||document.hidden||!fonts)return;let p=enabled?clamp(-n.getBoundingClientRect().top/(n.offsetHeight-panel.offsetHeight)):0;if(enabled){const f=kind==='journey'?journeyStoryFrame(p):channelStoryFrame(p),img=layers[f.to].querySelector<HTMLImageElement>('img');if(f.moving&&img&&!img.complete&&!img.dataset.storyFailed){p=(kind==='journey'?[.19,.46,.73]:[45/300,130/300,215/300])[f.from]-.00001}}const stamp=enabled?p:selected+2;if(last===stamp)return;last=stamp;const frame=kind==='journey'?journeyStoryFrame(p):channelStoryFrame(p);const from=enabled?frame.from:selected,to=enabled?frame.to:selected,moving=enabled&&frame.moving;let next=enabled?frame.active:selected;if(next!==currentActive){currentActive=next;setActive(next)}n.dataset.active=String(next);n.dataset.scene=(kind==='journey'?['project','corpus','floor','lot']:['site','online','agent','office'])[next];n.dataset.progress=String(p);n.style.setProperty('--story-progress',String(p));
- if(kind==='journey'){const f=journeyStoryFrame(p);texts(titles,from,to,moving,f.titleOut,f.titleIn);texts(questions,from,to,moving,f.questionOut,f.questionIn);texts(sales,from,to,moving,f.salesOut,f.salesIn);layers.forEach((e,i)=>{const old=i===from,next=i===to,opacity=moving?(old?f.oldOpacity:next?f.newOpacity:0):old?1:0;e.style.opacity=String(opacity);e.style.visibility=opacity>0?'visible':'hidden';e.style.transform=moving&&next?`translateY(${12*(1-f.imageTransform)}px) scale(${1+.025*(1-f.imageTransform)})`:'none';e.inert=true;e.setAttribute('aria-hidden',String(opacity<=0));});}
- else{const f=channelStoryFrame(p);texts(titles,from,to,moving,f.textOut,f.titleIn);texts(questions,from,to,moving,f.textOut,f.bodyIn);layers.forEach((e,i)=>{const old=i===from,next=i===to,show=moving?old||next:old;e.style.visibility=show?'visible':'hidden';e.style.transform=moving&&next?`translateY(${(media.clientHeight+24)*(1-f.photo)}px)`:moving&&old?`translateY(${-12*f.photo}px) scale(${1-.025*f.photo})`:'none';e.style.opacity='1';e.inert=true;e.setAttribute('aria-hidden',String(i!==to));});}
- };
- const request=()=>{if(!raf&&!document.hidden&&visible)raf=requestAnimationFrame(paint)};
- const configure=()=>{if(disposed||!fonts)return;const before=enabled?Number(n.dataset.active||0):selected;let fits=innerWidth>=1100&&innerHeight>=(kind==='journey'?680:680)&&!reduce.matches;n.dataset.measuring=String(fits);n.style.removeProperty('--story-image-width');
- if(fits){if(kind==='journey'){const h=n.querySelector<HTMLElement>('.story-j4-header')!,style=getComputedStyle(h),canvas=document.createElement('canvas').getContext('2d')!,h2=h.querySelector('h2')!,font=getComputedStyle(h2);canvas.font=`900 ${font.fontSize} ${font.fontFamily}`;let min=0;h.querySelectorAll('h2>span').forEach(s=>min=Math.max(min,canvas.measureText(s.textContent||'').width+2));n.style.setProperty('--story-title-min',`${min}px`);const available=innerHeight-parseFloat(getComputedStyle(panel).paddingTop)-parseFloat(getComputedStyle(panel).paddingBottom)-h.offsetHeight-n.querySelector<HTMLElement>('.story-j4-route')!.offsetHeight-n.querySelector<HTMLElement>('.story-j4-sales')!.offsetHeight-40;const width=Math.min(media.parentElement!.clientWidth,available*1671/941);n.style.setProperty('--story-image-width',`${Math.max(0,width)}px`);fits=width>=450&&available>=250;}else{const top=n.querySelector<HTMLElement>('.story-channel-heading')!,left=n.querySelector<HTMLElement>('.story-channel-left')!,style=getComputedStyle(panel),available=innerHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)-top.offsetHeight-24-16;const width=Math.min(media.parentElement!.clientWidth,available*1672/941);n.style.setProperty('--story-image-width',`${Math.max(0,width)}px`);fits=width>=450&&left.scrollHeight<=available;}}
- if(!fits)n.style.removeProperty('--story-image-width');enabled=fits;selected=before;n.dataset.mode=fits?'pin':'switch';delete n.dataset.measuring;setMode(fits?'pin':'switch');last=-1;paint();n.dataset.comparisonReady='true';n.dataset.storyReady='true';if(!hashDone){hashDone=true;hash()}};
- jump.current=(i,instant=false)=>{selected=Math.max(0,Math.min(3,i));if(enabled){const targets=kind==='journey'?journeyTargets:channelTargets;scrollTo({top:n.getBoundingClientRect().top+scrollY+(n.offsetHeight-panel.offsetHeight)*targets[selected],behavior:instant||reduce.matches?'instant':'smooth'})}else{last=-1;paint()}};
- const hash=()=>{const prefix=kind==='journey'?'journey-variant-4-':'channel-',ids=kind==='journey'?['project','corpus','floor','lot']:['site','online','agent','office'];const i=ids.findIndex(id=>location.hash===`#${prefix}${id}`);if(i>=0)jump.current(i,true)};
- const observer=new IntersectionObserver(es=>{visible=es.some(e=>e.isIntersecting);if(visible)request()});observer.observe(n);const preload=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){n.querySelectorAll<HTMLImageElement>('.story-photo img').forEach(img=>img.loading='eager');preload.disconnect()}},{rootMargin:'100% 0px'});preload.observe(n);
- void document.fonts.ready.then(()=>{fonts=true;configure()});const visibility=()=>{if(!document.hidden){last=-1;request()}};window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',configure);window.addEventListener('hashchange',hash);document.addEventListener('visibilitychange',visibility);reduce.addEventListener('change',configure);n.querySelectorAll('img').forEach(img=>img.addEventListener('load',configure));
- return()=>{disposed=true;cancelAnimationFrame(raf);observer.disconnect();preload.disconnect();window.removeEventListener('scroll',request);window.removeEventListener('resize',configure);window.removeEventListener('hashchange',hash);document.removeEventListener('visibilitychange',visibility);reduce.removeEventListener('change',configure);n.querySelectorAll('img').forEach(img=>img.removeEventListener('load',configure))};
- },[kind]);return{host,mode,active,jump};
+import { useEffect, useRef, useState } from 'react';
+import { localProgress, journeyTargets, channelTargets } from './salesStoryFrame.mjs';
+import { measureStoryLayout, readStoryGeometry, type StoryGeometry, type StoryKind } from './storyLayout';
+import { createStoryPainter } from './storyPaint';
+
+/** One driver per host: layout -> cached geometry -> pure frame -> DOM writes. */
+export function useStoryTrack(kind: StoryKind) {
+  const host = useRef<HTMLElement>(null);
+  const jump = useRef<(index: number, instant?: boolean) => void>(() => {});
+  const [mode, setMode] = useState<'flow' | 'pin' | 'switch'>('flow');
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const root = host.current!, reduced = matchMedia('(prefers-reduced-motion:reduce)');
+    const painter = createStoryPainter(root, kind);
+    const targets = kind === 'journey' ? journeyTargets : channelTargets;
+    const ids = kind === 'journey' ? ['project', 'corpus', 'floor', 'lot'] : ['site', 'online', 'agent', 'office'];
+    let geometry: StoryGeometry = { top: 0, hostHeight: 1, panelHeight: 1, mediaHeight: 0 };
+    let disposed = false, fontsReady = false, visible = false, pinned = false, selected = 0;
+    let raf = 0, layoutRaf = 0, hashRaf = 0, currentActive = 0, lastStamp = '', assetsRevision = 0, layoutKey = '';
+    try {
+      if (kind === 'journey' && sessionStorage.getItem('twin-demo-restore') === 'true') {
+        selected = Number(JSON.parse(sessionStorage.getItem('twin-demo-origin') || 'null')?.journeyScene) || 0;
+      }
+    } catch { /* Session restoration is optional. */ }
+    const paint = () => {
+      raf = 0;
+      if (disposed || !fontsReady || document.hidden) return;
+      const progress = pinned ? localProgress(scrollY, geometry.top, geometry.hostHeight, geometry.panelHeight) : 0;
+      const stamp = `${pinned}:${progress}:${selected}:${assetsRevision}`;
+      if (stamp === lastStamp) return;
+      lastStamp = stamp;
+      root.dataset.paintCount = String(Number(root.dataset.paintCount || 0) + 1);
+      const next = painter(progress, pinned, selected, geometry.mediaHeight);
+      if (next !== currentActive) { currentActive = next; setActive(next); }
+    };
+    const requestPaint = (force = false) => {
+      if (disposed) return;
+      if (force) lastStamp = '';
+      if (!raf && !document.hidden && (visible || force)) raf = requestAnimationFrame(paint);
+    };
+    const refreshGeometry = () => {
+      geometry = readStoryGeometry(root);
+      root.dataset.geometryTop = String(geometry.top);
+      root.dataset.geometryTravel = String(Math.max(1, geometry.hostHeight - geometry.panelHeight));
+    };
+    const layout = (restore = false) => {
+      layoutRaf = 0;
+      if (disposed || !fontsReady) return;
+      const wasPinned = pinned;
+      const oldProgress = Number(root.dataset.progress || 0);
+      const oldActive = currentActive;
+      const rect = root.getBoundingClientRect();
+      const onScreen = rect.top < innerHeight && rect.bottom > 0;
+      selected = root.dataset.storyReady ? oldActive : selected;
+      pinned = measureStoryLayout(root, kind, reduced.matches);
+      setMode(pinned ? 'pin' : 'switch');
+      refreshGeometry();
+      layoutKey = `${innerWidth}:${innerHeight}:${root.clientWidth}:${reduced.matches}`;
+      if (restore && onScreen) {
+        if (pinned) scrollTo({ top: geometry.top + (wasPinned ? oldProgress : targets[selected]) * Math.max(1, geometry.hostHeight - geometry.panelHeight), behavior: 'instant' });
+        else if (wasPinned) scrollTo({ top: geometry.top, behavior: 'instant' });
+      }
+      requestPaint(true);
+      root.dataset.comparisonReady = 'true';
+      root.dataset.storyReady = 'true';
+      root.dispatchEvent(new CustomEvent('twin:story-layout', { bubbles: true }));
+    };
+    const requestLayout = () => {
+      if (!layoutRaf) layoutRaf = requestAnimationFrame(() => layout(true));
+    };
+    const upstreamChange = () => {
+      if (disposed || !fontsReady) return;
+      const key = `${innerWidth}:${innerHeight}:${root.clientWidth}:${reduced.matches}`;
+      if (key !== layoutKey) requestLayout();
+      else { refreshGeometry(); requestPaint(true); }
+    };
+    jump.current = (index, instant = false) => {
+      selected = Math.max(0, Math.min(3, index));
+      refreshGeometry();
+      if (pinned) scrollTo({ top: geometry.top + targets[selected] * Math.max(1, geometry.hostHeight - geometry.panelHeight), behavior: instant || reduced.matches ? 'instant' : 'smooth' });
+      else requestPaint(true);
+    };
+    const hash = () => {
+      if (disposed) return;
+      const prefix = kind === 'journey' ? 'journey-variant-4-' : 'channel-';
+      const index = ids.findIndex(id => location.hash === `#${prefix}${id}`);
+      if (index >= 0) jump.current(index, true);
+    };
+    const mediaChanged = () => { if (disposed) return; assetsRevision++; requestPaint(true); };
+    const scroll = () => requestPaint();
+    const lifecycle = () => { if (!document.hidden) { refreshGeometry(); requestPaint(true); } };
+    const observer = new IntersectionObserver(entries => { visible = entries.some(e => e.isIntersecting); if (visible) { refreshGeometry(); requestPaint(true); } });
+    observer.observe(root);
+    const preload = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) {
+        root.querySelectorAll<HTMLImageElement>('.story-photo img').forEach(img => { img.loading = 'eager'; if (img.complete && img.naturalWidth) void img.decode().catch(() => {}).then(mediaChanged); });
+        preload.disconnect();
+      }
+    }, { rootMargin: '100% 0px' });
+    preload.observe(root);
+    const resizeObserver = new ResizeObserver(upstreamChange);
+    resizeObserver.observe(document.querySelector('main')!);
+    resizeObserver.observe(root);
+    void document.fonts.ready.then(() => { if (!disposed) { fontsReady = true; layout(); hashRaf = requestAnimationFrame(() => { hashRaf = 0; hash(); }); } });
+    root.addEventListener('twin:story-media', mediaChanged);
+    window.addEventListener('scroll', scroll, { passive: true });
+    window.addEventListener('resize', requestLayout);
+    window.addEventListener('hashchange', hash);
+    window.addEventListener('pageshow', lifecycle);
+    window.addEventListener('popstate', lifecycle);
+    document.addEventListener('visibilitychange', lifecycle);
+    reduced.addEventListener('change', requestLayout);
+    return () => {
+      disposed = true; cancelAnimationFrame(raf); cancelAnimationFrame(layoutRaf); cancelAnimationFrame(hashRaf);
+      observer.disconnect(); preload.disconnect(); resizeObserver.disconnect();
+      root.removeEventListener('twin:story-media', mediaChanged);
+      window.removeEventListener('scroll', scroll); window.removeEventListener('resize', requestLayout);
+      window.removeEventListener('hashchange', hash); window.removeEventListener('pageshow', lifecycle);
+      window.removeEventListener('popstate', lifecycle); document.removeEventListener('visibilitychange', lifecycle);
+      reduced.removeEventListener('change', requestLayout);
+    };
+  }, [kind]);
+  return { host, mode, active, jump };
 }

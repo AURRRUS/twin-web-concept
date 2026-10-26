@@ -6,3 +6,4 @@ export function channelStoryFrame(p:number):Base&{textOut:number;titleIn:number;
 export function qualityStoryFrame(p:number):Record<string,number>;
 export const journeyTargets:number[];
 export const channelTargets:number[];
+export function localProgress(scrollY:number,top:number,hostHeight:number,panelHeight:number):number;

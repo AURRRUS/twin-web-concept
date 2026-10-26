@@ -1,0 +1,114 @@
+{
+  "source": "Fonts/colors retained from repository; R2 local layout and typography below replace R1 geometry.",
+  "colors": {
+    "ink": "#20272f",
+    "muted": "#48525c",
+    "bronze": "#8b6138",
+    "background": "#ffffff"
+  },
+  "fonts": {
+    "display_family": "Twin Dewi Expanded",
+    "display_files": {
+      "400": "RFDewiExpanded-Regular.ttf",
+      "600": "RFDewiExpanded-Semibold.ttf",
+      "700": "RFDewiExpanded-Bold.ttf",
+      "900": "RFDewiExpanded-Black.ttf"
+    },
+    "ui_family": "Twin Inter Tight",
+    "ui_file": "inter-tight-variable.woff2",
+    "ui_weight_range": [
+      100,
+      900
+    ],
+    "body_weight": 450,
+    "buyer_question_weight": 500,
+    "font_synthesis": "none",
+    "headings_tracking_em": 0,
+    "body_tracking_em": 0.015,
+    "scaleX": "forbidden",
+    "font_stretch": "normal"
+  },
+  "layout": {
+    "frame_max_px": 1360,
+    "journey_min_pin_frame_px": 800,
+    "journey_header_columns": [
+      1.4,
+      1
+    ],
+    "journey_header_gap_px": 32,
+    "channels_columns": [
+      42,
+      58
+    ],
+    "channels_gap_px": 40,
+    "quality_columns": [
+      38,
+      62
+    ],
+    "quality_gap_px": 48,
+    "quality_canvas_viewbox": [
+      0,
+      0,
+      720,
+      760
+    ],
+    "quality_triangle_points": [
+      [
+        360,
+        124
+      ],
+      [
+        110,
+        557.013
+      ],
+      [
+        610,
+        557.013
+      ]
+    ],
+    "mobile_touch_min_px": 44
+  },
+  "typography": {
+    "local_h2_px": {
+      "1440": 40,
+      "1920": 48,
+      "low_desktop": 36,
+      "mobile": 30
+    },
+    "local_h2_weight": 900,
+    "local_h2_line_height": 1.12,
+    "buyer_question_px": {
+      "1440": 20,
+      "1920": 22
+    },
+    "buyer_question_weight": 500,
+    "channel_h3_px": {
+      "1440": 24,
+      "1920": 28
+    },
+    "body_px": {
+      "desktop": 18,
+      "wide": 20,
+      "mobile_min": 16
+    },
+    "body_line_height": 1.5,
+    "nav_px": 16,
+    "nav_weight": 600,
+    "quality_value_px": {
+      "desktop": 30,
+      "wide": 34
+    },
+    "quality_application_value_px": {
+      "desktop": 24,
+      "wide": 28
+    }
+  },
+  "rules": [
+    "No final periods in headings or short labels",
+    "NBSP joins short prepositions/conjunctions to following word; never nowrap whole paragraph",
+    "Allow natural mobile wrapping instead of forced desktop breaks",
+    "Preserve actual spaces between spans",
+    "Primary site navigation and scene names use Dewi600; body uses Inter Tight450",
+    "Keep existing desktop Hero type and art; do not globally overwrite its accepted sizes with new component values"
+  ]
+}

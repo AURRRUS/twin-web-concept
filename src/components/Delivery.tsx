@@ -1,5 +1,37 @@
-import{useEffect,useRef}from'react';import content from'../lib/salesStoryContent.json';import{qualityStoryFrame,clamp}from'../lib/salesStoryFrame.mjs';import{bindShortWords as t}from'../lib/text';import{Media,Arrow}from'./Media';import{sitePath}from'../lib/paths';
-export function Delivery(){const host=useRef<HTMLDivElement>(null),copy=content.qualities;useEffect(()=>{const n=host.current!,reduce=matchMedia('(prefers-reduced-motion:reduce)');let raf=0,p=0,alive=true,visible=false,lastY=scrollY,initialized=false;const local:Record<string,number>={};const put=(key:string,v:number)=>{local[key]=Math.max(local[key]||0,v);n.style.setProperty('--quality-'+key,String(local[key]));};const paint=()=>{raf=0;if(!alive||document.hidden)return;const mobile=innerWidth<1100;if(reduce.matches){p=1;Object.keys(qualityStoryFrame(1)).forEach(k=>put(k,1))}else if(mobile){for(const[id,keys]of[['time',['time','edge_time_budget']],['budget',['budget','edge_budget_application']],['application',['application_label_initial','word_effective','application_description','edge_application_time']]]as const){const r=n.querySelector<HTMLElement>(`[data-quality='${id}']`)!.getBoundingClientRect(),v=clamp((innerHeight*.85-r.top)/(innerHeight*.55));const f=qualityStoryFrame(v);for(const k of keys)put(k,f[k])}put('model',clamp((innerHeight*.85-n.querySelector('.story-quality-model')!.getBoundingClientRect().top)/(innerHeight*.55)))}else{const moved=Math.abs(scrollY-lastY)>.5;lastY=scrollY;if(initialized&&!moved)return;initialized=true;p=Math.max(p,clamp((.8*innerHeight-n.getBoundingClientRect().top)/(.65*innerHeight)));for(const[k,v]of Object.entries(qualityStoryFrame(p)))put(k,v)}n.dataset.progress=String(p);n.dataset.enhanced='true';n.dataset.word=(local.word_effective||0)>=.5?'Эффективно':'Эффектно';const end=(local.word_effective||0)>.999;n.querySelector('.story-quality-word')!.setAttribute('aria-label',end?'Эффективно':'Эффектно');};const request=()=>{if(!raf&&visible&&!document.hidden)raf=requestAnimationFrame(paint)};const io=new IntersectionObserver(es=>{visible=es.some(e=>e.isIntersecting);if(visible)request()},{rootMargin:'0px'});io.observe(n);void document.fonts.ready.then(()=>{if(alive)paint()});window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request);reduce.addEventListener('change',request);document.addEventListener('visibilitychange',request);return()=>{alive=false;cancelAnimationFrame(raf);io.disconnect();window.removeEventListener('scroll',request);window.removeEventListener('resize',request);reduce.removeEventListener('change',request);document.removeEventListener('visibilitychange',request)}},[]);
- return <section className="story-qualities story-shell" id="delivery" aria-labelledby="delivery-heading"><header className="story-quality-heading"><p data-craft-reveal="body">{copy.lead}</p><h2 data-craft-reveal="title" id="delivery-heading">{copy.heading.main}{' '}<span className="bronze">{copy.heading.bronze}</span></h2></header><div ref={host} className="story-quality-diagram" data-enhanced="false"><article data-quality="time" className="story-quality-time"><h3>{copy.arguments[0].label}</h3><strong>{t(copy.arguments[0].value)}</strong><p>{t(copy.arguments[0].description)}</p></article><article data-quality="budget" className="story-quality-budget"><h3>{copy.arguments[1].label}</h3><span>{copy.arguments[1].prefix}</span><strong>{t(copy.arguments[1].value)}</strong><p>{t(copy.arguments[1].description)}</p></article><div className="story-quality-model"><svg viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true"><path className="quality-edge-one" pathLength="1" d="M300 12 4 366"/><path className="quality-edge-two" pathLength="1" d="M4 366H596"/><path className="quality-edge-three" pathLength="1" d="M596 366 300 12"/><circle cx="300" cy="12" r="4"/><circle cx="4" cy="366" r="4"/><circle cx="596" cy="366" r="4"/></svg><Media name="core" alt="Модель демонстрационного проекта"/></div><article data-quality="application" className="story-quality-application"><h3><span className="story-quality-word" aria-label="Эффективно"><span aria-hidden="true">Эффектно</span><span aria-hidden="true">Эффективно</span></span></h3><strong>{t(copy.arguments[2].value)}</strong><p>{t(copy.arguments[2].description)}</p></article></div><div className="story-quality-footer"><a id="qualities-demo" className="text-link" href={sitePath('/demo')}>{content.cta.demo}<Arrow/></a><p>{t(copy.note)}</p></div></section>
+import { useRef } from 'react';
+import content from '../lib/salesStoryContent.json';
+import { useQualityReveal } from '../lib/useQualityReveal';
+import { bindShortWords as t } from '../lib/text';
+import { Media, Arrow } from './Media';
+import { sitePath } from '../lib/paths';
+export function Delivery() {
+  const host = useRef<HTMLDivElement>(null), copy = content.qualities;
+  useQualityReveal(host);
+  return <section className="story-qualities story-shell" id="delivery" aria-labelledby="delivery-heading">
+    <div className="quality-layout">
+      <div className="quality-copy" data-entry="title">
+        <header className="story-quality-heading"><p>{copy.lead}</p><h2 id="delivery-heading">{copy.heading.main}{' '}<span className="bronze">{copy.heading.bronze}</span></h2></header>
+        <a id="qualities-demo" className="text-link" href={sitePath('/demo')}>{content.cta.demo}<Arrow /></a>
+      </div>
+      <div ref={host} className="quality-canvas story-quality-diagram" data-enhanced="false">
+        <svg viewBox="0 0 720 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <path className="quality-edge-one" pathLength="1" d="M360 124 L110 557.013" />
+          <path className="quality-edge-two" pathLength="1" d="M110 557.013 L610 557.013" />
+          <path className="quality-edge-three" pathLength="1" d="M610 557.013 L360 124" />
+          <circle cx="360" cy="124" r="4" /><circle cx="110" cy="557.013" r="4" /><circle cx="610" cy="557.013" r="4" />
+        </svg>
+        <article data-quality="time" className="story-quality-time"><h3>{copy.arguments[0].label}</h3><strong>{t(copy.arguments[0].value)}</strong><p>{t(copy.arguments[0].description)}</p></article>
+        <article data-quality="budget" className="story-quality-budget"><h3>{copy.arguments[1].label}</h3><strong>{t(copy.arguments[1].value)}</strong><p>{copy.arguments[1].prefix}</p><p className="quality-mobile-description">{t(copy.arguments[1].description)}</p></article>
+        <div className="story-quality-model"><Media name="core" alt="Модель демонстрационного проекта" /></div>
+        <article data-quality="application" className="story-quality-application">
+          <h3><span className="story-quality-word" aria-label="Эффективно"><span aria-hidden="true">Эффектно</span><span aria-hidden="true">Эффективно</span></span></h3>
+          <strong>{t(copy.arguments[2].value)}</strong><p className="quality-diagram-description">{t(copy.arguments[2].diagram_description!)}</p><p className="quality-mobile-description">{t(copy.arguments[2].mobile_description!)}</p>
+        </article>
+      </div>
+    </div>
+    <div className="story-quality-footer"><p>{t(copy.note)}</p></div>
+  </section>;
 }
-export function Launch(){return <section id="launch" className="story-launch story-shell" aria-labelledby="launch-heading"><h2 id="launch-heading" data-craft-reveal="title">{content.launch.heading}</h2><ol>{content.launch.steps.map(s=><li key={s.index} data-craft-reveal="launch"><span>{s.index}</span><h3>{t(s.title)}</h3><p>{t(s.description)}</p></li>)}</ol></section>}
+export function Launch() {
+  return <section id="launch" className="story-launch story-shell" aria-labelledby="launch-heading"><h2 id="launch-heading" data-entry="title">{content.launch.heading}</h2><ol>{content.launch.steps.map(step => <li key={step.index} data-entry="launch"><span>{step.index}</span><h3>{t(step.title)}</h3><p>{t(step.description)}</p></li>)}</ol></section>;
+}

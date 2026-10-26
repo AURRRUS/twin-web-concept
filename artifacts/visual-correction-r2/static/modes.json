@@ -1,0 +1,50 @@
+[
+  {
+    "w": 1920,
+    "h": 1080,
+    "j": "pin",
+    "c": "pin",
+    "frame": 1273,
+    "overflow": false
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "j": "pin",
+    "c": "pin",
+    "frame": 1002,
+    "overflow": false
+  },
+  {
+    "w": 1366,
+    "h": 768,
+    "j": "switch",
+    "c": "pin",
+    "frame": 1249,
+    "overflow": false
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "j": "switch",
+    "c": "pin",
+    "frame": 1177,
+    "overflow": false
+  },
+  {
+    "w": 1100,
+    "h": 680,
+    "j": "switch",
+    "c": "pin",
+    "frame": 1024,
+    "overflow": false
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "j": "switch",
+    "c": "switch",
+    "frame": 350,
+    "overflow": false
+  }
+]

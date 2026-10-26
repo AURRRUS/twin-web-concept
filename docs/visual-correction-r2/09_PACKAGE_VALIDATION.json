@@ -1,0 +1,107 @@
+{
+  "scope": "Handoff package validation only. The website has not been changed by this package creation.",
+  "source_commit": "ebca1258da38b473d51d7067d353832ae2463743",
+  "pages_commit": "7ad69df00765bcbed015669a501d3272df573e4a",
+  "source_asset_provenance": [
+    {
+      "archive": "assets/channels/agent.png",
+      "repository_path": "public/media/final-r2/channels/agent.png",
+      "git_blob": "beefb4367c52201a987688101762034956c95e3b",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/channels/office.png",
+      "repository_path": "public/media/final-r2/channels/office.png",
+      "git_blob": "95f26508d52aa6623691eb92b459fe8b294fbfdd",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/channels/online.png",
+      "repository_path": "public/media/final-r2/channels/online.png",
+      "git_blob": "b9f55a78903da83bd696096abbfdc726b9317f5e",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/channels/site.png",
+      "repository_path": "public/media/final-r2/channels/site.png",
+      "git_blob": "647e6b5c148d57c8f2937032b561f11be3378961",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/RFDewiExpanded-Black.ttf",
+      "repository_path": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+      "git_blob": "7f676c10b0e6b3d03ce7d2c2fe507bb8df984910",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/RFDewiExpanded-Bold.ttf",
+      "repository_path": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "git_blob": "8faa4a59f9f530ed32d01d6cedb3cfe3a7a3fa9b",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/RFDewiExpanded-Regular.ttf",
+      "repository_path": "src/assets/fonts/RFDewiExpanded-Regular.ttf",
+      "git_blob": "1400ac54a9f3f8010076d39e6ea0fc0422c00b2b",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "repository_path": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "git_blob": "f32d8440dcb27edc370bc6ed6df86c332a0a99aa",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/SOURCE_NOTICES.txt",
+      "repository_path": "src/assets/fonts/SOURCE_NOTICES.txt",
+      "git_blob": "f57800d1a2bc1fb823f063672e1994c4bd8f0d94",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/fonts/inter-tight-variable.woff2",
+      "repository_path": "src/assets/fonts/inter-tight-variable.woff2",
+      "git_blob": "994c70ce579612aaa0f36169c52a44b34ed23dfe",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/journey/corpus.png",
+      "repository_path": "public/media/final-r2/journey/corpus.png",
+      "git_blob": "994244be4a4724c9a2630f1f3c20475e7eb01bc2",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/journey/floor.png",
+      "repository_path": "public/media/final-r2/journey/floor.png",
+      "git_blob": "42db8b9c3cd737a5b7f3ea61f7987fce620c7b32",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/journey/lot.png",
+      "repository_path": "public/media/final-r2/journey/lot.png",
+      "git_blob": "53271034a590306dc62db1fd55aad075e9de161d",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/journey/project.png",
+      "repository_path": "public/media/final-r2/journey/project.png",
+      "git_blob": "173d456440ce50d46b5f819dd8d34856be0f7ddc",
+      "matches_ebca125": true
+    },
+    {
+      "archive": "assets/quality-model.webp",
+      "repository_path": "public/media/core.webp",
+      "git_blob": "c4abdf9ff0cb13c79ef70977e6e93c05a5a44462",
+      "matches_ebca125": true
+    }
+  ],
+  "triangle_side_lengths": [
+    500.0002581689334,
+    500.0,
+    500.0002581689334
+  ],
+  "reference_motion": "node reference/validate-motion.mjs completed successfully; not browser/layout acceptance",
+  "fonts": "Copies are byte-identical to source commit; earlier metadata validation confirmed Dewi400/600/700/900, InterTightwght100–900 and Cyrillic.",
+  "media_sources": 9,
+  "font_files": 5,
+  "remaining": "Developer must integrate the DOM/CSS/driver corrections and perform browser/device QA before publishing."
+}

@@ -92,7 +92,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
   }, []);
   const info = getDialog(active);
   return <section id="composition" className="composition section" aria-labelledby="composition-heading">
-    <div className="center-heading"><span data-craft-reveal="eyebrow" className="eyebrow">Из чего состоит Twin</span><h2 data-craft-reveal="title" id="composition-heading">Единая <span className="bronze">цифровая основа</span></h2><p data-craft-reveal="body">Коммерческий цифровой двойник и связанные компоненты системы продаж</p></div>
+    <div className="center-heading" data-entry="title"><span data-craft-reveal="eyebrow" className="eyebrow">Из чего состоит Twin</span><h2 data-craft-reveal="title" id="composition-heading">Единая <span className="bronze">цифровая основа</span></h2><p data-craft-reveal="body">Коммерческий цифровой двойник и связанные компоненты системы продаж</p></div>
     <div ref={map} className="composition-map" data-focused={focused || ''}>
       <svg className="composition-lines" viewBox={`0 0 ${canvas.width} ${canvas.height}`} preserveAspectRatio="none" aria-hidden="true">
         {connections.map((route, i) => <g data-craft-pair={items[i].id} data-craft-reveal="fact" key={items[i].id} data-active={focused === items[i].id}><path d={route.path} fill="none" /><circle cx={route.x} cy={route.y} r="4" /></g>)}
