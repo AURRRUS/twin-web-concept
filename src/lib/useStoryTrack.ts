@@ -16,6 +16,7 @@ export function useStoryTrack(kind: StoryKind) {
     const ids = kind === 'journey' ? ['project', 'corpus', 'floor', 'lot'] : ['site', 'online', 'agent', 'office'];
     let geometry: StoryGeometry = { top: 0, hostHeight: 1, panelHeight: 1, mediaHeight: 0 };
     let disposed = false, fontsReady = false, visible = false, pinned = false, selected = 0;
+    let switchAnimations: Animation[] = [];
     let raf = 0, layoutRaf = 0, hashRaf = 0, currentActive = 0, lastStamp = '', assetsRevision = 0, layoutKey = '';
     try {
       if (kind === 'journey' && sessionStorage.getItem('twin-demo-restore') === 'true') {
@@ -78,7 +79,21 @@ export function useStoryTrack(kind: StoryKind) {
       selected = Math.max(0, Math.min(3, index));
       refreshGeometry();
       if (pinned) scrollTo({ top: geometry.top + targets[selected] * Math.max(1, geometry.hostHeight - geometry.panelHeight), behavior: instant || reduced.matches ? 'instant' : 'smooth' });
-      else requestPaint(true);
+      else {
+        switchAnimations.forEach(animation => animation.cancel());
+        switchAnimations = [];
+        lastStamp = ''; paint();
+        if (kind === 'journey' && !instant && !reduced.matches) {
+          const groups = ['.story-j4-titles', '.story-buyer .story-slot', '.story-media-stage', '.story-j4-application .story-slot'];
+          groups.forEach((selector, i) => {
+            const element = root.querySelector<HTMLElement>(selector);
+            if (element) switchAnimations.push(element.animate([
+              { opacity: 0, transform: `translateY(${i === 2 ? 16 : 8}px)` },
+              { opacity: 1, transform: 'translateY(0)' }
+            ], { duration: i === 2 ? 440 : 300, delay: [0, 60, 120, 180][i], easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' }));
+          });
+        }
+      }
     };
     const hash = () => {
       if (disposed) return;
@@ -111,7 +126,7 @@ export function useStoryTrack(kind: StoryKind) {
     document.addEventListener('visibilitychange', lifecycle);
     reduced.addEventListener('change', requestLayout);
     return () => {
-      disposed = true; cancelAnimationFrame(raf); cancelAnimationFrame(layoutRaf); cancelAnimationFrame(hashRaf);
+      disposed = true; switchAnimations.forEach(animation => animation.cancel()); cancelAnimationFrame(raf); cancelAnimationFrame(layoutRaf); cancelAnimationFrame(hashRaf);
       observer.disconnect(); preload.disconnect(); resizeObserver.disconnect();
       root.removeEventListener('twin:story-media', mediaChanged);
       window.removeEventListener('scroll', scroll); window.removeEventListener('resize', requestLayout);
