@@ -34,7 +34,7 @@ export function JourneyV4() {
           event.preventDefault();
           const next = event.key === 'Home' ? 0 : event.key === 'End' ? 3 : (index + (['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : 3)) % 4;
           buttons[next].focus({ preventScroll: true }); buttons[next].click();
-        }}>{scenes.map((scene, i) => <button id={`journey-variant-4-${scene.id}`} type="button" key={scene.id} aria-pressed={active === i} aria-current={active === i ? 'step' : undefined} onClick={() => jump.current(i)}><span>0{i + 1}</span><span className="story-route-label">{t(scene.route_label)}</span></button>)}</nav>
+        }}>{scenes.map((scene, i) => <button id={`journey-variant-4-${scene.id}`} type="button" key={scene.id} aria-label={t(scene.route_label)} aria-pressed={active === i} aria-current={active === i ? 'step' : undefined} onClick={() => jump.current(i)}><span>0{i + 1}</span><span className="story-route-label">{t(scene.route_label)}</span><span className="story-route-short">{scene.label}</span></button>)}</nav>
         <div className="story-buyer"><span className="story-kicker">{t(scenes[0].buyer_label)}</span>
           <div className="story-slot">{scenes.map((scene, i) => <p data-story-question key={scene.id} className="story-copy" style={{ visibility: i === 0 ? 'visible' : 'hidden' }}>{t(scene.buyer_question)}</p>)}</div>
         </div>

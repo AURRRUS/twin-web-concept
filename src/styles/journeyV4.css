@@ -16,6 +16,7 @@
 .story-journey .story-j4-route button:hover{color:var(--ink)}
 .story-journey .story-j4-route button:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
 .story-journey .story-j4-route button>span:first-child{font:450 13px/24px var(--twin-ui);letter-spacing:.015em;color:inherit;font-variant-numeric:tabular-nums}
+.story-journey .story-route-short{display:none}
 .story-journey .story-j4-route .story-route-label{min-width:0;font:inherit;letter-spacing:0;color:inherit;overflow-wrap:normal}
 .story-journey .story-j4-route [aria-current='step']{color:var(--bronze)}
 .story-journey .story-j4-route [aria-current='step']::after{left:-1px;top:10px;bottom:10px;width:3px;height:auto;background:var(--bronze)}
@@ -61,4 +62,12 @@
  .story-journey .story-j4-sales{grid-template-columns:1fr auto;gap:12px 16px}.story-journey .story-j4-sales>small{grid-row:2}.story-journey .story-panel{padding-block:40px}
 }
 @media(max-width:767px){.story-journey{--story-h2:27px;--story-h2-leading:34px;--story-question:19px;--story-text-leading:28px;--story-nav:13px;--story-nav-leading:21px}.story-journey .story-j4-overline{font-size:10px;line-height:18px;gap:16px;margin-bottom:16px}.story-journey .story-j4-count{font-size:14px;white-space:nowrap}.story-journey .story-j4-route button{align-items:start;min-height:76px}.story-journey .story-j4-sales{grid-template-columns:1fr}.story-journey .story-j4-sales>small{grid-row:3}.story-journey .story-expand{justify-self:start;padding:0;border:0;min-height:44px}.story-journey .story-j4-application{gap:8px}}
+@media(max-width:767px){
+ .story-journey .story-j4-layout{gap:16px}.story-journey .story-j4-aside,.story-journey .story-j4-visual{display:contents}
+ .story-journey .story-j4-route{order:0;width:100%;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+ .story-journey .story-j4-route button{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 0;min-height:62px;font-size:11px;line-height:18px}
+ .story-journey .story-j4-route .story-route-label{display:none}.story-journey .story-j4-route .story-route-short{display:block;font:inherit;color:inherit;letter-spacing:0}
+ .story-journey .story-media-stage{order:1;flex:none}.story-journey .story-mobile-media-controls{order:2;margin:0;min-height:44px;width:100%}
+ .story-journey .story-buyer{order:3;width:100%;padding-top:8px}.story-journey .story-j4-sales{order:4;width:100%;padding-top:16px;border-top:1px solid #20272f20;margin-top:0}
+}
 @media(prefers-reduced-motion:reduce){.story-journey .story-j4-route button{transition:none}.story-journey .story-photo{will-change:auto}}
