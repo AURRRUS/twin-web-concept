@@ -6,7 +6,7 @@ export function Header({ demo = false }: { demo?: boolean }) {
     <a className="brand" href={sitePath('/')} aria-label="Twin by TALENT — главная"><Media name="logo" alt="Twin by TALENT" eager /></a>
     <nav aria-label="Основная навигация"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#launch')}>Запуск</a></nav>
     <details className="mobile-navigation"><summary>Меню</summary><nav aria-label="Мобильная навигация"><a href={sitePath('/#product')}>Продукт</a><a href={sitePath('/#channels')}>Сценарии</a><a href={sitePath('/#launch')}>Запуск</a></nav></details>
-    <a className={demo ? 'text-link' : 'button header-cta'} href={sitePath(demo ? '/' : '/#contact')}>{demo ? 'Вернуться на сайт' : 'Обсудить проект'}<Arrow /></a>
+    <a className={demo ? 'text-link' : 'button header-cta'} href={sitePath(demo ? '/' : '/#contact')} onClick={e=>{if(!demo)return;try{const origin=JSON.parse(sessionStorage.getItem('twin-demo-origin')||'null');if(origin&&new URL(origin.url).origin===location.origin){e.preventDefault();sessionStorage.setItem('twin-demo-restore','true');location.assign(origin.url)}}catch{}}}>{demo ? 'Вернуться на сайт' : 'Обсудить проект'}<Arrow /></a>
   </header>;
 }
 export function Hero() {
@@ -17,7 +17,7 @@ export function Hero() {
       <h1 id="hero-heading"><span className="hero-line">Цифровая <em className="bronze">инфраструктура продаж</em></span>{' '}<span className="hero-line">девелоперского проекта</span></h1>
       <p className="hero-description"><span>Раскрывайте преимущества проекта</span>{' '}<span>и помогайте покупателю выбирать:</span></p>
       <p className="hero-channels">на сайте, дистанционно, через агентов и в офисе продаж</p>
-      <div className="actions"><a className="button" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a></div>
+      <div className="actions"><a id="hero-demo" className="button" href={sitePath('/demo')}>Посмотреть Twin<Arrow /></a></div>
     </div></div>
     <span className="hero-caption"><span />Демонстрационный проект</span>
   </section>;

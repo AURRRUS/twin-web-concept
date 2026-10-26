@@ -1,0 +1,91 @@
+{
+  "source": "Current design.css verified at 7a91cece7ffc3fb66edb9aa6d2a81b044846101d; latest explicit owner decisions override older brand profile font prohibitions",
+  "colors": {
+    "ink": "#20272f",
+    "muted": "#48525c",
+    "bronze": "#8b6138",
+    "background": "#ffffff"
+  },
+  "fonts": {
+    "display_family": "Twin Dewi Expanded",
+    "display_files": {
+      "400": "RFDewiExpanded-Regular.ttf",
+      "600": "RFDewiExpanded-Semibold.ttf",
+      "700": "RFDewiExpanded-Bold.ttf",
+      "900": "RFDewiExpanded-Black.ttf"
+    },
+    "ui_family": "Twin Inter Tight",
+    "ui_file": "inter-tight-variable.woff2",
+    "ui_weight_range": [
+      100,
+      900
+    ],
+    "body_weight": 450,
+    "buyer_question_weight": 500,
+    "font_synthesis": "none",
+    "headings_tracking_em": 0,
+    "body_tracking_em": 0.015,
+    "scaleX": "forbidden",
+    "font_stretch": "normal"
+  },
+  "layout": {
+    "content_max_px": 1728,
+    "gutter_px": {
+      "320": 16,
+      "360": 20,
+      "390": 20,
+      "768": 20,
+      "1280": 32,
+      "1440": 64,
+      "1920": 80
+    },
+    "channels_columns": [
+      0.28,
+      0.72
+    ],
+    "channels_gap_px": 40,
+    "journey_header_columns": [
+      0.58,
+      0.42
+    ],
+    "journey_header_gap_px": 32,
+    "mobile_touch_min_px": 44
+  },
+  "typography": {
+    "journey_h2_px": {
+      "1440": 44,
+      "1920": 52,
+      "low_desktop": 36,
+      "360": 28,
+      "390": 30,
+      "430": 32
+    },
+    "journey_h2_weight": 900,
+    "journey_h2_line_height": 1.12,
+    "buyer_question_px": {
+      "1440": 22,
+      "1920": 24,
+      "low_desktop": 20,
+      "mobile": 20
+    },
+    "buyer_question_line_height": 1.4,
+    "body_line_height": 1.55,
+    "nav_weight": 600,
+    "card_title_weight": 700,
+    "section_h2_px": {
+      "1440": 44,
+      "1920": 52,
+      "low_desktop": 36,
+      "mobile": 30
+    },
+    "section_h2_line_height": 1.16
+  },
+  "rules": [
+    "No final periods in headings or short labels",
+    "NBSP joins short prepositions/conjunctions to following word; never nowrap whole paragraph",
+    "Allow natural mobile wrapping instead of forced desktop breaks",
+    "Preserve actual spaces between spans",
+    "Primary site navigation and scene names use Dewi600; body uses Inter Tight450",
+    "Keep existing desktop Hero type and art; do not globally overwrite its accepted sizes with new component values"
+  ]
+}

@@ -4,7 +4,7 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-journey-v4-v6` поверх сохранённых FINAL R2 и типографической доработки.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-sales-story-r1` поверх сохранённых FINAL R2 и типографической доработки.
 
 Предыдущее сравнение — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
 
@@ -73,7 +73,7 @@ Responsive проверяется в Chromium на1920/1440/1280/1024/768/390/36
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-journey-v4-v6
+git push origin codex/twin-sales-story-r1
 npm run build:preview
 npm run publish:preview
 ```
@@ -108,3 +108,7 @@ Journey: Проект→Корпус→Этаж→Лот, четыре исхо�
 Исходное состояние и rollback: [BASELINE](docs/final-r2/BASELINE.json) и [ROLLBACK](docs/final-r2/ROLLBACK.md). Резервные ветки не передвигать. После сохранения source commit публиковать существующим npm run build:preview / npm run publish:preview, без force-push и без дополнительного согласования снимков.
 
 Актуальный пакет: [Journey V4–V6 R1](docs/journey-v4-v6/START_HERE.md). После исходного и вариантов1–3 добавлены Большая сцена / Горизонтальный маршрут / Архитектурные плоскости. Реализация, проверки и ограничения: [IMPLEMENTATION](docs/journey-v4-v6/IMPLEMENTATION.md). Публичные доказательства: [ONLINE](docs/journey-v4-v6/ONLINE.md).
+
+Актуальная реализация — [TWIN_SALES_STORY_R1](docs/sales-story/00_START_HERE.md): основной сайт показывает один доработанный Journey4; все исходный и1–6 доступны через `?compare=journey`. Человеческие каналы с единым CTA, три качества с аргументами у вершин, самостоятельный `#launch`, мобильные детали/zoom и отдельная `/demo`. Состояние публикации и ограничения — [RESULT](docs/sales-story/RESULT.md).
+
+Проверка интерфейса: `node scripts/verify-sales-story.mjs` при локальном preview на4360. Онлайн: `NODE_USE_ENV_PROXY=1 TWIN_URL=https://aurrrus.github.io/twin-web-concept/ TWIN_EXPECTED_COMMIT=<SHA> TWIN_QA_DIR=artifacts/sales-story/online node scripts/verify-sales-story.mjs`. Основные команды `npm run typecheck`, `npm run build`, `npm test` сохранены.

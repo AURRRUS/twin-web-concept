@@ -41,7 +41,7 @@ export function ProductDemo({ selection, onChange, full = false }: { selection: 
         <a className="text-link" href={publicSelectionUrl('/' , selection) + '#contact'}>Обсудить проект<Arrow /></a>
       </aside>
     </div>
-    </div><div className="product-bottom"><p>Одна цифровая основа — от общего вида до конкретного выбора.</p>{!full && <a className="button secondary" href={publicSelectionUrl('/demo', selection)}>Открыть демо<Arrow /></a>}</div>
+    </div><div className="product-bottom"><p>Одна цифровая основа — от общего вида до конкретного выбора.</p>{!full && <a id="open-demo" className="button secondary" href={publicSelectionUrl('/demo', selection)} onClick={()=>{try{sessionStorage.setItem('twin-demo-origin',JSON.stringify({url:location.href,scroll:scrollY}))}catch{}}}>Открыть демо<Arrow /></a>}</div>
     <noscript><p className="notice">Интерактивный выбор работает с JavaScript. Выше показан пример лота; описание продукта и форма доступны для чтения.</p></noscript>
   </section>;
 }

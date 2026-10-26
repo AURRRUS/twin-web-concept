@@ -9,8 +9,8 @@ test('desktop: real content, assets and anchors', async ({ page }) => {
   await page.evaluate(async () => { await document.fonts.ready; for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 70)); } });
   await expect.poll(() => page.locator('img').evaluateAll(images => images.filter(image => image.getClientRects().length > 0 && (!(image as HTMLImageElement).complete || !(image as HTMLImageElement).naturalWidth)).map(image=>({src:(image as HTMLImageElement).src,root:image.closest('section')?.className,loading:(image as HTMLImageElement).loading})))).toEqual([]);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-  await page.locator('.delivery').scrollIntoViewIfNeeded();
-  await expect(page.locator('.delivery-host')).toHaveAttribute('data-enhanced','true');
+  await page.locator('.story-qualities').scrollIntoViewIfNeeded();
+  await expect(page.locator('.story-quality-diagram')).toHaveAttribute('data-enhanced','true');
   await page.evaluate(() => Promise.all([...document.querySelectorAll('.triangle-edge')].flatMap(element => element.getAnimations()).map(animation => animation.finished)));
   expect(errors).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -50,8 +50,8 @@ test('all seven dialogs, keyboard focus, history, direct URL and contact topic',
 });
 
 test('channel sheet navigation supports all four scenes and keyboard',async({page})=>{
- await page.goto('/#channels');await expect(page.locator('.channels')).toHaveAttribute('data-motion-enabled','true');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');
- for(let i=0;i<4;i++){await links.nth(i).click();await expect(links.nth(i)).toHaveAttribute('aria-current','step');await expect(page.locator('.channel-card').nth(i)).not.toHaveAttribute('inert','');}
+ await page.goto('/#channels');await expect(page.locator('.story-channels')).toHaveAttribute('data-mode','pin');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');
+ for(let i=0;i<4;i++){await links.nth(i).click();await expect(links.nth(i)).toHaveAttribute('aria-current','step');await expect(page.locator('.story-channels')).toHaveAttribute('data-scene',['site','online','agent','office'][i]);}
  await page.keyboard.press('Home');await expect(links.first()).toBeFocused();await expect(links.first()).toHaveAttribute('aria-current','step');await page.keyboard.press('ArrowDown');await expect(links.nth(1)).toBeFocused();await expect(links.nth(1)).toHaveAttribute('aria-current','step');await page.keyboard.press('End');await expect(links.last()).toBeFocused();
 });
 
@@ -87,6 +87,7 @@ test('form validates fields, keeps input and never pretends to send', async ({ p
   await expect(page.locator('#contact-name')).toBeFocused();
   await expect(page.locator('#error-contact')).toContainText('корректный');
   await page.locator('#contact-name').fill('Проверка');
+  await page.locator('.contact-details summary').click();
   await page.locator('#contact-company').fill('Демонстрационная компания');
   await page.locator('#contact-contact').fill('test@example.test');
   await page.locator('#contact-project').fill('javascript:alert(1)');
@@ -100,9 +101,7 @@ test('form validates fields, keeps input and never pretends to send', async ({ p
   expect(requests).toEqual([]);
 });
 
-test('broken channel image preserves text, CTA and navigation',async({page})=>{
- await page.route(/final-r2\/channels\/online\.png/,r=>r.abort());await page.goto('/#channels');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');await links.nth(1).click();await expect(page.locator('#channel-online .media')).toHaveClass(/media-failed/);await expect(page.locator('#channel-online p')).toBeVisible();await expect(page.locator('#channel-online .text-link')).toBeVisible();await links.nth(2).click();await expect(page.locator('#channel-agent .media')).not.toHaveClass(/media-failed/);
-});
+test('broken channel image preserves text, shared CTA and navigation',async({page})=>{await page.route(/sales-story\/channels\/online-.*\.webp/,r=>r.abort());await page.goto('/#channels');const links=page.getByRole('navigation',{name:'Каналы продаж'}).getByRole('link');await links.nth(1).click();await expect(page.locator('#channel-online .story-image-error')).toBeVisible();await expect(page.locator('.story-channel-copy [data-story-question]').nth(1)).toBeVisible();await expect(page.locator('.story-channel-cta')).toBeVisible();await links.nth(2).click();await expect(page.locator('.story-channels')).toHaveAttribute('data-scene','agent')});
 
 test('desktop widths and reduced motion retain visible content', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -128,9 +127,7 @@ test('without JavaScript: server-rendered content and honest demo remain availab
   await context.close();
 });
 
-test('real typefaces load; reduced motion provides four readable Journey scenes',async({page})=>{
- await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await page.evaluate(()=>document.fonts.ready);await expect(page.locator('h1')).toHaveCSS('font-family','"Twin Dewi Expanded", sans-serif');await expect(page.locator('h1')).toHaveCSS('font-weight','900');await expect(page.locator('.journey')).toHaveAttribute('data-enhanced','false');await expect(page.locator('.static-scene:visible')).toHaveCount(4);await expect(page.locator('.channel-card:visible')).toHaveCount(4);await expect(page.locator('.channel-card[inert]')).toHaveCount(0);
-});
+test('real typefaces and reduced-motion story controls remain readable',async({page})=>{await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await page.evaluate(()=>document.fonts.ready);await expect(page.locator('h1')).toHaveCSS('font-family','"Twin Dewi Expanded", sans-serif');await expect(page.locator('h1')).toHaveCSS('font-weight','900');await expect(page.locator('.story-journey')).toHaveAttribute('data-mode','switch');await expect(page.locator('.story-j4-route button')).toHaveCount(4);});
 
 test('a foreign project cannot retain the known child lot', async ({ page }) => {
   await page.goto('/demo?projectId=foreign-project&buildingId=building-1&floorId=floor-4&lotId=lot-4-2');

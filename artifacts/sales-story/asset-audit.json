@@ -1,0 +1,92 @@
+[
+  {
+    "asset": "assets/channels/agent.png",
+    "matches": [
+      "public/media/final-r2/channels/agent.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/office.png",
+    "matches": [
+      "public/media/final-r2/channels/office.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/online.png",
+    "matches": [
+      "public/media/final-r2/channels/online.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/site.png",
+    "matches": [
+      "public/media/final-r2/channels/site.png"
+    ]
+  },
+  {
+    "asset": "assets/composition-core.png",
+    "matches": [
+      "public/media/composition-core-20261023.png"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Black.ttf",
+    "matches": [
+      "src/assets/fonts/RFDewiExpanded-Black.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Bold.ttf",
+    "matches": [
+      "src/assets/fonts/RFDewiExpanded-Bold.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Regular.ttf",
+    "matches": [
+      "src/assets/fonts/RFDewiExpanded-Regular.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Semibold.ttf",
+    "matches": [
+      "src/assets/fonts/RFDewiExpanded-Semibold.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/SOURCE_NOTICES.txt",
+    "matches": [
+      "src/assets/fonts/SOURCE_NOTICES.txt"
+    ]
+  },
+  {
+    "asset": "assets/fonts/inter-tight-variable.woff2",
+    "matches": [
+      "src/assets/fonts/inter-tight-variable.woff2"
+    ]
+  },
+  {
+    "asset": "assets/journey/corpus.png",
+    "matches": [
+      "public/media/final-r2/journey/corpus.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/floor.png",
+    "matches": [
+      "public/media/final-r2/journey/floor.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/lot.png",
+    "matches": [
+      "public/media/final-r2/journey/lot.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/project.png",
+    "matches": [
+      "public/media/final-r2/journey/project.png"
+    ]
+  }
+]
