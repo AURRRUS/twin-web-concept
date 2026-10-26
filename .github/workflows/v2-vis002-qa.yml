@@ -1,0 +1,27 @@
+name: VIS-002 QA
+on:
+  push:
+    branches: [work/twin-v2-vis-002]
+permissions:
+  contents: read
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: |
+          QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())")
+          sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
+      - run: npm run twin:task -- VIS-002 && npm run typecheck && npm run twin:test && npm run twin:check && npm run build:v2
+      - run: |
+          npm run preview -- --host 127.0.0.1 --port 4361 > /tmp/v2-preview.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://127.0.0.1:4361/twin-web-concept/v2/ >/dev/null && break; sleep 1; done
+          node scripts/verify-v2.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: vis-002-qa, path: artifacts/vis-002}

@@ -16,7 +16,9 @@
     "twin:check": "node scripts/twin-system.mjs check",
     "twin:task": "node scripts/twin-system.mjs task",
     "twin:guard": "node scripts/twin-system.mjs guard",
-    "twin:test": "node --test scripts/twin-system.test.mjs tests/journey-accordion.test.mjs"
+    "twin:test": "node --test scripts/twin-system.test.mjs tests/journey-accordion.test.mjs",
+    "build:v2": "node scripts/build-v2.mjs",
+    "publish:v2": "node scripts/publish-v2.mjs"
   },
   "repository": {
     "type": "git",
