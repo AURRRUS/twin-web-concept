@@ -1,0 +1,69 @@
+name: Publish and verify Twin layout scroll
+on:
+  push:
+    branches: [codex/twin-layout-scroll-v3]
+    paths-ignore:
+      - 'docs/**'
+      - 'artifacts/**'
+      - '**/*.md'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: twin-layout-scroll-release
+  cancel-in-progress: false
+jobs:
+  publish-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Install browser for the existing QA harness
+        run: |
+          npx playwright install --with-deps chromium
+          QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())")
+          sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
+      - name: Typecheck, build and affected browser regressions
+        run: |
+          npm run typecheck
+          npm run build
+          npx playwright test tests/layout-scroll.spec.ts tests/sales-story.spec.ts tests/type-channels.spec.ts --reporter=line
+      - name: Publish through the existing Pages branch script
+        run: |
+          gh auth setup-git --hostname github.com
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          npm run build:preview
+          npm run publish:preview | tee /tmp/twin-publish-result.txt
+          gh api --method POST repos/AURRRUS/twin-web-concept/pages/builds || echo 'Pages build request unavailable; waiting for the normal branch build'
+      - name: Verify the actual published page and computed styles
+        env:
+          TWIN_URL: https://aurrrus.github.io/twin-web-concept/
+          TWIN_EXPECTED_COMMIT: ${{ github.sha }}
+          TWIN_QA_DIR: artifacts/layout-scroll-v3/online
+        run: node scripts/verify-layout-scroll-v3.mjs
+      - name: Keep browser evidence and publication metadata
+        if: always()
+        run: |
+          mkdir -p artifacts/layout-scroll-v3/online
+          if [ -f /tmp/twin-publish-result.txt ]; then cp /tmp/twin-publish-result.txt artifacts/layout-scroll-v3/online/publish-result.txt; fi
+          git add artifacts/layout-scroll-v3/online
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record actual Twin Pages browser verification [skip ci]'
+            git push origin HEAD:codex/twin-layout-scroll-v3
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: twin-layout-scroll-online
+          path: |
+            artifacts/layout-scroll-v3/online
+            test-results

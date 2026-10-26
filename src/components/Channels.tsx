@@ -21,7 +21,7 @@ export function Channels() {
           if (event.metaKey || event.ctrlKey) return;
           event.preventDefault(); const url = new URL(location.href); url.hash = `channel-${scene.id}`; history.pushState({}, '', url); jump.current(i);
         }}><span>0{i + 1}</span>{t(scene.label)}</a>)}</nav>
-        <div className="story-channel-copy"><div className="story-slot">{scenes.map((scene, i) => <h3 key={scene.id} data-story-title className="story-copy" style={{ visibility: i === 0 ? 'visible' : 'hidden' }}>{t(scene.title)}</h3>)}</div><div className="story-slot">{scenes.map((scene, i) => <p key={scene.id} data-story-question className="story-copy" style={{ visibility: i === 0 ? 'visible' : 'hidden' }}>{t(scene.description)}</p>)}</div></div>
+        <div className="story-channel-copy">{scenes.map((scene, i) => <div className="story-channel-group" key={scene.id}><h3 data-story-title className="story-copy" style={{visibility:i===0?'visible':'hidden'}}>{t(scene.title)}</h3><p data-story-question className="story-copy" style={{visibility:i===0?'visible':'hidden'}}>{t(scene.description)}</p></div>)}</div>
         <a id="channels-demo" className="text-link story-channel-cta" href={sitePath('/demo')}>{content.cta.demo}<Arrow /></a>
       </div>
       <div className="story-channel-art"><div className="story-media-stage">{scenes.map((scene, i) => <div className="story-photo" key={scene.id} id={`channel-${scene.id}`} style={{ zIndex: i + 1, visibility: i === 0 ? 'visible' : 'hidden' }}><StoryImage kind="channels" id={scene.id} alt={`Сценарий продаж — ${scene.label}`} /></div>)}</div></div>

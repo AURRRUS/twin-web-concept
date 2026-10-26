@@ -4,7 +4,7 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-visual-correction-r2` поверх сохранённых FINAL R2 и типографической доработки.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-layout-scroll-v3` поверх сохранённой базы `43fe3d8`.
 
 Предыдущее сравнение — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
 
@@ -91,7 +91,7 @@ npm run publish:preview
 
 Внутренние инструкции и планы внутри приложенных документов не являются подтверждением существующих функций. При конфликте действует последнее поручение владельца; для совпадающих материалов v1.3 новее v1.2. Публикация сайта и платные сервисы требуют отдельной задачи владельца.
 
-## FINAL R2 — текущий контракт
+## FINAL R2 — историческая основа
 
 Пакет [00_START_HERE](docs/final-r2/00_START_HERE.md), полное [ТЗ](docs/final-r2/01_IMPLEMENTATION_SPEC.md), [JOURNEY_STATES](docs/final-r2/JOURNEY_STATES.json), [ASSET_MANIFEST](docs/final-r2/ASSET_MANIFEST.json). Они заменяют противоречащие параметры прежних пакетов.
 
@@ -107,10 +107,15 @@ Journey: Проект→Корпус→Этаж→Лот, четыре исхо�
 
 Исходное состояние и rollback: [BASELINE](docs/final-r2/BASELINE.json) и [ROLLBACK](docs/final-r2/ROLLBACK.md). Резервные ветки не передвигать. После сохранения source commit публиковать существующим npm run build:preview / npm run publish:preview, без force-push и без дополнительного согласования снимков.
 
-Актуальный пакет: [Journey V4–V6 R1](docs/journey-v4-v6/START_HERE.md). После исходного и вариантов1–3 добавлены Большая сцена / Горизонтальный маршрут / Архитектурные плоскости. Реализация, проверки и ограничения: [IMPLEMENTATION](docs/journey-v4-v6/IMPLEMENTATION.md). Публичные доказательства: [ONLINE](docs/journey-v4-v6/ONLINE.md).
+Ранее выполненный пакет: [Journey V4–V6 R1](docs/journey-v4-v6/START_HERE.md). После исходного и вариантов1–3 добавлены Большая сцена / Горизонтальный маршрут / Архитектурные плоскости. Реализация, проверки и ограничения: [IMPLEMENTATION](docs/journey-v4-v6/IMPLEMENTATION.md). Публичные доказательства: [ONLINE](docs/journey-v4-v6/ONLINE.md).
 
-Актуальная реализация — [TWIN_SALES_STORY_R1](docs/sales-story/00_START_HERE.md): основной сайт показывает один доработанный Journey4; все исходный и1–6 доступны через `?compare=journey`. Человеческие каналы с единым CTA, три качества с аргументами у вершин, самостоятельный `#launch`, мобильные детали/zoom и отдельная `/demo`. Состояние публикации и ограничения — [RESULT](docs/sales-story/RESULT.md).
+Основа реализации — [TWIN_SALES_STORY_R1](docs/sales-story/00_START_HERE.md): основной сайт показывает один доработанный Journey4; все исходный и1–6 доступны через `?compare=journey`. Человеческие каналы с единым CTA, три качества с аргументами у вершин, самостоятельный `#launch`, мобильные детали/zoom и отдельная `/demo`. Состояние публикации и ограничения — [RESULT](docs/sales-story/RESULT.md).
 
 Проверка интерфейса: `node scripts/verify-sales-story.mjs` при локальном preview на4360. Онлайн: `NODE_USE_ENV_PROXY=1 TWIN_URL=https://aurrrus.github.io/twin-web-concept/ TWIN_EXPECTED_COMMIT=<SHA> TWIN_QA_DIR=artifacts/sales-story/online node scripts/verify-sales-story.mjs`. Основные команды `npm run typecheck`, `npm run build`, `npm test` сохранены.
 
-Актуальная коррекция: [Visual Correction R2](docs/visual-correction-r2/00_START_HERE.md), [реализация](docs/visual-correction-r2/IMPLEMENTATION.md), [результат и публикация](docs/visual-correction-r2/RESULT.md). Основной путь/сравнение сохранены; исправлены общий frame Journey,42/58каналы,720/760сцена качеств и независимые владельцы entry/scene. QA: `node scripts/verify-visual-r2.mjs` при preview4360; онлайн — те же TWIN_URL/TWIN_EXPECTED_COMMIT/TWIN_QA_DIR, как у sales-story verifier.
+Предыдущая коррекция: [Visual Correction R2](docs/visual-correction-r2/00_START_HERE.md), [реализация](docs/visual-correction-r2/IMPLEMENTATION.md), [результат и публикация](docs/visual-correction-r2/RESULT.md). Основной путь/сравнение сохранены; исправлены общий frame Journey,42/58каналы,720/760сцена качеств и независимые владельцы entry/scene. QA: `node scripts/verify-visual-r2.mjs` при preview4360; онлайн — те же TWIN_URL/TWIN_EXPECTED_COMMIT/TWIN_QA_DIR, как у sales-story verifier.
+
+
+Актуальная компоновка и scroll: [запрос](docs/layout-scroll-v3/REQUEST.txt), [реализация](docs/layout-scroll-v3/IMPLEMENTATION.md), [проверки и публикация](docs/layout-scroll-v3/RESULT.md). Journey: H2 над двумя колонками, вертикальный маршрут/вопрос слева, полный кадр/применение справа. Channels: связанные группы H3+p. Delivery: факты в потоке вокруг пропорциональной графики. Launch: четыре широкие строки. Прежние конфликтующие решения AGENTS перенесены в исторический архив.
+
+Проверка актуальной версии: `npm run typecheck && npm run build && npm test`; затем при preview на4360 `node scripts/verify-layout-scroll-v3.mjs`. Онлайн: `NODE_USE_ENV_PROXY=1 TWIN_URL=https://aurrrus.github.io/twin-web-concept/ TWIN_EXPECTED_COMMIT=<source-sha> TWIN_QA_DIR=artifacts/layout-scroll-v3/online node scripts/verify-layout-scroll-v3.mjs`. Эта проверка дополнительно сверяет фактический manifest, байты страницы, файлы загруженных шрифтов, геометрию и числовую типографику каждого viewport.

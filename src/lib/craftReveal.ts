@@ -1,7 +1,7 @@
 /** Entry owns only outer shells; pure scroll painters exclusively own scene layers. */
 export function initCraftReveals(root: Document = document) {
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
-  const controlled = '[data-story-title],[data-story-question],[data-story-sales],.story-photo,.quality-canvas,.scene-title-group,.scene-body-group,.scene-material';
+  const controlled = '[data-story-title],[data-story-question],[data-story-sales],.story-photo,.quality-graphic,[data-quality],.scene-title-group,.scene-body-group,.scene-material';
   const candidates = [...root.querySelectorAll<HTMLElement>('[data-entry],[data-craft-reveal]')];
   const nodes = candidates.filter(node => node instanceof HTMLElement && !node.closest(controlled) && !node.parentElement?.closest('[data-entry]'));
   const animations = new Map<HTMLElement, Animation>();
@@ -21,9 +21,9 @@ export function initCraftReveals(root: Document = document) {
     if (reduced.matches) return;
     const role = node.dataset.entry || node.dataset.craftReveal || 'group';
     const story = role === 'story-frame';
-    const delay = role === 'launch' ? Math.min(210, [...node.parentElement!.children].indexOf(node) * 70) : role === 'body' ? 60 : ['media', 'contact-form', 'form'].includes(role) ? 120 : 0;
+    const delay = role === 'launch' ? 0 : role === 'body' ? 60 : ['media', 'contact-form', 'form'].includes(role) ? 120 : 0;
     try {
-      const animation = node.animate([{ opacity: 0, transform: `translateY(${story ? 12 : 14}px)` }, { opacity: 1, transform: 'none' }], { duration: story ? 400 : 420, delay, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'backwards' });
+      const animation = node.animate([{ opacity: 0, transform: `translateY(${role === 'launch' ? 12 : 14}px)` }, { opacity: 1, transform: 'none' }], { duration:420, delay, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'backwards' });
       animations.set(node, animation);
       animation.finished.catch(() => {}).finally(() => { if (animations.get(node) === animation) animations.delete(node); });
     } catch { settle(node); }

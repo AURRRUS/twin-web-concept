@@ -1,0 +1,11 @@
+
+> twin-web-concept@1.0.0 publish:preview
+> node scripts/publish-preview.mjs
+
+{
+  "status": "pushed",
+  "sourceCommit": "092841fb93139c4432df5f8fcb330e81fabd0082",
+  "deploymentCommit": "d10effd3d3e0a3396acc7ac6a6a97182c7a613f6",
+  "site": "https://aurrrus.github.io/twin-web-concept/",
+  "note": "Pages deployment must finish; push alone is not an online readiness check."
+}
