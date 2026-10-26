@@ -20,6 +20,7 @@ export function JourneyV4() {
   return <section ref={host} className="story-journey" data-mode={mode} data-comparison-ready="false" aria-label="Journey — Большая сцена">
     <div className="story-panel story-shell"><div className="story-j4-frame"><div className="entry-shell" data-entry="story-frame">
       <header className="story-j4-header">
+        <div className="story-j4-overline"><span>От проекта к конкретному лоту</span><span className="story-j4-count" aria-hidden="true">0{active + 1}<span> / 04</span></span></div>
         <div className="story-slot story-j4-titles">{scenes.map((scene, i) => <div data-story-title key={scene.id} className="story-copy" style={{ visibility: i === 0 ? 'visible' : 'hidden' }}>
           <h2><span>{t(scene.heading.main)}</span>{' '}<span className="bronze">{t(scene.heading.bronze)}</span></h2>
         </div>)}</div>

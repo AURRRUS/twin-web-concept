@@ -32,10 +32,11 @@ export function createStoryPainter(root: HTMLElement, kind: StoryKind) {
       paintText(sales, from, to, moving, f.salesOut, f.salesIn);
       photos.forEach((photo, i) => {
         const old = i === from, next = i === to;
-        const opacity = moving ? old ? f.oldOpacity : next ? f.newOpacity : 0 : old ? 1 : 0;
+        const opacity = moving ? old || next && f.imageTransform > 0 ? 1 : 0 : old ? 1 : 0;
         photo.style.opacity = String(opacity);
         photo.style.visibility = opacity > 0 ? 'visible' : 'hidden';
-        photo.style.transform = moving && next ? `translateY(${12 * (1 - f.imageTransform)}px) scale(${1 + .025 * (1 - f.imageTransform)})` : 'none';
+        photo.style.clipPath = moving && next ? `inset(0 0 ${(1 - f.imageTransform) * 100}% 0)` : 'none';
+        photo.style.transform = moving && next ? `translateY(${28 * (1 - f.imageTransform)}px) scale(${1 + .055 * (1 - f.imageTransform)})` : moving && old ? `scale(${1 - .012 * f.imageTransform})` : 'none';
         photo.inert = moving || i !== active;
         photo.setAttribute('aria-hidden', String(i !== active));
       });
