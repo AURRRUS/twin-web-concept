@@ -80,7 +80,7 @@ Journey4сцены: Проект→Корпус→Этаж→Лот, все те
 
 # Sales Story R1 — 25 октября 2026
 
-[00_START_HERE](docs/sales-story/00_START_HERE.md) → полный01_SPEC →02_CONTENT →03_MOTION →04_TOKENS →05_ASSETS →06_ACCEPTANCE заменяют противоречия только в изменяемых областях. Основной сайт: один обновлённый Journey4; `?compare=journey`: исходный и1–6 сохранены. Старые hash включают сравнение через replaceState с сохранением query; compare не является данными выбора. Резервы до работ — docs/sales-story/BASELINE.md, не двигать.
+[00_START_HERE](docs/sales-story/00_START_HERE.md) → полный01_SPEC →02_CONTENT →03_MOTION →04_TOKENS →05_ASSETS →06_ACCEPTANCE заменяют противоречия только в изменяемых областях. Основной сайт: один обновлённый Journey4; `?compare=journey`: исходный и1–6 сохранены. Старые hash включают сравнение через replaceState с сохранением query; compare не является данными выбора. Резервы и точная последовательность — docs/sales-story/BASELINE.md, не двигать. Перед следующим Pages-резервом явно fetch refs/heads/twin-preview:refs/remotes/origin/twin-preview и сверить отправленный SHA с git ls-remote; обычный fetch может иметь ограниченный refspec.
 
 Journey: H2/вопрос покупателя, маршрут над полным визуалом, применение для команды продаж под ним.460/100/360svh при>=1100×680 и фактическом fits. Новая чистая salesStoryFrame: чтение0–.19/.27–.46/.54–.73/.81–1, короткие переходы; максимум1растр с opacity>0, никаких половин двух интерфейсов. Каскад/обратный ход/повтор/навигация из MOTION.
 
