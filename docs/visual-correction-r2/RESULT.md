@@ -6,7 +6,14 @@ Journey4: https://aurrrus.github.io/twin-web-concept/#journey-variant-4
 Качества: https://aurrrus.github.io/twin-web-concept/#delivery
 Сравнение: https://aurrrus.github.io/twin-web-concept/?compare=journey
 
-Точный sourceCommit/Pages commit и статус онлайн добавляются после штатной публикации и фактической проверки. Локальные изменения не объявляются уже опубликованными.
+**Опубликовано и проверено онлайн: PASS.**
+
+sourceCommit: `341832c5dfbadf1b65d4c70e6b389f661f6ef607`.
+Pages commit: `dbcf85406462270b19eceba489603468c8793004`.
+
+[Source](https://github.com/AURRRUS/twin-web-concept/commit/341832c5dfbadf1b65d4c70e6b389f661f6ef607) · [Pages](https://github.com/AURRRUS/twin-web-concept/commit/dbcf85406462270b19eceba489603468c8793004) · [PR15](https://github.com/AURRRUS/twin-web-concept/pull/15).
+
+[Фактический online-отчёт](../../artifacts/visual-correction-r2/online/verification.json) · [Снимки с Pages](../../artifacts/visual-correction-r2/online). HTML публичной страницы совпал с dist по SHA256; manifest подтвердил именно этот sourceCommit. Отчётный commit после публикации не меняет frontend и не подменяет sourceCommit сборки.
 
 ## Что исправлено
 
@@ -60,3 +67,13 @@ Viewer/API и приём обращений по-прежнему не подк�
 ## Команды
 
 npm run typecheck; npm run build; npm test. Preview: npm run preview -- --port 4360. Браузер: node scripts/verify-visual-r2.mjs. Публикация из чистого commit: npm run build:preview && npm run publish:preview. Онлайн: NODE_USE_ENV_PROXY=1 TWIN_URL=https://aurrrus.github.io/twin-web-concept/ TWIN_EXPECTED_COMMIT=<SHA> TWIN_QA_DIR=artifacts/visual-correction-r2/online node scripts/verify-visual-r2.mjs.
+
+## Фактическая онлайн-сверка
+
+Все12размеров — PASS. Для каждого записаны mode и измеренные bbox. Проверены общие края Journey±2px, grid42/58, равенство rendered-сторон<1%, исходный ratio720/760, модель52.78%, model/text gap≥16px и нижний запас≥12px. На низких окнах mode совпадает с таблицей выше. Все4состояния, обратный ход, паузы, re-entry и nav проверены на странице, а не только в pure math.
+
+CDP подтвердил реальные custom RFDewiExpanded-Black900, Expanded-Bold700, Expanded-Semibold600, InterTight-Regular variable450/500. На1440 JourneyH2=40px, вопрос20px/500, nav16px/600, применение17px/450, H3каналов24px/700, H2каналов40px/900. На1920 локальныеH2=48px. Font-synthesis:none; отрицательного tracking и scaleX нет.
+
+Обычный сайт содержит1Journey, сравнение7вариантов. Старые6входов на исходный/1/2/3/5/6 включают compare и сохраняют query; прямой4 работает без compare. Выход из сравнения сохраняет view/campaign и убирает только compare. MediaViewer zoom/Back/фокус, отдельная /demo, reduced-motion и zoom200%CSS-viewport/DPR2 — PASS. JavaScript-ошибок0, HTTP400+0.
+
+Опубликованные конечные и промежуточные кадры осмотрены: Journey сохраняет общий frame, план/карточка целиком; фото каналов не обрезает людей и устройства; треугольник пропорционален, факты отделены от модели; mobile сохраняет естественную высоту и крупную деталь. Это внутренний QA, не утверждение визуального одобрения владельцем.
