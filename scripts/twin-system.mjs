@@ -21,7 +21,7 @@ export function validateTask(t){
  if(!['draft','ready','implemented','released'].includes(t.status))errors.push('Invalid status');
  if(!t.publication||typeof t.publication.allowed!=='boolean'||!t.publication.reason)errors.push('Explicit publication contract required');
  if(t.motionChanged&&!t.motionContract)errors.push('Motion contract required');
- if(t.status==='ready'&&(/TODO|TBD|заполнить/i.test(JSON.stringify(t))||t.openQuestions?.length))errors.push('Ready task has unresolved fields');
+ if(['ready','implemented','released'].includes(t.status)&&(/TODO|TBD|заполнить/i.test(JSON.stringify(t))||t.openQuestions?.length))errors.push('Ready task has unresolved fields');
  return errors;
 }
 export function generated(){
