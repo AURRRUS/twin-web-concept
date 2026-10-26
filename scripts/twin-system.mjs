@@ -7,7 +7,8 @@ export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 export function modeOf(s){
- if(/подготов|тз|обсуди|систем[уы]|нарису|отрису/i.test(s))return 'prepare';
+ if(/подготов|тз|обсуди|нарису|отрису/i.test(s))return 'prepare';
+ if(/не\s+(исправ|меня|вноси|реализ)/i.test(s))return 'review';
  if(/исправ|внедри|выполни|сделай(?!\s+ревью)|поменя|замени|убери|добавь/i.test(s))return 'execute';
  if(/проверь|ревью|аудит|посмотри/i.test(s))return 'review';
  return 'prepare';
