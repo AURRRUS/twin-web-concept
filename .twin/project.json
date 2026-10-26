@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "repository": "AURRRUS/twin-web-concept",
+  "canonicalBranch": "work/twin-site-system",
+  "sourceBaseline": "78cdf6f5732fe62ecb2992bb78d049c0aa5f8719",
+  "publishedSourceBaseline": "6e8f294dbd178e2c7ec66d2fbada96865211e808",
+  "pagesBranch": "twin-preview",
+  "defaultMode": "prepare",
+  "pendingTask": "JRN-001",
+  "liveUrl": "https://aurrrus.github.io/twin-web-concept/"
+}
