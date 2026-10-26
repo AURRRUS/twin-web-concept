@@ -1,7 +1,6 @@
 {
-  "version": "journey-craft-1",
-  "sourceCommit": "6e8f294dbd178e2c7ec66d2fbada96865211e808",
-  "builtAt": "2026-10-26T11:56:18.122597+00:00",
-  "previousDeploymentCommit": "0a325d42df0da958201e8e084a37509958d0b28a",
-  "previousHomepageDeploymentCommit": "d10effd3d3e0a3396acc7ac6a6a97182c7a613f6"
+  "version": "JRN-001",
+  "sourceCommit": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+  "builtAt": "2026-10-26T18:33:55.667257+00:00",
+  "previousDeploymentCommit": "7e86e2aa0fddb7a4e15d35844f10499eb7041856"
 }
