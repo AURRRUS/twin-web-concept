@@ -4,7 +4,7 @@ Desktop-реализация корпоративного сайта Twin по �
 
 ## Как посмотреть результат
 
-Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-sales-story-r1` поверх сохранённых FINAL R2 и типографической доработки.
+Демонстрационный сайт: **https://aurrrus.github.io/twin-web-concept/**. Публикация — существующая ветка `twin-preview`; текущие исходники — `codex/twin-visual-correction-r2` поверх сохранённых FINAL R2 и типографической доработки.
 
 Предыдущее сравнение — [сравнение трёх Journey](docs/journey-comparison/REQUEST.md): исходный вариант сохранён, после него добавлены Два масштаба / Одно окно в проект / Четыре главы. Общие тексты и оригиналы FINAL R2, независимые scroll-драйверы, переключатели на mobile/reduced-motion. Новые стили изолированы в journeyComparison.css; каноническая система бренда остаётся в design.css.
 
@@ -73,7 +73,7 @@ Responsive проверяется в Chromium на1920/1440/1280/1024/768/390/36
 После проверок и сохранения исходников в commit:
 
 ```sh
-git push origin codex/twin-sales-story-r1
+git push origin codex/twin-visual-correction-r2
 npm run build:preview
 npm run publish:preview
 ```
@@ -112,3 +112,5 @@ Journey: Проект→Корпус→Этаж→Лот, четыре исхо�
 Актуальная реализация — [TWIN_SALES_STORY_R1](docs/sales-story/00_START_HERE.md): основной сайт показывает один доработанный Journey4; все исходный и1–6 доступны через `?compare=journey`. Человеческие каналы с единым CTA, три качества с аргументами у вершин, самостоятельный `#launch`, мобильные детали/zoom и отдельная `/demo`. Состояние публикации и ограничения — [RESULT](docs/sales-story/RESULT.md).
 
 Проверка интерфейса: `node scripts/verify-sales-story.mjs` при локальном preview на4360. Онлайн: `NODE_USE_ENV_PROXY=1 TWIN_URL=https://aurrrus.github.io/twin-web-concept/ TWIN_EXPECTED_COMMIT=<SHA> TWIN_QA_DIR=artifacts/sales-story/online node scripts/verify-sales-story.mjs`. Основные команды `npm run typecheck`, `npm run build`, `npm test` сохранены.
+
+Актуальная коррекция: [Visual Correction R2](docs/visual-correction-r2/00_START_HERE.md), [реализация](docs/visual-correction-r2/IMPLEMENTATION.md), [результат и публикация](docs/visual-correction-r2/RESULT.md). Основной путь/сравнение сохранены; исправлены общий frame Journey,42/58каналы,720/760сцена качеств и независимые владельцы entry/scene. QA: `node scripts/verify-visual-r2.mjs` при preview4360; онлайн — те же TWIN_URL/TWIN_EXPECTED_COMMIT/TWIN_QA_DIR, как у sales-story verifier.

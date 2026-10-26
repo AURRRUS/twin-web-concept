@@ -1,5 +1,5 @@
 {
-  "status": "Owner accepted direction; exact implementation copy locked by this handoff; not research findings",
+  "status": "Owner accepted the product direction; R2 corrects visual implementation. Exact copy is from this file, not generated reference.",
   "journey": [
     {
       "id": "project",
@@ -131,7 +131,9 @@
         "final_label": "Эффективно",
         "value": "Помогайте выбирать",
         "description": "Корпус, этаж, планировка и вид — в одном сценарии",
-        "status": "Функциональное объяснение; без обещания ROI/конверсии"
+        "status": "Функциональное объяснение; без обещания ROI/конверсии",
+        "diagram_description": "Планировка и вид в одном сценарии",
+        "mobile_description": "Корпус, этаж, планировка и вид — в одном сценарии"
       }
     ],
     "note": "Состав решения, стоимость и график фиксируем для конкретного проекта"
@@ -167,5 +169,6 @@
     "mobile_demo": "Открыть демо",
     "mobile_form_details": "Дополнить запрос"
   },
-  "unchanged": "Hero desktop, positioning, Composition content, contact wording and honest demo/integration statuses remain current. Mobile reflows these sections; do not replace their full text."
+  "unchanged": "Hero desktop, positioning, Composition content, contact wording and honest demo/integration statuses remain current. Mobile reflows these sections; do not replace their full text.",
+  "version": "TWIN_VISUAL_CORRECTION_R2"
 }

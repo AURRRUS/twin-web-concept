@@ -1,0 +1,10 @@
+{
+  "src/components/HeaderHero.tsx": true,
+  "src/components/MediaViewer.tsx": true,
+  "src/lib/config.ts": true,
+  "src/lib/journeyV456Frame.mjs": true,
+  "src/components/Journey.tsx": true,
+  "src/lib/media.json": true,
+  "public/media/core.webp": true,
+  "public/media/composition-core-20261023.png": true
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "asset": "assets/channels/agent.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/channels/agent.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/office.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/channels/office.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/online.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/channels/online.png"
+    ]
+  },
+  {
+    "asset": "assets/channels/site.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/channels/site.png"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Black.ttf",
+    "matching_repository_paths": [
+      "src/assets/fonts/RFDewiExpanded-Black.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Bold.ttf",
+    "matching_repository_paths": [
+      "src/assets/fonts/RFDewiExpanded-Bold.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Regular.ttf",
+    "matching_repository_paths": [
+      "src/assets/fonts/RFDewiExpanded-Regular.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/RFDewiExpanded-Semibold.ttf",
+    "matching_repository_paths": [
+      "src/assets/fonts/RFDewiExpanded-Semibold.ttf"
+    ]
+  },
+  {
+    "asset": "assets/fonts/SOURCE_NOTICES.txt",
+    "matching_repository_paths": [
+      "src/assets/fonts/SOURCE_NOTICES.txt"
+    ]
+  },
+  {
+    "asset": "assets/fonts/inter-tight-variable.woff2",
+    "matching_repository_paths": [
+      "src/assets/fonts/inter-tight-variable.woff2"
+    ]
+  },
+  {
+    "asset": "assets/journey/corpus.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/journey/corpus.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/floor.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/journey/floor.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/lot.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/journey/lot.png"
+    ]
+  },
+  {
+    "asset": "assets/journey/project.png",
+    "matching_repository_paths": [
+      "public/media/final-r2/journey/project.png"
+    ]
+  },
+  {
+    "asset": "assets/quality-model.webp",
+    "matching_repository_paths": [
+      "public/media/core.webp"
+    ]
+  }
+]

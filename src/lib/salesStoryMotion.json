@@ -1,266 +1,39 @@
 {
-  "version": "R1",
-  "units": "desktop ranges in normalized scroll progress; durations_ms only for triggered local reveals and mobile",
-  "global": {
-    "wheel_hijack": false,
-    "new_dependencies_required": false,
-    "ease": "smoothstep on local phase; cubic-bezier(.22,.61,.36,1) for triggered reveals",
-    "max_scroll_response_ms": 100,
-    "hidden_tab": "pause measurements; reconcile to actual geometry on return",
-    "reduced_motion": "fully readable content, direct scene selection, no long tracks"
-  },
+  "version": "TWIN_VISUAL_CORRECTION_R2",
   "journey": {
-    "component": "JourneyV4",
-    "pin_min_width": 1100,
-    "pin_min_height": 680,
-    "panel_svh": 100,
     "host_svh": 460,
-    "repeat": true,
-    "reversible": true,
-    "read_intervals": [
-      [
-        0,
-        0.19
-      ],
-      [
-        0.27,
-        0.46
-      ],
-      [
-        0.54,
-        0.73
-      ],
-      [
-        0.81,
-        1
-      ]
-    ],
-    "transition_intervals": [
-      [
-        0.19,
-        0.27
-      ],
-      [
-        0.46,
-        0.54
-      ],
-      [
-        0.73,
-        0.81
-      ]
-    ],
-    "nav_targets": [
-      0.095,
-      0.365,
-      0.635,
-      0.905
-    ],
+    "panel_svh": 100,
+    "read_intervals": [[0, 0.19], [0.27, 0.46], [0.54, 0.73], [0.81, 1]],
+    "transition_intervals": [[0.19, 0.27], [0.46, 0.54], [0.73, 0.81]],
+    "nav_targets": [0.095, 0.365, 0.635, 0.905],
     "transition_local": {
-      "title_out": [
-        0,
-        0.12
-      ],
-      "title_in": [
-        0.14,
-        0.36
-      ],
-      "question_out": [
-        0.05,
-        0.2
-      ],
-      "question_in": [
-        0.3,
-        0.58
-      ],
-      "sales_out": [
-        0.12,
-        0.28
-      ],
-      "sales_in": [
-        0.74,
-        1
-      ],
-      "image_out_opacity": [
-        0.3,
-        0.48
-      ],
-      "image_in_opacity": [
-        0.5,
-        0.68
-      ],
-      "image_in_transform": [
-        0.5,
-        0.9
-      ],
-      "new_image_scale": [
-        1.025,
-        1
-      ],
-      "new_image_y_px": [
-        12,
-        0
-      ],
-      "nav_active_at": 0.55
-    },
-    "image_invariant": "Only one raster has opacity>0 at a time; no top/bottom splice; old/new full-frame placeholders match",
-    "text_motion": {
-      "out_y_px": -12,
-      "in_y_px": 14,
-      "mask": "own text slot",
-      "no_alpha_blend_of_different_words": true
-    },
-    "compact": {
-      "no_pin": true,
-      "max_transition_ms": 360,
-      "direct_buttons": true,
-      "swipe_required": false
+      "title_out": [0, 0.12], "title_in": [0.14, 0.36],
+      "question_out": [0.05, 0.20], "question_in": [0.30, 0.58],
+      "sales_out": [0.12, 0.28], "sales_in": [0.74, 1],
+      "image_out_opacity": [0.30, 0.48], "image_in_opacity": [0.50, 0.68],
+      "image_in_transform": [0.50, 0.90], "nav_active_at": 0.55
     }
   },
   "channels": {
-    "component": "Channels",
-    "panel_svh": 100,
-    "host_svh": 400,
-    "repeat": true,
-    "reversible": true,
-    "scroll_units_svh": {
-      "read_site": [
-        0,
-        45
-      ],
-      "transition_site_online": [
-        45,
-        85
-      ],
-      "read_online": [
-        85,
-        130
-      ],
-      "transition_online_agent": [
-        130,
-        170
-      ],
-      "read_agent": [
-        170,
-        215
-      ],
-      "transition_agent_office": [
-        215,
-        255
-      ],
-      "read_office": [
-        255,
-        300
-      ]
-    },
-    "nav_targets_svh": [
-      22.5,
-      107.5,
-      192.5,
-      277.5
-    ],
+    "host_svh": 400, "panel_svh": 100,
+    "read_intervals_svh": [[0, 45], [85, 130], [170, 215], [255, 300]],
+    "transition_intervals_svh": [[45, 85], [130, 170], [215, 255]],
+    "nav_targets_svh": [22.5, 107.5, 192.5, 277.5],
     "transition_local": {
-      "old_text_out": [
-        0,
-        0.16
-      ],
-      "new_title_in": [
-        0.18,
-        0.42
-      ],
-      "new_body_in": [
-        0.34,
-        0.62
-      ],
-      "photo_in": [
-        0.22,
-        1
-      ],
-      "nav_active_at": 0.6
-    },
-    "photo": {
-      "enter_y": "mediaHeight+24px -> 0",
-      "enter_opacity": 1,
-      "outgoing_scale": [
-        1,
-        0.975
-      ],
-      "outgoing_y_px": [
-        0,
-        -12
-      ],
-      "older_hidden_after_cover": true
-    },
-    "compact": "no long track; 4 mobile stories in natural flow; each local text/media reveal once with <=80ms stagger, y<=16px, duration<=450ms"
+      "old_text_out": [0, 0.16], "new_title_in": [0.18, 0.42],
+      "new_body_in": [0.34, 0.62], "photo_in": [0.22, 1], "nav_active_at": 0.60
+    }
   },
   "delivery": {
-    "component": "Delivery",
+    "once": true,
     "pin": false,
-    "once": true,
-    "driver": "monotonic scroll progress from actual composition position",
-    "progress": "max(previous,clamp((.80*viewportHeight-compositionRect.top)/(.65*viewportHeight),0,1))",
     "phases": {
-      "time": [
-        0,
-        0.2
-      ],
-      "edge_time_budget": [
-        0.1,
-        0.32
-      ],
-      "budget": [
-        0.24,
-        0.45
-      ],
-      "edge_budget_application": [
-        0.34,
-        0.56
-      ],
-      "application_label_initial": [
-        0.43,
-        0.61
-      ],
-      "model": [
-        0.38,
-        0.64
-      ],
-      "edge_application_time": [
-        0.52,
-        0.73
-      ],
-      "word_effective": [
-        0.7,
-        0.88
-      ],
-      "application_description": [
-        0.77,
-        0.97
-      ]
-    },
-    "lead_heading": "independent once reveal as header enters viewport; not hidden until entire diagram completes",
-    "text_y_px": 12,
-    "model_scale": [
-      0.97,
-      1
-    ],
-    "no_counter_animation": true,
-    "word": "two separate masks, fixed measured width of Эффективно; no simultaneous alpha blend; final accessible text matches visible result",
-    "mobile": "each argument has own visibility progress; word transition belongs to third argument; no offscreen auto-completion"
+      "time": [0, 0.20], "edge_time_budget": [0.10, 0.32],
+      "budget": [0.24, 0.45], "edge_budget_application": [0.34, 0.56],
+      "application_label_initial": [0.43, 0.61], "model": [0.38, 0.64],
+      "edge_application_time": [0.52, 0.73], "word_effective": [0.70, 0.88],
+      "application_description": [0.77, 0.97]
+    }
   },
-  "launch": {
-    "trigger": "local entry",
-    "once": true,
-    "duration_ms": 420,
-    "stagger_ms": 70,
-    "translate_y_px": 12
-  },
-  "other_reveals": {
-    "scope": "eligible heading/body/media groups outside controlled Journey/Channels/Delivery scenes",
-    "duration_ms": 420,
-    "stagger_ms": 60,
-    "translate_y_px": 12,
-    "once": true,
-    "nested_animation": "do not double-animate controlled components",
-    "no_js": "all content visible"
-  },
-  "content_ready": "font and media dimensions known before measuring; visible usable fallback on error; never leave opacity0 if driver fails"
+  "entry": {"duration_ms": 420, "translate_y_px": 14, "title_delay_ms": 0, "body_delay_ms": 60, "media_delay_ms": 120}
 }

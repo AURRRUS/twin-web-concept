@@ -10,11 +10,11 @@ export function ProductDemo({ selection, onChange, full = false }: { selection: 
   const selectLot = () => onChange({ ...selection, lotId: fixture.lotId });
   const chooseView = (view: Selection['view']) => onChange({ ...selection, view });
   return <section className={`product section ${full ? 'full-demo' : ''}`} id="product" aria-labelledby={`${id}-title`}>
-    <div className="section-heading"><div><span data-craft-reveal="eyebrow" className="eyebrow">TWIN В РАБОТЕ</span>{full ? <h1 id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h1> : <h2 data-craft-reveal="title" id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h2>}</div>
+    <div className="section-heading" data-entry="title"><div><span data-craft-reveal="eyebrow" className="eyebrow">TWIN В РАБОТЕ</span>{full ? <h1 id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h1> : <h2 data-craft-reveal="title" id={`${id}-title`}>Исследуйте проект<br />Рассмотрите конкретный лот</h2>}</div>
       <button className="text-link" onClick={() => onChange({ ...selection, buildingId: null, floorId: null, lotId: null })}><Icon name="arrow" className="back-arrow" />Вернуться к проекту</button></div>
     <p data-craft-reveal="body" className="demo-label"><span className="status-dot" />Демонстрационный интерфейс · один корпус, один этаж, один лот</p>
     {full && <div className="viewer-notice"><strong>Настоящий Twin пока не подключён.</strong><p>Здесь можно проверить пример выбора и материалы лота. Изображения иллюстративные; цены и наличие не предоставлены.</p><a className="text-link" href="#demo-catalog">Перейти к доступному примеру ↓</a></div>}
-    <div className="product-reveal-viewport"><div data-craft-reveal="media" className="product-workspace" id={full ? 'demo-catalog' : undefined}>
+    <div className="product-reveal-viewport" data-entry="media"><div data-craft-reveal="media" className="product-workspace" id={full ? 'demo-catalog' : undefined}>
       <div className="workspace-toolbar"><span><Icon name="layers" />Цифровой двойник</span><span className="workspace-mode"><span />Демонстрационный проект</span></div>
       <aside className="project-controls" aria-label="Выбор в демонстрационном проекте">
         <Media name="hero" alt="Демонстрационный проект" />
