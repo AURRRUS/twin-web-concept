@@ -5,3 +5,4 @@
 
 .tv2-journey[data-mode=pin] .tv2-journey-item{background:color-mix(in srgb,var(--ts-v2-bronzeSurface) calc(var(--tv2-open,0)*100%),transparent);box-shadow:inset 3px 0 color-mix(in srgb,var(--ts-v2-bronzeEdge) calc(var(--tv2-open,0)*100%),transparent)}
 @media(min-width:1100px){.tv2-hero-copy h1 span{white-space:nowrap}}
+@media(max-width:767px){.tv2-header{gap:8px}.tv2-logo{width:106px}.tv2-contact{padding-inline:8px;gap:8px}.tv2-contact span{display:none}.tv2-hero-copy h1{overflow-wrap:anywhere}}
