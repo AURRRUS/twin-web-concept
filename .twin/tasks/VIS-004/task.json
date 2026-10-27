@@ -1,0 +1,39 @@
+{
+  "id": "VIS-004",
+  "mode": "prepare",
+  "status": "draft",
+  "outcome": "Определить состав производства выбранного полного Twin V2 по изображениям владельца",
+  "baseline": "d487775168f9e45dff45871fe6e2553fe162e924",
+  "scope": [
+    "Вся V2 от hero до footer: feasibility, материалы и порядок исполнения; без runtime изменений"
+  ],
+  "sources": [
+    ".twin/tasks/VIS-004/ASSESSMENT.md",
+    ".twin/tasks/VIS-004/reference-upper.jpg",
+    ".twin/tasks/VIS-004/reference-lower.jpg",
+    ".twin/tasks/VIS-004/asset-jobs.json",
+    "docs/v2/DECISIONS.md"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "card",
+    "body",
+    "button",
+    "note"
+  ],
+  "acceptance": [
+    "Осмотрены оба референса",
+    "Отделены готовые исходники и требуемые слои",
+    "Зафиксированы состав работ, ответственные и следующий шаг"
+  ],
+  "responsive": [
+    "Desktop и отдельная mobile-композиция входят в будущий scope"
+  ],
+  "motionChanged": false,
+  "publication": {
+    "allowed": false,
+    "reason": "Текущий запрос — понять состав работ; не запускать сборку и публикацию"
+  },
+  "openQuestions": []
+}

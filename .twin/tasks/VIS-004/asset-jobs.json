@@ -1,0 +1,119 @@
+{
+  "status": "planning-only",
+  "executionAuthorized": false,
+  "callCountsAreProposed": true,
+  "jobs": [
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "H01",
+      "scene": "hero-journey",
+      "producerSkill": "talent-photorealism",
+      "operation": "single-master",
+      "purpose": "Чистая архитектурная сцена в композиции выбранного hero без текста и UI, с запасом вниз под переход",
+      "sourcePaths": [
+        "public/media/top-v2/hero.webp"
+      ],
+      "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "protected": "Выбранный дизайн условного отеля, согласованные camera/material/light; без новых фактов реального проекта",
+      "targetCSSSize": "Уточнить в visual-contract; full-bleed desktop + mobile crop",
+      "targetPixels": "Рассчитать от CSS size/DPR/scale; native output измерить",
+      "alpha": false,
+      "status": "needs-spec",
+      "maxCalls": 1,
+      "attemptsUsed": 0,
+      "outputs": [],
+      "qualityReason": "Не апскейл: нужен совместимый master для пространственной сцены"
+    },
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "H02",
+      "scene": "hero-journey",
+      "producerSkill": "imagegen",
+      "operation": "foreground-alpha",
+      "purpose": "Фасад и передний край из принятого H01 на общем холсте с alpha",
+      "dependsOn": [
+        "H01"
+      ],
+      "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "alpha": true,
+      "status": "blocked-by-master",
+      "maxCalls": 1,
+      "attemptsUsed": 0,
+      "outputs": []
+    },
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "H03",
+      "scene": "hero-journey",
+      "producerSkill": "imagegen",
+      "operation": "clean-plate",
+      "purpose": "Согласованный фон за перемещаемым фасадом, без дублированного здания",
+      "dependsOn": [
+        "H01",
+        "H02"
+      ],
+      "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "alpha": false,
+      "status": "blocked-by-master",
+      "maxCalls": 1,
+      "attemptsUsed": 0,
+      "outputs": []
+    },
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "L01",
+      "scene": "launch",
+      "producerSkill": "imagegen",
+      "operation": "four-coherent-illustrations",
+      "purpose": "Материалы / состав решения / разработка / проверка: четыре изображения в одном масштабе и свете, без текста; DOM labels отдельно",
+      "reference": ".twin/tasks/VIS-004/reference-lower.jpg",
+      "alpha": true,
+      "status": "needs-spec",
+      "maxCalls": 4,
+      "attemptsUsed": 0,
+      "outputs": []
+    },
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "C01",
+      "scene": "composition-and-qualities",
+      "producerSkill": "frontend-engineer",
+      "operation": "reuse-and-place",
+      "purpose": "Использовать существующую alpha-модель целого проекта, исправить размер/поля/связи",
+      "sourcePaths": [
+        "public/media/composition-core-20261023.png"
+      ],
+      "status": "needs-layout",
+      "maxCalls": 0,
+      "attemptsUsed": 0,
+      "outputs": []
+    },
+    {
+      "requester": "frontend-engineer",
+      "acceptedBy": null,
+      "observed": null,
+      "id": "CH01",
+      "scene": "channels",
+      "producerSkill": "frontend-engineer",
+      "operation": "inspect-and-compose",
+      "purpose": "Сначала проверить 4 существующих сцены в новом stack и качество UI/crop; новые графические заказы только по наблюдаемым дефектам",
+      "sourcePaths": [
+        "public/media/sales-story/channels/"
+      ],
+      "status": "needs-inspection",
+      "maxCalls": 0,
+      "attemptsUsed": 0,
+      "outputs": []
+    }
+  ]
+}
