@@ -24,7 +24,7 @@ jobs:
           ln -s "$PWD/dist" /tmp/twin-v2-preview/twin-web-concept
           python3 -m http.server 4361 --bind 127.0.0.1 --directory /tmp/twin-v2-preview > /tmp/v2-preview.log 2>&1 &
           for i in $(seq 1 30); do curl -sf http://127.0.0.1:4361/twin-web-concept/v2/ >/dev/null && break; sleep 1; done
-          node scripts/verify-v2.mjs
+          V2_QA_SCOPE="${{ contains(github.event.head_commit.message, '[contact-qa]') && 'contact' || '' }}" node scripts/verify-v2.mjs
           V2_URL=http://127.0.0.1:4361/twin-web-concept/v2/ node scripts/verify-v2-extra.mjs
       - uses: actions/upload-artifact@v4
         if: always()
