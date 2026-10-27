@@ -1,7 +1,7 @@
 {
   "id": "VIS-002",
   "mode": "execute",
-  "status": "ready",
+  "status": "released",
   "outcome": "Отдельная Twin V2: связка hero и Journey, бело-бронзовый UI, buyer copy, реальные ассеты, адаптив и обратимый scroll; безопасная публикация /v2/",
   "baseline": "0336e131b27f302574e16fad9c56eb70fcb15c5f",
   "scope": [

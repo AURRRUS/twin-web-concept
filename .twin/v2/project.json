@@ -6,7 +6,7 @@
   "v1CanonicalBranch": "work/twin-site-system",
   "sourceBaseline": "1773869f0b81de80b695589f51e06cc2863fb691",
   "pagesBaseline": "504b5738ec53cf6abbf4c40e8499071063cb7fbd",
-  "status": "implemented-awaiting-browser-verification",
+  "status": "released",
   "activeTask": "VIS-002",
   "route": "/v2/",
   "productionBasePath": "/twin-web-concept",
@@ -15,5 +15,8 @@
     "scope": "v2 subtree only; preserve existing V1 bytes",
     "basis": "Владелец поручил отдельную V2 и включил production workflow; прежнее правило публикации без согласования снимков"
   },
-  "nextTask": "Browser QA and separate V2 release"
+  "nextTask": "Owner review; next section as separate task",
+  "publishedSourceCommit": "b6be221069650439606dd2908667aa90378cd376",
+  "pagesCommit": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
+  "publishedUrl": "https://aurrrus.github.io/twin-web-concept/v2/"
 }
