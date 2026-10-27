@@ -583,7 +583,7 @@
     },
     {
       "path": ".agents/skills/frontend-engineer/SKILL.md",
-      "sha256": "b57889327ff312a6183096fa91bbcd2ec615a808936d4d3659fd4d31742b664d"
+      "sha256": "83757bb63c0aca83bf330543ccd9de25b11b30af144348ab12ab1d82400ea155"
     },
     {
       "path": ".agents/skills/frontend-engineer/agents/openai.yaml",
@@ -952,6 +952,26 @@
     {
       "path": ".agents/skills/frontend-engineer/references/visual-review.md",
       "sha256": "3f65289c7d963a448b283aa1c6fd05fdaa827e121ede81f55e1e521a56be7dda"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/prompt-mask-effects.md",
+      "sha256": "1459dcdfa4985a1dc2f2fb9230c134f72484835d1069d9ffb4818b8b09cf8013"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/asset-production.md",
+      "sha256": "8de3080c25809924570d25cef90f4794e22fca84d29efa66a9634873b34cb9b1"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/references/parallax.md",
+      "sha256": "370b185d2d54f5a5b36faedea5c3adc0abffa4cd01c231a83e0bdd51a1d3b99b"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/scripts/parallax-geometry.mjs",
+      "sha256": "bcaf773bde331b30eb267e410a25bb4ece41ca4c5268a17647e0a8605f8dac33"
+    },
+    {
+      "path": ".agents/skills/frontend-engineer/scripts/parallax-geometry.test.mjs",
+      "sha256": "1fe450ec343828c46c6ef6ac7e045124efdd079ae86cf12f4c8ede90ab4e6a4d"
     }
   ]
 }
