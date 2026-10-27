@@ -7,6 +7,7 @@ type Fallback = { imageError: string; retry: string; demoCta: string };
 type Props = { journey: JourneyContent; fallback: Fallback; imageUrls: Record<string, string>; demoHref: string };
 type Mode = 'plain' | 'pin' | 'accordion' | 'flow';
 const ids = ['location', 'compare', 'floor', 'living'];
+const bind = (text: string) => text.replace(/(^|\s)(и|в|на|с|к|о|у|по|из|за|от|до|не|а|но|во|со|для)\s+(?=\S)/giu, '$1$2\u00a0');
 const clickEase = (x: number) => { let low = 0, high = 1; for (let i = 0; i < 18; i++) { const t = (low + high) / 2, a = 1 - t, bx = 3*a*a*t*.22 + 3*a*t*t*.36 + t*t*t; if (bx < x) low = t; else high = t; } const t = (low + high) / 2, a = 1 - t; return 3*a*a*t + 3*a*t*t + t*t*t; };
 const iconPaths = [
   'M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
@@ -139,8 +140,8 @@ export function Journey({ journey, fallback, imageUrls, demoHref }: Props) {
       <h2 className="tv2-journey-title" id="tv2-journey-title">{journey.lines.map((line, index) => { const pos = line.indexOf(journey.accent); return <span key={line}>{pos < 0 ? line : <>{line.slice(0, pos)}<em>{journey.accent}</em>{line.slice(pos + journey.accent.length)}</>}{index < journey.lines.length - 1 && ' '}</span>; })}</h2>
       <div className="tv2-journey-row"><div className="tv2-journey-list" onKeyDown={event => { if (!['ArrowDown','ArrowUp','Home','End'].includes(event.key)) return; const buttons = Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>('.tv2-journey-trigger')); const i = buttons.indexOf(event.target as HTMLButtonElement); if (i < 0) return; event.preventDefault(); buttons[event.key === 'Home' ? 0 : event.key === 'End' ? 3 : (i + (event.key === 'ArrowDown' ? 1 : 3)) % 4].focus({ preventScroll: true }); }}>
         {scenes.map((scene, i) => { const open = mode === 'plain' || mode === 'flow' || active === i; return <article className="tv2-journey-item" data-active={active === i} key={scene.id}>
-          <button className="tv2-journey-trigger" type="button" aria-expanded={open} aria-controls={`tv2-scene-${scene.id}`} onClick={() => select.current(i)}><Icon index={i} /><span>{scene.label}</span></button>
-          <div className="tv2-journey-content" id={`tv2-scene-${scene.id}`} aria-hidden={!open} inert={!open || undefined}><div className="tv2-journey-copy"><p className="tv2-journey-lead">{scene.lead}</p><p className="tv2-journey-body">{scene.body}</p></div><div className="tv2-journey-inline-image"><Photo url={imageUrls[scene.imageId]} label={scene.label} fallback={fallback} eager={i === 0} /><a href={demoHref}>{fallback.demoCta}</a></div></div>
+          <button className="tv2-journey-trigger" type="button" aria-expanded={open} aria-controls={`tv2-scene-${scene.id}`} onClick={() => select.current(i)}><Icon index={i} /><span>{bind(scene.label)}</span></button>
+          <div className="tv2-journey-content" id={`tv2-scene-${scene.id}`} aria-hidden={!open} inert={!open || undefined}><div className="tv2-journey-copy"><p className="tv2-journey-lead">{bind(scene.lead)}</p><p className="tv2-journey-body">{bind(scene.body)}</p></div><div className="tv2-journey-inline-image"><Photo url={imageUrls[scene.imageId]} label={scene.label} fallback={fallback} eager={i === 0} /><a href={demoHref}>{fallback.demoCta}</a></div></div>
         </article>; })}
       </div><div className="tv2-journey-media">{scenes.map((scene, i) => <div className="tv2-journey-frame" key={scene.id} data-state={ids[i]} aria-hidden={mode !== 'pin' || active !== i} inert={mode !== 'pin' || active !== i || undefined}><Photo url={imageUrls[scene.imageId]} label={scene.label} fallback={fallback} eager={i === 0} /></div>)}</div></div>
     </div></div>
