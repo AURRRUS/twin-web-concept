@@ -38,7 +38,7 @@ jobs:
       - run: |
           if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi
           sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
-          npm run twin:task -- VIS-002
+          npm run twin:task -- VIS-003
           npm run typecheck
           npm run twin:test
           npm run twin:check
@@ -73,6 +73,7 @@ jobs:
           curl -sf https://aurrrus.github.io/twin-web-concept/demo/ >/dev/null
           curl -sf 'https://aurrrus.github.io/twin-web-concept/?compare=journey' >/dev/null
           V2_URL=https://aurrrus.github.io/twin-web-concept/v2/ V2_QA_DIR=/tmp/vis002-online node scripts/verify-v2.mjs
+          node scripts/verify-v2-extra.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -80,6 +81,7 @@ jobs:
           path: |
             /tmp/vis002-pre
             /tmp/vis002-online
+            /tmp/vis002-extra
             /tmp/vis002-v1-manifest.json
             /tmp/vis002-publish.txt
             /tmp/v2-marker.json
