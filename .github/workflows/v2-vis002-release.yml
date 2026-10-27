@@ -1,0 +1,73 @@
+name: VIS-002 release V2 subtree
+on:
+  push:
+    branches: [work/twin-v2]
+    paths:
+      - '.github/workflows/v2-vis002-release.yml'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: twin-vis002-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TWIN_V2_MANIFEST_FILE: /tmp/vis002-v1-manifest.json
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - run: npm ci
+      - run: |
+          if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi
+          sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
+          npm run twin:task -- VIS-002
+          npm run typecheck
+          npm run twin:test
+          npm run twin:check
+          npm run build:v2
+      - name: Pre-release browser verification
+        run: |
+          mkdir -p /tmp/twin-v2-preview
+          ln -s "$PWD/dist" /tmp/twin-v2-preview/twin-web-concept
+          python3 -m http.server 4361 --bind 127.0.0.1 --directory /tmp/twin-v2-preview >/tmp/v2-preview.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://127.0.0.1:4361/twin-web-concept/v2/ >/dev/null && break; sleep 1; done
+          V2_QA_DIR=/tmp/vis002-pre node scripts/verify-v2.mjs
+      - name: Publish only V2
+        run: |
+          curl -sf https://aurrrus.github.io/twin-web-concept/build-version.json >/tmp/v1-before.json
+          curl -sf https://aurrrus.github.io/twin-web-concept/ >/tmp/v1-before.html
+          gh auth setup-git --hostname github.com
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          npm run publish:v2 | tee /tmp/vis002-publish.txt
+          gh api --method POST repos/AURRRUS/twin-web-concept/pages/builds || echo 'Waiting for normal Pages build'
+      - name: Verify online version and V1
+        run: |
+          for i in $(seq 1 36); do
+            if curl -sf "https://aurrrus.github.io/twin-web-concept/v2/build-version.json?verify=$i" > /tmp/v2-marker.json && node -e 'const p=require("/tmp/v2-marker.json");process.exit(p.sourceCommit===process.env.GITHUB_SHA?0:1)'; then break; fi
+            if [ "$i" -eq 36 ]; then exit 1; fi
+            sleep 10
+          done
+          curl -sf https://aurrrus.github.io/twin-web-concept/build-version.json >/tmp/v1-after.json
+          curl -sf https://aurrrus.github.io/twin-web-concept/ >/tmp/v1-after.html
+          cmp /tmp/v1-before.json /tmp/v1-after.json
+          cmp /tmp/v1-before.html /tmp/v1-after.html
+          curl -sf https://aurrrus.github.io/twin-web-concept/demo/ >/dev/null
+          curl -sf 'https://aurrrus.github.io/twin-web-concept/?compare=journey' >/dev/null
+          V2_URL=https://aurrrus.github.io/twin-web-concept/v2/ V2_QA_DIR=/tmp/vis002-online node scripts/verify-v2.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vis-002-release-evidence
+          path: |
+            /tmp/vis002-pre
+            /tmp/vis002-online
+            /tmp/vis002-v1-manifest.json
+            /tmp/vis002-publish.txt
+            /tmp/v2-marker.json
