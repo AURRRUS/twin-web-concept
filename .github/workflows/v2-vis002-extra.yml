@@ -1,0 +1,23 @@
+name: VIS-002 live accessibility and resilience
+on:
+  push:
+    branches: [work/twin-v2]
+    paths: ['.github/workflows/v2-vis002-extra.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - run: npm ci
+      - run: |
+          if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi
+          sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
+          node scripts/verify-v2-extra.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: vis-002-extra, path: /tmp/vis002-extra}
