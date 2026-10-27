@@ -4,9 +4,9 @@
   "version": "v2",
   "branch": "work/twin-v2",
   "v1CanonicalBranch": "work/twin-site-system",
-  "sourceBaseline": "1773869f0b81de80b695589f51e06cc2863fb691",
-  "pagesBaseline": "504b5738ec53cf6abbf4c40e8499071063cb7fbd",
-  "status": "verified-candidate",
+  "sourceBaseline": "3ccb3d1c483468e355b70403a120e275984fa6fd",
+  "pagesBaseline": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
+  "status": "released",
   "activeTask": "VIS-003",
   "route": "/v2/",
   "productionBasePath": "/twin-web-concept",
@@ -15,10 +15,11 @@
     "scope": "v2 subtree only; preserve existing V1 bytes",
     "basis": "Владелец поручил отдельную V2 и включил production workflow; прежнее правило публикации без согласования снимков"
   },
-  "nextTask": "Publish full V2 and verify actual online build",
-  "publishedSourceCommit": "b6be221069650439606dd2908667aa90378cd376",
-  "pagesCommit": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
+  "nextTask": "Review full V2 online; exact physical architectural cut depends on original facade alpha layer",
+  "publishedSourceCommit": "7436ce9334f90e4bf5886149681d11b4a6e68ac4",
+  "pagesCommit": "96802e9739725fb9997ec73e5fbf90794194f7c4",
   "publishedUrl": "https://aurrrus.github.io/twin-web-concept/v2/",
-  "visualStatus": "reviewed",
-  "releaseGate": "Fresh browser evidence recorded; publish:v2 must verify fingerprint before release"
+  "visualStatus": "reviewed-by-implementer",
+  "releaseGate": "Passed fresh runtime fingerprint and browser evidence before release; still required for future runtime edits",
+  "scope": "Full home page through footer; VIS-002 two-screen restriction superseded by owner for VIS-003"
 }
