@@ -1,14 +1,196 @@
 {
   "schemaVersion": 1,
-  "status": "blocked",
-  "inputFingerprint": null,
-  "reviewer": "pending implementation correction",
-  "checks": [],
-  "blockingIssues": [
-    "Hero layout does not resolve intended line hierarchy",
-    "Architectural transition reduced to triangle instead of chosen composition",
-    "Journey proportions require visual correction"
+  "status": "pass",
+  "inputFingerprint": "57e7505aaf3346174bc23b0c631d7c5493b25ef39158127c158d53d04e25c138",
+  "reviewer": "Codex — actual browser screenshot inspection, frontend-engineer/design-review workflow",
+  "runtimeCommit": "a3b06cf0ddf3a030c23fb6def52bca682805131d",
+  "blockingIssues": [],
+  "ownerApproval": "not requested; technical and visual self-review do not imply owner approval",
+  "checks": [
+    {
+      "id": "hero",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-upper.jpg",
+      "referenceSha256": "3bbcaebddc99f29311630443ff0fdd900f9310795f389fede44116597a1fe0c9",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/hero-1440.jpg",
+          "sha256": "ab3f3752f74a165d2df968a5bf9cf4d99912f1ca0a065faa2070e5761543642d"
+        }
+      ],
+      "observed": "H1 воспроизводит три смысловые строки обзорного референса; бронзовая строка выделена реальным Expanded Bold700. Исходная панорама и логотип сохранены; текст остаётся HTML. Использована широкая область1180px вместо прежнего max1000+nowrap.",
+      "remaining": []
+    },
+    {
+      "id": "transition",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-upper.jpg",
+      "referenceSha256": "3bbcaebddc99f29311630443ff0fdd900f9310795f389fede44116597a1fe0c9",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/transition-overview-1440.jpg",
+          "sha256": "4cfdc368e5c0adea29ba08f9d4c1f50dc07a6f58f3c4cbbd0329f5b789dba586"
+        }
+      ],
+      "observed": "Вместо независимой белой диагонали и бронзовой плашки используется тот же исходный панорамный кадр с совпадающим crop. Ступенчатый край читается как архитектурное сечение; плавающая плашка удалена после первого осмотра. Это осознанная адаптация без выдуманных скрытых граней здания.",
+      "remaining": []
+    },
+    {
+      "id": "journey",
+      "status": "pass",
+      "referencePath": "docs/v2/references/journey-white-bronze.jpg",
+      "referenceSha256": "c9e681748565cb811bef4c99759c7be42ca13759c374ecadc26742615bbf4764",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/scene-2-1440.jpg",
+          "sha256": "a8c44757bae339146e53075531b7c6d9f79b7dff83d171ffa4f04f7fc8a2df04"
+        }
+      ],
+      "observed": "Белая колонка332px, светлая бронза раскрытой карточки, тёмный buyer-текст, большое изображение справа. Заголовок имеет смысловой перенос; «ваш проект» целиком на второй строке. Все четыре сцены просмотрены, план и лот целиком через contain.",
+      "remaining": []
+    },
+    {
+      "id": "mobile",
+      "status": "pass",
+      "referencePath": "docs/v2/references/journey-white-bronze.jpg",
+      "referenceSha256": "c9e681748565cb811bef4c99759c7be42ca13759c374ecadc26742615bbf4764",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/scene-4-390.jpg",
+          "sha256": "8acc64c32da3688e780bdde8bde2e3792c48ce6797653f4cbe83ea9f64e4aa17"
+        },
+        {
+          "path": "docs/v2/reviews/VIS-003/contact-390.jpg",
+          "sha256": "b2e95d33de2cae23eab548a074adef895491c143fff6f675c5edf8cb5f4afdcd"
+        }
+      ],
+      "observed": "На390px Journey становится доступным аккордеоном с полными текстами и иллюстрациями. Состав Twin — вертикальный список, каналы — обычный поток, контакт — одна колонка. Горизонтального overflow нет; обязательные поля и явный статус формы видны.",
+      "remaining": []
+    },
+    {
+      "id": "motion",
+      "status": "pass",
+      "referencePath": "docs/v2/references/journey-white-bronze.jpg",
+      "referenceSha256": "c9e681748565cb811bef4c99759c7be42ca13759c374ecadc26742615bbf4764",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/transition-0.2-1440.jpg",
+          "sha256": "f1b3433cb209190d3ca563aebb7af3af2d6367686e325ce730282be802b7d1ce"
+        },
+        {
+          "path": "docs/v2/reviews/VIS-003/transition-0.49-1440.jpg",
+          "sha256": "15dfe88ac476f2d22b14320d386fe6787f1cd8612e4c7aa0d2b0c680c06bd2c8"
+        },
+        {
+          "path": "docs/v2/reviews/VIS-003/transition-0.79-1440.jpg",
+          "sha256": "a6a548692c83cf4347669a449a06f478b34b9b49af005a46050ace4faedafc75"
+        }
+      ],
+      "observed": "В трёх промежуточных кадрах наблюдаются раздельные фазы раскрытия карточки, текста и смены изображения. Hold не продолжает двигаться без скролла. Проверены прямой/обратный проход, повторный вход, click и отмена wheel; внешний reveal не управляет внутренним scroll-слоем.",
+      "remaining": []
+    },
+    {
+      "id": "demo",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-upper.jpg",
+      "referenceSha256": "3bbcaebddc99f29311630443ff0fdd900f9310795f389fede44116597a1fe0c9",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/product-1440.jpg",
+          "sha256": "32eb9d76e3a396bc52a0097e0bd1ae909630602f6b20d4c8db1f46f39bc83757"
+        }
+      ],
+      "observed": "Тёмная рабочая сцена отделена от белого Journey; сохранены реальные controls выбора корпуса, этажа, лота и вида, демонстрационный статус и полноэкранный вход в существующее demo. Планировка видна полностью. Это fixture, а не подключённый Twin API.",
+      "remaining": []
+    },
+    {
+      "id": "composition",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-upper.jpg",
+      "referenceSha256": "3bbcaebddc99f29311630443ff0fdd900f9310795f389fede44116597a1fe0c9",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/composition-1440.jpg",
+          "sha256": "71d8a1898ee8f5d34ab8582ef41b3bef845052b39cbcf285d78c4191844e9ad5"
+        }
+      ],
+      "observed": "В центре — прозрачная модель всего проекта с несколькими корпусами и общей территорией, а не квартира. Шесть связанных групп в HTML и существующие диалоги; короткие бронзовые связи, мягкая тень. На мобильном модель и все группы доступны потоком.",
+      "remaining": []
+    },
+    {
+      "id": "channels",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-lower.jpg",
+      "referenceSha256": "5b1d9d71a5031aa5dc0d0ea026687c2c5f014cbab371535c887dcfefd2111629",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/channels-1440.jpg",
+          "sha256": "cc91b02a587d4d6f5b5732035de78ca9eda8efc652639fb99d14fc9935579b33"
+        }
+      ],
+      "observed": "Слева заголовок с бронзовой частью, четыре названия и действующий текст, справа естественный человеческий фотокадр. Сохранён обратимый scroll stack R2, ручной переход и спокойные участки чтения. Фото не обрезают людей, на телефоне все четыре сцены идут последовательно.",
+      "remaining": []
+    },
+    {
+      "id": "qualities",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-lower.jpg",
+      "referenceSha256": "5b1d9d71a5031aa5dc0d0ea026687c2c5f014cbab371535c887dcfefd2111629",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/delivery-1440.jpg",
+          "sha256": "4615fcbb62d23401c3251b4f2cc1f6aa03703bdfa683b88710e764c2cd51b122"
+        }
+      ],
+      "observed": "Три аргумента отделены от пропорциональной схемы и целой модели, текст не пересекает графику. Сохранены исходные3месяца/5млн₽ с оговоркой индивидуальных условий. Once reveal и Эффектно→Эффективно работают без sticky; новых финансовых обещаний нет.",
+      "remaining": []
+    },
+    {
+      "id": "launch",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-lower.jpg",
+      "referenceSha256": "5b1d9d71a5031aa5dc0d0ea026687c2c5f014cbab371535c887dcfefd2111629",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/launch-1440.jpg",
+          "sha256": "1e2e74445bb03737f41a9ffbe776c519727b8e9687f17bc6a6666493817146ac"
+        }
+      ],
+      "observed": "Четыре открытые группы с названиями и пояснениями читаются без микротекста; горизонтальный ритм desktop превращается в последовательные строки mobile. Иерархия заголовка и этапов сохраняется, текст не запечён в картинку.",
+      "remaining": []
+    },
+    {
+      "id": "contact",
+      "status": "pass",
+      "referencePath": "docs/v2/references/overview-lower.jpg",
+      "referenceSha256": "5b1d9d71a5031aa5dc0d0ea026687c2c5f014cbab371535c887dcfefd2111629",
+      "evidence": [
+        {
+          "path": "docs/v2/reviews/VIS-003/contact-1440.jpg",
+          "sha256": "da4fe3b2471083fcb66a7b20a8b13cbb690abd83f3434c349847e940254842d2"
+        },
+        {
+          "path": "docs/v2/reviews/VIS-003/contact-390.jpg",
+          "sha256": "b2e95d33de2cae23eab548a074adef895491c143fff6f675c5edf8cb5f4afdcd"
+        }
+      ],
+      "observed": "Графитовый финал связан с исходной фотографией фасада; форма встроена в фон, белой внешней карточки нет. Надзаголовок осветлён после визуальной проверки контраста. Ошибки, обязательные поля и честное сообщение «данные не отправлены» проверены.",
+      "remaining": []
+    }
   ],
-  "ownerApproval": "not granted; never required as screenshot gate",
-  "note": "Current published runtime remains available; this report prevents claiming visual readiness for another release."
+  "evidenceProvenance": {
+    "fullBrowserRun": 40504683588,
+    "contactCorrectionRun": 40505286802,
+    "conversion": "Native browser PNG screenshots converted to JPEG quality76 without resize, cropping, retouching or text replacement; original PNGs remain in Actions artifacts."
+  },
+  "engineeringDifferences": [
+    "Overview imagery is a composition guide: actual original project assets and fonts take priority.",
+    "No isolated facade mask or verified concealed building face exists. Transition uses a continuous original photo and stepped cut, not invented extruded architecture.",
+    "Launch uses existing four textual stages; illustrative exploded construction-stage artwork is not available and was not invented."
+  ],
+  "limitations": [
+    "No physical Safari/iOS/Android device run",
+    "No real viewer API or lead endpoint connected; demo statuses retained",
+    "Existing commercial figures preserved with case-specific caveat; no new commercial validation"
+  ]
 }

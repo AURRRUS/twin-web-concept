@@ -1,7 +1,7 @@
 {
   "id": "VIS-003",
   "mode": "execute",
-  "status": "ready",
+  "status": "implemented",
   "outcome": "Полная отдельная V2 до подвала и исправленная связка Hero/Journey по Generation Prompt Mask",
   "baseline": "3ccb3d1c483468e355b70403a120e275984fa6fd",
   "scope": [
