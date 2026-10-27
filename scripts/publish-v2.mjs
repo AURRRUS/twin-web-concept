@@ -24,7 +24,7 @@ try{
  const manifestPath=process.env.TWIN_V2_MANIFEST_FILE||join(tmpdir(),`twin-v2-v1-manifest-${source}.json`);
  writeFileSync(manifestPath,JSON.stringify({sourceCommit:source,previousPagesCommit:previous,files:baseline},null,2)+'\n');
  rmSync(join(dir,'v2'),{recursive:true,force:true});cpSync(out,join(dir,'v2'),{recursive:true});
- writeFileSync(join(dir,'v2','build-version.json'),JSON.stringify({version:'v2',taskId:'VIS-002',sourceCommit:source,basedOnV1SourceCommit:v1.sourceCommit,previousPagesCommit:previous,builtAt:new Date().toISOString()},null,2)+'\n');
+ writeFileSync(join(dir,'v2','build-version.json'),JSON.stringify({version:'v2',taskId:JSON.parse(readFileSync(join(root,'.twin/v2/project.json'),'utf8')).activeTask,sourceCommit:source,basedOnV1SourceCommit:v1.sourceCommit,previousPagesCommit:previous,builtAt:new Date().toISOString()},null,2)+'\n');
  const after=manifest(dir);if(JSON.stringify(Object.entries(baseline).sort())!==JSON.stringify(Object.entries(after).sort()))throw Error('Non-v2 Pages files changed');
  git(['add','--all','--','v2'],dir);const changed=git(['diff','--cached','--name-only'],dir).split('\n').filter(Boolean);if(!changed.length||changed.some(p=>!p.startsWith('v2/')))throw Error('Staged changes outside v2 or empty release');
  if(remoteHead()!==previous)throw Error('Pages HEAD changed; fetch and rebuild');
