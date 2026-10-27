@@ -7,6 +7,7 @@ const root=resolve(import.meta.dirname,'..'),out=join(root,'dist','v2');
 const git=(args,cwd=root)=>execFileSync('git',args,{cwd,encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
 if(git(['status','--porcelain']))throw Error('Commit source before publishing');
 if(!existsSync(join(out,'index.html')))throw Error('Run npm run build:v2 first');
+execFileSync(process.execPath,[join(root,'scripts','visual-gate-v2.mjs')],{cwd:root,stdio:'inherit'});
 const source=git(['rev-parse','HEAD']),ref='refs/heads/twin-preview';
 const remoteHead=()=>git(['ls-remote','origin',ref]).split(/\s+/)[0];
 const previous=remoteHead();if(!/^[a-f0-9]{40}$/.test(previous))throw Error('Cannot verify Pages HEAD');

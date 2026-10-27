@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "ids": [
+    "hero",
+    "transition",
+    "journey",
+    "mobile",
+    "motion"
+  ],
+  "references": [
+    "docs/v2/references/overview-upper.jpg",
+    "docs/v2/references/journey-white-bronze.jpg"
+  ],
+  "inputPrefixes": [
+    "src/",
+    "public/"
+  ],
+  "inputPaths": [
+    ".twin/v2/tokens.json",
+    ".twin/tasks/VIS-002/content.json",
+    "astro.config.mjs",
+    "package.json",
+    "package-lock.json",
+    "scripts/build-v2.mjs"
+  ],
+  "note": "Gate validates provenance/freshness/evidence, not aesthetics. Latest owner decisions override raster errors."
+}

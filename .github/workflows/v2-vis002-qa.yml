@@ -1,7 +1,8 @@
 name: VIS-002 QA
 on:
   push:
-    branches: [work/twin-v2-vis-002]
+    branches: ['work/twin-v2-*', 'work/twin-v2/**']
+    paths: ['src/**', 'public/**', '.twin/v2/**', '.twin/tasks/**', 'scripts/**', 'tests/**', 'package*.json', 'astro.config.mjs', '.github/workflows/v2-vis002-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -12,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: '24'}
+      - run: node --test tests/visual-gate-v2.test.mjs
       - run: npm ci
       - run: |
           if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi

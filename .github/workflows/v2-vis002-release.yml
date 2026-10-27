@@ -4,6 +4,16 @@ on:
     branches: [work/twin-v2]
     paths:
       - '.github/workflows/v2-vis002-release.yml'
+      - 'src/**'
+      - 'public/**'
+      - '.twin/v2/**'
+      - '.twin/tasks/**/content.json'
+      - 'docs/v2/reviews/**'
+      - 'artifacts/v2-review/**'
+      - 'scripts/*v2*.mjs'
+      - 'package*.json'
+      - 'astro.config.mjs'
+  workflow_dispatch:
 permissions:
   contents: write
   pages: write
@@ -22,6 +32,8 @@ jobs:
         with: {fetch-depth: 0}
       - uses: actions/setup-node@v4
         with: {node-version: '24'}
+      - name: Check visual evidence before costly build or release
+        run: node --test tests/visual-gate-v2.test.mjs && node scripts/visual-gate-v2.mjs
       - run: npm ci
       - run: |
           if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi

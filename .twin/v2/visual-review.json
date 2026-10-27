@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked",
+  "inputFingerprint": null,
+  "reviewer": "pending implementation correction",
+  "checks": [],
+  "blockingIssues": [
+    "Hero layout does not resolve intended line hierarchy",
+    "Architectural transition reduced to triangle instead of chosen composition",
+    "Journey proportions require visual correction"
+  ],
+  "ownerApproval": "not granted; never required as screenshot gate",
+  "note": "Current published runtime remains available; this report prevents claiming visual readiness for another release."
+}

@@ -18,7 +18,9 @@
     "twin:guard": "node scripts/twin-system.mjs guard",
     "twin:test": "node --test scripts/twin-system.test.mjs tests/journey-accordion.test.mjs",
     "build:v2": "node scripts/build-v2.mjs",
-    "publish:v2": "node scripts/publish-v2.mjs"
+    "publish:v2": "node scripts/publish-v2.mjs",
+    "quality:v2": "node scripts/visual-gate-v2.mjs",
+    "quality:v2:test": "node --test tests/visual-gate-v2.test.mjs"
   },
   "repository": {
     "type": "git",

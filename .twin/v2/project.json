@@ -18,5 +18,7 @@
   "nextTask": "Owner review; next section as separate task",
   "publishedSourceCommit": "b6be221069650439606dd2908667aa90378cd376",
   "pagesCommit": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
-  "publishedUrl": "https://aurrrus.github.io/twin-web-concept/v2/"
+  "publishedUrl": "https://aurrrus.github.io/twin-web-concept/v2/",
+  "visualStatus": "needs-correction",
+  "releaseGate": "blocked until current reference mismatches are corrected and reviewed"
 }
