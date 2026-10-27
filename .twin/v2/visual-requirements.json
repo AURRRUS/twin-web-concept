@@ -5,11 +5,18 @@
     "transition",
     "journey",
     "mobile",
-    "motion"
+    "motion",
+    "demo",
+    "composition",
+    "channels",
+    "qualities",
+    "launch",
+    "contact"
   ],
   "references": [
     "docs/v2/references/overview-upper.jpg",
-    "docs/v2/references/journey-white-bronze.jpg"
+    "docs/v2/references/journey-white-bronze.jpg",
+    "docs/v2/references/overview-lower.jpg"
   ],
   "inputPrefixes": [
     "src/",

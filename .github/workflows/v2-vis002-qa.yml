@@ -18,7 +18,7 @@ jobs:
       - run: |
           if command -v google-chrome >/dev/null; then QA_CHROMIUM=$(command -v google-chrome); else npx playwright install --with-deps chromium; QA_CHROMIUM=$(node --input-type=module -e "import{chromium}from'@playwright/test';console.log(chromium.executablePath())"); fi
           sudo ln -sf "$QA_CHROMIUM" /usr/bin/chromium
-      - run: npm run twin:task -- VIS-002 && npm run typecheck && npm run twin:test && npm run twin:check && npm run build:v2
+      - run: npm run twin:task -- VIS-003 && npm run typecheck && npm run twin:test && npm run twin:check && npm run build:v2
       - run: |
           mkdir -p /tmp/twin-v2-preview
           ln -s "$PWD/dist" /tmp/twin-v2-preview/twin-web-concept

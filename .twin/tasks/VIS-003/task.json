@@ -1,0 +1,53 @@
+{
+  "id": "VIS-003",
+  "mode": "execute",
+  "status": "ready",
+  "outcome": "Полная отдельная V2 до подвала и исправленная связка Hero/Journey по Generation Prompt Mask",
+  "baseline": "3ccb3d1c483468e355b70403a120e275984fa6fd",
+  "scope": [
+    "Полная главная V2: hero, Journey, демо, состав Twin, каналы, качества, запуск, контакт, футер",
+    "Без изменения байтов V1; существующие данные, компоненты и шрифты"
+  ],
+  "sources": [
+    "V2_START.md",
+    "docs/v2/MASTER.md",
+    "docs/v2/DECISIONS.md",
+    "docs/v2/QUALITY.md",
+    ".twin/v2/tokens.json",
+    ".twin/v2/assets.json",
+    "src/lib/salesStoryContent.json",
+    "src/lib/compositionContent.json",
+    ".twin/tasks/VIS-002/content.json",
+    "docs/v2/references/overview-upper.jpg",
+    "docs/v2/references/overview-lower.jpg",
+    "docs/v2/references/journey-white-bronze.jpg"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "navigation",
+    "card",
+    "body",
+    "button",
+    "note"
+  ],
+  "responsive": [
+    "Desktop split + content fit",
+    "Low viewport compact heading or 4-group flow",
+    "Mobile accessible accordion, no long pin"
+  ],
+  "acceptance": [
+    "Все девять разделов доступны desktop/mobile",
+    "Quality gate по реальным свежим browser evidence",
+    "Прямой/обратный scroll, click, повторный вход, keyboard, reduced-motion, resize",
+    "Честная форма и демонстрация без фиктивного backend",
+    "SHA256 всех файлов Pages вне v2 неизменны"
+  ],
+  "motionChanged": true,
+  "motionContract": "MOTION.md",
+  "publication": {
+    "allowed": true,
+    "reason": "Владелец явно поручил всю страницу и немедленный выпуск только /v2/ после визуальных проверок, без согласования снимков"
+  },
+  "openQuestions": []
+}
