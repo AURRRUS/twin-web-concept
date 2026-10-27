@@ -1,7 +1,7 @@
 interface:
   display_name: Frontend Engineer
-  short_description: Реализация и проверка веб-интерфейсов с брендом и motion
-  default_prompt: 'Используй frontend-engineer: изучи проект, реализуй интерфейс и
+  short_description: Вёрстка по референсам, типографика, адаптив и motion
+  default_prompt: 'Используй $frontend-engineer: разбери референс на слои, реализуй и
     проверь в браузере'
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
