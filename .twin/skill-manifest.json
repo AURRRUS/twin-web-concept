@@ -619,7 +619,7 @@
     },
     {
       "path": ".agents/skills/twin-site/SKILL.md",
-      "sha256": "624b8098ce896921698dccfa688156a438ad6042cea073fb3cff5afa9919b0ba"
+      "sha256": "86d48dd6f5dfdc678b4b27fc0e96d0ae9b9cfd49f6ca77c1359f8a5a4a288547"
     },
     {
       "path": ".agents/skills/twin-site/agents/openai.yaml",
@@ -972,6 +972,22 @@
     {
       "path": ".agents/skills/frontend-engineer/scripts/parallax-geometry.test.mjs",
       "sha256": "1fe450ec343828c46c6ef6ac7e045124efdd079ae86cf12f4c8ede90ab4e6a4d"
+    },
+    {
+      "path": ".agents/skills/twin-site/references/production-workflow.md",
+      "sha256": "5e9ac3f1ce9fde308c49d88326007a7e567de9f9975a34572f2dc15a7618636d"
+    },
+    {
+      "path": ".agents/skills/twin-site/references/image-routing.md",
+      "sha256": "c9fed66155d7ce55aa5b1b23b0d285e7821b7ba425615ddb1563fe399f951b14"
+    },
+    {
+      "path": ".agents/skills/twin-site/references/run-template.json",
+      "sha256": "86ac95923f8814d465989bbe3752b4e6940e4f2d955835199e7684b5725b5a8e"
+    },
+    {
+      "path": ".agents/skills/twin-site/scripts/production_next.py",
+      "sha256": "f98982c81544fa609a486fa125d423c6ea285cf0f1535854abd3d624f229c5eb"
     }
   ]
 }

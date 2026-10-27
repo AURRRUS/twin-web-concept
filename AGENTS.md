@@ -20,3 +20,6 @@
 
 ## Графические слои и параллакс
 Для визуальных приёмов Generation Prompt Mask читать frontend-engineer/references/prompt-mask-effects.md, asset-production.md и parallax.md. Описать производственные слои до реализации: общий фон/clean plate, foreground alpha, shadow/light pass, SVG geometry, DOM UI. Существующая плоская фотография не считается готовым многослойным пакетом. Не генерировать весь набор без выбранной композиции и не подменять недостающий ключевой слой CSS-заглушкой. Практическая карта Twin — docs/v2/ASSET_PRODUCTION_PLAN.md; статусы там не означают готовность файлов.
+
+## Сквозное производство и заказы на графику
+Для команды «Сайт Twin — производство» и сквозной реализации читать .agents/skills/twin-site/SKILL.md и references/production-workflow.md; это координатор, а не автоматически запущенный сервер. Вести run.json и asset-jobs.json одной задачи. Фронтендер заказывает конкретные missing assets и принимает их пригодность, графический исполнитель выбирается по image-routing.md; CSS/SVG делает frontend. Design Review — отдельный проход по reference и реальному runtime; не писать independent, если проверял автор. Проверять незакрытые обязательства production_next.py. Следующий ответственный не равен автоматическому внешнему вызову Codex/ImageGen.

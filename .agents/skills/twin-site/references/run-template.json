@@ -1,0 +1,54 @@
+{
+  "mode": "prepare",
+  "runtimeCommit": null,
+  "implementer": null,
+  "independentReviewRequired": true,
+  "assetInventoryComplete": false,
+  "assetJobs": [],
+  "stages": {
+    "brief": {
+      "status": "pending",
+      "evidence": []
+    },
+    "spec": {
+      "status": "pending",
+      "evidence": []
+    },
+    "assets": {
+      "status": "pending",
+      "evidence": []
+    },
+    "static": {
+      "status": "pending",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "pending",
+      "evidence": []
+    },
+    "motion": {
+      "status": "pending",
+      "evidence": []
+    },
+    "review": {
+      "status": "pending",
+      "evidence": []
+    },
+    "release": {
+      "status": "pending",
+      "evidence": []
+    }
+  },
+  "review": {
+    "verdict": null,
+    "runtimeCommit": null,
+    "reference": null,
+    "reviewer": null,
+    "independent": false,
+    "unresolved": []
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "production system preparation only"
+  }
+}
