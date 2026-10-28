@@ -3,7 +3,7 @@
   "mode": "execute",
   "status": "implemented",
   "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
-  "outcome": "Restore original sea render in shared hero/Journey; no publication",
+  "outcome": "Current full V2 working owner-review publication; preserve fix verdict",
   "scope": [
     "header/hero/transition/Journey only"
   ],
@@ -31,12 +31,11 @@
   "acceptance": [
     "Native photo geometry",
     "four accessible modes",
-    "no initial scroll jump",
-    "no publication"
+    "no initial scroll jump"
   ],
   "publication": {
-    "allowed": false,
-    "reason": "Current explicit owner instruction"
+    "allowed": true,
+    "reason": "Owner explicitly authorizes current full build at existing /v2/ as working owner-review; known mask defect accepted for viewing only, not visual approval"
   },
   "openQuestions": []
 }
