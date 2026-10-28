@@ -19,7 +19,7 @@ jobs:
           ln -s "$PWD/dist" /tmp/hj/twin-web-concept
           python3 -m http.server 4361 --directory /tmp/hj >/tmp/hj-server.log 2>&1 &
           sleep 2
-          node scripts/verify-hero-journey.mjs
+          V2_QA_COMPACT=1 node scripts/verify-hero-journey.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: hero-journey-browser, path: artifacts/hero-journey}
