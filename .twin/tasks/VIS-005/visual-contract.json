@@ -1,0 +1,130 @@
+{
+  "mode": "reproduce",
+  "reference": {
+    "path": ".twin/tasks/VIS-004/reference-upper.jpg",
+    "viewport": [
+      841,
+      1870
+    ]
+  },
+  "scope": "top through entry into graphite demo",
+  "geometry": {
+    "master": [
+      2574,
+      1459
+    ],
+    "photo": "width100vw; height100vw*1459/2574; contain; center top",
+    "hero": "clamp(650px,48vw,930px)",
+    "gutter": "existing56/40/32/20",
+    "aside": 340,
+    "gap": 32,
+    "mediaRatio": "1672/941 contain",
+    "stickyTop": 24,
+    "travel": 1800,
+    "fitReserve": 48
+  },
+  "typography": "Original RF Dewi400/600/700, Expanded700; no synthesis",
+  "layers": [
+    {
+      "element": "master",
+      "medium": "raster",
+      "asset": "public/media/top-v2/hero.webp",
+      "fit": "contain"
+    },
+    {
+      "element": "paper surface",
+      "medium": "css"
+    },
+    {
+      "element": "controls and texts",
+      "medium": "dom"
+    }
+  ],
+  "referenceMatch": "pending self-review, never owner approval",
+  "publication": {
+    "allowed": false,
+    "reason": "Explicit user prohibition"
+  },
+  "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
+  "route": "/v2/",
+  "changes": [
+    {
+      "element": "opening",
+      "before": "84vw cover with incompatible facade",
+      "after": "Full-width original sea render with common coordinates",
+      "implementation": "Natural ratio1459/2574 and same-photo foreground; exact alpha is unresolved"
+    },
+    {
+      "element": "Journey",
+      "before": "Independent three-line title and initial scroll jump",
+      "after": "Two semantic lines and load remains at hero",
+      "implementation": "Unified grid340+32+remaining; guarded ResizeObserver preservation"
+    }
+  ],
+  "anchors": [
+    {
+      "element": "hero",
+      "box": [
+        0,
+        0,
+        1440,
+        691
+      ],
+      "tolerancePx": 24,
+      "source": "proposed"
+    },
+    {
+      "element": "Journey sidebar",
+      "box": [
+        56,
+        859,
+        340,
+        538
+      ],
+      "tolerancePx": 32,
+      "source": "proposed"
+    }
+  ],
+  "typeRoles": [
+    {
+      "role": "hero",
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "weight": 700,
+      "size": 48,
+      "lineHeight": 56.64,
+      "tracking": 0,
+      "maxWidth": 1200
+    },
+    {
+      "role": "body",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "size": 20,
+      "lineHeight": 30,
+      "tracking": 0,
+      "maxWidth": 580
+    }
+  ],
+  "responsive": {
+    "mobile": "Measured copy height +320px photo anchored70%, accordion image under copy",
+    "lowHeight": "Disable pin, retain grid and four direct choices; no font shrink"
+  },
+  "motion": {
+    "changed": true,
+    "contract": {
+      "progress": "(scrollY-hostTop+24)/1800 native scroll",
+      "reverse": "State recalculated from absolute scroll; no wheel interception",
+      "reducedMotion": "Pin and image transitions disabled; all four choices available",
+      "exit": "Track is measured panel height+1800; flow continues to graphite demo",
+      "phases": [
+        "Four reading ranges in1800px; image transition320ms cubic(.22,1,.36,1)"
+      ]
+    }
+  },
+  "acceptance": [
+    "No overflow in eight viewports",
+    "No initial auto scroll",
+    "All four modes and keyboard/reduced-motion",
+    "Exact alpha mismatch remains explicit; no visual PASS"
+  ]
+}

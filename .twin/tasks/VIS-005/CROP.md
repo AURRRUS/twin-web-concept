@@ -1,0 +1,6 @@
+# Full source and crop
+Master native2574×1459, verified through Pillow. The2048×1160 in the brief describes another sizing, not this file. top-v2/hero.webp has the same2574×1459 geometry, but RGB values differ (lossy WebP; max channel delta58/21/82); it is not byte/pixel-identical. Same camera/field was visually inspected. Original PNG unchanged in Git.
+
+Before:photo84vw(cap1380), hero72vw(cap1120,min780). At1440 photo1210px tall versus original contain816px: cover crops horizontal source by approximately838px, anchor60%. Before runtime is preserved in docs/v2/reviews/VIS-004/hero.jpg and transition.jpg from the transferred base.
+After desktop:photoW×1459/2574, zero source crop. Hero48vw(clamps650–930):1440→691px,1366→656px,1920→922px. At these widths the hero boundary corresponds to sourcey1235, leaving224source rows below the boundary, partly covered by the inclined paper and geometric foreground. This is not evidence of pixels below the original file.
+Mobile:separate text field, then320px cover image anchored70% center, using the same photograph; diagonal paper edge connects to the accordion. Header/copy measured after fonts and resize; no independent parallax. The precise architectural interlock remains incomplete on mobile as well as desktop; not a visual PASS.

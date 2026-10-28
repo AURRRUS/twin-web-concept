@@ -1,0 +1,42 @@
+{
+  "id": "VIS-005",
+  "mode": "execute",
+  "status": "implemented",
+  "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
+  "outcome": "Restore original sea render in shared hero/Journey; no publication",
+  "scope": [
+    "header/hero/transition/Journey only"
+  ],
+  "sources": [
+    ".twin/tasks/VIS-005/TASK.md",
+    ".twin/tasks/VIS-004/reference-upper.jpg",
+    ".twin/tasks/VIS-002/content.json"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "body",
+    "control"
+  ],
+  "responsive": [
+    "1440x900",
+    "1366x768",
+    "1920x1080",
+    "390x844",
+    "360x800",
+    "768",
+    "1099",
+    "1100"
+  ],
+  "acceptance": [
+    "Native photo geometry",
+    "four accessible modes",
+    "no initial scroll jump",
+    "no publication"
+  ],
+  "publication": {
+    "allowed": false,
+    "reason": "Current explicit owner instruction"
+  },
+  "openQuestions": []
+}

@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "id": "original-facade-alpha",
+      "status": "blocked",
+      "purpose": "Exact architectural overlap through paper surface",
+      "source": "assets/approved/2026-10-27/1 экран Вид побережье.png",
+      "canvas": [
+        2574,
+        1459
+      ],
+      "protected": [
+        "all original building geometry",
+        "balconies",
+        "foliage at contact edge"
+      ],
+      "requirements": "Alpha on full original canvas, no tight crop, same camera/light/anchor as master; no generated pixels",
+      "missing": "Precision mask at foliage and lower building boundary; no pixels beyond native lower edge",
+      "current": "Geometric CSS selection with feathered lower edge; photo-volume correspondence remains a gap"
+    }
+  ]
+}
