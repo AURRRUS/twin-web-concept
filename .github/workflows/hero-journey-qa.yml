@@ -1,0 +1,25 @@
+name: Hero Journey source QA
+on:
+  push:
+    branches: [work/hero-journey-original-render]
+    paths: ['src/**','scripts/verify-hero-journey.mjs','.github/workflows/hero-journey-qa.yml']
+permissions:
+  contents: read
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - run: npm ci
+      - run: npm run typecheck && npm run build:v2
+      - run: |
+          mkdir -p /tmp/hj
+          ln -s "$PWD/dist" /tmp/hj/twin-web-concept
+          python3 -m http.server 4361 --directory /tmp/hj >/tmp/hj-server.log 2>&1 &
+          sleep 2
+          node scripts/verify-hero-journey.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: hero-journey-browser, path: artifacts/hero-journey}

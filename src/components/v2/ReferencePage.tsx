@@ -13,19 +13,20 @@ const t=(s:string)=>s.replace(/(^|\s)(и|в|на|с|к|о|у|по|из|за|от
 const journeyImages=['journey-location','journey-compare','journey-floor','journey-space'];
 const channelImages=['channel-site','channel-remote','channel-agent','channel-office'];
 export function ReferenceJourney(){
- const [active,setActive]=useState(1),[pinned,setPinned]=useState(false);
+ const [active,setActive]=useState(0),[pinned,setPinned]=useState(false);
  const root=useRef<HTMLElement>(null),panel=useRef<HTMLDivElement>(null),jump=useRef<(i:number)=>void>((i)=>setActive(i));
  useEffect(()=>{
-  const el=root.current!,box=panel.current!,reduced=matchMedia('(prefers-reduced-motion: reduce)');let raf=0,disposed=false,enabled=false,start=0,travel=1800;
-  const paint=()=>{raf=0;if(enabled)setActive(Math.min(3,Math.max(0,Math.floor((scrollY-start)/travel*4))));};
+  const el=root.current!,box=panel.current!,reduced=matchMedia('(prefers-reduced-motion: reduce)');let raf=0,disposed=false,enabled=false,start=0,travel=1800,selected=0,layoutRaf=0;
+  const paint=()=>{raf=0;if(enabled)setActive(selected=Math.min(3,Math.max(0,Math.floor((scrollY-start)/travel*4))));};
   const onScroll=()=>{if(enabled&&!raf)raf=requestAnimationFrame(paint);};
-  const layout=()=>{if(disposed)return;enabled=innerWidth>=1100&&innerHeight>=box.scrollHeight+48&&!reduced.matches;setPinned(enabled);el.style.setProperty('--journey-travel',enabled?`${travel}px`:'0px');el.style.setProperty('--journey-panel-height',`${box.getBoundingClientRect().height}px`);start=el.getBoundingClientRect().top+scrollY+4;};
-  jump.current=(i)=>{setActive(i);if(enabled)window.scrollTo({top:start+travel*((i+.35)/4),behavior:reduced.matches?'instant':'smooth'});};
-  const ro=new ResizeObserver(layout);ro.observe(box);window.addEventListener('resize',layout);window.addEventListener('scroll',onScroll,{passive:true});reduced.addEventListener('change',layout);document.fonts.ready.then(layout);layout();
-  return()=>{disposed=true;cancelAnimationFrame(raf);ro.disconnect();window.removeEventListener('resize',layout);window.removeEventListener('scroll',onScroll);reduced.removeEventListener('change',layout);};
+  const layout=()=>{if(disposed)return;const was=enabled;const inView=el.getBoundingClientRect().top<innerHeight&&el.getBoundingClientRect().bottom>0;const oldProgress=Math.max(0,Math.min(1,(scrollY-start)/travel));enabled=innerWidth>=1100&&innerHeight>=box.scrollHeight+48&&!reduced.matches;setPinned(enabled);el.style.setProperty('--journey-travel',enabled?`${travel}px`:'0px');el.style.setProperty('--journey-panel-height',`${box.getBoundingClientRect().height}px`);start=el.getBoundingClientRect().top+scrollY-24;if(was!==enabled&&inView&&was)scrollTo({top:el.getBoundingClientRect().top+scrollY,behavior:'instant'});else if(was&&enabled&&inView)scrollTo({top:start+oldProgress*travel,behavior:'instant'});};
+  const requestLayout=()=>{cancelAnimationFrame(layoutRaf);layoutRaf=requestAnimationFrame(layout);};
+  jump.current=(i)=>{setActive(selected=i);if(enabled)window.scrollTo({top:start+travel*((i+.5)/4),behavior:reduced.matches?'instant':'smooth'});};
+  const ro=new ResizeObserver(requestLayout);ro.observe(box);window.addEventListener('resize',requestLayout);window.addEventListener('scroll',onScroll,{passive:true});reduced.addEventListener('change',layout);document.fonts.ready.then(layout);layout();
+  return()=>{disposed=true;cancelAnimationFrame(raf);cancelAnimationFrame(layoutRaf);ro.disconnect();window.removeEventListener('resize',requestLayout);window.removeEventListener('scroll',onScroll);reduced.removeEventListener('change',layout);};
  },[]);
  return <section id="journey" className="r4-journey" ref={root} data-pinned={pinned} aria-labelledby="journey-heading"><div className="r4-journey-panel r4-wrap" ref={panel}>
-  <h2 id="journey-heading">Покажите, почему <br/>стоит выбрать <br/><span className="bronze">ваш проект</span></h2>
+  <h2 id="journey-heading">Покажите, почему стоит<br/> выбрать <span className="bronze">ваш проект</span></h2>
   <div className="r4-journey-grid"><div className="r4-journey-options" onKeyDown={event=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;const b=Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>('button'));const i=b.indexOf(event.target as HTMLButtonElement);if(i<0)return;event.preventDefault();b[event.key==='Home'?0:event.key==='End'?3:(i+(event.key==='ArrowDown'?1:3))%4]?.focus();}}>{content.journey.scenes.map((s,i)=><article key={s.id} data-active={active===i}>
    <button type="button" aria-expanded={active===i} aria-controls={`r4-scene-${s.id}`} onClick={()=>jump.current(i)}><Icon name={(['compass','layers','plan','eye'] as const)[i]}/><span>{t(s.label)}</span><span className="r4-chevron" aria-hidden="true">{active===i?'⌄':'›'}</span></button>
    <div id={`r4-scene-${s.id}`} hidden={active!==i}><div className="r4-journey-copy"><h3>{t(s.lead)}</h3><p>{t(s.body)}</p></div><img className="r4-journey-mobile-image" src={approved(journeyImages[i])} alt={s.label} width="1672" height="941" loading="lazy"/></div>
