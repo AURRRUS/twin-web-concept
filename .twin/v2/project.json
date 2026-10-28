@@ -6,8 +6,8 @@
   "v1CanonicalBranch": "work/twin-site-system",
   "sourceBaseline": "3ccb3d1c483468e355b70403a120e275984fa6fd",
   "pagesBaseline": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
-  "status": "released",
-  "activeTask": "VIS-003",
+  "status": "candidate",
+  "activeTask": "VIS-004",
   "route": "/v2/",
   "productionBasePath": "/twin-web-concept",
   "publication": {
@@ -15,11 +15,11 @@
     "scope": "v2 subtree only; preserve existing V1 bytes",
     "basis": "Владелец поручил отдельную V2 и включил production workflow; прежнее правило публикации без согласования снимков"
   },
-  "nextTask": "Review full V2 online; exact physical architectural cut depends on original facade alpha layer",
+  "nextTask": "Complete browser review and fresh quality gate; separate V2 release",
   "publishedSourceCommit": "7436ce9334f90e4bf5886149681d11b4a6e68ac4",
   "pagesCommit": "96802e9739725fb9997ec73e5fbf90794194f7c4",
   "publishedUrl": "https://aurrrus.github.io/twin-web-concept/v2/",
-  "visualStatus": "reviewed-by-implementer",
+  "visualStatus": "self-review-in-progress",
   "releaseGate": "Passed fresh runtime fingerprint and browser evidence before release; still required for future runtime edits",
   "scope": "Full home page through footer; VIS-002 two-screen restriction superseded by owner for VIS-003"
 }

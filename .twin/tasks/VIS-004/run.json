@@ -1,14 +1,14 @@
 {
-  "mode": "prepare",
+  "mode": "execute",
   "runtimeCommit": null,
-  "implementer": null,
-  "independentReviewRequired": true,
-  "assetInventoryComplete": false,
+  "implementer": "Codex with Web Production / Frontend Engineer / Landing Page Design instructions",
+  "independentReviewRequired": false,
+  "assetInventoryComplete": true,
   "assetJobs": [
     {
       "requester": "frontend-engineer",
-      "acceptedBy": null,
-      "observed": null,
+      "acceptedBy": "frontend self-review",
+      "observed": "Panoramic asset places close facade on right, copy on left; original3:2 superseded by16:9 correction",
       "id": "H01",
       "scene": "hero-journey",
       "producerSkill": "talent-photorealism",
@@ -19,19 +19,21 @@
       ],
       "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
       "protected": "Выбранный дизайн условного отеля, согласованные camera/material/light; без новых фактов реального проекта",
-      "targetCSSSize": "Уточнить в visual-contract; full-bleed desktop + mobile crop",
-      "targetPixels": "Рассчитать от CSS size/DPR/scale; native output измерить",
+      "targetCSSSize": "full-bleed; cover in shared opening scene",
+      "targetPixels": "native1672×941, owner requested16:9",
       "alpha": false,
-      "status": "needs-spec",
-      "maxCalls": 1,
-      "attemptsUsed": 0,
-      "outputs": [],
+      "status": "ready",
+      "maxCalls": 2,
+      "attemptsUsed": 2,
+      "outputs": [
+        "public/media/vis004/hero-wide.webp"
+      ],
       "qualityReason": "Не апскейл: нужен совместимый master для пространственной сцены"
     },
     {
       "requester": "frontend-engineer",
-      "acceptedBy": null,
-      "observed": null,
+      "acceptedBy": "frontend self-review",
+      "observed": "Same1672×941 canvas, alpha. Foreground extends into paper plane; clip only empty left area to remove stray pixels",
       "id": "H02",
       "scene": "hero-journey",
       "producerSkill": "imagegen",
@@ -42,15 +44,17 @@
       ],
       "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
       "alpha": true,
-      "status": "blocked-by-master",
+      "status": "ready",
       "maxCalls": 1,
-      "attemptsUsed": 0,
-      "outputs": []
+      "attemptsUsed": 1,
+      "outputs": [
+        "public/media/vis004/facade-alpha.webp"
+      ]
     },
     {
       "requester": "frontend-engineer",
       "acceptedBy": null,
-      "observed": null,
+      "observed": "No independent facade movement is shipped; clean plate remains necessary for future parallax only",
       "id": "H03",
       "scene": "hero-journey",
       "producerSkill": "imagegen",
@@ -62,15 +66,15 @@
       ],
       "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
       "alpha": false,
-      "status": "blocked-by-master",
-      "maxCalls": 1,
+      "status": "not-required-for-current-static-scene",
+      "maxCalls": 0,
       "attemptsUsed": 0,
       "outputs": []
     },
     {
       "requester": "frontend-engineer",
-      "acceptedBy": null,
-      "observed": null,
+      "acceptedBy": "frontend self-review",
+      "observed": "Four separate real-alpha product illustrations placed in equal4:3 slots, labels in DOM",
       "id": "L01",
       "scene": "launch",
       "producerSkill": "imagegen",
@@ -78,15 +82,20 @@
       "purpose": "Материалы / состав решения / разработка / проверка: четыре изображения в одном масштабе и свете, без текста; DOM labels отдельно",
       "reference": ".twin/tasks/VIS-004/reference-lower.jpg",
       "alpha": true,
-      "status": "needs-spec",
+      "status": "ready",
       "maxCalls": 4,
-      "attemptsUsed": 0,
-      "outputs": []
+      "attemptsUsed": 4,
+      "outputs": [
+        "public/media/vis004/launch-materials.webp",
+        "public/media/vis004/launch-composition.webp",
+        "public/media/vis004/launch-development.webp",
+        "public/media/vis004/launch-check.webp"
+      ]
     },
     {
       "requester": "frontend-engineer",
-      "acceptedBy": null,
-      "observed": null,
+      "acceptedBy": "frontend self-review",
+      "observed": "Approved original placed at reference scale; whole project and four actual channel scenes, zero regeneration",
       "id": "C01",
       "scene": "composition-and-qualities",
       "producerSkill": "frontend-engineer",
@@ -95,15 +104,15 @@
       "sourcePaths": [
         "public/media/composition-core-20261023.png"
       ],
-      "status": "needs-layout",
+      "status": "ready",
       "maxCalls": 0,
       "attemptsUsed": 0,
       "outputs": []
     },
     {
       "requester": "frontend-engineer",
-      "acceptedBy": null,
-      "observed": null,
+      "acceptedBy": "frontend self-review",
+      "observed": "Approved original placed at reference scale; whole project and four actual channel scenes, zero regeneration",
       "id": "CH01",
       "scene": "channels",
       "producerSkill": "frontend-engineer",
@@ -112,7 +121,7 @@
       "sourcePaths": [
         "public/media/sales-story/channels/"
       ],
-      "status": "needs-inspection",
+      "status": "ready",
       "maxCalls": 0,
       "attemptsUsed": 0,
       "outputs": []
@@ -122,47 +131,78 @@
     "brief": {
       "status": "done",
       "evidence": [
-        ".twin/tasks/VIS-004/ASSESSMENT.md",
-        ".twin/tasks/VIS-004/reference-upper.jpg",
-        ".twin/tasks/VIS-004/reference-lower.jpg"
+        ".twin/tasks/VIS-004/ENGINEERING.md",
+        ".twin/tasks/VIS-004/visual-contract.json",
+        "src/components/v2/ReferencePage.tsx",
+        "src/styles/v2/reference-page.css"
       ]
     },
     "spec": {
-      "status": "pending",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-004/ENGINEERING.md",
+        ".twin/tasks/VIS-004/visual-contract.json",
+        "src/components/v2/ReferencePage.tsx",
+        "src/styles/v2/reference-page.css"
+      ]
     },
     "assets": {
-      "status": "pending",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-004/ENGINEERING.md",
+        ".twin/tasks/VIS-004/visual-contract.json",
+        "src/components/v2/ReferencePage.tsx",
+        "src/styles/v2/reference-page.css"
+      ]
     },
     "static": {
-      "status": "pending",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-004/ENGINEERING.md",
+        ".twin/tasks/VIS-004/visual-contract.json",
+        "src/components/v2/ReferencePage.tsx",
+        "src/styles/v2/reference-page.css"
+      ]
     },
     "responsive": {
-      "status": "pending",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-004/ENGINEERING.md",
+        ".twin/tasks/VIS-004/visual-contract.json",
+        "src/components/v2/ReferencePage.tsx",
+        "src/styles/v2/reference-page.css"
+      ]
     },
     "motion": {
-      "status": "pending",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-004/MOTION.md",
+        "docs/v2/reviews/VIS-004/motion-reverse.jpg",
+        "docs/v2/reviews/VIS-004/motion-floor.jpg",
+        "docs/v2/reviews/VIS-004/motion-location.jpg"
+      ]
     },
     "review": {
-      "status": "pending",
-      "evidence": []
+      "status": "blocked",
+      "evidence": [
+        ".twin/tasks/VIS-004/REVIEW.md"
+      ]
     },
     "release": {
-      "status": "pending",
-      "evidence": []
+      "status": "blocked",
+      "evidence": [
+        ".twin/tasks/VIS-004/RESULT.md"
+      ]
     }
   },
   "review": {
-    "verdict": null,
-    "runtimeCommit": null,
-    "reference": null,
-    "reviewer": null,
+    "verdict": "fix",
+    "reviewer": "Codex self-review",
     "independent": false,
-    "unresolved": []
+    "unresolved": [
+      "Final dedicated reduced-motion check not performed",
+      "Final full visual gate remains unpassed; no public release"
+    ]
   },
   "publication": {
     "allowed": false,

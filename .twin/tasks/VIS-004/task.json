@@ -1,18 +1,20 @@
 {
   "id": "VIS-004",
-  "mode": "prepare",
-  "status": "draft",
-  "outcome": "Определить состав производства выбранного полного Twin V2 по изображениям владельца",
-  "baseline": "d487775168f9e45dff45871fe6e2553fe162e924",
+  "mode": "execute",
+  "status": "implemented",
+  "outcome": "Реализовать полную V2 по двум выбранным референсам с последними правками владельца",
+  "baseline": "102bda11a11289ea93a98d0be3e6ca358a3b2b6f",
   "scope": [
-    "Вся V2 от hero до footer: feasibility, материалы и порядок исполнения; без runtime изменений"
+    "Вся V2: hero/Journey, демо, состав, 4 канала, качества, запуск, контакт/footer; desktop/mobile"
   ],
   "sources": [
     ".twin/tasks/VIS-004/ASSESSMENT.md",
     ".twin/tasks/VIS-004/reference-upper.jpg",
     ".twin/tasks/VIS-004/reference-lower.jpg",
     ".twin/tasks/VIS-004/asset-jobs.json",
-    "docs/v2/DECISIONS.md"
+    "docs/v2/DECISIONS.md",
+    ".twin/tasks/VIS-004/ENGINEERING.md",
+    ".twin/tasks/VIS-004/runtime-assets.json"
   ],
   "roles": [
     "hero",
@@ -30,10 +32,11 @@
   "responsive": [
     "Desktop и отдельная mobile-композиция входят в будущий scope"
   ],
-  "motionChanged": false,
+  "motionChanged": true,
   "publication": {
-    "allowed": false,
-    "reason": "Текущий запрос — понять состав работ; не запускать сборку и публикацию"
+    "allowed": true,
+    "reason": "Последнее поручение реализовать сайт и действующая авторизация отдельного выпуска /v2/ после quality gate"
   },
-  "openQuestions": []
+  "openQuestions": [],
+  "motionContract": "MOTION.md"
 }

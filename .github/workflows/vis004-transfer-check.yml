@@ -1,0 +1,27 @@
+name: VIS004 transfer checks
+on:
+  push:
+    branches: [work/vis004-execute-20261028]
+    paths: ['src/**', 'public/**', 'assets/**', 'package*.json', '.github/workflows/vis004-transfer-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - name: Hash transferred files
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          paths=[".twin/tasks/VIS-004/ENGINEERING.md",".twin/tasks/VIS-004/MOTION.md",".twin/tasks/VIS-004/RESULT.md",".twin/tasks/VIS-004/REVIEW.md",".twin/tasks/VIS-004/TASK.md",".twin/tasks/VIS-004/asset-jobs.json",".twin/tasks/VIS-004/production/H01-prompt.txt",".twin/tasks/VIS-004/production/facade-native.png",".twin/tasks/VIS-004/production/hero-initial-3x2.png",".twin/tasks/VIS-004/production/hero-wide-native.png",".twin/tasks/VIS-004/production/launch-check-native.png",".twin/tasks/VIS-004/production/launch-composition-native.png",".twin/tasks/VIS-004/production/launch-development-native.png",".twin/tasks/VIS-004/production/launch-materials-native.png",".twin/tasks/VIS-004/production/lot-alpha-native.png",".twin/tasks/VIS-004/production/lot-alpha-rejected.png",".twin/tasks/VIS-004/production/manifest.json",".twin/tasks/VIS-004/production/prompts.json",".twin/tasks/VIS-004/run.json",".twin/tasks/VIS-004/runtime-assets.json",".twin/tasks/VIS-004/task.json",".twin/tasks/VIS-004/visual-contract.json",".twin/v2/project.json","assets/approved/2026-10-27/1 экран Вид побережье.png","assets/approved/2026-10-27/2 экран Выбор и сравнение Корпус.png","assets/approved/2026-10-27/2 экран Локация и Инфраструктура.png","assets/approved/2026-10-27/2 экран Этаж.png","assets/approved/2026-10-27/2 экран пространство и виды Лот.png","assets/approved/2026-10-27/4 экран Твин Роскошный морской курорт на закате.png","assets/approved/2026-10-27/5 экран Выбор курортной недвижимости в офисе-3.png","assets/approved/2026-10-27/5 экран Работа с агентом.png","assets/approved/2026-10-27/5 экран Самостоятельное изучение.png","assets/approved/2026-10-27/5ый экран Удаленная демонстрация.png","assets/approved/2026-10-27/лого twin by talent основной (для темных фонов).png","assets/approved/2026-10-27/лого twin by talent основной для светлых фонов.png","assets/approved/2026-10-27/лого twin без букв для светлых фонов.png","assets/approved/2026-10-27/лого twin без букв для темных фонов.png","docs/v2/DECISIONS.md","docs/v2/reviews/VIS-004/channels.jpg","docs/v2/reviews/VIS-004/composition.jpg","docs/v2/reviews/VIS-004/hero.jpg","docs/v2/reviews/VIS-004/journey-final.jpg","docs/v2/reviews/VIS-004/motion-floor.jpg","docs/v2/reviews/VIS-004/motion-location.jpg","docs/v2/reviews/VIS-004/motion-mid.jpg","docs/v2/reviews/VIS-004/motion-reverse.jpg","docs/v2/reviews/VIS-004/qualities.jpg","docs/v2/reviews/VIS-004/transition.jpg","public/media/approved-20261027/channel-agent.webp","public/media/approved-20261027/channel-office.webp","public/media/approved-20261027/channel-remote.webp","public/media/approved-20261027/channel-site.webp","public/media/approved-20261027/hero-approved.webp","public/media/approved-20261027/journey-compare.webp","public/media/approved-20261027/journey-floor.webp","public/media/approved-20261027/journey-location.webp","public/media/approved-20261027/journey-space.webp","public/media/approved-20261027/logo-dark.webp","public/media/approved-20261027/logo-light.webp","public/media/approved-20261027/mark-dark.webp","public/media/approved-20261027/mark-light.webp","public/media/approved-20261027/project-model.webp","public/media/vis004/facade-alpha.webp","public/media/vis004/hero-wide.webp","public/media/vis004/launch-check.webp","public/media/vis004/launch-composition.webp","public/media/vis004/launch-development.webp","public/media/vis004/launch-materials.webp","public/media/vis004/lot-alpha.webp","scripts/build-v2.mjs","src/components/Composition.tsx","src/components/ProductDemo.tsx","src/components/v2/ReferencePage.tsx","src/pages/v2/index.astro","src/styles/v2/reference-page.css"]
+          print('TRANSFER_HASHES='+json.dumps({p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest() for p in paths}))
+          PY
+      - run: npm ci
+      - run: npm run typecheck
+        if: success() || failure()
+      - run: npm run build
+        if: success() || failure()

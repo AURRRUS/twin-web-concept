@@ -1,0 +1,142 @@
+[
+  {
+    "slot": "hero",
+    "original": "assets/approved/2026-10-27/1 экран Вид побережье.png",
+    "web": "public/media/approved-20261027/hero-approved.webp",
+    "width": 2574,
+    "height": 1459,
+    "sourceSHA256": "2ccdd67af1048b6585e6a8a432c11b7d0f8d1da083a7cb2b150dfc79d0d4cc05",
+    "webSHA256": "546be8ac221bf05d981423daf713e680b301a65bdf02842989dd1baf3a643e50",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "journey.selection",
+    "original": "assets/approved/2026-10-27/2 экран Выбор и сравнение Корпус.png",
+    "web": "public/media/approved-20261027/journey-compare.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "27bf2029f57a23febb7c800aba5eb0d8ad92698a8bfb7a017f623e6812ab8151",
+    "webSHA256": "4a392453a82740467883370b4f14a6cf23991a2eb00b453907de6d5cdda2de92",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "journey.location",
+    "original": "assets/approved/2026-10-27/2 экран Локация и Инфраструктура.png",
+    "web": "public/media/approved-20261027/journey-location.webp",
+    "width": 1671,
+    "height": 941,
+    "sourceSHA256": "7535b3259776de6e7904d43eeb98e307d6046ce440896d7c896d8b882036e190",
+    "webSHA256": "356cc4330feb074eb9d0199926df770b1f69b09189ca2f2cd6bc3d8b054e0f1b",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "journey.space",
+    "original": "assets/approved/2026-10-27/2 экран пространство и виды Лот.png",
+    "web": "public/media/approved-20261027/journey-space.webp",
+    "width": 1671,
+    "height": 941,
+    "sourceSHA256": "09f97c124c3b636898a757ab1119fcffd84183eb228a1e5733ec49c35f4eebf8",
+    "webSHA256": "3893212ed8a131bdc802f0cc9d33aa3b2e57c61ac8555abc855b84f69b954710",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "journey.floor",
+    "original": "assets/approved/2026-10-27/2 экран Этаж.png",
+    "web": "public/media/approved-20261027/journey-floor.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "a0eb41b36e8184e837157e8f9ebf17bd7ed79cf3c7e08c9edf3ce374dfe1b6c0",
+    "webSHA256": "2eee9915254000f2e73d280ce98b93ee726c78297c4a2ee05aa770fce9afde04",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "composition.whole-project",
+    "original": "assets/approved/2026-10-27/4 экран Твин Роскошный морской курорт на закате.png",
+    "web": "public/media/approved-20261027/project-model.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceSHA256": "1d71fc44eb811c11734b3fd6f4b647ec9cf62b39cde5fa6938670c92d24d65c6",
+    "webSHA256": "0a048661562edf4da4ef7f5c1b766345b01685b934224817aef694954ffc02ef",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "channels.office",
+    "original": "assets/approved/2026-10-27/5 экран Выбор курортной недвижимости в офисе-3.png",
+    "web": "public/media/approved-20261027/channel-office.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "6d86bda9235cd35837a485d4715c3b74604359ab97a33cf693cfd26f761fb3f2",
+    "webSHA256": "0ad1b0d06de856bfeeaff4fa965c31b54b2ecbdfcf6cf771e2e8076172abd241",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "channels.agent",
+    "original": "assets/approved/2026-10-27/5 экран Работа с агентом.png",
+    "web": "public/media/approved-20261027/channel-agent.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "d1d09ccebc93bbd476b8e08225aa54f4a7223ab96122f2b1326a1d636649344e",
+    "webSHA256": "59ce0900d4277d5ea0f263c27ad5f25a33dfab46e95d4d087f2b029fe748743d",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "channels.site",
+    "original": "assets/approved/2026-10-27/5 экран Самостоятельное изучение.png",
+    "web": "public/media/approved-20261027/channel-site.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "802f41788d5e318f0f9a0166c56f167d3d89ca394c0973849a2b00a76497a8d7",
+    "webSHA256": "1ca75cc665f6c6d0e1a51c4c7d43f923ed533bc19d3092b561a36d22febb36d0",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "channels.remote",
+    "original": "assets/approved/2026-10-27/5ый экран Удаленная демонстрация.png",
+    "web": "public/media/approved-20261027/channel-remote.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceSHA256": "f2ffe5813a824ef2897506c6653b66f1f3d95d3ec50cac86e870a4aa8cfbcdf1",
+    "webSHA256": "571817658353eac6ecbeb8c9cd36ee2453036ba1de486ca9b3082f2c743d334a",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "logo.full.dark-background",
+    "original": "assets/approved/2026-10-27/лого twin by talent основной (для темных фонов).png",
+    "web": "public/media/approved-20261027/logo-dark.webp",
+    "width": 1441,
+    "height": 621,
+    "sourceSHA256": "f0e7f0364d3da64d300414e98d8acc85c86f2eb532988de7d8dc500c7df82175",
+    "webSHA256": "bf39f7734552f9088daf442fbdbd98ec31d68ce900f8f84bbcaf6e3fed2993db",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "logo.full.light-background",
+    "original": "assets/approved/2026-10-27/лого twin by talent основной для светлых фонов.png",
+    "web": "public/media/approved-20261027/logo-light.webp",
+    "width": 1774,
+    "height": 887,
+    "sourceSHA256": "d8973d8c5cec7047e0e91ef4dd3bc48f2154240c355567ea12857bf1130835e1",
+    "webSHA256": "8b26e9d0b225c0fd64b6d5adea77b31e24fe5db019bb710fecba87c77b540a75",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "logo.mark.light-background",
+    "original": "assets/approved/2026-10-27/лого twin без букв для светлых фонов.png",
+    "web": "public/media/approved-20261027/mark-light.webp",
+    "width": 1254,
+    "height": 1254,
+    "sourceSHA256": "8a49ba07ce68772adaf73622654512d85fe1326a32e0716a5921148704b3c3d2",
+    "webSHA256": "2bb349a846d8adfd85e6ca246d8d0ac7744ae576946053180986f72306ed8f0d",
+    "rgbaEqual": true
+  },
+  {
+    "slot": "logo.mark.dark-background",
+    "original": "assets/approved/2026-10-27/лого twin без букв для темных фонов.png",
+    "web": "public/media/approved-20261027/mark-dark.webp",
+    "width": 882,
+    "height": 966,
+    "sourceSHA256": "db0d098260da4b3a5340fe042ec303f1e37c5013ab2adf028d84bf477b682993",
+    "webSHA256": "4809a4ae8cb67857dc57b2bf6393a8ac15aae8ffebf344c77e752f2c8f9d5c9c",
+    "rgbaEqual": true
+  }
+]

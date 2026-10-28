@@ -1,0 +1,195 @@
+{
+  "mode": "reproduce",
+  "baseline": "102bda11a11289ea93a98d0be3e6ca358a3b2b6f",
+  "route": "/v2/",
+  "reference": {
+    "path": ".twin/tasks/VIS-004/reference-upper.jpg",
+    "viewport": [
+      1440,
+      1000
+    ]
+  },
+  "changes": [
+    {
+      "element": "opening",
+      "before": "Independent stepped photo copy",
+      "after": "Connected photographic facade and paper plane",
+      "implementation": "H01 and H02 raster, DOM copy, CSS surface"
+    },
+    {
+      "element": "journey",
+      "before": "Low height flow with all full-size images",
+      "after": "Four states next to one large image",
+      "implementation": "Responsive Grid + fit-gated native sticky"
+    },
+    {
+      "element": "rest",
+      "before": "Legacy isolated components",
+      "after": "Full reference composition through footer",
+      "implementation": "ReferencePage and new scoped CSS; reuse working controls"
+    }
+  ],
+  "anchors": [
+    {
+      "element": "hero-copy",
+      "box": [
+        56,
+        180,
+        1000,
+        460
+      ],
+      "tolerancePx": 32,
+      "source": "proposed"
+    },
+    {
+      "element": "journey-aside",
+      "box": [
+        56,
+        0,
+        340,
+        540
+      ],
+      "tolerancePx": 24,
+      "source": "measured-estimate"
+    },
+    {
+      "element": "journey-media",
+      "box": [
+        428,
+        0,
+        956,
+        538
+      ],
+      "tolerancePx": 24,
+      "source": "measured-estimate"
+    }
+  ],
+  "typeRoles": [
+    {
+      "role": "hero",
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "weight": 700,
+      "size": 58,
+      "lineHeight": 68,
+      "tracking": 0,
+      "maxWidth": 1000
+    },
+    {
+      "role": "section",
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "weight": 700,
+      "size": 46,
+      "lineHeight": 56,
+      "tracking": 0,
+      "maxWidth": 1050
+    },
+    {
+      "role": "item",
+      "file": "src/assets/fonts/rf-dewi-bold.woff2",
+      "weight": 700,
+      "size": 24,
+      "lineHeight": 32,
+      "tracking": 0,
+      "maxWidth": 340
+    },
+    {
+      "role": "body",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "size": 20,
+      "lineHeight": 30,
+      "tracking": 0,
+      "maxWidth": 650
+    },
+    {
+      "role": "control",
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "weight": 600,
+      "size": 17,
+      "lineHeight": 26,
+      "tracking": 0,
+      "maxWidth": 340
+    },
+    {
+      "role": "caption",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "size": 14,
+      "lineHeight": 20,
+      "tracking": 0,
+      "maxWidth": 650
+    }
+  ],
+  "layers": [
+    {
+      "element": "hero-master",
+      "medium": "raster",
+      "asset": "public/media/vis004/hero-wide.webp",
+      "fit": "cover"
+    },
+    {
+      "element": "facade",
+      "medium": "raster",
+      "asset": "public/media/vis004/facade-alpha.webp",
+      "fit": "cover"
+    },
+    {
+      "element": "headings and controls",
+      "medium": "dom"
+    },
+    {
+      "element": "paper-plane",
+      "medium": "css"
+    },
+    {
+      "element": "composition connections",
+      "medium": "svg"
+    }
+  ],
+  "responsive": {
+    "mobile": "Natural document flow, photo after hero copy; inline active accordion media; no pin; launch one column",
+    "lowHeight": "Manual state switching next to one media field; full heading size retained"
+  },
+  "motion": {
+    "changed": true,
+    "contract": {
+      "progress": "native scroll distance /1800px only when whole panel fits",
+      "phases": [
+        {
+          "start": 0,
+          "end": 0.25,
+          "state": "location hold"
+        },
+        {
+          "start": 0.25,
+          "end": 0.5,
+          "state": "compare hold"
+        },
+        {
+          "start": 0.5,
+          "end": 0.75,
+          "state": "floor hold"
+        },
+        {
+          "start": 0.75,
+          "end": 1,
+          "state": "space hold"
+        }
+      ],
+      "reverse": "Current scroll progress, no cumulative wheel state",
+      "reducedMotion": "Disable pin and transforms, manual accessible controls",
+      "exit": "Native document flow at both boundaries, no wheel/touch interception"
+    }
+  },
+  "acceptance": [
+    "Whole page follows both references and latest owner corrections",
+    "Visible architecture joins hero and Journey; no CSS facade imitation",
+    "Dark text on light bronze card; four actual UI originals",
+    "Whole project at composition centre and four real channel cards",
+    "Four launch illustrations and honest working demo form"
+  ],
+  "publication": {
+    "allowed": true,
+    "reason": "Owner requested implementation and separate V2 workflow allows release after fresh visual gate"
+  }
+}

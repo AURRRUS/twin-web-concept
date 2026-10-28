@@ -3,7 +3,7 @@ import { Media, Arrow } from './Media';
 import { Icon } from './Icon';
 import { fixture, initialSelection, publicSelectionUrl, type Selection } from '../lib/config';
 
-export function ProductDemo({ selection, onChange, full = false }: { selection: Selection; onChange: (s: Selection) => void; full?: boolean }) {
+export function ProductDemo({ selection, onChange, full = false, planSrc, contactPath = '/' }: { selection: Selection; onChange: (s: Selection) => void; full?: boolean; planSrc?: string; contactPath?: string }) {
   const id = useId();
   const chooseBuilding = (value: string) => onChange({ ...selection, buildingId: value || null, floorId: null, lotId: null });
   const chooseFloor = (value: string) => onChange({ ...selection, floorId: value || null, lotId: null });
@@ -27,7 +27,7 @@ export function ProductDemo({ selection, onChange, full = false }: { selection: 
       <div className="product-stage">
         <ol className="breadcrumbs" aria-label="Текущий выбор"><li>Проект</li>{selection.buildingId && <li>Корпус 1</li>}{selection.floorId && <li>Этаж 4</li>}{selection.lotId && <li>Лот 4.2</li>}</ol>
         <div className="product-canvas" role="tabpanel" id={`${id}-panel`} aria-labelledby={selection.view === 'plan' ? `${id}-plan` : `${id}-view`}>
-          <Media key={selection.lotId ? selection.view : selection.buildingId || 'project'} name={selection.lotId ? selection.view === 'plan' ? 'lot' : 'interior' : selection.buildingId ? 'facade' : 'hero'} alt={selection.lotId ? selection.view === 'plan' ? 'Иллюстративная планировка лота 4.2' : 'Иллюстративное пространство и вид; соответствие реальному лоту не подтверждено' : 'Обзор демонстрационного проекта'} />
+          {planSrc && selection.lotId && selection.view === 'plan' ? <span className="media"><img src={planSrc} alt="Иллюстративная планировка лота 4.2" width="1448" height="1086" loading="lazy"/></span> : <Media key={selection.lotId ? selection.view : selection.buildingId || 'project'} name={selection.lotId ? selection.view === 'plan' ? 'lot' : 'interior' : selection.buildingId ? 'facade' : 'hero'} alt={selection.lotId ? selection.view === 'plan' ? 'Иллюстративная планировка лота 4.2' : 'Иллюстративное пространство и вид; соответствие реальному лоту не подтверждено' : 'Обзор демонстрационного проекта'} />}
           <span className="canvas-caption">Иллюстрация · не проектная документация</span><span className="canvas-compass" aria-hidden="true"><span>N</span><Icon name="compass" /></span>
         </div>
       </div>
@@ -38,7 +38,7 @@ export function ProductDemo({ selection, onChange, full = false }: { selection: 
         </div>
         <Media name="hero" alt="Иллюстративный проект у моря" />
         <dl><div><dt>Корпус</dt><dd>{selection.buildingId ? '1' : 'Не выбран'}</dd></div><div><dt>Этаж</dt><dd>{selection.floorId ? '4' : 'Не выбран'}</dd></div><div><dt>Лот</dt><dd>{selection.lotId ? '4.2' : 'Не выбран'}</dd></div><div><dt>Цены и наличие</dt><dd>Нет данных</dd></div></dl>
-        <a className="text-link" href={publicSelectionUrl('/' , selection) + '#contact'}>Обсудить проект<Arrow /></a>
+        <a className="text-link" href={publicSelectionUrl(contactPath, selection) + '#contact'}>Обсудить проект<Arrow /></a>
       </aside>
     </div>
     </div><div className="product-bottom"><p>Одна цифровая основа — от общего вида до конкретного выбора.</p>{!full && <a id="open-demo" className="button secondary" href={publicSelectionUrl('/demo', selection)} onClick={()=>{try{sessionStorage.setItem('twin-demo-origin',JSON.stringify({url:location.href,scroll:scrollY}))}catch{}}}>Открыть демо<Arrow /></a>}</div>

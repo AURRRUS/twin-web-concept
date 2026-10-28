@@ -1,0 +1,86 @@
+[
+  {
+    "path": ".twin/tasks/VIS-004/production/facade-native.png",
+    "width": 1672,
+    "height": 941,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "7d7c91c1118782e1bcc46b070fbbbfd5a63698ba58752ffcb08da49cdb67f622",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/hero-wide-native.png",
+    "width": 1672,
+    "height": 941,
+    "alphaRange": [
+      255,
+      255
+    ],
+    "sha256": "b57d0c40161d97b3fce0ab0572233272e6ef09200f8bb4d97c565c720f56ad84",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/launch-check-native.png",
+    "width": 1448,
+    "height": 1086,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "5e77031e61daee1fe2811da75be8f894aa825cd6e91d8be23604537b20e05855",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/launch-composition-native.png",
+    "width": 1448,
+    "height": 1086,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "13aa45a489daf55479a9bd213ddee3aa25d08b838aec910d71e77016bc37edd2",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/launch-development-native.png",
+    "width": 1448,
+    "height": 1086,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "7841751671be4108d36b3d3acb6ca0998dd7696c0109bfd03d03f8bc78096c03",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/launch-materials-native.png",
+    "width": 1536,
+    "height": 1024,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "eda61b15d26a19e086d6a4023477c84f34a27812cd073b94d4b0c3e0a37ce5d5",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  },
+  {
+    "path": ".twin/tasks/VIS-004/production/lot-alpha-native.png",
+    "width": 1448,
+    "height": 1086,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "24d9fb77ad62958d01796c5d6e98c1799b13d700514034ea7825995e61166692",
+    "method": "builtin-imagegen",
+    "status": "integrated; browser reviewed separately"
+  }
+]

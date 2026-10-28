@@ -10,9 +10,10 @@ type DialogContent = [string, string, string, string, string[], string];
 const dialogs = rawDialogs as DialogContent[];
 const items = content.composition.components;
 const getDialog = (id: string | null) => dialogs.find(d => d[0] === id);
-function ComponentArt({ id, detail = false }: { id: string; detail?: boolean }) {
+function ComponentArt({ id, detail = false, coreSrc }: { id: string; detail?: boolean; coreSrc?: string }) {
   const [failed, setFailed] = useState(false);
   const clipId = useId().replace(/:/g, '');
+  if (id === 'core' && coreSrc) return <span className="media"><img src={coreSrc} alt="Изометрическая модель демонстрационного курортного проекта" width="1448" height="1086" loading="lazy"/></span>;
   if (id === 'core') return <Media name="compositionCore" alt="Изометрическая модель демонстрационного курортного проекта" />;
   if (!detail && !failed) {
     const index = items.findIndex(item => item.id === id);
@@ -24,7 +25,7 @@ function ComponentArt({ id, detail = false }: { id: string; detail?: boolean }) 
   if (id === 'commercial') return <Media name="interior" alt="Пример интерьерного решения" />;
   return <img src={sitePath(`/media/${id}.svg`)} alt="" loading="lazy" width="1000" height="700" />;
 }
-export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
+export function Composition({ onTopic, coreSrc }: { onTopic: (topic: string) => void; coreSrc?: string }) {
   const [active, setActive] = useState<string | null>(null);
   const [closing, setClosing] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
@@ -97,7 +98,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       <svg className="composition-lines" viewBox={`0 0 ${canvas.width} ${canvas.height}`} preserveAspectRatio="none" aria-hidden="true">
         {connections.map((route, i) => <g data-craft-pair={items[i].id} data-craft-reveal="fact" key={items[i].id} data-active={focused === items[i].id}><path d={route.path} fill="none" /><circle cx={route.x} cy={route.y} r="4" /></g>)}
       </svg>
-      <a data-craft-reveal="composition-core" className="map-core" href="?component=core#composition" onClick={e => open(e, 'core')} onFocus={() => setFocused('core')} onBlur={() => setFocused(null)}><ComponentArt id="core" /><span className="badge">Ядро продукта</span><h3>Коммерческий{' '}<br />цифровой двойник</h3><span className="core-explore">Исследовать ядро <Arrow /></span></a>
+      <a data-craft-reveal="composition-core" className="map-core" href="?component=core#composition" onClick={e => open(e, 'core')} onFocus={() => setFocused('core')} onBlur={() => setFocused(null)}><ComponentArt id="core" coreSrc={coreSrc} /><span className="badge">Ядро продукта</span><h3>Коммерческий{' '}<br />цифровой двойник</h3><span className="core-explore">Исследовать ядро <Arrow /></span></a>
       {items.map((item, i) => <a data-craft-pair={item.id} data-craft-reveal="fact" key={item.id} className={`map-component component-${item.id}`} href={item.modalHref} onClick={e => open(e, item.id)} onPointerEnter={() => setFocused(item.id)} onPointerLeave={() => setFocused(null)} onFocus={() => setFocused(item.id)} onBlur={() => setFocused(null)} style={{ gridArea: ['1 / 1', '2 / 1', '3 / 1', '1 / 3', '2 / 3', '3 / 3'][i], '--component-index': i } as CSSProperties}>
         <div className="component-art"><ComponentArt id={item.id} /></div>
         {item.extension && <span className="extension">Расширение</span>}
@@ -113,7 +114,7 @@ export function Composition({ onTopic }: { onTopic: (topic: string) => void }) {
       if (e.shiftKey && (document.activeElement === first || document.activeElement === heading.current)) { e.preventDefault(); last?.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
     }} onCancel={e => { e.preventDefault(); close(); }} onClick={e => { if (e.target === e.currentTarget) close(); }}>
-      {info && <div className="dialog-inner"><button className="dialog-close" aria-label="Закрыть описание компонента" onClick={close}><Icon name="close" /></button><span className="eyebrow">СОСТАВ TWIN {info[0] === 'commercial' ? '· РАСШИРЕНИЕ' : ''}</span><h2 ref={heading} tabIndex={-1} id="component-dialog-title">{info[1]}</h2><p id="component-dialog-intro" className="dialog-intro">{info[2]}</p><div className="dialog-body"><div className="dialog-art" data-core={info[0] === 'core' || undefined}><ComponentArt id={info[0]} detail /></div><div><h3>В составе решения</h3><ul>{info[4].map(text => <li key={text}><Icon name="check" />{text}</li>)}</ul><p>Связано с общей цифровой моделью проекта.</p></div></div><div className="dialog-footer"><p>{info[5]}</p><button className="button" onClick={() => discuss(info[1])}>Обсудить конфигурацию<Arrow /></button></div></div>}
+      {info && <div className="dialog-inner"><button className="dialog-close" aria-label="Закрыть описание компонента" onClick={close}><Icon name="close" /></button><span className="eyebrow">СОСТАВ TWIN {info[0] === 'commercial' ? '· РАСШИРЕНИЕ' : ''}</span><h2 ref={heading} tabIndex={-1} id="component-dialog-title">{info[1]}</h2><p id="component-dialog-intro" className="dialog-intro">{info[2]}</p><div className="dialog-body"><div className="dialog-art" data-core={info[0] === 'core' || undefined}><ComponentArt id={info[0]} detail coreSrc={coreSrc} /></div><div><h3>В составе решения</h3><ul>{info[4].map(text => <li key={text}><Icon name="check" />{text}</li>)}</ul><p>Связано с общей цифровой моделью проекта.</p></div></div><div className="dialog-footer"><p>{info[5]}</p><button className="button" onClick={() => discuss(info[1])}>Обсудить конфигурацию<Arrow /></button></div></div>}
     </dialog>
   </section>;
 }
