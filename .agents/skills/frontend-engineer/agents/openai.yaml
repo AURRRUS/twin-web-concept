@@ -1,8 +1,8 @@
 interface:
   display_name: Frontend Engineer
   short_description: Вёрстка по референсам, типографика, адаптив и motion
-  default_prompt: 'Используй $frontend-engineer: разбери референс на слои, реализуй и
-    проверь в браузере'
+  default_prompt: 'Используй $frontend-engineer: разбери референс на слои, реализуй
+    и проверь в браузере'
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:

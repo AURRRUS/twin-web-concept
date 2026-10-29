@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "mode": "prepare",
+  "targetStage": "spec",
+  "taskEvidence": [],
+  "runtimeCommit": null,
+  "runtimeFingerprint": null,
+  "contractFingerprint": null,
+  "implementer": null,
+  "agents": [],
+  "independentReviewRequired": true,
+  "ownerCheckpoints": [
+    {
+      "id": "foundation-and-key-scenes",
+      "beforeStage": "sample",
+      "status": "pending",
+      "subjectFingerprint": null,
+      "approvedFingerprint": null,
+      "evidence": []
+    },
+    {
+      "id": "representative-asset-sample",
+      "beforeStage": "assets",
+      "status": "pending",
+      "subjectFingerprint": null,
+      "approvedFingerprint": null,
+      "evidence": []
+    }
+  ],
+  "assetInventoryComplete": false,
+  "assetJobs": [],
+  "stages": {
+    "brief": {
+      "status": "pending",
+      "evidence": []
+    },
+    "spec": {
+      "status": "pending",
+      "evidence": []
+    },
+    "sample": {
+      "status": "pending",
+      "evidence": []
+    },
+    "assets": {
+      "status": "pending",
+      "evidence": []
+    },
+    "static": {
+      "status": "pending",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "pending",
+      "evidence": []
+    },
+    "motion": {
+      "status": "pending",
+      "evidence": []
+    },
+    "review": {
+      "status": "pending",
+      "evidence": []
+    },
+    "release": {
+      "status": "pending",
+      "evidence": []
+    }
+  },
+  "review": {
+    "verdict": null,
+    "runtimeCommit": null,
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "reference": null,
+    "reviewer": null,
+    "independent": false,
+    "unresolved": [],
+    "evidence": []
+  },
+  "ownerAcceptance": {
+    "status": "pending",
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "evidence": []
+  },
+  "publication": {
+    "allowed": false,
+    "kind": "preview",
+    "reason": "production system preparation only",
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "allowKnownDefects": false,
+    "acceptedDefects": [],
+    "evidence": []
+  }
+}

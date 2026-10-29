@@ -62,7 +62,32 @@ def validate(c, root):
         if not isinstance(m,dict): m={}
         for k in ('progress','reverse','reducedMotion','exit'):
             if not text(m.get(k)): fail('motion.contract.'+k+': required')
-        if not isinstance(m.get('phases'),list) or not m['phases']: fail('motion.contract.phases: required')
+        driver=m.get('driver')
+        if driver not in ('scroll','time','interaction'): fail('motion.contract.driver: scroll/time/interaction required')
+        if driver in ('scroll','time'):
+            size_key='scrollDistancePx' if driver=='scroll' else 'durationMs'
+            if not num(m.get(size_key)) or m[size_key]<=0: fail('motion.contract.'+size_key+': positive number required')
+        if driver=='scroll' and not text(m.get('resizeRule')): fail('motion.contract.resizeRule: required')
+        phases=m.get('phases')
+        if not isinstance(phases,list) or not phases:
+            fail('motion.contract.phases: numeric scene timeline required')
+        else:
+            previous_end=0.0
+            valid_timeline=True
+            for i,phase in enumerate(phases):
+                key='motion.contract.phases['+str(i)+']'
+                if not isinstance(phase,dict):
+                    fail(key+': object with start/end/kind/state/purpose required'); valid_timeline=False; continue
+                start,end=phase.get('start'),phase.get('end')
+                if not num(start) or not num(end) or not 0<=start<end<=1:
+                    fail(key+': require 0 <= start < end <= 1'); valid_timeline=False
+                else:
+                    if not math.isclose(start,previous_end,abs_tol=1e-8): fail(key+': timeline gap or overlap')
+                    previous_end=end
+                if phase.get('kind') not in ('enter','hold','transition','exit'): fail(key+': invalid phase kind')
+                for field in ('state','purpose'):
+                    if not text(phase.get(field)): fail(key+': '+field+' required')
+            if valid_timeline and not math.isclose(previous_end,1.0,abs_tol=1e-8): fail('motion.contract.phases: timeline must end at 1')
     elif not text(motion.get('preserve')): fail('motion.preserve: required')
     a=c.get('acceptance')
     if not isinstance(a,list) or not a or not all(text(x) for x in a): fail('acceptance: criteria required')

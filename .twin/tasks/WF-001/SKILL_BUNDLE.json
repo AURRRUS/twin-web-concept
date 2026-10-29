@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-10-29",
+  "contractVersion": "factory-v1",
+  "scope": "two universal skills; preserve existing project overrides",
+  "skills": [
+    {
+      "name": "web-production",
+      "source": "verified installed skill export",
+      "version": "2026-10-29/factory-v1",
+      "contentFingerprint": "74e52c6465258763fa622d6828a653651bed89c31c39214a7cf26861f74e9220",
+      "files": [
+        {
+          "path": ".agents/skills/web-production/SKILL.md",
+          "sha256": "4addc6b0ed65fd117cc373042bd3a74bbe76cb8b71fc3543c127b68a04bcc2c0"
+        },
+        {
+          "path": ".agents/skills/web-production/agents/openai.yaml",
+          "sha256": "73db3e8a30a59fbde29414f5f214af321991c5456ae791a176984ff28dd44c87"
+        },
+        {
+          "path": ".agents/skills/web-production/assets/icon.svg",
+          "sha256": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b"
+        },
+        {
+          "path": ".agents/skills/web-production/references/codex-handoff.md",
+          "sha256": "d3c64dd79aacead1f6d74fb6e95452e509633bbfbd843f2d593c4a3ecdac49a6"
+        },
+        {
+          "path": ".agents/skills/web-production/references/factory-contract.md",
+          "sha256": "f6c7a550a3e8e55ad1a6981211c7dda154d9cd0a5e780a80653484cc3d4d41fd"
+        },
+        {
+          "path": ".agents/skills/web-production/references/image-routing.md",
+          "sha256": "786f13245771b955840667026da24e9bea8cd1f41e73a6bef3d5a7a7ccd41b6a"
+        },
+        {
+          "path": ".agents/skills/web-production/references/run-template.json",
+          "sha256": "05fa7d1c76559f89d57ec670aa1c0ed88c9bea6761bb970b886248a158245f86"
+        },
+        {
+          "path": ".agents/skills/web-production/references/workflow.md",
+          "sha256": "f48acb263c670073dd422863c5c4067f2d7b832555df3197a3bac78c602f7025"
+        },
+        {
+          "path": ".agents/skills/web-production/scripts/production_next.py",
+          "sha256": "722a26d4a3926385795bcef853463576d25300c0bfbd51f5d047b00a5fea12be"
+        },
+        {
+          "path": ".agents/skills/web-production/scripts/test_production_next.py",
+          "sha256": "483f86d0bc35f2a08844e0c2cce2d8afbb0f8882002d3a77e9e0fd363ea40cff"
+        }
+      ]
+    },
+    {
+      "name": "frontend-engineer",
+      "source": "verified installed skill export",
+      "version": "2026-10-29/factory-v1",
+      "contentFingerprint": "87415c9d97ba44872feea1d7280d6862adbceac29e457b81ee4ed775e1753d43",
+      "files": [
+        {
+          "path": ".agents/skills/frontend-engineer/SKILL.md",
+          "sha256": "1ed690bb53b8e4c303b07f0cf20895b0560ed630fa77660a24fffcd69126635d"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/agents/openai.yaml",
+          "sha256": "e0e95f351f8ed9123c93b82f4b90f42b337404e412686f7de29d0d0eb67f0beb"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/assets/icon.svg",
+          "sha256": "8936b24f674a1250d999e2c2b5901374fb4240426f32bd1ae340c352a90d617d"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/asset-production.md",
+          "sha256": "25766da1bc15857a0e239035d7e0c12a26612525450f48d12e4969847d6e34cd"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/code-patterns.md",
+          "sha256": "3a0d3fd3bd1312a7e7509a269987b3151891a2a0320d94fbb383b4f905aa0ed6"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/hallmark-adapter.md",
+          "sha256": "8bd303c3a659c6045be453dda3193de3754f459a59645f656e40600fa6a9b230"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/hallmark-license.txt",
+          "sha256": "06088a8b94598626f27612dea42300154bf7be967c85d9d3eee4490cb056af7d"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/implementation.md",
+          "sha256": "b26a36f98611a0adefdf67f93ecaa5de03e761ab109e2c07e74487c757519a89"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/motion.md",
+          "sha256": "b190a003fd3a819bc88206c9d327dfed6f0eea8d755273bed446dcf457e2f064"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/parallax.md",
+          "sha256": "370b185d2d54f5a5b36faedea5c3adc0abffa4cd01c231a83e0bdd51a1d3b99b"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/production-contract.md",
+          "sha256": "f2f02f6759534601a88e0ac49910fb311357b8293e4dc4b9116f310c225d85b6"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/prompt-mask-effects.md",
+          "sha256": "1459dcdfa4985a1dc2f2fb9230c134f72484835d1069d9ffb4818b8b09cf8013"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/reference-to-code.md",
+          "sha256": "1de79e40026255ba6860d626aa85a65205c28c3ce04a0c40f9f26b596be55666"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/routing.md",
+          "sha256": "24ad283e8bb8ff10fc4671b780ca5cfe353fa25cf606ddd34737f202dbfccec1"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/sources.md",
+          "sha256": "076d2deadca422680efe9a243a78c883bc85fe2f30261e68a5d240efbe76eeeb"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/verification.md",
+          "sha256": "8e99796856f2844b509ec5193e715083f56e3604e187a20ab3e562800294c9ae"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/visual-review.md",
+          "sha256": "94b83a95826cfe9c4f850166125217949d1a4fe0509966a82eceb7f88a478220"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/references/visual-task.md",
+          "sha256": "f2ed93395e046097df793798042b832945659fd02a883e6322d4abc1b1fcda06"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/check_resources.py",
+          "sha256": "d8cabc235f089fcb1de6131fb84bcd08685c77aa7a760b8f66477cdc733e1beb"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/check_visual_contract.py",
+          "sha256": "1929b44ea3e0f50230195c291c0ae9449f63ce90c826842c20df8592658dcea0"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/parallax-geometry.mjs",
+          "sha256": "bcaf773bde331b30eb267e410a25bb4ece41ca4c5268a17647e0a8605f8dac33"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/parallax-geometry.test.mjs",
+          "sha256": "1fe450ec343828c46c6ef6ac7e045124efdd079ae86cf12f4c8ede90ab4e6a4d"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/scene-progress.mjs",
+          "sha256": "c405411af1b83ac43025d3229e56a88588786fd2185d3072716ff0df61badc85"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/scene-progress.test.mjs",
+          "sha256": "38499463246a9f7c3dfc1dc6dacdc4b37eb21a4c00edfd2ffea5f193f513dc0c"
+        },
+        {
+          "path": ".agents/skills/frontend-engineer/scripts/test_visual_contract.py",
+          "sha256": "623b33eac94e886ea5f61949a6746835d5649eb7faa663323275f6995ae50949"
+        }
+      ]
+    }
+  ]
+}
