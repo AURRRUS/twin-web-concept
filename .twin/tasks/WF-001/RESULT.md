@@ -33,7 +33,7 @@ git diff --check
 
 Отдельная новая сессия `/root/workflow_resume_check` восстановила правильную задачу/ветку/candidate/дефект/публикацию из файлов. Её промежуточные замечания о READY и отсутствующих итогах закрыты этим RESULT/HANDOFF; первоначальный snapshot сохранён. Реальные роли и ограничения среды — TEAM.md.
 
-SOURCE_CHECK.json:76локальных runtime text files совпадают с Git blob SHA исходной базы. `src/`, `public/`, package/lock/config не менялись; бинарные assets сохраняются из исходного Git tree. Внешняя запись будет включать только изменённые metadata/scripts/tests/docs.
+SOURCE_CHECK.json:76локальных runtime text files совпадают с Git blob SHA исходной базы. `src/`, `public/`, package/lock/config не менялись; бинарные assets сохраняются из исходного Git tree. Загружены только изменённые metadata/scripts/tests/docs; Git blob SHA всех 52 файлов сверены с GitHub.
 
 ## Приёмка объёма
 
@@ -52,7 +52,7 @@ SOURCE_CHECK.json:76локальных runtime text files совпадают с 
 
 Полный build, browser matrix и live deployment этой сессией **NOT RUN**: runtime не изменён, binary assets не материализованы. CI/browser после push имеет собственный статус и не подразумевается этим локальным PASS. Текущая визуальная приёмка сайта остаётся pending/fix, финальное решение владельца не подделано.
 
-main и published site не обновляются этим пакетом; продолжение — в указанной рабочей ветке. Draft PR ранее был отклонён automatic approval review, повторная попытка обходным каналом не выполнялась. Сохранение Git-ветки и создание PR — отдельные действия.
+main и published site не обновляются этим пакетом; продолжение — в указанной рабочей ветке. После явного разрешения владельца пакет сохранён в GitHub: commit `06ea6714daefd14d352cd32b42f0fd3afa3d1c1c`. Создан draft PR https://github.com/AURRRUS/twin-web-concept/pull/18; слияние не выполнялось. Проверка Workflow foundation consistency на push прошла: https://github.com/AURRRUS/twin-web-concept/actions/runs/41320749016. Browser CI на момент этой записи ещё выполняется и не включён в локальный PASS.
 
 Следующий Twin-пакет: точная маска стыка hero/Journey, проверка mobile/CTA и независимая приёмка. Затем отдельный PIN mobile/performance пилот на его исходниках. Это не подтверждение готовности полной фабрики или PIN-кода. Конкретное продолжение — HANDOFF.md; владельцу не нужно разрешать технические противоречия или задавать CSS-параметры.
 
