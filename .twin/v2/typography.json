@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "scope": "VIS-005 hero and Journey; other V2 sections may have explicit local roles",
+  "source": ".twin/tasks/VIS-004/ENGINEERING.md",
+  "status": "engineering-contract-not-owner-approved",
+  "runtimeSource": "src/styles/v2/hero-journey.css",
+  "fontSource": "src/styles/v2/reference-page.css",
+  "runtimeCommit": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+  "units": {
+    "size": "CSS px",
+    "lineHeight": "CSS px",
+    "tracking": "CSS px"
+  },
+  "breakpoints": {
+    "mobileMax": 767,
+    "tabletMax": 1099,
+    "desktopMin": 1100
+  },
+  "roles": {
+    "hero": {
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "family": "TV2Expanded",
+      "weight": 700,
+      "tracking": 0,
+      "desktop": {
+        "size": 58,
+        "lineHeight": 68
+      },
+      "tablet": {
+        "size": 40,
+        "lineHeight": 68
+      },
+      "mobile": {
+        "size": 30,
+        "lineHeight": 38
+      },
+      "selectors": [
+        ".r4-hero-copy h1"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors",
+      "tabletSource": {
+        "path": "src/styles/v2/hero-journey.css",
+        "status": "observed-css-not-owner-approved",
+        "note": "max-width:1099 overrides font-size to40px and inherits68px line-height; recorded without changing runtime"
+      }
+    },
+    "section": {
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "family": "TV2Expanded",
+      "weight": 700,
+      "tracking": 0,
+      "desktop": {
+        "size": 46,
+        "lineHeight": 56
+      },
+      "tablet": {
+        "size": 46,
+        "lineHeight": 56
+      },
+      "mobile": {
+        "size": 28,
+        "lineHeight": 36
+      },
+      "selectors": [
+        ".r4-journey h2"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+    },
+    "item": {
+      "file": "src/assets/fonts/rf-dewi-bold.woff2",
+      "family": "TV2Dewi",
+      "weight": 700,
+      "tracking": 0,
+      "desktop": {
+        "size": 24,
+        "lineHeight": 32
+      },
+      "tablet": {
+        "size": 24,
+        "lineHeight": 32
+      },
+      "mobile": {
+        "size": 22,
+        "lineHeight": 30
+      },
+      "selectors": [
+        ".r4-journey-copy h3"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+    },
+    "body": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 30
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 30
+      },
+      "mobile": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "selectors": [
+        ".r4-hero-copy p:not(.eyebrow)",
+        ".r4-journey-copy p"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+    },
+    "control": {
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "TV2Dewi",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "tablet": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "mobile": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "selectors": [
+        ".r4-hero .r4-button",
+        ".r4-journey-options button"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+    },
+    "caption": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "tablet": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "mobile": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "selectors": [],
+      "source": "ENGINEERING.md typography table; no current top-scene selector assigned"
+    }
+  },
+  "notes": [
+    "Caption is inherited engineering role, not a claim that eyebrow uses it: eyebrow has an existing explicit12/20, tracking3 desktop and10/20, tracking2 mobile treatment.",
+    "The previous .twin/v2/tokens.json role sizes describe an older default system; current hero/Journey checks and derived contract roles read this file. No CSS or font changes were made by WF-001."
+  ]
+}

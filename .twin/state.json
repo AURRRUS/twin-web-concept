@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "repository": "AURRRUS/twin-web-concept",
+  "workingBranch": "work/workflow-foundation-20261029",
+  "workflowTask": {
+    "id": "WF-001",
+    "path": ".twin/tasks/WF-001",
+    "mode": "execute",
+    "scope": "Workflow, project memory, instructions and checks only; no site redesign, graphics generation or deployment",
+    "publicationAllowed": false
+  },
+  "siteCandidate": {
+    "profile": "v2",
+    "taskId": "VIS-005",
+    "path": ".twin/tasks/VIS-005",
+    "sourceBranch": "work/hero-journey-original-render",
+    "sourceCommit": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+    "route": "/v2/",
+    "visualReviewPath": ".twin/tasks/VIS-005/REVIEW.md",
+    "openDefects": [
+      {
+        "id": "VIS005-MASK-001",
+        "status": "open",
+        "evidence": ".twin/tasks/VIS-005/REVIEW.md",
+        "description": "Нет точного фотографического alpha/contact контура архитектуры и растительности; mobile overlap упрощён. CSS feather не закрывает дефект."
+      }
+    ]
+  },
+  "profiles": {
+    "v1": {
+      "canonicalBranch": "work/twin-site-system",
+      "sourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+      "publishedSourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+      "liveUrl": "https://aurrrus.github.io/twin-web-concept/",
+      "verification": "historical-registry; current live runtime not verified in WF-001",
+      "tokensPath": ".twin/tokens.json",
+      "assetsPath": ".twin/assets.json"
+    },
+    "v2": {
+      "route": "/v2/",
+      "productionBasePath": "/twin-web-concept",
+      "published": {
+        "sourceCommit": "7436ce9334f90e4bf5886149681d11b4a6e68ac4",
+        "pagesCommit": "96802e9739725fb9997ec73e5fbf90794194f7c4",
+        "branch": "twin-preview",
+        "url": "https://aurrrus.github.io/twin-web-concept/v2/",
+        "verification": "registry-only; remote branch HEAD checked, live route not inspected in WF-001"
+      },
+      "typographySource": ".twin/v2/typography.json",
+      "tokensPath": ".twin/v2/tokens.json",
+      "assetsPath": ".twin/v2/assets.json"
+    }
+  },
+  "publicationAuthority": {
+    "source": ".twin/tasks/VIS-005/task.json#/publication",
+    "appliesTo": "siteCandidate",
+    "note": "Working preview authorization is separate from owner final acceptance. WF-001 never deploys."
+  }
+}

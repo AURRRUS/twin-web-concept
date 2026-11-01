@@ -1,0 +1,33 @@
+{
+  "id": "WF-001",
+  "mode": "execute",
+  "status": "implemented",
+  "outcome": "Consistent project memory, skill delivery and acceptance checks; runtime unchanged",
+  "baseline": "981b95758c58b876e7a7c1e0092def5190e38579",
+  "scope": [
+    "workflow instructions, registries, validators, CI and test map"
+  ],
+  "sources": [
+    ".twin/tasks/WF-001/TASK.md",
+    ".twin/tasks/WF-001/AUDIT.md",
+    ".twin/state.json"
+  ],
+  "roles": [
+    "hero"
+  ],
+  "responsive": [
+    "not applicable: no runtime change"
+  ],
+  "acceptance": [
+    "Consistent pointers and contracts",
+    "Independent code review",
+    "Negative regression fixtures",
+    "No runtime or deployment changes"
+  ],
+  "motionChanged": false,
+  "publication": {
+    "allowed": false,
+    "reason": "Infrastructure task only; no site deployment"
+  },
+  "openQuestions": []
+}

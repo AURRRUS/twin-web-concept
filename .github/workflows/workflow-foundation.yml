@@ -1,0 +1,37 @@
+name: Workflow foundation consistency
+on:
+  push:
+    branches: [work/workflow-foundation-20261029, work/hero-journey-original-render]
+    paths: &workflow_paths
+      - 'AGENTS.md'
+      - '*START.md'
+      - '.agents/**'
+      - '.twin/**'
+      - 'docs/v2/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/workflow-foundation.yml'
+  pull_request:
+    branches: [work/hero-journey-original-render, work/workflow-foundation-20261029]
+    paths: *workflow_paths
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Validate workflow memory and source contracts
+        run: node scripts/workflow-check.mjs
+      - name: Test current validators and historical guards
+        run: node --test tests/workflow*.test.mjs tests/visual-gate-v2.test.mjs scripts/twin-system.test.mjs
+      - name: Test Web Production state routing
+        run: python -m unittest discover -s .agents/skills/web-production/scripts -p 'test_*.py'
+      - name: Test Frontend Engineer numeric contract validation
+        run: python -m unittest discover -s .agents/skills/frontend-engineer/scripts -p 'test_*.py'

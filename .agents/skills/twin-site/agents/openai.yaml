@@ -1,4 +1,4 @@
 interface:
   display_name: "Сайт Twin"
-  short_description: "Правки Twin по единой системе заданий и приёмки"
-  default_prompt: "Сайт Twin: подготовь или выполни задачу по регламенту проекта"
+  short_description: "Источники, бренд и условия выпуска Twin"
+  default_prompt: "Примени проектный адаптер Twin; Web Production ведёт процесс, Frontend Engineer реализует задачу"

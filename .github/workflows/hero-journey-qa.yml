@@ -1,25 +1,54 @@
 name: Hero Journey source QA
 on:
   push:
-    branches: [work/hero-journey-original-render]
-    paths: ['src/**','scripts/verify-hero-journey.mjs','.github/workflows/hero-journey-qa.yml']
+    branches: [work/hero-journey-original-render, work/workflow-foundation-20261029]
+    paths: &runtime_paths
+      - 'src/**'
+      - 'public/**'
+      - 'assets/**'
+      - 'package*.json'
+      - 'astro.config.mjs'
+      - 'tsconfig*.json'
+      - 'playwright.config.*'
+      - '.twin/v2/typography.json'
+      - '.twin/v2/visual-requirements.json'
+      - '.twin/tasks/VIS-005/visual-contract.json'
+      - '.twin/tasks/VIS-002/content.json'
+      - 'scripts/build-v2.mjs'
+      - 'scripts/verify-hero-journey.mjs'
+      - '.github/workflows/hero-journey-qa.yml'
+  pull_request:
+    branches: [work/hero-journey-original-render, work/workflow-foundation-20261029]
+    paths: *runtime_paths
 permissions:
   contents: read
 jobs:
   qa:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: '24'}
       - run: npm ci
+      - name: Install browser used by this check
+        run: npx playwright install --with-deps chromium
       - run: npm run typecheck && npm run build:v2 && node scripts/visual-gate-v2.mjs --fingerprint
-      - run: |
+      - name: Check current ReferenceJourney in browser
+        run: |
           mkdir -p /tmp/hj
           ln -s "$PWD/dist" /tmp/hj/twin-web-concept
-          python3 -m http.server 4361 --directory /tmp/hj >/tmp/hj-server.log 2>&1 &
-          sleep 2
-          V2_QA_COMPACT=1 node scripts/verify-hero-journey.mjs
+          python3 -m http.server 4361 --bind 127.0.0.1 --directory /tmp/hj >/tmp/hj-server.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:4361/twin-web-concept/v2/ >/dev/null; then break; fi
+            sleep 1
+          done
+          curl -sf http://127.0.0.1:4361/twin-web-concept/v2/ >/dev/null
+          node scripts/verify-hero-journey.mjs
       - uses: actions/upload-artifact@v4
         if: always()
-        with: {name: hero-journey-browser, path: artifacts/hero-journey}
+        with:
+          name: hero-journey-browser
+          path: |
+            artifacts/hero-journey
+            /tmp/hj-server.log

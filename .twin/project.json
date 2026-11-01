@@ -1,12 +1,5 @@
 {
-  "schemaVersion": 1,
-  "repository": "AURRRUS/twin-web-concept",
-  "canonicalBranch": "work/twin-site-system",
-  "sourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
-  "publishedSourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
-  "pagesBranch": "twin-preview",
-  "defaultMode": "prepare",
-  "pendingTask": null,
-  "liveUrl": "https://aurrrus.github.io/twin-web-concept/",
-  "lastCompletedTask": "JRN-001"
+  "schemaVersion": 2,
+  "statePath": ".twin/state.json",
+  "profile": "v1"
 }

@@ -1,4 +1,7 @@
-# VIS-005 — результат без публикации
+# VIS-005 — исторический результат реализации
+
+> Срез проверки runtime f0c8fca / Actions40758053944. WF-001 сохранил этот отчёт как историю, не объявил его проверкой нового контракта. Текущий статус и незакрытый дефект — run.json и MIGRATION.md; owner acceptance отсутствует.
+
 Ветка work/hero-journey-original-render от актуальной базы3b5b38188e23b64ef51ceb0bb24791be0a1d8dad. Runtime commit f0c8fca05638a436d767914d18b77876aef15376; последующий commit сохраняет только документы и browser evidence.
 
 Сохранён оригинальный морской рендер, восстановлен полный desktop crop, единая координатная сцена hero/Journey. Проверены actual2574×1459 против2048×1160 в описании; WebP имеет тот же размер и камеру, но пиксели отличаются из-за сжатия. Полный PNG в assets не менялся. Старый facade-alpha другой камеры удалён из opening. Верхняя типографика/поля и двухстрочный H2 согласованы с крупным UI. Четыре режима, native pin с fit reserve48px, ручной выбор, keyboard и reduced-motion сохранены. Исправлена загрузочная самопрокрутка из ResizeObserver.
@@ -11,4 +14,4 @@ Runtime screenshots: https://github.com/AURRRUS/twin-web-concept/actions/runs/40
 
 Нижние компоненты начиная с ReferenceChannels до конца ReferencePage.tsx побайтово идентичны базе. Их CSS-правила сохранены; shared logo default230/170 и86/68 восстановлены, новые размеры применены только к header. Общие V1-компоненты не изменены. Изменение reference-page.css — удаление канонических opening/Journey правил, перенесённых в scoped hero-journey.css, не новый слой противоречащих overrides. quality gate не менялся.
 
-Pages/Sites не публиковались, онлайн-preview нет. Для локального просмотра: npm ci; npm run dev; открыть /v2/. Действующий опубликованный сайт не показывает эту ветку. Авторизации на выпуск нет: publication.allowed=false.
+На момент описанной итерации Pages/Sites не публиковались и preview этой реализации отсутствовал. Это историческое наблюдение, не актуальный запрет выпуска. Последующее разрешение на рабочий preview хранится только в task.json#/publication; текущие опубликованная версия и candidate раздельно указаны в .twin/state.json. Для локального просмотра: npm ci; npm run dev; открыть /v2/.
