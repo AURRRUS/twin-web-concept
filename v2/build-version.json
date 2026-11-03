@@ -1,8 +1,8 @@
 {
   "version": "v2",
-  "taskId": "VIS-003",
-  "sourceCommit": "7436ce9334f90e4bf5886149681d11b4a6e68ac4",
+  "taskId": "VIS-007",
+  "sourceCommit": "f8c58f2a4784505a9c0942166dfdb030cfb34e50",
   "basedOnV1SourceCommit": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
-  "previousPagesCommit": "63dd4fd17c54c7e7208bbdc3ba36d1d8e2fece7b",
-  "builtAt": "2026-10-27T12:49:33.948Z"
+  "previousPagesCommit": "96802e9739725fb9997ec73e5fbf90794194f7c4",
+  "builtAt": "2026-11-03T22:03:50.771Z"
 }
