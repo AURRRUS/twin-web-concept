@@ -14,7 +14,7 @@
     "taskId": "VIS-007",
     "path": ".twin/tasks/VIS-007",
     "sourceBranch": "work/workflow-foundation-20261029",
-    "sourceCommit": "044117c0e59426efaa2591944dd7e0aa40edc366",
+    "sourceCommit": "cd91791c02ad87947540ac28210ba3174f3f6cb3",
     "route": "/v2/",
     "visualReviewPath": ".twin/tasks/VIS-007/REVIEW.md",
     "openDefects": [],
