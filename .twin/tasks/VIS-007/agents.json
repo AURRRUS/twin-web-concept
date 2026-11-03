@@ -1,0 +1,13 @@
+{
+  "coordinator": "/root",
+  "implementer": "/root/restore_and_save_runtime",
+  "reviewer": "/root/final_visual_check",
+  "status": "implementation and independent review completed; owner approval pending",
+  "previousInterruptedReviewers": [
+    "/root/stage1_independent_review",
+    "/root/stage1_acceptance_finish"
+  ],
+  "previewPipelineImplementer": "/root/preview_pipeline",
+  "previewIndependentReviewer": "/root/preview_independent_check",
+  "previewReviewPath": "PREVIEW_REVIEW.md"
+}

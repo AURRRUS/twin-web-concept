@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Desktop-концепт Twin by TALENT по комплекту v1.3",
   "scripts": {
-    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --allowed-hosts terminal.local",
+    "dev": "NODE_ENV=development ASTRO_TELEMETRY_DISABLED=1 astro dev --allowed-hosts terminal.local",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit",

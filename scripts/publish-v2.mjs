@@ -8,6 +8,7 @@ import {checkWorkflow} from './workflow-check.mjs';
 const root=resolve(import.meta.dirname,'..'),out=join(root,'dist','v2');
 const {state,task,run}=candidate(root);
 const releaseKind=process.argv.find(x=>x.startsWith('--kind='))?.split('=')[1] || 'preview';
+const inspectOnly=process.argv.includes('--inspect');
 const authorizationErrors=[...checkWorkflow(root),...publicationErrors(state,task,run,releaseKind,root)];
 if(authorizationErrors.length)throw Error(authorizationErrors.join('\n'));
 const next=JSON.parse(execFileSync(process.env.PYTHON || 'python3',['-c','import json,runpy,sys; f=runpy.run_path(sys.argv[1])["next_action"]; print(json.dumps(f(json.load(sys.stdin),sys.argv[2])))',join(root,'.agents/skills/web-production/scripts/production_next.py'),root],{cwd:root,encoding:'utf8',input:JSON.stringify(releaseRun(run,task,releaseKind))}));
@@ -17,14 +18,18 @@ if(git(['status','--porcelain']))throw Error('Commit source before publishing');
 if(!existsSync(join(out,'index.html')))throw Error('Run npm run build:v2 first');
 execFileSync(process.execPath,[join(root,'scripts','visual-gate-v2.mjs'),'--release-kind='+releaseKind],{cwd:root,stdio:'inherit'});
 const source=git(['rev-parse','HEAD']),ref='refs/heads/twin-preview';
+if(inspectOnly){
+ console.log(JSON.stringify({mode:'inspect',networkUsed:false,taskId:task.id,kind:releaseKind,sourceCommit:source,output:out,pagesBranch:'twin-preview',replaceOnly:'v2/',ownerAcceptance:run.ownerAcceptance?.status || 'pending'},null,2));
+ process.exit(0);
+}
 const remoteHead=()=>git(['ls-remote','origin',ref]).split(/\s+/)[0];
 const previous=remoteHead();if(!/^[a-f0-9]{40}$/.test(previous))throw Error('Cannot verify Pages HEAD');
-const backup=`backup/pages-before-vis002-${new Date().toISOString().replace(/[^0-9]/g,'').slice(0,14)}-${randomBytes(3).toString('hex')}`;
+const backup=`backup/pages-before-${task.id.toLowerCase()}-${new Date().toISOString().replace(/[^0-9]/g,'').slice(0,14)}-${randomBytes(3).toString('hex')}`;
 if(git(['ls-remote','origin',`refs/heads/${backup}`]))throw Error('Backup already exists');
 const dir=mkdtempSync(join(tmpdir(),'twin-v2-release-'));
 function manifest(d,prefix=''){let result={};for(const e of readdirSync(d,{withFileTypes:true})){if(!prefix&&(e.name==='.git'||e.name==='v2'))continue;const name=prefix?`${prefix}/${e.name}`:e.name,path=join(d,e.name);if(e.isSymbolicLink())throw Error(`Unexpected symlink: ${name}`);if(e.isDirectory())Object.assign(result,manifest(path,name));else if(e.isFile())result[name]=createHash('sha256').update(readFileSync(path)).digest('hex');else throw Error(`Unexpected file: ${name}`)}return result}
 try{
- git(['clone','--quiet','--single-branch','--branch','twin-preview','https://github.com/AURRRUS/twin-web-concept.git',dir]);
+ git(['clone','--quiet','--depth','1','--single-branch','--branch','twin-preview',git(['remote','get-url','origin']),dir]);
  if(git(['rev-parse','HEAD'],dir)!==previous)throw Error('Pages HEAD changed before clone; rebuild against latest');
  git(['push','origin',`${previous}:refs/heads/${backup}`],dir);
  if(git(['ls-remote','origin',`refs/heads/${backup}`],dir).split(/\s+/)[0]!==previous)throw Error('Backup mismatch');

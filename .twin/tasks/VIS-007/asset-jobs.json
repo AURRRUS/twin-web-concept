@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "id": "coastal-foreground",
+      "required": true,
+      "status": "accepted",
+      "maxCalls": 2,
+      "attemptsUsed": 2,
+      "source": "public/media/top-v2/hero.webp",
+      "protected": "All original hotel/sea/shoreline pixels retained independently",
+      "outputs": [
+        "public/media/top-v2/opening-terrace.png"
+      ],
+      "native": [
+        1528,
+        1029
+      ],
+      "sha256": "d33d20149a7bce83f4cf0cb15c70756927d5026dbacc0dcc5bbf352b80430f82",
+      "method": "Two built-in imagegen attempts in earlier turn; exact saved second output reused, no new generation",
+      "ownerAcceptance": "pending",
+      "acceptedBy": "/root/restore_and_save_runtime + /root/final_visual_check",
+      "observed": "In actual scene terrace has stone texture, parapet thickness and perspective; original hero unchanged",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {candidate,publicationErrors} from './workflow-state.mjs';
+import {candidate,publicationErrors,visualRequirementsPath} from './workflow-state.mjs';
 const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
 const read=(root,p)=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 export function inputsFingerprint(root,req){
@@ -56,11 +56,11 @@ export function validateReview(root,req,review,options={}){
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{
-  const root=path.resolve(import.meta.dirname,'..'),req=read(root,'.twin/v2/visual-requirements.json');
+  const root=path.resolve(import.meta.dirname,'..');
+  const {state,task,run}=candidate(root), req=read(root,visualRequirementsPath(state));
   if(process.argv.includes('--fingerprint'))console.log(inputsFingerprint(root,req));
   else{
    const kind=process.argv.find(x=>x.startsWith('--release-kind='))?.split('=')[1];
-   const {state,task,run}=candidate(root);
    const review=read(root,req.reviewPath || '.twin/v2/visual-review.json');
    const options=kind ? {kind,allowKnownDefects:task.publication.allowKnownDefects,acceptedDefects:task.publication.acceptedDefects} : {};
    const errors=[...(kind?publicationErrors(state,task,run,kind,root):[]),...validateReview(root,req,review,options)];

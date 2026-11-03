@@ -1,0 +1,9 @@
+{
+  "src/styles/v2/reference-page.css": "4cbfed8a909b3b05b87c1ecf37554fe86ceeed45264c023939c8d1d49e06aa41",
+  "src/components/ProductDemo.tsx": "76129fedb248515251d786c03f32c1929dfb7a5d1fe08e5361db29cc7f83c32a",
+  "src/components/Composition.tsx": "9b6a05712c9b8c50a25ff48f74cde42c3e4f8b36bf143311304c774365bd68b7",
+  "src/components/ContactForm.tsx": "7b420dd86249d8a0aae575991a82dd1b5ac87d1c710ba7aa0873fc3d68d2df7b",
+  "src/lib/salesStoryContent.json": "1dc95bb2bf8fcb569cb23931916f7494f1ed6fe79d15df2f78d4947262817bb1",
+  "public/media/top-v2/hero.webp": "c5e3b94898d532526f65eb8037b7ee62dbd39f70f0890927a0495f6414e15f10",
+  "src/pages/index.astro": "47a9b311cacf7155906bc128e04775f18625d8d7cdf860d786a15c7d17af1b61"
+}

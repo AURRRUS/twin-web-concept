@@ -6,6 +6,12 @@ export const readJSON = (root, file) => JSON.parse(fs.readFileSync(path.join(roo
 export const sha256 = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 export const fileHash = (root, file) => sha256(fs.readFileSync(path.join(root, file)));
 export const readState = root => readJSON(root, '.twin/state.json');
+export function visualRequirementsPath(state) {
+  const file=state.siteCandidate?.visualRequirementsPath || '.twin/v2/visual-requirements.json';
+  if(typeof file!=='string' || path.isAbsolute(file) || file.split(/[\\/]/).includes('..') || !file.startsWith('.twin/'))
+    throw Error('Invalid candidate visual requirements path');
+  return file;
+}
 export function candidate(root) {
   const state = readState(root);
   const task = readJSON(root, `${state.siteCandidate.path}/task.json`);
@@ -27,11 +33,19 @@ export function publicationErrors(state, task, run, kind, root) {
   return errors;
 }
 
-// A release-only view of explicitly waived asset obligations. Never persist this
-// as production acceptance: the real jobs and visual verdict remain blocked/fix.
+// A release-only view of preview obligations. Never persist this view as owner
+// acceptance: final-only checkpoints and any original blocked jobs stay intact.
 export function releaseRun(run, task, kind) {
   const view=structuredClone(run), p=task.publication;
-  if(kind!=='preview'||p?.allowed!==true||p.kind!=='preview'||p.allowKnownDefects!==true) return view;
+  if(kind!=='preview'||p?.allowed!==true||p.kind!=='preview') return view;
+  for(const checkpoint of view.ownerCheckpoints || []) {
+    if(checkpoint.beforeStage==='release' && checkpoint.status==='pending' &&
+       Array.isArray(checkpoint.releaseKinds) && checkpoint.releaseKinds.length===1 && checkpoint.releaseKinds[0]==='final') {
+      checkpoint.status='not-applicable';
+      checkpoint.reason='Owner acceptance is still pending for final release; this is an explicitly authorized working preview';
+    }
+  }
+  if(p.allowKnownDefects!==true) return view;
   const mappings=Array.isArray(p.assetExceptions)?p.assetExceptions:[];
   const accepted=Array.isArray(p.acceptedDefects)?p.acceptedDefects:[];
   const unresolved=Array.isArray(run.review?.unresolved)?run.review.unresolved:[];

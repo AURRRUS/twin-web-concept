@@ -3,28 +3,22 @@
   "repository": "AURRRUS/twin-web-concept",
   "workingBranch": "work/workflow-foundation-20261029",
   "workflowTask": {
-    "id": "WF-001",
-    "path": ".twin/tasks/WF-001",
+    "id": "VIS-007",
+    "path": ".twin/tasks/VIS-007",
     "mode": "execute",
-    "scope": "Workflow, project memory, instructions and checks only; no site redesign, graphics generation or deployment",
-    "publicationAllowed": false
+    "scope": "header/hero/transition/four-state ReferenceJourney only; entry into unchanged demo",
+    "publicationAllowed": true
   },
   "siteCandidate": {
     "profile": "v2",
-    "taskId": "VIS-005",
-    "path": ".twin/tasks/VIS-005",
-    "sourceBranch": "work/hero-journey-original-render",
-    "sourceCommit": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+    "taskId": "VIS-007",
+    "path": ".twin/tasks/VIS-007",
+    "sourceBranch": "work/workflow-foundation-20261029",
+    "sourceCommit": "044117c0e59426efaa2591944dd7e0aa40edc366",
     "route": "/v2/",
-    "visualReviewPath": ".twin/tasks/VIS-005/REVIEW.md",
-    "openDefects": [
-      {
-        "id": "VIS005-MASK-001",
-        "status": "open",
-        "evidence": ".twin/tasks/VIS-005/REVIEW.md",
-        "description": "Нет точного фотографического alpha/contact контура архитектуры и растительности; mobile overlap упрощён. CSS feather не закрывает дефект."
-      }
-    ]
+    "visualReviewPath": ".twin/tasks/VIS-007/REVIEW.md",
+    "openDefects": [],
+    "visualRequirementsPath": ".twin/tasks/VIS-007/visual-requirements.json"
   },
   "profiles": {
     "v1": {
@@ -52,8 +46,8 @@
     }
   },
   "publicationAuthority": {
-    "source": ".twin/tasks/VIS-005/task.json#/publication",
+    "source": ".twin/tasks/VIS-007/task.json#/publication",
     "appliesTo": "siteCandidate",
-    "note": "Working preview authorization is separate from owner final acceptance. WF-001 never deploys."
+    "note": "Owner authorized source save and working preview in current follow-up; final design acceptance pending"
   }
 }

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "status": "pass",
+  "verdict": "ready-for-owner-review",
+  "scope": "VIS007 stage1 working candidate only; not final owner acceptance or whole-page approval",
+  "reviewer": "/root/preview_independent_check",
+  "implementer": "/root/restore_and_save_runtime",
+  "independent": true,
+  "inputFingerprint": "58be2fe7fd1feea84491ff306e21690feecb842ec8bdfba5c1b660f676923c2d",
+  "contractFingerprint": "b8ddff93dc1c1d4a0c84826e05efe072c438f96e12d4914450ed1e2948b38d1d",
+  "agents": [
+    {
+      "id": "/root/preview_independent_check",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-007/PREVIEW_REVIEW.md"
+      ]
+    },
+    {
+      "id": "/root/restore_and_save_runtime",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-007/agents.json"
+      ]
+    }
+  ],
+  "blockingIssues": [],
+  "checks": [
+    {
+      "id": "hero",
+      "status": "pass",
+      "referencePath": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "referenceSha256": "596c128da26ce0b61e8807b4d8dbcccc92d8cab4088d9f01217d4d2d113412bf",
+      "observed": "Selected coastal hotel master remains intact, RF Dewi hierarchy and CTA are visible on1440 and390. The reference mountain object is intentionally not substituted for the selected coastal hero.",
+      "remaining": [],
+      "evidence": [
+        {
+          "path": ".twin/tasks/VIS-007/evidence/hero.jpg",
+          "sha256": "04a8eae19b1012ee860585f6c4e6224ad15bd14c4ab941e594643b18f223104d",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "header and coastal hero, scrollY0"
+        }
+      ]
+    },
+    {
+      "id": "transition",
+      "status": "pass",
+      "referencePath": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "referenceSha256": "596c128da26ce0b61e8807b4d8dbcccc92d8cab4088d9f01217d4d2d113412bf",
+      "observed": "Actual photo links into a textured stone terrace with parapet and perspective, then into Journey. Terrace geometry differs from the mountain reference and still awaits owner artistic acceptance.",
+      "remaining": [],
+      "evidence": [
+        {
+          "path": ".twin/tasks/VIS-007/evidence/transition.jpg",
+          "sha256": "1bc53b8fab5cee35b24731de1f1079eec1827420a122dff00c8b2e08c60acef0",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "coastal photo/terrace/Journey join, scrollY594"
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "status": "pass",
+      "referencePath": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "referenceSha256": "596c128da26ce0b61e8807b4d8dbcccc92d8cab4088d9f01217d4d2d113412bf",
+      "observed": "All four controls on1440 and390 were clicked. Expanded state, explanatory copy and visible image changed together; desktop media is large and the active item bronze.",
+      "remaining": [],
+      "evidence": [
+        {
+          "path": ".twin/tasks/VIS-007/evidence/compare.jpg",
+          "sha256": "34dd0307fd1573fcfda042a5ee598f37ca23bccf76947715d35965f106749d91",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "compare expanded"
+        },
+        {
+          "path": ".twin/tasks/VIS-007/evidence/floor.jpg",
+          "sha256": "d14c99b2c39b95ec79e80bac64ba0270b472bf327970a2b7d518ac7b34eaf6ba",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "floor expanded"
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "status": "pass",
+      "referencePath": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "referenceSha256": "596c128da26ce0b61e8807b4d8dbcccc92d8cab4088d9f01217d4d2d113412bf",
+      "observed": "At390×844 mobile hero text and CTA fit; menu is available; all four accordion states respond without horizontal overflow. Raster micro-labels remain small, with full-image and demo links.",
+      "remaining": [],
+      "evidence": [
+        {
+          "path": ".twin/tasks/VIS-007/evidence/mobile.jpg",
+          "sha256": "44991842fcadc6ed4765a1d625614097cfd9c9bcd308de6e05e20ea3ac340a00",
+          "viewport": [
+            390,
+            844
+          ],
+          "state": "mobile hero, scrollY0"
+        },
+        {
+          "path": ".twin/tasks/VIS-007/evidence/mobile-journey.jpg",
+          "sha256": "093d64990423c6abb1d13339c89f28e94113bb59b1e897142a1de6f278887148",
+          "viewport": [
+            390,
+            844
+          ],
+          "state": "living accordion and entry into demo"
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "status": "pass",
+      "referencePath": ".twin/tasks/VIS-004/reference-upper.jpg",
+      "referenceSha256": "596c128da26ce0b61e8807b4d8dbcccc92d8cab4088d9f01217d4d2d113412bf",
+      "observed": "Actual native wheel scrolling entered the unchanged dark demo and reverse returned into Journey. Button-driven scroll also synchronized states. Three distinct frames show location/compare/floor; location1920 is retained evidence from independent final_visual_check; other two are current captures.",
+      "remaining": [],
+      "evidence": [
+        {
+          "path": ".twin/tasks/VIS-007/evidence/location-1920.jpg",
+          "sha256": "b2ba9c1271427b37de3502bff4b71b8655ee397279865ef519f35b87441b7337",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "state": "location; prior independent reviewer final_visual_check"
+        },
+        {
+          "path": ".twin/tasks/VIS-007/evidence/compare.jpg",
+          "sha256": "34dd0307fd1573fcfda042a5ee598f37ca23bccf76947715d35965f106749d91",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "compare; direct click with scroll synchronization"
+        },
+        {
+          "path": ".twin/tasks/VIS-007/evidence/floor.jpg",
+          "sha256": "d14c99b2c39b95ec79e80bac64ba0270b472bf327970a2b7d518ac7b34eaf6ba",
+          "viewport": [
+            1440,
+            900
+          ],
+          "state": "floor; direct click with scroll synchronization"
+        }
+      ]
+    }
+  ],
+  "minorNotes": [
+    "Raster micro-labels on mobile require full image/demo",
+    "Terrace geometry is an engineering composition; owner artistic acceptance pending"
+  ],
+  "notRun": [
+    "Physical touch/iOS",
+    "OS reduced-motion emulation",
+    "Screen reader",
+    "200%zoom",
+    "320px",
+    "Performance instrumentation"
+  ],
+  "evidenceProvenance": {
+    "location-1920.jpg": "Prior reviewer /root/final_visual_check; same runtime; source .twin/tasks/VIS-007/REVIEW.md",
+    "otherScreenshots": "Current reviewer /root/preview_independent_check; actual iframe viewport listed; outer browser screenshot1348×926; iframe1440×900 scaled tofit or390×844 unscaled"
+  },
+  "captureTransportNote": "Current location screenshot rendered successfully but shared-file synchronization failed; retained prior independent1920 location capture is explicitly used instead."
+}

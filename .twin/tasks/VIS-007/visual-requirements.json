@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "ids": [
+    "hero",
+    "transition",
+    "journey",
+    "mobile",
+    "motion"
+  ],
+  "references": [
+    ".twin/tasks/VIS-004/reference-upper.jpg"
+  ],
+  "inputPrefixes": [
+    "src/",
+    "public/media/"
+  ],
+  "inputPaths": [
+    ".twin/v2/tokens.json",
+    ".twin/v2/typography.json",
+    ".twin/tasks/VIS-002/content.json",
+    "astro.config.mjs",
+    "package.json",
+    "package-lock.json",
+    "scripts/build-v2.mjs",
+    "tsconfig.json"
+  ],
+  "reviewPath": ".twin/tasks/VIS-007/review.json",
+  "contractPath": ".twin/tasks/VIS-007/visual-contract.json",
+  "note": "Only stage1 opening and Journey are newly accepted for owner review; lower blocks preserved by baseline hashes, not re-certified. Same runtime, publication-only contract update."
+}
