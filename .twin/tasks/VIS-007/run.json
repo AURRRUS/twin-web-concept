@@ -131,8 +131,11 @@
       ]
     },
     "release": {
-      "status": "pending",
-      "reason": "Source save and working preview now authorized; verify live before marking done"
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/DEPLOYMENT.md"
+      ],
+      "reason": "Working preview deployed; online source verified; final owner acceptance pending"
     }
   },
   "review": {

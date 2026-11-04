@@ -34,11 +34,12 @@
       "route": "/v2/",
       "productionBasePath": "/twin-web-concept",
       "published": {
-        "sourceCommit": "7436ce9334f90e4bf5886149681d11b4a6e68ac4",
-        "pagesCommit": "96802e9739725fb9997ec73e5fbf90794194f7c4",
+        "sourceCommit": "f8c58f2a4784505a9c0942166dfdb030cfb34e50",
+        "pagesCommit": "e778d8819e4d49392f12604f9e15bca254fc0f35",
         "branch": "twin-preview",
         "url": "https://aurrrus.github.io/twin-web-concept/v2/",
-        "verification": "registry-only; remote branch HEAD checked, live route not inspected in WF-001"
+        "verification": "Live HTTP200 task/source marker and CI online/V1 checks verified2026-11-04; final owner approval pending",
+        "workflowRun": "https://github.com/AURRRUS/twin-web-concept/actions/runs/41726519103"
       },
       "typographySource": ".twin/v2/typography.json",
       "tokensPath": ".twin/v2/tokens.json",
