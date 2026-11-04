@@ -174,7 +174,11 @@
     "contractFingerprint": "b8ddff93dc1c1d4a0c84826e05efe072c438f96e12d4914450ed1e2948b38d1d"
   },
   "ownerAcceptance": {
-    "status": "pending"
+    "status": "changes-requested",
+    "evidence": [
+      ".twin/tasks/VIS-007/OWNER_FEEDBACK.md"
+    ],
+    "reason": "Owner rejected current stage1 composition/type/controls and scroll staging; feedback collection in progress"
   },
   "previousScopedRuntimeFingerprint": "5878a95e484d7e6eefa3cbd8b512f6c34af394ee625b2dbb10beafb578e3efde"
 }

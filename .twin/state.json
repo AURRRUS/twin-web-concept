@@ -18,7 +18,9 @@
     "route": "/v2/",
     "visualReviewPath": ".twin/tasks/VIS-007/REVIEW.md",
     "openDefects": [],
-    "visualRequirementsPath": ".twin/tasks/VIS-007/visual-requirements.json"
+    "visualRequirementsPath": ".twin/tasks/VIS-007/visual-requirements.json",
+    "ownerFeedbackPath": ".twin/tasks/VIS-007/OWNER_FEEDBACK.md",
+    "ownerReviewStatus": "changes-requested"
   },
   "profiles": {
     "v1": {
