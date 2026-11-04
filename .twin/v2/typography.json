@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "scope": "VIS-005 hero and Journey; other V2 sections may have explicit local roles",
+  "scope": "VIS-008 first two screens; lower V2 roles preserved",
   "source": ".twin/tasks/VIS-004/ENGINEERING.md",
-  "status": "engineering-contract-not-owner-approved",
+  "status": "engineering-proposal-from-owner-visual-donors; owner transition accepted, scene review pending",
   "runtimeSource": "src/styles/v2/hero-journey.css",
   "fontSource": "src/styles/v2/reference-page.css",
-  "runtimeCommit": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+  "runtimeCommit": "pending VIS-008 implementation review",
   "units": {
     "size": "CSS px",
     "lineHeight": "CSS px",
@@ -18,17 +18,17 @@
   },
   "roles": {
     "hero": {
-      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
-      "family": "TV2Expanded",
-      "weight": 700,
+      "file": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+      "family": "TV2OpeningExpanded",
+      "weight": 900,
       "tracking": 0,
       "desktop": {
-        "size": 58,
+        "size": 60,
         "lineHeight": 68
       },
       "tablet": {
         "size": 40,
-        "lineHeight": 68
+        "lineHeight": 50
       },
       "mobile": {
         "size": 30,
@@ -37,11 +37,16 @@
       "selectors": [
         ".r4-hero-copy h1"
       ],
-      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors",
+      "source": "Owner blue V1 screenshot + actual Black font; adaptive engineering default",
       "tabletSource": {
         "path": "src/styles/v2/hero-journey.css",
-        "status": "observed-css-not-owner-approved",
-        "note": "max-width:1099 overrides font-size to40px and inherits68px line-height; recorded without changing runtime"
+        "status": "engineering-default-not-owner-approved",
+        "note": "max-width:1099 uses40px/50px; max-width767 uses30px/38px; below374 uses28px/36px. Recorded to match current scoped CSS."
+      },
+      "mobileNarrow": {
+        "maxWidthExclusive": 374,
+        "size": 28,
+        "lineHeight": 36
       }
     },
     "section": {
@@ -67,26 +72,26 @@
       "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
     },
     "item": {
-      "file": "src/assets/fonts/rf-dewi-bold.woff2",
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
       "family": "TV2Dewi",
-      "weight": 700,
+      "weight": 600,
       "tracking": 0,
       "desktop": {
-        "size": 24,
-        "lineHeight": 32
+        "size": 16,
+        "lineHeight": 24
       },
       "tablet": {
-        "size": 24,
-        "lineHeight": 32
+        "size": 16,
+        "lineHeight": 24
       },
       "mobile": {
-        "size": 22,
-        "lineHeight": 30
+        "size": 16,
+        "lineHeight": 24
       },
       "selectors": [
         ".r4-journey-copy h3"
       ],
-      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+      "source": "VIS-008 audience label; semantic separation retained"
     },
     "body": {
       "file": "src/assets/fonts/rf-dewi-regular.woff2",
@@ -106,10 +111,9 @@
         "lineHeight": 26
       },
       "selectors": [
-        ".r4-hero-copy p:not(.eyebrow)",
-        ".r4-journey-copy p"
+        ".r4-hero-copy p:not(.eyebrow)"
       ],
-      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+      "source": "Hero inherited20/30; Journey copy has explicit journeyBody role"
     },
     "control": {
       "file": "src/assets/fonts/rf-dewi-semibold.woff2",
@@ -117,11 +121,11 @@
       "weight": 600,
       "tracking": 0,
       "desktop": {
-        "size": 17,
+        "size": 18,
         "lineHeight": 26
       },
       "tablet": {
-        "size": 17,
+        "size": 18,
         "lineHeight": 26
       },
       "mobile": {
@@ -129,10 +133,9 @@
         "lineHeight": 24
       },
       "selectors": [
-        ".r4-hero .r4-button",
         ".r4-journey-options button"
       ],
-      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+      "source": "VIS-008 readable navigation"
     },
     "caption": {
       "file": "src/assets/fonts/rf-dewi-regular.woff2",
@@ -153,6 +156,94 @@
       },
       "selectors": [],
       "source": "ENGINEERING.md typography table; no current top-scene selector assigned"
+    },
+    "journeyBody": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "tablet": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "mobile": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "selectors": [
+        ".r4-journey-copy p"
+      ],
+      "source": "VIS-008 readable dual-audience body"
+    },
+    "activeControl": {
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "TV2Dewi",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "mobile": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "selectors": [
+        ".r4-journey-options article[data-active=true] button"
+      ],
+      "source": "VIS-008 active navigation hierarchy"
+    },
+    "heroControl": {
+      "file": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "family": "TV2OpeningExpanded",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 16,
+        "lineHeight": 22
+      },
+      "tablet": {
+        "size": 16,
+        "lineHeight": 22
+      },
+      "mobile": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "selectors": [
+        ".r4-hero .r4-button"
+      ],
+      "source": "Owner blue V1 CTA screenshot; actual Semibold font"
+    },
+    "navigation": {
+      "file": "src/assets/fonts/inter-tight-variable.woff2",
+      "family": "TV2OpeningNavigation",
+      "weight": 450,
+      "tracking": 0.3,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "mobile": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "selectors": [
+        ".r4-header>nav"
+      ],
+      "source": "Owner blue V1 header only; no Inter transfer to Journey"
     }
   },
   "notes": [

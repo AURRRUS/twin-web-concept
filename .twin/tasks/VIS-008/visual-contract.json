@@ -1,0 +1,193 @@
+{
+  "mode": "reproduce",
+  "scope": "Implementation only: header/hero typography and ReferenceJourney layout/controller; accepted transition fixed; downstream source protected",
+  "route": "/v2/",
+  "baseline": "eb31192ac84fb2d9cdacce2212685d0cc376cb9c",
+  "reference": {
+    "path": ".twin/tasks/VIS-004/reference-upper.jpg",
+    "viewport": [
+      841,
+      1870
+    ]
+  },
+  "typographySource": ".twin/v2/typography.json",
+  "typeRoles": [
+    {
+      "role": "hero",
+      "file": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+      "weight": 900,
+      "tracking": 0,
+      "size": 60,
+      "lineHeight": 68
+    },
+    {
+      "role": "section",
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "weight": 700,
+      "tracking": 0,
+      "size": 46,
+      "lineHeight": 56
+    },
+    {
+      "role": "item",
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "weight": 600,
+      "tracking": 0,
+      "size": 16,
+      "lineHeight": 24
+    },
+    {
+      "role": "body",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "tracking": 0,
+      "size": 20,
+      "lineHeight": 30
+    },
+    {
+      "role": "control",
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "weight": 600,
+      "tracking": 0,
+      "size": 18,
+      "lineHeight": 26
+    },
+    {
+      "role": "caption",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "tracking": 0,
+      "size": 14,
+      "lineHeight": 20
+    },
+    {
+      "role": "journeyBody",
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "weight": 400,
+      "tracking": 0,
+      "size": 18,
+      "lineHeight": 26
+    },
+    {
+      "role": "activeControl",
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "weight": 600,
+      "tracking": 0,
+      "size": 20,
+      "lineHeight": 28
+    },
+    {
+      "role": "heroControl",
+      "file": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "weight": 600,
+      "tracking": 0,
+      "size": 16,
+      "lineHeight": 22
+    },
+    {
+      "role": "navigation",
+      "file": "src/assets/fonts/inter-tight-variable.woff2",
+      "weight": 450,
+      "tracking": 0.3,
+      "size": 20,
+      "lineHeight": 31
+    }
+  ],
+  "acceptedTransition": {
+    "source": ".twin/tasks/VIS-008/OWNER_DECISIONS.md",
+    "baseline": ".twin/tasks/VIS-008/baseline-hashes.json",
+    "status": "operator-approved-partial"
+  },
+  "geometry": {
+    "status": "engineering contract; independent browser verification pending",
+    "detailSource": ".twin/tasks/VIS-008/DETAIL_TZ.md",
+    "desktop": {
+      "stickyTop": 24,
+      "bottomReserve": 24,
+      "aside": 384,
+      "gap": 32,
+      "h2Lines": 2,
+      "mediaAspect": "1672/941",
+      "mediaFit": "contain"
+    },
+    "mobile": {
+      "normalFlow": true,
+      "pin": false
+    },
+    "acceptedTransitionBaseline": ".twin/tasks/VIS-008/baseline-hashes.json"
+  },
+  "motion": {
+    "changed": true,
+    "contract": {
+      "driver": "scroll",
+      "scrollDistancePx": 3780,
+      "travelFormula": "round(clamp(2800,4.2*innerHeight,4600))",
+      "phases": [
+        {
+          "start": 0.0,
+          "end": 0.047619047619047616,
+          "state": 0,
+          "kind": "reveal"
+        },
+        {
+          "start": 0.047619047619047616,
+          "end": 0.25,
+          "state": 0,
+          "kind": "hold"
+        },
+        {
+          "start": 0.25,
+          "end": 0.2976190476190476,
+          "state": 1,
+          "kind": "reveal"
+        },
+        {
+          "start": 0.2976190476190476,
+          "end": 0.5,
+          "state": 1,
+          "kind": "hold"
+        },
+        {
+          "start": 0.5,
+          "end": 0.5476190476190477,
+          "state": 2,
+          "kind": "reveal"
+        },
+        {
+          "start": 0.5476190476190477,
+          "end": 0.75,
+          "state": 2,
+          "kind": "hold"
+        },
+        {
+          "start": 0.75,
+          "end": 0.7976190476190477,
+          "state": 3,
+          "kind": "reveal"
+        },
+        {
+          "start": 0.7976190476190477,
+          "end": 1.0,
+          "state": 3,
+          "kind": "hold"
+        }
+      ],
+      "fallback": "normal flow for mobile/short viewport/reduced motion",
+      "stickyTop": 24,
+      "fitReserve": 48
+    }
+  },
+  "publication": {
+    "allowed": true,
+    "kind": "preview",
+    "reason": "Owner authorized two specifications and first-two-screen execution in the existing V2 review workflow; final acceptance remains separate",
+    "evidence": [
+      ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+    ],
+    "allowKnownDefects": false,
+    "acceptedDefects": [],
+    "source": ".twin/tasks/VIS-008/task.json#/publication",
+    "generated": true
+  },
+  "ownerAcceptance": "pending"
+}

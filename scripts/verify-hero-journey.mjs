@@ -3,9 +3,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 
 const typography = JSON.parse(fs.readFileSync('.twin/v2/typography.json', 'utf8'));
-const visualContract = JSON.parse(fs.readFileSync('.twin/tasks/VIS-005/visual-contract.json', 'utf8'));
-const travel = visualContract.geometry.travel;
-assert(Number.isFinite(travel) && travel > 0, 'Journey travel must come from the active visual contract');
+const state = JSON.parse(fs.readFileSync('.twin/state.json', 'utf8'));
+const visualContract = JSON.parse(fs.readFileSync(`${state.siteCandidate.path}/visual-contract.json`, 'utf8'));
+assert(visualContract.motion?.contract?.driver === 'scroll', 'Current candidate must declare its actual scroll contract');
 const out = process.env.V2_QA_DIR || 'artifacts/hero-journey';
 fs.mkdirSync(out, {recursive: true});
 fs.copyFileSync(visualContract.reference.path, `${out}/reference-upper.jpg`);
@@ -26,7 +26,8 @@ async function naturalExit(journey, width, height) {
   const start = await page.evaluate(() => scrollY);
   const seen = new Set();
   const pinned = await journey.getAttribute('data-pinned') === 'true';
-  const step = Math.min(300, travel / 6);
+  const travel = await journey.evaluate(element => parseFloat(getComputedStyle(element).getPropertyValue('--journey-travel')) || 0);
+  const step = 300;
   const maxSteps = Math.ceil((await journey.evaluate(element => element.offsetHeight) + height * 2) / step) + 2;
   let exited = false;
   for (let index = 0; index < maxSteps; index++) {
@@ -68,7 +69,8 @@ try {
       const style = getComputedStyle(element);
       return {size: parseFloat(style.fontSize), lineHeight: parseFloat(style.lineHeight), weight: Number(style.fontWeight)};
     });
-    assert.deepEqual(sizes, {size: hero[profile].size, lineHeight: hero[profile].lineHeight, weight: hero.weight});
+    const narrow = hero.mobileNarrow && width <= hero.mobileNarrow.maxWidth ? hero.mobileNarrow : hero[profile];
+    assert.deepEqual(sizes, {size: narrow.size, lineHeight: narrow.lineHeight, weight: hero.weight});
     await page.screenshot({path: `${out}/hero-${width}.png`});
     const journey = page.locator('#journey');
     await journey.evaluate(element => scrollTo(0, element.getBoundingClientRect().top + scrollY - 200));
@@ -80,6 +82,10 @@ try {
       if (width === 1440 || width === 390) await page.screenshot({path: `${out}/state-${index}-${width}.png`});
     }
     if (await journey.getAttribute('data-pinned') === 'true') {
+      const travel = await journey.evaluate(element => parseFloat(getComputedStyle(element).getPropertyValue('--journey-travel')));
+      assert(travel >= 2800, 'Current opening must expose the declared reading budget');
+      const fit = await page.locator('.r4-journey-panel').evaluate(element => ({height:element.getBoundingClientRect().height,scrollHeight:element.scrollHeight}));
+      assert(Math.max(fit.height,fit.scrollHeight) <= height-48, `Current panel does not fit ${width}x${height}`);
       // Deterministic sampling checks state stability/reverse; it does not prove natural exit.
       for (const progress of [.1, .4, .7, .95, .7, .4, .1]) {
         await journey.evaluate((element, target) => scrollTo({top: element.getBoundingClientRect().top + scrollY - 24 + target, behavior: 'instant'}), travel * progress);
@@ -89,6 +95,7 @@ try {
         assert.deepEqual(await journey.locator('.r4-journey-options button').evaluateAll(buttons => buttons.map(button => button.getAttribute('aria-expanded'))), before);
       }
     }
+    if (width >= 1100 && height >= 680) assert.equal(await journey.getAttribute('data-pinned'), 'true', `Required desktop pin disabled at ${width}x${height}`);
     const exit = await naturalExit(journey, width, height);
     await page.screenshot({path: `${out}/exit-${width}.png`});
     results.push({width, height, typographyProfile: profile, exit});

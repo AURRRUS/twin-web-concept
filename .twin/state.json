@@ -3,24 +3,24 @@
   "repository": "AURRRUS/twin-web-concept",
   "workingBranch": "work/workflow-foundation-20261029",
   "workflowTask": {
-    "id": "VIS-007",
-    "path": ".twin/tasks/VIS-007",
+    "id": "VIS-008",
+    "path": ".twin/tasks/VIS-008",
     "mode": "execute",
-    "scope": "header/hero/transition/four-state ReferenceJourney only; entry into unchanged demo",
+    "scope": "Two linked specs and bounded first-two-screen implementation only",
     "publicationAllowed": true
   },
   "siteCandidate": {
     "profile": "v2",
-    "taskId": "VIS-007",
-    "path": ".twin/tasks/VIS-007",
+    "taskId": "VIS-008",
+    "path": ".twin/tasks/VIS-008",
     "sourceBranch": "work/workflow-foundation-20261029",
-    "sourceCommit": "cd91791c02ad87947540ac28210ba3174f3f6cb3",
+    "sourceCommit": "eb31192ac84fb2d9cdacce2212685d0cc376cb9c",
     "route": "/v2/",
-    "visualReviewPath": ".twin/tasks/VIS-007/REVIEW.md",
+    "visualReviewPath": ".twin/tasks/VIS-008/REVIEW.md",
     "openDefects": [],
-    "visualRequirementsPath": ".twin/tasks/VIS-007/visual-requirements.json",
+    "visualRequirementsPath": ".twin/tasks/VIS-008/visual-requirements.json",
     "ownerFeedbackPath": ".twin/tasks/VIS-007/OWNER_FEEDBACK.md",
-    "ownerReviewStatus": "changes-requested"
+    "ownerReviewStatus": "pending-new-candidate"
   },
   "profiles": {
     "v1": {
@@ -49,8 +49,8 @@
     }
   },
   "publicationAuthority": {
-    "source": ".twin/tasks/VIS-007/task.json#/publication",
+    "source": ".twin/tasks/VIS-008/task.json#/publication",
     "appliesTo": "siteCandidate",
-    "note": "Owner authorized source save and working preview in current follow-up; final design acceptance pending"
+    "note": "Bounded working preview authorized; accepted transition preserved; next pair awaits owner"
   }
 }

@@ -8,7 +8,7 @@ on:
       - 'public/**'
       - '.twin/state.json'
       - '.twin/v2/**'
-      - '.twin/tasks/VIS-007/**'
+      - '.twin/tasks/**'
       - 'scripts/**'
       - 'tests/workflow*.test.mjs'
       - 'tests/visual-gate-v2.test.mjs'
@@ -32,7 +32,18 @@ jobs:
       TWIN_V2_MANIFEST_FILE: /tmp/twin-v2-preview-non-v2-manifest.json
     steps:
       - uses: actions/checkout@v4
-        with: {fetch-depth: 1}
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            .agents
+            .github
+            .twin
+            docs
+            public
+            scripts
+            src
+            tests
+          sparse-checkout-cone-mode: true
       - uses: actions/setup-node@v4
         with: {node-version: '24'}
       - uses: actions/setup-python@v5
@@ -54,7 +65,8 @@ jobs:
         if: steps.authority.outputs.allowed == 'true'
         run: |
           node scripts/workflow-check.mjs
-          node --test tests/workflow*.test.mjs tests/visual-gate-v2.test.mjs scripts/workflow-state.preview.test.mjs
+          node --test tests/workflow*.test.mjs tests/visual-gate-v2.test.mjs scripts/workflow-state.preview.test.mjs scripts/opening-journey-frame.test.mjs
+          node scripts/verify-opening-invariants.mjs
           node scripts/visual-gate-v2.mjs --release-kind=preview
       - name: Install and build the same V2
         if: steps.authority.outputs.allowed == 'true'
