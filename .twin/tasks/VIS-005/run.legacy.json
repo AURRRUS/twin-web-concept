@@ -1,0 +1,13 @@
+{
+  "task": "VIS-005",
+  "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
+  "publication": false,
+  "graphicGeneration": 0,
+  "technical": "PASS — npm ci/typecheck/build:v2 and Chrome8viewports",
+  "visual": "fix; exact architectural contact blocked",
+  "remaining": [
+    "exact architectural alpha/contact boundary"
+  ],
+  "runtimeCommit": "f0c8fca05638a436d767914d18b77876aef15376",
+  "qaRun": 40758053944
+}

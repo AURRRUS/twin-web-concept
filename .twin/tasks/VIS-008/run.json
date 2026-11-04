@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "mode": "execute",
+  "targetStage": "release",
+  "taskEvidence": [
+    ".twin/tasks/VIS-008/TASK.md",
+    ".twin/tasks/VIS-008/task.json"
+  ],
+  "runtimeFingerprint": "pending-before-implementation",
+  "contractFingerprint": "cd566bd3faefcc02088a322d972183ecf73383a69a544887b89190fd087da7f9",
+  "implementer": "/root/vis008_finish_engineer",
+  "agents": [
+    {
+      "id": "/root/vis008_frontend_executor",
+      "role": "original implementation, previous interrupted turn",
+      "status": "interrupted",
+      "evidence": [
+        ".twin/tasks/VIS-008/IMPLEMENTATION.md"
+      ]
+    },
+    {
+      "id": "/root/vis008_finish_engineer",
+      "role": "implementation completion and fixes",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-008/IMPLEMENTATION.md"
+      ]
+    },
+    {
+      "id": "/root/vis008_acceptance",
+      "role": "independent reviewer",
+      "status": "running",
+      "evidence": [
+        ".twin/tasks/VIS-008/TASK.md"
+      ]
+    }
+  ],
+  "independentReviewRequired": true,
+  "ownerCheckpoints": [
+    {
+      "id": "stage1-owner",
+      "status": "pending",
+      "beforeStage": "release",
+      "releaseKinds": [
+        "final"
+      ],
+      "evidence": [
+        ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+      ]
+    }
+  ],
+  "assetInventoryComplete": true,
+  "assetJobs": [],
+  "stages": {
+    "brief": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-008/TASK.md",
+        ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+      ]
+    },
+    "spec": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-008/MASTER_TZ.md",
+        ".twin/tasks/VIS-008/DETAIL_TZ.md",
+        ".twin/tasks/VIS-008/MOTION.md",
+        ".twin/tasks/VIS-008/visual-contract.json"
+      ]
+    },
+    "sample": {
+      "status": "not-applicable",
+      "reason": "Existing operator-accepted visual assets retained; no new image production",
+      "evidence": [
+        ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+      ]
+    },
+    "assets": {
+      "status": "not-applicable",
+      "reason": "Existing operator-accepted visual assets retained; no new image production",
+      "evidence": [
+        ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+      ]
+    },
+    "static": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-008/IMPLEMENTATION.md"
+      ]
+    },
+    "responsive": {
+      "status": "pending"
+    },
+    "motion": {
+      "status": "pending"
+    },
+    "review": {
+      "status": "pending"
+    },
+    "release": {
+      "status": "pending"
+    }
+  },
+  "publication": {
+    "allowed": true,
+    "kind": "preview",
+    "reason": "Owner authorized two specifications and first-two-screen execution in the existing V2 review workflow; final acceptance remains separate",
+    "evidence": [
+      ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+    ],
+    "allowKnownDefects": false,
+    "acceptedDefects": [],
+    "source": ".twin/tasks/VIS-008/task.json#/publication",
+    "generated": true
+  },
+  "ownerAcceptance": {
+    "status": "pending"
+  },
+  "review": {
+    "verdict": "rebuild",
+    "unresolved": [
+      "VIS008-REVIEW-PENDING"
+    ]
+  }
+}

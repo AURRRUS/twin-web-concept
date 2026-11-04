@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "ids": [
     "hero",
     "transition",
@@ -16,7 +16,8 @@
   "references": [
     "docs/v2/references/overview-upper.jpg",
     "docs/v2/references/journey-white-bronze.jpg",
-    "docs/v2/references/overview-lower.jpg"
+    "docs/v2/references/overview-lower.jpg",
+    ".twin/tasks/VIS-004/reference-upper.jpg"
   ],
   "inputPrefixes": [
     "src/",
@@ -28,7 +29,11 @@
     "astro.config.mjs",
     "package.json",
     "package-lock.json",
-    "scripts/build-v2.mjs"
+    "scripts/build-v2.mjs",
+    ".twin/v2/typography.json",
+    "tsconfig.json"
   ],
-  "note": "Gate validates provenance/freshness/evidence, not aesthetics. Latest owner decisions override raster errors."
+  "note": "Gate validates provenance/freshness/evidence, not aesthetics. Latest owner decisions override raster errors.",
+  "reviewPath": ".twin/tasks/VIS-005/review.json",
+  "contractPath": ".twin/tasks/VIS-005/visual-contract.json"
 }

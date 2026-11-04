@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "scope": "VIS-008 first two screens; lower V2 roles preserved",
+  "source": ".twin/tasks/VIS-004/ENGINEERING.md",
+  "status": "engineering-proposal-from-owner-visual-donors; owner transition accepted, scene review pending",
+  "runtimeSource": "src/styles/v2/hero-journey.css",
+  "fontSource": "src/styles/v2/reference-page.css",
+  "runtimeCommit": "pending VIS-008 implementation review",
+  "units": {
+    "size": "CSS px",
+    "lineHeight": "CSS px",
+    "tracking": "CSS px"
+  },
+  "breakpoints": {
+    "mobileMax": 767,
+    "tabletMax": 1099,
+    "desktopMin": 1100
+  },
+  "roles": {
+    "hero": {
+      "file": "src/assets/fonts/RFDewiExpanded-Black.ttf",
+      "family": "TV2OpeningExpanded",
+      "weight": 900,
+      "tracking": 0,
+      "desktop": {
+        "size": 60,
+        "lineHeight": 68
+      },
+      "tablet": {
+        "size": 40,
+        "lineHeight": 50
+      },
+      "mobile": {
+        "size": 30,
+        "lineHeight": 38
+      },
+      "selectors": [
+        ".r4-hero-copy h1"
+      ],
+      "source": "Owner blue V1 screenshot + actual Black font; adaptive engineering default",
+      "tabletSource": {
+        "path": "src/styles/v2/hero-journey.css",
+        "status": "engineering-default-not-owner-approved",
+        "note": "max-width:1099 uses40px/50px; max-width767 uses30px/38px; below374 uses28px/36px. Recorded to match current scoped CSS."
+      },
+      "mobileNarrow": {
+        "maxWidthExclusive": 374,
+        "size": 28,
+        "lineHeight": 36
+      }
+    },
+    "section": {
+      "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
+      "family": "TV2Expanded",
+      "weight": 700,
+      "tracking": 0,
+      "desktop": {
+        "size": 46,
+        "lineHeight": 56
+      },
+      "tablet": {
+        "size": 46,
+        "lineHeight": 56
+      },
+      "mobile": {
+        "size": 28,
+        "lineHeight": 36
+      },
+      "selectors": [
+        ".r4-journey h2"
+      ],
+      "source": "ENGINEERING.md typography table; hero/Journey CSS for scoped selectors"
+    },
+    "item": {
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "TV2Dewi",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "tablet": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "mobile": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "selectors": [
+        ".r4-journey-copy h3"
+      ],
+      "source": "VIS-008 audience label; semantic separation retained"
+    },
+    "body": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 30
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 30
+      },
+      "mobile": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "selectors": [
+        ".r4-hero-copy p:not(.eyebrow)"
+      ],
+      "source": "Hero inherited20/30; Journey copy has explicit journeyBody role"
+    },
+    "control": {
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "TV2Dewi",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "tablet": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "mobile": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "selectors": [
+        ".r4-journey-options button"
+      ],
+      "source": "VIS-008 readable navigation"
+    },
+    "caption": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "tablet": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "mobile": {
+        "size": 14,
+        "lineHeight": 20
+      },
+      "selectors": [],
+      "source": "ENGINEERING.md typography table; no current top-scene selector assigned"
+    },
+    "journeyBody": {
+      "file": "src/assets/fonts/rf-dewi-regular.woff2",
+      "family": "TV2Dewi",
+      "weight": 400,
+      "tracking": 0,
+      "desktop": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "tablet": {
+        "size": 18,
+        "lineHeight": 26
+      },
+      "mobile": {
+        "size": 17,
+        "lineHeight": 26
+      },
+      "selectors": [
+        ".r4-journey-copy p"
+      ],
+      "source": "VIS-008 readable dual-audience body"
+    },
+    "activeControl": {
+      "file": "src/assets/fonts/rf-dewi-semibold.woff2",
+      "family": "TV2Dewi",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "mobile": {
+        "size": 20,
+        "lineHeight": 28
+      },
+      "selectors": [
+        ".r4-journey-options article[data-active=true] button"
+      ],
+      "source": "VIS-008 active navigation hierarchy"
+    },
+    "heroControl": {
+      "file": "src/assets/fonts/RFDewiExpanded-Semibold.ttf",
+      "family": "TV2OpeningExpanded",
+      "weight": 600,
+      "tracking": 0,
+      "desktop": {
+        "size": 16,
+        "lineHeight": 22
+      },
+      "tablet": {
+        "size": 16,
+        "lineHeight": 22
+      },
+      "mobile": {
+        "size": 16,
+        "lineHeight": 24
+      },
+      "selectors": [
+        ".r4-hero .r4-button"
+      ],
+      "source": "Owner blue V1 CTA screenshot; actual Semibold font"
+    },
+    "navigation": {
+      "file": "src/assets/fonts/inter-tight-variable.woff2",
+      "family": "TV2OpeningNavigation",
+      "weight": 450,
+      "tracking": 0.3,
+      "desktop": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "tablet": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "mobile": {
+        "size": 20,
+        "lineHeight": 31
+      },
+      "selectors": [
+        ".r4-header>nav"
+      ],
+      "source": "Owner blue V1 header only; no Inter transfer to Journey"
+    }
+  },
+  "notes": [
+    "Caption is inherited engineering role, not a claim that eyebrow uses it: eyebrow has an existing explicit12/20, tracking3 desktop and10/20, tracking2 mobile treatment.",
+    "The previous .twin/v2/tokens.json role sizes describe an older default system; current hero/Journey checks and derived contract roles read this file. No CSS or font changes were made by WF-001."
+  ]
+}

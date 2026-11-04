@@ -40,10 +40,29 @@
       "medium": "dom"
     }
   ],
-  "referenceMatch": "pending self-review, never owner approval",
+  "referenceMatch": "historical self-review: fix; independent review pending; never owner approval",
   "publication": {
-    "allowed": false,
-    "reason": "Explicit user prohibition"
+    "allowed": true,
+    "reason": "Owner explicitly authorizes current full build at existing /v2/ as working owner-review; known mask defect accepted for viewing only, not visual approval",
+    "kind": "preview",
+    "allowKnownDefects": true,
+    "acceptedDefects": [
+      "VIS005-MASK-001"
+    ],
+    "scope": "Existing full /v2/ build for working owner review; no final owner acceptance",
+    "evidence": [
+      ".twin/tasks/VIS-005/task.json"
+    ],
+    "authorizationOrigin": "Existing owner authorization recorded in task.json at source56905ee; preserved by WF-001, not newly granted",
+    "finalOwnerAcceptance": "pending",
+    "source": ".twin/tasks/VIS-005/task.json#/publication",
+    "generated": true,
+    "assetExceptions": [
+      {
+        "jobId": "original-facade-alpha",
+        "defectId": "VIS005-MASK-001"
+      }
+    ]
   },
   "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
   "route": "/v2/",
@@ -90,8 +109,8 @@
       "role": "hero",
       "file": "src/assets/fonts/RFDewiExpanded-Bold.ttf",
       "weight": 700,
-      "size": 48,
-      "lineHeight": 56.64,
+      "size": 58,
+      "lineHeight": 68,
       "tracking": 0,
       "maxWidth": 1200
     },
@@ -117,7 +136,63 @@
       "reducedMotion": "Pin and image transitions disabled; all four choices available",
       "exit": "Track is measured panel height+1800; flow continues to graphite demo",
       "phases": [
-        "Four reading ranges in1800px; image transition320ms cubic(.22,1,.36,1)"
+        {
+          "start": 0.0,
+          "end": 0.25,
+          "kind": "hold",
+          "state": "location",
+          "purpose": "Read location and infrastructure, or select another mode directly"
+        },
+        {
+          "start": 0.25,
+          "end": 0.5,
+          "kind": "hold",
+          "state": "compare",
+          "purpose": "Read choice and comparison of lots without forcing a funnel step"
+        },
+        {
+          "start": 0.5,
+          "end": 0.75,
+          "kind": "hold",
+          "state": "floor",
+          "purpose": "Read the floor plan; this remains an optional direct choice"
+        },
+        {
+          "start": 0.75,
+          "end": 1.0,
+          "kind": "hold",
+          "state": "space",
+          "purpose": "Read space and views, then continue naturally into the product demo"
+        }
+      ],
+      "driver": "scroll",
+      "scrollDistancePx": 1800,
+      "resizeRule": "At width>=1100, panel.scrollHeight+48<=innerHeight and reduced-motion off: measure panel after fonts/resize; preserve progress only when already pinned and in view. Otherwise native flow and direct choices; no wheel/touch interception.",
+      "stateMapping": "min(3,max(0,floor(progress*4))); intervals are left-closed, right-open except final endpoint",
+      "transition": {
+        "driver": "time",
+        "durationMs": 320,
+        "ease": [
+          0.22,
+          1,
+          0.36,
+          1
+        ],
+        "trigger": "Active image index changes at a scroll boundary or direct selection",
+        "source": "src/styles/v2/hero-journey.css",
+        "note": "Crossfade uses elapsed time, not an invented portion of scroll distance. No separate enter/exit scroll phases exist in current controller."
+      },
+      "source": "src/components/v2/ReferencePage.tsx#ReferenceJourney",
+      "pinConditions": {
+        "minimumWidthPx": 1100,
+        "fitReservePx": 48,
+        "stickyTopPx": 24
+      },
+      "manualChoiceProgress": [
+        0.125,
+        0.375,
+        0.625,
+        0.875
       ]
     }
   },
@@ -126,5 +201,12 @@
     "No initial auto scroll",
     "All four modes and keyboard/reduced-motion",
     "Exact alpha mismatch remains explicit; no visual PASS"
-  ]
+  ],
+  "typographySource": ".twin/v2/typography.json",
+  "typeRolesProjection": {
+    "generated": true,
+    "viewport": "desktop",
+    "source": ".twin/v2/typography.json#/roles",
+    "note": "Font fields and numeric role values are derived; maxWidth is the existing scene constraint, not a typography token."
+  }
 }

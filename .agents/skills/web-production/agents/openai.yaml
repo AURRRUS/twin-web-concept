@@ -1,0 +1,14 @@
+interface:
+  display_name: Web Production
+  short_description: Координатор веб-производства от концепта до приёмки
+  default_prompt: 'Используй $web-production: проведи проект от референса до реализации
+    и отдельной приёмки, сохраняя его бренд и решения'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,13 +1,163 @@
 {
-  "task": "VIS-005",
-  "baseline": "3b5b38188e23b64ef51ceb0bb24791be0a1d8dad",
-  "publication": false,
-  "graphicGeneration": 0,
-  "technical": "PASS — npm ci/typecheck/build:v2 and Chrome8viewports",
-  "visual": "fix; exact architectural contact blocked",
-  "remaining": [
-    "exact architectural alpha/contact boundary"
+  "schemaVersion": 2,
+  "mode": "execute",
+  "targetStage": "review",
+  "taskEvidence": [
+    ".twin/tasks/VIS-005/TASK.md",
+    ".twin/tasks/VIS-005/task.json",
+    ".twin/tasks/VIS-005/MIGRATION.md"
   ],
-  "runtimeCommit": "f0c8fca05638a436d767914d18b77876aef15376",
-  "qaRun": 40758053944
+  "runtimeCommit": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+  "runtimeFingerprint": null,
+  "contractFingerprint": "9af8ce26b0468827790bbaf126d088e510899929af0f3d9be3652f6c17164149",
+  "implementer": null,
+  "agents": [],
+  "independentReviewRequired": true,
+  "ownerCheckpoints": [],
+  "assetInventoryComplete": true,
+  "assetJobs": [
+    {
+      "id": "original-facade-alpha",
+      "status": "blocked",
+      "purpose": "Exact architectural overlap through paper surface",
+      "source": "assets/approved/2026-10-27/1 экран Вид побережье.png",
+      "canvas": [
+        2574,
+        1459
+      ],
+      "protected": [
+        "all original building geometry",
+        "balconies",
+        "foliage at contact edge"
+      ],
+      "requirements": "Alpha on full original canvas, no tight crop, same camera/light/anchor as master; no generated pixels",
+      "missing": "Precision mask at foliage and lower building boundary; no pixels beyond native lower edge",
+      "current": "Geometric CSS selection with feathered lower edge; photo-volume correspondence remains a gap",
+      "required": true,
+      "producerSkill": "frontend-engineer",
+      "outputs": [],
+      "acceptedBy": null,
+      "observed": null,
+      "defectIds": [
+        "VIS005-MASK-001"
+      ]
+    }
+  ],
+  "stages": {
+    "brief": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-005/TASK.md",
+        ".twin/tasks/VIS-005/task.json"
+      ]
+    },
+    "spec": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-005/visual-contract.json",
+        ".twin/v2/typography.json",
+        ".twin/tasks/VIS-005/asset-jobs.json"
+      ]
+    },
+    "sample": {
+      "status": "not-applicable",
+      "reason": "Existing owner-selected master is retained; no new art direction or batch graphic generation is authorized. Missing precision mask remains a required asset job and must be checked in scene.",
+      "evidence": [
+        ".twin/tasks/VIS-005/TASK.md",
+        ".twin/tasks/VIS-005/MIGRATION.md"
+      ]
+    },
+    "assets": {
+      "status": "blocked",
+      "evidence": [
+        ".twin/tasks/VIS-005/asset-jobs.json",
+        ".twin/tasks/VIS-005/REVIEW.md"
+      ]
+    },
+    "static": {
+      "status": "pending",
+      "reason": "Historical checks remain recorded in RESULT.md; current contract/independent acceptance has not been performed by WF-001.",
+      "evidence": [
+        ".twin/tasks/VIS-005/RESULT.md"
+      ]
+    },
+    "responsive": {
+      "status": "pending",
+      "reason": "Historical checks remain recorded in RESULT.md; current contract/independent acceptance has not been performed by WF-001.",
+      "evidence": [
+        ".twin/tasks/VIS-005/RESULT.md"
+      ]
+    },
+    "motion": {
+      "status": "pending",
+      "reason": "Historical checks remain recorded in RESULT.md; current contract/independent acceptance has not been performed by WF-001.",
+      "evidence": [
+        ".twin/tasks/VIS-005/RESULT.md"
+      ]
+    },
+    "review": {
+      "status": "pending",
+      "evidence": []
+    },
+    "release": {
+      "status": "pending",
+      "evidence": []
+    }
+  },
+  "review": {
+    "verdict": "fix",
+    "runtimeCommit": "f0c8fca05638a436d767914d18b77876aef15376",
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
+    "reviewer": null,
+    "independent": false,
+    "unresolved": [
+      "VIS005-MASK-001"
+    ],
+    "evidence": [
+      ".twin/tasks/VIS-005/REVIEW.md"
+    ],
+    "status": "historical-self-review; current-independent-review-pending"
+  },
+  "ownerAcceptance": {
+    "status": "pending",
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "evidence": []
+  },
+  "publication": {
+    "allowed": true,
+    "reason": "Owner explicitly authorizes current full build at existing /v2/ as working owner-review; known mask defect accepted for viewing only, not visual approval",
+    "kind": "preview",
+    "allowKnownDefects": true,
+    "acceptedDefects": [
+      "VIS005-MASK-001"
+    ],
+    "scope": "Existing full /v2/ build for working owner review; no final owner acceptance",
+    "evidence": [
+      ".twin/tasks/VIS-005/task.json"
+    ],
+    "authorizationOrigin": "Existing owner authorization recorded in task.json at source56905ee; preserved by WF-001, not newly granted",
+    "finalOwnerAcceptance": "pending",
+    "source": ".twin/tasks/VIS-005/task.json#/publication",
+    "generated": true,
+    "runtimeFingerprint": null,
+    "contractFingerprint": null,
+    "assetExceptions": [
+      {
+        "jobId": "original-facade-alpha",
+        "defectId": "VIS005-MASK-001"
+      }
+    ]
+  },
+  "task": "VIS-005",
+  "assetJobsSource": ".twin/tasks/VIS-005/asset-jobs.json",
+  "migrationEvidence": ".twin/tasks/VIS-005/MIGRATION.md",
+  "historicalRun": ".twin/tasks/VIS-005/run.legacy.json",
+  "nextAction": {
+    "stage": "assets",
+    "defect": "VIS005-MASK-001",
+    "description": "Produce precise alpha from the unchanged original master; then scene acceptance and independent current review. WF-001 only repairs workflow metadata."
+  }
 }

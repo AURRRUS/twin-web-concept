@@ -1,0 +1,62 @@
+{
+  "id": "VIS-008",
+  "mode": "execute",
+  "status": "ready",
+  "outcome": "Общее ТЗ сайта, детальное ТЗ двух экранов и проверенная доводка той же V2",
+  "baseline": "eb31192ac84fb2d9cdacce2212685d0cc376cb9c",
+  "scope": [
+    "Whole-site planning only: MASTER_TZ.md",
+    "Implementation only: header/hero typography and ReferenceJourney layout/controller; accepted transition fixed; downstream source protected"
+  ],
+  "sources": [
+    ".twin/tasks/VIS-008/TASK.md",
+    ".twin/tasks/VIS-008/MASTER_TZ.md",
+    ".twin/tasks/VIS-008/DETAIL_TZ.md",
+    ".twin/tasks/VIS-008/MOTION.md",
+    ".twin/tasks/VIS-008/OWNER_DECISIONS.md",
+    ".twin/tasks/VIS-007/OWNER_FEEDBACK.md",
+    ".twin/tasks/VIS-004/reference-upper.jpg",
+    ".twin/tasks/VIS-004/reference-lower.jpg",
+    ".twin/tasks/VIS-004/ENGINEERING.md",
+    ".twin/v2/typography.json",
+    ".twin/tasks/VIS-002/content.json",
+    ".twin/tasks/JRN-001/content.json"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "body",
+    "control"
+  ],
+  "responsive": [
+    "1366x768",
+    "1440x900",
+    "1920x1080",
+    "390x844",
+    "360x800",
+    "768x1024",
+    "1024x900",
+    "1099x900",
+    "1100x900"
+  ],
+  "acceptance": [
+    "Preserve accepted transition rules and protected downstream hashes",
+    "Entire readable panel including H2 and full media at target desktops",
+    "Four distinct measured read holds and free native exit/reverse",
+    "Accessible controls and mobile normal flow",
+    "Actual independent browser composition and motion review"
+  ],
+  "motionChanged": true,
+  "motionContract": "MOTION.md",
+  "publication": {
+    "allowed": true,
+    "kind": "preview",
+    "reason": "Owner authorized two specifications and first-two-screen execution in the existing V2 review workflow; final acceptance remains separate",
+    "evidence": [
+      ".twin/tasks/VIS-008/OWNER_DECISIONS.md"
+    ],
+    "allowKnownDefects": false,
+    "acceptedDefects": []
+  },
+  "openQuestions": []
+}

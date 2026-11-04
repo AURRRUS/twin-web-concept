@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "status": "pending",
+  "reviewer": null,
+  "implementer": null,
+  "independent": false,
+  "agents": [],
+  "inputFingerprint": null,
+  "contractFingerprint": null,
+  "blockingIssues": [
+    "VIS005-MASK-001"
+  ],
+  "checks": [],
+  "historicalReview": ".twin/tasks/VIS-005/REVIEW.md",
+  "note": "WF-001 does not perform current browser/visual review. Historical self-review remains fix. Populate real independent evidence before release."
+}

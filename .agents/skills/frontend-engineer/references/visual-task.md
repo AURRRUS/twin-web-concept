@@ -10,7 +10,7 @@
 7. Адаптив: reading order, смена layout, unpin, доступность всех состояний в низком окне
 8. Motion: trigger, progress в расстоянии, фазы/holds, transform owner, once/reverse, click/keyboard, reduced-motion/fallback
 9. Приёмка: измеримые якоря + масса/интервалы/первое внимание, недопустимые замены
-10. Выпуск: существующий механизм, проверяемый URL/commit и ограничения. Снимки внутренние, согласование не вводить
+10. Выпуск: существующий механизм, проверяемый URL/commit и ограничения. Снимки внутренние; соблюдать явно выбранные владельцем контрольные точки, не добавлять повторное согласование к уже разрешённому выпуску
 
 ## Форма JSON для scripts/check_visual_contract.py
 Поля:
@@ -22,9 +22,10 @@
 - typeRoles: [{role, file:реальный шрифт, weight:число, size:число, lineHeight:число, tracking:число, maxWidth:число}]
 - layers: [{element, medium:dom|css|svg|raster|viewer, asset:путь для raster, fit:contain|cover для raster}]
 - responsive: {mobile:правила, lowHeight:правила}
-- motion: {changed:false, preserve:что сохраняется} либо {changed:true, contract:{progress,phases,reverse,reducedMotion,exit}}
+- motion: {changed:false, preserve:что сохраняется} либо {changed:true, contract:{driver:scroll|time|interaction,progress,phases,reverse,reducedMotion,exit}}. Для scroll: scrollDistancePx > 0 и resizeRule; для time: durationMs > 0. phases: [{start:0,end:0.2,kind:enter|hold|transition|exit,state:видимый результат,purpose:смысл}]. Все границы в [0,1], строго возрастают, фазы без пробелов/наложений покрывают [0,1]. Это общая временная шкала сцены; независимые анимации слоёв описывать дополнительно внутри фаз
 - acceptance: [конкретный критерий суждения, …]
 - publication: {allowed:boolean, reason:основание}
 
 Числа обязан выбрать инженер по референсу и канону; не подставлять универсальные размеры из чужой темы. При изменении движения phases — массив диапазонов с началом, концом и содержимым кадра.
+В производственном пакете также указать project profile, ревизию принятых решений, objectLock, scene/asset manifest и route→controller→test по [контракту команды](production-contract.md). Не превращать необязательные поля локальной правки в перепроектирование всей страницы. Старые строковые phases требуется развернуть в числовой контракт перед изменением motion; validator намеренно их отклоняет.
 Скрипт проверяет заполненность, типы и доступность файлов. Он не проверяет красоту, честность baseline или фактическое соответствие макету.

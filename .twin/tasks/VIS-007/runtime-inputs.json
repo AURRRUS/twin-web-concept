@@ -1,0 +1,15 @@
+{
+  "runtimeFingerprint": "5878a95e484d7e6eefa3cbd8b512f6c34af394ee625b2dbb10beafb578e3efde",
+  "sourceCommit": "cd91791c02ad87947540ac28210ba3174f3f6cb3",
+  "files": {
+    "src/pages/v2/index.astro": "0296056fe746a7379e696249ed5203d940868ed1d93187df9e9b06e219fe9e15",
+    "src/components/v2/ReferencePage.tsx": "fd39dc0392b3462b29c8e5e7a85daa4c1d0f68bab2305f2937475dd22e8e56af",
+    "src/styles/v2/hero-journey.css": "7687f135618b614b57f72007189f060118c8cfa094b960c73261fefc9701801d",
+    "src/styles/v2/reference-page.css": "4cbfed8a909b3b05b87c1ecf37554fe86ceeed45264c023939c8d1d49e06aa41",
+    ".twin/v2/typography.json": "5cfe5d091dbf35eb7d78d661de4ac907317144a5b54b986fcbedd44d8a134a1e",
+    "public/media/top-v2/hero.webp": "c5e3b94898d532526f65eb8037b7ee62dbd39f70f0890927a0495f6414e15f10",
+    "public/media/top-v2/opening-terrace.png": "d33d20149a7bce83f4cf0cb15c70756927d5026dbacc0dcc5bbf352b80430f82",
+    "package.json": "4584b07ab049bb08162b476d27c2a5b6ae0c6afd725a014d7aaf1f96e1534852"
+  },
+  "previewFix": "NODE_ENV=development and fresh optimizer cache; production source unchanged"
+}

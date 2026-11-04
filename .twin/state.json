@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "repository": "AURRRUS/twin-web-concept",
+  "workingBranch": "work/workflow-foundation-20261029",
+  "workflowTask": {
+    "id": "VIS-008",
+    "path": ".twin/tasks/VIS-008",
+    "mode": "execute",
+    "scope": "Two linked specs and bounded first-two-screen implementation only",
+    "publicationAllowed": true
+  },
+  "siteCandidate": {
+    "profile": "v2",
+    "taskId": "VIS-008",
+    "path": ".twin/tasks/VIS-008",
+    "sourceBranch": "work/workflow-foundation-20261029",
+    "sourceCommit": "eb31192ac84fb2d9cdacce2212685d0cc376cb9c",
+    "route": "/v2/",
+    "visualReviewPath": ".twin/tasks/VIS-008/REVIEW.md",
+    "openDefects": [],
+    "visualRequirementsPath": ".twin/tasks/VIS-008/visual-requirements.json",
+    "ownerFeedbackPath": ".twin/tasks/VIS-007/OWNER_FEEDBACK.md",
+    "ownerReviewStatus": "pending-new-candidate"
+  },
+  "profiles": {
+    "v1": {
+      "canonicalBranch": "work/twin-site-system",
+      "sourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+      "publishedSourceBaseline": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
+      "liveUrl": "https://aurrrus.github.io/twin-web-concept/",
+      "verification": "historical-registry; current live runtime not verified in WF-001",
+      "tokensPath": ".twin/tokens.json",
+      "assetsPath": ".twin/assets.json"
+    },
+    "v2": {
+      "route": "/v2/",
+      "productionBasePath": "/twin-web-concept",
+      "published": {
+        "sourceCommit": "f8c58f2a4784505a9c0942166dfdb030cfb34e50",
+        "pagesCommit": "e778d8819e4d49392f12604f9e15bca254fc0f35",
+        "branch": "twin-preview",
+        "url": "https://aurrrus.github.io/twin-web-concept/v2/",
+        "verification": "Live HTTP200 task/source marker and CI online/V1 checks verified2026-11-04; final owner approval pending",
+        "workflowRun": "https://github.com/AURRRUS/twin-web-concept/actions/runs/41726519103"
+      },
+      "typographySource": ".twin/v2/typography.json",
+      "tokensPath": ".twin/v2/tokens.json",
+      "assetsPath": ".twin/v2/assets.json"
+    }
+  },
+  "publicationAuthority": {
+    "source": ".twin/tasks/VIS-008/task.json#/publication",
+    "appliesTo": "siteCandidate",
+    "note": "Bounded working preview authorized; accepted transition preserved; next pair awaits owner"
+  }
+}

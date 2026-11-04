@@ -1,7 +1,8 @@
 import{useEffect,useRef,useState}from'react';
 import content from'./journeyV456Content.json';
 import{bindShortWords}from'./text';
-import{journeyV456Frame,horizontalTargets,navTargets,type V456Frame}from'./journeyV456Frame.mjs';
+import{journeyV456Frame,horizontalTargets,navTargets}from'./journeyV456Frame.mjs';
+type V456Frame=ReturnType<typeof journeyV456Frame>;
 export{navTargets};
 export const v456Scenes=content.map(s=>({...s,eyebrow:bindShortWords(s.eyebrow),heading:{main:bindShortWords(s.heading.main),bronze:bindShortWords(s.heading.bronze)},description_lines:s.description_lines.map(bindShortWords),media:({project:'r2JourneyProject',corpus:'r2JourneyCorpus',floor:'r2JourneyFloor',lot:'r2JourneyLot'}as const)[s.id as'project'|'corpus'|'floor'|'lot']}));
 const RATIO=1672/941;

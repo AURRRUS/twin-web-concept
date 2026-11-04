@@ -1,0 +1,9 @@
+{
+  "sourceCommit": "981b95758c58b876e7a7c1e0092def5190e38579",
+  "runtimeSource": "56905ee4030f25cf6e992e7c5049e63e373ddc3e",
+  "checkedLocalTextFiles": 76,
+  "mismatches": [],
+  "binaryAssets": "not materialized; preserve unchanged via base Git tree, verify published commit diff separately",
+  "browser": "NOT_RUN",
+  "deployment": "NOT_RUN"
+}

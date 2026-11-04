@@ -6,6 +6,8 @@ import { initialSelection, validateSelection, type Selection } from '../../lib/c
 import { sitePath } from '../../lib/paths';
 import content from '../../../.twin/tasks/VIS-002/content.json';
 import story from '../../lib/salesStoryContent.json';
+import roleContent from '../../../.twin/tasks/JRN-001/content.json';
+import {openingTravel, openingFrame, holdTarget} from '../../lib/openingJourneyFrame.mjs';
 import { Icon } from '../Icon';
 const media = (file:string) => sitePath(`/media/${file}`);
 const approved = (file:string) => media(`approved-20261027/${file}.webp`);
@@ -14,22 +16,49 @@ const journeyImages=['journey-location','journey-compare','journey-floor','journ
 const channelImages=['channel-site','channel-remote','channel-agent','channel-office'];
 export function ReferenceJourney(){
  const [active,setActive]=useState(0),[pinned,setPinned]=useState(false);
- const root=useRef<HTMLElement>(null),panel=useRef<HTMLDivElement>(null),jump=useRef<(i:number)=>void>((i)=>setActive(i));
+ const root=useRef<HTMLElement>(null),panel=useRef<HTMLDivElement>(null),jump=useRef<(i:number)=>void>(()=>{});
  useEffect(()=>{
-  const el=root.current!,box=panel.current!,reduced=matchMedia('(prefers-reduced-motion: reduce)');let raf=0,disposed=false,enabled=false,start=0,travel=1800,selected=0,layoutRaf=0;
-  const paint=()=>{raf=0;if(enabled)setActive(selected=Math.min(3,Math.max(0,Math.floor((scrollY-start)/travel*4))));};
+  const el=root.current!,box=panel.current!,reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  let raf=0,layoutRaf=0,disposed=false,enabled=false,start=0,travel=openingTravel(innerHeight),selected=active,viewportWidth=innerWidth,viewportHeight=innerHeight,panelHeight=0;
+  const apply=(f:ReturnType<typeof openingFrame>)=>{
+   el.dataset.phase=f.phase;el.dataset.progress=f.p.toFixed(4);
+   el.querySelectorAll<HTMLImageElement>('.r4-journey-images img').forEach((img,i)=>{const incoming=enabled&&f.phase==='reveal'&&i===f.to;const visible=i===f.active||(enabled&&f.phase==='reveal'&&(i===f.from||i===f.to));img.style.opacity=visible?'1':'0';img.style.zIndex=incoming?'2':'1';img.style.clipPath=incoming?`inset(0 0 ${(1-f.q)*100}% 0)`:'none';});
+   el.querySelectorAll<HTMLElement>('.r4-journey-detail>.r4-journey-copy').forEach(copy=>{copy.style.opacity=enabled?String(f.copyOpacity):'1';copy.style.transform=enabled?`translateY(${f.copyY}px)`:'none';});
+   if(selected!==f.active){selected=f.active;setActive(selected);}
+  };
+  const paint=()=>{raf=0;if(enabled)apply(openingFrame((scrollY-start)/travel));};
   const onScroll=()=>{if(enabled&&!raf)raf=requestAnimationFrame(paint);};
-  const layout=()=>{if(disposed)return;const was=enabled;const inView=el.getBoundingClientRect().top<=24&&el.getBoundingClientRect().bottom>0;const oldProgress=Math.max(0,Math.min(1,(scrollY-start)/travel));enabled=innerWidth>=1100&&innerHeight>=box.scrollHeight+48&&!reduced.matches;setPinned(enabled);el.style.setProperty('--journey-travel',enabled?`${travel}px`:'0px');el.style.setProperty('--journey-panel-height',`${box.getBoundingClientRect().height}px`);start=el.getBoundingClientRect().top+scrollY-24;if(was!==enabled&&inView&&was)scrollTo({top:el.getBoundingClientRect().top+scrollY,behavior:'instant'});else if(was&&enabled&&inView)scrollTo({top:start+oldProgress*travel,behavior:'instant'});};
+  const layout=()=>{
+   if(disposed)return;
+   const was=enabled,rect=el.getBoundingClientRect(),inView=rect.top<=24&&rect.bottom>0;
+   const viewportChanged=viewportWidth!==innerWidth||viewportHeight!==innerHeight;viewportWidth=innerWidth;viewportHeight=innerHeight;
+   const oldProgress=Math.max(0,Math.min(1,(scrollY-start)/travel));
+   const measured=Array.from(el.querySelectorAll<HTMLElement>('.r4-journey-copy-measure>.r4-journey-copy')).map(c=>c.getBoundingClientRect().height);
+   if(measured.length)el.style.setProperty('--journey-copy-height',`${Math.ceil(Math.max(...measured))}px`);
+   travel=openingTravel(innerHeight);enabled=innerWidth>=1100&&innerHeight>=680&&box.scrollHeight+48<=innerHeight&&!reduced.matches;
+   const nextHeight=box.getBoundingClientRect().height,heightChanged=Math.abs(nextHeight-panelHeight)>1;panelHeight=nextHeight;
+   setPinned(enabled);el.style.setProperty('--journey-travel',enabled?`${travel}px`:'0px');el.style.setProperty('--journey-panel-height',`${nextHeight}px`);
+   start=el.getBoundingClientRect().top+scrollY-24;
+   if(inView&&was&&!enabled)window.scrollTo({top:start+24,behavior:'instant'});
+   else if(inView&&enabled&&(!was||viewportChanged||heightChanged))window.scrollTo({top:start+travel*(was?oldProgress:holdTarget(selected)),behavior:'instant'});
+   if(enabled)paint();
+   else apply(openingFrame(holdTarget(selected)));
+  };
   const requestLayout=()=>{cancelAnimationFrame(layoutRaf);layoutRaf=requestAnimationFrame(layout);};
-  jump.current=(i)=>{setActive(selected=i);if(enabled)window.scrollTo({top:start+travel*((i+.5)/4),behavior:reduced.matches?'instant':'smooth'});};
-  const ro=new ResizeObserver(requestLayout);ro.observe(box);window.addEventListener('resize',requestLayout);window.addEventListener('scroll',onScroll,{passive:true});reduced.addEventListener('change',layout);document.fonts.ready.then(layout);layout();
-  return()=>{disposed=true;cancelAnimationFrame(raf);cancelAnimationFrame(layoutRaf);ro.disconnect();window.removeEventListener('resize',requestLayout);window.removeEventListener('scroll',onScroll);reduced.removeEventListener('change',layout);};
+  jump.current=(i)=>{if(enabled)window.scrollTo({top:start+travel*holdTarget(i),behavior:'smooth'});else{apply(openingFrame(holdTarget(i)));}};
+  const ro=new ResizeObserver(requestLayout);ro.observe(box);
+  window.addEventListener('resize',requestLayout);window.addEventListener('scroll',onScroll,{passive:true});reduced.addEventListener('change',requestLayout);
+  document.fonts.ready.then(requestLayout);el.querySelectorAll('img').forEach(img=>img.addEventListener('load',requestLayout));requestLayout();
+  return()=>{disposed=true;cancelAnimationFrame(raf);cancelAnimationFrame(layoutRaf);ro.disconnect();window.removeEventListener('resize',requestLayout);window.removeEventListener('scroll',onScroll);reduced.removeEventListener('change',requestLayout);el.querySelectorAll('img').forEach(img=>img.removeEventListener('load',requestLayout));};
  },[]);
- return <section id="journey" className="r4-journey" ref={root} data-pinned={pinned} aria-labelledby="journey-heading"><div className="r4-journey-panel r4-wrap" ref={panel}>
-  <h2 id="journey-heading">Покажите, почему стоит<br/> выбрать <span className="bronze">ваш проект</span></h2>
-  <div className="r4-journey-grid"><div className="r4-journey-options" onKeyDown={event=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;const b=Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>('button'));const i=b.indexOf(event.target as HTMLButtonElement);if(i<0)return;event.preventDefault();b[event.key==='Home'?0:event.key==='End'?3:(i+(event.key==='ArrowDown'?1:3))%4]?.focus();}}>{content.journey.scenes.map((s,i)=><article key={s.id} data-active={active===i}>
+ const copy=(i:number)=><><div><h3>Покупателю</h3><p>{t(roleContent.scenes[i].buyer)}</p></div><div><h3>Команде продаж</h3><p>{t(roleContent.scenes[i].sales)}</p></div></>;
+ return <section id="journey" className="r4-journey" ref={root} data-pinned={pinned} data-state={active} aria-labelledby="journey-heading"><div className="r4-journey-panel r4-wrap" ref={panel}>
+  <h2 id="journey-heading"><span>Покажите, почему стоит</span><span>выбрать <em className="bronze">ваш проект</em></span></h2>
+  <div className="r4-journey-grid"><div className="r4-journey-options" onKeyDown={event=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;const b=Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>('button'));const i=b.indexOf(event.target as HTMLButtonElement);if(i<0)return;event.preventDefault();b[event.key==='Home'?0:event.key==='End'?3:(i+(event.key==='ArrowDown'?1:3))%4]?.focus();}}>
+   <div className="r4-journey-copy-measure" aria-hidden="true">{content.journey.scenes.map((s,i)=><div className="r4-journey-copy" key={s.id}>{copy(i)}</div>)}</div>
+   {content.journey.scenes.map((s,i)=><article key={s.id} data-active={active===i}>
    <button type="button" aria-expanded={active===i} aria-controls={`r4-scene-${s.id}`} onClick={()=>jump.current(i)}><Icon name={(['compass','layers','plan','eye'] as const)[i]}/><span>{t(s.label)}</span><span className="r4-chevron" aria-hidden="true">{active===i?'⌄':'›'}</span></button>
-   <div id={`r4-scene-${s.id}`} hidden={active!==i}><div className="r4-journey-copy"><h3>{t(s.lead)}</h3><p>{t(s.body)}</p></div><img className="r4-journey-mobile-image" src={approved(journeyImages[i])} alt={s.label} width="1672" height="941" loading="lazy"/></div>
+   <div id={`r4-scene-${s.id}`} className="r4-journey-detail" hidden={active!==i}><div className="r4-journey-copy">{copy(i)}</div><figure className="r4-journey-mobile-media"><img className="r4-journey-mobile-image" src={approved(journeyImages[i])} alt={s.label} width="1672" height="941" loading="lazy"/><figcaption className="r4-journey-mobile-links"><a href={approved(journeyImages[i])} target="_blank" rel="noreferrer">Открыть изображение целиком ↗</a><a href={sitePath('/demo/')}>Посмотреть Twin →</a></figcaption></figure></div>
   </article>)}</div><div className="r4-journey-images">{content.journey.scenes.map((s,i)=><img key={s.id} data-active={active===i} src={approved(journeyImages[i])} alt={active===i?s.label:''} aria-hidden={active!==i} width="1672" height="941" loading="eager"/>)}</div></div>
  </div></section>;
 }

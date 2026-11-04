@@ -1,0 +1,54 @@
+{
+  "id": "VIS-007",
+  "mode": "execute",
+  "status": "implemented",
+  "outcome": "Доводка первых двух экранов в той же V2 с независимой проверкой и доступным результатом",
+  "baseline": "28a67136c47be1c329c5d914a2c3394ddc5e137f",
+  "scope": [
+    "header/hero/transition/four-state ReferenceJourney only; entry into unchanged demo"
+  ],
+  "sources": [
+    ".twin/tasks/VIS-007/TASK.md",
+    ".twin/tasks/VIS-004/reference-upper.jpg",
+    ".twin/tasks/VIS-004/ENGINEERING.md",
+    ".twin/v2/typography.json",
+    ".twin/tasks/VIS-002/content.json"
+  ],
+  "roles": [
+    "hero",
+    "section",
+    "body",
+    "control"
+  ],
+  "responsive": [
+    "1440x900",
+    "390x844",
+    "1366x768",
+    "1920x1080",
+    "360x800",
+    "768",
+    "1024",
+    "1099",
+    "1100"
+  ],
+  "acceptance": [
+    "Protected master and downstream code unchanged",
+    "Credible foreground and balanced composition",
+    "Four directly accessible states",
+    "Independent actual browser review",
+    "Openable export of same candidate"
+  ],
+  "motionChanged": true,
+  "motionContract": "MOTION.md",
+  "publication": {
+    "allowed": true,
+    "kind": "preview",
+    "reason": "Owner asked to execute proposed source save and working preview; no final design approval or stage2",
+    "evidence": [
+      ".twin/tasks/VIS-007/PUBLICATION_AUTHORITY.md"
+    ],
+    "allowKnownDefects": false,
+    "acceptedDefects": []
+  },
+  "openQuestions": []
+}

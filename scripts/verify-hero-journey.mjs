@@ -1,4 +1,119 @@
-import{chromium}from'@playwright/test';import fs from'node:fs';import assert from'node:assert/strict';
-const out=process.env.V2_QA_DIR||'artifacts/hero-journey';fs.mkdirSync(out,{recursive:true});fs.copyFileSync('.twin/tasks/VIS-004/reference-upper.jpg',out+'/reference-upper.jpg');const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));const results=[];
-try{for(const [w,h]of(process.env.V2_QA_COMPACT?[[1440,900],[1920,1080],[390,844]]:[[1440,900],[1366,768],[1920,1080],[390,844],[360,800],[768,900],[1099,900],[1100,900]])){await p.setViewportSize({width:w,height:h});await p.goto(process.env.V2_URL||'http://localhost:4361/twin-web-concept/v2/',{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(300);assert(await p.evaluate(()=>scrollY<2),'load must stay at hero');assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'overflow '+w);const sizes=await p.locator('.r4-hero-copy h1').evaluate(e=>({size:getComputedStyle(e).fontSize,line:getComputedStyle(e).lineHeight,weight:getComputedStyle(e).fontWeight}));if(w>=1100)assert.deepEqual(sizes,{size:'58px',line:'68px',weight:'700'});await p.screenshot({path:`${out}/hero-${w}.png`});const j=p.locator('#journey');await p.evaluate(()=>scrollTo(0,document.querySelector('#journey').getBoundingClientRect().top+scrollY-200));await p.screenshot({path:`${out}/join-${w}.png`});for(let i=0;i<4;i++){await j.locator('.r4-journey-options button').nth(i).click();await p.waitForTimeout(750);assert.equal(await j.locator('.r4-journey-options button').nth(i).getAttribute('aria-expanded'),'true');if(w===1440||w===390)await p.screenshot({path:`${out}/state-${i}-${w}.png`})}if(await j.getAttribute('data-pinned')==='true'){for(const q of[.1,.4,.7,.95,.7,.4,.1]){await j.evaluate((e,v)=>scrollTo({top:e.getBoundingClientRect().top+scrollY-24+1800*v,behavior:'instant'}),q);await p.waitForTimeout(400);const before=await p.locator('.r4-journey-options button').evaluateAll(ns=>ns.map(n=>n.getAttribute('aria-expanded')));await p.waitForTimeout(180);assert.deepEqual(await p.locator('.r4-journey-options button').evaluateAll(ns=>ns.map(n=>n.getAttribute('aria-expanded'))),before)}}await p.locator('.r4-demo').scrollIntoViewIfNeeded();await p.screenshot({path:`${out}/exit-${w}.png`});await p.evaluate(()=>scrollTo(0,0));results.push({w,h,pinned:await j.getAttribute('data-pinned')})}
-await p.emulateMedia({reducedMotion:'reduce'});await p.setViewportSize({width:1440,height:900});await p.reload({waitUntil:'networkidle'});await p.waitForTimeout(200);assert.equal(await p.locator('#journey').getAttribute('data-pinned'),'false');await p.locator('.r4-journey-options button').first().focus();await p.keyboard.press('End');await p.keyboard.press('Enter');assert.equal(await p.locator('.r4-journey-options button').last().getAttribute('aria-expanded'),'true');assert.deepEqual(errors,[]);fs.writeFileSync(out+'/results.json',JSON.stringify({status:'PASS',results,errors},null,2));}catch(e){await p.screenshot({path:out+'/failure.png'});throw e}finally{await b.close()}
+import {chromium} from '@playwright/test';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+
+const typography = JSON.parse(fs.readFileSync('.twin/v2/typography.json', 'utf8'));
+const state = JSON.parse(fs.readFileSync('.twin/state.json', 'utf8'));
+const visualContract = JSON.parse(fs.readFileSync(`${state.siteCandidate.path}/visual-contract.json`, 'utf8'));
+assert(visualContract.motion?.contract?.driver === 'scroll', 'Current candidate must declare its actual scroll contract');
+const out = process.env.V2_QA_DIR || 'artifacts/hero-journey';
+fs.mkdirSync(out, {recursive: true});
+fs.copyFileSync(visualContract.reference.path, `${out}/reference-upper.jpg`);
+const browser = await chromium.launch({
+  ...(process.env.QA_CHROMIUM ? {executablePath: process.env.QA_CHROMIUM} : {}),
+  args: ['--no-sandbox']
+});
+const page = await browser.newPage();
+const errors = [];
+page.on('pageerror', error => errors.push(error.message));
+const results = [];
+
+async function naturalExit(journey, width, height) {
+  // Establish a repeatable starting state; the transition out is driven ONLY by wheel input.
+  await journey.evaluate(element => scrollTo({top: element.getBoundingClientRect().top + scrollY - 24, behavior: 'instant'}));
+  await page.waitForTimeout(120);
+  await page.mouse.move(width / 2, height / 2);
+  const start = await page.evaluate(() => scrollY);
+  const seen = new Set();
+  const pinned = await journey.getAttribute('data-pinned') === 'true';
+  const travel = await journey.evaluate(element => parseFloat(getComputedStyle(element).getPropertyValue('--journey-travel')) || 0);
+  const step = 300;
+  const maxSteps = Math.ceil((await journey.evaluate(element => element.offsetHeight) + height * 2) / step) + 2;
+  let exited = false;
+  for (let index = 0; index < maxSteps; index++) {
+    seen.add(await journey.locator('.r4-journey-options button').evaluateAll(buttons => buttons.findIndex(button => button.getAttribute('aria-expanded') === 'true')));
+    const before = await page.evaluate(() => scrollY);
+    await page.mouse.wheel(0, step);
+    await page.waitForTimeout(120);
+    const state = await page.evaluate(() => ({
+      y: scrollY,
+      journeyBottom: document.querySelector('#journey').getBoundingClientRect().bottom,
+      demoTop: document.querySelector('.r4-demo').getBoundingClientRect().top
+    }));
+    assert(state.y > before, `wheel input did not move the page at ${width}x${height}`);
+    if (state.journeyBottom < height && state.demoTop < height && state.demoTop >= -step) {
+      exited = true;
+      break;
+    }
+  }
+  assert(exited, `natural wheel exit into demo failed at ${width}x${height}`);
+  assert(await page.evaluate(() => scrollY) > start, 'exit must involve real user scrolling');
+  if (pinned) assert.deepEqual([...seen].sort(), [0, 1, 2, 3], 'wheel traversal must expose all four current ReferenceJourney states');
+  return {driver: 'wheel', statesSeen: [...seen].sort(), pinned};
+}
+
+try {
+  const viewports = process.env.V2_QA_COMPACT
+    ? [[1440, 900], [1920, 1080], [390, 844]]
+    : [[1440, 900], [1366, 768], [1920, 1080], [390, 844], [360, 800], [768, 900], [1099, 900], [1100, 900]];
+  for (const [width, height] of viewports) {
+    await page.setViewportSize({width, height});
+    await page.goto(process.env.V2_URL || 'http://localhost:4361/twin-web-concept/v2/', {waitUntil: 'networkidle'});
+    await page.evaluate(() => document.fonts.ready);
+    await page.waitForTimeout(300);
+    assert(await page.evaluate(() => scrollY < 2), 'load must stay at hero');
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `overflow ${width}`);
+    const profile = width <= typography.breakpoints.mobileMax ? 'mobile' : width <= typography.breakpoints.tabletMax ? 'tablet' : 'desktop';
+    const hero = typography.roles.hero;
+    const sizes = await page.locator('.r4-hero-copy h1').evaluate(element => {
+      const style = getComputedStyle(element);
+      return {size: parseFloat(style.fontSize), lineHeight: parseFloat(style.lineHeight), weight: Number(style.fontWeight)};
+    });
+    const narrow = hero.mobileNarrow && width <= hero.mobileNarrow.maxWidth ? hero.mobileNarrow : hero[profile];
+    assert.deepEqual(sizes, {size: narrow.size, lineHeight: narrow.lineHeight, weight: hero.weight});
+    await page.screenshot({path: `${out}/hero-${width}.png`});
+    const journey = page.locator('#journey');
+    await journey.evaluate(element => scrollTo(0, element.getBoundingClientRect().top + scrollY - 200));
+    await page.screenshot({path: `${out}/join-${width}.png`});
+    for (let index = 0; index < 4; index++) {
+      await journey.locator('.r4-journey-options button').nth(index).click();
+      await page.waitForTimeout(750);
+      assert.equal(await journey.locator('.r4-journey-options button').nth(index).getAttribute('aria-expanded'), 'true');
+      if (width === 1440 || width === 390) await page.screenshot({path: `${out}/state-${index}-${width}.png`});
+    }
+    if (await journey.getAttribute('data-pinned') === 'true') {
+      const travel = await journey.evaluate(element => parseFloat(getComputedStyle(element).getPropertyValue('--journey-travel')));
+      assert(travel >= 2800, 'Current opening must expose the declared reading budget');
+      const fit = await page.locator('.r4-journey-panel').evaluate(element => ({height:element.getBoundingClientRect().height,scrollHeight:element.scrollHeight}));
+      assert(Math.max(fit.height,fit.scrollHeight) <= height-48, `Current panel does not fit ${width}x${height}`);
+      // Deterministic sampling checks state stability/reverse; it does not prove natural exit.
+      for (const progress of [.1, .4, .7, .95, .7, .4, .1]) {
+        await journey.evaluate((element, target) => scrollTo({top: element.getBoundingClientRect().top + scrollY - 24 + target, behavior: 'instant'}), travel * progress);
+        await page.waitForTimeout(400);
+        const before = await journey.locator('.r4-journey-options button').evaluateAll(buttons => buttons.map(button => button.getAttribute('aria-expanded')));
+        await page.waitForTimeout(180);
+        assert.deepEqual(await journey.locator('.r4-journey-options button').evaluateAll(buttons => buttons.map(button => button.getAttribute('aria-expanded'))), before);
+      }
+    }
+    if (width >= 1100 && height >= 680) assert.equal(await journey.getAttribute('data-pinned'), 'true', `Required desktop pin disabled at ${width}x${height}`);
+    const exit = await naturalExit(journey, width, height);
+    await page.screenshot({path: `${out}/exit-${width}.png`});
+    results.push({width, height, typographyProfile: profile, exit});
+  }
+  await page.emulateMedia({reducedMotion: 'reduce'});
+  await page.setViewportSize({width: 1440, height: 900});
+  await page.reload({waitUntil: 'networkidle'});
+  await page.waitForTimeout(200);
+  assert.equal(await page.locator('#journey').getAttribute('data-pinned'), 'false');
+  await page.locator('.r4-journey-options button').first().focus();
+  await page.keyboard.press('End');
+  await page.keyboard.press('Enter');
+  assert.equal(await page.locator('.r4-journey-options button').last().getAttribute('aria-expanded'), 'true');
+  assert.deepEqual(errors, []);
+  fs.writeFileSync(`${out}/results.json`, JSON.stringify({status: 'PASS', scope: 'technical browser assertions', visualAcceptance: 'NOT_PERFORMED', results, errors}, null, 2));
+} catch (error) {
+  await page.screenshot({path: `${out}/failure.png`});
+  throw error;
+} finally {
+  await browser.close();
+}

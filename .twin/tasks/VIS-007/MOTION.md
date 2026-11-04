@@ -1,0 +1,1 @@
+Native scroll only. Four equal hold phases. Travel round(clamp(960,innerHeight*1.244,1440)). Pin only >=1100px when actual panel+48px fits. Mobile/lowheight/reduced-motion normal flow. Direct click, arrows/Home/End, reverse/reentry, free exit. Opacity280ms only, no parallax.

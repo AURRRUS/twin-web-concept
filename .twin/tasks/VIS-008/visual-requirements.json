@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "ids": [
+    "hero",
+    "transition",
+    "journey",
+    "mobile",
+    "motion"
+  ],
+  "references": [
+    ".twin/tasks/VIS-004/reference-upper.jpg"
+  ],
+  "inputPrefixes": [
+    "src/",
+    "public/media/"
+  ],
+  "inputPaths": [
+    ".twin/v2/tokens.json",
+    ".twin/v2/typography.json",
+    ".twin/tasks/VIS-002/content.json",
+    "astro.config.mjs",
+    "package.json",
+    "package-lock.json",
+    "scripts/build-v2.mjs",
+    "tsconfig.json",
+    ".twin/tasks/JRN-001/content.json"
+  ],
+  "reviewPath": ".twin/tasks/VIS-008/review.json",
+  "contractPath": ".twin/tasks/VIS-008/visual-contract.json",
+  "note": "Only first two screens; include actual scroll holds/fit and preserve operator-approved transition; lower blocks planning only"
+}

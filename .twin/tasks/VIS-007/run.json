@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "mode": "execute",
+  "targetStage": "release",
+  "taskEvidence": [
+    ".twin/tasks/VIS-007/TASK.md",
+    ".twin/tasks/VIS-007/task.json"
+  ],
+  "runtimeCommit": "cd91791c02ad87947540ac28210ba3174f3f6cb3",
+  "runtimeFingerprint": "58be2fe7fd1feea84491ff306e21690feecb842ec8bdfba5c1b660f676923c2d",
+  "contractFingerprint": "b8ddff93dc1c1d4a0c84826e05efe072c438f96e12d4914450ed1e2948b38d1d",
+  "implementer": "/root/restore_and_save_runtime",
+  "agents": [
+    {
+      "id": "/root/restore_and_save_runtime",
+      "role": "implementer",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-007/agents.json"
+      ]
+    },
+    {
+      "id": "/root/final_visual_check",
+      "role": "reviewer",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-007/agents.json"
+      ]
+    },
+    {
+      "id": "/root/preview_independent_check",
+      "role": "independent preview reviewer",
+      "status": "completed",
+      "evidence": [
+        ".twin/tasks/VIS-007/PREVIEW_REVIEW.md"
+      ]
+    }
+  ],
+  "independentReviewRequired": true,
+  "ownerCheckpoints": [
+    {
+      "id": "stage1-owner",
+      "status": "pending",
+      "beforeStage": "release",
+      "evidence": [
+        ".twin/tasks/VIS-007/TASK.md"
+      ],
+      "releaseKinds": [
+        "final"
+      ],
+      "reason": "Final design acceptance checkpoint; explicitly authorized working preview is separate"
+    }
+  ],
+  "assetInventoryComplete": true,
+  "assetJobs": [
+    {
+      "id": "coastal-foreground",
+      "required": true,
+      "status": "accepted",
+      "maxCalls": 2,
+      "attemptsUsed": 2,
+      "source": "public/media/top-v2/hero.webp",
+      "protected": "All original hotel/sea/shoreline pixels retained independently",
+      "outputs": [
+        "public/media/top-v2/opening-terrace.png"
+      ],
+      "native": [
+        1528,
+        1029
+      ],
+      "sha256": "d33d20149a7bce83f4cf0cb15c70756927d5026dbacc0dcc5bbf352b80430f82",
+      "method": "Two built-in imagegen attempts in earlier turn; exact saved second output reused, no new generation",
+      "ownerAcceptance": "pending",
+      "acceptedBy": "/root/restore_and_save_runtime + /root/final_visual_check",
+      "observed": "In actual scene terrace has stone texture, parapet thickness and perspective; original hero unchanged",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    }
+  ],
+  "stages": {
+    "brief": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/TASK.md",
+        ".twin/tasks/VIS-007/task.json"
+      ]
+    },
+    "spec": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/visual-contract.json"
+      ]
+    },
+    "sample": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    },
+    "assets": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    },
+    "static": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    },
+    "responsive": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    },
+    "motion": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md"
+      ]
+    },
+    "review": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/REVIEW.md",
+        ".twin/tasks/VIS-007/PREVIEW_REVIEW.md",
+        ".twin/tasks/VIS-007/review.json"
+      ]
+    },
+    "release": {
+      "status": "done",
+      "evidence": [
+        ".twin/tasks/VIS-007/DEPLOYMENT.md"
+      ],
+      "reason": "Working preview deployed; online source verified; final owner acceptance pending"
+    }
+  },
+  "review": {
+    "verdict": "ready-for-owner-review",
+    "reviewer": "/root/preview_independent_check",
+    "independent": true,
+    "reference": ".twin/tasks/VIS-004/reference-upper.jpg",
+    "evidence": [
+      ".twin/tasks/VIS-007/PREVIEW_REVIEW.md",
+      ".twin/tasks/VIS-007/review.json"
+    ],
+    "unresolved": [],
+    "runtimeFingerprint": "58be2fe7fd1feea84491ff306e21690feecb842ec8bdfba5c1b660f676923c2d",
+    "contractFingerprint": "b8ddff93dc1c1d4a0c84826e05efe072c438f96e12d4914450ed1e2948b38d1d",
+    "minorNotes": [
+      "Mobile raster micro-labels require full-image/demo view",
+      "Some free space below media at1024–1100"
+    ],
+    "notRun": [
+      "Physical touch/iOS device",
+      "OS reduced-motion preference emulation"
+    ]
+  },
+  "publication": {
+    "allowed": true,
+    "kind": "preview",
+    "reason": "Owner asked to execute proposed source save and working preview; no final design approval or stage2",
+    "evidence": [
+      ".twin/tasks/VIS-007/PUBLICATION_AUTHORITY.md"
+    ],
+    "allowKnownDefects": false,
+    "acceptedDefects": [],
+    "source": ".twin/tasks/VIS-007/task.json#/publication",
+    "generated": true,
+    "runtimeFingerprint": "58be2fe7fd1feea84491ff306e21690feecb842ec8bdfba5c1b660f676923c2d",
+    "contractFingerprint": "b8ddff93dc1c1d4a0c84826e05efe072c438f96e12d4914450ed1e2948b38d1d"
+  },
+  "ownerAcceptance": {
+    "status": "changes-requested",
+    "evidence": [
+      ".twin/tasks/VIS-007/OWNER_FEEDBACK.md"
+    ],
+    "reason": "Owner rejected current stage1 composition/type/controls and scroll staging; feedback collection in progress"
+  },
+  "previousScopedRuntimeFingerprint": "5878a95e484d7e6eefa3cbd8b512f6c34af394ee625b2dbb10beafb578e3efde"
+}

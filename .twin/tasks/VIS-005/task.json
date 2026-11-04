@@ -10,7 +10,11 @@
   "sources": [
     ".twin/tasks/VIS-005/TASK.md",
     ".twin/tasks/VIS-004/reference-upper.jpg",
-    ".twin/tasks/VIS-002/content.json"
+    ".twin/tasks/VIS-002/content.json",
+    ".twin/tasks/VIS-004/ENGINEERING.md",
+    ".twin/v2/typography.json",
+    ".twin/tasks/VIS-005/visual-contract.json",
+    ".twin/tasks/VIS-005/MIGRATION.md"
   ],
   "roles": [
     "hero",
@@ -35,7 +39,26 @@
   ],
   "publication": {
     "allowed": true,
-    "reason": "Owner explicitly authorizes current full build at existing /v2/ as working owner-review; known mask defect accepted for viewing only, not visual approval"
+    "reason": "Owner explicitly authorizes current full build at existing /v2/ as working owner-review; known mask defect accepted for viewing only, not visual approval",
+    "kind": "preview",
+    "allowKnownDefects": true,
+    "acceptedDefects": [
+      "VIS005-MASK-001"
+    ],
+    "scope": "Existing full /v2/ build for working owner review; no final owner acceptance",
+    "evidence": [
+      ".twin/tasks/VIS-005/task.json"
+    ],
+    "authorizationOrigin": "Existing owner authorization recorded in task.json at source56905ee; preserved by WF-001, not newly granted",
+    "finalOwnerAcceptance": "pending",
+    "assetExceptions": [
+      {
+        "jobId": "original-facade-alpha",
+        "defectId": "VIS005-MASK-001"
+      }
+    ]
   },
-  "openQuestions": []
+  "openQuestions": [],
+  "motionChanged": true,
+  "motionContract": "visual-contract.json"
 }
