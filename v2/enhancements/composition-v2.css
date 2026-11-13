@@ -1,0 +1,51 @@
+/* VIS-011: composition art and continuous component browser. */
+.r4-film .r4-film-intro{top:8svh}
+.vis004 .r4-composition{padding-block:80px 56px}
+.vis004 .r4-composition .center-heading{text-align:center;max-width:1050px;margin:0 auto 32px}
+.vis004 .r4-composition .center-heading h2{max-width:none;font-size:clamp(36px,3.6vw,60px);line-height:1.12;margin:16px 0 20px}
+.vis004 .r4-composition .center-heading h2 .bronze{display:inline}
+.vis004 .r4-composition .center-heading p{font:400 20px/30px TV2Dewi,sans-serif;max-width:850px;margin:auto}
+.vis004 .r4-composition .composition-map{display:grid;grid-template-columns:minmax(230px,1fr) minmax(360px,1.7fr) minmax(230px,1fr);grid-template-rows:repeat(3,minmax(230px,auto));gap:12px 28px;align-items:center;margin-top:20px;position:relative}
+.vis004 .r4-composition .map-component{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:0 4px 16px;border:0;background:transparent;position:relative;z-index:2;text-decoration:none;border-radius:12px;transition:background .25s,transform .25s}
+.vis004 .r4-composition .map-component:hover{background:#a5784808;transform:translateY(-3px)}
+.vis004 .r4-composition .component-art{width:100%;height:180px;min-width:0;border:0;border-radius:0;padding:0;display:block;background:transparent;overflow:visible;box-shadow:none;margin-bottom:6px}
+.vis004 .r4-composition .component-illustration{display:block;width:100%;height:100%;max-width:330px;overflow:visible}
+.vis004 .r4-composition .map-component h3{display:flex;align-items:center;gap:10px;font:700 clamp(18px,1.4vw,24px)/1.3 TV2Dewi,sans-serif;margin:0 0 8px;color:#252a2d}
+.vis004 .r4-composition .map-component h3 .arrow{flex:none;width:28px;height:28px;border:1px solid #ac84515c;border-radius:50%;padding:5px;color:#956a3f}
+.vis004 .r4-composition .map-component p{font:400 17px/25px TV2Dewi,sans-serif;margin:0;max-width:330px;color:#626974}
+.vis004 .r4-composition .map-core{grid-area:1/2/4/3;align-self:center;width:100%;max-width:none;justify-self:center;z-index:1;text-align:center;margin:0;padding:0}
+.vis004 .r4-composition .map-core>.media{width:120%;max-width:none;height:auto;margin-left:-10%;display:block}
+.vis004 .r4-composition .map-core>.media img{width:100%;height:auto;max-width:none}
+.vis004 .r4-composition .map-core .badge{display:inline-block;margin:20px 0 12px;padding:8px 18px;font:600 14px/20px TV2Dewi;background:#997145;color:#fff;border-radius:24px}
+.vis004 .r4-composition .map-core h3{font:700 clamp(23px,2vw,34px)/1.2 TV2Dewi,sans-serif;color:#2a2d30;margin:0 0 14px}
+.vis004 .r4-composition .core-explore{display:inline-flex;align-items:center;gap:12px;font:600 16px/24px TV2Dewi;color:#956a3f}
+.vis004 .r4-composition .composition-lines{z-index:0;pointer-events:none;opacity:.65}
+.vis004 .r4-composition .section-note{text-align:center;font:400 16px/24px TV2Dewi;margin-top:24px}
+.vis004 .r4-composition .extension{position:absolute;top:10px;right:4px;font-size:12px;padding:4px 10px;border:1px solid #b18b5d;border-radius:20px}
+.vis004 .component-dialog{width:min(1320px,calc(100vw - 64px));max-width:none;max-height:calc(100svh - 56px);padding:0;border:1px solid #b18b5d38;border-radius:18px;background:#faf9f6;color:#272c30;box-shadow:0 40px 120px #0004;overflow:auto}
+.vis004 .component-dialog::backdrop{background:#17202399;backdrop-filter:blur(9px)}
+.vis004 .component-dialog .dialog-inner{padding:48px 52px 32px;position:relative}
+.vis004 .component-dialog .dialog-close{position:absolute;top:20px;right:20px;width:48px;height:48px;border:1px solid #b18b5d45;border-radius:50%;background:#fff;display:grid;place-items:center}
+.vis004 .component-dialog h2{font:700 clamp(28px,2.8vw,44px)/1.15 TV2OpeningExpanded,TV2Expanded,sans-serif;letter-spacing:-.02em;margin:20px 60px 18px 0;padding:0;border:0}
+.vis004 .component-dialog h2:focus{outline:none}
+.vis004 .component-dialog .dialog-intro{font:400 21px/31px TV2Dewi,sans-serif;margin:0 0 28px;max-width:1050px;color:#606874}
+.vis004 .component-dialog .dialog-body{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.vis004 .component-dialog .dialog-art{display:grid;place-items:center;min-height:290px;padding:20px;border-radius:12px;background:radial-gradient(ellipse,#f0e9df80,transparent 72%);overflow:hidden}
+.vis004 .component-dialog .dialog-art .component-illustration{width:100%;height:300px;max-width:460px}
+.vis004 .component-dialog .dialog-art .media,.vis004 .component-dialog .dialog-art img{width:100%;max-height:360px;object-fit:contain}
+.vis004 .component-dialog .dialog-body h3{font:700 25px/33px TV2Dewi;margin:0 0 20px}
+.vis004 .component-dialog .dialog-body ul{list-style:none;padding:0;display:grid;gap:16px;margin:0 0 22px}
+.vis004 .component-dialog .dialog-body li{font:400 20px/29px TV2Dewi;display:flex;gap:14px;align-items:flex-start}
+.vis004 .component-dialog .dialog-body li .icon{width:22px;height:22px;flex:none;color:#9a7147;margin-top:3px}
+.vis004 .component-dialog .dialog-body p{font:400 18px/27px TV2Dewi;color:#606874}
+.vis004 .component-dialog-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;border-block:1px solid #a9855633;margin-top:28px;padding:18px 0}
+.vis004 .component-dialog-nav button{font:600 17px/24px TV2Dewi;padding:12px 20px;min-height:48px;border:1px solid #a9855650;border-radius:28px;background:#fff;color:#73502c;cursor:pointer;transition:background .2s}
+.vis004 .component-dialog-nav button:hover{background:#eee6da}
+.vis004 .component-dialog-nav span{font:500 15px/24px TV2Dewi;color:#74766f;letter-spacing:.12em}
+.vis004 .component-dialog .dialog-footer{display:flex;justify-content:space-between;align-items:center;gap:24px;border:0;padding:24px 0 0;margin:0}
+.vis004 .component-dialog .dialog-footer p{font:400 15px/23px TV2Dewi;max-width:620px;margin:0;color:#6a7075}
+.vis004 .component-dialog .dialog-footer .button{flex:none;font:600 16px/24px TV2Dewi;padding:14px 22px;display:flex;align-items:center;gap:20px;background:#926a40;color:#fff;border:0;border-radius:28px}
+@media(min-width:1600px){.vis004 .r4-composition .composition-map{grid-template-columns:1fr 1.8fr 1fr;grid-template-rows:repeat(3,260px)}.vis004 .r4-composition .component-art{height:210px}}
+@media(max-width:1099px){.vis004 .r4-composition .composition-map{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:28px}.vis004 .r4-composition .map-core{grid-area:1/1/2/3!important;max-width:640px;margin:0 auto 20px}.vis004 .r4-composition .map-component{grid-area:auto!important;align-items:center;text-align:center}.vis004 .r4-composition .component-illustration{margin:auto}.vis004 .r4-composition .map-core>.media{width:100%;margin:0}.vis004 .r4-composition .composition-lines{display:none}.vis004 .component-dialog .dialog-inner{padding:36px 28px 24px}.vis004 .component-dialog .dialog-body{gap:24px}.vis004 .component-dialog .dialog-body li{font-size:18px;line-height:27px}}
+@media(max-width:767px){.r4-film .r4-film-intro{top:40px}.vis004 .r4-composition{padding-block:48px}.vis004 .r4-composition .center-heading h2{font-size:32px}.vis004 .r4-composition .center-heading p{font-size:17px;line-height:26px}.vis004 .r4-composition .composition-map{gap:20px 12px}.vis004 .r4-composition .component-art{height:140px}.vis004 .r4-composition .map-component h3{font-size:18px;flex-wrap:wrap;justify-content:center}.vis004 .r4-composition .map-component p{font-size:15px;line-height:22px}.vis004 .component-dialog{width:calc(100vw - 20px);max-height:calc(100svh - 20px);border-radius:12px}.vis004 .component-dialog .dialog-inner{padding:28px 20px 24px}.vis004 .component-dialog h2{font-size:26px;margin-right:28px}.vis004 .component-dialog .dialog-close{width:40px;height:40px;top:12px;right:12px}.vis004 .component-dialog .dialog-intro{font-size:18px;line-height:27px}.vis004 .component-dialog .dialog-body{grid-template-columns:1fr;gap:20px}.vis004 .component-dialog .dialog-art{min-height:0;padding:0}.vis004 .component-dialog .dialog-art .component-illustration{height:230px}.vis004 .component-dialog .dialog-footer{flex-direction:column;align-items:stretch}.vis004 .component-dialog-nav button{font-size:15px;padding:10px 16px}.vis004 .component-dialog .dialog-footer .button{justify-content:center}.vis004 .component-dialog .dialog-body h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.vis004 .map-component,.vis004 .component-dialog-nav button{transition:none}}
