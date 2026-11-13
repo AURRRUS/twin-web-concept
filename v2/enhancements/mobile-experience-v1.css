@@ -57,6 +57,20 @@
   }
 }
 
+/* Mobile journey becomes a vertical four-scene story.
+   Keep every scene readable; IntersectionObserver changes the active state. */
+@media (max-width: 767px) {
+  .vis004 .r4-journey-options article .r4-journey-detail[hidden] {
+    display: block !important;
+  }
+  .vis004 .r4-journey-options article {
+    scroll-margin-top: 24px;
+  }
+  .vis004 .r4-journey-options article + article {
+    margin-top: 14px;
+  }
+}
+
 /* 2. Journey images: scroll-driven approach → focus → return. */
 @media (max-width: 1099px) {
   .vis004 .r4-journey-mobile-media {
