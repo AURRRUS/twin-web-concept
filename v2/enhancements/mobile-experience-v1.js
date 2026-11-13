@@ -144,11 +144,18 @@
         const detail = article.querySelector(".r4-journey-detail");
         const button = article.querySelector(":scope > button");
         const active = article.dataset.active === "true";
+        const shouldBeHidden = !(mobile || active);
         if (detail) {
-          if (mobile || active) detail.removeAttribute("hidden");
-          else detail.setAttribute("hidden", "");
+          if (shouldBeHidden && !detail.hasAttribute("hidden")) {
+            detail.setAttribute("hidden", "");
+          } else if (!shouldBeHidden && detail.hasAttribute("hidden")) {
+            detail.removeAttribute("hidden");
+          }
         }
-        if (button) button.setAttribute("aria-expanded", String(mobile || active));
+        const expanded = String(mobile || active);
+        if (button && button.getAttribute("aria-expanded") !== expanded) {
+          button.setAttribute("aria-expanded", expanded);
+        }
       });
     };
 
@@ -209,7 +216,9 @@
       subtree: true,
       childList: true,
       attributes: true,
-      attributeFilter: ["hidden", "data-active", "aria-expanded"]
+      // Observe React's active-state changes only. syncMobileJourney writes
+      // hidden and aria-expanded; observing those writes would create a loop.
+      attributeFilter: ["data-active"]
     });
     journey.addEventListener("load", scheduleUpdate, true);
     syncMobileJourney();
