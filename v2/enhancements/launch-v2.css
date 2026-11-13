@@ -16,3 +16,5 @@
 @media(prefers-reduced-motion:reduce){.vis004 .r4-launch>ol>li{transform:none;opacity:1}.vis004 .r4-launch li>img{transform:none}}
 
 @media(max-width:380px){.vis004 .r4-launch>ol>li{grid-template-columns:32px minmax(0,1fr);grid-template-rows:100px auto auto;column-gap:12px}.vis004 .r4-launch li>img{grid-column:2;grid-row:1;height:100px;width:150px;justify-self:start}.vis004 .r4-launch .r4-step-index{grid-row:1/4}.vis004 .r4-launch li>h3{grid-column:2;grid-row:2}.vis004 .r4-launch li>p{grid-column:2;grid-row:3}}
+
+.vis004 .r4-launch{width:min(1440px,calc(100% - 96px));margin-inline:auto}@media(max-width:650px){.vis004 .r4-launch{width:calc(100% - 40px)}}
