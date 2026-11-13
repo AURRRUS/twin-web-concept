@@ -59,7 +59,7 @@
 
 /* Mobile journey becomes a vertical four-scene story.
    Keep every scene readable; IntersectionObserver changes the active state. */
-@media (max-width: 767px) {
+@media (max-width: 1099px) {
   .vis004 .r4-journey-options article .r4-journey-detail[hidden] {
     display: block !important;
   }
@@ -193,7 +193,7 @@
 }
 
 /* 4. Composition map: every circular arrow sits below its heading. */
-@media (max-width: 767px) {
+@media (max-width: 1099px) {
   .vis004 .r4-composition .map-component h3 {
     display: flex;
     flex-direction: column;
