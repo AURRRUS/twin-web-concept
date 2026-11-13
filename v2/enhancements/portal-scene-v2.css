@@ -53,3 +53,6 @@
 .r4-film-play:focus-visible{outline:3px solid #eac797;outline-offset:6px}
 @media(max-width:1099px),(max-height:649px){.r4-film-inner{height:auto;min-height:0;padding:100px 20px 64px;perspective:none}.r4-film-intro{inset:28px 12% auto;opacity:1;transform:none}.r4-film-intro h2{font-size:clamp(24px,4vw,38px)}.r4-film-frame{width:100%;transform:none;z-index:4}.r4-film-wing{opacity:.8}.r4-film-wing-left{transform:translateX(-8%)}.r4-film-wing-right{transform:translateX(8%)}.r4-film-play{width:64px;height:64px}}
 @media(prefers-reduced-motion:reduce){.r4-film-frame{transform:none}.r4-film-intro{opacity:1;transform:none}.r4-film-wing{will-change:auto}.r4-film-wing-left{transform:translateX(-20vw)}.r4-film-wing-right{transform:translateX(18vw)}}
+
+/* Override inherited global img height:auto!important for full-height alpha wings. */
+.r4-film .r4-film-wing{height:100%!important;width:100%!important;max-width:none!important}
