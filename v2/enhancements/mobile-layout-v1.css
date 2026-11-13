@@ -1,5 +1,5 @@
 @media(max-width:767px){
-.vis004 #channels{padding:44px 0 40px!important;min-height:0!important;height:auto!important;display:flex!important;flex-direction:column;gap:24px}
+.vis004 #channels{padding:44px 20px 40px!important;box-sizing:border-box;min-height:0!important;height:auto!important;display:flex!important;flex-direction:column;gap:24px}
 .vis004 .r4-channels-track{height:auto!important;min-height:0!important;background:#faf9f6}
 .vis004 .r4-channels-track:before,.vis004 #channels:before,.vis004 #channels:after{display:none!important}
 .vis004 #channels .r4-channels-copy{width:100%;padding:0;margin:0}
