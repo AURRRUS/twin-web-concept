@@ -1,0 +1,3 @@
+# VIS-015
+
+Оптическое выравнивание видимого края лого с заголовком: object-position:left и -6px компенсации прозрачного поля. Новая архитектурная подложка channels-architecture-v1.webp создана по референсу project-model, без людей/UI/текста, справа с уходом в ivory. Built-in imagegen. Prompt: photoreal creamy limestone curved terraces, bronze windows, palms; architecture top-right, left55% blank ivory, bottom30% clean. Полный PNG сохранён generated_images/exec-520d994a-2951-424d-a38a-97246cacec03.png, веб-версия WebP quality88. Матовые верхние полосы задних панелей реализованы CSS, текущие фото сохранены.

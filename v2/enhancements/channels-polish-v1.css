@@ -1,0 +1,8 @@
+/* VIS-015: optical logo alignment, frosted panels, bespoke architectural backdrop */
+.vis004 .r4-header .r4-logo img{object-position:left center;transform:translateX(-6px)}
+.vis004 .r4-channels-track:before{inset:0;background:linear-gradient(0deg,#faf9f6 0%,transparent 48%),url("/twin-web-concept/v2/media/approved-20261027/channels-architecture-v1.webp") top right/100% auto no-repeat;opacity:.8}
+.vis004 .r4-stack-card:not([data-active=true]):after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#f4f1e9ee 0,#f4f1e9df 50px,#f4f1e970 115px,#f4f1e928 100%);border:1px solid #ffffffb3;border-radius:10px}
+.vis004 .r4-stack-card:not([data-active=true]) img{filter:saturate(.65);transition:filter .8s,transform 1s}
+.vis004 .r4-stack-card[data-active=true]{box-shadow:0 25px 65px #4f392e2b}
+.vis004 .r4-stack-card[data-active=true] img{filter:none}
+@media(max-width:1099px){.vis004 .r4-channels-track:before{background-size:auto 650px;background-position:right top;opacity:.45}}
