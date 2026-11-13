@@ -128,16 +128,35 @@
     }, { passive: true });
   }
 
-  // Scroll-led focus state: each visible journey image gently grows, then returns.
-  const figures = Array.from(document.querySelectorAll(".r4-journey-mobile-media"));
-  if (figures.length) {
+  // Mobile journey: scroll selects the scene crossing the viewport center.
+  // All four details stay open on phones; desktop keeps the original pinned sequence.
+  const journey = document.querySelector(".r4-journey");
+  if (journey) {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const mobileViewport = window.matchMedia("(max-width: 1099px)");
+    const mobileStory = window.matchMedia("(max-width: 767px)");
     let frame = 0;
+
+    const getFigures = () => Array.from(journey.querySelectorAll(".r4-journey-mobile-media"));
+    const syncMobileJourney = () => {
+      const mobile = mobileStory.matches;
+      journey.querySelectorAll(".r4-journey-options article").forEach((article) => {
+        const detail = article.querySelector(".r4-journey-detail");
+        const button = article.querySelector(":scope > button");
+        const active = article.dataset.active === "true";
+        if (detail) {
+          if (mobile || active) detail.removeAttribute("hidden");
+          else detail.setAttribute("hidden", "");
+        }
+        if (button) button.setAttribute("aria-expanded", String(mobile || active));
+      });
+    };
 
     const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
     const updateImages = () => {
       frame = 0;
+      syncMobileJourney();
+      const figures = getFigures();
       if (!mobileViewport.matches || reducedMotion.matches) {
         figures.forEach((figure) => {
           figure.style.setProperty("--journey-scroll-scale", "1");
@@ -178,20 +197,22 @@
     window.visualViewport?.addEventListener("resize", scheduleUpdate, { passive: true });
     reducedMotion.addEventListener?.("change", scheduleUpdate);
     mobileViewport.addEventListener?.("change", scheduleUpdate);
+    mobileStory.addEventListener?.("change", scheduleUpdate);
 
-    const journey = document.querySelector(".r4-journey");
-    if (journey && "MutationObserver" in window) {
-      const observer = new MutationObserver(scheduleUpdate);
-      observer.observe(journey, {
-        subtree: true,
-        attributes: true,
-        attributeFilter: ["hidden", "data-active"]
-      });
-    }
-
-    figures.forEach((figure) => {
-      figure.querySelector("img")?.addEventListener("load", scheduleUpdate, { once: true });
+    const observer = "MutationObserver" in window
+      ? new MutationObserver(() => {
+          syncMobileJourney();
+          scheduleUpdate();
+        })
+      : null;
+    observer?.observe(journey, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ["hidden", "data-active", "aria-expanded"]
     });
+    journey.addEventListener("load", scheduleUpdate, true);
+    syncMobileJourney();
     scheduleUpdate();
   }
 })();
