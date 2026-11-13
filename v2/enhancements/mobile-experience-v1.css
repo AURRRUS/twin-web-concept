@@ -108,7 +108,7 @@
 }
 
 /* 3. Full-screen image viewer. */
-.vis004 .r4-image-viewer {
+.r4-image-viewer {
   box-sizing: border-box;
   width: 100vw;
   max-width: none;
@@ -122,16 +122,16 @@
   color: #fff;
   background: rgba(18, 23, 29, .97);
 }
-.vis004 .r4-image-viewer::backdrop {
+.r4-image-viewer::backdrop {
   background: rgba(18, 23, 29, .94);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
-.vis004 .r4-image-viewer[open] {
+.r4-image-viewer[open] {
   display: grid;
   place-items: center;
 }
-.vis004 .r4-image-viewer__panel {
+.r4-image-viewer__panel {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -145,7 +145,7 @@
     max(16px, env(safe-area-inset-left));
   touch-action: pan-y;
 }
-.vis004 .r4-image-viewer__image {
+.r4-image-viewer__image {
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -157,7 +157,7 @@
   user-select: none;
   -webkit-user-drag: none;
 }
-.vis004 .r4-image-viewer__close {
+.r4-image-viewer__close {
   position: absolute;
   z-index: 2;
   top: max(12px, env(safe-area-inset-top));
@@ -175,7 +175,7 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.vis004 .r4-image-viewer__hint {
+.r4-image-viewer__hint {
   position: absolute;
   bottom: max(14px, env(safe-area-inset-bottom));
   left: 16px;
@@ -186,7 +186,7 @@
   font: 400 12px/18px Arial, sans-serif;
   pointer-events: none;
 }
-.vis004 .r4-image-viewer.is-fallback-open {
+.r4-image-viewer.is-fallback-open {
   position: fixed;
   inset: 0;
   z-index: 99999;
