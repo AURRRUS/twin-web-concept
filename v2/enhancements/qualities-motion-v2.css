@@ -1,0 +1,6 @@
+.vis004 .r4-quality-scene article{transform:translateY(calc((1 - var(--card-reveal,1))*26px));opacity:calc(.3 + var(--card-reveal,1)*.7);will-change:transform,opacity}
+.vis004 .r4-quality-effect h3>span{display:inline-flex;align-items:baseline;white-space:nowrap}
+.vis004 .r4-effect-insert{display:inline-block;overflow:hidden;white-space:nowrap;width:0;opacity:var(--effect-progress,1)}
+.vis004 .r4-quality-links .r4-quality-attention{stroke:#b28043;stroke-width:2.4;fill:none;filter:drop-shadow(0 0 4px #c89c62)}
+.vis004 .r4-quality-effect{box-shadow:0 16px 32px #70411d16,0 0 calc(var(--effect-progress,0)*20px) #c99c5728}
+@media(prefers-reduced-motion:reduce){.vis004 .r4-quality-scene article{transform:none;opacity:1;will-change:auto}}
