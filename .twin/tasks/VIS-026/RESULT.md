@@ -1,0 +1,2 @@
+# VIS-026 result
+Preview only. Browser1363x936: anchorstartp0; sequential samples .0997→stage1,.2999→2,.5→3,.7002→4,.9003→5; p1 allfivephase1 anddashoffset0. Reverse1→.5 confirmed. Headeranchor returnsp0. Entirestickysection936px, top0; native scroll no wheel interception. Stable nodes, one line clock, travelingpulse and branches to illustrations. Branch endpoint refined+8→-24px to clear number halo. Mobile/short viewport static-flow fallback, reduced fullfinal; not visually verified mobile. Copy and nonbreaking spaces preserved.
