@@ -1,3 +1,15 @@
+/* VIS-023 — Hide a fractional 1px light seam from the previous launch section.
+   Pull the entire contact surface/photo up by 3px. Preserve a full viewport
+   in document flow so the footer never begins prematurely. */
+.vis004 .r4-contact {
+  position: relative;
+  z-index: 2;
+  margin-top: -3px;
+}
+@media (min-width: 761px) {
+  .vis004 .r4-contact { min-height: calc(100svh + 3px); }
+}
+
 /* Twin by TALENT | Contact / one-viewport desktop layout | 2026-11-13.
    Motion-preview only. Preserve complete lead form, consent and footer. */
 @media (min-width: 761px) {
