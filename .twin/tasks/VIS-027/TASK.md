@@ -1,0 +1,2 @@
+# VIS-027 — contact and corporate footer
+Owner request2026-11-13. Scope preview only. Use exact supplied mirrored hero (no regeneration). Lead form name, company(optional), phone/email, project(optional). No endpoint available: opens mail draft, never claims sent. Corporatefooter AO GK TALENT, supplied phones,email,Sochi354000,map,corporateURL. No approved privacy docs found: factual preview handling notice, not fabricated approved policy/consent. Full policies and server delivery remain separate dependencies. Font standardTV2OpeningExpanded. Prior launch motion preserved.
