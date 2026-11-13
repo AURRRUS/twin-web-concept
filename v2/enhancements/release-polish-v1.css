@@ -1,0 +1,11 @@
+/* VIS-020: equal reference panels, final materials, actual Twin integration slot. */
+.vis004 .r4-qualities:before{background-image:url("/twin-web-concept/v2/media/approved-20261027/qualities-ribbons-v1.svg"),radial-gradient(ellipse at 50% 52%,#e8d4bf33,transparent 55%),linear-gradient(#faf7f299,#faf7f299),url("/twin-web-concept/v2/media/approved-20261027/qualities-light-v1.webp");background-size:100% 100%,100% 100%,100% 100%,cover}
+.vis004 .r4-quality-scene .r4-quality-time,.vis004 .r4-quality-scene .r4-quality-budget{width:27%;height:clamp(260px,20vw,300px);min-height:0;top:22%;padding:23px 32px}
+.vis004 .r4-quality-time{left:4%}.vis004 .r4-quality-budget{right:4%}
+.vis004 .r4-twin-shine{mask-image:url("/twin-web-concept/v2/media/approved-20261027/twin-metal-v2.webp");-webkit-mask-image:url("/twin-web-concept/v2/media/approved-20261027/twin-metal-v2.webp")}
+.vis004 .r4-live-slot{min-height:90svh;padding:56px 40px;box-sizing:border-box;display:grid;place-items:center;background:radial-gradient(ellipse at 80% 30%,#d5c0a22b,transparent 65%),#faf9f6}
+.vis004 .r4-live-canvas{width:100%;max-width:1440px;min-height:70svh;box-sizing:border-box;display:grid;place-items:center;padding:50px;border:1px solid #b28b5940;border-radius:22px;background:linear-gradient(135deg,#ffffffa6,#eee6d75c);box-shadow:inset 0 1px 0 #fff}
+.vis004 .r4-live-canvas h2{font:900 clamp(32px,4.8vw,76px)/1.18 TV2OpeningExpanded,sans-serif;color:#96744c;text-align:center;max-width:1150px;margin:0;text-wrap:balance;letter-spacing:-.5px}
+@media(min-width:1100px) and (max-height:800px){.vis004 .r4-quality-scene .r4-quality-time,.vis004 .r4-quality-scene .r4-quality-budget{height:220px;min-height:220px;padding:19px 24px;top:17%}}
+@media(max-width:1099px){.vis004 .r4-quality-scene .r4-quality-time,.vis004 .r4-quality-scene .r4-quality-budget{width:43%;height:210px;min-height:210px;top:53%;padding:20px 25px}.vis004 .r4-live-slot{padding:40px 24px}.vis004 .r4-live-canvas{padding:30px}}
+@media(max-width:650px){.vis004 .r4-quality-scene .r4-quality-time,.vis004 .r4-quality-scene .r4-quality-budget{width:auto;height:auto;min-height:210px;top:auto;padding:18px 14px}.vis004 .r4-live-slot{min-height:70svh;padding:30px 20px}.vis004 .r4-live-canvas{min-height:55svh;padding:25px 18px;border-radius:16px}.vis004 .r4-live-canvas h2{font-size:clamp(23px,5.5vw,34px)}}
