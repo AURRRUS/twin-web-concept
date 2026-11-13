@@ -133,8 +133,8 @@
   const journey = document.querySelector(".r4-journey");
   if (journey) {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const mobileViewport = window.matchMedia("(max-width: 1099px)");
-    const mobileStory = window.matchMedia("(max-width: 1099px)");
+    const mobileViewport = window.matchMedia("(max-width: 767px)");
+    const mobileStory = window.matchMedia("(max-width: 767px)");
     let frame = 0;
 
     const getFigures = () => Array.from(journey.querySelectorAll(".r4-journey-mobile-media"));
