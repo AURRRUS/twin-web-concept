@@ -1,0 +1,25 @@
+/* VIS-017: official Twin mark, controlled depth reveal, full-bleed light. */
+.vis004 .r4-qualities{max-width:none;width:100%;overflow:clip}
+.vis004 .r4-qualities:before{inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);background-size:cover;mask-image:linear-gradient(transparent,#000 15%,#000 83%,transparent)}
+.vis004 .r4-channels-track[data-pin=true]>.r4-channels:after{left:50%;right:auto;width:100vw;transform:translateX(-50%);background-size:cover}
+.vis004 .r4-qualities header{width:100%;max-width:1080px;margin:0 auto}
+.vis004 .r4-quality-scene{width:100%;max-width:1080px;margin:0 auto}
+.vis004 .r4-quality-scene>svg{display:none}
+.vis004 .r4-quality-time{left:5%;top:29%}
+.vis004 .r4-quality-budget{right:5%;top:29%}
+.vis004 .r4-quality-scene .r4-quality-effect{width:52%;left:24%;bottom:1%}
+.vis004 .r4-twin-emblem{position:absolute;left:50%;top:2%;width:42%;max-width:420px;height:74%;transform:translateX(-50%);perspective:1200px}
+.vis004 .r4-twin-volume{position:absolute;inset:0;transform-style:preserve-3d;transform:translateY(var(--logo-y,0px)) rotateX(var(--logo-x,0deg)) rotateY(var(--logo-ry,0deg)) scale(var(--logo-scale,1));opacity:var(--logo-opacity,1);will-change:transform,opacity}
+.vis004 .r4-twin-volume img{position:absolute;left:-15%;top:-15%;width:130%;height:130%;object-fit:contain;max-width:none;pointer-events:none}
+.vis004 .r4-twin-depth{transform:translate3d(calc(var(--depth)*-1px),calc(var(--depth)*.65px),calc(var(--depth)*-2px));filter:brightness(.58) saturate(.65)}
+.vis004 .r4-twin-face{transform:translateZ(0);filter:drop-shadow(0 16px 18px #48362816)}
+.vis004 .r4-twin-shine{position:absolute;left:-15%;top:-15%;width:130%;height:130%;transform:translateZ(1px);pointer-events:none;mask:url("/twin-web-concept/v2/media/approved-20261027/mark-light.webp") center/contain no-repeat;-webkit-mask:url("/twin-web-concept/v2/media/approved-20261027/mark-light.webp") center/contain no-repeat;background:linear-gradient(115deg,transparent 35%,#fff7 47%,#ffffffc9 50%,#fff3 54%,transparent 65%);background-size:300% 100%;background-position:var(--logo-light,150%) 0;opacity:var(--logo-shine,0);mix-blend-mode:screen}
+.vis004 .r4-twin-ground{position:absolute;bottom:3%;left:22%;width:56%;height:8%;border-radius:50%;background:#72523427;filter:blur(12px);transform:scale(var(--logo-scale,1));opacity:var(--logo-opacity,1)}
+.vis004 .r4-channel-nav{gap:6px}
+.vis004 .r4-channel-nav button{font:500 clamp(19px,1.6vw,25px)/1.3 TV2Dewi;min-height:54px;padding:10px 12px 10px 14px;border-left:3px solid transparent;transition:background .3s,color .3s,border-color .3s}
+.vis004 .r4-channel-nav button[aria-current]{border-left-color:#a57848;background:linear-gradient(90deg,#e9d9c4c9,#e9d9c400)!important;font-weight:700;color:#7c512b}
+.vis004 .r4-channel-nav button>span{display:none}
+@media(min-width:1100px) and (min-height:700px){.vis004 .r4-qualities-track[data-pin=true]{height:180svh;position:relative}.vis004 .r4-qualities-track[data-pin=true]>.r4-qualities{position:sticky;top:0;height:100svh;max-height:none}}
+@media(max-width:1099px){.vis004 .r4-twin-emblem{width:48%;height:56%;top:0}.vis004 .r4-quality-time{left:0;top:64%}.vis004 .r4-quality-budget{right:0;top:64%}.vis004 .r4-channel-nav button{font-size:18px;min-height:50px;padding:10px}.vis004 .r4-channel-nav{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.vis004 .r4-twin-emblem{position:relative;left:auto;top:auto;transform:none;width:100%;height:270px;grid-column:1/-1;max-width:330px;margin:0 auto}.vis004 .r4-quality-scene .r4-quality-effect{width:auto;left:auto;bottom:auto}.vis004 .r4-qualities header h2{font-size:27px}.vis004 .r4-channel-nav button{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.vis004 .r4-twin-volume{will-change:auto}.vis004 .r4-channel-nav button{transition:none}}
