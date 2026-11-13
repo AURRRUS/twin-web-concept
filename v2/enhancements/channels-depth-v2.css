@@ -1,6 +1,6 @@
 /* VIS-014: three-line heading and architectural side-entry stack */
 .vis004 .r4-channels-track{overflow:clip;background:#faf9f6}
-.vis004 .r4-channels-track:before{content:"";position:absolute;inset:0 0 0 28%;background:linear-gradient(90deg,#faf9f6,transparent 70%),linear-gradient(0deg,#faf9f6 15%,#faf9f6ad 65%,#faf9f670),url("/twin-web-concept/v2/media/approved-20261027/channel-office.webp") top right/auto 100svh no-repeat;opacity:.36;pointer-events:none}
+.vis004 .r4-channels-track:before{content:"";position:absolute;inset:0 0 0 28%;background:radial-gradient(ellipse at 85% 25%,#d1b48d55,transparent 65%);opacity:.65;pointer-events:none}
 .vis004 .r4-channels{grid-template-columns:minmax(0,1fr) minmax(0,2.05fr);gap:40px;position:relative}
 .vis004 .r4-channels-copy{position:relative;z-index:10;align-self:center}
 .vis004 .r4-channels h2{font-size:clamp(26px,2.18vw,42px);line-height:1.22;margin-bottom:32px}
