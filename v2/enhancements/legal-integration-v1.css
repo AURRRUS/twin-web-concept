@@ -1,0 +1,51 @@
+/* Twin by TALENT | Legal pages integration | v1 | 2026-11-13 */
+.vis004 .r4-footer .twin-legal-nav{
+  display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;
+  font-size:13px;line-height:1.45
+}
+.vis004 .r4-footer .twin-legal-nav a{
+  color:inherit;text-decoration:underline;text-decoration-color:rgba(180,142,102,.4);
+  text-underline-offset:4px;transition:color .2s
+}
+.vis004 .r4-footer .twin-legal-nav a:hover{color:#a77843}
+.vis004 .r4-footer>.r4-wrap>.twin-legal-nav{
+  flex-basis:100%;width:100%;padding-top:15px;
+  border-top:1px solid rgba(160,150,137,.26)
+}
+.vis004 .twin-corporate-footer .footer-bottom{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px
+}
+.vis004 .twin-corporate-footer .footer-bottom>.twin-legal-nav{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px
+}
+.vis004 #contact a[href*="/v2/privacy/"],
+.vis004 #contact a[href*="/v2/consent/"]{
+  color:#dfb989;text-decoration:underline;text-underline-offset:3px
+}
+.vis004 #contact .consent-label a{color:#ab804a}
+.vis004 #contact .form-note a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.vis004 #contact .twin-lead-form .lead-consent-label{
+  display:flex!important;align-items:flex-start;gap:12px;
+  position:relative;margin:4px 0 0;color:#ebe8e2;font-size:13px;
+  line-height:1.5;cursor:pointer
+}
+.vis004 #contact .twin-lead-form .lead-consent-label>span{
+  display:block;position:static!important;right:auto!important;top:auto!important;
+  color:#e1ded7;font-size:13px;font-weight:400;line-height:1.5
+}
+.vis004 #contact .twin-lead-form input#lead-pd-consent{
+  box-sizing:border-box;width:18px;min-width:18px;max-width:18px;height:18px;
+  margin:2px 0 0;appearance:auto;accent-color:#b68b5a;
+  padding:0;border:0;box-shadow:none
+}
+.vis004 #contact .twin-lead-form .lead-consent-label:focus-within{
+  outline:2px solid #d8b589;outline-offset:4px;border-radius:4px
+}
+.vis004 #contact .twin-lead-form .lead-legal{
+  font-size:12px;line-height:1.45;color:#c7c1b8;margin:0
+}
+@media(max-width:700px){
+  .vis004 .twin-corporate-footer .footer-bottom,
+  .vis004 .r4-footer .twin-legal-nav{justify-content:flex-start}
+  .vis004 #contact .twin-lead-form .lead-consent-label{font-size:12px}
+}
