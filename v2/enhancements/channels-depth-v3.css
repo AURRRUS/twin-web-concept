@@ -3,15 +3,15 @@
 .vis004 .r4-channels-track:before{content:"";position:absolute;inset:0 0 0 28%;background:radial-gradient(ellipse at 85% 25%,#d1b48d55,transparent 65%);opacity:.65;pointer-events:none}
 .vis004 .r4-channels{grid-template-columns:minmax(0,1fr) minmax(0,2.05fr);gap:40px;position:relative}
 .vis004 .r4-channels-copy{position:relative;z-index:10;align-self:center}
-.vis004 .r4-channels h2{font-size:clamp(26px,2.18vw,42px);line-height:1.22;margin-bottom:32px}
+.vis004 .r4-channels h2{font-size:clamp(28px,2.42vw,46px);line-height:1.22;margin-bottom:32px}
 .vis004 .r4-channels h2 span{white-space:nowrap}
 .vis004 .r4-channel-nav{gap:3px;margin-bottom:26px}
-.vis004 .r4-channel-nav button{border-radius:0;background:transparent!important;padding:10px 0;gap:14px;font-size:17px;min-height:44px}
+.vis004 .r4-channel-nav button{border-radius:0;background:transparent!important;padding:10px 0;gap:14px;font-size:19px;min-height:48px}
 .vis004 .r4-channel-nav button[aria-current]{color:#8b5d32}
 .vis004 .r4-channel-nav button>span{position:relative}
 .vis004 .r4-channel-nav button>span:after{display:block;content:"";position:absolute;left:50%;top:10px;width:1px;height:37px;background:#b8a58d55}
 .vis004 .r4-channel-nav button:last-child>span:after{display:none}
-.vis004 .r4-channel-caption p{font-size:19px;line-height:1.5;max-width:320px}
+.vis004 .r4-channel-caption p{font-size:21px;line-height:1.45;max-width:350px}
 .vis004 .r4-stack{perspective:1600px;transform-style:preserve-3d;aspect-ratio:1.66;margin-top:70px;margin-left:-12px;width:calc(100% + 12px)}
 .vis004 .r4-stack-card{left:calc((3 - var(--rank))*30px);top:calc((var(--rank) - 3)*40px);width:calc(100% - (3 - var(--rank))*14px);border-radius:10px;clip-path:polygon(0 4%,100% 0,100% 100%,0 96%);transform:translateX(calc((3 - var(--rank))*7px)) rotateY(-8deg) rotateZ(calc((3 - var(--rank))*.65deg));transform-origin:right center;transition:transform .85s cubic-bezier(.2,.7,.2,1),left .85s cubic-bezier(.2,.7,.2,1),top .85s cubic-bezier(.2,.7,.2,1),width .85s;box-shadow:0 22px 55px #49331929}
 .vis004 .r4-stack-card[data-active=true]{transform:translateX(0) rotateY(-4deg) rotateZ(0);clip-path:polygon(0 5%,100% 0,100% 100%,0 95%)}
