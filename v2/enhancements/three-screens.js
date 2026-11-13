@@ -22,6 +22,7 @@ if (film) {
   let raf=0, enabled=false, start=0, distance=1, viewing=false;
   const paint = () => {
     raf=0; if(document.hidden)return;
+    start=film.getBoundingClientRect().top+scrollY;
     const p=enabled?Math.max(0,Math.min(1,(scrollY-start)/distance)):1;
     const t=Math.max(0,Math.min(1,(p-.08)/.64));
     const e=viewing?1:t*t*(3-2*t);
@@ -51,5 +52,7 @@ if (film) {
   window.addEventListener('resize',layout);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();else requestPaint();});
   reduced.addEventListener('change',layout);
+  const opening=document.querySelector(".r4-opening");
+  if(opening)new ResizeObserver(layout).observe(opening);
   document.fonts.ready.then(layout);layout();
 }
