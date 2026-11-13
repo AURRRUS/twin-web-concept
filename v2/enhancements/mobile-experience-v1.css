@@ -59,7 +59,7 @@
 
 /* Mobile journey becomes a vertical four-scene story.
    Keep every scene readable; IntersectionObserver changes the active state. */
-@media (max-width: 1099px) {
+@media (max-width: 767px) {
   .vis004 .r4-journey-options article .r4-journey-detail[hidden] {
     display: block !important;
   }
@@ -72,7 +72,7 @@
 }
 
 /* 2. Journey images: scroll-driven approach → focus → return. */
-@media (max-width: 1099px) {
+@media (max-width: 767px) {
   .vis004 .r4-journey-mobile-media {
     overflow: visible;
   }
@@ -83,6 +83,8 @@
     will-change: transform;
     backface-visibility: hidden;
   }
+}
+@media (max-width: 1099px) {
   .vis004 .r4-journey-mobile-links button.r4-open-image {
     appearance: none;
     border: 0;
@@ -193,7 +195,7 @@
 }
 
 /* 4. Composition map: every circular arrow sits below its heading. */
-@media (max-width: 1099px) {
+@media (max-width: 767px) {
   .vis004 .r4-composition .map-component h3 {
     display: flex;
     flex-direction: column;
