@@ -1,0 +1,18 @@
+/* VIS-022 — Channels carousel: consistent 10px corners on all sides.
+   A polygon clip-path in channels-depth-v3.css flattened the left corners
+   and overrode the existing border-radius. Keep the 3D stack transforms. */
+.vis004 .r4-channels-track .r4-stack-card,
+.vis004 .r4-channels-track .r4-stack-card[data-active="true"],
+.vis004 .r4-channels-track .r4-stack-card:hover {
+  clip-path: none;
+  -webkit-clip-path: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.vis004 .r4-channels-track .r4-stack-card img {
+  display: block;
+  border-radius: inherit;
+}
+.vis004 .r4-channels-track .r4-stack-card::after {
+  border-radius: inherit;
+}
