@@ -1,0 +1,13 @@
+/* VIS-026: stable nodes; one scroll clock for all five stages. */
+.vis004 .r4-launch>ol>li{transform:none;opacity:1}
+.vis004 .r4-launch li>img{opacity:calc(.30 + .70*var(--step-reveal,1));transform:translateY(calc((1 - var(--step-reveal,1))*18px)) scale(calc(.97 + .03*var(--step-reveal,1)));will-change:transform,opacity}
+.vis004 .r4-launch li>h3,.vis004 .r4-launch li>p{opacity:calc(.72 + .28*var(--step-reveal,1));transform:translateY(calc((1 - var(--step-reveal,1))*8px))}
+.vis004 .r4-launch .r4-step-index{transform:scale(calc(1 + .06*var(--node-progress,0)));box-shadow:0 0 0 7px #faf9f6,0 0 calc(var(--node-progress,0)*18px) #ac7b4430}
+.vis004 .r4-launch-line .progress{stroke:#aa7b42;stroke-width:2}
+.vis004 .r4-launch-line .branch{fill:none;stroke:#b48a55;stroke-width:1.3}
+.vis004 .r4-launch-line .pulse{fill:#b7864b;stroke:#f9e7c6;stroke-width:1.5;filter:drop-shadow(0 0 4px #bd8a4b)}
+.vis004 .r4-launch-track[data-sequence-pin=true]{height:250svh;position:relative}
+.vis004 .r4-launch-track[data-sequence-pin=true]>.r4-launch{position:sticky;top:0;height:100svh;box-sizing:border-box;padding:40px 0;display:flex;flex-direction:column;justify-content:center}
+.vis004 .r4-launch-track[data-sequence-pin=true]>.r4-launch>h2{flex:none;margin-bottom:32px}
+.vis004 .r4-launch-track[data-sequence-pin=true]>.r4-launch>ol{flex:none}
+@media(prefers-reduced-motion:reduce){.vis004 .r4-launch li>img,.vis004 .r4-launch li>h3,.vis004 .r4-launch li>p{transform:none;opacity:1;will-change:auto}.vis004 .r4-launch-line .pulse{display:none}}

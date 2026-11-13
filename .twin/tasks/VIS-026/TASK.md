@@ -1,0 +1,2 @@
+# VIS-026
+Owner rejected launch motion: first two steps were already revealed when viewport settled. Replace viewport-entry clock with 250svh native track / sticky100svh on desktop1100x740+. Five equal sequential phases, stable node geometry, one traveling pulse, measured branch links, reversible progress. Mobile/low-height remains natural flow, reduced static. Anchor targets track start. Scope preview only. Existing copy/art preserved.
