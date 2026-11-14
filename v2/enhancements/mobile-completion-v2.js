@@ -44,7 +44,9 @@ function paintReveal(){
   const top=el.getBoundingClientRect().top-(offsets.get(el)||0);
   // Remain hidden until the element reaches 74% of the viewport;
   // full presence at48%. Reversible, so earlier navigation cannot consume it.
-  const p=Math.max(0,Math.min(1,(h*.74-top)/(h*.26)));
+  // Bottom effect card starts and completes 6% viewport earlier (about40px on phones).
+  const lead=el.closest('.r4-quality-effect')?h*.06:0;
+  const p=Math.max(0,Math.min(1,(h*.74-top+lead)/(h*.26)));
   const ease=p*p*(3-2*p),offset=28*(1-ease);
   el.style.opacity=ease.toFixed(4);el.style.translate='0 '+offset.toFixed(2)+'px';
   offsets.set(el,offset);
