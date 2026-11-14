@@ -53,7 +53,7 @@ await Promise.all([...document.querySelectorAll("astro-island")].map(el=>el.hasA
 await new Promise(resolve=>{let timer;const observer=new MutationObserver(reset);function done(){observer.disconnect();resolve()}function reset(){clearTimeout(timer);timer=setTimeout(done,180)}observer.observe(document.querySelector("main"),{childList:true,subtree:true});reset()});
 for(const src of ["/twin-web-concept/v2/enhancements/contact-legal-v1.js","/twin-web-concept/v2/enhancements/portal-scene-v2.js","/twin-web-concept/v2/enhancements/composition-scroll-v4.js","/twin-web-concept/v2/enhancements/channels-v2.js","/twin-web-concept/v2/enhancements/emblem-v5.js","/twin-web-concept/v2/enhancements/launch-sequence-v2.js","/twin-web-concept/v2/enhancements/mobile-experience-v6.js"])await import(src);
 await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
-const entry=document.getElementById(location.hash.slice(1));if(entry){const target=entry.closest(".r4-qualities-track,.r4-channels-track,.r4-launch-track")||entry;target.scrollIntoView({block:"start",behavior:"instant"})}
+const entry=document.getElementById(location.hash.slice(1));if(entry){const target=entry.closest(".r4-qualities-track,.r4-channels-track,.r4-launch-track,.r4-contact")||entry;target.scrollIntoView({block:"start",behavior:"instant"})}
 </script><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/launch-sequence-v1.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/contact-v2.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/contact-viewport-v1.css?v=20261113-seamfix1"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/channels-corners-v1.css?v=20261113"><dialog class="r4-image-viewer" id="r4-image-viewer" aria-label="Просмотр изображения">
   <div class="r4-image-viewer__panel">
     <button class="r4-image-viewer__close" type="button" aria-label="Закрыть изображение">×</button>
@@ -63,4 +63,12 @@ const entry=document.getElementById(location.hash.slice(1));if(entry){const targ
 </dialog>
 <link rel="stylesheet" href="/twin-web-concept/v2/enhancements/mobile-experience-v3.css">
 
-<script src="/twin-web-concept/v2/enhancements/mobile-menu-v1.js" defer></script><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/mobile-layout-v1.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/mobile-gestures-v1.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/viewport-repair-v1.css"></body></html>
+<script src="/twin-web-concept/v2/enhancements/mobile-menu-v1.js" defer></script><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/mobile-layout-v1.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/mobile-gestures-v1.css"><link rel="stylesheet" href="/twin-web-concept/v2/enhancements/viewport-repair-v2.css"><script type="module">
+const contact=document.getElementById('contact');
+const surface=contact?.closest('.r4-contact');
+if(contact&&surface){
+ const measure=()=>contact.style.scrollMarginTop=Math.max(0,contact.getBoundingClientRect().top-surface.getBoundingClientRect().top)+'px';
+ new ResizeObserver(measure).observe(surface);
+ window.addEventListener('resize',measure,{passive:true});document.fonts.ready.then(measure);measure();
+}
+</script></body></html>
