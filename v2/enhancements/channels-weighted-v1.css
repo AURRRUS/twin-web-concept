@@ -1,0 +1,10 @@
+
+@media(max-width:767px){
+.vis004 .r4-channels-track[data-mobile-pin=true] #channels{padding:16px 20px!important;gap:12px}
+.vis004 .r4-channels-track[data-mobile-pin=true] #channels h2{font-size:clamp(22px,6vw,26px);line-height:1.16;margin-bottom:14px}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-channel-nav{gap:6px;margin-bottom:12px}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-channel-nav button{min-height:44px;padding:8px 10px;font-size:14px}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-channel-caption{min-height:68px}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-channel-caption p{font-size:16px;line-height:1.4}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-stack{aspect-ratio:1.6;max-height:calc(100svh - 330px);min-height:0!important}
+}
