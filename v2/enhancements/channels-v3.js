@@ -31,6 +31,11 @@ function startChannels(){
   scrollTo({top:top+travel()*((index+.5)/4),behavior:innerWidth<=767?'instant':'smooth'});
   request();
  };
+ document.addEventListener('click',event=>{
+  const a=event.target.closest?.('a[href="#channels"]');if(!a)return;
+  event.preventDefault();history.pushState(null,'','#channels');
+  track.scrollIntoView({block:'start',behavior:reduced.matches?'instant':'smooth'});
+ });
  buttons.forEach((button,index)=>button.addEventListener('click',()=>{if(!auto)jump(index);}));
  root.querySelectorAll('.r4-stack-card').forEach((button,index)=>button.addEventListener('click',()=>jump(index)));
  addEventListener('scroll',request,{passive:true});
