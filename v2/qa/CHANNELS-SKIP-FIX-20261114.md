@@ -1,0 +1,2 @@
+# Mobile channel skip correction
+Operator observed Remote/Agent skips in one swipe. V4 still derived selection from native scroll alongside touch steps. V5 makes explicit phone index authoritative, restores settled stage offset against residual native inertia, suppresses synthesized click after a moved touch, and extends wheel burst idle to450ms. Desktop unchanged. Syntax passed; physical Safari unverified.
