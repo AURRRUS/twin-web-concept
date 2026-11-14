@@ -1,0 +1,8 @@
+
+@media(max-width:767px){
+.vis004 #contact .lead-note,.vis004 #contact .lead-result{display:none!important}
+.vis004 .twin-scroll-up.mobile-twin-mark{width:56px!important;height:56px!important;min-width:56px;padding:4px!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;backdrop-filter:none!important}
+.vis004 .twin-scroll-up.mobile-twin-mark::before,.vis004 .twin-scroll-up.mobile-twin-mark::after{display:none!important}
+.vis004 .twin-scroll-up.mobile-twin-mark img{display:block;width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 3px 6px #0003)}
+.twin-request-confirmation .request-back{width:100%;margin:0;padding:14px;border-radius:10px;background:linear-gradient(115deg,#b88a55,#926434);color:white;font-weight:600}
+}
