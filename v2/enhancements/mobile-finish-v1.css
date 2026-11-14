@@ -1,0 +1,12 @@
+
+@media(max-width:767px){
+.vis004 .r4-contact{padding:0!important}
+}
+.twin-request-confirmation{box-sizing:border-box;width:min(350px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:22px;border:1px solid #c7a47966;border-radius:22px;background:#faf7f1;color:#20272f;overflow:auto;overscroll-behavior:contain;box-shadow:0 24px 80px #0005;text-align:center;font-family:TV2Dewi,sans-serif}
+.twin-request-confirmation::backdrop{background:#101a20cc;backdrop-filter:blur(8px)}
+.twin-request-confirmation .request-close{position:absolute;right:10px;top:10px;border:1px solid #b99c7455;border-radius:50%;width:40px;height:40px;background:#fff9;color:#20272f;font:26px/1 sans-serif}
+.twin-request-confirmation img{display:block;width:170px;height:170px;object-fit:cover;border-radius:18px;margin:12px auto 18px}
+.twin-request-confirmation h2{font:900 25px/1.15 TV2OpeningExpanded,sans-serif;margin:0 0 14px}
+.twin-request-confirmation p{font-size:16px;line-height:1.45;color:#626b72;margin:0 0 18px}
+.twin-request-confirmation .request-mail{display:block;padding:14px 16px;border-radius:10px;background:linear-gradient(115deg,#b88a55,#926434);color:#fff;text-decoration:none;font-size:16px;font-weight:600}
+.twin-request-confirmation .request-back{display:block;min-height:44px;margin:8px auto 0;padding:10px;border:0;background:none;color:#805b35;font:inherit}
