@@ -1,0 +1,20 @@
+
+/* Natural document flow for tablet/landscape phone: no absolute card overlap. */
+@media(max-width:1099px){
+.vis004 .r4-qualities-track{height:auto!important;min-height:0!important}
+.vis004 #qualities{height:auto!important;min-height:0!important;max-height:none!important;position:relative!important;top:auto!important;box-sizing:border-box;padding:32px 20px}
+.vis004 #qualities .r4-quality-scene{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;height:auto!important;max-height:none!important}
+.vis004 #qualities .r4-twin-emblem{position:relative!important;inset:auto!important;transform:none!important;grid-column:1/-1;width:280px!important;max-width:80%;height:260px!important;margin:0 auto}
+.vis004 #qualities .r4-quality-scene article{position:relative!important;inset:auto!important;width:100%!important;min-height:0!important;margin:0;transform:none!important;opacity:1!important;padding:20px!important}
+.vis004 #qualities .r4-quality-effect{grid-column:1/-1;text-align:center}
+.vis004 #qualities .r4-quality-links{display:none!important}
+.vis004 #qualities header h2{font-size:clamp(25px,4vw,38px);letter-spacing:0}
+.vis004 #qualities .r4-quality-number{font-size:clamp(52px,7vw,72px)}
+.vis004 #qualities .r4-quality-unit{font-size:clamp(18px,3vw,27px)}
+.vis004 #qualities .r4-quality-scene h3{font-size:clamp(22px,3vw,28px)}
+.vis004 #qualities .r4-quality-effect>strong{font-size:clamp(25px,4vw,34px)}
+}
+@media(min-width:768px){
+.vis004 .r4-contact{margin-top:-6px!important;box-shadow:0 -4px 0 #202526}
+.vis004 .r4-contact .r4-contact-facade{top:-2px;bottom:-2px;height:calc(100% + 4px)}
+}
