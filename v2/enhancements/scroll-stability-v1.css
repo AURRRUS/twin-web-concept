@@ -1,0 +1,11 @@
+
+@media(min-width:1100px) and (min-height:700px){
+.vis004 .r4-contact-track[data-hold=true]{position:relative;height:calc(var(--contact-view)*1.65)}
+.vis004 .r4-contact-track[data-hold=true]>.r4-contact{position:sticky!important;top:0!important;height:var(--contact-view)!important;min-height:var(--contact-view)!important;margin:0!important}
+}
+@media(max-width:767px){
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-stack-card{transition:opacity .25s ease!important;clip-path:none!important}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-stack-card[data-active=false]{opacity:0!important;pointer-events:none!important}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-stack-card[data-active=true]{opacity:1!important}
+.vis004 .r4-channels-track[data-mobile-pin=true] .r4-stack-card img{transform:none!important;transition:none!important}
+}
