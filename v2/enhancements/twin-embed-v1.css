@@ -1,0 +1,10 @@
+/* Цифровой двойник Палаццо Де Агой (3dagoi.bytalent.ru) во всю ширину страницы.
+   Шапка встроенной страницы срезана сверху: её высота --header-height = 65rem при rem = ширина/1920
+   (от 1024px), 52rem при rem = ширина/768, ширина/425 и ширина/375 ниже — та же лестница через ширину контейнера. */
+.vis004 .r4-live-slot{min-height:0;padding:0;display:block;background:#2d2c2c}
+.vis004 .r4-live-canvas{position:relative;display:block;width:100%;max-width:none;height:100svh;min-height:560px;padding:0;border:0;border-radius:0;box-shadow:none;background:#2d2c2c;overflow:hidden;container-type:inline-size}
+.vis004 .r4-live-frame{--twin-embed-head:calc(100cqw * 65 / 1920);position:absolute;left:0;top:calc(-1 * var(--twin-embed-head));display:block;width:100%;height:calc(100% + var(--twin-embed-head));border:0;background:#2d2c2c}
+@container (max-width:1023.98px){.vis004 .r4-live-frame{--twin-embed-head:calc(100cqw * 52 / 768)}}
+@container (max-width:575.98px){.vis004 .r4-live-frame{--twin-embed-head:calc(100cqw * 52 / 425)}}
+@container (max-width:424.98px){.vis004 .r4-live-frame{--twin-embed-head:calc(100cqw * 52 / 375)}}
+@media(max-width:650px){.vis004 .r4-live-canvas{height:88svh;min-height:520px}}
