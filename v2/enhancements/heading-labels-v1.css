@@ -1,0 +1,16 @@
+/* Подзаголовки «Покупателю / Команде продаж» и названия в скрытой текстовой версии состава — не h3, чтобы на странице не было
+   повторяющихся заголовков. Правила ниже повторяют правила этих h3 в том же порядке; h3 заменён на :where(.класс),
+   поэтому специфичность меньше ровно на один тип, как у исходного селектора без h3. Первое правило — умолчания браузера для h3 (в слое, поэтому уступает любому обычному правилу). */
+@layer twin-ua-defaults{:where(.r4-journey-audience,.composition-desc-title){display:block;font-size:1.17em;font-weight:bold;margin-block:1em;margin-inline:0;unicode-bidi:isolate}}
+.vis004 :where(.r4-journey-audience){letter-spacing: 0px; margin-top: 0px;}
+.vis004 :where(.composition-desc-title){letter-spacing: 0px; margin-top: 0px;}
+.vis004 :where(.r4-journey-audience){font: 700 var(--item)/32px TV2Dewi; margin-bottom: 12px;}
+.vis004 :where(.composition-desc-title){font: 700 var(--item)/32px TV2Dewi; margin-bottom: 12px;}
+.r4-composition .composition-descriptions :where(.composition-desc-title){font-size: 20px; line-height: 28px;}
+.r4-journey-copy :where(.r4-journey-audience){margin-bottom: 6px; font: 700 24px / 32px TV2Dewi;}
+.r4-journey-options article[data-active="true"] :is(button, .icon, .r4-chevron, :where(.r4-journey-audience), p){color: rgb(255, 255, 255);}
+@media (width <= 767px){.r4-journey-copy :where(.r4-journey-audience){font-size: 20px; line-height: 28px;}}
+@media (width >= 1100px) and (height <= 820px), (width >= 1100px) and (width <= 1279px){.r4-journey-copy :where(.r4-journey-audience){margin-bottom: 4px; font-size: 22px; line-height: 30px;}}
+@media (width >= 1100px) and (height <= 739px){.r4-journey-copy :where(.r4-journey-audience){margin-bottom: 4px; font-size: 20px; line-height: 28px;}}
+@media (width >= 1100px) and (height <= 639px){.r4-journey-copy :where(.r4-journey-audience){margin-bottom: 3px; font-size: 18px; line-height: 24px;}}
+@media (min-width: 1100px) and (max-height: 850px){.r4-journey-copy :where(.r4-journey-audience){font-size: 20px; line-height: 28px; margin-bottom: 4px;}}
