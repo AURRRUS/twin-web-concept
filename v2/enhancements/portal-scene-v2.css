@@ -46,7 +46,7 @@
 .r4-film-intro h2 em{color:#b78c5b}
 .r4-film-frame{position:relative;z-index:2;clip-path:none;border:1px solid #bd955850;border-radius:2px;width:min(88vw,calc((100svh - 120px)*16/9));margin:auto;box-shadow:0 24px 100px #0008,0 0 70px #b58b4620;transform:translateY(calc((1 - var(--film-reveal))*65px)) translateZ(calc((1 - var(--film-reveal))*-420px));will-change:transform}
 .r4-film-wing{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:3;pointer-events:none;user-select:none;will-change:transform}
-.r4-film-wing-left{clip-path:inset(0 50% 0 0);transform:translateX(calc(var(--film-reveal)*-20vw)) translateY(calc(var(--film-reveal)*-12px))}
+.r4-film-wing-left{clip-path:inset(0 50% 0 0);transform:translateX(calc(var(--film-reveal)*-20vw))}
 .r4-film-wing-right{clip-path:inset(0 0 0 50%);transform:translateX(calc(var(--film-reveal)*18vw)) translateY(calc(var(--film-reveal)*16px))}
 .r4-film[data-scroll-scene=true]{height:215svh}
 .r4-film-play{z-index:4;background:#f7f0e5ed;border-color:#ffffff80;color:#704b2c;box-shadow:0 8px 48px #0004;width:88px;height:88px}
