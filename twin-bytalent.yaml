@@ -1,0 +1,214 @@
+# Сайт Twin на https://twin.bytalent.ru
+#
+# Исходники и публикация остаются в GitHub (AURRRUS/twin-web-concept, ветка twin-preview).
+# Под сам забирает ветку: git-sync раз в минуту подтягивает новые коммиты, nginx их отдаёт.
+# Каждая публикация в twin-preview появляется на домене примерно через минуту — без CI,
+# образов, реестра и секретов.
+#
+# Этот файл применяет ArgoCD (acd.pin.capital), Application twin-bytalent: см. README.md.
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: talent-front-ends-twin
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: twin-bytalent-nginx
+  namespace: talent-front-ends-twin
+  labels:
+    app: twin-bytalent
+data:
+  twin.conf: |
+    server {
+        listen 8080;
+        server_name _;
+
+        # Рабочая копия ветки; git-sync атомарно переключает эту ссылку на новую версию.
+        root /git/current;
+        index index.html;
+
+        # TLS снимает ingress: редиректы относительные, без http:// и порта 8080.
+        absolute_redirect off;
+
+        gzip on;
+        gzip_min_length 1024;
+        gzip_types text/css text/plain application/javascript application/json image/svg+xml;
+
+        location = /healthz {
+            access_log off;
+            default_type text/plain;
+            return 200 "ok\n";
+        }
+
+        # Ветка собрана для GitHub Pages (aurrrus.github.io/twin-web-concept/), поэтому ссылки
+        # в HTML начинаются с /twin-web-concept/. Отдаём по ним те же файлы, что и с корня.
+        location = /twin-web-concept {
+            return 301 /;
+        }
+        location ^~ /twin-web-concept/ {
+            rewrite ^/twin-web-concept/(.*)$ /$1 last;
+        }
+
+        # Служебный файл .git рабочей копии git-sync.
+        location ~ (^|/)\.git {
+            return 404;
+        }
+
+        # Файлы сборки Astro с хешем в имени не меняются.
+        location ~ ^/(v2/)?_astro/ {
+            add_header Cache-Control "public, max-age=31536000, immutable";
+        }
+
+        # Остальное меняется при каждой публикации: браузер перепроверяет по ETag.
+        location / {
+            add_header Cache-Control "no-cache";
+        }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twin-bytalent
+  namespace: talent-front-ends-twin
+  labels:
+    app: twin-bytalent
+spec:
+  # Одна реплика: у каждого пода своя копия ветки, и с двумя подами во время публикации
+  # один мог бы отдать новый HTML, а другой — ещё старые файлы сборки.
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: twin-bytalent
+  template:
+    metadata:
+      labels:
+        app: twin-bytalent
+    spec:
+      # Первая копия ветки до старта nginx: под не становится Ready с пустым сайтом.
+      initContainers:
+        - name: git-sync-init
+          image: registry.k8s.io/git-sync/git-sync:v4.8.0
+          args:
+            - --repo=https://github.com/AURRRUS/twin-web-concept.git
+            - --ref=twin-preview
+            - --root=/git
+            - --link=current
+            - --depth=1
+            - --submodules=off
+            - --git-gc=auto
+            - --one-time
+          volumeMounts:
+            - name: site
+              mountPath: /git
+          resources:
+            requests:
+              cpu: 10m
+              memory: 64Mi
+            limits:
+              memory: 512Mi
+      containers:
+        - name: nginx
+          image: nginx:1.27.5-alpine
+          ports:
+            - containerPort: 8080
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+          volumeMounts:
+            - name: site
+              mountPath: /git
+              readOnly: true
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d
+              readOnly: true
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              memory: 128Mi
+        - name: git-sync
+          image: registry.k8s.io/git-sync/git-sync:v4.8.0
+          args:
+            - --repo=https://github.com/AURRRUS/twin-web-concept.git
+            # Ветка или SHA коммита. Для отката закрепить SHA рабочей публикации.
+            - --ref=twin-preview
+            - --root=/git
+            - --link=current
+            - --depth=1
+            - --submodules=off
+            - --git-gc=auto
+            - --period=60s
+            # GitHub недоступен — сайт продолжает отдавать последнюю версию, а не падает.
+            - --max-failures=-1
+          volumeMounts:
+            - name: site
+              mountPath: /git
+          resources:
+            requests:
+              cpu: 10m
+              memory: 64Mi
+            limits:
+              memory: 512Mi
+      volumes:
+        # Рабочая копия ~125 МБ; на время обновления на диске их две плюс объекты git.
+        - name: site
+          emptyDir:
+            sizeLimit: 1Gi
+        - name: nginx-config
+          configMap:
+            name: twin-bytalent-nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: twin-bytalent-svc
+  namespace: talent-front-ends-twin
+  labels:
+    app: twin-bytalent
+spec:
+  selector:
+    app: twin-bytalent
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: twin-bytalent-ingress
+  namespace: talent-front-ends-twin
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls:
+    - hosts:
+        - twin.bytalent.ru
+      secretName: twin-bytalent-tls-secret  # cert-manager сохраняет сюда сертификат Let's Encrypt
+  rules:
+    - host: twin.bytalent.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: twin-bytalent-svc
+                port:
+                  number: 80
