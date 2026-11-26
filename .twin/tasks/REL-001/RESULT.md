@@ -46,13 +46,14 @@
 - Изменённые бандлы сохранены под новыми именами (`ReferencePage.mobile-v5.js`, `ContactForm.composition-v3.js`), потому что `/v2/_astro/` кешируется как immutable; старые файлы не тронуты. Правка в HTML главной и `/v2/motion-preview/` (общие бандлы).
 - Проверка: вычисленные стили и положение всех 23 элементов совпадают с прежними `h3` на 9 размерах и во всех 4 состояниях Journey (1035 сравнений, 0 расхождений); попиксельная прокрутка 1440, 1280, 1024, 390, 360 — без различий; ошибок гидратации и консоли нет; меню, каналы, форма, окно состава работают. В HTML осталось 26 заголовков без повторов (было 49).
 - Превью ссылки: `og:image` и `twitter:image` — `v2/media/top-v2/og-1200x630.jpg`, та же утверждённая `hero.webp`, обрезанная по центру до 1,91:1 (по 54px сверху и снизу) и уменьшенная до 1200×630, JPEG 164 КБ; добавлены `og:image:type`, `og:image:width`, `og:image:height`. Описание (157 символов) не менялось — по ТЗ.
+- На домене (коммит `1e59c57`): картинка превью 200 image/jpeg, в HTML 26 заголовков без повторов, на 1440 и 390 без ошибок консоли и горизонтального скролла. opengraph.xyz: ошибок 0 (было 1), «1200×630 — matches what every major platform expects»; остались два предупреждения — длина описания (по ТЗ не меняется) и совет добавить на картинку рекламный текст (не делали: это новый визуальный материал).
 
 ## Найдено, не исправлено (нужно решение)
 - Текст до и после JS: в HTML «Эффектно», после загрузки скриптов — «Эффективно» (так же в исходнике).
 - На реальных устройствах (iPhone Safari, safe-area) и в самих мессенджерах не проверялось.
 
 ## Файлы
-Создано (7):
+Создано (11):
 - `.twin/tasks/REL-001/RESULT.md`
 - `.twin/tasks/REL-001/SEARCH_CONSOLE.md`
 - `.twin/tasks/REL-001/TASK.md`
@@ -60,14 +61,19 @@
 - `.twin/tasks/REL-001/screens/film-before-1440.png`
 - `robots.txt`
 - `sitemap.xml`
+- `v2/_astro/ContactForm.composition-v3.js`
+- `v2/_astro/ReferencePage.mobile-v5.js`
+- `v2/enhancements/heading-labels-v1.css`
+- `v2/media/top-v2/og-1200x630.jpg`
 
-Изменено (41):
+Изменено (42):
 - `_astro/App.QVf-QQ1Q.js`
 - `_astro/inter-tight-variable.CDPOEas9.css`
 - `build-version.json`
 - `demo/index.html`
 - `index.html`
 - `journey-craft/index.html`
+- `journey-craft/review.html`
 - `v2/_astro/ContactForm.B53is37X.js`
 - `v2/_astro/ContactForm.composition-v2.js`
 - `v2/_astro/ContactForm.legal-v1.js`
