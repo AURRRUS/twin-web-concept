@@ -1,6 +1,11 @@
 {
-  "version": "JRN-001",
-  "sourceCommit": "1c6cae70dd70cdc7c53f59c3b1eca1f2a14fc46d",
-  "builtAt": "2026-10-26T18:33:55.667257+00:00",
-  "previousDeploymentCommit": "7e86e2aa0fddb7a4e15d35844f10499eb7041856"
+  "version": "REL-001",
+  "release": "twin.bytalent.ru",
+  "releaseBranch": "release/twin-bytalent-domain",
+  "sourceBranch": "twin-preview",
+  "sourceCommit": "d9ff0f142d9aa6cb4776f92b2f59da09f8ce5e7f",
+  "sourceFile": "v2/motion-preview/index.html",
+  "sourceFileSha": "97528313fc093d59a8e70ceade7173a9097b50f7",
+  "builtAt": "2026-11-26T12:20:17Z",
+  "previousVersion": "JRN-001"
 }
