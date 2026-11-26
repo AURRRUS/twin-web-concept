@@ -102,6 +102,9 @@ spec:
             - --depth=1
             - --submodules=off
             - --git-gc=auto
+            # emptyDir принадлежит root, git-sync работает под uid 65533: без этого git
+            # отказывается работать с /git ("detected dubious ownership").
+            - "--git-config=safe.directory:*"
             - --one-time
           volumeMounts:
             - name: site
@@ -150,6 +153,9 @@ spec:
             - --depth=1
             - --submodules=off
             - --git-gc=auto
+            # emptyDir принадлежит root, git-sync работает под uid 65533: без этого git
+            # отказывается работать с /git ("detected dubious ownership").
+            - "--git-config=safe.directory:*"
             - --period=60s
             # GitHub недоступен — сайт продолжает отдавать последнюю версию, а не падает.
             - --max-failures=-1
