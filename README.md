@@ -17,11 +17,12 @@ DNS: `twin.bytalent.ru → 85.193.82.51`, заведено в Beget.
 
 ## ArgoCD
 
-Application `twin-bytalent` в https://acd.pin.capital следит за этой веткой и применяет манифест
-автоматически (prune, self-heal). Репозиторий публичный, ключи не нужны.
+Application `twin-bytalent` (проект `front-ends`, как agoi и остальные talent-фронтенды) в
+https://acd.pin.capital следит за этой веткой и применяет манифест автоматически (prune,
+self-heal). Репозиторий публичный, ключи не нужны. Создано через веб-интерфейс; то же из CLI:
 
 ```bash
-argocd app create twin-bytalent --grpc-web --project pin-front-ends --repo https://github.com/AURRRUS/twin-web-concept.git --revision infra/twin-bytalent --path . --directory-include twin-bytalent.yaml --dest-server https://kubernetes.default.svc --dest-namespace talent-front-ends-twin --sync-policy automated --auto-prune --self-heal --sync-option CreateNamespace=true
+argocd app create twin-bytalent --grpc-web --project front-ends --repo https://github.com/AURRRUS/twin-web-concept.git --revision infra/twin-bytalent --path . --directory-include twin-bytalent.yaml --dest-server https://kubernetes.default.svc --dest-namespace talent-front-ends-twin --sync-policy automated --auto-prune --self-heal --sync-option CreateNamespace=true
 ```
 
 ## Проверка
