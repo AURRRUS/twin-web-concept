@@ -29,5 +29,74 @@
 ## Форма на телефоне (решение 2026-11-26)
 В Motion Preview на ≤767px форма показывала «Спасибо за обращение» при любом вводе, включая пустой, и ничего не отправляла. По решению владельца релиза телефон работает как десктоп: та же проверка полей, письмо через mailto на bytalentru@gmail.com, видны подсказка «Откроется ваш почтовый сервис…» и запасная ссылка на письмо. Кнопка — «Подготовить запрос», как на десктопе. Изменены `mobile-completion-v2.js` (убрано демо-окно), `contact-legal-v2.js` (mailto и на телефоне), `mobile-completion-v1.css` (подсказка и результат не скрываются). Проверено на 1440, 768, 490×375, 390, 375, 360: ошибки при пустой форме, переход на mailto при заполненной, без горизонтального скролла.
 
+## Дополнительные проверки (2026-11-26)
+- Попиксельное сравнение исходника (`twin-preview`, `/v2/motion-preview/`) и релиза при прокрутке всей страницы, 1920×1080, 1440×900, 1024×768, 768×1024, 390×844, 360×800 (iframe 3D исключён): на десктопе отличается только левое крыло видеоблока, на телефонах — только блок формы и всё ниже него (страница длиннее на 51px из-за подсказки под кнопкой).
+- Меню на телефоне: открывается, ссылка ведёт к разделу и закрывает меню — как в исходнике.
+- Карточки каналов: на 390×844 свайпы переключают 0→1→2→3 и отпускают страницу дальше; на 1440×900 колесо и кнопки переключают карточки. Последовательности совпадают с исходником.
+- Сдвиги при загрузке (CLS, без прокрутки): 1440×900 — 0,065 (текст и кнопки первого экрана при подмене шрифта, `font-display: swap`; в исходнике 0,067); 390×844 — 0. Порог «хорошо» у Google — 0,1.
+- 3D: iframe разрешает полноэкранный режим (`allow="fullscreen"`, `allowfullscreen`), запрос полного экрана изнутри срабатывает. Своей кнопки полного экрана у встроенного приложения нет. Верхние ~49px iframe (шапка приложения) срезаны намеренно (`twin-embed-v1.css`).
+- Карточка ссылки: Telegram, Facebook, WhatsApp, Twitter, VK, Яндекс и Google получают 200 и полный набор og/twitter-тегов; og:image `hero.webp` отдаётся (200, image/webp, 2574×1459, 841 КБ). Онлайн-валидаторы не использовались.
+- Заголовки: один H1, порядок H1 → H2 → H3 верный.
+
+## Найдено, не исправлено (нужно решение)
+- `aurrrus.github.io/twin-web-concept/` (ветка `twin-preview`): корень (старый V1) и `/journey-craft/` открыты для индексации с title «Twin by TALENT — цифровая инфраструктура продаж». Закрыть можно только правкой `twin-preview` или настройками Pages владельца репозитория.
+- Скрытые дубли заголовков: в каналах 8 пар H3 «Покупателю / Команде продаж» (по паре на каждое состояние), в «Единой цифровой основе» 7 H3 продублированы скрытыми копиями. Это разметка анимированных компонентов.
+- Текст до и после JS: в HTML «Эффектно», после загрузки скриптов — «Эффективно» (так же в исходнике).
+- og:image тяжёлая (841 КБ, webp). Часть мессенджеров (по опыту — WhatsApp) может не показать превью; в ТЗ указана именно эта картинка.
+- На реальных устройствах (iPhone Safari, safe-area) и в самих мессенджерах не проверялось.
+
+## Файлы
+Создано (7):
+- `.twin/tasks/REL-001/RESULT.md`
+- `.twin/tasks/REL-001/SEARCH_CONSOLE.md`
+- `.twin/tasks/REL-001/TASK.md`
+- `.twin/tasks/REL-001/screens/film-after-1440.png`
+- `.twin/tasks/REL-001/screens/film-before-1440.png`
+- `robots.txt`
+- `sitemap.xml`
+
+Изменено (41):
+- `_astro/App.QVf-QQ1Q.js`
+- `_astro/inter-tight-variable.CDPOEas9.css`
+- `build-version.json`
+- `demo/index.html`
+- `index.html`
+- `journey-craft/index.html`
+- `v2/_astro/ContactForm.B53is37X.js`
+- `v2/_astro/ContactForm.composition-v2.js`
+- `v2/_astro/ContactForm.legal-v1.js`
+- `v2/_astro/ReferencePage.connect-v1.js`
+- `v2/_astro/ReferencePage.connect-v2.js`
+- `v2/_astro/ReferencePage.footer-legal-v1.js`
+- `v2/_astro/ReferencePage.footer-v1.js`
+- `v2/_astro/ReferencePage.glass-v1.js`
+- `v2/_astro/ReferencePage.launch-type-v1.js`
+- `v2/_astro/ReferencePage.launch-v3.js`
+- `v2/_astro/ReferencePage.mobile-v1.js`
+- `v2/_astro/ReferencePage.mobile-v2.js`
+- `v2/_astro/ReferencePage.mobile-v3.js`
+- `v2/_astro/ReferencePage.mobile-v4.js`
+- `v2/_astro/ReferencePage.morph-v1.js`
+- `v2/_astro/ReferencePage.release-v1.js`
+- `v2/_astro/index.56Q9_F5-.css`
+- `v2/_astro/inter-tight-variable.CDPOEas9.css`
+- `v2/consent/index.html`
+- `v2/enhancements/channels-polish-v1.css`
+- `v2/enhancements/contact-legal-v2.js`
+- `v2/enhancements/emblem-v1.css`
+- `v2/enhancements/mobile-completion-v1.css`
+- `v2/enhancements/mobile-completion-v1.js`
+- `v2/enhancements/mobile-completion-v2.js`
+- `v2/enhancements/mobile-request-v1.js`
+- `v2/enhancements/portal-scene-v2.css`
+- `v2/enhancements/qualities-glass-v1.css`
+- `v2/enhancements/qualities-v1.css`
+- `v2/enhancements/release-polish-v1.css`
+- `v2/index.html`
+- `v2/legal/index.html`
+- `v2/motion-preview/index.html`
+- `v2/motion-preview/legal.html`
+- `v2/privacy/index.html`
+
 ## Открытые вопросы
-- Google Search Console и Яндекс Вебмастер — нужен владелец аккаунтов.
+- Google Search Console и Яндекс Вебмастер — нужен владелец аккаунтов; инструкция в `SEARCH_CONSOLE.md`.
