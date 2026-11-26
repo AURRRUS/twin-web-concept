@@ -1,6 +1,5 @@
 
 @media(max-width:767px){
-.vis004 #contact .lead-note,.vis004 #contact .lead-result{display:none!important}
 .vis004 .twin-scroll-up.mobile-twin-mark{width:56px!important;height:56px!important;min-width:56px;padding:4px!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;backdrop-filter:none!important}
 .vis004 .twin-scroll-up.mobile-twin-mark::before,.vis004 .twin-scroll-up.mobile-twin-mark::after{display:none!important}
 .vis004 .twin-scroll-up.mobile-twin-mark img{display:block;width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 3px 6px #0003)}
