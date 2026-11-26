@@ -6,12 +6,16 @@
 ## Как устроено
 
 - `twin-bytalent.yaml` — манифест для кластера, где работает ingress `85.193.82.51`.
-- В поде `git-sync` раз в минуту подтягивает ветку `twin-preview`, `nginx` её отдаёт.
-  Ссылки с префиксом `/twin-web-concept/` из сборки для GitHub Pages работают и на корне домена.
+- В поде `git-sync` раз в минуту подтягивает ветку `release/twin-bytalent-domain`, `nginx` её
+  отдаёт. Старые ссылки с префиксом `/twin-web-concept/` из сборки для GitHub Pages по-прежнему
+  открываются (страховка для закешированных файлов).
+- Скрытые пути (`/.git`, `/.twin/…`) и `/docs/` отдают 404: там заметки задач, а не сайт.
 - Ingress с `cert-manager.io/cluster-issuer: letsencrypt` выпускает HTTPS.
 
-Публикация в `twin-preview` (как сейчас, `npm run publish:preview`) появляется на
-https://twin.bytalent.ru примерно через минуту; GitHub Pages продолжает работать из той же ветки.
+Production — ветка `release/twin-bytalent-domain`: главная там — Motion Preview без префикса
+GitHub Pages, с canonical, robots.txt и sitemap.xml. Коммит в неё появляется на
+https://twin.bytalent.ru примерно через минуту. Публикации в `twin-preview` на домен больше не
+попадают: это превью на https://aurrrus.github.io/twin-web-concept/.
 
 DNS: `twin.bytalent.ru → 85.193.82.51`, заведено в Beget.
 
@@ -32,9 +36,12 @@ argocd app get twin-bytalent --grpc-web
 curl -s https://twin.bytalent.ru/build-version.json
 ```
 
-`build-version.json` показывает, какая публикация сейчас на сайте.
+`build-version.json` показывает, какой релиз сейчас на сайте.
 
 ## Откат
 
-В `--ref=twin-preview` контейнера `git-sync` указать SHA рабочего коммита `twin-preview`
-и закоммитить в эту ветку. Вернуть `twin-preview`, когда исправленная публикация готова.
+В `--ref=release/twin-bytalent-domain` обоих контейнеров `git-sync` указать SHA рабочего коммита
+release-ветки и закоммитить в эту ветку. Вернуть имя ветки, когда исправленный релиз готов.
+
+Крайний случай — `--ref=twin-preview`: сайт вернётся к состоянию до переноса (на корне старый V1,
+Motion Preview на `/v2/motion-preview/`).

@@ -1,9 +1,10 @@
 # Сайт Twin на https://twin.bytalent.ru
 #
-# Исходники и публикация остаются в GitHub (AURRRUS/twin-web-concept, ветка twin-preview).
+# Исходники и публикация остаются в GitHub (AURRRUS/twin-web-concept). Production — ветка
+# release/twin-bytalent-domain; twin-preview остаётся превью на GitHub Pages.
 # Под сам забирает ветку: git-sync раз в минуту подтягивает новые коммиты, nginx их отдаёт.
-# Каждая публикация в twin-preview появляется на домене примерно через минуту — без CI,
-# образов, реестра и секретов.
+# Коммит в release-ветку появляется на домене примерно через минуту — без CI, образов,
+# реестра и секретов.
 #
 # Этот файл применяет ArgoCD (acd.pin.capital), Application twin-bytalent: см. README.md.
 ---
@@ -51,8 +52,12 @@ data:
             rewrite ^/twin-web-concept/(.*)$ /$1 last;
         }
 
-        # Служебный файл .git рабочей копии git-sync.
-        location ~ (^|/)\.git {
+        # Служебные файлы: .git рабочей копии git-sync, заметки задач (.twin, docs) и прочие
+        # скрытые пути. /.well-known/ оставлен для подтверждений владения доменом.
+        location ~ (^|/)\.(?!well-known/) {
+            return 404;
+        }
+        location ^~ /docs/ {
             return 404;
         }
 
@@ -96,7 +101,7 @@ spec:
           image: registry.k8s.io/git-sync/git-sync:v4.8.0
           args:
             - --repo=https://github.com/AURRRUS/twin-web-concept.git
-            - --ref=twin-preview
+            - --ref=release/twin-bytalent-domain
             - --root=/git
             - --link=current
             - --depth=1
@@ -146,8 +151,9 @@ spec:
           image: registry.k8s.io/git-sync/git-sync:v4.8.0
           args:
             - --repo=https://github.com/AURRRUS/twin-web-concept.git
-            # Ветка или SHA коммита. Для отката закрепить SHA рабочей публикации.
-            - --ref=twin-preview
+            # Ветка или SHA коммита. Для отката закрепить SHA рабочего релиза или вернуть
+            # twin-preview (там Motion Preview живёт на /v2/motion-preview/, корень — старый V1).
+            - --ref=release/twin-bytalent-domain
             - --root=/git
             - --link=current
             - --depth=1
