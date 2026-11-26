@@ -16,6 +16,16 @@
 - Форма на десктопе: валидация и письмо через mailto на bytalentru@gmail.com, ссылки на согласие и политику.
 - Обход: 124 адреса, ссылок на старый адрес нет. 404 только у старой страницы `/journey-craft/` (`_astro/App.B2c2DZ0o.js`, `_astro/inter-tight-variable.D_4iulR6.css`) — так же на GitHub Pages.
 
+## Проверка на домене (2026-11-26, после переключения git-sync, infra `f1da105`)
+- `http://` → 308 на `https://`; сертификат Let's Encrypt (CN twin.bytalent.ru) до 24.02.2027.
+- `/` 200: canonical и og:url `https://twin.bytalent.ru/`, robots не запрещает, ссылок на старый адрес 0. `robots.txt` и `sitemap.xml` 200, XML валиден.
+- noindex: `/v2/motion-preview/`, `/v2/privacy/`, `/v2/consent/`, `/v2/legal/`, `/v2/`, `/demo/`, `/journey-craft/`. `legal.html` → `/v2/privacy/`.
+- `/.git/config`, `/.twin/…`, `/docs/…` — 404.
+- Те же браузерные проверки на 10 разрешениях, что и локально: без 4xx/5xx, ошибок консоли, горизонтального скролла и запросов к старому адресу.
+- Видео в Chromium с H.264: воспроизводится, 1280×720, 3:29. 3D iframe 200. Форма на десктопе — mailto.
+- Левое крыло: нижний край = нижний край блока (1440×900). Скриншоты: `screens/film-before-1440.png`, `screens/film-after-1440.png`.
+- GitHub Pages (`twin-preview`) не изменился.
+
 ## Открытые вопросы
 - Форма на телефоне (≤767px, `mobile-completion-v2.js`): показывает «Спасибо за обращение» при любом вводе, включая пустой, и ничего не отправляет (даже mailto). Так было в Motion Preview; по ТЗ логика формы не менялась.
 - Google Search Console и Яндекс Вебмастер — нужен владелец аккаунтов.
