@@ -4,7 +4,7 @@ const form=document.querySelector('.twin-lead-form');
 if(form){
  const dialog=document.createElement('dialog');dialog.className='twin-request-confirmation';
  dialog.setAttribute('aria-labelledby','request-confirmation-title');
- dialog.innerHTML='<button type="button" class="request-close" aria-label="Закрыть подтверждение">×</button><img src="/twin-web-concept/v2/media/contact-v1/request-prepared-v1.webp" alt="" width="640" height="640"><h2 id="request-confirmation-title">Спасибо за обращение</h2><p>Спасибо за интерес к Twin. Обсудим задачи вашего проекта.</p><button type="button" class="request-back">Вернуться на сайт</button>';
+ dialog.innerHTML='<button type="button" class="request-close" aria-label="Закрыть подтверждение">×</button><img src="/v2/media/contact-v1/request-prepared-v1.webp" alt="" width="640" height="640"><h2 id="request-confirmation-title">Спасибо за обращение</h2><p>Спасибо за интерес к Twin. Обсудим задачи вашего проекта.</p><button type="button" class="request-back">Вернуться на сайт</button>';
  document.body.append(dialog);
  dialog.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>dialog.close()));
  dialog.addEventListener('close',()=>form.querySelector('button[type=submit]')?.focus({preventScroll:true}));
@@ -21,7 +21,7 @@ const topButton=document.querySelector('.twin-scroll-up');
 if(topButton){
  const original=topButton.innerHTML;
  const update=()=>{
-  if(phone.matches){topButton.innerHTML='<img src="/twin-web-concept/v2/media/approved-20261027/mark-light.webp" alt="" width="48" height="48">';topButton.classList.add('mobile-twin-mark');}
+  if(phone.matches){topButton.innerHTML='<img src="/v2/media/approved-20261027/mark-light.webp" alt="" width="48" height="48">';topButton.classList.add('mobile-twin-mark');}
   else{topButton.innerHTML=original;topButton.classList.remove('mobile-twin-mark');}
  };
  update();phone.addEventListener('change',update);

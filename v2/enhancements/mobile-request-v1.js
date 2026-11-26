@@ -5,7 +5,7 @@ if(form&&!form.dataset.mobileConfirmation){
  const dialog=document.createElement('dialog');
  dialog.className='twin-request-confirmation';
  dialog.setAttribute('aria-labelledby','request-confirmation-title');
- dialog.innerHTML='<button type="button" class="request-close" aria-label="Закрыть подтверждение">×</button><img src="/twin-web-concept/v2/media/contact-v1/request-prepared-v1.webp" alt="" width="640" height="640"><h2 id="request-confirmation-title">Запрос подготовлен</h2><p>Спасибо за интерес к Twin. Остался один шаг: отправьте подготовленное письмо в вашем почтовом сервисе.</p><a class="request-mail">Открыть письмо ↗</a><button type="button" class="request-back">Вернуться к форме</button>';
+ dialog.innerHTML='<button type="button" class="request-close" aria-label="Закрыть подтверждение">×</button><img src="/v2/media/contact-v1/request-prepared-v1.webp" alt="" width="640" height="640"><h2 id="request-confirmation-title">Запрос подготовлен</h2><p>Спасибо за интерес к Twin. Остался один шаг: отправьте подготовленное письмо в вашем почтовом сервисе.</p><a class="request-mail">Открыть письмо ↗</a><button type="button" class="request-back">Вернуться к форме</button>';
  document.body.append(dialog);
  const close=()=>dialog.close();
  dialog.querySelector('.request-close').addEventListener('click',close);
